@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Business Health Analyzer Design System - Professional blues and greens for trust and growth */
 
 @layer base {
   :root {
@@ -17,8 +15,19 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand colors - Professional blue */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 35%;
+    
+    /* Growth green accent */
+    --growth: 142 76% 36%;
+    --growth-foreground: 0 0% 100%;
+    --growth-hover: 142 76% 31%;
+
+    /* Trust blue variant */
+    --trust: 217 91% 60%;
+    --trust-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -34,9 +43,22 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 210 100% 40%;
 
-    --radius: 0.5rem;
+    /* Gradients for modern SaaS feel */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(142 76% 36%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(0 0% 100%) 100%);
+
+    /* Shadows for depth */
+    --shadow-elegant: 0 10px 30px -10px hsl(210 100% 40% / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(210 100% 40% / 0.08);
+    --shadow-feature: 0 8px 25px -5px hsl(142 76% 36% / 0.15);
+
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

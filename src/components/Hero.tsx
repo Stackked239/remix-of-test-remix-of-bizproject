@@ -3,8 +3,8 @@ import { ArrowRight, BarChart3, Shield, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   const handleGetReport = () => {
-    // For now, scroll to pricing section
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+    // Navigate to questionnaire for demo
+    window.location.hash = '#questionnaire';
   };
 
   return (

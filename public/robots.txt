@@ -1,14 +1,19 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Priority pages for crawling
+Allow: /
+Allow: /about
+Allow: /pricing
+Allow: /blog
+Allow: /contact
+
+# Block admin areas (if any in future)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://bizhealth.ai/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

@@ -24,34 +24,46 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={() => scrollToSection('benefits')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Features
-            </button>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
+            <a 
+              href="/how-it-works"
               className="text-foreground hover:text-primary transition-colors"
             >
               How It Works
-            </button>
-            <button 
-              onClick={() => scrollToSection('pricing')}
+            </a>
+            <a 
+              href="/pricing"
               className="text-foreground hover:text-primary transition-colors"
             >
               Pricing
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
+            </a>
+            <a 
+              href="/resources"
               className="text-foreground hover:text-primary transition-colors"
             >
-              Success Stories
-            </button>
+              Resources
+            </a>
+            <a 
+              href="/about"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              About
+            </a>
+            <a 
+              href="/blog"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Blog
+            </a>
+            <a 
+              href="/contact"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Contact
+            </a>
             <Button 
               variant="hero" 
               size="sm"
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => window.location.href = '/pricing'}
             >
               Get Started
             </Button>
@@ -71,34 +83,52 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col gap-4 pt-4">
-              <button 
-                onClick={() => scrollToSection('benefits')}
+              <a 
+                href="/how-it-works"
                 className="text-left text-foreground hover:text-primary transition-colors"
-              >
-                Features
-              </button>
-              <button 
-                onClick={() => scrollToSection('how-it-works')}
-                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 How It Works
-              </button>
-              <button 
-                onClick={() => scrollToSection('pricing')}
+              </a>
+              <a 
+                href="/pricing"
                 className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
+              </a>
+              <a 
+                href="/resources"
                 className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
-                Success Stories
-              </button>
+                Resources
+              </a>
+              <a 
+                href="/about"
+                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="/blog"
+                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </a>
+              <a 
+                href="/contact"
+                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </a>
               <Button 
                 variant="hero" 
                 size="sm"
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => window.location.href = '/pricing'}
                 className="w-fit"
               >
                 Get Started

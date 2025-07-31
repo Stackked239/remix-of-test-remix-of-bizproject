@@ -8,14 +8,14 @@ const Contact = () => {
       icon: Mail,
       title: "Email Support",
       description: "Get detailed responses to your questions",
-      contact: "support@bizhealth.ai",
+      contact: "hello@affirm.consulting",
       note: "Response within 24 hours"
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Speak directly with our team",
-      contact: "+1 (555) 123-4567",
+      contact: "1-855-476-8322",
       note: "Mon-Fri, 9 AM - 6 PM EST"
     },
     {

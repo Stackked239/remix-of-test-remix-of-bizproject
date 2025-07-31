@@ -6,7 +6,7 @@ const Pricing = () => {
   const tiers = [
     {
       name: "Essential",
-      price: "$49",
+      price: "$99",
       description: "Perfect for startups and small businesses getting their first comprehensive health check",
       features: [
         "20-question focused assessment",
@@ -21,7 +21,7 @@ const Pricing = () => {
     },
     {
       name: "Professional", 
-      price: "$99",
+      price: "$199",
       description: "Ideal for growing businesses ready for detailed analysis and strategic planning",
       features: [
         "35-question comprehensive assessment",
@@ -38,7 +38,7 @@ const Pricing = () => {
     },
     {
       name: "Enterprise",
-      price: "$199", 
+      price: "$299", 
       description: "Complete solution for established businesses planning major transitions or exits",
       features: [
         "45-question enterprise assessment",
@@ -161,7 +161,7 @@ const Pricing = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">BizHealth.ai Assessment</h3>
                 <ul className="space-y-2 text-primary">
-                  <li>• $49 - $199 one-time fee</li>
+                  <li>• $99 - $299 one-time fee</li>
                   <li>• Instant results in 15-30 minutes</li>
                   <li>• AI-powered personalized insights</li>
                   <li>• Ongoing support and updates</li>

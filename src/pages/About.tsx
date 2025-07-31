@@ -23,22 +23,22 @@ const About = () => {
 
   const team = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Dennis Hough",
       role: "CEO & Co-Founder",
-      bio: "Former McKinsey consultant with 15+ years in business strategy. PhD in Data Science from Stanford.",
-      speciality: "Strategic Planning & AI Development"
+      bio: "With 30+ years in business strategy and scaling companies.",
+      speciality: "Strategic Planning & Business Growth"
     },
     {
-      name: "Michael Rodriguez",
+      name: "Austin Warren",
       role: "CTO & Co-Founder", 
-      bio: "Previously led engineering teams at two successful fintech startups. Expert in machine learning and business analytics.",
-      speciality: "Technology & Product Development"
+      bio: "Decades of experience in business operations & technology integration; Solution minded and an expert in business analytics and technology development & implementation.",
+      speciality: "Technology & Business Operations"
     },
     {
-      name: "Jennifer Walsh",
-      role: "Head of Business Intelligence",
-      bio: "20+ years as a business consultant working with Fortune 500 companies and SMBs across diverse industries.",
-      speciality: "Industry Analysis & Benchmarking"
+      name: "Scott Homan",
+      role: "Director of Client Experience",
+      bio: "Former business owner & seasoned business leader with an eye & knack for creating exceptional client engagement.",
+      speciality: "Client Relations & Business Leadership"
     }
   ];
 

@@ -38,6 +38,10 @@ export default {
 					DEFAULT: 'hsl(var(--trust))',
 					foreground: 'hsl(var(--trust-foreground))'
 				},
+				'coming-soon': {
+					DEFAULT: 'hsl(var(--coming-soon))',
+					foreground: 'hsl(var(--coming-soon-foreground))'
+				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'

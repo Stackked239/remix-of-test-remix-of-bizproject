@@ -61,6 +61,13 @@ const Contact = () => {
               Have questions about our business health assessments? Need help with your report? 
               Our expert team is here to support your business growth journey.
             </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                alt="Professional laptop setup for business communication and support"
+                className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -173,8 +180,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Headquarters</h3>
                         <p className="text-muted-foreground">
-                          123 Business District<br />
-                          San Francisco, CA 94105<br />
+                          1635 E Hwy. 50, Suite 204<br />
+                          Clermont, Florida 34711<br />
                           United States
                         </p>
                       </div>

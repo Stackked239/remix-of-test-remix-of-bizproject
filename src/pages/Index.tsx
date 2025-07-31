@@ -9,6 +9,10 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Coming Soon Banner */}
+      <div className="bg-coming-soon text-coming-soon-foreground py-3 text-center font-bold text-lg tracking-wider relative z-50">
+        COMING SOON
+      </div>
       <Navigation />
       <Hero />
       <Benefits />

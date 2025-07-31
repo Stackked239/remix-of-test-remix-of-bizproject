@@ -55,6 +55,10 @@
     --shadow-card: 0 4px 20px -2px hsl(210 100% 40% / 0.08);
     --shadow-feature: 0 8px 25px -5px hsl(142 76% 36% / 0.15);
 
+    /* Coming Soon Banner */
+    --coming-soon: 0 65% 35%;
+    --coming-soon-foreground: 0 0% 100%;
+
     /* Animation timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     

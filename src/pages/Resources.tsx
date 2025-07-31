@@ -199,6 +199,13 @@ const Resources = () => {
               Comprehensive collection of calculators, templates, guides, and insights to support your business growth journey. 
               Everything you need to make informed decisions and drive sustainable success.
             </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                alt="Business innovation and ideas represented by glowing light bulb"
+                className="rounded-xl shadow-feature mx-auto max-w-2xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

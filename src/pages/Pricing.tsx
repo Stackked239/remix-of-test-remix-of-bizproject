@@ -87,9 +87,16 @@ const Pricing = () => {
               Pricing That Scales With You
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Choose the assessment level that matches your business needs. From quick health checks to comprehensive strategic analysis, 
+              Choose the assessment level that matches your business needs. From quick health checks to comprehensive strategic analysis,
               we have the right solution to drive your growth.
             </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                alt="Professional laptop showing business analytics and coding"
+                className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

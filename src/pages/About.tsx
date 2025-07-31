@@ -64,6 +64,13 @@ const About = () => {
               We're democratizing business intelligence by making enterprise-level analysis accessible to every business owner. 
               Our mission is to help small and mid-size businesses thrive through data-driven insights.
             </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                alt="Professional team collaborating on business strategy with laptops"
+                className="rounded-xl shadow-card mx-auto max-w-3xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

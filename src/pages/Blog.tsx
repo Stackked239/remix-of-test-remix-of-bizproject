@@ -90,6 +90,13 @@ const Blog = () => {
               Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
               of modern business. Learn from our team's decades of consulting experience.
             </p>
+            <div className="mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                alt="Professional woman working on laptop analyzing business data"
+                className="rounded-xl shadow-elegant mx-auto max-w-2xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

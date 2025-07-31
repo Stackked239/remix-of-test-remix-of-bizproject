@@ -88,6 +88,15 @@ const Hero = () => {
           <div className="text-center text-sm text-muted-foreground">
             <p>✓ 100% Money-Back Guarantee • ✓ Complete in 15 Minutes • ✓ Instant PDF Report</p>
           </div>
+
+          {/* Hero Image */}
+          <div className="relative mt-16">
+            <img 
+              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675&q=80" 
+              alt="Business analytics and code visualization representing AI-powered business insights"
+              className="rounded-2xl shadow-elegant border border-border/20 w-full max-w-4xl mx-auto"
+            />
+          </div>
           
           {/* Social proof */}
           <div className="pt-12 text-muted-foreground">

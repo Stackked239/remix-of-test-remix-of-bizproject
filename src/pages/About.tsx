@@ -190,10 +190,10 @@ const About = () => {
                 Experience Our Platform
               </a>
               <a 
-                href="/contact" 
+                href="mailto:support@bizhealth.ai" 
                 className="inline-flex items-center justify-center px-8 py-4 border border-border bg-background text-foreground font-semibold rounded-lg hover:bg-muted transition-colors"
               >
-                Get in Touch
+                Email Us
               </a>
             </div>
           </div>

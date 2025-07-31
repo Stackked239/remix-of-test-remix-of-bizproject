@@ -159,7 +159,7 @@ const HowItWorks = () => {
                 View Pricing Options
               </a>
               <a 
-                href="/contact" 
+                href="mailto:support@bizhealth.ai" 
                 className="inline-flex items-center justify-center px-8 py-4 border border-border bg-background text-foreground font-semibold rounded-lg hover:bg-muted transition-colors"
               >
                 Have Questions?

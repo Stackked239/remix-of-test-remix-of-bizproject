@@ -8,7 +8,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Support",
       description: "Get detailed responses to your questions",
-      contact: "hello@affirm.consulting",
+      contact: "support@bizhealth.ai",
       note: "Response within 24 hours"
     },
     {
@@ -157,13 +157,13 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   
-                  <button 
-                    type="submit"
+                  <a 
+                    href="mailto:support@bizhealth.ai"
                     className="w-full py-4 bg-gradient-hero text-white font-semibold rounded-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Send Message
                     <Send className="w-4 h-4" />
-                  </button>
+                  </a>
                 </form>
               </div>
 

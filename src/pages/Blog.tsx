@@ -4,11 +4,11 @@ import { Calendar, Clock, User, ArrowRight, TrendingUp } from "lucide-react";
 
 const Blog = () => {
   const featuredPost = {
-    title: "The Complete Guide to Business Health Assessment in 2024",
-    excerpt: "Learn how modern business health assessments can identify critical issues before they become expensive problems. This comprehensive guide covers everything from financial metrics to operational efficiency.",
-    author: "Dr. Sarah Chen",
-    date: "March 15, 2024",
-    readTime: "12 min read",
+    title: "The Complete Guide to Business Health Assessment in 2025",
+    excerpt: "As a business leader, you're no stranger to the whirlwind of running a company—juggling finances, operations, and team dynamics while keeping your eyes on the horizon for growth. But what if the cracks forming beneath the surface are quietly stalling your progress? That's where a Business Health Assessment comes in—a clear-eyed look at your company's vital signs to spot issues before they spiral into costly problems.",
+    author: "Dennis Hough",
+    date: "July 27, 2025",
+    readTime: "15 min read",
     category: "Business Strategy",
     featured: true
   };

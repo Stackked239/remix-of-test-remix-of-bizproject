@@ -157,7 +157,7 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-biz-green rounded-2xl p-8 backdrop-blur-sm border border-biz-green/20">
+          <div className="bg-biz-navy rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/20">
             <div className="space-y-6">
               <div className="text-center">
                 <h3 className="font-montserrat font-bold text-2xl mb-2 text-biz-white">
@@ -229,10 +229,10 @@ const Hero = () => {
               </div>
 
               {/* Recommendation */}
-              <div className="bg-biz-white/20 rounded-lg p-4 border border-biz-white/30">
+              <div className="bg-biz-green/20 rounded-lg p-4 border border-biz-green/40">
                 <div className="text-center">
-                  <p className="font-open-sans text-sm text-biz-white/80 mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-xl text-biz-white">
+                  <p className="font-open-sans text-sm text-biz-white/90 mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-xl text-biz-green">
                     {recommendedTier}
                   </p>
                   <p className="font-open-sans text-sm text-biz-white/80 mt-2">

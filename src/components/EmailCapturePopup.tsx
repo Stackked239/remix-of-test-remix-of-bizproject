@@ -110,9 +110,9 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
             Get Ready for Launch!
           </DialogTitle>
           
-          <div className="space-y-2">
+          <div className="space-y-2 text-center">
             <p className={`${colors.accent} font-semibold text-lg`}>
-              Official U.S. Launch on Nov. 30th
+              Official Launch on Nov. 30th
             </p>
             <p className={`${colors.text}/80 text-sm`}>
               Be first to get exclusive updates, insights, and launch discounts!

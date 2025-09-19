@@ -46,38 +46,43 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
     switch (hubColor) {
       case "biz-guides":
         return {
-          bg: "bg-biz-guides",
-          text: "text-white",
-          accent: "text-biz-guides-light",
-          button: "bg-white text-biz-guides hover:bg-gray-100"
+          bg: "bg-white/95 backdrop-blur-md border border-white/20",
+          text: "text-biz-navy",
+          accent: "text-[hsl(var(--biz-teal))]",
+          button: "bg-[hsl(var(--biz-teal))] text-white hover:bg-[hsl(var(--biz-teal))]/90",
+          shadow: "shadow-hub-teal"
         };
       case "biz-tools":
         return {
-          bg: "bg-biz-tools",
-          text: "text-white", 
-          accent: "text-biz-tools-light",
-          button: "bg-white text-biz-tools hover:bg-gray-100"
+          bg: "bg-white/95 backdrop-blur-md border border-white/20",
+          text: "text-biz-navy", 
+          accent: "text-[hsl(var(--biz-copper))]",
+          button: "bg-[hsl(var(--biz-copper))] text-white hover:bg-[hsl(var(--biz-copper))]/90",
+          shadow: "shadow-hub-copper"
         };
       case "biz-leader":
         return {
-          bg: "bg-biz-leader",
-          text: "text-white",
-          accent: "text-biz-leader-light", 
-          button: "bg-white text-biz-leader hover:bg-gray-100"
+          bg: "bg-white/95 backdrop-blur-md border border-white/20",
+          text: "text-biz-navy",
+          accent: "text-[hsl(var(--biz-lime))]", 
+          button: "bg-[hsl(var(--biz-lime))] text-white hover:bg-[hsl(var(--biz-lime))]/90",
+          shadow: "shadow-hub-lime"
         };
       case "biz-growth":
         return {
-          bg: "bg-biz-growth",
-          text: "text-white",
-          accent: "text-biz-growth-light",
-          button: "bg-white text-biz-growth hover:bg-gray-100"
+          bg: "bg-white/95 backdrop-blur-md border border-white/20",
+          text: "text-biz-navy",
+          accent: "text-[hsl(var(--biz-citrine))]",
+          button: "bg-[hsl(var(--biz-citrine))] text-white hover:bg-[hsl(var(--biz-citrine))]/90",
+          shadow: "shadow-hub-citrine"
         };
       default:
         return {
-          bg: "bg-biz-navy",
-          text: "text-white",
-          accent: "text-biz-orange",
-          button: "bg-biz-orange text-white hover:bg-biz-orange/90"
+          bg: "bg-white/95 backdrop-blur-md border border-white/20",
+          text: "text-biz-navy",
+          accent: "text-[hsl(var(--biz-green))]",
+          button: "bg-[hsl(var(--biz-green))] text-white hover:bg-[hsl(var(--biz-green))]/90",
+          shadow: "shadow-feature"
         };
     }
   };
@@ -86,7 +91,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className={`${colors.bg} border-0 max-w-md mx-auto`}>
+      <DialogContent className={`${colors.bg} ${colors.shadow} max-w-md mx-auto`}>
         <button
           onClick={() => setIsOpen(false)}
           className={`absolute right-4 top-4 ${colors.text} hover:opacity-70 transition-opacity`}
@@ -96,8 +101,8 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
         
         <DialogHeader className="text-center space-y-4">
           <div className="flex justify-center">
-            <div className={`p-3 rounded-full bg-white/10 backdrop-blur-sm`}>
-              <Sparkles className={`h-8 w-8 ${colors.text}`} />
+            <div className={`p-3 rounded-full ${colors.accent}/10 backdrop-blur-sm`}>
+              <Sparkles className={`h-8 w-8 ${colors.accent}`} />
             </div>
           </div>
           
@@ -127,7 +132,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40"
+              className={`pl-10 bg-white/50 border-gray-300 ${colors.text} placeholder:text-gray-500 focus:border-[hsl(var(--biz-navy))] focus:ring-1 focus:ring-[hsl(var(--biz-navy))]`}
             />
           </div>
           

@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, ShoppingCart } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import EmailCapturePopup from "@/components/EmailCapturePopup";
 
 const BizTools = () => {
   const features = [
@@ -218,6 +219,7 @@ const BizTools = () => {
       </section>
 
       <GlobalFooter />
+      <EmailCapturePopup hubColor="biz-tools" />
     </div>
   );
 };

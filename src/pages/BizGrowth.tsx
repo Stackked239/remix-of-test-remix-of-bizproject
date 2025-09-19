@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, GraduationCap } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import EmailCapturePopup from "@/components/EmailCapturePopup";
 
 const BizGrowth = () => {
   const features = [
@@ -313,6 +314,7 @@ const BizGrowth = () => {
       </section>
 
       <GlobalFooter />
+      <EmailCapturePopup hubColor="biz-growth" />
     </div>
   );
 };

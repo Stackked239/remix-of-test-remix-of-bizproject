@@ -7,6 +7,7 @@ import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import EmailCapturePopup from "@/components/EmailCapturePopup";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Testimonials />
       <Pricing />
       <GlobalFooter />
+      <EmailCapturePopup />
     </div>
   );
 };

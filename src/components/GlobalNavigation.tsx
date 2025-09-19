@@ -147,7 +147,7 @@ const GlobalNavigation = () => {
                 
                 {/* Mega Menu Dropdown */}
                 {isMegaMenuOpen && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-4xl bg-biz-grey rounded-lg shadow-elegant p-8">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-4xl bg-biz-white rounded-lg shadow-elegant p-8 border border-border/20">
                     {/* BizHealth.ai Logo */}
                     <div className="flex justify-center mb-6">
                       <img 
@@ -165,13 +165,13 @@ const GlobalNavigation = () => {
                               <IconComponent className={`w-5 h-5 text-${hub.color}`} />
                               <h3 className="font-montserrat font-bold text-biz-navy">{hub.name}</h3>
                             </div>
-                            <p className="text-sm text-biz-navy/80 font-open-sans mb-4">{hub.tagline}</p>
+                            <p className="text-sm text-biz-grey font-open-sans mb-4">{hub.tagline}</p>
                             <ul className="space-y-2">
                               {hub.links.map((link) => (
                                 <li key={link.name}>
                                   <Link
                                     to={link.href}
-                                    className={`text-sm font-open-sans text-biz-navy hover:text-${hub.color} transition-colors block`}
+                                    className={`text-sm font-open-sans text-biz-navy/70 hover:text-${hub.color} transition-colors block`}
                                   >
                                     {link.name}
                                   </Link>

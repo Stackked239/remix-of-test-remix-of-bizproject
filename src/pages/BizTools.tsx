@@ -62,17 +62,17 @@ const BizTools = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="bg-white/20 rounded-full p-4">
-                <Wrench className="w-12 h-12 text-white" />
+                <Wrench className="w-12 h-12 text-biz-navy" />
               </div>
             </div>
             
-            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6">
+            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
               BizTools
             </h1>
-            <p className="font-montserrat font-semibold text-2xl mb-4 opacity-90">
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
               Scalable Essentials at Your Fingertips
             </p>
-            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 opacity-80">
+            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 text-white/85">
               Your comprehensive resource center for business tools and templates. Transform insights from your health assessment into actionable improvements with battle-tested resources.
             </p>
             

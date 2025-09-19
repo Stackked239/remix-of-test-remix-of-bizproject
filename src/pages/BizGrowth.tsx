@@ -85,17 +85,17 @@ const BizGrowth = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="bg-white/20 rounded-full p-4">
-                <TrendingUp className="w-12 h-12 text-white" />
+                <TrendingUp className="w-12 h-12 text-biz-navy" />
               </div>
             </div>
             
-            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6">
+            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
               BizGrowth Academy
             </h1>
-            <p className="font-montserrat font-semibold text-2xl mb-4 opacity-90">
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
               Strategic Advancement Awaits
             </p>
-            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 opacity-80">
+            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 text-white/85">
               Your institute for strategic business advancement. Master the skills and strategies needed to scale your business sustainably through comprehensive educational programs.
             </p>
             

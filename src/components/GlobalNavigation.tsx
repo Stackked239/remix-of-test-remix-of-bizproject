@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import bizHealthLogo from '@/assets/bizhealth-logo-main.jpg';
+import bizHealthHeroLogo from '@/assets/bizhealth-logo-hero.jpg';
 import { 
   LayoutGrid, 
   Search, 
@@ -96,10 +97,11 @@ const GlobalNavigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <LayoutGrid className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-montserrat font-bold text-xl text-biz-navy">BizHealth.ai</span>
+            <img 
+              src={bizHealthHeroLogo} 
+              alt="BizHealth.ai" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

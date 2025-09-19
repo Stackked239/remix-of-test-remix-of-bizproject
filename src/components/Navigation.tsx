@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, BarChart3 } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import bizHealthLogo from "@/assets/bizhealth-logo-horizontal.jpg";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,12 +16,16 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <BarChart3 className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              BizHealth.ai
-            </span>
-          </div>
+          <a 
+            href="/" 
+            className="flex items-center hover:opacity-80 transition-opacity"
+          >
+            <img 
+              src={bizHealthLogo} 
+              alt="BizHealth.ai Logo" 
+              className="h-8 w-auto"
+            />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

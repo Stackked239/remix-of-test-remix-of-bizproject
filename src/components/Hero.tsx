@@ -1,123 +1,277 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3, Shield, TrendingUp, Award, Clock } from "lucide-react";
+import { ArrowRight, Shield, Brain, TrendingUp, Users } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [revenue, setRevenue] = useState([500000]);
+  const [employees, setEmployees] = useState([25]);
+  const [challenges, setChallenges] = useState([7]);
+  const [recommendedTier, setRecommendedTier] = useState("Growth");
+
+  // Calculate recommended tier based on quiz inputs
+  const calculateTier = () => {
+    const revenueValue = revenue[0];
+    const employeeValue = employees[0];
+    const challengeValue = challenges[0];
+    
+    if (revenueValue < 250000 || employeeValue < 10 || challengeValue < 5) {
+      return "Essentials";
+    } else if (revenueValue > 10000000 || employeeValue > 100 || challengeValue > 8) {
+      return "Enterprise";
+    }
+    return "Growth";
+  };
+
   const handleGetReport = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById('pricing');
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleSeeHowItWorks = () => {
-    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById('how-it-works');
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Update tier when inputs change
+  useEffect(() => {
+    setRecommendedTier(calculateTier());
+  }, [revenue, employees, challenges]);
+
+  const trustIndicators = [
+    { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
+    { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
+    { icon: TrendingUp, label: "Proven Results", value: "15-20x ROI Average" },
+    { icon: Users, label: "Trusted by SMBs", value: "10,000+ Businesses" }
+  ];
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden pt-20">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
-      <div className="absolute top-32 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse-soft"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-growth/10 rounded-full blur-xl animate-pulse-soft delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-trust/5 rounded-full blur-lg animate-pulse-soft delay-500"></div>
-      
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
-          {/* Trust indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground text-sm mb-8">
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-trust" />
-              <span>Bank-Level Security</span>
+    <section className="relative bg-biz-navy text-white overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-biz-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Trust Indicators Bar */}
+        <div className="pt-8 pb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustIndicators.map((indicator, index) => {
+              const IconComponent = indicator.icon;
+              return (
+                <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
+                  <div className="bg-white/10 rounded-lg p-2 flex-shrink-0">
+                    <IconComponent className="w-5 h-5 text-biz-green" />
+                  </div>
+                  <div className="hidden lg:block">
+                    <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
+                    <p className="text-sm font-montserrat font-semibold">{indicator.value}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
+          {/* Left Column - Main Content */}
+          <div className="space-y-8">
+            {/* Main Headlines */}
+            <div className="space-y-4">
+              <h1 className="font-montserrat font-bold text-4xl lg:text-6xl leading-tight">
+                Stop Guessing, 
+                <span className="text-biz-green block">Start Growing</span>
+              </h1>
+              <p className="font-open-sans text-xl lg:text-2xl text-biz-grey leading-relaxed">
+                Your Business Health Coach – AI-Powered Diagnostics for SMBs
+              </p>
             </div>
-            <div className="flex items-center gap-2">
-              <BarChart3 className="w-4 h-4 text-growth" />
-              <span>AI-Powered Analysis</span>
+
+            {/* Statistical Hooks */}
+            <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <p className="text-3xl font-montserrat font-bold text-biz-green">70%</p>
+                  <p className="text-sm font-open-sans text-biz-grey">SMB Cash Flow Strains</p>
+                  <p className="text-xs font-open-sans text-biz-grey opacity-75">SBA 2025 Report</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-montserrat font-bold text-biz-green">60%</p>
+                  <p className="text-sm font-open-sans text-biz-grey">Growth Stalls by Year 3</p>
+                  <p className="text-xs font-open-sans text-biz-grey opacity-75">Gartner Research</p>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-primary" />
-              <span>Instant Insights</span>
+
+            {/* Value Propositions */}
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-lg">
+                  <span className="font-semibold">Uncover Hidden Gaps</span> across 12 critical business areas
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-lg">
+                  <span className="font-semibold">15-20x ROI</span> from actionable AI-generated insights
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-lg">
+                  <span className="font-semibold">No Consultant Risks</span> – instant, confidential analysis
+                </p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-trust" />
-              <span>Trusted by 2,500+ Businesses</span>
+
+            {/* CTAs */}
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={handleGetReport}
+                  size="lg"
+                  className="bg-biz-green hover:bg-biz-green/90 text-biz-navy font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
+                >
+                  Get Your Business Health Report
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button 
+                  onClick={handleSeeHowItWorks}
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-biz-navy font-open-sans font-semibold text-lg px-8 py-4"
+                >
+                  See How It Works
+                </Button>
+              </div>
+              
+              {/* Risk-Free Guarantee */}
+              <div className="flex items-center space-x-2 text-sm font-open-sans text-biz-grey">
+                <Shield className="w-4 h-4 text-biz-green" />
+                <span>30-day money-back guarantee • Trusted by 10,000+ SMBs</span>
+              </div>
             </div>
           </div>
 
-          {/* Main headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Transform Your Business with 
-            <span className="block">AI-Powered Health Analysis</span>
-          </h1>
-          
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We understand the sleepless nights worrying about scaling—here's how our tool turns that into actionable growth. 
-            Get comprehensive insights on financial health, operations efficiency, and strategic opportunities in minutes, not months.
-          </p>
-          
-          {/* Value proposition */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 max-w-3xl mx-auto">
-            <p className="text-sm text-muted-foreground mb-3">Perfect for businesses with:</p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">$100K - $10M Revenue</span>
-              <span className="bg-growth/10 text-growth px-3 py-1 rounded-full">5-200 Employees</span>
-              <span className="bg-trust/10 text-trust px-3 py-1 rounded-full">3+ Years in Business</span>
+          {/* Right Column - Interactive KPI Quiz */}
+          <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20">
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="font-montserrat font-bold text-2xl mb-2">
+                  Find Your Perfect Plan
+                </h3>
+                <p className="font-open-sans text-biz-grey">
+                  Answer 3 quick questions to get personalized recommendations
+                </p>
+              </div>
+
+              {/* Quiz Questions */}
+              <div className="space-y-6">
+                {/* Annual Revenue */}
+                <div className="space-y-3">
+                  <label className="font-open-sans font-semibold text-sm">
+                    Annual Revenue: ${revenue[0].toLocaleString()}
+                  </label>
+                  <Slider
+                    value={revenue}
+                    onValueChange={setRevenue}
+                    max={50000000}
+                    min={100000}
+                    step={50000}
+                    className="w-full"
+                  />
+                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                    <span>$100K</span>
+                    <span>$50M</span>
+                  </div>
+                </div>
+
+                {/* Employee Count */}
+                <div className="space-y-3">
+                  <label className="font-open-sans font-semibold text-sm">
+                    Employees: {employees[0]}
+                  </label>
+                  <Slider
+                    value={employees}
+                    onValueChange={setEmployees}
+                    max={250}
+                    min={1}
+                    step={1}
+                    className="w-full"
+                  />
+                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                    <span>1</span>
+                    <span>250</span>
+                  </div>
+                </div>
+
+                {/* Business Challenges */}
+                <div className="space-y-3">
+                  <label className="font-open-sans font-semibold text-sm">
+                    Business Challenges (Scale 1-10): {challenges[0]}
+                  </label>
+                  <Slider
+                    value={challenges}
+                    onValueChange={setChallenges}
+                    max={10}
+                    min={1}
+                    step={1}
+                    className="w-full"
+                  />
+                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                    <span>Few Issues</span>
+                    <span>Major Concerns</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Recommendation */}
+              <div className="bg-biz-green/20 rounded-lg p-4 border border-biz-green/30">
+                <div className="text-center">
+                  <p className="font-open-sans text-sm text-biz-grey mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-xl text-biz-green">
+                    {recommendedTier}
+                  </p>
+                  <p className="font-open-sans text-sm text-biz-grey mt-2">
+                    {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
+                    {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
+                    {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
+                  </p>
+                </div>
+              </div>
+
+              <Button 
+                onClick={handleGetReport}
+                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-navy font-montserrat font-semibold"
+                size="lg"
+              >
+                Get Started with {recommendedTier}
+              </Button>
             </div>
           </div>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              onClick={handleGetReport}
-              className="text-lg px-8 py-6 h-auto shadow-elegant"
-            >
-              Get Your Business Health Report
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={handleSeeHowItWorks}
-              className="text-lg px-8 py-6 h-auto"
-            >
-              See How It Works
-              <Clock className="w-5 h-5" />
-            </Button>
-          </div>
+        </div>
 
-          {/* Risk-free guarantee */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p>✓ 100% Money-Back Guarantee • ✓ Complete in 15 Minutes • ✓ Instant PDF Report</p>
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative mt-16">
-            <img 
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675&q=80" 
-              alt="Business analytics and code visualization representing AI-powered business insights"
-              className="rounded-2xl shadow-elegant border border-border/20 w-full max-w-4xl mx-auto"
-            />
-          </div>
-          
-          {/* Social proof */}
-          <div className="pt-12 text-muted-foreground">
-            <p className="text-sm mb-6">Join thousands of entrepreneurs who've transformed their businesses</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-primary">2,500+</div>
-                <div className="text-xs md:text-sm">Reports Generated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-growth">98.2%</div>
-                <div className="text-xs md:text-sm">Satisfaction Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-trust">$2.4M</div>
-                <div className="text-xs md:text-sm">Avg. Growth Achieved</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-primary">15min</div>
-                <div className="text-xs md:text-sm">Average Completion</div>
-              </div>
+        {/* Social Proof Stats */}
+        <div className="pb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">15-20x</p>
+              <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">10,000+</p>
+              <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">89%</p>
+              <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">60min</p>
+              <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
             </div>
           </div>
         </div>

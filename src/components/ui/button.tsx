@@ -13,6 +13,10 @@ const buttonVariants = cva(
         growth: "bg-growth text-growth-foreground hover:bg-growth-hover shadow-feature hover:shadow-lg hover:scale-105",
         hero: "bg-gradient-hero text-white shadow-elegant hover:shadow-lg hover:scale-105 font-semibold",
         trust: "bg-trust text-trust-foreground hover:opacity-90 shadow-card hover:shadow-lg",
+        teal: "bg-biz-teal text-white hover:opacity-90 shadow-hub-teal hover:shadow-lg hover:scale-105",
+        copper: "bg-biz-copper text-white hover:opacity-90 shadow-hub-copper hover:shadow-lg hover:scale-105", 
+        lime: "bg-biz-lime text-white hover:opacity-90 shadow-hub-lime hover:shadow-lg hover:scale-105",
+        citrine: "bg-biz-citrine text-biz-navy hover:opacity-90 shadow-hub-citrine hover:shadow-lg hover:scale-105",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:

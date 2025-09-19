@@ -5,21 +5,19 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import GlobalFooter from "@/components/GlobalFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      {/* Coming Soon Banner */}
-      <div className="bg-coming-soon text-coming-soon-foreground py-3 text-center font-bold text-lg tracking-wider relative z-50">
-        COMING SOON
-      </div>
-      <Navigation />
+    <div className="min-h-screen bg-background">
+      <GlobalNavigation />
       <Hero />
       <Benefits />
       <HowItWorks />
       <Testimonials />
       <Pricing />
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

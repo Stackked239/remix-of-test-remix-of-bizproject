@@ -2,62 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Business Health Analyzer Design System - Professional blues and greens for trust and growth */
+/* BizHealth.ai Design System - Professional Business Analytics Platform */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    /* Primary brand colors - Professional blue */
-    --primary: 210 100% 40%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 210 100% 35%;
+    /* Core BizHealth.ai Brand Colors */
+    --biz-navy: 233 43% 23%;  /* #212653 */
+    --biz-green: 59 62% 36%;  /* #969423 */
+    --biz-grey: 0 0% 49%;     /* #7C7C7C */
+    --biz-white: 0 0% 100%;   /* #FFFFFF */
     
-    /* Growth green accent */
-    --growth: 142 76% 36%;
-    --growth-foreground: 0 0% 100%;
-    --growth-hover: 142 76% 31%;
+    /* Hub Accent Colors */
+    --biz-teal: 212 73% 59%;     /* #4A90E2 - BizGuides */
+    --biz-copper: 25 75% 47%;    /* #D2691E - BizTools */
+    --biz-lime: 81 61% 47%;      /* #8CBF2F - BizLeaDeR */
+    --biz-citrine: 48 100% 45%;  /* #E6B800 - BizGrowth */
 
-    /* Trust blue variant */
-    --trust: 217 91% 60%;
-    --trust-foreground: 0 0% 100%;
+    /* Base Theme Colors */
+    --background: var(--biz-white);
+    --foreground: var(--biz-navy);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --card: var(--biz-white);
+    --card-foreground: var(--biz-navy);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: var(--biz-white);
+    --popover-foreground: var(--biz-navy);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Primary brand - BizNavy */
+    --primary: var(--biz-navy);
+    --primary-foreground: var(--biz-white);
+    --primary-hover: 233 43% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Growth accent - BizGreen */
+    --growth: var(--biz-green);
+    --growth-foreground: var(--biz-white);
+    --growth-hover: 59 62% 31%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 100% 40%;
+    /* Trust/Secondary - lighter BizNavy */
+    --trust: 233 43% 35%;
+    --trust-foreground: var(--biz-white);
 
-    /* Gradients for modern SaaS feel */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(142 76% 36%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(0 0% 100%) 100%);
+    --secondary: 233 20% 95%;
+    --secondary-foreground: var(--biz-navy);
 
-    /* Shadows for depth */
-    --shadow-elegant: 0 10px 30px -10px hsl(210 100% 40% / 0.2);
-    --shadow-card: 0 4px 20px -2px hsl(210 100% 40% / 0.08);
-    --shadow-feature: 0 8px 25px -5px hsl(142 76% 36% / 0.15);
+    --muted: 233 10% 95%;
+    --muted-foreground: var(--biz-grey);
 
-    /* Coming Soon Banner */
-    --coming-soon: 0 65% 35%;
-    --coming-soon-foreground: 0 0% 100%;
+    --accent: 233 10% 95%;
+    --accent-foreground: var(--biz-navy);
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--biz-white);
+
+    --border: 233 20% 90%;
+    --input: 233 20% 90%;
+    --ring: var(--biz-navy);
+
+    /* Brand Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-green)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--biz-white)) 0%, hsl(233 20% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(233 20% 98%) 0%, hsl(var(--biz-white)) 100%);
+    
+    /* Hub Gradients */
+    --gradient-teal: linear-gradient(135deg, hsl(var(--biz-teal)) 0%, hsl(212 73% 45%) 100%);
+    --gradient-copper: linear-gradient(135deg, hsl(var(--biz-copper)) 0%, hsl(25 75% 35%) 100%);
+    --gradient-lime: linear-gradient(135deg, hsl(var(--biz-lime)) 0%, hsl(81 61% 35%) 100%);
+    --gradient-citrine: linear-gradient(135deg, hsl(var(--biz-citrine)) 0%, hsl(48 100% 35%) 100%);
+
+    /* Professional Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--biz-navy) / 0.15);
+    --shadow-card: 0 4px 20px -2px hsl(var(--biz-navy) / 0.08);
+    --shadow-feature: 0 8px 25px -5px hsl(var(--biz-green) / 0.12);
+    --shadow-hub-teal: 0 8px 25px -5px hsl(var(--biz-teal) / 0.15);
+    --shadow-hub-copper: 0 8px 25px -5px hsl(var(--biz-copper) / 0.15);
+    --shadow-hub-lime: 0 8px 25px -5px hsl(var(--biz-lime) / 0.15);
+    --shadow-hub-citrine: 0 8px 25px -5px hsl(var(--biz-citrine) / 0.15);
 
     /* Animation timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

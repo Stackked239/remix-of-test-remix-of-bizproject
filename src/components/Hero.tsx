@@ -157,7 +157,7 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20">
+          <div className="bg-biz-green rounded-2xl p-8 backdrop-blur-sm border border-white/20">
             <div className="space-y-6">
               <div className="text-center">
                 <h3 className="font-montserrat font-bold text-2xl mb-2">
@@ -179,12 +179,12 @@ const Hero = () => {
                     value={revenue}
                     onValueChange={setRevenue}
                     max={50000000}
-                    min={100000}
+                    min={0}
                     step={50000}
                     className="w-full"
                   />
                   <div className="flex justify-between text-xs font-open-sans text-biz-grey">
-                    <span>$100K</span>
+                    <span>$0</span>
                     <span>$50M</span>
                   </div>
                 </div>

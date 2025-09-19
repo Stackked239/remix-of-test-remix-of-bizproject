@@ -106,7 +106,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
             </div>
           </div>
           
-          <DialogTitle className={`text-2xl font-bold ${colors.text}`}>
+          <DialogTitle className={`text-2xl font-bold ${colors.text} text-center`}>
             Get Ready for Launch!
           </DialogTitle>
           

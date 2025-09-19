@@ -26,13 +26,13 @@ const Pricing = () => {
     },
     {
       icon: Clock,
-      title: "Instant Delivery",
-      description: "Get your report immediately after completion"
+      title: "Quick Delivery",
+      description: "Get your report within 30-40 minutes after completion"
     },
     {
       icon: Download,
       title: "Multiple Formats",
-      description: "PDF download + email delivery included"
+      description: "PDF download + online dashboard view"
     },
     {
       icon: CreditCard,

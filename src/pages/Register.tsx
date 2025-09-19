@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -8,10 +8,12 @@ import { Separator } from '@/components/ui/separator';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Eye, EyeOff, Mail, Lock, User, Building, AlertCircle, CheckCircle } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 
 const Register = () => {
+  const { user, signUp, signInWithGoogle } = useAuth();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -27,6 +29,11 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [passwordStrength, setPasswordStrength] = useState(0);
+
+  // Redirect if already logged in
+  if (user) {
+    return <Navigate to="/portal" replace />;
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -72,14 +79,17 @@ const Register = () => {
     setLoading(true);
     
     try {
-      // TODO: Implement actual registration
-      console.log('Registration attempt:', formData);
+      const { error } = await signUp(formData.email, formData.password, {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        company_name: formData.company
+      });
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For demo purposes, just log the attempt
-      setError('Registration not yet implemented. This is a demo.');
+      if (error) {
+        setError(error.message);
+      } else {
+        setError('Please check your email to confirm your account.');
+      }
     } catch (err) {
       setError('Registration failed. Please try again.');
     } finally {
@@ -87,10 +97,15 @@ const Register = () => {
     }
   };
 
-  const handleGoogleSignup = () => {
-    // TODO: Implement Google OAuth
-    console.log('Google signup attempt');
-    setError('Google authentication not yet implemented. This is a demo.');
+  const handleGoogleSignup = async () => {
+    try {
+      const { error } = await signInWithGoogle();
+      if (error) {
+        setError(error.message);
+      }
+    } catch (err) {
+      setError('Google signup failed. Please try again.');
+    }
   };
 
   const getPasswordStrengthColor = () => {

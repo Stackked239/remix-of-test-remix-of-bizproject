@@ -68,14 +68,17 @@ const Pricing = () => {
                 Complete Business Health Report
               </h3>
               <div className="flex items-center justify-center gap-2 mb-6">
-                <span className="text-6xl font-bold text-primary">$49</span>
+                <span className="text-6xl font-bold text-primary">$99*</span>
                 <div className="text-left">
                   <div className="text-muted-foreground line-through text-lg">$500</div>
                   <div className="text-sm text-muted-foreground">consultant price</div>
                 </div>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-4">
                 One-time payment • Instant access • No monthly fees
+              </p>
+              <p className="text-sm text-muted-foreground mb-8 text-center">
+                *Tiers range from $99 - $299
               </p>
               
               <Button 

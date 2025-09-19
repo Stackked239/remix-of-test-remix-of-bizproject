@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import bizHealthLogo from '@/assets/bizhealth-logo-main.jpg';
 import bizHealthHeroLogo from '@/assets/bizhealth-logo-hero.jpg';
-import bizHealthUpdatedLogo from '@/assets/bizhealth-logo-updated.jpg';
+import bizHealthNewLogo from '@/assets/bizhealth-logo-new.jpg';
 import { 
   LayoutGrid, 
   Search, 
@@ -99,7 +99,7 @@ const GlobalNavigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <img 
-              src={bizHealthUpdatedLogo} 
+              src={bizHealthNewLogo} 
               alt="BizHealth.ai" 
               className="h-8 w-auto object-contain"
             />

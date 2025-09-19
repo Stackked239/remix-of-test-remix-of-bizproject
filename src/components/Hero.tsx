@@ -4,9 +4,9 @@ import { Slider } from "@/components/ui/slider";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [revenue, setRevenue] = useState([500000]);
-  const [employees, setEmployees] = useState([25]);
-  const [challenges, setChallenges] = useState([7]);
+  const [revenue, setRevenue] = useState([0]);
+  const [employees, setEmployees] = useState([0]);
+  const [challenges, setChallenges] = useState([0]);
   const [recommendedTier, setRecommendedTier] = useState("Growth");
 
   // Calculate recommended tier based on quiz inputs
@@ -46,12 +46,12 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-biz-navy text-white overflow-hidden">
+    <section className="relative bg-biz-white text-biz-navy overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-biz-green/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-biz-green/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,12 +62,12 @@ const Hero = () => {
               const IconComponent = indicator.icon;
               return (
                 <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
-                  <div className="bg-white/10 rounded-lg p-2 flex-shrink-0">
+                  <div className="bg-biz-white/90 rounded-lg p-2 flex-shrink-0">
                     <IconComponent className="w-5 h-5 text-biz-green" />
                   </div>
                   <div className="hidden lg:block">
                     <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
-                    <p className="text-sm font-montserrat font-semibold">{indicator.value}</p>
+                    <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>
                   </div>
                 </div>
               );
@@ -90,7 +90,7 @@ const Hero = () => {
             </div>
 
             {/* Statistical Hooks */}
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20">
+            <div className="bg-biz-navy/5 rounded-xl p-6 backdrop-blur-sm border border-biz-navy/10">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <p className="text-3xl font-montserrat font-bold text-biz-green">70%</p>
@@ -109,19 +109,19 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg">
+                <p className="font-open-sans text-lg text-biz-navy">
                   <span className="font-semibold">Uncover Hidden Gaps</span> across 12 critical business areas
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg">
+                <p className="font-open-sans text-lg text-biz-navy">
                   <span className="font-semibold">15-20x ROI</span> from actionable AI-generated insights
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg">
+                <p className="font-open-sans text-lg text-biz-navy">
                   <span className="font-semibold">No Consultant Risks</span> – instant, confidential analysis
                 </p>
               </div>
@@ -133,7 +133,7 @@ const Hero = () => {
                 <Button 
                   onClick={handleGetReport}
                   size="lg"
-                  className="bg-biz-green hover:bg-biz-green/90 text-biz-navy font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
+                  className="bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
                 >
                   Get Your Business Health Report
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -142,7 +142,7 @@ const Hero = () => {
                   onClick={handleSeeHowItWorks}
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-biz-navy font-open-sans font-semibold text-lg px-8 py-4"
+                  className="border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-biz-white font-open-sans font-semibold text-lg px-8 py-4"
                 >
                   See How It Works
                 </Button>
@@ -157,13 +157,13 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-biz-green rounded-2xl p-8 backdrop-blur-sm border border-white/20">
+          <div className="bg-biz-green rounded-2xl p-8 backdrop-blur-sm border border-biz-green/20">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="font-montserrat font-bold text-2xl mb-2">
+                <h3 className="font-montserrat font-bold text-2xl mb-2 text-biz-white">
                   Find Your Perfect Plan
                 </h3>
-                <p className="font-open-sans text-biz-grey">
+                <p className="font-open-sans text-biz-white/80">
                   Answer 3 quick questions to get personalized recommendations
                 </p>
               </div>
@@ -172,7 +172,7 @@ const Hero = () => {
               <div className="space-y-6">
                 {/* Annual Revenue */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm">
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
                     Annual Revenue: ${revenue[0].toLocaleString()}
                   </label>
                   <Slider
@@ -183,7 +183,7 @@ const Hero = () => {
                     step={50000}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
                     <span>$0</span>
                     <span>$50M</span>
                   </div>
@@ -191,51 +191,51 @@ const Hero = () => {
 
                 {/* Employee Count */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm">
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
                     Employees: {employees[0]}
                   </label>
                   <Slider
                     value={employees}
                     onValueChange={setEmployees}
                     max={250}
-                    min={1}
+                    min={0}
                     step={1}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
-                    <span>1</span>
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
+                    <span>0</span>
                     <span>250</span>
                   </div>
                 </div>
 
                 {/* Business Challenges */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm">
-                    Business Challenges (Scale 1-10): {challenges[0]}
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
+                    Business Challenges (Scale 0-10): {challenges[0]}
                   </label>
                   <Slider
                     value={challenges}
                     onValueChange={setChallenges}
                     max={10}
-                    min={1}
+                    min={0}
                     step={1}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
-                    <span>Few Issues</span>
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
+                    <span>None</span>
                     <span>Major Concerns</span>
                   </div>
                 </div>
               </div>
 
               {/* Recommendation */}
-              <div className="bg-biz-green/20 rounded-lg p-4 border border-biz-green/30">
+              <div className="bg-biz-white/20 rounded-lg p-4 border border-biz-white/30">
                 <div className="text-center">
-                  <p className="font-open-sans text-sm text-biz-grey mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-xl text-biz-green">
+                  <p className="font-open-sans text-sm text-biz-white/80 mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-xl text-biz-white">
                     {recommendedTier}
                   </p>
-                  <p className="font-open-sans text-sm text-biz-grey mt-2">
+                  <p className="font-open-sans text-sm text-biz-white/80 mt-2">
                     {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
                     {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
                     {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
@@ -245,7 +245,7 @@ const Hero = () => {
 
               <Button 
                 onClick={handleGetReport}
-                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-navy font-montserrat font-semibold"
+                className="w-full bg-biz-white hover:bg-biz-white/90 text-biz-green font-montserrat font-semibold"
                 size="lg"
               >
                 Get Started with {recommendedTier}

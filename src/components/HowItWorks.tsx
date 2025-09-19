@@ -12,8 +12,8 @@ const HowItWorks = () => {
     {
       number: "02", 
       icon: FileText,
-      title: "Answer 30 Questions",
-      description: "Complete our comprehensive questionnaire covering all aspects of your business in just 15 minutes.",
+      title: "Answer Questions",
+      description: "Complete our comprehensive questionnaire covering all aspects of your business in just 30-40 minutes.",
       color: "text-growth"
     },
     {
@@ -71,9 +71,9 @@ const HowItWorks = () => {
         {/* Timeline visual */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 bg-background px-8 py-4 rounded-full shadow-card border border-border/50">
-            <span className="text-sm font-medium text-muted-foreground">Total Time:</span>
-            <span className="text-lg font-bold text-primary">~20 minutes</span>
-            <span className="text-sm text-muted-foreground">from start to report</span>
+            <span className="text-sm font-medium text-muted-foreground">Average Response Time:</span>
+            <span className="text-lg font-bold text-primary">~56 minutes</span>
+            <span className="text-sm text-muted-foreground">from Completed Questionnaire to Report</span>
           </div>
         </div>
       </div>

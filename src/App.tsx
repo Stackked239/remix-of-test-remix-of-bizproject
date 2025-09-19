@@ -18,6 +18,10 @@ import Portal from "./pages/Portal";
 import Checkout from "./pages/Checkout";
 import Onboarding from "./pages/Onboarding";
 import NotFound from "./pages/NotFound";
+import BizGuides from "./pages/BizGuides";
+import BizTools from "./pages/BizTools";
+import BizLeader from "./pages/BizLeader";
+import BizGrowth from "./pages/BizGrowth";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
             <Route path="/portal" element={<Portal />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/bizguides" element={<BizGuides />} />
+            <Route path="/biztools" element={<BizTools />} />
+            <Route path="/bizleader" element={<BizLeader />} />
+            <Route path="/bizgrowth" element={<BizGrowth />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

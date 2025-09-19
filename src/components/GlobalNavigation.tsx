@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import bizHealthLogo from '@/assets/bizhealth-logo-main.jpg';
 import { 
   LayoutGrid, 
   Search, 
@@ -144,6 +145,14 @@ const GlobalNavigation = () => {
                 {/* Mega Menu Dropdown */}
                 {isMegaMenuOpen && (
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-4xl bg-biz-navy rounded-lg shadow-elegant p-8">
+                    {/* BizHealth.ai Logo */}
+                    <div className="flex justify-center mb-6">
+                      <img 
+                        src={bizHealthLogo} 
+                        alt="BizHealth.ai Logo" 
+                        className="h-12 w-auto"
+                      />
+                    </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                       {hubNavigation.map((hub) => {
                         const IconComponent = hub.icon;

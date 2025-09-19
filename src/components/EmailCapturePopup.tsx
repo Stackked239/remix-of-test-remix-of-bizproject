@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { X, Mail, Sparkles } from "lucide-react";
+import { X, Mail, Rocket } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface EmailCapturePopupProps {
@@ -102,7 +102,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
         <DialogHeader className="text-center space-y-4">
           <div className="flex justify-center">
             <div className={`p-3 rounded-full ${colors.accent}/10 backdrop-blur-sm`}>
-              <Sparkles className={`h-8 w-8 ${colors.accent}`} />
+              <Rocket className={`h-8 w-8 ${colors.accent}`} />
             </div>
           </div>
           
@@ -112,10 +112,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
           
           <div className="space-y-2">
             <p className={`${colors.accent} font-semibold text-lg`}>
-              BizHealth.ai launches in the U.S. on Nov. 30th
-            </p>
-            <p className={`${colors.text} text-base`}>
-              The guesswork stops on Nov. 30 and the Growth begins.
+              Official U.S. Launch on Nov. 30th
             </p>
             <p className={`${colors.text}/80 text-sm`}>
               Be first to get exclusive updates, insights, and launch discounts!

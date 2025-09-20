@@ -90,7 +90,7 @@ const BizTools = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-biz-copper font-open-sans font-semibold text-lg px-8 py-4"
+                className="bg-biz-copper/20 border-biz-copper text-biz-copper hover:bg-biz-copper hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
               >
                 View Downloads
               </Button>

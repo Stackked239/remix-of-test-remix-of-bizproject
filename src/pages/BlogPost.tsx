@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 
 const BlogPost = () => {
   return (
@@ -46,9 +47,10 @@ const BlogPost = () => {
             </div>
             
             <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-              alt="Business health assessment dashboard"
-              className="rounded-xl shadow-elegant w-full"
+              src={businessHealthImage} 
+              alt="Comprehensive business health assessment with diagnostic charts and performance metrics for overall company wellness"
+              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
+              loading="lazy"
             />
           </div>
         </div>

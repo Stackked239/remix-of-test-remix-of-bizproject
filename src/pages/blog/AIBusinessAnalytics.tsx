@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 
 const AIBusinessAnalytics = () => {
   return (
@@ -46,9 +47,10 @@ const AIBusinessAnalytics = () => {
             </div>
             
             <img 
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-              alt="AI and machine learning analytics for small business"
-              className="rounded-xl shadow-elegant w-full"
+              src={aiAnalyticsImage} 
+              alt="AI-powered business analytics dashboard with futuristic data visualizations and machine learning for small business success"
+              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
+              loading="lazy"
             />
           </div>
         </div>

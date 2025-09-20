@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 
 const StrategicPlanning = () => {
   return (
@@ -46,9 +47,10 @@ const StrategicPlanning = () => {
             </div>
             
             <img 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-              alt="Strategic business planning in post-pandemic landscape"
-              className="rounded-xl shadow-elegant w-full"
+              src={strategicPlanningImage} 
+              alt="Strategic planning for post-pandemic business landscape with remote work and digital transformation elements"
+              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
+              loading="lazy"
             />
           </div>
         </div>

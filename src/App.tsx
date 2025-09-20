@@ -22,6 +22,13 @@ import BizGuides from "./pages/BizGuides";
 import BizTools from "./pages/BizTools";
 import BizLeader from "./pages/BizLeader";
 import BizGrowth from "./pages/BizGrowth";
+import WarningSignsBusiness from "./pages/blog/WarningSignsBusiness";
+import OperationalResilience from "./pages/blog/OperationalResilience";
+import FinancialHealthMetrics from "./pages/blog/FinancialHealthMetrics";
+import AIBusinessAnalytics from "./pages/blog/AIBusinessAnalytics";
+import StrategicPlanning from "./pages/blog/StrategicPlanning";
+import BusinessIntelligenceROI from "./pages/blog/BusinessIntelligenceROI";
+import WhenToPivot from "./pages/blog/WhenToPivot";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +57,13 @@ const App = () => (
             <Route path="/biztools" element={<BizTools />} />
             <Route path="/bizleader" element={<BizLeader />} />
             <Route path="/bizgrowth" element={<BizGrowth />} />
+            <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
+            <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
+            <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />
+            <Route path="/blog/ai-business-analytics" element={<AIBusinessAnalytics />} />
+            <Route path="/blog/strategic-planning-post-pandemic" element={<StrategicPlanning />} />
+            <Route path="/blog/business-intelligence-roi" element={<BusinessIntelligenceROI />} />
+            <Route path="/blog/when-to-pivot" element={<WhenToPivot />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

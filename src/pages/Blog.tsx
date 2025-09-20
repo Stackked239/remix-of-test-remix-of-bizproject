@@ -18,49 +18,64 @@ const Blog = () => {
       title: "5 Warning Signs Your Business Needs Immediate Attention",
       excerpt: "Discover the early indicators that suggest your business may be heading for trouble and what you can do about them.",
       author: "Michael Rodriguez",
-      date: "March 10, 2024",
+      date: "September 12, 2025",
       readTime: "8 min read",
-      category: "Risk Management"
+      category: "Risk Management",
+      slug: "/blog/warning-signs-business"
     },
     {
       title: "How AI is Revolutionizing Small Business Analytics",
       excerpt: "Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses.",
       author: "Jennifer Walsh",
-      date: "March 5, 2024", 
+      date: "September 12, 2025", 
       readTime: "10 min read",
-      category: "Technology"
+      category: "Technology",
+      slug: "/blog/ai-business-analytics"
     },
     {
       title: "Financial Health Metrics Every Business Owner Should Track",
       excerpt: "A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance.",
       author: "Dr. Sarah Chen",
-      date: "February 28, 2024",
+      date: "September 12, 2025",
       readTime: "15 min read",
-      category: "Financial Management"
+      category: "Financial Management",
+      slug: "/blog/financial-health-metrics"
     },
     {
       title: "Building Operational Resilience in Uncertain Times",
       excerpt: "Strategies for creating business systems that can withstand market volatility and unexpected challenges.",
       author: "Michael Rodriguez",
-      date: "February 22, 2024",
+      date: "September 12, 2025",
       readTime: "11 min read",
-      category: "Operations"
+      category: "Operations",
+      slug: "/blog/operational-resilience"
     },
     {
       title: "The ROI of Business Intelligence for SMBs",
       excerpt: "Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments.",
       author: "Jennifer Walsh",
-      date: "February 15, 2024",
+      date: "September 12, 2025",
       readTime: "9 min read",
-      category: "Business Intelligence"
+      category: "Business Intelligence",
+      slug: "/blog/business-intelligence-roi"
     },
     {
       title: "Strategic Planning for the Post-Pandemic Business Landscape",
       excerpt: "How to adapt your business strategy for the new realities of remote work, supply chain disruptions, and changing consumer behavior.",
       author: "Dr. Sarah Chen",
-      date: "February 8, 2024",
+      date: "September 12, 2025",
       readTime: "13 min read",
-      category: "Strategic Planning"
+      category: "Strategic Planning",
+      slug: "/blog/strategic-planning-post-pandemic"
+    },
+    {
+      title: "When to Pivot: Data-Driven Signals That It's Time to Change Course",
+      excerpt: "Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot.",
+      author: "BizHealth Research Team",
+      date: "September 12, 2025",
+      readTime: "10 min read",
+      category: "Strategic Planning",
+      slug: "/blog/when-to-pivot"
     }
   ];
 
@@ -215,7 +230,7 @@ const Blog = () => {
                     </div>
                     
                     <a 
-                      href="#" 
+                      href={post.slug} 
                       className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm"
                     >
                       Read Article

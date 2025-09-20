@@ -101,7 +101,7 @@ const BizLeader = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="bg-biz-lime/20 border-biz-lime text-biz-lime hover:bg-biz-lime hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
+                className="bg-biz-navy border-biz-lime text-biz-white hover:bg-biz-lime hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
               >
                 Watch Preview
                 <Play className="w-5 h-5 ml-2" />

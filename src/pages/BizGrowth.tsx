@@ -113,7 +113,7 @@ const BizGrowth = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="bg-biz-citrine/20 border-biz-citrine text-biz-citrine hover:bg-biz-citrine hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
+                className="bg-biz-navy border-biz-citrine text-biz-white hover:bg-biz-citrine hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
               >
                 Watch Demo
                 <Play className="w-5 h-5 ml-2" />

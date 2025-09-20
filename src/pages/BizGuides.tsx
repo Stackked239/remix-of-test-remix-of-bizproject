@@ -80,7 +80,7 @@ const BizGuides = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="bg-biz-teal/20 border-biz-teal text-biz-teal hover:bg-biz-teal hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
+                className="bg-biz-navy border-biz-teal text-biz-white hover:bg-biz-teal hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
               >
                 View Services
               </Button>

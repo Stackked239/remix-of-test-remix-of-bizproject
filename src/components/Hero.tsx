@@ -248,11 +248,11 @@ const Hero = () => {
               {/* Recommendation */}
               <div className="bg-[#CECECE] rounded-lg p-4 border border-biz-grey/60">
                 <div className="text-center">
-                  <p className="font-open-sans text-sm text-biz-white mb-1">Recommended Plan:</p>
+                  <p className="font-open-sans text-sm text-black mb-1">Recommended Plan:</p>
                   <p className="font-montserrat font-bold text-xl text-biz-lime">
                     {recommendedTier}
                   </p>
-                  <p className="font-open-sans text-sm text-biz-white/90 mt-2">
+                  <p className="font-open-sans text-sm text-black/90 mt-2">
                     {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
                     {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
                     {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
@@ -262,10 +262,11 @@ const Hero = () => {
 
               <Button 
                 onClick={handleGetReport}
-                className="w-full bg-biz-white hover:bg-biz-white/90 text-biz-green font-montserrat font-semibold"
+                className="w-full bg-gradient-to-r from-biz-green to-biz-green/90 hover:from-biz-green/90 hover:to-biz-green text-biz-white font-montserrat font-bold text-lg shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 size="lg"
               >
-                Get Started with {recommendedTier}
+                🚀 Get Started with {recommendedTier}
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>

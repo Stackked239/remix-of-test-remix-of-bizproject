@@ -46,7 +46,7 @@ const About = () => {
     { number: "10,000+", label: "Businesses Analyzed" },
     { number: "85%", label: "Report Implementation Rate" },
     { number: "94%", label: "Customer Satisfaction" },
-    { number: "2.3x", label: "Average ROI Improvement" }
+    { number: "3.2x", label: "Average ROI Improvement" }
   ];
 
   return (

@@ -45,7 +45,7 @@ const Hero = () => {
   const trustIndicators = [
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
     { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
-    { icon: TrendingUp, label: "Proven Results", value: "15-20x ROI Average" },
+    { icon: TrendingUp, label: "Proven Results", value: "20-25x ROI Average" },
     { icon: Users, label: "Trusted by SMBs", value: "10,000+ Businesses" }
   ];
 
@@ -133,7 +133,7 @@ const Hero = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
                 <p className="font-open-sans text-lg text-biz-navy">
-                  <span className="font-semibold">15-20x ROI</span> from actionable AI-generated insights
+                  <span className="font-semibold">20-25x ROI</span> from actionable AI-generated insights
                 </p>
               </div>
               <div className="flex items-start space-x-3">
@@ -246,13 +246,13 @@ const Hero = () => {
               </div>
 
               {/* Recommendation */}
-              <div className="bg-biz-green/20 rounded-lg p-4 border border-biz-green/40">
+              <div className="bg-biz-grey rounded-lg p-4 border border-biz-grey/60">
                 <div className="text-center">
-                  <p className="font-open-sans text-sm text-biz-white/90 mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-xl text-biz-green">
+                  <p className="font-open-sans text-sm text-biz-white mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-xl text-biz-white">
                     {recommendedTier}
                   </p>
-                  <p className="font-open-sans text-sm text-biz-white/80 mt-2">
+                  <p className="font-open-sans text-sm text-biz-white/90 mt-2">
                     {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
                     {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
                     {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
@@ -275,7 +275,7 @@ const Hero = () => {
         <div className="pb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">15-20x</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">20-25x</p>
               <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
             </div>
             <div>

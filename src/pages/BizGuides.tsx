@@ -21,7 +21,7 @@ const BizGuides = () => {
     {
       icon: TrendingUp,
       title: "Growth Acceleration",
-      description: "Proven strategies that deliver 15-20x ROI through targeted improvements in critical business areas."
+      description: "Proven strategies that deliver 20-25x ROI through targeted improvements in critical business areas."
     },
     {
       icon: Shield,

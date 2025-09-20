@@ -47,7 +47,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizguides' },
         { name: 'Services', href: '/bizguides/services' },
         { name: 'Booking', href: '/bizguides/booking' },
-        { name: 'Blog', href: '/bizguides/blog' }
+        { name: 'Contact Us', href: '/contact' }
       ]
     },
     {
@@ -59,7 +59,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/biztools' },
         { name: 'Downloads', href: '/biztools/downloads' },
         { name: 'Shop', href: '/biztools/shop' },
-        { name: 'Blog', href: '/biztools/blog' }
+        { name: 'Contact Us', href: '/contact' }
       ]
     },
     {
@@ -71,7 +71,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizleader' },
         { name: 'Courses', href: '/bizleader/courses' },
         { name: 'Webinars', href: '/bizleader/webinars' },
-        { name: 'Blog', href: '/bizleader/blog' }
+        { name: 'Contact Us', href: '/contact' }
       ]
     },
     {
@@ -83,7 +83,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizgrowth' },
         { name: 'Enroll', href: '/bizgrowth/enroll' },
         { name: 'Guides', href: '/bizgrowth/guides' },
-        { name: 'Blog', href: '/bizgrowth/blog' }
+        { name: 'Contact Us', href: '/contact' }
       ]
     }
   ];
@@ -116,22 +116,6 @@ const GlobalNavigation = () => {
                 }`}
               >
                 Home
-              </Link>
-              <Link 
-                to="/pricing" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/pricing') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Pricing
-              </Link>
-              <Link 
-                to="/blog" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/blog') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Blog
               </Link>
               
               {/* Mega Menu Trigger */}
@@ -185,6 +169,23 @@ const GlobalNavigation = () => {
                   </div>
                 )}
               </div>
+              
+              <Link 
+                to="/pricing" 
+                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
+                  isActiveRoute('/pricing') ? 'text-biz-green' : 'text-biz-navy'
+                }`}
+              >
+                Pricing
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
+                  isActiveRoute('/contact') ? 'text-biz-green' : 'text-biz-navy'
+                }`}
+              >
+                Contact Us
+              </Link>
             </div>
 
             {/* Search Bar */}
@@ -267,8 +268,8 @@ const GlobalNavigation = () => {
               <Link to="/pricing" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Pricing
               </Link>
-              <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Blog
+              <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                Contact Us
               </Link>
               
               {/* Mobile Hub Navigation */}
@@ -281,12 +282,13 @@ const GlobalNavigation = () => {
                       <ul className="pl-4 space-y-1">
                         {hub.links.map((link) => (
                           <li key={link.name}>
-                            <Link
-                              to={link.href}
-                              className="text-sm font-open-sans text-biz-navy hover:text-biz-green block"
-                            >
-                              {link.name}
-                            </Link>
+                           <Link
+                             to={link.href}
+                             className="text-sm font-open-sans text-biz-navy hover:text-biz-green block"
+                             onClick={() => setIsMenuOpen(false)}
+                           >
+                             {link.name}
+                           </Link>
                           </li>
                         ))}
                       </ul>

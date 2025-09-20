@@ -83,6 +83,24 @@ const Navigation = () => {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-64 bg-background border border-border shadow-lg z-50">
+                {/* BizHealth.ai Main Hub Option */}
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/"
+                    className="flex items-start gap-3 p-3 hover:bg-accent transition-colors"
+                  >
+                    <img 
+                      src="/src/assets/bizhealth-logo-main.jpg" 
+                      alt="BizHealth.ai" 
+                      className="w-5 h-5 mt-0.5 rounded object-cover"
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-foreground">BizHealth.ai</span>
+                      <span className="text-sm text-muted-foreground">Return to Main Hub</span>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
                 {hubNavigation.map((hub) => {
                   const IconComponent = hub.icon;
                   return (
@@ -159,6 +177,22 @@ const Navigation = () => {
               <div className="border-t border-border pt-4">
                 <h4 className="font-semibold text-foreground mb-3">Hubs</h4>
                 <div className="space-y-3 pl-4">
+                  {/* BizHealth.ai Main Hub Option */}
+                  <a 
+                    href="/"
+                    className="flex items-start gap-3 text-left hover:text-primary transition-colors mb-4 pb-3 border-b border-border"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <img 
+                      src="/src/assets/bizhealth-logo-main.jpg" 
+                      alt="BizHealth.ai" 
+                      className="w-5 h-5 mt-0.5 rounded object-cover"
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-medium text-foreground">BizHealth.ai</span>
+                      <span className="text-sm text-muted-foreground">Return to Main Hub</span>
+                    </div>
+                  </a>
                   {hubNavigation.map((hub) => {
                     const IconComponent = hub.icon;
                     return (

@@ -141,6 +141,23 @@ const GlobalNavigation = () => {
                       />
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                      {/* BizHealth.ai Main Hub Option */}
+                      <div className="col-span-2 md:col-span-4 mb-6 pb-4 border-b border-border">
+                        <Link 
+                          to="/"
+                          className="flex items-center justify-center space-x-3 p-4 hover:bg-biz-accent rounded-lg transition-colors"
+                        >
+                          <img 
+                            src={bizHealthLogo} 
+                            alt="BizHealth.ai" 
+                            className="w-8 h-8 rounded object-cover"
+                          />
+                          <div className="text-center">
+                            <span className="font-montserrat font-bold text-biz-navy block">BizHealth.ai</span>
+                            <span className="text-sm text-biz-grey font-open-sans">Return to Main Hub</span>
+                          </div>
+                        </Link>
+                      </div>
                       {hubNavigation.map((hub) => {
                         const IconComponent = hub.icon;
                         return (
@@ -275,6 +292,24 @@ const GlobalNavigation = () => {
               {/* Mobile Hub Navigation */}
               <div className="pt-4 border-t border-border">
                 <h4 className="font-montserrat font-bold text-biz-navy mb-3">Hubs</h4>
+                {/* BizHealth.ai Main Hub Option */}
+                <div className="mb-4 pb-4 border-b border-border">
+                  <Link 
+                    to="/"
+                    className="flex items-center space-x-3 text-left hover:text-biz-green transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <img 
+                      src={bizHealthLogo} 
+                      alt="BizHealth.ai" 
+                      className="w-6 h-6 rounded object-cover"
+                    />
+                    <div>
+                      <span className="font-montserrat font-semibold text-biz-navy block">BizHealth.ai</span>
+                      <span className="text-sm text-biz-grey font-open-sans">Return to Main Hub</span>
+                    </div>
+                  </Link>
+                </div>
                 <div className="space-y-4">
                   {hubNavigation.map((hub) => (
                     <div key={hub.name} className="space-y-2">

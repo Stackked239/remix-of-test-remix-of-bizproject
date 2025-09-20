@@ -70,11 +70,12 @@ const Hero = () => {
         <img 
           src={bannerLogo} 
           alt="BizHealth.ai" 
-          className="h-15 max-h-15 md:h-15 object-contain"
+          className="object-contain"
+          style={{ width: '1605px', height: '277px', maxWidth: '90%', maxHeight: '60px' }}
         />
       </div>
 
-      <section className="relative bg-biz-white text-biz-navy overflow-hidden pt-36">
+      <section className="relative bg-biz-white text-biz-navy overflow-hidden" style={{ paddingTop: '160px' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
       <div className="absolute inset-0">

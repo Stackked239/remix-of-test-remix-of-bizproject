@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
+import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
 
 const Pricing = () => {
   const tiers = [
@@ -92,8 +93,8 @@ const Pricing = () => {
             </p>
             <div className="mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="Professional laptop showing business analytics and coding"
+                src={businessAnalyticsDashboard} 
+                alt="Business analytics dashboard showing comprehensive data visualization and performance metrics"
                 className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
               />
             </div>
@@ -131,7 +132,7 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-primary text-white hover:bg-primary-hover transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-muted'}`}>
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-primary text-white hover:bg-primary-hover transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-biz-green hover:text-white'}`}>
                   {tier.cta}
                   <ArrowRight className="w-4 h-4" />
                 </button>

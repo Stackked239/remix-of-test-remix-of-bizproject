@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
+import customerServiceImage from "@/assets/customer-service-team.jpg";
 
 const Contact = () => {
   const contactMethods = [
@@ -63,8 +64,8 @@ const Contact = () => {
             </p>
             <div className="mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="Business health dashboard showing analytics and performance metrics for comprehensive business assessment"
+                src={customerServiceImage}
+                alt="Professional customer service team ready to help with business health assessments and support inquiries"
                 className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
               />
             </div>

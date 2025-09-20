@@ -20,11 +20,11 @@ const Pricing = () => {
       cta: "Start Essential Assessment"
     },
     {
-      name: "Professional", 
+      name: "Growth", 
       price: "$199",
       description: "Ideal for growing businesses ready for detailed analysis and strategic planning",
       features: [
-        "35-question comprehensive assessment",
+        "75+ question assessment",
         "Advanced health scoring with sub-categories",
         "Detailed strategic recommendations",
         "Competitive analysis insights",
@@ -34,14 +34,14 @@ const Pricing = () => {
         "Implementation timeline"
       ],
       popular: true,
-      cta: "Start Professional Assessment"
+      cta: "Start Growth Assessment"
     },
     {
       name: "Enterprise",
       price: "$299", 
       description: "Complete solution for established businesses planning major transitions or exits",
       features: [
-        "45-question enterprise assessment",
+        "Comprehensive business assessment",
         "Complete business valuation insights",
         "Exit strategy recommendations",
         "Risk assessment & mitigation plans",

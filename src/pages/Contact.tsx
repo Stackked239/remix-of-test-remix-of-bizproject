@@ -42,7 +42,7 @@ const Contact = () => {
     },
     {
       question: "Can I discuss my report with an expert?",
-      answer: "Enterprise tier customers get direct access to our business consultants. Essential and Professional tier customers can schedule a consultation for an additional fee."
+      answer: "Enterprise tier customers get direct access to our business consultants. Essential and Growth tier customers can schedule a consultation for an additional fee."
     }
   ];
 

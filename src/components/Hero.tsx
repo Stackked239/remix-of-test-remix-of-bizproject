@@ -82,6 +82,11 @@ const Hero = () => {
                   <div className="bg-biz-white/90 rounded-lg p-2 flex-shrink-0">
                     <IconComponent className="w-5 h-5 text-biz-green" />
                   </div>
+                  {/* Mobile/Tablet: Show simplified label */}
+                  <div className="block lg:hidden">
+                    <p className="text-xs font-montserrat font-semibold text-biz-navy">{indicator.label}</p>
+                  </div>
+                  {/* Desktop: Show full label and value */}
                   <div className="hidden lg:block">
                     <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
                     <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>

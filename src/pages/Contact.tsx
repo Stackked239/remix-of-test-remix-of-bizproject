@@ -63,7 +63,7 @@ const Contact = () => {
             </p>
             <div className="mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                src="/src/assets/business-health-dashboard.jpg" 
                 alt="Business health dashboard showing analytics and performance metrics for comprehensive business assessment"
                 className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
               />

@@ -77,10 +77,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-background/60 text-sm">
-            © 2024 Business Health Analyzer. All rights reserved.
+            © 2025 Business Health Analyzer. All rights reserved.
           </div>
           <div className="text-background/60 text-sm">
-            Made with ❤️ for entrepreneurs worldwide
+            Your Business Health Coach - Stop Guessing, Start Growing
           </div>
         </div>
       </div>

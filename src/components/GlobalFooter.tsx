@@ -152,10 +152,10 @@ const GlobalFooter = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm font-open-sans text-biz-grey">
               <p>
-                © {currentYear} BizHealth.ai. All rights reserved.
+                © 2025 Business Health Analyzer. All rights reserved.
               </p>
               <p className="text-center md:text-left">
-                Empowering SMBs with AI-driven business intelligence since 2024.
+                Your Business Health Coach - Stop Guessing, Start Growing
               </p>
             </div>
             

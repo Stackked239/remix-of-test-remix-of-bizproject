@@ -72,7 +72,7 @@ const BizGuides = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-white text-biz-teal hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+                className="bg-white text-biz-navy hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
               >
                 Book Your Guide Session
                 <ArrowRight className="w-5 h-5 ml-2" />

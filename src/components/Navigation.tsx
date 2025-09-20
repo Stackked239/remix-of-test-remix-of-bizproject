@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Compass, Wrench, Crown, TrendingUp } from "lucide-react";
 import bizHealthLogo from "@/assets/bizhealth-logo-horizontal.jpg";
+import bizHealthIcon from "@/assets/bizhealth-growth-icon.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -90,7 +91,7 @@ const Navigation = () => {
                     className="flex items-start gap-3 p-3 hover:bg-accent transition-colors"
                   >
                     <img 
-                      src="/src/assets/bizhealth-logo-main.jpg" 
+                      src={bizHealthIcon} 
                       alt="BizHealth.ai" 
                       className="w-5 h-5 mt-0.5 rounded object-cover"
                     />
@@ -135,6 +136,12 @@ const Navigation = () => {
               className="text-foreground hover:text-primary transition-colors"
             >
               Pricing
+            </a>
+            <a 
+              href="/blog"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Blog
             </a>
             <a 
               href="/contact"
@@ -184,7 +191,7 @@ const Navigation = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <img 
-                      src="/src/assets/bizhealth-logo-main.jpg" 
+                      src={bizHealthIcon} 
                       alt="BizHealth.ai" 
                       className="w-5 h-5 mt-0.5 rounded object-cover"
                     />
@@ -226,6 +233,13 @@ const Navigation = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
+              </a>
+              <a 
+                href="/blog"
+                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
               </a>
               <a 
                 href="/contact"

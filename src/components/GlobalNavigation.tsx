@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import bizHealthLogo from '@/assets/bizhealth-logo-main.jpg';
 import bizHealthHeroLogo from '@/assets/bizhealth-logo-hero.jpg';
 import bizHealthNewLogo from '@/assets/bizhealth-logo-new.jpg';
+import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
 import { 
   LayoutGrid, 
   Search, 
@@ -148,7 +149,7 @@ const GlobalNavigation = () => {
                           className="flex items-center justify-center space-x-3 p-4 hover:bg-biz-accent rounded-lg transition-colors"
                         >
                           <img 
-                            src={bizHealthLogo} 
+                            src={bizHealthIcon} 
                             alt="BizHealth.ai" 
                             className="w-8 h-8 rounded object-cover"
                           />
@@ -194,6 +195,14 @@ const GlobalNavigation = () => {
                 }`}
               >
                 Pricing
+              </Link>
+              <Link 
+                to="/blog" 
+                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
+                  isActiveRoute('/blog') ? 'text-biz-green' : 'text-biz-navy'
+                }`}
+              >
+                Blog
               </Link>
               <Link 
                 to="/contact" 
@@ -285,6 +294,9 @@ const GlobalNavigation = () => {
               <Link to="/pricing" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Pricing
               </Link>
+              <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                Blog
+              </Link>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Contact
               </Link>
@@ -300,7 +312,7 @@ const GlobalNavigation = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <img 
-                      src={bizHealthLogo} 
+                      src={bizHealthIcon} 
                       alt="BizHealth.ai" 
                       className="w-6 h-6 rounded object-cover"
                     />

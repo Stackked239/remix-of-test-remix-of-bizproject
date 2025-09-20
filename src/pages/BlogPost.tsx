@@ -9,7 +9,7 @@ const BlogPost = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <Link 
@@ -98,7 +98,7 @@ const BlogPost = () => {
                 Ready to roll up your sleeves and tackle this yourself? A DIY Business Health Assessment is an empowering way to gain insights without external help, putting you in the driver's seat of your company's future. Here's a practical roadmap tailored for 2025's dynamic landscape:
               </p>
 
-              <div className="bg-gradient-subtle rounded-lg p-6 mb-8">
+              <div className="bg-muted rounded-lg p-6 mb-8">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">1</div>
@@ -160,7 +160,7 @@ const BlogPost = () => {
               </p>
 
               {/* Call to Action */}
-              <div className="bg-gradient-hero rounded-2xl p-8 text-white text-center mt-12">
+              <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
                 <h3 className="text-2xl font-bold mb-4">Ready to Assess Your Business Health?</h3>
                 <p className="text-white/90 mb-6">
                   Get started with BizHealth.ai's comprehensive business health assessment and discover opportunities for growth.

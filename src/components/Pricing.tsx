@@ -42,7 +42,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-subtle">
+    <section id="pricing" className="py-20 bg-muted">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -55,10 +55,10 @@ const Pricing = () => {
         
         <div className="max-w-4xl mx-auto">
           {/* Main pricing card */}
-          <div className="bg-gradient-card p-12 rounded-3xl shadow-elegant border-2 border-primary/20 relative overflow-hidden">
+          <div className="bg-card p-12 rounded-3xl shadow-elegant border-2 border-primary/20 relative overflow-hidden">
             {/* Popular badge */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-hero px-6 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
+              <div className="bg-primary px-6 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
                 Most Popular Choice
               </div>
             </div>

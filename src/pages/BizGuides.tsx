@@ -45,7 +45,7 @@ const BizGuides = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-teal text-white overflow-hidden">
+      <section className="relative bg-biz-teal text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
@@ -90,7 +90,7 @@ const BizGuides = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -143,7 +143,7 @@ const BizGuides = () => {
               </div>
             </div>
             
-            <div className="bg-gradient-teal rounded-2xl p-8 text-white">
+            <div className="bg-biz-teal rounded-2xl p-8 text-white">
               <BookOpen className="w-12 h-12 mb-6" />
               <h4 className="text-2xl font-bold mb-4 font-montserrat">
                 Ready to Transform Your Business?

@@ -54,10 +54,10 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               About BizHealth.ai
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -95,7 +95,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="w-full max-w-md h-96 rounded-2xl bg-gradient-subtle border border-border flex items-center justify-center">
+                <div className="w-full max-w-md h-96 rounded-2xl bg-muted border border-border flex items-center justify-center">
                   <Users className="w-32 h-32 text-primary/20" />
                 </div>
               </div>
@@ -105,7 +105,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Values</h2>
@@ -134,7 +134,7 @@ const About = () => {
           <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
             {stats.map((stat, index) => (
               <div key={index}>
-                <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                <div className="text-4xl font-bold mb-2 text-primary">
                   {stat.number}
                 </div>
                 <div className="text-muted-foreground">{stat.label}</div>
@@ -145,7 +145,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Meet Our Team</h2>
@@ -157,7 +157,7 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {team.map((member, index) => (
               <div key={index} className="text-center bg-background rounded-lg p-8 border border-border">
-                <div className="w-24 h-24 rounded-full bg-gradient-hero mx-auto mb-6 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
                   <Users className="w-12 h-12 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{member.name}</h3>
@@ -185,7 +185,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/pricing" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-hero text-white font-semibold rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105"
               >
                 Experience Our Platform
               </a>

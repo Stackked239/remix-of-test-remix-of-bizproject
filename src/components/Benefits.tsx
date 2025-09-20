@@ -42,7 +42,7 @@ const Benefits = () => {
             <Award className="w-4 h-4" />
             Proven Results for 2,500+ Businesses
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
             Why Smart Business Owners Choose BizHealth.ai
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -71,7 +71,7 @@ const Benefits = () => {
         </div>
 
         {/* Success metrics */}
-        <div className="bg-gradient-card rounded-2xl p-8 border border-border mb-16">
+        <div className="bg-card rounded-2xl p-8 border border-border mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Measurable Results Our Clients Achieve
@@ -98,7 +98,7 @@ const Benefits = () => {
         </div>
 
         {/* Trust elements */}
-        <div className="bg-gradient-subtle rounded-2xl p-8 border border-border">
+        <div className="bg-muted rounded-2xl p-8 border border-border">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Your Business Data is Protected

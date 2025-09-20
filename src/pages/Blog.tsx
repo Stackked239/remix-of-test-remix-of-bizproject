@@ -95,10 +95,10 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Business Insights & Analysis
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -120,7 +120,7 @@ const Blog = () => {
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+            <div className="bg-primary rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
               
@@ -195,7 +195,7 @@ const Blog = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
                 <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-shadow">
-                  <div className="h-48 bg-gradient-subtle border-b border-border flex items-center justify-center">
+                  <div className="h-48 bg-muted border-b border-border flex items-center justify-center">
                     <TrendingUp className="w-16 h-16 text-primary/20" />
                   </div>
                   
@@ -245,7 +245,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -261,7 +261,7 @@ const Blog = () => {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
-              <button className="px-6 py-3 bg-gradient-hero text-white font-semibold rounded-lg hover:shadow-glow transition-all duration-300">
+              <button className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300">
                 Subscribe
               </button>
             </div>

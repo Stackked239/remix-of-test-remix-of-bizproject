@@ -57,10 +57,10 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               How BizHealth.ai Works
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -86,7 +86,7 @@ const HowItWorks = () => {
               <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 mb-20 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-hero text-white font-bold text-xl flex items-center justify-center shadow-elegant">
+                    <div className="w-16 h-16 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center shadow-elegant">
                       {step.number}
                     </div>
                     <div className="p-3 rounded-xl bg-primary/10">
@@ -105,7 +105,7 @@ const HowItWorks = () => {
                   </ul>
                 </div>
                 <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-80 rounded-2xl bg-gradient-subtle border border-border flex items-center justify-center">
+                  <div className="w-80 h-80 rounded-2xl bg-muted border border-border flex items-center justify-center">
                     <step.icon className="w-32 h-32 text-primary/20" />
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const HowItWorks = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -154,7 +154,7 @@ const HowItWorks = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/pricing" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-hero text-white font-semibold rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105"
               >
                 View Pricing Options
               </a>

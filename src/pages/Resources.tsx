@@ -189,10 +189,10 @@ const Resources = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Business Resources & Tools
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -249,7 +249,7 @@ const Resources = () => {
       </section>
 
       {/* Insights & Articles */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -319,7 +319,7 @@ const Resources = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

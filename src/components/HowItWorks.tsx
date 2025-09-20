@@ -26,7 +26,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -42,12 +42,12 @@ const HowItWorks = () => {
             <div key={index} className="relative">
               {/* Connecting line (except for last item) */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary/30 to-growth/30 z-0"></div>
+                <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-primary/30 z-0"></div>
               )}
               
               <div className="relative z-10 text-center">
                 {/* Step number */}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-hero text-white font-bold text-lg mb-6 shadow-elegant">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-lg mb-6 shadow-elegant">
                   {step.number}
                 </div>
                 

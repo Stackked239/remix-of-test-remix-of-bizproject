@@ -96,13 +96,13 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)',
-				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-teal': 'var(--gradient-teal)',
-				'gradient-copper': 'var(--gradient-copper)',
-				'gradient-lime': 'var(--gradient-lime)',
-				'gradient-citrine': 'var(--gradient-citrine)'
+				'solid-hero': 'hsl(var(--solid-hero))',
+				'solid-card': 'hsl(var(--solid-card))',
+				'solid-subtle': 'hsl(var(--solid-subtle))',
+				'solid-teal': 'hsl(var(--solid-teal))',
+				'solid-copper': 'hsl(var(--solid-copper))',
+				'solid-lime': 'hsl(var(--solid-lime))',
+				'solid-citrine': 'hsl(var(--solid-citrine))'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',

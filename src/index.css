@@ -60,16 +60,16 @@
     --input: 233 20% 90%;
     --ring: var(--biz-navy);
 
-    /* Brand Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-green)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--biz-white)) 0%, hsl(233 20% 98%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(233 20% 98%) 0%, hsl(var(--biz-white)) 100%);
+    /* Brand Solid Colors - replacing gradients */
+    --solid-hero: var(--biz-navy);
+    --solid-card: var(--biz-white);
+    --solid-subtle: 233 20% 98%;
     
-    /* Hub Gradients */
-    --gradient-teal: linear-gradient(135deg, hsl(var(--biz-teal)) 0%, hsl(212 73% 45%) 100%);
-    --gradient-copper: linear-gradient(135deg, hsl(var(--biz-copper)) 0%, hsl(25 75% 35%) 100%);
-    --gradient-lime: linear-gradient(135deg, hsl(var(--biz-lime)) 0%, hsl(81 61% 35%) 100%);
-    --gradient-citrine: linear-gradient(135deg, hsl(var(--biz-citrine)) 0%, hsl(48 100% 35%) 100%);
+    /* Hub Solid Colors - replacing gradients */
+    --solid-teal: var(--biz-teal);
+    --solid-copper: var(--biz-copper);
+    --solid-lime: var(--biz-lime);
+    --solid-citrine: var(--biz-citrine);
 
     /* Professional Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--biz-navy) / 0.15);

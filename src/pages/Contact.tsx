@@ -51,10 +51,10 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Get in Touch
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -92,7 +92,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
@@ -159,7 +159,7 @@ const Contact = () => {
                   
                   <a 
                     href="mailto:support@bizhealth.ai"
-                    className="w-full py-4 bg-gradient-hero text-white font-semibold rounded-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Send Message
                     <Send className="w-4 h-4" />
@@ -261,7 +261,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

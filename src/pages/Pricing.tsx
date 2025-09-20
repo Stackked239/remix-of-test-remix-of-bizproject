@@ -80,10 +80,10 @@ const Pricing = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-gradient-subtle">
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Pricing That Scales With You
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -106,10 +106,10 @@ const Pricing = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {tiers.map((tier, index) => (
-              <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular ? 'border-primary bg-gradient-subtle scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
+              <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-hero text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                    <div className="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                       <Star className="w-4 h-4" />
                       Most Popular
                     </div>
@@ -131,7 +131,7 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-gradient-hero text-white hover:shadow-glow transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-muted'}`}>
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-primary text-white hover:bg-primary-hover transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-muted'}`}>
                   {tier.cta}
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -142,7 +142,7 @@ const Pricing = () => {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -192,7 +192,7 @@ const Pricing = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

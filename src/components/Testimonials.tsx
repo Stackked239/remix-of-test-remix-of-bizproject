@@ -32,7 +32,7 @@ const Testimonials = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
             What Business Leaders Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -44,10 +44,10 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-gradient-card p-8 rounded-2xl shadow-card hover:shadow-feature transition-all duration-300 border border-border/50 relative"
+              className="bg-card p-8 rounded-2xl shadow-card hover:shadow-feature transition-all duration-300 border border-border/50 relative"
             >
               {/* Quote icon */}
-              <div className="absolute -top-4 -left-4 bg-gradient-hero p-3 rounded-full shadow-elegant">
+              <div className="absolute -top-4 -left-4 bg-primary p-3 rounded-full shadow-elegant">
                 <Quote className="w-6 h-6 text-white" />
               </div>
               
@@ -65,7 +65,7 @@ const Testimonials = () => {
               
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center text-white font-semibold">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
                   {testimonial.avatar}
                 </div>
                 <div>

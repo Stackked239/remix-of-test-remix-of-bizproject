@@ -55,7 +55,7 @@ const BizTools = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-copper text-white overflow-hidden">
+      <section className="relative bg-biz-copper text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
@@ -100,7 +100,7 @@ const BizTools = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -168,7 +168,7 @@ const BizTools = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-copper text-white">
+      <section className="py-20 bg-biz-copper text-white">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

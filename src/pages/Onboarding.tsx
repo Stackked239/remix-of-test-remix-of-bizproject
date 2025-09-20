@@ -78,7 +78,7 @@ const Onboarding = () => {
           </Card>
         </div>
 
-        <Card className="shadow-elegant border-border/50 bg-gradient-to-r from-biz-navy to-biz-navy/90 text-white">
+        <Card className="shadow-elegant border-border/50 bg-primary text-white">
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0">

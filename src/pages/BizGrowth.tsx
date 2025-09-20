@@ -78,7 +78,7 @@ const BizGrowth = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-citrine text-white overflow-hidden">
+      <section className="relative bg-biz-citrine text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
@@ -124,7 +124,7 @@ const BizGrowth = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -227,7 +227,7 @@ const BizGrowth = () => {
       </section>
 
       {/* Membership Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -270,7 +270,7 @@ const BizGrowth = () => {
               </Button>
             </div>
             
-            <div className="bg-gradient-citrine rounded-2xl p-8 text-white text-center">
+            <div className="bg-biz-citrine rounded-2xl p-8 text-white text-center">
               <GraduationCap className="w-16 h-16 mx-auto mb-6" />
               <h4 className="text-2xl font-bold mb-4 font-montserrat">
                 Special Launch Offer

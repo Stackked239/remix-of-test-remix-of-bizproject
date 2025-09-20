@@ -23,11 +23,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 
 const GlobalNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('US');
   const location = useLocation();
 
@@ -119,74 +119,61 @@ const GlobalNavigation = () => {
                 Home
               </Link>
               
-              {/* Mega Menu Trigger */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setIsMegaMenuOpen(true)}
-                onMouseLeave={() => setIsMegaMenuOpen(false)}
-              >
-                <button className="font-open-sans font-medium text-biz-navy hover:text-biz-green transition-colors flex items-center space-x-1">
-                  <span>Hubs</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                
-                {/* Mega Menu Dropdown */}
-                {isMegaMenuOpen && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-screen max-w-4xl bg-biz-white rounded-lg shadow-elegant p-8 border border-border/20">
-                    {/* BizHealth.ai Logo */}
-                    <div className="flex justify-center mb-6">
+              {/* Hubs Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-1 font-open-sans font-medium text-biz-navy hover:text-biz-green transition-colors">
+                    Hubs
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-64 bg-biz-white border border-border shadow-lg z-50">
+                  {/* BizHealth.ai Main Hub Option */}
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/"
+                      className="flex items-start gap-3 p-3 hover:bg-biz-accent transition-colors"
+                    >
                       <img 
-                        src={bizHealthLogo} 
-                        alt="BizHealth.ai Logo" 
-                        className="h-12 w-auto"
+                        src={bizHealthIcon} 
+                        alt="BizHealth.ai" 
+                        className="w-5 h-5 mt-0.5 rounded object-cover"
                       />
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                      {/* BizHealth.ai Main Hub Option */}
-                      <div className="col-span-2 md:col-span-4 mb-6 pb-4 border-b border-border">
+                      <div className="flex flex-col">
+                        <span className="font-semibold text-biz-navy">BizHealth.ai</span>
+                        <span className="text-sm text-biz-grey">Return to Main Hub</span>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  {hubNavigation.map((hub) => {
+                    const IconComponent = hub.icon;
+                    return (
+                      <DropdownMenuItem key={hub.name} asChild>
                         <Link 
-                          to="/"
-                          className="flex items-center justify-center space-x-3 p-4 hover:bg-biz-accent rounded-lg transition-colors"
+                          to={hub.links[0].href}
+                          className="flex items-start gap-3 p-3 hover:bg-biz-accent transition-colors"
                         >
-                          <img 
-                            src={bizHealthIcon} 
-                            alt="BizHealth.ai" 
-                            className="w-8 h-8 rounded object-cover"
-                          />
-                          <div className="text-center">
-                            <span className="font-montserrat font-bold text-biz-navy block">BizHealth.ai</span>
-                            <span className="text-sm text-biz-grey font-open-sans">Return to Main Hub</span>
+                          <IconComponent className={`w-5 h-5 mt-0.5 text-${hub.color}`} />
+                          <div className="flex flex-col">
+                            <span className="font-semibold text-biz-navy">{hub.name}</span>
+                            <span className="text-sm text-biz-grey">{hub.tagline}</span>
                           </div>
                         </Link>
-                      </div>
-                      {hubNavigation.map((hub) => {
-                        const IconComponent = hub.icon;
-                        return (
-                          <div key={hub.name} className="space-y-4">
-                            <div className="flex items-center space-x-2 mb-3">
-                              <IconComponent className={`w-5 h-5 text-${hub.color}`} />
-                              <h3 className="font-montserrat font-bold text-biz-navy">{hub.name}</h3>
-                            </div>
-                            <p className="text-sm text-biz-grey font-open-sans mb-4">{hub.tagline}</p>
-                            <ul className="space-y-2">
-                              {hub.links.map((link) => (
-                                <li key={link.name}>
-                                  <Link
-                                    to={link.href}
-                                    className={`text-sm font-open-sans text-biz-navy/70 hover:text-${hub.color} transition-colors block`}
-                                  >
-                                    {link.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/"
+                      className="flex items-center gap-2 p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="text-biz-green font-medium">← Back to Main Hub</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               
               <Link 
                 to="/pricing" 
@@ -323,24 +310,30 @@ const GlobalNavigation = () => {
                   </Link>
                 </div>
                 <div className="space-y-4">
-                  {hubNavigation.map((hub) => (
-                    <div key={hub.name} className="space-y-2">
-                      <h5 className={`font-montserrat font-semibold text-${hub.color}`}>{hub.name}</h5>
-                      <ul className="pl-4 space-y-1">
-                        {hub.links.map((link) => (
-                          <li key={link.name}>
-                           <Link
-                             to={link.href}
-                             className="text-sm font-open-sans text-biz-navy hover:text-biz-green block"
-                             onClick={() => setIsMenuOpen(false)}
-                           >
-                             {link.name}
-                           </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                  {hubNavigation.map((hub) => {
+                    const IconComponent = hub.icon;
+                    return (
+                      <Link 
+                        key={hub.name}
+                        to={hub.links[0].href}
+                        className="flex items-start gap-3 text-left hover:text-biz-green transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <IconComponent className={`w-5 h-5 mt-0.5 text-${hub.color}`} />
+                        <div className="flex flex-col">
+                          <span className="font-medium text-biz-navy">{hub.name}</span>
+                          <span className="text-sm text-biz-grey">{hub.tagline}</span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                  <Link 
+                    to="/"
+                    className="flex items-center gap-2 text-biz-green hover:text-biz-green/80 transition-colors mt-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="text-sm font-medium">← Back to Main Hub</span>
+                  </Link>
                 </div>
               </div>
             </div>

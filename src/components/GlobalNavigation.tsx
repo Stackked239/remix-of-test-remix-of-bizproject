@@ -47,7 +47,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizguides' },
         { name: 'Services', href: '/bizguides/services' },
         { name: 'Booking', href: '/bizguides/booking' },
-        { name: 'Contact Us', href: '/contact' }
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
@@ -59,7 +59,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/biztools' },
         { name: 'Downloads', href: '/biztools/downloads' },
         { name: 'Shop', href: '/biztools/shop' },
-        { name: 'Contact Us', href: '/contact' }
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
@@ -71,7 +71,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizleader' },
         { name: 'Courses', href: '/bizleader/courses' },
         { name: 'Webinars', href: '/bizleader/webinars' },
-        { name: 'Contact Us', href: '/contact' }
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
@@ -83,7 +83,7 @@ const GlobalNavigation = () => {
         { name: 'Home', href: '/bizgrowth' },
         { name: 'Enroll', href: '/bizgrowth/enroll' },
         { name: 'Guides', href: '/bizgrowth/guides' },
-        { name: 'Contact Us', href: '/contact' }
+        { name: 'Contact', href: '/contact' }
       ]
     }
   ];
@@ -184,7 +184,7 @@ const GlobalNavigation = () => {
                   isActiveRoute('/contact') ? 'text-biz-green' : 'text-biz-navy'
                 }`}
               >
-                Contact Us
+                Contact
               </Link>
             </div>
 
@@ -269,7 +269,7 @@ const GlobalNavigation = () => {
                 Pricing
               </Link>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Contact Us
+                Contact
               </Link>
               
               {/* Mobile Hub Navigation */}

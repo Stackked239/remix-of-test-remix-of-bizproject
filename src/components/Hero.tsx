@@ -2,12 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Brain, TrendingUp, Users } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { useState, useEffect } from "react";
+import bannerLogo from "@/assets/bizhealth-logo-banner.jpg";
 
 const Hero = () => {
   const [revenue, setRevenue] = useState([0]);
   const [employees, setEmployees] = useState([0]);
   const [challenges, setChallenges] = useState([0]);
   const [recommendedTier, setRecommendedTier] = useState("Growth");
+  const [scrollY, setScrollY] = useState(0);
 
   // Calculate recommended tier based on quiz inputs
   const calculateTier = () => {
@@ -38,6 +40,19 @@ const Hero = () => {
     setRecommendedTier(calculateTier());
   }, [revenue, employees, challenges]);
 
+  // Scroll animation for banner
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate banner transform based on scroll
+  const bannerTransform = Math.min(scrollY / 2, 100); // Transform up to 100px over 200px scroll
+
   const trustIndicators = [
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
     { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
@@ -46,7 +61,20 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-biz-white text-biz-navy overflow-hidden">
+    <>
+      {/* Fixed Promotional Banner */}
+      <div 
+        className="fixed top-0 left-0 w-full h-20 bg-white shadow-md flex items-center justify-center z-50 transition-transform duration-200 ease-out"
+        style={{ transform: `translateY(-${bannerTransform}px)` }}
+      >
+        <img 
+          src={bannerLogo} 
+          alt="BizHealth.ai" 
+          className="h-15 max-h-15 md:h-15 object-contain"
+        />
+      </div>
+
+      <section className="relative bg-biz-white text-biz-navy overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
       <div className="absolute inset-0">
@@ -277,6 +305,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

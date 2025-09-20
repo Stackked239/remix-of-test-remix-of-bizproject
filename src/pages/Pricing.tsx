@@ -132,7 +132,7 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-primary text-white hover:bg-primary-hover transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-biz-green hover:text-white'}`}>
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-primary text-white hover:bg-biz-green transform hover:scale-105' : 'border border-border bg-background text-foreground hover:bg-biz-green hover:text-white'}`}>
                   {tier.cta}
                   <ArrowRight className="w-4 h-4" />
                 </button>

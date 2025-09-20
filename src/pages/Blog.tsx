@@ -1,6 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, User, ArrowRight, TrendingUp } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
+import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
+import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
+import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
+import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
+import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
+import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
+import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 
 const Blog = () => {
   const featuredPost = {
@@ -10,7 +18,9 @@ const Blog = () => {
     date: "July 27, 2025",
     readTime: "15 min read",
     category: "Business Strategy",
-    featured: true
+    featured: true,
+    imageUrl: businessHealthImage,
+    altText: "Comprehensive business health assessment with diagnostic charts and performance metrics for overall company wellness"
   };
 
   const blogPosts = [
@@ -21,7 +31,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "8 min read",
       category: "Risk Management",
-      slug: "/blog/warning-signs-business"
+      slug: "/blog/warning-signs-business",
+      imageUrl: warningSignsImage,
+      altText: "Business warning signs and risk management visualization with danger indicators and declining performance metrics"
     },
     {
       title: "How AI is Revolutionizing Small Business Analytics",
@@ -30,7 +42,9 @@ const Blog = () => {
       date: "September 12, 2025", 
       readTime: "10 min read",
       category: "Technology",
-      slug: "/blog/ai-business-analytics"
+      slug: "/blog/ai-business-analytics",
+      imageUrl: aiAnalyticsImage,
+      altText: "AI-powered business analytics dashboard with futuristic data visualizations and machine learning for small business success"
     },
     {
       title: "Financial Health Metrics Every Business Owner Should Track",
@@ -39,7 +53,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "15 min read",
       category: "Financial Management",
-      slug: "/blog/financial-health-metrics"
+      slug: "/blog/financial-health-metrics",
+      imageUrl: financialMetricsImage,
+      altText: "Financial health metrics and KPI dashboard with profit charts and business performance indicators"
     },
     {
       title: "Building Operational Resilience in Uncertain Times",
@@ -48,7 +64,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "11 min read",
       category: "Operations",
-      slug: "/blog/operational-resilience"
+      slug: "/blog/operational-resilience",
+      imageUrl: resilienceImage,
+      altText: "Operational resilience and business continuity strategy with interconnected systems and adaptive processes"
     },
     {
       title: "The ROI of Business Intelligence for SMBs",
@@ -57,7 +75,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "9 min read",
       category: "Business Intelligence",
-      slug: "/blog/business-intelligence-roi"
+      slug: "/blog/business-intelligence-roi",
+      imageUrl: biRoiImage,
+      altText: "Business intelligence ROI visualization with investment returns and analytics charts for small business success"
     },
     {
       title: "Strategic Planning for the Post-Pandemic Business Landscape",
@@ -66,7 +86,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "13 min read",
       category: "Strategic Planning",
-      slug: "/blog/strategic-planning-post-pandemic"
+      slug: "/blog/strategic-planning-post-pandemic",
+      imageUrl: strategicPlanningImage,
+      altText: "Strategic planning for post-pandemic business landscape with remote work and digital transformation elements"
     },
     {
       title: "When to Pivot: Data-Driven Signals That It's Time to Change Course",
@@ -75,7 +97,9 @@ const Blog = () => {
       date: "September 12, 2025",
       readTime: "10 min read",
       category: "Strategic Planning",
-      slug: "/blog/when-to-pivot"
+      slug: "/blog/when-to-pivot",
+      imageUrl: pivotImage,
+      altText: "Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
     }
   ];
 
@@ -194,9 +218,16 @@ const Blog = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
-                <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-shadow">
-                  <div className="h-48 bg-muted border-b border-border flex items-center justify-center">
-                    <TrendingUp className="w-16 h-16 text-primary/20" />
+                <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-all duration-300 hover-scale animate-fade-in">
+                  {/* Thumbnail Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={post.imageUrl} 
+                      alt={`Thumbnail: ${post.altText}`}
+                      className="w-full h-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
+                      style={{ aspectRatio: '16/9' }}
+                      loading="lazy"
+                    />
                   </div>
                   
                   <div className="p-6">
@@ -206,7 +237,7 @@ const Blog = () => {
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight hover:text-primary transition-colors">
                       {post.title}
                     </h3>
                     
@@ -231,7 +262,7 @@ const Blog = () => {
                     
                     <a 
                       href={post.slug} 
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm story-link"
                     >
                       Read Article
                       <ArrowRight className="w-3 h-3" />

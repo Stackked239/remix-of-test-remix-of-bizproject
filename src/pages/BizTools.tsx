@@ -4,6 +4,7 @@ import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, ShoppingCart 
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizTools = () => {
   const features = [
@@ -50,6 +51,7 @@ const BizTools = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <GlobalNavigation />
       
       {/* Hero Section */}

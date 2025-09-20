@@ -4,6 +4,7 @@ import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, Gra
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizGrowth = () => {
   const features = [
@@ -73,6 +74,7 @@ const BizGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <GlobalNavigation />
       
       {/* Hero Section */}

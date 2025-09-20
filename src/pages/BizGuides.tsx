@@ -4,6 +4,7 @@ import { ArrowRight, Compass, Users, TrendingUp, Shield, CheckCircle, BookOpen }
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizGuides = () => {
   const features = [
@@ -40,6 +41,7 @@ const BizGuides = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <GlobalNavigation />
       
       {/* Hero Section */}

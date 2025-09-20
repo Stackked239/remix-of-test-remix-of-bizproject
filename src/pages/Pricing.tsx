@@ -5,11 +5,11 @@ import { CheckCircle, Star, ArrowRight } from "lucide-react";
 const Pricing = () => {
   const tiers = [
     {
-      name: "Essential",
+      name: "Essentials",
       price: "$99",
       description: "Perfect for startups and small businesses getting their first comprehensive health check",
       features: [
-        "20-question focused assessment",
+        "45-question focused assessment",
         "Basic business health score",
         "Core recommendations report",
         "Industry benchmark comparison",
@@ -17,7 +17,7 @@ const Pricing = () => {
         "Email support"
       ],
       popular: false,
-      cta: "Start Essential Assessment"
+      cta: "Start Essentials Assessment"
     },
     {
       name: "Growth", 

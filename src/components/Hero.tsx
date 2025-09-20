@@ -64,13 +64,13 @@ const Hero = () => {
     <>
       {/* Fixed Promotional Banner */}
       <div 
-        className="fixed top-16 left-0 w-full h-20 bg-white shadow-md flex items-center justify-center z-40 transition-transform duration-200 ease-out"
+        className="fixed top-0 left-0 w-full h-20 bg-white shadow-md flex items-center justify-center z-50 transition-transform duration-200 ease-out"
         style={{ transform: `translateY(-${bannerTransform}px)` }}
       >
         <img 
           src={bannerLogo} 
           alt="BizHealth.ai" 
-          className="h-5 max-h-5 md:h-5 object-contain"
+          className="h-15 max-h-15 md:h-15 object-contain"
         />
       </div>
 

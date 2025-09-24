@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
@@ -219,7 +219,7 @@ const FinancialHealthMetrics = () => {
         </div>
       </section>
 
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

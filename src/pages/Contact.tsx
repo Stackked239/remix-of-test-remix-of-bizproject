@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import GlobalFooter from "@/components/GlobalFooter";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
 
 const Contact = () => {
@@ -280,7 +280,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 
@@ -129,7 +129,7 @@ const LeadershipStressSuccess = () => {
         </div>
       </article>
 
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

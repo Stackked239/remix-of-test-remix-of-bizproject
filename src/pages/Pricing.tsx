@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
 
@@ -212,7 +212,7 @@ const Pricing = () => {
         </div>
       </section>
 
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

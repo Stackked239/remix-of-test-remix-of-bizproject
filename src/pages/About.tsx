@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import GlobalFooter from "@/components/GlobalFooter";
 import { Users, Target, Award, Brain, Shield, Zap } from "lucide-react";
 
 const About = () => {
@@ -200,7 +200,7 @@ const About = () => {
         </div>
       </section>
 
-      <Footer />
+      <GlobalFooter />
     </div>
   );
 };

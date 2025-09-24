@@ -99,7 +99,7 @@ const GlobalFooter = () => {
                         aria-label="Frequently Asked Questions"
                       >
                         <HelpCircle className="w-4 h-4 inline mr-2" />
-                        FAQ
+                        FAQs
                       </Link>
                     </li>
                     <li>

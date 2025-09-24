@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
+import { useState, useMemo } from "react";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -126,6 +127,32 @@ const Blog = () => {
     "Business Leadership"
   ];
 
+  // State for filtering and search
+  const [selectedCategory, setSelectedCategory] = useState("All Posts");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Filter and search logic
+  const filteredPosts = useMemo(() => {
+    let filtered = blogPosts;
+
+    // Filter by category
+    if (selectedCategory !== "All Posts") {
+      filtered = filtered.filter(post => post.category === selectedCategory);
+    }
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(post => 
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.author.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    return filtered;
+  }, [blogPosts, selectedCategory, searchTerm]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -214,16 +241,32 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Categories Filter */}
+      {/* Search and Categories Section */}
       <section className="py-8 border-b border-border">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto space-y-6">
+            {/* Search Bar */}
+            <div className="flex justify-center">
+              <div className="relative max-w-md w-full">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search blogs, categories, keywords..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+            </div>
+
+            {/* Categories Filter */}
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category, index) => (
                 <button 
                   key={index}
+                  onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    index === 0 
+                    selectedCategory === category 
                       ? 'bg-primary text-white' 
                       : 'bg-background border border-border text-muted-foreground hover:bg-muted'
                   }`}
@@ -240,61 +283,88 @@ const Blog = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
-                <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-all duration-300 hover-scale animate-fade-in">
-                  {/* Thumbnail Image */}
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={post.imageUrl} 
-                      alt={`Thumbnail: ${post.altText}`}
-                      className="w-full h-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
-                      style={{ aspectRatio: '16/9' }}
-                      loading="lazy"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <User className="w-3 h-3" />
-                        <span>{post.author}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                    
-                    <a 
-                      href={post.slug} 
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm story-link"
-                    >
-                      Read Article
-                      <ArrowRight className="w-3 h-3" />
-                    </a>
-                  </div>
-                </article>
-              ))}
+            {/* Results Count */}
+            <div className="mb-8 text-center">
+              <p className="text-muted-foreground">
+                {filteredPosts.length === blogPosts.length 
+                  ? `Showing all ${filteredPosts.length} posts` 
+                  : `Found ${filteredPosts.length} of ${blogPosts.length} posts`}
+                {searchTerm && ` for "${searchTerm}"`}
+                {selectedCategory !== "All Posts" && ` in ${selectedCategory}`}
+              </p>
             </div>
+
+            {/* Posts Grid */}
+            {filteredPosts.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPosts.map((post, index) => (
+                  <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-all duration-300 hover-scale animate-fade-in">
+                    {/* Thumbnail Image */}
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={post.imageUrl} 
+                        alt={`Thumbnail: ${post.altText}`}
+                        className="w-full h-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
+                        style={{ aspectRatio: '16/9' }}
+                        loading="lazy"
+                      />
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">
+                          {post.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight hover:text-primary transition-colors">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                        {post.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <User className="w-3 h-3" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          <span>{post.date}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                      
+                      <a 
+                        href={post.slug} 
+                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm story-link"
+                      >
+                        Read Article
+                        <ArrowRight className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg mb-4">No posts found matching your criteria.</p>
+                <button 
+                  onClick={() => {
+                    setSearchTerm("");
+                    setSelectedCategory("All Posts");
+                  }}
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  Clear filters and show all posts
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>

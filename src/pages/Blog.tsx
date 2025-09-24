@@ -123,7 +123,7 @@ const Blog = () => {
     "Technology",
     "Risk Management",
     "Business Intelligence",
-    "Strategic Planning"
+    "Business Leadership"
   ];
 
   return (

@@ -104,6 +104,14 @@ const GlobalFooter = () => {
                     </li>
                     <li>
                       <Link 
+                        to="/contact" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                      >
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
                         to="/privacy" 
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                       >
@@ -116,14 +124,6 @@ const GlobalFooter = () => {
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                       >
                         Terms of Service
-                      </Link>
-                    </li>
-                    <li>
-                      <Link 
-                        to="/contact" 
-                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
-                      >
-                        Contact Us
                       </Link>
                     </li>
                   </ul>

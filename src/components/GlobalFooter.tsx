@@ -78,6 +78,22 @@ const GlobalFooter = () => {
                   <ul className="space-y-3 font-open-sans text-sm md:text-base leading-relaxed">
                     <li>
                       <Link 
+                        to="/how-it-works" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                      >
+                        How It Works
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/pricing" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                      >
+                        Pricing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
                         to="/faq" 
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                         aria-label="Frequently Asked Questions"

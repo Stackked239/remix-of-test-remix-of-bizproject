@@ -178,35 +178,38 @@ const GlobalFooter = () => {
               </CardContent>
             </Card>
 
-            {/* Brand & Contact Card */}
+            {/* Contact Card */}
             <Card className="bg-biz-white border border-biz-grey/30 rounded-lg shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
               <CardContent className="p-6 md:p-8">
-                <Link to="/" className="flex items-center mb-4">
-                  <img 
-                    src={bizhealthLogo} 
-                    alt="BizHealth.ai Logo" 
-                    className="h-8 w-auto"
-                    loading="lazy"
-                  />
-                </Link>
+                <h3 className="font-montserrat font-bold text-lg text-biz-navy mb-4">
+                  Get in Touch
+                </h3>
                 
-                <p className="font-open-sans text-biz-grey text-sm md:text-base leading-relaxed mb-4">
-                  Stop guessing, start growing.
-                </p>
-
-                <div className="space-y-2 font-open-sans text-sm text-biz-grey leading-relaxed">
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-biz-teal" />
-                    <a 
-                      href="mailto:support@bizhealth.ai"
-                      className="hover:text-biz-teal transition-colors"
-                    >
-                      support@bizhealth.ai
-                    </a>
+                <div className="space-y-4 font-open-sans text-sm md:text-base leading-relaxed">
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Mail className="w-4 h-4 text-biz-teal" />
+                      <a 
+                        href="mailto:support@bizhealth.ai"
+                        className="text-biz-grey hover:text-biz-teal transition-colors"
+                      >
+                        support@bizhealth.ai
+                      </a>
+                    </div>
+                    <div className="text-biz-grey">
+                      1-855-476-8322
+                    </div>
                   </div>
-                  <div className="text-xs">
-                    <div>Mon-Fri: 9AM-6PM EST</div>
-                    <div>24/7 instant reports</div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-montserrat font-bold text-base text-biz-navy">
+                      Business Hours
+                    </h4>
+                    <div className="text-biz-grey space-y-1">
+                      <div>Monday - Friday: 9:00 AM - 6:00 PM EST</div>
+                      <div>Weekend: Email support only</div>
+                      <div className="text-xs mt-2 italic">*Reports are generated instantly 24/7</div>
+                    </div>
                   </div>
                 </div>
               </CardContent>

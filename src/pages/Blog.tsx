@@ -160,42 +160,54 @@ const Blog = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
               
-              <div className="relative z-10 max-w-3xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">Featured</span>
-                  <span className="text-white/80 text-sm">{featuredPost.category}</span>
+              <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                {/* Content Column */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">Featured</span>
+                    <span className="text-white/80 text-sm">{featuredPost.category}</span>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                    {featuredPost.title}
+                  </h2>
+                  
+                  <p className="text-white/90 text-lg mb-6 leading-relaxed">
+                    {featuredPost.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center gap-6 mb-6 text-white/80 flex-wrap">
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      <span className="text-sm">{featuredPost.author}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span className="text-sm">{featuredPost.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span className="text-sm">{featuredPost.readTime}</span>
+                    </div>
+                  </div>
+                  
+                  <a 
+                    href="/blog/business-health-assessment-2025" 
+                    className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Read Full Article
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </div>
-                
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                  {featuredPost.title}
-                </h2>
-                
-                <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                  {featuredPost.excerpt}
-                </p>
-                
-                <div className="flex items-center gap-6 mb-6 text-white/80">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span className="text-sm">{featuredPost.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span className="text-sm">{featuredPost.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-sm">{featuredPost.readTime}</span>
-                  </div>
+
+                {/* Image Column */}
+                <div className="relative">
+                  <img 
+                    src={featuredPost.imageUrl}
+                    alt={featuredPost.altText}
+                    className="w-full h-80 object-cover rounded-xl shadow-lg"
+                  />
                 </div>
-                
-                <a 
-                  href="/blog/business-health-assessment-2025" 
-                  className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Read Full Article
-                  <ArrowRight className="w-4 h-4" />
-                </a>
               </div>
             </div>
           </div>

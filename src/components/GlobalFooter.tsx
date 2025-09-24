@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { LayoutGrid, Linkedin, Twitter, Mail, HelpCircle } from 'lucide-react';
+import { Linkedin, Twitter, Mail, HelpCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import bizhealthLogo from '@/assets/bizhealth-logo-footer.png';
 
 const GlobalFooter = () => {
   const [email, setEmail] = useState('');
@@ -180,15 +181,17 @@ const GlobalFooter = () => {
             {/* Brand & Contact Card */}
             <Card className="bg-biz-white border border-biz-grey/30 rounded-lg shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
               <CardContent className="p-6 md:p-8">
-                <Link to="/" className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-biz-navy rounded-lg flex items-center justify-center">
-                    <LayoutGrid className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-montserrat font-bold text-xl text-biz-navy">BizHealth.ai</span>
+                <Link to="/" className="flex items-center mb-4">
+                  <img 
+                    src={bizhealthLogo} 
+                    alt="BizHealth.ai Logo" 
+                    className="h-8 w-auto"
+                    loading="lazy"
+                  />
                 </Link>
                 
                 <p className="font-open-sans text-biz-grey text-sm md:text-base leading-relaxed mb-4">
-                  AI-powered business health diagnostics for SMBs. Stop guessing, start growing.
+                  Stop guessing, start growing.
                 </p>
 
                 <div className="space-y-2 font-open-sans text-sm text-biz-grey leading-relaxed">

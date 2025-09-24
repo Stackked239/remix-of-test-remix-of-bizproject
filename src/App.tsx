@@ -29,6 +29,14 @@ import AIBusinessAnalytics from "./pages/blog/AIBusinessAnalytics";
 import StrategicPlanning from "./pages/blog/StrategicPlanning";
 import BusinessIntelligenceROI from "./pages/blog/BusinessIntelligenceROI";
 import WhenToPivot from "./pages/blog/WhenToPivot";
+import LeadershipStressSuccess from "./pages/blog/LeadershipStressSuccess";
+import Operations from "./pages/blog/Operations";
+import BusinessStrategy from "./pages/blog/BusinessStrategy";
+import FinancialManagement from "./pages/blog/FinancialManagement";
+import Technology from "./pages/blog/Technology";
+import RiskManagement from "./pages/blog/RiskManagement";
+import BusinessIntelligence from "./pages/blog/BusinessIntelligence";
+import BusinessLeadership from "./pages/blog/BusinessLeadership";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +72,14 @@ const App = () => (
             <Route path="/blog/strategic-planning-post-pandemic" element={<StrategicPlanning />} />
             <Route path="/blog/business-intelligence-roi" element={<BusinessIntelligenceROI />} />
             <Route path="/blog/when-to-pivot" element={<WhenToPivot />} />
+            <Route path="/blog/leadership-stress-success" element={<LeadershipStressSuccess />} />
+            <Route path="/blog/operations" element={<Operations />} />
+            <Route path="/blog/business-strategy" element={<BusinessStrategy />} />
+            <Route path="/blog/financial-management" element={<FinancialManagement />} />
+            <Route path="/blog/technology" element={<Technology />} />
+            <Route path="/blog/risk-management" element={<RiskManagement />} />
+            <Route path="/blog/business-intelligence" element={<BusinessIntelligence />} />
+            <Route path="/blog/business-leadership" element={<BusinessLeadership />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

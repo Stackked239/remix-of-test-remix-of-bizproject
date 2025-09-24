@@ -9,6 +9,7 @@ import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
+import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 
 const Blog = () => {
   const featuredPost = {
@@ -27,7 +28,7 @@ const Blog = () => {
     {
       title: "5 Warning Signs Your Business Needs Immediate Attention",
       excerpt: "Discover the early indicators that suggest your business may be heading for trouble and what you can do about them.",
-      author: "Michael Rodriguez",
+      author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "8 min read",
       category: "Risk Management",
@@ -38,7 +39,7 @@ const Blog = () => {
     {
       title: "How AI is Revolutionizing Small Business Analytics",
       excerpt: "Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses.",
-      author: "Jennifer Walsh",
+      author: "BizHealth Research Team",
       date: "September 12, 2025", 
       readTime: "10 min read",
       category: "Technology",
@@ -49,7 +50,7 @@ const Blog = () => {
     {
       title: "Financial Health Metrics Every Business Owner Should Track",
       excerpt: "A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance.",
-      author: "Dr. Sarah Chen",
+      author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "15 min read",
       category: "Financial Management",
@@ -60,7 +61,7 @@ const Blog = () => {
     {
       title: "Building Operational Resilience in Uncertain Times",
       excerpt: "Strategies for creating business systems that can withstand market volatility and unexpected challenges.",
-      author: "Michael Rodriguez",
+      author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "11 min read",
       category: "Operations",
@@ -71,7 +72,7 @@ const Blog = () => {
     {
       title: "The ROI of Business Intelligence for SMBs",
       excerpt: "Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments.",
-      author: "Jennifer Walsh",
+      author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "9 min read",
       category: "Business Intelligence",
@@ -82,10 +83,10 @@ const Blog = () => {
     {
       title: "Strategic Planning for the Post-Pandemic Business Landscape",
       excerpt: "How to adapt your business strategy for the new realities of remote work, supply chain disruptions, and changing consumer behavior.",
-      author: "Dr. Sarah Chen",
+      author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "13 min read",
-      category: "Strategic Planning",
+      category: "Business Leadership",
       slug: "/blog/strategic-planning-post-pandemic",
       imageUrl: strategicPlanningImage,
       altText: "Strategic planning for post-pandemic business landscape with remote work and digital transformation elements"
@@ -96,10 +97,21 @@ const Blog = () => {
       author: "BizHealth Research Team",
       date: "September 12, 2025",
       readTime: "10 min read",
-      category: "Strategic Planning",
+      category: "Business Leadership",
       slug: "/blog/when-to-pivot",
       imageUrl: pivotImage,
       altText: "Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
+    },
+    {
+      title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
+      excerpt: "As a business leader, discover how to reframe risks, build resilience, and find peace in the storm of leadership without adding more burden to your plate.",
+      author: "BizHealth Research Team",
+      date: "September 24, 2025",
+      readTime: "12 min read",
+      category: "Business Leadership",
+      slug: "/blog/leadership-stress-success",
+      imageUrl: leadershipStressImage,
+      altText: "Business leader experiencing stress while working with financial reports and analytics charts on desk"
     }
   ];
 

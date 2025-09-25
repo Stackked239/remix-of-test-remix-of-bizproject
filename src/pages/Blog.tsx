@@ -11,6 +11,7 @@ import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
+import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
 
 const Blog = () => {
   const featuredPost = {
@@ -26,6 +27,28 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
+      excerpt: "As a business leader, discover how to reframe risks, build resilience, and find peace in the storm of leadership without adding more burden to your plate.",
+      author: "BizHealth Research Team",
+      date: "September 24, 2025",
+      readTime: "12 min read",
+      category: "Business Leadership",
+      slug: "/blog/leadership-stress-success",
+      imageUrl: leadershipStressImage,
+      altText: "Business leader experiencing stress while working with financial reports and analytics charts on desk"
+    },
+    {
+      title: "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",
+      excerpt: "Discover how family-owned micro retailers can leverage remote tools to streamline operations while preserving their personal touch.",
+      author: "BizHealth Research Team",
+      date: "September 24, 2025",
+      readTime: "12 min read",
+      category: "Technology",
+      slug: "/blog/retail-remote-tools",
+      imageUrl: retailToolsImage,
+      altText: "Multi-generational family business team collaborating with technology in modern retail environment"
+    },
     {
       title: "5 Warning Signs Your Business Needs Immediate Attention",
       excerpt: "Discover the early indicators that suggest your business may be heading for trouble and what you can do about them.",
@@ -102,17 +125,6 @@ const Blog = () => {
       slug: "/blog/when-to-pivot",
       imageUrl: pivotImage,
       altText: "Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
-    },
-    {
-      title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
-      excerpt: "As a business leader, discover how to reframe risks, build resilience, and find peace in the storm of leadership without adding more burden to your plate.",
-      author: "BizHealth Research Team",
-      date: "September 24, 2025",
-      readTime: "12 min read",
-      category: "Business Leadership",
-      slug: "/blog/leadership-stress-success",
-      imageUrl: leadershipStressImage,
-      altText: "Business leader experiencing stress while working with financial reports and analytics charts on desk"
     }
   ];
 

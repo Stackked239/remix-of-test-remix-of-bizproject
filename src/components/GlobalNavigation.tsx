@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import bizHealthLogo from '@/assets/bizhealth-logo-main.jpg';
@@ -29,7 +29,9 @@ import {
 const GlobalNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('US');
+  const [searchTerm, setSearchTerm] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
 
   const countries = [
     { code: 'US', flag: '🇺🇸', name: 'United States', hreflang: 'en-US' },
@@ -91,6 +93,20 @@ const GlobalNavigation = () => {
 
   const isActiveRoute = (path: string) => {
     return location.pathname === path;
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/blog?search=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+    }
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch(e);
+    }
   };
 
   return (
@@ -202,14 +218,17 @@ const GlobalNavigation = () => {
             </div>
 
             {/* Search Bar */}
-            <div className="relative">
+            <form onSubmit={handleSearch} className="relative">
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-biz-grey" />
               <Input
                 type="search"
-                placeholder="Search..."
+                placeholder="Search blogs..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleSearchKeyDown}
                 className="pl-10 w-64 bg-background border-border focus:ring-biz-green focus:border-biz-green"
               />
-            </div>
+            </form>
 
             {/* Country Selector */}
             <DropdownMenu>
@@ -264,14 +283,17 @@ const GlobalNavigation = () => {
         <div className="lg:hidden bg-biz-white border-t border-border">
           <div className="px-4 py-6 space-y-4">
             {/* Mobile Search */}
-            <div className="relative">
+            <form onSubmit={handleSearch} className="relative">
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-biz-grey" />
               <Input
                 type="search"
-                placeholder="Search..."
+                placeholder="Search blogs..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleSearchKeyDown}
                 className="pl-10 w-full"
               />
-            </div>
+            </form>
 
             {/* Mobile Navigation Links */}
             <div className="space-y-3">

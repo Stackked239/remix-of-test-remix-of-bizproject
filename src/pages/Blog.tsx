@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -16,6 +17,8 @@ import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 
 const Blog = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  
   const featuredPost = {
     title: "The Complete Guide to Business Health Assessment in 2025",
     excerpt: "As a business leader, you're no stranger to the whirlwind of running a company—juggling finances, operations, and team dynamics while keeping your eyes on the horizon for growth. But what if the cracks forming beneath the surface are quietly stalling your progress? That's where a Business Health Assessment comes in—a clear-eyed look at your company's vital signs to spot issues before they spiral into costly problems.",
@@ -155,6 +158,14 @@ const Blog = () => {
   // State for filtering and search
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Handle URL search parameters
+  useEffect(() => {
+    const urlSearchTerm = searchParams.get('search');
+    if (urlSearchTerm) {
+      setSearchTerm(urlSearchTerm);
+    }
+  }, [searchParams]);
 
   // Filter and search logic
   const filteredPosts = useMemo(() => {

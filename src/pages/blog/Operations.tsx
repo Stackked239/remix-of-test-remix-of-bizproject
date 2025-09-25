@@ -49,6 +49,38 @@ const Operations = () => {
                     Featured
                   </span>
                 </div>
+                <CardTitle className="text-2xl">Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses</CardTitle>
+                <CardDescription>
+                  Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-6 text-muted-foreground mb-4">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    <span>BizHealth Research Team</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>September 25, 2025</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>10 min read</span>
+                  </div>
+                </div>
+                <a 
+                  href="/blog/daily-grind-fixes" 
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  Read Full Article
+                  <ArrowLeft className="w-4 h-4 rotate-180" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="mb-8">
+              <CardHeader>
                 <CardTitle className="text-2xl">Building Operational Resilience in Uncertain Times</CardTitle>
                 <CardDescription>
                   Strategies for creating business systems that can withstand market volatility and unexpected challenges.

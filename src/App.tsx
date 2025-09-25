@@ -38,6 +38,7 @@ import RiskManagement from "./pages/blog/RiskManagement";
 import BusinessIntelligence from "./pages/blog/BusinessIntelligence";
 import BusinessLeadership from "./pages/blog/BusinessLeadership";
 import RetailRemoteTools from "./pages/blog/RetailRemoteTools";
+import DailyGrindFixes from "./pages/blog/DailyGrindFixes";
 
 const queryClient = new QueryClient();
 
@@ -82,6 +83,7 @@ const App = () => (
             <Route path="/blog/business-intelligence" element={<BusinessIntelligence />} />
             <Route path="/blog/business-leadership" element={<BusinessLeadership />} />
             <Route path="/blog/retail-remote-tools" element={<RetailRemoteTools />} />
+            <Route path="/blog/daily-grind-fixes" element={<DailyGrindFixes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

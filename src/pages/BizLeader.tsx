@@ -73,20 +73,6 @@ const BizLeader = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
         </div>
         
-        {/* Watermark */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center z-10">
-          <div 
-            className="font-montserrat font-bold text-white opacity-30 text-3xl md:text-5xl"
-            style={{
-              textShadow: '1px 1px 2px #212653'
-            }}
-          >
-            LAUNCHING January 2026:
-            <br />
-            'We're building something great for you'
-          </div>
-        </div>
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
           <div className="text-center">
             <div className="flex justify-center mb-6">
@@ -121,6 +107,20 @@ const BizLeader = () => {
                 Watch Preview
                 <Play className="w-5 h-5 ml-2" />
               </Button>
+            </div>
+            
+            {/* Watermark */}
+            <div className="mt-12 text-center">
+              <div 
+                className="font-montserrat font-bold text-white opacity-30 text-3xl md:text-5xl"
+                style={{
+                  textShadow: '1px 1px 2px #212653'
+                }}
+              >
+                LAUNCHING January 2026:
+                <br />
+                'We're building something great for you'
+              </div>
             </div>
           </div>
         </div>

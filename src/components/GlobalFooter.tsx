@@ -165,24 +165,26 @@ const GlobalFooter = () => {
                   <label htmlFor="newsletter-email" className="sr-only">
                     Email address for newsletter subscription
                   </label>
-                  <div className="flex space-x-2">
+                  <div className="space-y-3">
                     <Input
                       id="newsletter-email"
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder="Enter your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 text-sm md:text-base"
+                      className="w-full text-sm md:text-base"
                       required
                       aria-describedby="newsletter-description"
                     />
-                    <Button 
-                      type="submit"
-                      className="bg-biz-teal hover:bg-biz-teal/90 text-white font-open-sans shrink-0 px-4 md:px-6 transition-all duration-300 hover:shadow-lg"
-                      aria-label="Subscribe to newsletter"
-                    >
-                      Subscribe
-                    </Button>
+                    <div className="flex justify-center">
+                      <Button 
+                        type="submit"
+                        className="bg-biz-teal hover:bg-biz-teal/90 text-white font-open-sans px-6 md:px-8 transition-all duration-300 hover:shadow-lg"
+                        aria-label="Subscribe to newsletter"
+                      >
+                        Subscribe
+                      </Button>
+                    </div>
                   </div>
                   <p 
                     id="newsletter-description"

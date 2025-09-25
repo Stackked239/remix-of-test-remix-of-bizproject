@@ -12,6 +12,7 @@ import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jp
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
+import businessAnalystImage from "@/assets/business-analyst-dashboard.jpg";
 
 const Blog = () => {
   const featuredPost = {
@@ -182,8 +183,8 @@ const Blog = () => {
             </p>
             <div className="mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="Professional woman working on laptop analyzing business data"
+                src={businessAnalystImage} 
+                alt="Professional business analyst working on laptop analyzing data and business health assessment dashboard"
                 className="rounded-xl shadow-elegant mx-auto max-w-2xl w-full"
               />
             </div>

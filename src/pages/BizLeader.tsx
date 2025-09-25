@@ -21,7 +21,7 @@ const BizLeader = () => {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        setCountdown(`Time Remaining: ${days}d ${hours}h ${minutes}m`);
+        setCountdown(`Official Launch in:   Days: ${days}  Hours: ${hours}  Minutes: ${minutes}`);
       } else {
         setCountdown("Launched!");
       }

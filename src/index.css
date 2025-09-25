@@ -150,31 +150,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Hero Banner Watermark */
-.hero-banner {
-  position: relative;
-}
-
-.hero-banner::before {
-  content: "LAUNCHING January 2026: 'We're building something great for you'";
-  position: absolute;
-  bottom: 20px; 
-  right: 20px;
-  transform: rotate(-45deg);
-  font-family: Montserrat, sans-serif;
-  font-weight: bold;
-  font-size: 48px;
-  color: #FFFFFF;
-  opacity: 0.3;
-  z-index: 10;
-  text-shadow: 1px 1px 2px #212653;
-}
-
-@media (max-width: 768px) {
-  .hero-banner::before {
-    font-size: 32px;
-    bottom: 10px; 
-    right: 10px;
-  }
-}

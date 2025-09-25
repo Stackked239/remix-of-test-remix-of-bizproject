@@ -6,8 +6,33 @@ import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import LeadershipQuiz from "@/components/LeadershipQuiz";
+import { useState, useEffect } from "react";
 
 const BizLeader = () => {
+  const [countdown, setCountdown] = useState("");
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const launchDate = new Date('2026-01-07T13:00:00-05:00').getTime();
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        setCountdown(` | ${days}d ${hours}h ${minutes}m Until Launch`);
+      } else {
+        setCountdown(" | Launched!");
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     {
       icon: Crown,
@@ -63,6 +88,15 @@ const BizLeader = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Sticky Banner */}
+      <div 
+        className="sticky top-0 bg-biz-navy text-white py-3 px-4 text-center font-montserrat font-bold z-50"
+        style={{ zIndex: 1000 }}
+      >
+        BizLeaDeR – Launching January 2026. Explore the vision while we finalize resources devoted to our core BizHealth.ai analyzer.
+        <span>{countdown}</span>
+      </div>
+      
       <PromotionalBanner />
       <GlobalNavigation />
       

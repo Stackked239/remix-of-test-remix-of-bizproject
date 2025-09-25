@@ -108,20 +108,6 @@ const BizLeader = () => {
                 <Play className="w-5 h-5 ml-2" />
               </Button>
             </div>
-            
-            {/* Watermark */}
-            <div className="mt-12 text-center">
-              <div 
-                className="font-montserrat font-bold text-white opacity-30 text-3xl md:text-5xl"
-                style={{
-                  textShadow: '1px 1px 2px #212653'
-                }}
-              >
-                LAUNCHING January 2026:
-                <br />
-                'We're building something great for you'
-              </div>
-            </div>
           </div>
         </div>
       </section>

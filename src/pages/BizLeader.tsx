@@ -91,7 +91,7 @@ const BizLeader = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      {/* Sticky Banner - positioned below navigation */}
+      {/* Sticky Banner - positioned just above Hero section */}
       <div className="sticky top-0 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-40">
         <div className="text-biz-lime text-sm md:text-base">
           BizLeaDeR: Launching 2026 - Explore the vision as we put on the finishing touches

@@ -73,6 +73,19 @@ const BizLeader = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
         </div>
         
+        {/* Watermark Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div 
+            className="transform -rotate-12 text-white opacity-30 text-2xl lg:text-3xl font-montserrat font-bold whitespace-nowrap select-none"
+            style={{ 
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.1))'
+            }}
+          >
+            LAUNCHING January 2026: "We're building something great for you"
+          </div>
+        </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
           <div className="text-center">
             <div className="flex justify-center mb-6">

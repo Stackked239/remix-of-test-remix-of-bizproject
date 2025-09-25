@@ -5,6 +5,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import LeadershipQuiz from "@/components/LeadershipQuiz";
 
 const BizLeader = () => {
   const features = [
@@ -142,6 +143,9 @@ const BizLeader = () => {
           </div>
         </div>
       </section>
+
+      {/* Leadership Quiz Section */}
+      <LeadershipQuiz />
 
       {/* Programs Section */}
       <section className="py-20 bg-background">

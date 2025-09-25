@@ -12,7 +12,7 @@ import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jp
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
-import businessAnalystImage from "@/assets/business-analyst-dashboard.jpg";
+import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 
 const Blog = () => {
   const featuredPost = {
@@ -184,8 +184,13 @@ const Blog = () => {
             <div className="mt-8">
               <img 
                 src={businessAnalystImage} 
-                alt="Professional business analyst working on laptop analyzing data and business health assessment dashboard"
-                className="rounded-xl shadow-elegant mx-auto max-w-2xl w-full"
+                alt="Professional business analyst working on laptop with business health assessment dashboard - SMB data analytics and business intelligence tools for small business growth"
+                className="rounded-xl shadow-elegant mx-auto max-w-2xl w-full h-auto"
+                width="800"
+                height="400"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
           </div>

@@ -12,6 +12,7 @@ import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jp
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
+import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 
 const Blog = () => {
@@ -28,6 +29,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
+      excerpt: "Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth.",
+      author: "BizHealth Research Team",
+      date: "September 25, 2025",
+      readTime: "10 min read",
+      category: "Operations",
+      slug: "/blog/daily-grind-fixes",
+      imageUrl: dailyGrindImage,
+      altText: "Professional food service team in commercial kitchen preparing healthy meal components with fresh ingredients, demonstrating efficient food business operations and teamwork"
+    },
     {
       title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
       excerpt: "As a business leader, discover how to reframe risks, build resilience, and find peace in the storm of leadership without adding more burden to your plate.",

@@ -93,7 +93,7 @@ const BizLeader = () => {
       {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
         <div className="text-biz-lime text-sm md:text-base">
-          BizLeaDeR: Launching 2026 - Explore the vision as we put on the finishing touches
+          BizLeaDeR: Launching January 2026 - Explore the vision as we put on the finishing touches
         </div>
         <div className="text-white text-xs md:text-sm">
           {countdown}

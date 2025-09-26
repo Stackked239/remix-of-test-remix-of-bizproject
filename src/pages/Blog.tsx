@@ -14,6 +14,7 @@ import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
+import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 
 const Blog = () => {
@@ -32,6 +33,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Real-Time Analytics: Powering SMB Agility in Volatile Markets",
+      excerpt: "Transform your SMB with real-time BI in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for competitive advantage in volatile markets.",
+      author: "BizHealth Research Team",
+      date: "September 26, 2025",
+      readTime: "10 min read",
+      category: "Business Intelligence",
+      slug: "/blog/real-time-analytics-smb-agility",
+      imageUrl: realTimeAnalyticsImage,
+      altText: "Real-time analytics dashboard displaying SMB business intelligence metrics for volatile market agility with team collaboration in modern office setting"
+    },
     {
       title: "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
       excerpt: "Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth.",

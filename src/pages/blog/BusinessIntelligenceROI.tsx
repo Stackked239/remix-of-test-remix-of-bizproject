@@ -2,11 +2,80 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 
 const BusinessIntelligenceROI = () => {
+  const publishDate = "2025-09-26";
+  const lastModified = "2025-09-26T00:00:00.000Z";
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Business Intelligence ROI Guide 2025 | BizHealth.ai</title>
+        <meta name="description" content="Discover measurable BI ROI results for SMBs. Real case studies show 112% median returns within 18 months. Calculate your potential ROI now!" />
+        
+        {/* Primary Keywords: business intelligence ROI, BI ROI for SMBs, small business analytics */}
+        <meta name="keywords" content="business intelligence ROI, BI ROI, SMB business intelligence, small business analytics, business intelligence for small business, BI implementation cost, business intelligence case studies, SMB data analytics, business intelligence benefits" />
+        
+        <link rel="canonical" href="https://bizhealth.ai/blog/business-intelligence-roi" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Business Intelligence ROI Guide 2025 | BizHealth.ai" />
+        <meta property="og:description" content="Discover measurable BI ROI results for SMBs. Real case studies show 112% median returns within 18 months. Calculate your potential ROI now!" />
+        <meta property="og:image" content={biRoiImage} />
+        <meta property="og:url" content="https://bizhealth.ai/blog/business-intelligence-roi" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="BizHealth.ai" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Business Intelligence ROI Guide 2025 | BizHealth.ai" />
+        <meta name="twitter:description" content="Discover measurable BI ROI results for SMBs. Real case studies show 112% median returns within 18 months." />
+        <meta name="twitter:image" content={biRoiImage} />
+        
+        {/* Article Meta Tags */}
+        <meta name="article:published_time" content={lastModified} />
+        <meta name="article:modified_time" content={lastModified} />
+        <meta name="article:author" content="BizHealth Research Team" />
+        <meta name="article:section" content="Business Intelligence" />
+        <meta name="article:tag" content="Business Intelligence, ROI, SMB Analytics, Data Analytics" />
+        
+        {/* JSON-LD Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "The ROI of Business Intelligence for SMBs: Real Case Studies & Results",
+            "description": "Comprehensive guide showcasing real-world business intelligence ROI results for small and medium businesses, with detailed case studies and implementation strategies.",
+            "image": biRoiImage,
+            "author": {
+              "@type": "Organization",
+              "name": "BizHealth Research Team",
+              "description": "Expert business intelligence and analytics research team specializing in SMB growth strategies"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://bizhealth.ai/logo.png"
+              }
+            },
+            "datePublished": lastModified,
+            "dateModified": lastModified,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://bizhealth.ai/blog/business-intelligence-roi"
+            },
+            "keywords": "business intelligence ROI, BI implementation, SMB analytics, business intelligence case studies, data-driven decisions",
+            "articleSection": "Business Intelligence",
+            "wordCount": "2400"
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -34,11 +103,11 @@ const BusinessIntelligenceROI = () => {
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Jennifer Walsh</span>
+                <span>BizHealth Research Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>September 12, 2025</span>
+                <span>September 26, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -253,6 +322,7 @@ const BusinessIntelligenceROI = () => {
 
       <GlobalFooter />
     </div>
+    </>
   );
 };
 

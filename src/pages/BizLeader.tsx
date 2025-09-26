@@ -89,10 +89,9 @@ const BizLeader = () => {
   return (
     <div className="min-h-screen bg-background">
       <PromotionalBanner />
-      <GlobalNavigation />
       
-      {/* Sticky Banner - positioned just above Hero section */}
-      <div className="sticky top-0 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-40">
+      {/* Sticky Banner - positioned between header and nav bar */}
+      <div className="sticky top-20 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-40">
         <div className="text-biz-lime text-sm md:text-base">
           BizLeaDeR: Launching 2026 - Explore the vision as we put on the finishing touches
         </div>
@@ -100,6 +99,8 @@ const BizLeader = () => {
           {countdown}
         </div>
       </div>
+      
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="relative bg-biz-lime text-white overflow-hidden">

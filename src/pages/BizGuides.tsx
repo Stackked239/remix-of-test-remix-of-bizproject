@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Compass, Users, TrendingUp, Shield, CheckCircle, BookOpen } from "lucide-react";
@@ -7,6 +8,30 @@ import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizGuides = () => {
+  const [countdown, setCountdown] = useState("");
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const launchDate = new Date('2025-11-30T15:21:00-05:00').getTime(); // Nov 30, 2025, 3:21 PM ET
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        setCountdown(`Official Launch in: ${days} days, ${hours} hours, ${minutes} minutes`);
+      } else {
+        setCountdown("Launched!");
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     {
       icon: Compass,
@@ -42,6 +67,17 @@ const BizGuides = () => {
   return (
     <div className="min-h-screen bg-background">
       <PromotionalBanner />
+      
+      {/* Sticky Banner - positioned below header and nav bar */}
+      <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
+        <div className="text-biz-teal text-sm md:text-base">
+          BizGuides: Launching November 30, 2025 - Explore the vision as we put on the finishing touches
+        </div>
+        <div className="text-white text-xs md:text-sm">
+          {countdown}
+        </div>
+      </div>
+      
       <GlobalNavigation />
       
       {/* Hero Section */}

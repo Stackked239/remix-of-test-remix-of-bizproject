@@ -70,7 +70,7 @@ const BizGuides = () => {
       
       {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
-        <div className="text-biz-teal text-sm md:text-base">
+        <div className="text-biz-lime text-sm md:text-base">
           BizGuides: Launching November 30, 2025 - Explore the vision as we put on the finishing touches
         </div>
         <div className="text-white text-xs md:text-sm">

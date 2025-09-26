@@ -102,7 +102,7 @@ const BizGrowth = () => {
       
       {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
-        <div className="text-biz-citrine text-sm md:text-base">
+        <div className="text-biz-lime text-sm md:text-base">
           BizGrowth: Launching January 2026 - Explore the vision as we put on the finishing touches
         </div>
         <div className="text-white text-xs md:text-sm">

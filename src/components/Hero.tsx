@@ -164,13 +164,13 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-biz-white rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/20 shadow-lg">
+          <div className="bg-biz-navy rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/20">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="font-montserrat font-bold text-2xl mb-2 text-biz-navy">
+                <h3 className="font-montserrat font-bold text-2xl mb-2 text-biz-white">
                   Find Your Perfect Plan
                 </h3>
-                <p className="font-open-sans text-biz-grey">
+                <p className="font-open-sans text-biz-white/80">
                   Answer 3 quick questions to get personalized recommendations
                 </p>
               </div>
@@ -179,7 +179,7 @@ const Hero = () => {
               <div className="space-y-6">
                 {/* Annual Revenue */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-navy">
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
                     Annual Revenue: ${revenue[0].toLocaleString()}
                   </label>
                   <Slider
@@ -190,7 +190,7 @@ const Hero = () => {
                     step={50000}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
                     <span>$0</span>
                     <span>$50M</span>
                   </div>
@@ -198,7 +198,7 @@ const Hero = () => {
 
                 {/* Employee Count */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-navy">
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
                     Employees: {employees[0]}
                   </label>
                   <Slider
@@ -209,7 +209,7 @@ const Hero = () => {
                     step={1}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
                     <span>0</span>
                     <span>250</span>
                   </div>
@@ -217,7 +217,7 @@ const Hero = () => {
 
                 {/* Business Challenges */}
                 <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-navy">
+                  <label className="font-open-sans font-semibold text-sm text-biz-white">
                     Business Challenges (Scale 0-10): {challenges[0]}
                   </label>
                   <Slider
@@ -228,7 +228,7 @@ const Hero = () => {
                     step={1}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-grey">
+                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
                     <span>None</span>
                     <span>Major Concerns</span>
                   </div>

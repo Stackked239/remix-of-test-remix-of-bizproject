@@ -30,11 +30,6 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleSeeHowItWorks = () => {
-    const element = document.getElementById('how-it-works');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   // Update tier when inputs change
   useEffect(() => {
     setRecommendedTier(calculateTier());
@@ -151,24 +146,14 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={handleGetReport}
-                  size="lg"
-                  className="bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
-                >
-                  Get Your Business Health Report
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                <Button 
-                  onClick={handleSeeHowItWorks}
-                  variant="outline"
-                  size="lg"
-                  className="border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-biz-white font-open-sans font-semibold text-lg px-8 py-4"
-                >
-                  See How It Works
-                </Button>
-              </div>
+              <Button 
+                onClick={handleGetReport}
+                size="lg"
+                className="bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
+              >
+                Get Your Business Health Report
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
               
               {/* Risk-Free Guarantee */}
               <div className="flex items-center space-x-2 text-sm font-open-sans text-biz-grey">

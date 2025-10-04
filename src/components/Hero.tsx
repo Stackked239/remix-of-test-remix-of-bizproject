@@ -239,7 +239,7 @@ const Hero = () => {
               <div className="bg-biz-white rounded-lg p-4 border border-biz-grey/60">
                 <div className="text-center">
                   <p className="font-open-sans text-sm text-black mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-xl text-biz-green">
+                  <p className="font-montserrat font-bold text-xl text-biz-lime">
                     {recommendedTier}
                   </p>
                   <p className="font-open-sans text-sm text-black/90 mt-2">

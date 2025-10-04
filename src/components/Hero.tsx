@@ -99,7 +99,7 @@ const Hero = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
           {/* Left Column - Main Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 relative z-10">
             {/* Main Headlines */}
             <div className="space-y-4">
               <h1 className="font-montserrat font-bold text-4xl lg:text-6xl leading-tight">

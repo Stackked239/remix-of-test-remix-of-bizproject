@@ -158,7 +158,7 @@ const Hero = () => {
               {/* Risk-Free Guarantee */}
               <div className="flex items-center space-x-2 text-sm font-open-sans text-biz-grey">
                 <Shield className="w-4 h-4 text-biz-green" />
-                <span>30-day money-back guarantee • Trusted by 10,000+ SMBs</span>
+                <span>Reports generated 24/7 in &lt;45 minutes • Trusted by 10,000+ SMBs</span>
               </div>
             </div>
           </div>

@@ -29,17 +29,43 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
 
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Success!",
-      description: "You're all set for launch day! Check your email for updates.",
-    });
-    
-    setEmail("");
-    setIsSubmitting(false);
-    setIsOpen(false);
+    try {
+      const response = await fetch(
+        "https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            type: "popup_subscriber",
+            email,
+            hubColor,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send notification");
+      }
+
+      toast({
+        title: "Success!",
+        description: "You're all set for launch day! Check your email for updates.",
+      });
+      
+      setEmail("");
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to subscribe. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getBrandColors = () => {

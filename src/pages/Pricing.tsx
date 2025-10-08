@@ -44,8 +44,8 @@ const Pricing = () => {
     {
       name: "Enterprise",
       price: "$499",
-      originalPrice: "$699",
-      savings: "$200",
+      originalPrice: "$799",
+      savings: "$300",
       description: "Complete solution for established businesses planning major transitions or exits",
       features: [
         "Comprehensive business assessment",

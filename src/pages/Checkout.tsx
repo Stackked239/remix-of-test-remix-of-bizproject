@@ -17,7 +17,7 @@ import GlobalFooter from '@/components/GlobalFooter';
 const TIER_PRICING = {
   essentials: { price: 99, originalPrice: 199, name: 'Essentials', questions: 50, reports: "Owner's Report", savings: 100 },
   growth: { price: 299, originalPrice: 499, name: 'Growth', questions: 75, reports: 'Comprehensive + Bundles', savings: 200 },
-  enterprise: { price: 499, originalPrice: 699, name: 'Enterprise', questions: 'Comprehensive', reports: 'All Reports + Team Access', savings: 200 }
+  enterprise: { price: 499, originalPrice: 799, name: 'Enterprise', questions: 'Comprehensive', reports: 'All Reports + Team Access', savings: 300 }
 };
 
 const ADD_ONS = {

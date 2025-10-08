@@ -15,9 +15,9 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 
 const TIER_PRICING = {
-  essentials: { price: 99, name: 'Essentials', questions: 50, reports: "Owner's Report" },
-  growth: { price: 199, name: 'Growth', questions: 75, reports: 'Comprehensive + Bundles' },
-  enterprise: { price: 299, name: 'Enterprise', questions: 'Comprehensive', reports: 'All Reports + Team Access' }
+  essentials: { price: 99, originalPrice: 199, name: 'Essentials', questions: 50, reports: "Owner's Report", savings: 100 },
+  growth: { price: 299, originalPrice: 499, name: 'Growth', questions: 75, reports: 'Comprehensive + Bundles', savings: 200 },
+  enterprise: { price: 499, originalPrice: 699, name: 'Enterprise', questions: 'Comprehensive', reports: 'All Reports + Team Access', savings: 200 }
 };
 
 const ADD_ONS = {
@@ -161,13 +161,21 @@ const Checkout = () => {
                           <p className="text-sm text-biz-grey font-open-sans">
                             {tier.questions} questions • {tier.reports}
                           </p>
+                          <div className="mt-1">
+                            <span className="inline-block bg-warning/10 border border-warning px-2 py-0.5 rounded text-xs text-warning font-semibold">
+                              ⏰ Save ${tier.savings}
+                            </span>
+                          </div>
                         </div>
                         <div className="text-right">
+                          <div className="text-sm text-biz-grey line-through font-open-sans">
+                            ${tier.originalPrice}
+                          </div>
                           <div className="text-2xl font-montserrat font-bold text-biz-navy">
                             ${tier.price}
                           </div>
                           {selectedTier === key && (
-                            <Check className="h-5 w-5 text-biz-green ml-auto" />
+                            <Check className="h-5 w-5 text-biz-green ml-auto mt-1" />
                           )}
                         </div>
                       </div>

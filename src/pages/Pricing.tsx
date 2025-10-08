@@ -8,6 +8,8 @@ const Pricing = () => {
     {
       name: "Essentials",
       price: "$99",
+      originalPrice: "$199",
+      savings: "$100",
       description: "Perfect for startups and small businesses getting their first comprehensive health check",
       features: [
         "45-question focused assessment",
@@ -22,7 +24,9 @@ const Pricing = () => {
     },
     {
       name: "Growth", 
-      price: "$199",
+      price: "$299",
+      originalPrice: "$499",
+      savings: "$200",
       description: "Ideal for growing businesses ready for detailed analysis and strategic planning",
       features: [
         "75+ question assessment",
@@ -39,7 +43,9 @@ const Pricing = () => {
     },
     {
       name: "Enterprise",
-      price: "$299", 
+      price: "$499",
+      originalPrice: "$699",
+      savings: "$200",
       description: "Complete solution for established businesses planning major transitions or exits",
       features: [
         "Comprehensive business assessment",
@@ -119,7 +125,16 @@ const Pricing = () => {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-foreground">{tier.name}</h3>
-                  <div className="text-4xl font-bold mb-4 text-primary">{tier.price}</div>
+                  <div className="mb-2">
+                    <div className="inline-block bg-warning/10 border border-warning px-3 py-1 rounded-full">
+                      <span className="text-warning font-semibold text-xs">⏰ Limited Time Offer</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <span className="text-lg text-muted-foreground line-through">{tier.originalPrice}</span>
+                    <span className="text-4xl font-bold text-primary">{tier.price}</span>
+                  </div>
+                  <div className="text-sm font-semibold text-growth mb-4">Save {tier.savings}!</div>
                   <p className="text-muted-foreground leading-relaxed">{tier.description}</p>
                 </div>
                 
@@ -162,7 +177,7 @@ const Pricing = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">BizHealth.ai Assessment</h3>
                 <ul className="space-y-2 text-primary">
-                  <li>• $99 - $299 one-time fee</li>
+                  <li>• $99 - $499 one-time fee (Limited Time!)</li>
                   <li>• Instant results in 15-30 minutes</li>
                   <li>• AI-powered personalized insights</li>
                   <li>• Ongoing support and updates</li>

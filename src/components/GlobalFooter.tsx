@@ -62,7 +62,7 @@ const GlobalFooter = () => {
         aria-label="Footer"
       >
         {/* Gradient Background Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-biz-navy via-biz-navy/80 to-biz-white/20 opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-biz-navy via-biz-navy/80 to-biz-white/20 opacity-90 pointer-events-none" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Footer Content - Card Layout */}

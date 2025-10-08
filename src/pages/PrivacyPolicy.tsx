@@ -3,6 +3,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Card, CardContent } from '@/components/ui/card';
 import bizhealthLogo from '@/assets/bizhealth-logo-main.jpg';
+import PromotionalBanner from '@/components/PromotionalBanner';
 
 const PrivacyPolicy = () => {
   return (
@@ -18,6 +19,7 @@ const PrivacyPolicy = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
         
         <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

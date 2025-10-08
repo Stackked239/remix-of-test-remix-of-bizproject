@@ -140,16 +140,6 @@ const Pricing = () => {
               ))}
             </div>
           </div>
-          
-          {/* Money back guarantee */}
-          <div className="text-center mt-8">
-            <div className="inline-flex items-center gap-2 bg-background px-6 py-3 rounded-full shadow-card border border-border/50">
-              <Shield className="w-5 h-5 text-growth" />
-              <span className="text-sm font-medium text-foreground">
-                30-day money-back guarantee if not satisfied
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

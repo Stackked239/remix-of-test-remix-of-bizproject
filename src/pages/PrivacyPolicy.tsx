@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Card, CardContent } from '@/components/ui/card';
+import bizhealthLogo from '@/assets/bizhealth-logo-main.jpg';
 
 const PrivacyPolicy = () => {
   return (
@@ -22,6 +23,13 @@ const PrivacyPolicy = () => {
         <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           {/* Header */}
           <header className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <img 
+                src={bizhealthLogo} 
+                alt="BizHealth.ai Logo" 
+                className="h-16 md:h-20 w-auto"
+              />
+            </div>
             <h1 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-biz-navy mb-4">
               BizHealth.ai Privacy Policy
             </h1>
@@ -36,7 +44,7 @@ const PrivacyPolicy = () => {
           <Card className="mb-8 bg-biz-white border-biz-grey/30">
             <CardContent className="p-6 md:p-8">
               <p className="font-open-sans text-base md:text-lg text-biz-grey leading-relaxed">
-                At BizHealth.ai, your trusted Business Health Advisor, we empower micro-, small-, and mid-sized businesses (1-250 employees, $100K-$50M revenue) with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver 20-25x ROI insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact <a href="mailto:support@bizhealth.ai" className="text-biz-teal hover:underline">support@bizhealth.ai</a>.
+                At BizHealth.ai, your trusted Business Health Advisor, we empower micro-, small-, and mid-sized businesses with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact <a href="mailto:support@bizhealth.ai" className="text-biz-teal hover:underline">support@bizhealth.ai</a>.
               </p>
             </CardContent>
           </Card>

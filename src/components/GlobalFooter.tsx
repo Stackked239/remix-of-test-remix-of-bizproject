@@ -243,7 +243,7 @@ const GlobalFooter = () => {
                     © {currentYear} Business Health Analyzer. All rights reserved.
                   </p>
                   <p className="text-xs text-biz-grey font-open-sans mt-1">
-                    Your Business Health Coach - Stop Guessing, Start Growing
+                    Your Trusted Business Health Advisor - Stop Guessing, Start Growing
                   </p>
                 </div>
                 

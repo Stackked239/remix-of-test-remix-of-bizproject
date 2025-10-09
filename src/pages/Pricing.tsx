@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, Star, ArrowRight } from "lucide-react";
+import { CheckCircle, Star, ArrowRight, DollarSign } from "lucide-react";
 import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
 import { useEffect } from "react";
 
@@ -63,6 +63,7 @@ const Pricing = () => {
         "Custom action plan development"
       ],
       popular: false,
+      bestValue: true,
       cta: "Start Enterprise Assessment"
     }
   ];
@@ -117,12 +118,20 @@ const Pricing = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {tiers.map((tier, index) => (
-              <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
+              <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular || tier.bestValue ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-growth text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
                       <Star className="w-4 h-4" />
                       Most Popular
+                    </div>
+                  </div>
+                )}
+                {tier.bestValue && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
+                      <DollarSign className="w-4 h-4" />
+                      Best Value
                     </div>
                   </div>
                 )}

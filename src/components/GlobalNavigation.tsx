@@ -114,15 +114,6 @@ const GlobalNavigation = () => {
     <nav className="bg-biz-white border-b border-border fixed top-20 left-0 w-full z-40 shadow-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img 
-              src={bizHealthNewLogo} 
-              alt="BizHealth.ai" 
-              className="h-8 w-auto object-contain"
-            />
-          </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Main Navigation Links */}

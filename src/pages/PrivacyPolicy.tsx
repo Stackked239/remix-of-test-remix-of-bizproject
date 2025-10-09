@@ -315,7 +315,7 @@ const PrivacyPolicy = () => {
           />
         </div>
 
-        <main className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
+        <main className="container mx-auto px-4 pt-24 pb-12 lg:pt-32 lg:pb-16 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sticky Table of Contents - Desktop */}
             <aside className="hidden lg:block lg:w-64 flex-shrink-0">

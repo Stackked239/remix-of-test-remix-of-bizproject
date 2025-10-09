@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -221,8 +222,16 @@ const FAQs = () => {
             }))
           })}
         </script>
+        
+        {/* Add scroll padding for anchor links */}
+        <style>{`
+          html {
+            scroll-padding-top: 180px;
+          }
+        `}</style>
       </Helmet>
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
       {/* Progress Bar */}
@@ -234,7 +243,7 @@ const FAQs = () => {
         }}
       />
 
-      <main className="min-h-screen bg-background pt-28 pb-12 lg:pt-32 lg:pb-16">
+      <main className="min-h-screen bg-background pt-40 pb-12 lg:pt-44 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -305,7 +314,7 @@ const FAQs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sticky Table of Contents - Desktop */}
             <aside className="hidden lg:block lg:col-span-1">
-              <Card className="sticky top-32 shadow-md" style={{
+              <Card className="sticky top-44 shadow-md" style={{
                 backgroundColor: 'hsl(var(--biz-white))',
                 borderColor: 'hsl(var(--biz-navy) / 0.1)'
               }}>

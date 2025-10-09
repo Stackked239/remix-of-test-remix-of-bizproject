@@ -64,10 +64,10 @@ const Search = () => {
       },
       {
         type: "Page",
-        title: "How It Works - Assessment Process",
-        excerpt: "Complete a 30-40 minute assessment covering 12 business health areas. Get AI-analyzed reports with actionable insights in under 90 minutes.",
-        url: "/how-it-works",
-        icon: FileText
+        title: "Frequently Asked Questions - FAQs",
+        excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
+        url: "/faqs",
+        icon: HelpCircle
       },
       {
         type: "Page",

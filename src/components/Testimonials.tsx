@@ -36,7 +36,7 @@ const Testimonials = () => {
             What Business Leaders Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join hundreds of entrepreneurs who've transformed their businesses with our insights
+            Join hundreds of business owners who've transformed their businesses with our insights
           </p>
         </div>
         

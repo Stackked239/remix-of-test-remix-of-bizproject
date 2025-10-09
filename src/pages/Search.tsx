@@ -64,6 +64,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "Get Started - Register for BizHealth.ai",
+        excerpt: "Get started with BizHealth.ai today. Register your account to access AI-powered business insights and analytics for SMBs. Create your account and join 10,000+ businesses.",
+        url: "/register",
+        icon: Home
+      },
+      {
+        type: "Page",
         title: "Frequently Asked Questions - FAQs",
         excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
         url: "/faqs",

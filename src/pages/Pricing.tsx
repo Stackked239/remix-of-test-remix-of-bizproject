@@ -122,7 +122,7 @@ const Pricing = () => {
               <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular || tier.bestValue || tier.bestForStartups ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
                 {tier.bestForStartups && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-muted-foreground text-primary px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
+                    <div className="bg-muted-foreground text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
                       <Rocket className="w-4 h-4" />
                       Best for Startups
                     </div>

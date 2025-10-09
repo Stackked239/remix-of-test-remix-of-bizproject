@@ -268,50 +268,8 @@ const FAQs = () => {
             </p>
           </div>
 
-          {/* Search Bar */}
+          {/* Grid Layout: Navigation + Search Bar */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
-            {/* Empty space on left to align with navigation */}
-            <div className="hidden lg:block lg:col-span-1"></div>
-            
-            {/* Search Bar - Right side, reduced width */}
-            <div className="lg:col-span-3 flex justify-end">
-              <Card className="shadow-lg border-2 w-full max-w-2xl" style={{
-                borderColor: 'hsl(var(--biz-green))',
-                backgroundColor: 'hsl(var(--biz-white))'
-              }}>
-                <CardContent className="p-6">
-                  <div className="relative">
-                    <Search 
-                      className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" 
-                      style={{ color: 'hsl(var(--biz-green))' }}
-                    />
-                    <Input
-                      type="text"
-                      placeholder="Search FAQs..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-12 h-12 text-base border-2"
-                      style={{
-                        borderColor: 'hsl(var(--biz-green))',
-                        fontFamily: 'Open Sans, sans-serif'
-                      }}
-                      aria-label="Search FAQs"
-                    />
-                  </div>
-                  {searchTerm && (
-                    <p className="mt-3 text-sm" style={{ 
-                      color: 'hsl(var(--biz-grey))',
-                      fontFamily: 'Open Sans, sans-serif'
-                    }}>
-                      Found {filteredFaqs.length} result{filteredFaqs.length !== 1 ? 's' : ''}
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sticky Table of Contents - Desktop */}
             <aside className="hidden lg:block lg:col-span-1">
               <Card className="sticky top-44 shadow-md" style={{
@@ -361,6 +319,49 @@ const FAQs = () => {
                 </CardContent>
               </Card>
             </aside>
+            
+            {/* Search Bar - Right side, reduced width */}
+            <div className="lg:col-span-3">
+              <Card className="shadow-lg border-2 max-w-2xl ml-auto" style={{
+                borderColor: 'hsl(var(--biz-green))',
+                backgroundColor: 'hsl(var(--biz-white))'
+              }}>
+                <CardContent className="p-6">
+                  <div className="relative">
+                    <Search 
+                      className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" 
+                      style={{ color: 'hsl(var(--biz-green))' }}
+                    />
+                    <Input
+                      type="text"
+                      placeholder="Search FAQs..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-12 h-12 text-base border-2"
+                      style={{
+                        borderColor: 'hsl(var(--biz-green))',
+                        fontFamily: 'Open Sans, sans-serif'
+                      }}
+                      aria-label="Search FAQs"
+                    />
+                  </div>
+                  {searchTerm && (
+                    <p className="mt-3 text-sm" style={{ 
+                      color: 'hsl(var(--biz-grey))',
+                      fontFamily: 'Open Sans, sans-serif'
+                    }}>
+                      Found {filteredFaqs.length} result{filteredFaqs.length !== 1 ? 's' : ''}
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* FAQ Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Empty space for alignment */}
+            <div className="hidden lg:block lg:col-span-1"></div>
 
             {/* FAQ Content */}
             <div className="lg:col-span-3">

@@ -83,19 +83,19 @@ const PrivacyPolicy = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-2">Provided by You</h4>
               <p className="text-muted-foreground leading-relaxed">
-                Name, email, phone, business details (e.g., revenue, employee count), and questionnaire responses (e.g., KPIs like EBITDA, operational metrics). For payments ($99-$299 tiers), billing/shipping info.
+                Name, email, phone, business details (e.g., revenue, employee count), and questionnaire responses (e.g., KPIs like EBITDA, operational metrics). For payments, billing/shipping info.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-foreground mb-2">Automatically Collected</h4>
               <p className="text-muted-foreground leading-relaxed">
-                IP address, device/browser type, usage logs (e.g., session duration for 30-40 min assessments), and cookies for personalization.
+                IP address, device/browser type, usage logs, and cookies for personalization.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-foreground mb-2">Sensitive Data</h4>
               <p className="text-muted-foreground leading-relaxed">
-                Limited to business-relevant inputs (e.g., no health/medical data; anonymized where possible). For EU users, we minimize collection per GDPR Art. 5. We do not collect data from children under 13 (COPPA-compliant).
+                Limited to business-relevant inputs. For EU users, we minimize collection per GDPR Art. 5. We do not collect data from children under 13 (COPPA-compliant).
               </p>
             </div>
           </div>
@@ -402,19 +402,6 @@ const PrivacyPolicy = () => {
                 </Card>
               </div>
 
-              {/* Search Bar */}
-              <div className="mb-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <Input
-                    type="text"
-                    placeholder="Search policy terms (e.g., 'GDPR', 'CCPA')..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10"
-                  />
-                </div>
-              </div>
 
               {/* Accordion Sections */}
               <Accordion type="multiple" defaultValue={sections.map(s => s.id)} className="space-y-4">

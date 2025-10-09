@@ -243,19 +243,11 @@ const FAQs = () => {
         }}
       />
 
-      <main className="min-h-screen bg-background pt-32 pb-12 lg:pt-36 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
+      <main className="min-h-screen bg-background pt-28 pb-12 lg:pt-32 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <img 
-                src={bizHealthLogo} 
-                alt="BizHealth.ai - Your Trusted Business Health Advisor" 
-                className="h-20 w-auto object-contain"
-                style={{ maxWidth: '160px' }}
-              />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ 
+            <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{
               fontFamily: 'Montserrat, sans-serif',
               color: 'hsl(var(--biz-navy))'
             }}>

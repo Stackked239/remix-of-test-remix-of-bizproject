@@ -230,13 +230,13 @@ const Blog = () => {
               Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
               of modern business. Learn from our team's decades of consulting experience.
             </p>
-            <div className="mt-8">
+            <div className="mt-6">
               <img 
                 src={businessAnalystImage} 
                 alt="Professional business analyst working on laptop with business health assessment dashboard - SMB data analytics and business intelligence tools for small business growth"
-                className="rounded-xl shadow-elegant mx-auto max-w-2xl w-full h-auto"
-                width="800"
-                height="400"
+                className="rounded-xl shadow-elegant mx-auto max-w-xl w-full h-auto"
+                width="600"
+                height="300"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"

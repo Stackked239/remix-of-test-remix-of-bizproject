@@ -11,6 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 
 const Register = () => {
   const { user, signUp, signInWithGoogle } = useAuth();
@@ -126,9 +127,10 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
+      <main className="flex-1 flex items-center justify-center px-4 pt-40 pb-12">
         <div className="w-full max-w-lg">
           <Card className="shadow-elegant border-border/50">
             <CardHeader className="space-y-2 text-center">

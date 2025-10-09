@@ -209,6 +209,20 @@ const Blog = () => {
       <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Search Bar */}
+            <div className="flex justify-center mb-8">
+              <div className="relative max-w-md w-full">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search blogs, categories, keywords..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Business Insights & Analysis
             </h1>
@@ -294,24 +308,10 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Search and Categories Section */}
+      {/* Categories Section */}
       <section className="py-8 border-b border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-6">
-            {/* Search Bar */}
-            <div className="flex justify-center">
-              <div className="relative max-w-md w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search blogs, categories, keywords..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                />
-              </div>
-            </div>
-
             {/* Categories Filter */}
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category, index) => (

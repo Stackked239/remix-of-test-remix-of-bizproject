@@ -17,12 +17,17 @@ const Hero = () => {
     const employeeValue = employees[0];
     const challengeValue = challenges[0];
     
-    if (revenueValue < 250000 || employeeValue < 10 || challengeValue < 5) {
-      return "Essentials";
-    } else if (revenueValue > 10000000 || employeeValue > 100 || challengeValue > 8) {
+    // Enterprise triggers
+    if (revenueValue > 7000000 || employeeValue > 75 || (challengeValue > 2 && employeeValue > 10)) {
       return "Enterprise";
     }
-    return "Growth";
+    
+    // Growth triggers
+    if (revenueValue > 400000 || employeeValue > 10) {
+      return "Growth";
+    }
+    
+    return "Essentials";
   };
 
   const handleGetReport = () => {

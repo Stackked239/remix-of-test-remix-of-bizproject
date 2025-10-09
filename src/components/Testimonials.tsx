@@ -3,23 +3,23 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "CEO, TechFlow Solutions", 
+      name: "Sarah C.",
+      role: "CEO", 
       company: "SaaS Startup",
       quote: "This tool transformed how I view my operations – highly recommend! The insights helped me identify critical bottlenecks I never knew existed.",
       rating: 5,
       avatar: "SC"
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Founder, Urban Eats",
+      name: "Marcus R.",
+      role: "Founder",
       company: "Restaurant Chain",
       quote: "Saved me $15K in consulting fees and gave me actionable strategies to improve our customer retention by 40%. ROI was immediate.",
       rating: 5,
       avatar: "MR"
     },
     {
-      name: "Emily Watson",
+      name: "Emily W.",
       role: "Managing Partner",
       company: "Creative Agency",
       quote: "The competitive benchmarking section was eye-opening. We implemented their HR recommendations and reduced turnover by 60%.",

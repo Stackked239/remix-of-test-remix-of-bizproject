@@ -130,7 +130,7 @@ const Pricing = () => {
                 )}
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-growth text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
+                    <div className="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
                       <Star className="w-4 h-4" />
                       Most Popular
                     </div>
@@ -138,7 +138,7 @@ const Pricing = () => {
                 )}
                 {tier.bestValue && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
+                    <div className="bg-growth text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
                       <DollarSign className="w-4 h-4" />
                       Best Value
                     </div>

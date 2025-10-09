@@ -1,28 +1,13 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, ChevronDown, ChevronUp } from "lucide-react";
+import { CheckCircle, Star, ArrowRight, DollarSign, Rocket } from "lucide-react";
 import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Pricing = () => {
-  const [showFeatureMatrix, setShowFeatureMatrix] = useState(true);
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const featureComparison = [
-    { feature: "AI-Powered Diagnostics", essentials: true, growth: true, enterprise: true },
-    { feature: "Custom Reports & Analytics", essentials: "basic", growth: true, enterprise: true },
-    { feature: "Financial Health Deep-Dive", essentials: false, growth: true, enterprise: true },
-    { feature: "Industry Benchmarking", essentials: true, growth: true, enterprise: true },
-    { feature: "Progress Tracking", essentials: false, growth: "90-day", enterprise: "Quarterly" },
-    { feature: "Strategic Recommendations", essentials: "core", growth: "detailed", enterprise: "comprehensive" },
-    { feature: "Risk Assessment & Mitigation", essentials: false, growth: false, enterprise: true },
-    { feature: "Consultant Access", essentials: false, growth: false, enterprise: true },
-    { feature: "Implementation Timeline", essentials: false, growth: true, enterprise: true },
-    { feature: "Exit Strategy Planning", essentials: false, growth: false, enterprise: true }
-  ];
   const tiers = [
     {
       name: "Essentials",
@@ -125,101 +110,6 @@ const Pricing = () => {
                 className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Comparison Matrix */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Compare Features
-              </h2>
-              <button
-                onClick={() => setShowFeatureMatrix(!showFeatureMatrix)}
-                className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
-                aria-label={showFeatureMatrix ? "Hide feature comparison" : "Show feature comparison"}
-              >
-                {showFeatureMatrix ? (
-                  <>
-                    Hide <ChevronUp className="w-5 h-5" />
-                  </>
-                ) : (
-                  <>
-                    Show <ChevronDown className="w-5 h-5" />
-                  </>
-                )}
-              </button>
-            </div>
-
-            {showFeatureMatrix && (
-              <div className="overflow-x-auto animate-fade-in">
-                <table className="w-full border-collapse bg-muted rounded-xl overflow-hidden shadow-card">
-                  <thead>
-                    <tr className="bg-primary/10">
-                      <th className="text-left p-4 md:p-6 font-semibold text-foreground">Feature</th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-foreground">
-                        <div className="flex flex-col items-center gap-1">
-                          <span>Essentials</span>
-                          <span className="text-sm font-normal text-muted-foreground">$99</span>
-                        </div>
-                      </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-foreground">
-                        <div className="flex flex-col items-center gap-1">
-                          <span>Growth</span>
-                          <span className="text-sm font-normal text-muted-foreground">$299</span>
-                        </div>
-                      </th>
-                      <th className="text-center p-4 md:p-6 font-semibold text-foreground">
-                        <div className="flex flex-col items-center gap-1">
-                          <span>Enterprise</span>
-                          <span className="text-sm font-normal text-muted-foreground">$499</span>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {featureComparison.map((row, index) => (
-                      <tr 
-                        key={index}
-                        className={`border-t border-border ${index % 2 === 0 ? 'bg-background/50' : 'bg-muted/50'} hover:bg-primary/5 transition-colors`}
-                      >
-                        <td className="p-4 md:p-6 font-medium text-foreground">{row.feature}</td>
-                        <td className="p-4 md:p-6 text-center">
-                          {row.essentials === true ? (
-                            <Check className="w-6 h-6 text-growth mx-auto" />
-                          ) : row.essentials === false ? (
-                            <X className="w-6 h-6 text-muted-foreground/30 mx-auto" />
-                          ) : (
-                            <span className="text-sm text-muted-foreground">{row.essentials}</span>
-                          )}
-                        </td>
-                        <td className="p-4 md:p-6 text-center">
-                          {row.growth === true ? (
-                            <Check className="w-6 h-6 text-growth mx-auto" />
-                          ) : row.growth === false ? (
-                            <X className="w-6 h-6 text-muted-foreground/30 mx-auto" />
-                          ) : (
-                            <span className="text-sm text-muted-foreground">{row.growth}</span>
-                          )}
-                        </td>
-                        <td className="p-4 md:p-6 text-center">
-                          {row.enterprise === true ? (
-                            <Check className="w-6 h-6 text-growth mx-auto" />
-                          ) : row.enterprise === false ? (
-                            <X className="w-6 h-6 text-muted-foreground/30 mx-auto" />
-                          ) : (
-                            <span className="text-sm text-muted-foreground">{row.enterprise}</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
           </div>
         </div>
       </section>

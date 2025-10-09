@@ -126,7 +126,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#F0F4F8] to-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
       <PromotionalBanner />
       <GlobalNavigation />
       

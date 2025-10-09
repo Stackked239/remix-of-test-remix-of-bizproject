@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, CreditCard, Download, Shield, Clock } from "lucide-react";
+import bizhealthLogo from "@/assets/bizhealth-logo-horizontal.jpg";
 
 const Pricing = () => {
   const handlePayment = () => {
@@ -56,14 +57,14 @@ const Pricing = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main pricing card */}
           <div className="bg-card p-12 rounded-3xl shadow-elegant border-2 border-primary/20 relative overflow-hidden">
-            {/* Popular badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-primary px-6 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
-                Most Popular Choice
+            <div className="text-center mb-12">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={bizhealthLogo} 
+                  alt="BizHealth.ai" 
+                  className="h-12 w-auto object-contain"
+                />
               </div>
-            </div>
-            
-            <div className="text-center mb-12 pt-8">
               <h3 className="text-3xl font-bold mb-4 text-foreground">
                 Complete Business Health Report
               </h3>

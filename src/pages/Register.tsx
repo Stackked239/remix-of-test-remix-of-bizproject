@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Eye, EyeOff, Mail, Lock, User, Building, AlertCircle, CheckCircle } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, AlertCircle, CheckCircle, TrendingUp, Cpu, BarChart3 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
@@ -126,13 +126,31 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#F0F4F8] to-white">
       <PromotionalBanner />
       <GlobalNavigation />
       
       <main className="flex-1 flex items-center justify-center px-4 pt-40 pb-12">
-        <div className="w-full max-w-lg">
-          <Card className="shadow-elegant border-border/50">
+        <div className="w-full max-w-6xl relative">
+          {/* Decorative Icons - Hidden on mobile */}
+          <div className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 space-y-8">
+            <div className="flex flex-col items-center space-y-2">
+              <TrendingUp className="w-12 h-12 text-biz-green" aria-label="Growth chart icon" />
+              <span className="text-xs text-biz-grey font-open-sans">Growth</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Cpu className="w-12 h-12 text-biz-navy" aria-label="AI technology icon" />
+              <span className="text-xs text-biz-grey font-open-sans">AI-Powered</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <BarChart3 className="w-12 h-12 text-biz-green" aria-label="Business dashboard icon" />
+              <span className="text-xs text-biz-grey font-open-sans">Insights</span>
+            </div>
+          </div>
+          
+          {/* Central Form */}
+          <div className="w-full max-w-lg mx-auto p-6 sm:p-8">
+            <Card className="shadow-elegant border-border/50">
             <CardHeader className="space-y-2 text-center">
               <CardTitle className="text-2xl font-montserrat font-bold text-biz-navy">
                 Create Your Account
@@ -412,6 +430,23 @@ const Register = () => {
               </div>
             </CardFooter>
           </Card>
+          </div>
+          
+          {/* Decorative Icons - Hidden on mobile */}
+          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 space-y-8">
+            <div className="flex flex-col items-center space-y-2">
+              <TrendingUp className="w-12 h-12 text-biz-green" aria-label="Business growth visualization" />
+              <span className="text-xs text-biz-grey font-open-sans">Analytics</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Cpu className="w-12 h-12 text-biz-navy" aria-label="Artificial intelligence icon" />
+              <span className="text-xs text-biz-grey font-open-sans">Smart Tech</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <BarChart3 className="w-12 h-12 text-biz-green" aria-label="Dashboard metrics icon" />
+              <span className="text-xs text-biz-grey font-open-sans">Metrics</span>
+            </div>
+          </div>
         </div>
       </main>
       

@@ -290,7 +290,7 @@ const Search = () => {
 
       <GlobalNavigation />
 
-      <main className="min-h-screen bg-background pt-32 pb-12">
+      <main className="min-h-screen bg-background pt-40 pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Search Header */}
           <div className="mb-8">

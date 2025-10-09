@@ -208,7 +208,7 @@ const Pricing = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-growth">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

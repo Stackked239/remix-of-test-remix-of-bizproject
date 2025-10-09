@@ -6,13 +6,12 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Eye, EyeOff, Mail, Lock, User, Building, AlertCircle, CheckCircle, TrendingUp, Zap, BarChart3, Shield } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, AlertCircle, CheckCircle } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import bizHealthLogo from '@/assets/bizhealth-logo-horizontal.jpg';
 
 const Register = () => {
   const { user, signUp, signInWithGoogle } = useAuth();
@@ -127,57 +126,21 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F0F4F8] to-white flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       <PromotionalBanner />
       <GlobalNavigation />
       
-      {/* Header Section */}
-      <header className="pt-40 pb-8 px-4">
-        <div className="max-w-lg mx-auto text-center space-y-4">
-          <img 
-            src={bizHealthLogo} 
-            alt="BizHealth.ai Logo" 
-            className="h-12 mx-auto object-contain"
-          />
-          <h1 className="text-2xl font-bold text-biz-navy" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-            Stop Guessing, Start Growing
-          </h1>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full border border-border/30">
-            <div className="w-2 h-2 rounded-full bg-growth"></div>
-            <span className="text-sm font-medium text-biz-grey">Step 1: Get Started</span>
-          </div>
-        </div>
-      </header>
-      
-      <main className="flex-1 flex items-start justify-center px-4 pb-12">
-        <div className="w-full max-w-6xl flex items-center justify-center gap-8 lg:gap-12">
-          {/* Left Decorative Icon */}
-          <div className="hidden lg:flex flex-col gap-8">
-            <div className="flex flex-col items-center gap-2 text-center max-w-[120px]">
-              <div className="w-16 h-16 rounded-full bg-growth/10 flex items-center justify-center">
-                <TrendingUp className="w-8 h-8 text-growth" aria-hidden="true" />
-              </div>
-              <p className="text-xs text-biz-grey">Growth Analytics</p>
-            </div>
-            <div className="flex flex-col items-center gap-2 text-center max-w-[120px]">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <Zap className="w-8 h-8 text-primary" aria-hidden="true" />
-              </div>
-              <p className="text-xs text-biz-grey">AI-Powered Insights</p>
-            </div>
-          </div>
-
-          {/* Form Container */}
-          <div className="w-full max-w-lg p-6 sm:p-8">
-            <Card className="shadow-elegant border-border/50 bg-white">
-              <CardHeader className="space-y-2 text-center">
-                <CardTitle className="text-2xl font-montserrat font-bold text-biz-navy">
-                  Create Your Account
-                </CardTitle>
-                <CardDescription className="font-open-sans text-biz-grey" style={{ lineHeight: '1.6' }}>
-                  Unlock actionable business insights in under 90 minutes
-                </CardDescription>
-              </CardHeader>
+      <main className="flex-1 flex items-center justify-center px-4 pt-40 pb-12">
+        <div className="w-full max-w-lg">
+          <Card className="shadow-elegant border-border/50">
+            <CardHeader className="space-y-2 text-center">
+              <CardTitle className="text-2xl font-montserrat font-bold text-biz-navy">
+                Create Your Account
+              </CardTitle>
+              <CardDescription className="font-open-sans text-biz-grey">
+                Join 10,000+ SMBs getting AI-powered business insights
+              </CardDescription>
+            </CardHeader>
             
             <CardContent className="space-y-6">
               {error && (
@@ -449,46 +412,10 @@ const Register = () => {
               </div>
             </CardFooter>
           </Card>
-          </div>
-
-          {/* Right Decorative Icon */}
-          <div className="hidden lg:flex flex-col gap-8">
-            <div className="flex flex-col items-center gap-2 text-center max-w-[120px]">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <BarChart3 className="w-8 h-8 text-primary" aria-hidden="true" />
-              </div>
-              <p className="text-xs text-biz-grey">Business Dashboard</p>
-            </div>
-            <div className="flex flex-col items-center gap-2 text-center max-w-[120px]">
-              <div className="w-16 h-16 rounded-full bg-growth/10 flex items-center justify-center">
-                <Shield className="w-8 h-8 text-growth" aria-hidden="true" />
-              </div>
-              <p className="text-xs text-biz-grey">Secure & Private</p>
-            </div>
-          </div>
         </div>
       </main>
       
-      {/* Custom Footer */}
-      <footer className="border-t border-border/30 bg-white/50 py-6">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm" style={{ color: '#6B7280' }}>
-            <div className="flex items-center gap-4">
-              <Link to="/privacy" className="hover:text-biz-navy transition-colors">
-                Privacy Policy
-              </Link>
-              <span>•</span>
-              <Link to="/terms" className="hover:text-biz-navy transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-            <div className="flex items-center gap-3">
-              <Shield className="w-4 h-4" aria-label="SSL Secured" />
-              <span>© 2024 BizHealth.ai. All rights reserved.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <GlobalFooter />
     </div>
   );
 };

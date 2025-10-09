@@ -56,7 +56,7 @@ const Pricing = () => {
         
         <div className="max-w-4xl mx-auto">
           {/* Main pricing card */}
-          <div className="bg-card p-12 rounded-3xl shadow-elegant border-2 border-primary/20 relative overflow-hidden">
+          <div className="bg-growth/5 p-12 rounded-3xl shadow-elegant border-2 border-growth/30 relative overflow-hidden">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-6">
                 <img 

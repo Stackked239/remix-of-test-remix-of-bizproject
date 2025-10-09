@@ -2,8 +2,12 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
+import { useEffect } from "react";
 
 const Pricing = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const tiers = [
     {
       name: "Essentials",

@@ -315,11 +315,11 @@ const PrivacyPolicy = () => {
           />
         </div>
 
-        <main className="container mx-auto px-4 pt-24 pb-12 lg:pt-32 lg:pb-16 max-w-7xl">
+        <main className="container mx-auto px-4 pt-36 pb-12 md:pt-40 lg:pt-44 lg:pb-16 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sticky Table of Contents - Desktop */}
             <aside className="hidden lg:block lg:w-64 flex-shrink-0">
-              <div className="sticky top-24 space-y-6">
+              <div className="sticky top-44 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <img
                     src={bizHealthLogo}

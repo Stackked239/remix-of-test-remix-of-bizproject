@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -126,9 +127,17 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
-      <PromotionalBanner />
-      <GlobalNavigation />
+    <>
+      <Helmet>
+        <title>Get Started - Register for BizHealth.ai | Business Analytics Platform</title>
+        <meta name="description" content="Get started with BizHealth.ai today. Register your account to access AI-powered business insights and analytics for SMBs. Join 10,000+ businesses transforming their operations." />
+        <meta name="keywords" content="get started, register, sign up, create account, business analytics, BizHealth.ai, SMB insights" />
+        <link rel="canonical" href="https://bizhealth.ai/register" />
+      </Helmet>
+      
+      <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
+        <PromotionalBanner />
+        <GlobalNavigation />
       
       <main className="flex-1 flex items-center justify-center px-4 pt-40 pb-12">
         <div className="w-full max-w-lg p-6 sm:p-8">
@@ -415,8 +424,9 @@ const Register = () => {
         </div>
       </main>
       
-      <GlobalFooter />
-    </div>
+        <GlobalFooter />
+      </div>
+    </>
   );
 };
 

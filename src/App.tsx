@@ -43,6 +43,8 @@ import RealTimeAnalyticsSMB from "./pages/blog/RealTimeAnalyticsSMB";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FAQs from "./pages/FAQs";
 
+import Search from "./pages/Search";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -90,6 +92,7 @@ const App = () => (
             <Route path="/blog/real-time-analytics-smb-agility" element={<RealTimeAnalyticsSMB />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/faqs" element={<FAQs />} />
+            <Route path="/search" element={<Search />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

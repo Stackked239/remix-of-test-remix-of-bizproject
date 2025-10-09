@@ -1,0 +1,440 @@
+import { useState, useEffect, useMemo } from "react";
+import { useSearchParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import GlobalFooter from "@/components/GlobalFooter";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Search as SearchIcon, FileText, HelpCircle, Home, DollarSign, Mail, ArrowRight } from "lucide-react";
+
+const Search = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
+  // Get search term from URL
+  useEffect(() => {
+    const urlSearchTerm = searchParams.get('q');
+    if (urlSearchTerm) {
+      setSearchTerm(urlSearchTerm);
+    }
+  }, [searchParams]);
+
+  // Update URL when search changes
+  const handleSearch = (term: string) => {
+    setSearchTerm(term);
+    if (term) {
+      setSearchParams({ q: term });
+    } else {
+      setSearchParams({});
+    }
+  };
+
+  // All searchable content
+  const searchableContent = {
+    pages: [
+      {
+        type: "Page",
+        title: "Home - BizHealth.ai",
+        excerpt: "Your Trusted Business Health Advisor – AI-Powered Diagnostics for SMBs. Stop Guessing, Start Growing with business health assessments.",
+        url: "/",
+        icon: Home
+      },
+      {
+        type: "Page",
+        title: "Pricing - Business Health Assessment Plans",
+        excerpt: "Choose the perfect plan for your business. Essentials, Growth, and Enterprise tiers from $99-$699. 20-25x ROI with AI-powered diagnostics.",
+        url: "/pricing",
+        icon: DollarSign
+      },
+      {
+        type: "Page",
+        title: "Contact Us - Get in Touch",
+        excerpt: "Contact BizHealth.ai for support, inquiries, or partnership opportunities. Email: support@bizhealth.ai",
+        url: "/contact",
+        icon: Mail
+      },
+      {
+        type: "Page",
+        title: "About BizHealth.ai",
+        excerpt: "Learn about our mission to provide affordable, AI-powered business health diagnostics for SMBs across operations, finance, and leadership.",
+        url: "/about",
+        icon: Home
+      },
+      {
+        type: "Page",
+        title: "How It Works - Assessment Process",
+        excerpt: "Complete a 30-40 minute assessment covering 12 business health areas. Get AI-analyzed reports with actionable insights in under 90 minutes.",
+        url: "/how-it-works",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "BizGuides - From Gaps to Guided Wins",
+        excerpt: "Expert consulting services to implement insights from your business health assessment. Partner consulting network launching Q1 2026.",
+        url: "/bizguides",
+        icon: Home
+      },
+      {
+        type: "Page",
+        title: "BizTools - Scalable Essentials at Your Fingertips",
+        excerpt: "Business tools, templates, and resources to support SMB growth and operational excellence.",
+        url: "/biztools",
+        icon: Home
+      },
+      {
+        type: "Page",
+        title: "BizLeaDeR - Drive Scale with Confidence",
+        excerpt: "Leadership development courses and webinars for business owners and executives. Coming Spring 2026.",
+        url: "/bizleader",
+        icon: Home
+      },
+      {
+        type: "Page",
+        title: "BizGrowth - Strategic Advancement Awaits",
+        excerpt: "Strategic growth programs and resources for scaling your business effectively.",
+        url: "/bizgrowth",
+        icon: Home
+      }
+    ],
+    blogs: [
+      {
+        type: "Blog Post",
+        title: "The Complete Guide to Business Health Assessment in 2025",
+        excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB.",
+        url: "/blog/business-health-assessment-2025",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "Real-Time Analytics: Powering SMB Agility in Volatile Markets",
+        excerpt: "Transform your SMB with real-time BI in 2025. Expert insights on analytics agility and data-driven decisions.",
+        url: "/blog/real-time-analytics-smb-agility",
+        icon: FileText,
+        category: "Business Intelligence"
+      },
+      {
+        type: "Blog Post",
+        title: "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
+        excerpt: "Transform your early-stage food business with smart operational strategies for sustainable growth.",
+        url: "/blog/daily-grind-fixes",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
+        title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
+        excerpt: "Discover how to reframe risks, build resilience, and find peace in the storm of leadership.",
+        url: "/blog/leadership-stress-success",
+        icon: FileText,
+        category: "Business Leadership"
+      },
+      {
+        type: "Blog Post",
+        title: "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",
+        excerpt: "How family-owned micro retailers can leverage remote tools while preserving their personal touch.",
+        url: "/blog/retail-remote-tools",
+        icon: FileText,
+        category: "Technology"
+      },
+      {
+        type: "Blog Post",
+        title: "5 Warning Signs Your Business Needs Immediate Attention",
+        excerpt: "Discover the early indicators that suggest your business may be heading for trouble.",
+        url: "/blog/warning-signs-business",
+        icon: FileText,
+        category: "Risk Management"
+      },
+      {
+        type: "Blog Post",
+        title: "How AI is Revolutionizing Small Business Analytics",
+        excerpt: "Explore how artificial intelligence is making enterprise-level business intelligence accessible to SMBs.",
+        url: "/blog/ai-business-analytics",
+        icon: FileText,
+        category: "Technology"
+      },
+      {
+        type: "Blog Post",
+        title: "Financial Health Metrics Every Business Owner Should Track",
+        excerpt: "A comprehensive guide to the key financial indicators that provide insight into your business performance.",
+        url: "/blog/financial-health-metrics",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
+        title: "Building Operational Resilience in Uncertain Times",
+        excerpt: "Strategies for creating business systems that can withstand market volatility and unexpected challenges.",
+        url: "/blog/operational-resilience",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
+        title: "The ROI of Business Intelligence for SMBs",
+        excerpt: "Real-world case studies showing how SMBs achieve measurable returns from business intelligence investments.",
+        url: "/blog/business-intelligence-roi",
+        icon: FileText,
+        category: "Business Intelligence"
+      },
+      {
+        type: "Blog Post",
+        title: "Strategic Planning for the Post-Pandemic Business Landscape",
+        excerpt: "Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior.",
+        url: "/blog/strategic-planning-post-pandemic",
+        icon: FileText,
+        category: "Business Leadership"
+      },
+      {
+        type: "Blog Post",
+        title: "When to Pivot: Data-Driven Signals That It's Time to Change Course",
+        excerpt: "Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot.",
+        url: "/blog/when-to-pivot",
+        icon: FileText,
+        category: "Business Leadership"
+      }
+    ],
+    faqs: [
+      {
+        type: "FAQ",
+        title: "What is BizHealth.ai?",
+        excerpt: "BizHealth.ai is a Business Health & Performance Insight Platform using AI-driven assessment across operational, financial, and leadership dimensions. 30-40 minute assessment delivers 20-25x ROI.",
+        url: "/faqs#what-is",
+        icon: HelpCircle
+      },
+      {
+        type: "FAQ",
+        title: "How much does BizHealth.ai cost?",
+        excerpt: "Pricing ranges from $99 to $699 for a one-time diagnostic, delivering 20-25x ROI by replacing costly consulting.",
+        url: "/faqs#pricing",
+        icon: HelpCircle
+      },
+      {
+        type: "FAQ",
+        title: "Who is BizHealth.ai for?",
+        excerpt: "We serve micro-, small-, and mid-sized businesses (1-250 employees, $100K-$50M revenue) including founders, CEOs, COOs, CFOs, and managers.",
+        url: "/faqs#who-for",
+        icon: HelpCircle
+      },
+      {
+        type: "FAQ",
+        title: "Is my data secure?",
+        excerpt: "Yes, we use encryption (in-transit/at-rest), access controls, and SOC 2-aligned audits. We comply with GDPR/CCPA.",
+        url: "/faqs#data-security",
+        icon: HelpCircle
+      },
+      {
+        type: "FAQ",
+        title: "How long does it take to get my report?",
+        excerpt: "Reports are ready within 90 minutes post-assessment, with an email notification alerting you.",
+        url: "/faqs#report-time",
+        icon: HelpCircle
+      }
+    ]
+  };
+
+  // Filter and search logic
+  const filteredResults = useMemo(() => {
+    if (!searchTerm.trim()) {
+      return { pages: [], blogs: [], faqs: [], total: 0 };
+    }
+
+    const term = searchTerm.toLowerCase();
+    const pages = searchableContent.pages.filter(item =>
+      item.title.toLowerCase().includes(term) ||
+      item.excerpt.toLowerCase().includes(term)
+    );
+    const blogs = searchableContent.blogs.filter(item =>
+      item.title.toLowerCase().includes(term) ||
+      item.excerpt.toLowerCase().includes(term) ||
+      item.category.toLowerCase().includes(term)
+    );
+    const faqs = searchableContent.faqs.filter(item =>
+      item.title.toLowerCase().includes(term) ||
+      item.excerpt.toLowerCase().includes(term)
+    );
+
+    return {
+      pages,
+      blogs,
+      faqs,
+      total: pages.length + blogs.length + faqs.length
+    };
+  }, [searchTerm]);
+
+  // Apply filter
+  const displayResults = useMemo(() => {
+    if (selectedFilter === "All") {
+      return [...filteredResults.pages, ...filteredResults.blogs, ...filteredResults.faqs];
+    } else if (selectedFilter === "Pages") {
+      return filteredResults.pages;
+    } else if (selectedFilter === "Blog Posts") {
+      return filteredResults.blogs;
+    } else if (selectedFilter === "FAQs") {
+      return filteredResults.faqs;
+    }
+    return [];
+  }, [filteredResults, selectedFilter]);
+
+  const filters = ["All", "Pages", "Blog Posts", "FAQs"];
+
+  return (
+    <>
+      <Helmet>
+        <title>Search Results - BizHealth.ai</title>
+        <meta name="description" content="Search results for BizHealth.ai - Find pages, blog posts, FAQs, and resources." />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+
+      <GlobalNavigation />
+
+      <main className="min-h-screen bg-background pt-32 pb-12">
+        <div className="container mx-auto px-4 max-w-5xl">
+          {/* Search Header */}
+          <div className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-montserrat">
+              Search BizHealth.ai
+            </h1>
+            
+            {/* Search Bar */}
+            <Card className="mb-6">
+              <CardContent className="p-4">
+                <div className="relative">
+                  <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    type="text"
+                    placeholder="Search pages, blogs, FAQs..."
+                    value={searchTerm}
+                    onChange={(e) => handleSearch(e.target.value)}
+                    className="pl-10 h-12 text-base"
+                    autoFocus
+                  />
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Filters */}
+            {searchTerm && (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {filters.map((filter) => (
+                  <Button
+                    key={filter}
+                    variant={selectedFilter === filter ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedFilter(filter)}
+                    className="font-open-sans"
+                  >
+                    {filter}
+                    {filter === "All" && ` (${filteredResults.total})`}
+                    {filter === "Pages" && ` (${filteredResults.pages.length})`}
+                    {filter === "Blog Posts" && ` (${filteredResults.blogs.length})`}
+                    {filter === "FAQs" && ` (${filteredResults.faqs.length})`}
+                  </Button>
+                ))}
+              </div>
+            )}
+
+            {/* Results Count */}
+            {searchTerm && (
+              <p className="text-muted-foreground font-open-sans">
+                {filteredResults.total === 0 
+                  ? `No results found for "${searchTerm}"`
+                  : `Found ${displayResults.length} result${displayResults.length !== 1 ? 's' : ''} ${selectedFilter !== "All" ? `in ${selectedFilter}` : ''}`}
+              </p>
+            )}
+          </div>
+
+          {/* Search Results */}
+          {searchTerm ? (
+            <div className="space-y-4">
+              {displayResults.length > 0 ? (
+                displayResults.map((result, index) => {
+                  const IconComponent = result.icon;
+                  return (
+                    <Card key={index} className="hover:shadow-lg transition-shadow">
+                      <CardContent className="p-6">
+                        <Link to={result.url} className="group">
+                          <div className="flex items-start gap-4">
+                            <div className="mt-1">
+                              <IconComponent className="w-5 h-5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-2">
+                                <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">
+                                  {result.type}
+                                </span>
+                                {result.type === "Blog Post" && 'category' in result && (
+                                  <span className="text-xs text-muted-foreground">
+                                    {String(result.category)}
+                                  </span>
+                                )}
+                              </div>
+                              <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 font-montserrat">
+                                {result.title}
+                              </h3>
+                              <p className="text-muted-foreground text-sm line-clamp-2 mb-3 font-open-sans">
+                                {result.excerpt}
+                              </p>
+                              <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
+                                <span>View {result.type.toLowerCase()}</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  );
+                })
+              ) : (
+                <Card className="p-12 text-center">
+                  <SearchIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+                  <h3 className="text-xl font-bold mb-2 font-montserrat">No results found</h3>
+                  <p className="text-muted-foreground mb-6 font-open-sans">
+                    Try adjusting your search terms or browse our popular pages below
+                  </p>
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    <Link to="/blog">
+                      <Button variant="outline">Browse Blog</Button>
+                    </Link>
+                    <Link to="/faqs">
+                      <Button variant="outline">View FAQs</Button>
+                    </Link>
+                    <Link to="/pricing">
+                      <Button variant="outline">See Pricing</Button>
+                    </Link>
+                  </div>
+                </Card>
+              )}
+            </div>
+          ) : (
+            <Card className="p-12 text-center">
+              <SearchIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+              <h3 className="text-xl font-bold mb-2 font-montserrat">Start Your Search</h3>
+              <p className="text-muted-foreground mb-6 font-open-sans">
+                Enter a search term above to find pages, blog posts, FAQs, and more
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Link to="/">
+                  <Button variant="outline">Go to Home</Button>
+                </Link>
+                <Link to="/blog">
+                  <Button variant="outline">Browse Blog</Button>
+                </Link>
+                <Link to="/faqs">
+                  <Button variant="outline">View FAQs</Button>
+                </Link>
+              </div>
+            </Card>
+          )}
+        </div>
+      </main>
+
+      <GlobalFooter />
+    </>
+  );
+};
+
+export default Search;

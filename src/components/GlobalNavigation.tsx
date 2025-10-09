@@ -98,8 +98,9 @@ const GlobalNavigation = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      navigate(`/blog?search=${encodeURIComponent(searchTerm.trim())}`);
+      navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
       setSearchTerm('');
+      setIsMenuOpen(false);
     }
   };
 
@@ -222,7 +223,7 @@ const GlobalNavigation = () => {
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-biz-grey" />
               <Input
                 type="search"
-                placeholder="Search blogs..."
+                placeholder="Search site..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
@@ -287,7 +288,7 @@ const GlobalNavigation = () => {
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-biz-grey" />
               <Input
                 type="search"
-                placeholder="Search blogs..."
+                placeholder="Search site..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyDown={handleSearchKeyDown}

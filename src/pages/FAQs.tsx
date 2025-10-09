@@ -134,7 +134,7 @@ const FAQs = () => {
     {
       id: "contact",
       question: "How do I contact support?",
-      answer: "Email us at support@bizhealth.ai or call our support line. We're here to simplify your journey and ensure you get the most out of your BizHealth.ai experience.",
+      answer: "Email us at <a href='mailto:support@bizhealth.ai' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>support@bizhealth.ai</a> or call our support line. We're here to simplify your journey and ensure you get the most out of your BizHealth.ai experience.",
       icon: HelpCircle,
       category: "Support"
     }
@@ -425,7 +425,10 @@ const FAQs = () => {
                                 color: 'hsl(var(--biz-grey))'
                               }}
                             >
-                              <p className="mb-4">{faq.answer}</p>
+                              <div 
+                                className="mb-4" 
+                                dangerouslySetInnerHTML={{ __html: faq.answer }}
+                              />
                               
                               {/* Feedback Widget */}
                               <div className="mt-4 pt-4 border-t" style={{

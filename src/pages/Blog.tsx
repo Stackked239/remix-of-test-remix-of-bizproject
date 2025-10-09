@@ -206,11 +206,11 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-muted">
+      <section className="pt-24 pb-12 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             {/* Search Bar */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-4">
               <div className="relative max-w-md w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <input
@@ -223,7 +223,7 @@ const Blog = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary">
               Business Insights & Analysis
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">

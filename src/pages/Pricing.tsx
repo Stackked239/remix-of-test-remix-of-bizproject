@@ -169,8 +169,11 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-growth text-primary hover:bg-primary hover:text-white transform hover:scale-105' : 'bg-primary text-white hover:bg-growth hover:text-primary'}`}>
-                  {tier.cta}
+                <button 
+                  style={{ backgroundColor: '#007BFF' }} 
+                  className="w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg"
+                >
+                  Unlock Insights Now
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

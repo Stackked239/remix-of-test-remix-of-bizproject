@@ -243,7 +243,7 @@ const FAQs = () => {
         }}
       />
 
-      <main className="min-h-screen bg-background pt-40 pb-12 lg:pt-44 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
+      <main className="min-h-screen bg-background pt-32 pb-12 lg:pt-36 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">

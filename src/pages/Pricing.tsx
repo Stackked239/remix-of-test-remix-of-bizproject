@@ -140,11 +140,7 @@ const Pricing = () => {
   const faqs = [
     {
       question: "What happens after I complete the assessment?",
-      answer: "You'll receive your comprehensive report within minutes via email, along with a downloadable PDF. Your personalized insights and recommendations will be immediately accessible."
-    },
-    {
-      question: "How accurate are the industry benchmarks?",
-      answer: "Our AI analyzes data from thousands of businesses across different industries and sizes, providing you with current, relevant benchmarks specific to your sector and business model."
+      answer: "You'll receive your business health assessment reports within 90 minutes; you will notified via email; Assessments and reports are generated 24/7, so there's no extended waiting."
     },
     {
       question: "Can I upgrade my assessment after purchase?",

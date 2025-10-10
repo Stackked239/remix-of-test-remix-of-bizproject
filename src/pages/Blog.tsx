@@ -15,6 +15,7 @@ import leadershipStressImage from "@/assets/business-leadership-stress-success.p
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
+import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 
 const Blog = () => {
@@ -33,6 +34,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "People-First Challenges: Solving SMB Workforce Gaps 2025",
+      excerpt: "Discover actionable SMB growth strategies to solve workforce challenges in 2025. Learn how AI business analytics, talent planning tools, and data-driven insights can bridge talent gaps and boost retention.",
+      author: "BizHealth Research Team",
+      date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+      readTime: "6 min read",
+      category: "Business Leadership",
+      slug: "/blog/solving-smb-workforce-gaps-2025",
+      imageUrl: workforceGapsImage,
+      altText: "Business leaders analyzing SMB workforce talent gaps and retention metrics on digital analytics dashboard displaying performance data charts in modern office 2025"
+    },
     {
       title: "Real-Time Analytics: Powering SMB Agility in Volatile Markets",
       excerpt: "Transform your SMB with real-time BI in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for competitive advantage in volatile markets.",

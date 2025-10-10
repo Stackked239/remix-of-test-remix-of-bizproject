@@ -40,6 +40,7 @@ import BusinessLeadership from "./pages/blog/BusinessLeadership";
 import RetailRemoteTools from "./pages/blog/RetailRemoteTools";
 import DailyGrindFixes from "./pages/blog/DailyGrindFixes";
 import RealTimeAnalyticsSMB from "./pages/blog/RealTimeAnalyticsSMB";
+import SolvingSMBWorkforceGaps from "./pages/blog/SolvingSMBWorkforceGaps";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FAQs from "./pages/FAQs";
 
@@ -90,6 +91,7 @@ const App = () => (
             <Route path="/blog/retail-remote-tools" element={<RetailRemoteTools />} />
             <Route path="/blog/daily-grind-fixes" element={<DailyGrindFixes />} />
             <Route path="/blog/real-time-analytics-smb-agility" element={<RealTimeAnalyticsSMB />} />
+            <Route path="/blog/solving-smb-workforce-gaps-2025" element={<SolvingSMBWorkforceGaps />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/search" element={<Search />} />

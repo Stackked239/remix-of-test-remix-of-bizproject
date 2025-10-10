@@ -580,9 +580,8 @@ const Pricing = () => {
               </div>
 
               {/* BizHealth.ai Side */}
-              <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 shadow-lg relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16"></div>
-                <div className="relative">
+              <div className="bg-background border-2 border-primary rounded-2xl p-8 shadow-lg">
+                <div>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-primary" />

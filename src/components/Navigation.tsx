@@ -131,12 +131,41 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <a 
-              href="/pricing"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Pricing
-            </a>
+            {/* Pricing Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
+                  Pricing
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-background border border-border shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/pricing"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">Pricing</span>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/how-it-works"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">How It Works</span>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/faqs"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">FAQs</span>
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a 
               href="/blog"
               className="text-foreground hover:text-primary transition-colors"
@@ -227,13 +256,33 @@ const Navigation = () => {
                 </div>
               </div>
               
-              <a 
-                href="/pricing"
-                className="text-left text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </a>
+              {/* Mobile Pricing Section */}
+              <div className="border-t border-border pt-4">
+                <h4 className="font-semibold text-foreground mb-3">Pricing</h4>
+                <div className="space-y-3 pl-4">
+                  <a 
+                    href="/pricing"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Pricing
+                  </a>
+                  <a 
+                    href="/how-it-works"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    How It Works
+                  </a>
+                  <a 
+                    href="/faqs"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    FAQs
+                  </a>
+                </div>
+              </div>
               <a 
                 href="/blog"
                 className="text-left text-foreground hover:text-primary transition-colors"

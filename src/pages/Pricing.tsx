@@ -144,7 +144,7 @@ const Pricing = () => {
     },
     {
       question: "Can I upgrade my assessment after purchase?",
-      answer: "Yes, you can upgrade to a higher tier within 30 days of your initial purchase. Simply contact our support team and we'll apply your previous payment as credit."
+      answer: "Yes, you can upgrade to a higher tier within 30 days of your initial purchase. Simply contact our support team [support@bizhealth.ai] and we'll apply your previous payment as credit."
     },
     {
       question: "Is my business data secure?",

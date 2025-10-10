@@ -69,13 +69,22 @@ const SolvingSMBWorkforceGaps = () => {
         <article className="pt-32 pb-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <a 
-                href="/blog/business-leadership" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Business Leadership
-              </a>
+              <div className="flex items-center gap-3 mb-8">
+                <a 
+                  href="/blog/business-leadership" 
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Business Leadership
+                </a>
+                <span className="text-muted-foreground">|</span>
+                <a 
+                  href="/blog/operations" 
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  Operations
+                </a>
+              </div>
               
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
                 People-First Challenges: Solving SMB Workforce Gaps 2025

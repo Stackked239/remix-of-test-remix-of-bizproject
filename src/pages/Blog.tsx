@@ -40,7 +40,7 @@ const Blog = () => {
       author: "BizHealth Research Team",
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
       readTime: "6 min read",
-      category: "Business Leadership",
+      category: "Business Leadership, Operations",
       slug: "/blog/solving-smb-workforce-gaps-2025",
       imageUrl: workforceGapsImage,
       altText: "Business leaders analyzing SMB workforce talent gaps and retention metrics on digital analytics dashboard displaying performance data charts in modern office 2025"
@@ -195,9 +195,11 @@ const Blog = () => {
   const filteredPosts = useMemo(() => {
     let filtered = blogPosts;
 
-    // Filter by category
+    // Filter by category (support multiple categories separated by commas)
     if (selectedCategory !== "All Posts") {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => 
+        post.category.split(',').map(c => c.trim()).includes(selectedCategory)
+      );
     }
 
     // Filter by search term

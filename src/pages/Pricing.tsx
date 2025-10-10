@@ -584,26 +584,26 @@ const Pricing = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16"></div>
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-full" style={{ backgroundColor: 'hsl(81, 61%, 47%, 0.2)' }}>
-                      <TrendingUp className="w-6 h-6" style={{ color: '#8CBF2F' }} />
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <TrendingUp className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">BizHealth.ai</h3>
                   </div>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-foreground font-medium">$99 - $499 one-time fee (Limited Time!)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-foreground font-medium">Instant results in 15-30 minutes</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-foreground font-medium">AI-powered personalized insights</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-foreground font-medium">Ongoing support and updates</span>
                     </li>
                   </ul>

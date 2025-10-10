@@ -96,7 +96,7 @@ const Pricing = () => {
     },
     {
       name: "Growth & Scale Elements",
-      tooltip: "Advanced 4-dimension strategic planning for expansion",
+      tooltip: "Advanced 6-dimension strategic planning for expansion",
       features: [
         { name: "Strategy", tooltip: "Long-term planning and competitive positioning" },
         { name: "Leadership", tooltip: "Team effectiveness and organizational structure" },

@@ -591,19 +591,19 @@ const Pricing = () => {
                   </div>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
                       <span className="text-foreground font-medium">$99 - $499 one-time fee (Limited Time!)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
                       <span className="text-foreground font-medium">Instant results in 15-30 minutes</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
                       <span className="text-foreground font-medium">AI-powered personalized insights</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
                       <span className="text-foreground font-medium">Ongoing support and updates</span>
                     </li>
                   </ul>

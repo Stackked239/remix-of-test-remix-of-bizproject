@@ -171,7 +171,7 @@ const Pricing = () => {
             </p>
 
             {/* Feature Comparison Matrix */}
-            <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden">
+            <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden max-w-2xl mx-auto">
               <div className="bg-primary/5 px-3 py-2 border-b border-border">
                 <h2 className="text-lg font-bold text-foreground">Compare Features Across Tiers</h2>
                 <p className="text-muted-foreground text-sm mt-0.5">See what's included in each assessment level</p>
@@ -185,22 +185,13 @@ const Pricing = () => {
                       <tr>
                         <th className="text-left p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>Features</th>
                         <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
-                          <div className="flex flex-col items-center gap-0.5">
-                            <span>Essentials</span>
-                            <span className="text-xs font-normal text-muted-foreground">$99</span>
-                          </div>
+                          Essentials
                         </th>
                         <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
-                          <div className="flex flex-col items-center gap-0.5">
-                            <span>Growth</span>
-                            <span className="text-xs font-normal text-muted-foreground">$299</span>
-                          </div>
+                          Growth
                         </th>
                         <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
-                          <div className="flex flex-col items-center gap-0.5">
-                            <span>Enterprise</span>
-                            <span className="text-xs font-normal text-muted-foreground">$499</span>
-                          </div>
+                          Enterprise
                         </th>
                       </tr>
                     </thead>

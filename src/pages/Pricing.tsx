@@ -457,7 +457,7 @@ const Pricing = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {tiers.map((tier, index) => (
-              <div key={index} className={`relative rounded-2xl border-2 p-8 ${tier.popular || tier.bestValue || tier.bestForStartups ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
+              <div key={index} className={`relative rounded-2xl border-2 p-8 flex flex-col ${tier.popular || tier.bestValue || tier.bestForStartups ? 'border-primary bg-muted scale-105' : 'border-border bg-background'} shadow-card hover:shadow-elegant transition-all duration-300`}>
                 {tier.bestForStartups && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-growth text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
@@ -498,7 +498,7 @@ const Pricing = () => {
                   <p className="text-muted-foreground leading-relaxed">{tier.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-grow">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-growth mt-0.5 flex-shrink-0" />
@@ -508,9 +508,9 @@ const Pricing = () => {
                 </ul>
                 
                 <button 
-                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 mt-auto"
                   style={{
-                    backgroundColor: tier.name === 'Essentials' ? 'hsl(59, 62%, 36%)' : tier.name === 'Growth' ? 'hsl(212, 73%, 59%)' : 'hsl(81, 61%, 47%)',
+                    backgroundColor: tier.name === 'Essentials' ? 'hsl(59, 62%, 36%)' : tier.name === 'Growth' ? 'hsl(239, 35%, 23%)' : 'hsl(81, 61%, 47%)',
                     color: 'white',
                     transform: 'scale(1)',
                   }}

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -295,6 +296,7 @@ const Search = () => {
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
       <main className="min-h-screen bg-background pt-40 pb-12">

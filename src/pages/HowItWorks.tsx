@@ -8,7 +8,7 @@ const HowItWorks = () => {
       number: "01",
       icon: CheckCircle,
       title: "Choose Your Assessment Tier",
-      description: "Select from our three comprehensive assessment levels - Essentials ($199), Growth ($499), or Enterprise ($799) - each tailored to your business size and needs.",
+      description: "Select from our three business health assessment levels - Essentials, Growth, or Enterprise - each tailored to your business size and needs.",
       details: ["Quick tier selection based on business size and needs", "Secure payment processing", "Instant access upon confirmation"]
     },
     {

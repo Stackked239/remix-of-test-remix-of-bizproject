@@ -172,9 +172,9 @@ const Pricing = () => {
 
             {/* Feature Comparison Matrix */}
             <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden">
-              <div className="bg-primary/5 px-6 py-4 border-b border-border">
-                <h2 className="text-2xl font-bold text-foreground">Compare Features Across Tiers</h2>
-                <p className="text-muted-foreground mt-1">See what's included in each assessment level</p>
+              <div className="bg-primary/5 px-3 py-2 border-b border-border">
+                <h2 className="text-lg font-bold text-foreground">Compare Features Across Tiers</h2>
+                <p className="text-muted-foreground text-sm mt-0.5">See what's included in each assessment level</p>
               </div>
 
               {/* Desktop View - Table */}
@@ -183,21 +183,21 @@ const Pricing = () => {
                   <table className="w-full" style={{ fontFamily: 'system-ui, -apple-system, Roboto, sans-serif' }}>
                     <thead className="bg-muted/50">
                       <tr>
-                        <th className="text-left p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>Features</th>
-                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-                          <div className="flex flex-col items-center gap-1">
+                        <th className="text-left p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>Features</th>
+                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                          <div className="flex flex-col items-center gap-0.5">
                             <span>Essentials</span>
                             <span className="text-xs font-normal text-muted-foreground">$99</span>
                           </div>
                         </th>
-                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-                          <div className="flex flex-col items-center gap-1">
+                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                          <div className="flex flex-col items-center gap-0.5">
                             <span>Growth</span>
                             <span className="text-xs font-normal text-muted-foreground">$299</span>
                           </div>
                         </th>
-                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-                          <div className="flex flex-col items-center gap-1">
+                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                          <div className="flex flex-col items-center gap-0.5">
                             <span>Enterprise</span>
                             <span className="text-xs font-normal text-muted-foreground">$499</span>
                           </div>
@@ -208,10 +208,10 @@ const Pricing = () => {
                       {featureCategories.map((category, catIndex) => (
                         <React.Fragment key={catIndex}>
                           <tr className="border-t border-border bg-muted/30">
-                            <td colSpan={4} className="p-4">
+                            <td colSpan={4} className="p-2">
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <div className="font-semibold text-foreground flex items-center gap-2 cursor-help" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                  <div className="font-semibold text-foreground flex items-center gap-1 cursor-help" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                                     {category.name}
                                     <span className="text-xs text-muted-foreground">ⓘ</span>
                                   </div>
@@ -225,10 +225,10 @@ const Pricing = () => {
                           {category.isAnalysis ? (
                             category.features.map((feature, idx) => (
                               <tr key={idx} className="border-t border-border hover:bg-muted/20 transition-colors">
-                                <td className="p-4 pl-8">
+                                <td className="p-2 pl-4">
                                   <Tooltip>
                                     <TooltipTrigger asChild>
-                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                      <span className="text-muted-foreground cursor-help flex items-center gap-1" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                                         {feature.name}
                                         <span className="text-xs">ⓘ</span>
                                       </span>
@@ -238,25 +238,25 @@ const Pricing = () => {
                                     </TooltipContent>
                                   </Tooltip>
                                 </td>
-                                <td className="p-4 text-center">
+                                <td className="p-2 text-center">
                                   {feature.essentials ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
-                                <td className="p-4 text-center">
+                                <td className="p-2 text-center">
                                   {feature.growth ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
-                                <td className="p-4 text-center">
+                                <td className="p-2 text-center">
                                   {feature.enterprise ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
                               </tr>
@@ -264,10 +264,10 @@ const Pricing = () => {
                           ) : category.sublist ? (
                             category.features.map((feature, idx) => (
                               <tr key={idx} className="border-t border-border hover:bg-muted/20 transition-colors">
-                                <td className="p-4 pl-8">
+                                <td className="p-2 pl-4">
                                   <Tooltip>
                                     <TooltipTrigger asChild>
-                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                      <span className="text-muted-foreground cursor-help flex items-center gap-1" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                                         {feature.name}
                                         <span className="text-xs">ⓘ</span>
                                       </span>
@@ -277,59 +277,61 @@ const Pricing = () => {
                                     </TooltipContent>
                                   </Tooltip>
                                 </td>
-                                <td className="p-4 text-center">
-                                  {feature.locked && !feature.essentials ? (
-                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                <td className="p-2 text-center">
+                                  {feature.name === "Stakeholders Report" ? (
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                  ) : feature.locked && !feature.essentials ? (
+                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
                                   ) : feature.essentials ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
-                                <td className="p-4 text-center">
+                                <td className="p-2 text-center">
                                   {feature.locked && !feature.growth ? (
-                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
                                   ) : feature.growth ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
-                                <td className="p-4 text-center">
+                                <td className="p-2 text-center">
                                   {feature.locked && !feature.enterprise ? (
-                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
                                   ) : feature.enterprise ? (
-                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </td>
                               </tr>
                             ))
                           ) : (
                             <tr className="border-t border-border">
-                              <td className="p-4 pl-8 text-muted-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                              <td className="p-2 pl-4 text-muted-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                                 {category.features.map(f => f.name).join(', ')}
                               </td>
-                              <td className="p-4 text-center">
+                              <td className="p-2 text-center">
                                 {category.essentials ? (
-                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                 ) : (
-                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                 )}
                               </td>
-                              <td className="p-4 text-center">
+                              <td className="p-2 text-center">
                                 {category.growth ? (
-                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                 ) : (
-                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                 )}
                               </td>
-                              <td className="p-4 text-center">
+                              <td className="p-2 text-center">
                                 {category.enterprise ? (
-                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                 ) : (
-                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                 )}
                               </td>
                             </tr>
@@ -348,26 +350,26 @@ const Pricing = () => {
                     <div key={catIndex} className="border-b border-border">
                       <button
                         onClick={() => setExpandedRow(expandedRow === catIndex ? null : catIndex)}
-                        className="w-full p-4 flex items-center justify-between bg-muted/30 hover:bg-muted/50 transition-colors"
+                        className="w-full p-2 flex items-center justify-between bg-muted/30 hover:bg-muted/50 transition-colors"
                       >
-                        <span className="font-semibold text-foreground text-left" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                        <span className="font-semibold text-foreground text-left" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                           {category.name}
                         </span>
                         {expandedRow === catIndex ? (
-                          <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                          <ChevronUp className="w-4 h-4 text-muted-foreground" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                          <ChevronDown className="w-4 h-4 text-muted-foreground" />
                         )}
                       </button>
                       
                       {expandedRow === catIndex && (
-                        <div className="p-4 space-y-4 bg-background">
-                          <p className="text-sm text-muted-foreground mb-4">{category.tooltip}</p>
+                        <div className="p-2 space-y-2 bg-background">
+                          <p className="text-xs text-muted-foreground mb-2">{category.tooltip}</p>
                           
                           {category.isAnalysis || category.sublist ? (
                             category.features.map((feature, idx) => (
-                              <div key={idx} className="space-y-2">
-                                <div className="font-medium text-foreground flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                              <div key={idx} className="space-y-1">
+                                <div className="font-medium text-foreground flex items-center gap-1" style={{ fontSize: '14px', lineHeight: '1.4' }}>
                                   {feature.name}
                                   <Tooltip>
                                     <TooltipTrigger asChild>
@@ -378,35 +380,37 @@ const Pricing = () => {
                                     </TooltipContent>
                                   </Tooltip>
                                 </div>
-                                <div className="grid grid-cols-3 gap-2 text-center text-sm">
+                                <div className="grid grid-cols-3 gap-1 text-center text-xs">
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-1">Essentials</div>
-                                    {feature.locked && !feature.essentials ? (
-                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    <div className="text-xs text-muted-foreground mb-0.5">Essentials</div>
+                                    {feature.name === "Stakeholders Report" ? (
+                                      <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
+                                    ) : feature.locked && !feature.essentials ? (
+                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
                                     ) : feature.essentials ? (
-                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                      <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (
-                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                      <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                     )}
                                   </div>
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-1">Growth</div>
+                                    <div className="text-xs text-muted-foreground mb-0.5">Growth</div>
                                     {feature.locked && !feature.growth ? (
-                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
                                     ) : feature.growth ? (
-                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                      <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (
-                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                      <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                     )}
                                   </div>
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-1">Enterprise</div>
+                                    <div className="text-xs text-muted-foreground mb-0.5">Enterprise</div>
                                     {feature.locked && !feature.enterprise ? (
-                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
                                     ) : feature.enterprise ? (
-                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                      <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (
-                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                      <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                     )}
                                   </div>
                                 </div>
@@ -414,32 +418,32 @@ const Pricing = () => {
                             ))
                           ) : (
                             <>
-                              <div className="text-sm text-muted-foreground mb-3">
+                              <div className="text-xs text-muted-foreground mb-2">
                                 Includes: {category.features.map(f => f.name).join(', ')}
                               </div>
-                              <div className="grid grid-cols-3 gap-2 text-center text-sm">
+                              <div className="grid grid-cols-3 gap-1 text-center text-xs">
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-1">Essentials</div>
+                                  <div className="text-xs text-muted-foreground mb-0.5">Essentials</div>
                                   {category.essentials ? (
-                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </div>
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-1">Growth</div>
+                                  <div className="text-xs text-muted-foreground mb-0.5">Growth</div>
                                   {category.growth ? (
-                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </div>
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-1">Enterprise</div>
+                                  <div className="text-xs text-muted-foreground mb-0.5">Enterprise</div>
                                   {category.enterprise ? (
-                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
-                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                   )}
                                 </div>
                               </div>

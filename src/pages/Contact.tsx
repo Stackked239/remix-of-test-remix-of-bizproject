@@ -91,25 +91,6 @@ const Contact = () => {
     }
   ];
 
-  const faqs = [
-    {
-      question: "How quickly will I receive my business health report?",
-      answer: "Most reports are generated instantly upon completion of your assessment. In rare cases where manual review is needed, you'll receive your report within 2-4 hours."
-    },
-    {
-      question: "Can I get a refund if I'm not satisfied?",
-      answer: "Yes, we offer a 30-day money-back guarantee. If you're not completely satisfied with your report, contact us for a full refund."
-    },
-    {
-      question: "Is my business data secure?",
-      answer: "Absolutely. We use enterprise-grade encryption and follow strict data privacy protocols. Your information is never shared with third parties and is automatically deleted after 90 days."
-    },
-    {
-      question: "Can I discuss my report with an expert?",
-      answer: "Enterprise tier customers get direct access to our business consultants. Essentials and Growth tier customers can schedule a consultation for an additional fee."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -325,25 +306,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border border-border rounded-lg p-6 bg-background">
-                  <h3 className="text-lg font-semibold mb-3 text-foreground">{faq.question}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>

@@ -140,7 +140,7 @@ const Pricing = () => {
   const faqs = [
     {
       question: "What happens after I complete the assessment?",
-      answer: "You'll receive your business health assessment reports within 90 minutes; you will notified via email; Assessments and reports are generated 24/7, so there's no extended waiting."
+      answer: "You'll receive your business health assessment reports within 90 minutes; you will be notified via email; Assessments and reports are generated 24/7, so there's no extended waiting."
     },
     {
       question: "Can I upgrade my assessment after purchase?",

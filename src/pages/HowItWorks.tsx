@@ -22,7 +22,7 @@ const HowItWorks = () => {
       number: "03",
       icon: BarChart3,
       title: "AI Analysis & Benchmarking",
-      description: "Our advanced AI algorithms analyze your responses against industry benchmarks and best practices to identify opportunities and risks.",
+      description: "Our advanced proprietary AI algorithms analyze your responses against industry benchmarks and best practices to identify opportunities and risks.",
       details: ["Real-time data processing", "Industry comparison analysis", "Risk assessment algorithms"]
     },
     {

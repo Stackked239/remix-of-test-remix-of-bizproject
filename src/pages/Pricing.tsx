@@ -173,7 +173,7 @@ const Pricing = () => {
             {/* Feature Comparison Matrix */}
             <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden max-w-2xl mx-auto">
               <div className="bg-primary/5 px-3 py-2 border-b border-border">
-                <h2 className="text-lg font-bold text-foreground">Compare Features Across Tiers</h2>
+                <h2 className="text-lg font-extrabold text-foreground">Compare Features Across Tiers</h2>
                 <p className="text-muted-foreground text-sm mt-0.5">See what's included in each assessment level</p>
               </div>
 
@@ -183,14 +183,14 @@ const Pricing = () => {
                   <table className="w-full" style={{ fontFamily: 'system-ui, -apple-system, Roboto, sans-serif' }}>
                     <thead className="bg-muted/50">
                       <tr>
-                        <th className="text-left p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>Features</th>
-                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                        <th className="text-left p-2 font-bold text-foreground" style={{ fontSize: '15px', lineHeight: '1.4', fontWeight: '700' }}>Features</th>
+                        <th className="text-center p-2 font-bold text-primary" style={{ fontSize: '15px', lineHeight: '1.4', fontWeight: '700' }}>
                           Essentials
                         </th>
-                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                        <th className="text-center p-2 font-bold text-primary" style={{ fontSize: '15px', lineHeight: '1.4', fontWeight: '700' }}>
                           Growth
                         </th>
-                        <th className="text-center p-2 font-semibold text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                        <th className="text-center p-2 font-bold text-primary" style={{ fontSize: '15px', lineHeight: '1.4', fontWeight: '700' }}>
                           Enterprise
                         </th>
                       </tr>
@@ -343,7 +343,7 @@ const Pricing = () => {
                         onClick={() => setExpandedRow(expandedRow === catIndex ? null : catIndex)}
                         className="w-full p-2 flex items-center justify-between bg-muted/30 hover:bg-muted/50 transition-colors"
                       >
-                        <span className="font-semibold text-foreground text-left" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                        <span className="font-bold text-foreground text-left" style={{ fontSize: '15px', lineHeight: '1.4', fontWeight: '700' }}>
                           {category.name}
                         </span>
                         {expandedRow === catIndex ? (
@@ -373,7 +373,7 @@ const Pricing = () => {
                                 </div>
                                 <div className="grid grid-cols-3 gap-1 text-center text-xs">
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-0.5">Essentials</div>
+                                    <div className="text-xs font-bold text-primary mb-0.5">Essentials</div>
                                     {feature.name === "Stakeholders Report" ? (
                                       <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                     ) : feature.locked && !feature.essentials ? (
@@ -385,7 +385,7 @@ const Pricing = () => {
                                     )}
                                   </div>
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-0.5">Growth</div>
+                                    <div className="text-xs font-bold text-primary mb-0.5">Growth</div>
                                     {feature.locked && !feature.growth ? (
                                       <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
                                     ) : feature.growth ? (
@@ -395,7 +395,7 @@ const Pricing = () => {
                                     )}
                                   </div>
                                   <div>
-                                    <div className="text-xs text-muted-foreground mb-0.5">Enterprise</div>
+                                    <div className="text-xs font-bold text-primary mb-0.5">Enterprise</div>
                                     {feature.locked && !feature.enterprise ? (
                                       <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
                                     ) : feature.enterprise ? (
@@ -414,7 +414,7 @@ const Pricing = () => {
                               </div>
                               <div className="grid grid-cols-3 gap-1 text-center text-xs">
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-0.5">Essentials</div>
+                                  <div className="text-xs font-bold text-primary mb-0.5">Essentials</div>
                                   {category.essentials ? (
                                     <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
@@ -422,7 +422,7 @@ const Pricing = () => {
                                   )}
                                 </div>
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-0.5">Growth</div>
+                                  <div className="text-xs font-bold text-primary mb-0.5">Growth</div>
                                   {category.growth ? (
                                     <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
@@ -430,7 +430,7 @@ const Pricing = () => {
                                   )}
                                 </div>
                                 <div>
-                                  <div className="text-xs text-muted-foreground mb-0.5">Enterprise</div>
+                                  <div className="text-xs font-bold text-primary mb-0.5">Enterprise</div>
                                   {category.enterprise ? (
                                     <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (

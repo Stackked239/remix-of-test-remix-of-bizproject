@@ -510,7 +510,7 @@ const Pricing = () => {
                 <button 
                   className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
                   style={{
-                    backgroundColor: tier.popular ? '#8CBF2F' : '#007BFF',
+                    backgroundColor: tier.name === 'Essentials' ? 'hsl(59, 62%, 36%)' : tier.name === 'Growth' ? 'hsl(212, 73%, 59%)' : 'hsl(81, 61%, 47%)',
                     color: 'white',
                     transform: 'scale(1)',
                   }}

@@ -81,13 +81,14 @@ const Pricing = () => {
   const featureCategories = [
     {
       name: "Business Fundamentals",
-      tooltip: "Core 5-dimension analysis covering essential operations",
+      tooltip: "Core 6-dimension analysis covering essential operations",
       features: [
         { name: "Sales", tooltip: "Revenue generation and pipeline analysis" },
         { name: "Marketing", tooltip: "Brand positioning and customer acquisition" },
+        { name: "HR", tooltip: "Human resources and talent management" },
         { name: "Operations", tooltip: "Efficiency and process optimization" },
         { name: "Finance", tooltip: "Financial health and cash flow management" },
-        { name: "Customer Success", tooltip: "Retention and satisfaction metrics" }
+        { name: "Customer Experience", tooltip: "Retention and satisfaction metrics" }
       ],
       essentials: true,
       growth: true,

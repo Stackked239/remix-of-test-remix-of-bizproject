@@ -128,7 +128,8 @@ const Pricing = () => {
           tooltip: "Department-specific insights for Sales, Marketing, Operations, Finance, Customer Success",
           essentials: false, 
           growth: false, 
-          enterprise: true 
+          enterprise: true,
+          locked: true
         },
         { name: "Employees' Report", tooltip: "Team-level insights and engagement metrics", essentials: false, growth: false, enterprise: true, locked: true }
       ]

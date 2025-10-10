@@ -1,13 +1,21 @@
+import React, { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, Star, ArrowRight, DollarSign, Rocket } from "lucide-react";
-import businessAnalyticsDashboard from "@/assets/business-analytics-dashboard.jpg";
-import { useEffect } from "react";
+import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Pricing = () => {
+  const [expandedRow, setExpandedRow] = useState<number | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const tiers = [
     {
       name: "Essentials",
@@ -69,6 +77,64 @@ const Pricing = () => {
     }
   ];
 
+  // Feature comparison data
+  const featureCategories = [
+    {
+      name: "Business Fundamentals",
+      tooltip: "Core 5-dimension analysis covering essential operations",
+      features: [
+        { name: "Sales", tooltip: "Revenue generation and pipeline analysis" },
+        { name: "Marketing", tooltip: "Brand positioning and customer acquisition" },
+        { name: "Operations", tooltip: "Efficiency and process optimization" },
+        { name: "Finance", tooltip: "Financial health and cash flow management" },
+        { name: "Customer Success", tooltip: "Retention and satisfaction metrics" }
+      ],
+      essentials: true,
+      growth: true,
+      enterprise: true
+    },
+    {
+      name: "Growth & Scale Elements",
+      tooltip: "Advanced 4-dimension strategic planning for expansion",
+      features: [
+        { name: "Strategy", tooltip: "Long-term planning and competitive positioning" },
+        { name: "Leadership", tooltip: "Team effectiveness and organizational structure" },
+        { name: "IT & Technology", tooltip: "Digital transformation and tech stack optimization" },
+        { name: "Risk Management", tooltip: "Compliance, security, and contingency planning" }
+      ],
+      essentials: false,
+      growth: true,
+      enterprise: true
+    },
+    {
+      name: "Business Analysis",
+      tooltip: "Depth and scope of analytical insights provided",
+      features: [
+        { name: "Basic", tooltip: "Core metrics and fundamental insights", essentials: true, growth: false, enterprise: false },
+        { name: "Comprehensive", tooltip: "12-Dimension AI insights with advanced analytics", essentials: false, growth: true, enterprise: true }
+      ],
+      isAnalysis: true
+    },
+    {
+      name: "Report Types",
+      tooltip: "Deliverable formats tailored to stakeholder needs",
+      sublist: true,
+      features: [
+        { name: "Comprehensive Report", tooltip: "Full business health overview with all metrics", essentials: true, growth: true, enterprise: true },
+        { name: "Owner's Report", tooltip: "Executive summary for decision-makers", essentials: true, growth: true, enterprise: true },
+        { name: "Stakeholders Report", tooltip: "Investor-ready performance documentation", essentials: false, growth: false, enterprise: false, locked: true },
+        { 
+          name: "Managers' Reports (5)", 
+          tooltip: "Department-specific insights for Sales, Marketing, Operations, Finance, Customer Success",
+          essentials: false, 
+          growth: false, 
+          enterprise: true 
+        },
+        { name: "Employees' Report", tooltip: "Team-level insights and engagement metrics", essentials: false, growth: false, enterprise: true, locked: true }
+      ]
+    }
+  ];
+
   const faqs = [
     {
       question: "What happens after I complete the assessment?",
@@ -95,20 +161,296 @@ const Pricing = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-muted">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               Pricing That Scales With You
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Choose the assessment level that matches your business needs. From quick health checks to comprehensive strategic analysis,
               we have the right solution to drive your growth.
             </p>
-            <div className="mt-8">
-              <img 
-                src={businessAnalyticsDashboard} 
-                alt="Business analytics dashboard showing comprehensive data visualization and performance metrics"
-                className="rounded-xl shadow-card mx-auto max-w-2xl w-full"
-              />
+
+            {/* Feature Comparison Matrix */}
+            <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden">
+              <div className="bg-primary/5 px-6 py-4 border-b border-border">
+                <h2 className="text-2xl font-bold text-foreground">Compare Features Across Tiers</h2>
+                <p className="text-muted-foreground mt-1">See what's included in each assessment level</p>
+              </div>
+
+              {/* Desktop View - Table */}
+              <div className="hidden md:block overflow-x-auto">
+                <TooltipProvider>
+                  <table className="w-full" style={{ fontFamily: 'system-ui, -apple-system, Roboto, sans-serif' }}>
+                    <thead className="bg-muted/50">
+                      <tr>
+                        <th className="text-left p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>Features</th>
+                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                          <div className="flex flex-col items-center gap-1">
+                            <span>Essentials</span>
+                            <span className="text-xs font-normal text-muted-foreground">$99</span>
+                          </div>
+                        </th>
+                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                          <div className="flex flex-col items-center gap-1">
+                            <span>Growth</span>
+                            <span className="text-xs font-normal text-muted-foreground">$299</span>
+                          </div>
+                        </th>
+                        <th className="text-center p-4 font-semibold text-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                          <div className="flex flex-col items-center gap-1">
+                            <span>Enterprise</span>
+                            <span className="text-xs font-normal text-muted-foreground">$499</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {featureCategories.map((category, catIndex) => (
+                        <React.Fragment key={catIndex}>
+                          <tr className="border-t border-border bg-muted/30">
+                            <td colSpan={4} className="p-4">
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <div className="font-semibold text-foreground flex items-center gap-2 cursor-help" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                    {category.name}
+                                    <span className="text-xs text-muted-foreground">ⓘ</span>
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p>{category.tooltip}</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </td>
+                          </tr>
+                          {category.isAnalysis ? (
+                            category.features.map((feature, idx) => (
+                              <tr key={idx} className="border-t border-border hover:bg-muted/20 transition-colors">
+                                <td className="p-4 pl-8">
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                        {feature.name}
+                                        <span className="text-xs">ⓘ</span>
+                                      </span>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>{feature.tooltip}</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.essentials ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.growth ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.enterprise ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                              </tr>
+                            ))
+                          ) : category.sublist ? (
+                            category.features.map((feature, idx) => (
+                              <tr key={idx} className="border-t border-border hover:bg-muted/20 transition-colors">
+                                <td className="p-4 pl-8">
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                        {feature.name}
+                                        <span className="text-xs">ⓘ</span>
+                                      </span>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>{feature.tooltip}</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.locked && !feature.essentials ? (
+                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                  ) : feature.essentials ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.locked && !feature.growth ? (
+                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                  ) : feature.growth ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                                <td className="p-4 text-center">
+                                  {feature.locked && !feature.enterprise ? (
+                                    <Lock className="w-6 h-6 mx-auto" style={{ color: '#6B7280' }} />
+                                  ) : feature.enterprise ? (
+                                    <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </td>
+                              </tr>
+                            ))
+                          ) : (
+                            <tr className="border-t border-border">
+                              <td className="p-4 pl-8 text-muted-foreground" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                {category.features.map(f => f.name).join(', ')}
+                              </td>
+                              <td className="p-4 text-center">
+                                {category.essentials ? (
+                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                ) : (
+                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                )}
+                              </td>
+                              <td className="p-4 text-center">
+                                {category.growth ? (
+                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                ) : (
+                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                )}
+                              </td>
+                              <td className="p-4 text-center">
+                                {category.enterprise ? (
+                                  <Check className="w-6 h-6 mx-auto" style={{ color: '#28A745' }} />
+                                ) : (
+                                  <X className="w-6 h-6 mx-auto" style={{ color: '#DC3545' }} />
+                                )}
+                              </td>
+                            </tr>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </tbody>
+                  </table>
+                </TooltipProvider>
+              </div>
+
+              {/* Mobile View - Accordion */}
+              <div className="md:hidden">
+                <TooltipProvider>
+                  {featureCategories.map((category, catIndex) => (
+                    <div key={catIndex} className="border-b border-border">
+                      <button
+                        onClick={() => setExpandedRow(expandedRow === catIndex ? null : catIndex)}
+                        className="w-full p-4 flex items-center justify-between bg-muted/30 hover:bg-muted/50 transition-colors"
+                      >
+                        <span className="font-semibold text-foreground text-left" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                          {category.name}
+                        </span>
+                        {expandedRow === catIndex ? (
+                          <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                        )}
+                      </button>
+                      
+                      {expandedRow === catIndex && (
+                        <div className="p-4 space-y-4 bg-background">
+                          <p className="text-sm text-muted-foreground mb-4">{category.tooltip}</p>
+                          
+                          {category.isAnalysis || category.sublist ? (
+                            category.features.map((feature, idx) => (
+                              <div key={idx} className="space-y-2">
+                                <div className="font-medium text-foreground flex items-center gap-2" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                                  {feature.name}
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <span className="text-xs text-muted-foreground cursor-help">ⓘ</span>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>{feature.tooltip}</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </div>
+                                <div className="grid grid-cols-3 gap-2 text-center text-sm">
+                                  <div>
+                                    <div className="text-xs text-muted-foreground mb-1">Essentials</div>
+                                    {feature.locked && !feature.essentials ? (
+                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    ) : feature.essentials ? (
+                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    ) : (
+                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    )}
+                                  </div>
+                                  <div>
+                                    <div className="text-xs text-muted-foreground mb-1">Growth</div>
+                                    {feature.locked && !feature.growth ? (
+                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    ) : feature.growth ? (
+                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    ) : (
+                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    )}
+                                  </div>
+                                  <div>
+                                    <div className="text-xs text-muted-foreground mb-1">Enterprise</div>
+                                    {feature.locked && !feature.enterprise ? (
+                                      <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    ) : feature.enterprise ? (
+                                      <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                    ) : (
+                                      <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            ))
+                          ) : (
+                            <>
+                              <div className="text-sm text-muted-foreground mb-3">
+                                Includes: {category.features.map(f => f.name).join(', ')}
+                              </div>
+                              <div className="grid grid-cols-3 gap-2 text-center text-sm">
+                                <div>
+                                  <div className="text-xs text-muted-foreground mb-1">Essentials</div>
+                                  {category.essentials ? (
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </div>
+                                <div>
+                                  <div className="text-xs text-muted-foreground mb-1">Growth</div>
+                                  {category.growth ? (
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </div>
+                                <div>
+                                  <div className="text-xs text-muted-foreground mb-1">Enterprise</div>
+                                  {category.enterprise ? (
+                                    <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
+                                  ) : (
+                                    <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
+                                  )}
+                                </div>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </TooltipProvider>
+              </div>
             </div>
           </div>
         </div>
@@ -169,7 +511,20 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'bg-growth text-primary hover:bg-primary hover:text-white transform hover:scale-105' : 'bg-primary text-white hover:bg-growth hover:text-primary'}`}>
+                <button 
+                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                  style={{
+                    backgroundColor: tier.popular ? '#8CBF2F' : '#007BFF',
+                    color: 'white',
+                    transform: 'scale(1)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'scale(1.05)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                >
                   {tier.cta}
                   <ArrowRight className="w-4 h-4" />
                 </button>

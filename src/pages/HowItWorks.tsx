@@ -116,7 +116,7 @@ const HowItWorks = () => {
                         <div className="border border-border rounded-lg p-3 hover:border-primary/50 transition-colors">
                           <div className="flex items-center justify-between mb-2">
                             <span className="font-bold text-foreground">Essentials</span>
-                            <span className="text-primary font-bold">$99</span>
+                            <span className="text-primary font-bold">$199</span>
                           </div>
                           <p className="text-xs text-muted-foreground mb-2">45-question focused assessment</p>
                           <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -132,7 +132,7 @@ const HowItWorks = () => {
                           </div>
                           <div className="flex items-center justify-between mb-2">
                             <span className="font-bold text-foreground">Growth</span>
-                            <span className="text-primary font-bold">$299</span>
+                            <span className="text-primary font-bold">$499</span>
                           </div>
                           <p className="text-xs text-muted-foreground mb-2">75+ question comprehensive assessment</p>
                           <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -145,7 +145,7 @@ const HowItWorks = () => {
                         <div className="border border-border rounded-lg p-3 hover:border-primary/50 transition-colors">
                           <div className="flex items-center justify-between mb-2">
                             <span className="font-bold text-foreground">Enterprise</span>
-                            <span className="text-primary font-bold">$499</span>
+                            <span className="text-primary font-bold">$799</span>
                           </div>
                           <p className="text-xs text-muted-foreground mb-2">Complete business valuation</p>
                           <div className="flex items-center gap-2 text-xs text-muted-foreground">

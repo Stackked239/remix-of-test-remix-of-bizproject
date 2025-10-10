@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp } from "lucide-react";
+import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -533,28 +533,81 @@ const Pricing = () => {
       {/* Value Proposition */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Why BizHealth.ai Delivers Exceptional Value
-            </h2>
-            <div className="grid md:grid-cols-2 gap-12 mt-12">
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Traditional Business Consulting</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• $5,000 - $25,000+ investment</li>
-                  <li>• 4-8 weeks for initial assessment</li>
-                  <li>• Generic recommendations</li>
-                  <li>• Limited follow-up support</li>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+                Why BizHealth.ai Delivers Exceptional Value
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Compare traditional consulting to our AI-powered solution
+              </p>
+            </div>
+            <div className="grid md:grid-cols-[1fr_auto_1fr] gap-8 mt-12 items-center">
+              {/* Traditional Consulting Side */}
+              <div className="bg-background border-2 border-destructive/30 rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
+                    <TrendingDown className="w-6 h-6 text-destructive" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Traditional Consulting</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">$5,000 - $25,000+ investment</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">4-8 weeks for initial assessment</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Generic recommendations</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Limited follow-up support</span>
+                  </li>
                 </ul>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">BizHealth.ai Assessment</h3>
-                <ul className="space-y-2 text-primary">
-                  <li>• $99 - $499 one-time fee (Limited Time!)</li>
-                  <li>• Instant results in 15-30 minutes</li>
-                  <li>• AI-powered personalized insights</li>
-                  <li>• Ongoing support and updates</li>
-                </ul>
+
+              {/* VS Divider */}
+              <div className="hidden md:flex flex-col items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  VS
+                </div>
+                <div className="mt-2 text-sm text-muted-foreground font-semibold">versus</div>
+              </div>
+
+              {/* BizHealth.ai Side */}
+              <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16"></div>
+                <div className="relative">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <TrendingUp className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">BizHealth.ai</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground font-medium">$99 - $499 one-time fee (Limited Time!)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground font-medium">Instant results in 15-30 minutes</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground font-medium">AI-powered personalized insights</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground font-medium">Ongoing support and updates</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

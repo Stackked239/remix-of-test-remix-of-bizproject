@@ -161,7 +161,7 @@ const Pricing = () => {
     },
     {
       question: "Is my business data secure?",
-      answer: "Absolutely. We use enterprise-grade encryption and follow strict data privacy protocols. Your information is never shared with third parties and is deleted after 90 days unless you opt for extended tracking."
+      answer: "Your data is safeguarded with industry-standard encryption and robust security protocols, ensuring your business insights remain private and secure. We comply with all applicable data protection regulations, providing you peace of mind."
     }
   ];
 

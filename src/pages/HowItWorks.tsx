@@ -8,15 +8,15 @@ const HowItWorks = () => {
       number: "01",
       icon: CheckCircle,
       title: "Choose Your Assessment Tier",
-      description: "Select from our three comprehensive assessment levels - Essentials ($49), Growth ($99), or Enterprise ($199) - each tailored to your business size and needs.",
-      details: ["Quick tier selection based on business size", "Secure payment processing", "Instant access upon confirmation"]
+      description: "Select from our three comprehensive assessment levels - Essentials ($199), Growth ($499), or Enterprise ($799) - each tailored to your business size and needs.",
+      details: ["Quick tier selection based on business size and needs", "Secure payment processing", "Instant access upon confirmation"]
     },
     {
       number: "02", 
       icon: FileText,
       title: "Complete Your Business Assessment",
-      description: "Answer our strategically designed questionnaire covering 8 critical business dimensions, from financial health to growth strategy.",
-      details: ["20-45 questions depending on tier", "Save and resume functionality", "Industry-specific question sets"]
+      description: "Answer our strategically designed questionnaire covering 12 critical business dimensions, from financial health to growth strategy.",
+      details: ["45-80 questions depending on tier", "Save and resume functionality", "Industry-specific question sets"]
     },
     {
       number: "03",

@@ -105,9 +105,61 @@ const HowItWorks = () => {
                   </ul>
                 </div>
                 <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-80 rounded-2xl bg-muted border border-border flex items-center justify-center">
-                    <step.icon className="w-32 h-32 text-primary/20" />
-                  </div>
+                  {index === 0 ? (
+                    // Tier matrix snapshot for first step
+                    <div className="w-full max-w-md rounded-2xl bg-background border-2 border-border shadow-elegant overflow-hidden">
+                      <div className="bg-primary/5 px-4 py-3 border-b border-border">
+                        <h3 className="text-sm font-bold text-foreground">Assessment Tiers</h3>
+                      </div>
+                      <div className="p-4 space-y-3">
+                        {/* Essentials */}
+                        <div className="border border-border rounded-lg p-3 hover:border-primary/50 transition-colors">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-bold text-foreground">Essentials</span>
+                            <span className="text-primary font-bold">$99</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground mb-2">45-question focused assessment</p>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <CheckCircle className="w-3 h-3 text-growth" />
+                            <span>5 Core dimensions</span>
+                          </div>
+                        </div>
+                        
+                        {/* Growth */}
+                        <div className="border-2 border-primary rounded-lg p-3 bg-primary/5 relative">
+                          <div className="absolute -top-2 right-3 bg-primary text-white text-xs px-2 py-0.5 rounded-full">
+                            Popular
+                          </div>
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-bold text-foreground">Growth</span>
+                            <span className="text-primary font-bold">$299</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground mb-2">75+ question comprehensive assessment</p>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <CheckCircle className="w-3 h-3 text-growth" />
+                            <span>12 Advanced dimensions</span>
+                          </div>
+                        </div>
+                        
+                        {/* Enterprise */}
+                        <div className="border border-border rounded-lg p-3 hover:border-primary/50 transition-colors">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-bold text-foreground">Enterprise</span>
+                            <span className="text-primary font-bold">$499</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground mb-2">Complete business valuation</p>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <CheckCircle className="w-3 h-3 text-growth" />
+                            <span>Full analysis + consultant access</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-80 h-80 rounded-2xl bg-muted border border-border flex items-center justify-center">
+                      <step.icon className="w-32 h-32 text-primary/20" />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

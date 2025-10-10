@@ -109,7 +109,7 @@ const Pricing = () => {
     },
     {
       name: "Business Analysis",
-      tooltip: "Depth and scope of analytical insights provided",
+      tooltip: "Depth and scope of analyses and analytical insights provided",
       features: [
         { name: "Basic", tooltip: "Core metrics and fundamental insights", essentials: true, growth: false, enterprise: false },
         { name: "Comprehensive", tooltip: "12-Dimension AI insights with advanced analytics", essentials: false, growth: true, enterprise: true }

@@ -72,6 +72,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "How It Works - BizHealth.ai Business Assessment",
+        excerpt: "Discover how BizHealth.ai works: Choose your assessment tier ($199-$799), complete 45-80 questions covering 12 critical business dimensions, and receive your comprehensive health report within 90 minutes.",
+        url: "/how-it-works",
+        icon: HelpCircle
+      },
+      {
+        type: "Page",
         title: "Frequently Asked Questions - FAQs",
         excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
         url: "/faqs",

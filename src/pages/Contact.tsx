@@ -250,8 +250,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Headquarters</h3>
                         <p className="text-muted-foreground">
-                          1635 E Hwy. 50, Suite 204<br />
-                          Clermont, Florida 34711<br />
+                          N. Orange Avenue<br />
+                          Orlando, Florida 32801<br />
                           United States
                         </p>
                       </div>

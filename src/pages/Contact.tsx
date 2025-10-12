@@ -103,7 +103,7 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Have questions about our business health assessments? Need help accessing your reports? 
+              Have questions about our business health assessments? Need help accessing your reports?<br />
               Our expert team is here to support your business growth journey.
             </p>
             <div className="mt-8">

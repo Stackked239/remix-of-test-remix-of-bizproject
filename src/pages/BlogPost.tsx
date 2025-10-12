@@ -194,12 +194,6 @@ const BlogPost = () => {
           excerpt: "Learn to identify critical warning signs before they become major problems for your business."
         },
         {
-          title: "Operational Resilience Strategies",
-          slug: "operational-resilience",
-          category: "Business Strategy",
-          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
-        },
-        {
           title: "Strategic Planning Post-Pandemic",
           slug: "strategic-planning-post-pandemic",
           category: "Strategic Planning",

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
@@ -167,14 +168,38 @@ const BlogPost = () => {
                 <p className="text-white/90 mb-6">
                   Get started with BizHealth.ai's comprehensive business health assessment and discover opportunities for growth.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link 
+                  to="/how-it-works"
+                  className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
                   Start Your Assessment
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        },
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        },
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 
@@ -320,6 +321,27 @@ const DailyGrindFixes = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        },
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        },
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

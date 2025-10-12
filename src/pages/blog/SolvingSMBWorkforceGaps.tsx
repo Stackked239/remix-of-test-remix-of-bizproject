@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
@@ -342,6 +343,27 @@ const SolvingSMBWorkforceGaps = () => {
             </div>
           </div>
         </article>
+
+        <RelatedArticles articles={[
+          {
+            title: "Leadership Stress Management",
+            slug: "leadership-stress-success",
+            category: "Business Leadership",
+            excerpt: "Conquer executive stress with proven leadership resilience strategies and reduce burnout."
+          },
+          {
+            title: "Retail & Remote Tools for Modern Family Businesses",
+            slug: "retail-remote-tools",
+            category: "Technology",
+            excerpt: "Explore the best retail and remote work technologies for family-run businesses."
+          },
+          {
+            title: "Real-Time Analytics for SMB Agility",
+            slug: "real-time-analytics-smb",
+            category: "Technology",
+            excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+          }
+        ]} />
 
         <GlobalFooter />
       </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -319,6 +320,27 @@ const BusinessIntelligenceROI = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "AI-Powered Business Analytics",
+          slug: "ai-business-analytics",
+          category: "Technology",
+          excerpt: "Discover how AI and machine learning transform business analytics for smarter decision-making."
+        },
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

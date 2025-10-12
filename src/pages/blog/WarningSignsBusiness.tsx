@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
@@ -139,14 +140,38 @@ const WarningSignsBusiness = () => {
                 <p className="text-white/90 mb-6">
                   Get started with BizHealth.ai's comprehensive business assessment and turn warning signs into opportunities.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link 
+                  to="/how-it-works"
+                  className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+                >
                   Start Your Assessment
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        },
+        {
+          title: "Leadership Stress Management",
+          slug: "leadership-stress-success",
+          category: "Business Leadership",
+          excerpt: "Conquer executive stress with proven leadership resilience strategies and reduce burnout."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

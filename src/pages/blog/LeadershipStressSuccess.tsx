@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -181,6 +182,27 @@ const LeadershipStressSuccess = () => {
           </div>
         </div>
       </article>
+
+      <RelatedArticles articles={[
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        },
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
@@ -95,6 +96,27 @@ const FinancialManagement = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        },
+        {
+          title: "Business Intelligence ROI: Maximizing Returns",
+          slug: "business-intelligence-roi",
+          category: "Business Analytics",
+          excerpt: "Discover how to measure and maximize the return on investment from your business intelligence tools."
+        },
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

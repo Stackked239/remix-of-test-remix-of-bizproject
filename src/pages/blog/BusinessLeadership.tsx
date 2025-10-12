@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
@@ -172,6 +173,27 @@ const BusinessLeadership = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Leadership Stress Management",
+          slug: "leadership-stress-success",
+          category: "Business Leadership",
+          excerpt: "Conquer executive stress with proven leadership resilience strategies and reduce burnout."
+        },
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        },
+        {
+          title: "Solving SMB Workforce Gaps with Talent Analytics",
+          slug: "solving-smb-workforce-gaps",
+          category: "Workforce Management",
+          excerpt: "Discover how talent analytics helps SMBs close workforce gaps and optimize hiring strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

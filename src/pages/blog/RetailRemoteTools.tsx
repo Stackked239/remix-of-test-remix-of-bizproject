@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User, CheckCircle } from "lucide-react";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
@@ -172,6 +173,27 @@ const RetailRemoteTools = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Solving SMB Workforce Gaps with Talent Analytics",
+          slug: "solving-smb-workforce-gaps",
+          category: "Workforce Management",
+          excerpt: "Discover how talent analytics helps SMBs close workforce gaps and optimize hiring strategies."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

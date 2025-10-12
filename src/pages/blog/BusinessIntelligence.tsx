@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
@@ -95,6 +96,27 @@ const BusinessIntelligence = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "AI-Powered Business Analytics",
+          slug: "ai-business-analytics",
+          category: "Technology",
+          excerpt: "Discover how AI and machine learning transform business analytics for smarter decision-making."
+        },
+        {
+          title: "Business Intelligence ROI: Maximizing Returns",
+          slug: "business-intelligence-roi",
+          category: "Business Analytics",
+          excerpt: "Discover how to measure and maximize the return on investment from your business intelligence tools."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

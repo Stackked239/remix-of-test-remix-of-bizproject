@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -128,6 +129,27 @@ const Technology = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "AI-Powered Business Analytics",
+          slug: "ai-business-analytics",
+          category: "Technology",
+          excerpt: "Discover how AI and machine learning transform business analytics for smarter decision-making."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        },
+        {
+          title: "Solving SMB Workforce Gaps with Talent Analytics",
+          slug: "solving-smb-workforce-gaps",
+          category: "Workforce Management",
+          excerpt: "Discover how talent analytics helps SMBs close workforce gaps and optimize hiring strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

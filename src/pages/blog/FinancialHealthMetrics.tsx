@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -272,6 +273,27 @@ const FinancialHealthMetrics = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        },
+        {
+          title: "Business Intelligence ROI: Maximizing Returns",
+          slug: "business-intelligence-roi",
+          category: "Business Analytics",
+          excerpt: "Discover how to measure and maximize the return on investment from your business intelligence tools."
+        },
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

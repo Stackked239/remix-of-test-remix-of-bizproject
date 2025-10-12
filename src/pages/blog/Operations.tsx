@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
@@ -164,6 +165,27 @@ const Operations = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        },
+        {
+          title: "Daily Grind Fixes: Operational Excellence",
+          slug: "daily-grind-fixes",
+          category: "Operations",
+          excerpt: "Transform daily operational challenges into efficiency gains with practical solutions."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

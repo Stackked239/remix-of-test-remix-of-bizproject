@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
@@ -95,6 +96,27 @@ const BusinessStrategy = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        },
+        {
+          title: "When to Pivot Your Business Strategy",
+          slug: "when-to-pivot",
+          category: "Business Strategy",
+          excerpt: "Discover the key indicators that signal it's time to pivot your business model for success."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

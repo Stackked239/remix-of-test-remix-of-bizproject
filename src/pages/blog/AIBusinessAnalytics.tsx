@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -204,6 +205,27 @@ const AIBusinessAnalytics = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Business Intelligence ROI: Maximizing Returns",
+          slug: "business-intelligence-roi",
+          category: "Business Analytics",
+          excerpt: "Discover how to measure and maximize the return on investment from your business intelligence tools."
+        },
+        {
+          title: "Real-Time Analytics for SMB Agility",
+          slug: "real-time-analytics-smb",
+          category: "Technology",
+          excerpt: "Learn how real-time analytics empowers small businesses to make faster, data-driven decisions."
+        },
+        {
+          title: "Financial Health Metrics Every Business Owner Should Track",
+          slug: "financial-health-metrics",
+          category: "Financial Management",
+          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

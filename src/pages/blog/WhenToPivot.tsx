@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
@@ -203,14 +204,38 @@ const WhenToPivot = () => {
                 <p className="text-white/90 mb-6">
                   Get comprehensive business analytics and pivot recommendations with BizHealth.ai's data-driven assessment platform.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link 
+                  to="/how-it-works"
+                  className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
                   Analyze Your Business Metrics
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <RelatedArticles articles={[
+        {
+          title: "Strategic Planning Post-Pandemic",
+          slug: "strategic-planning-post-pandemic",
+          category: "Strategic Planning",
+          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+        },
+        {
+          title: "Warning Signs Your Business Needs Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
@@ -352,6 +353,27 @@ const RealTimeAnalyticsSMB = () => {
           </article>
         </div>
       </main>
+
+      <RelatedArticles articles={[
+        {
+          title: "AI-Powered Business Analytics",
+          slug: "ai-business-analytics",
+          category: "Technology",
+          excerpt: "Discover how AI and machine learning transform business analytics for smarter decision-making."
+        },
+        {
+          title: "Business Intelligence ROI: Maximizing Returns",
+          slug: "business-intelligence-roi",
+          category: "Business Analytics",
+          excerpt: "Discover how to measure and maximize the return on investment from your business intelligence tools."
+        },
+        {
+          title: "Operational Resilience Strategies",
+          slug: "operational-resilience",
+          category: "Business Strategy",
+          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+        }
+      ]} />
 
       <GlobalFooter />
     </div>

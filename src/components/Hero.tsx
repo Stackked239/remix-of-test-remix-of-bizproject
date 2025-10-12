@@ -46,7 +46,7 @@ const Hero = () => {
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
     { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
     { icon: TrendingUp, label: "Proven Results", value: "20-25x ROI Average" },
-    { icon: Users, label: "Trusted by SMBs", value: "10,000+ Businesses" }
+    { icon: Users, label: "Trusted by SMBs", value: "2,500+ Businesses" }
   ];
 
   return (
@@ -163,7 +163,7 @@ const Hero = () => {
               {/* Risk-Free Guarantee */}
               <div className="flex items-center space-x-2 text-sm font-open-sans text-biz-grey">
                 <Shield className="w-4 h-4 text-biz-green" />
-                <span>Trusted by 10,000+ SMBs • Reports generated 24/7 in &lt;45 minutes</span>
+                <span>Trusted by 2,500+ SMBs • Reports generated 24/7 in &lt;45 minutes</span>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ const Hero = () => {
               <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">10,000+</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
               <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
             </div>
             <div>

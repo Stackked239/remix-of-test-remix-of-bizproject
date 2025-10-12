@@ -120,10 +120,6 @@ const Benefits = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-trust" />
-              <span>Zero Data Retention</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-trust" />
               <span>100% Confidential</span>
             </div>
           </div>

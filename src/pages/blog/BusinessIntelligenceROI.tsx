@@ -308,9 +308,9 @@ const BusinessIntelligenceROI = () => {
 
               {/* Call to Action */}
               <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
-                <h3 className="text-2xl font-bold mb-4">Ready to Achieve Measurable BI ROI?</h3>
+                <h3 className="text-2xl font-bold mb-4">Ready to Achieve Measurable ROI?</h3>
                 <p className="text-white/90 mb-6">
-                  Discover how BizHealth.ai can deliver similar results for your SMB with our comprehensive business intelligence platform.
+                  Discover how BizHealth.ai can deliver similar results for your SMB with our comprehensive business health assessment platform.
                 </p>
                 <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Calculate Your Potential ROI

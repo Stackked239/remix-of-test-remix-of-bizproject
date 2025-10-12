@@ -34,10 +34,9 @@ const OperationalResilience = () => {
             "headline": "Building Operational Resilience Strategies for SMBs in Uncertain Times 2025",
             "image": "https://bizhealth.ai/assets/operational-resilience-strategy.jpg",
             "author": {
-              "@type": "Person",
-              "name": "Michael Rodriguez",
-              "jobTitle": "Business Strategy Consultant",
-              "description": "Expert in operational resilience and business continuity planning for small and medium-sized businesses"
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team",
+              "description": "Experts in operational resilience and business continuity planning for small and medium-sized businesses"
             },
             "publisher": {
               "@type": "Organization",
@@ -84,7 +83,7 @@ const OperationalResilience = () => {
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Michael Rodriguez</span>
+                <span>BizHealth.ai Research Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />

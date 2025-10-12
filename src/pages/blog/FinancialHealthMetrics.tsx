@@ -35,9 +35,9 @@ const FinancialHealthMetrics = () => {
             "description": "A comprehensive guide to 8 essential financial health metrics that help SMB owners monitor business performance, optimize cash flow, and drive sustainable growth.",
             "image": "https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg",
             "author": {
-              "@type": "Person",
-              "name": "Dr. Sarah Chen",
-              "description": "Business Analytics Expert specializing in SMB financial strategy and performance optimization"
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team",
+              "description": "Business Analytics Experts specializing in SMB financial strategy and performance optimization"
             },
             "publisher": {
               "@type": "Organization",
@@ -83,7 +83,7 @@ const FinancialHealthMetrics = () => {
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Dr. Sarah Chen</span>
+                <span>BizHealth.ai Research Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />

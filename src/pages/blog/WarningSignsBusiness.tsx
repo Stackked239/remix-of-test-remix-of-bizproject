@@ -34,7 +34,7 @@ const WarningSignsBusiness = () => {
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Michael Rodriguez</span>
+                <span>BizHealth.ai Research Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />

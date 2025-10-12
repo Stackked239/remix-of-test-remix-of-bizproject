@@ -27,7 +27,7 @@ const StrategicPlanning = () => {
         <meta property="og:description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
         <meta property="og:image" content={imageUrl} />
         <meta property="article:published_time" content={publishDate} />
-        <meta property="article:author" content="Dr. Sarah Chen" />
+        <meta property="article:author" content="BizHealth.ai Research Team" />
         <meta property="article:section" content="Strategic Planning" />
         <meta property="article:tag" content="Strategic Planning" />
         <meta property="article:tag" content="Post-Pandemic" />
@@ -55,9 +55,9 @@ const StrategicPlanning = () => {
             "datePublished": publishDate,
             "dateModified": publishDate,
             "author": {
-              "@type": "Person",
-              "name": "Dr. Sarah Chen",
-              "description": "Business Strategy Expert specializing in SMB growth and transformation"
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team",
+              "description": "Business Strategy Experts specializing in SMB growth and transformation"
             },
             "publisher": {
               "@type": "Organization",
@@ -105,7 +105,7 @@ const StrategicPlanning = () => {
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Dr. Sarah Chen</span>
+                <span>BizHealth.ai Research Team</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />

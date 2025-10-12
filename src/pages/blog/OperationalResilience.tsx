@@ -2,11 +2,61 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 
 const OperationalResilience = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Operational Resilience Strategies 2025 | BizHealth.ai</title>
+        <meta name="description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
+        <link rel="canonical" href="https://bizhealth.ai/blog/operational-resilience" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Operational Resilience Strategies 2025 | BizHealth.ai" />
+        <meta property="og:description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://bizhealth.ai/blog/operational-resilience" />
+        <meta property="og:image" content="https://bizhealth.ai/assets/operational-resilience-strategy.jpg" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Operational Resilience Strategies 2025 | BizHealth.ai" />
+        <meta name="twitter:description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
+        <meta name="twitter:image" content="https://bizhealth.ai/assets/operational-resilience-strategy.jpg" />
+        
+        {/* JSON-LD Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Building Operational Resilience Strategies for SMBs in Uncertain Times 2025",
+            "image": "https://bizhealth.ai/assets/operational-resilience-strategy.jpg",
+            "author": {
+              "@type": "Person",
+              "name": "Michael Rodriguez",
+              "jobTitle": "Business Strategy Consultant",
+              "description": "Expert in operational resilience and business continuity planning for small and medium-sized businesses"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://bizhealth.ai/logo.png"
+              }
+            },
+            "datePublished": "2025-10-12",
+            "dateModified": "2025-10-12",
+            "description": "Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://bizhealth.ai/blog/operational-resilience"
+            }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}
@@ -28,7 +78,7 @@ const OperationalResilience = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Building Operational Resilience in Uncertain Times
+              Building Operational Resilience Strategies for SMBs in Uncertain Times 2025
             </h1>
             
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
@@ -38,7 +88,7 @@ const OperationalResilience = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>September 12, 2025</span>
+                <span>October 12, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -48,9 +98,11 @@ const OperationalResilience = () => {
             
             <img 
               src={resilienceImage} 
-              alt="Operational resilience and business continuity strategy with interconnected systems and adaptive processes"
+              alt="SMB operational resilience framework showing business continuity planning, crisis management strategies, and adaptive business systems for 2025"
               className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              loading="lazy"
+              width={1200}
+              height={600}
+              loading="eager"
             />
           </div>
         </div>
@@ -62,16 +114,16 @@ const OperationalResilience = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Strategies for creating business systems that can withstand market volatility and unexpected challenges. In 2025, small and medium-sized businesses face a turbulent landscape—rising interest rates, supply chain disruptions, and AI-driven market shifts. Yet, operational resilience can be a game-changer.
+                Strategies for creating business systems that can withstand market volatility and unexpected challenges. In 2025, small and medium-sized businesses face a turbulent landscape—rising interest rates, supply chain disruptions, and AI-driven market shifts. Yet, <strong>operational resilience strategies</strong> can be a game-changer for <strong>business continuity planning</strong>.
               </p>
 
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                A 2025 McKinsey report notes that resilient SMBs are 50% more likely to survive economic downturns and 20% more likely to outperform competitors. At BizHealth.ai, we've guided countless SMBs to build robust systems that thrive under pressure. This read shares five proven strategies, backed by real-world examples, to fortify your operations using frameworks like the Resilience Wheel from the World Economic Forum and Deloitte's 2025 resilience benchmarks.
+                A 2025 <a href="https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">McKinsey report</a> notes that resilient SMBs are 50% more likely to survive economic downturns and 20% more likely to outperform competitors. At <Link to="/how-it-works" className="text-primary hover:underline">BizHealth.ai</Link>, we've guided countless SMBs to build robust <strong>adaptive business systems</strong> that thrive under pressure. This read shares five proven <strong>risk mitigation strategies</strong>, backed by real-world examples, to fortify your operations using frameworks like the Resilience Wheel from the World Economic Forum and Deloitte's 2025 resilience benchmarks.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Why Operational Resilience Matters for SMBs</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Resilience isn't just about survival—it's about turning adversity into opportunity. Resilient SMBs can:
+                <strong>Business operational stability</strong> isn't just about survival—it's about turning adversity into opportunity. Resilient SMBs can:
               </p>
               <ul className="mb-6 text-muted-foreground leading-relaxed space-y-2">
                 <li>• <strong>Maintain Continuity:</strong> Keep operations running during disruptions</li>
@@ -80,7 +132,7 @@ const OperationalResilience = () => {
                 <li>• <strong>Seize Opportunities:</strong> Pivot faster than competitors in crises</li>
               </ul>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                A 2025 PwC study found that SMBs with high resilience scores saw 25% less revenue volatility during supply chain shocks. The key? Proactive systems that anticipate, absorb, and adapt.
+                A 2025 PwC study found that SMBs with high resilience scores saw 25% less revenue volatility during <strong>supply chain resilience</strong> challenges. The key? Proactive systems that anticipate, absorb, and adapt through effective <strong>crisis management for businesses</strong>.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 1: Diversify Revenue Streams to Buffer Volatility</h2>
@@ -101,7 +153,7 @@ const OperationalResilience = () => {
               <ul className="mb-6 text-muted-foreground leading-relaxed space-y-2">
                 <li>• Audit revenue sources—aim for no single stream exceeding 50% of total</li>
                 <li>• Test one new offering (e.g., subscriptions, B2B services) with a 60-day MVP</li>
-                <li>• Use BizHealth.ai's forecasting tools to model revenue impacts</li>
+                <li>• Use <Link to="/pricing" className="text-primary hover:underline">BizHealth.ai's forecasting tools</Link> to model revenue impacts and strengthen <strong>financial resilience for SMBs</strong></li>
               </ul>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 2: Build Redundant Supply Chains</h2>
@@ -127,14 +179,14 @@ const OperationalResilience = () => {
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 3: Invest in Cross-Training and Flexible Teams</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                <strong>Why It Works:</strong> Skills silos create vulnerabilities. Cross-trained teams can adapt quickly when roles shift or staff are unavailable.
+                <strong>Why It Works:</strong> Skills silos create vulnerabilities. Cross-trained teams can adapt quickly when roles shift or staff are unavailable, strengthening your <strong>business contingency planning</strong>.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Action Steps:</h3>
               <ul className="mb-6 text-muted-foreground leading-relaxed space-y-2">
                 <li>• Identify critical skills and train 2-3 team members in each</li>
                 <li>• Create job rotation programs to build versatility</li>
-                <li>• Use project management tools to track skills development</li>
+                <li>• Use project management tools to track skills development and build <strong>SMB resilience</strong></li>
               </ul>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 4: Build Financial Buffers</h2>
@@ -163,11 +215,11 @@ const OperationalResilience = () => {
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Building Your Resilience Roadmap</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Operational resilience isn't built overnight—it's a continuous process of strengthening your business's immune system. Start with one strategy that addresses your biggest vulnerability, then gradually expand your resilience framework.
+                <strong>Operational resilience strategies</strong> aren't built overnight—it's a continuous process of strengthening your business's immune system. Start with one strategy that addresses your biggest vulnerability, then gradually expand your resilience framework. Learn more about <Link to="/blog/strategic-planning-post-pandemic" className="text-primary hover:underline">strategic planning approaches</Link> and <Link to="/blog/financial-health-metrics" className="text-primary hover:underline">financial health tracking</Link> to complement your resilience efforts.
               </p>
 
               <p className="mb-8 text-muted-foreground leading-relaxed">
-                The businesses that thrive in uncertain times aren't the ones that avoid disruption—they're the ones that bounce back stronger. Which resilience strategy will you implement first?
+                The businesses that thrive in uncertain times aren't the ones that avoid disruption—they're the ones that bounce back stronger through <strong>adaptive business systems</strong> and proactive <strong>risk mitigation strategies</strong>. Which resilience strategy will you implement first?
               </p>
 
               {/* Call to Action */}
@@ -176,9 +228,12 @@ const OperationalResilience = () => {
                 <p className="text-white/90 mb-6">
                   Assess your current resilience and identify vulnerabilities with BizHealth.ai's comprehensive analysis.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link 
+                  to="/how-it-works" 
+                  className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
                   Start Your Resilience Assessment
-                </button>
+                </Link>
               </div>
             </div>
           </div>

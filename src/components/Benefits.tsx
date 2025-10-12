@@ -104,8 +104,7 @@ const Benefits = () => {
               Your Business Data is Protected
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We use enterprise-grade security to protect your sensitive business information. 
-              Your data is encrypted, never shared, and automatically deleted after 90 days.
+              We use enterprise-grade encryption and robust security protocols to safeguard your sensitive business information. Your data is protected in compliance with all applicable data protection regulations, providing you peace of mind to focus on your company's growth.
             </p>
           </div>
           

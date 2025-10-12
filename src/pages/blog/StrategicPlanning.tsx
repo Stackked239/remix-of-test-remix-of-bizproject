@@ -2,11 +2,82 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 
 const StrategicPlanning = () => {
+  const publishDate = "2025-10-12";
+  const canonicalUrl = "https://bizhealth.ai/blog/strategic-planning-post-pandemic";
+  const imageUrl = `https://bizhealth.ai${strategicPlanningImage}`;
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>Strategic Planning Post-Pandemic 2025 | BizHealth.ai</title>
+        <meta name="title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
+        <meta name="description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
+        <meta name="keywords" content="strategic planning post-pandemic, post-pandemic business strategy, SMB strategic planning, remote work strategy, supply chain resilience, business transformation 2025, hybrid work model, customer-centric strategy, financial flexibility SMB, digital transformation strategy" />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
+        <meta property="og:description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="article:published_time" content={publishDate} />
+        <meta property="article:author" content="Dr. Sarah Chen" />
+        <meta property="article:section" content="Strategic Planning" />
+        <meta property="article:tag" content="Strategic Planning" />
+        <meta property="article:tag" content="Post-Pandemic" />
+        <meta property="article:tag" content="Business Strategy" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
+        <meta name="twitter:description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
+        <meta name="twitter:image" content={imageUrl} />
+        
+        {/* hreflang for language targeting */}
+        <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        
+        {/* JSON-LD Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Strategic Planning for the Post-Pandemic Business Landscape",
+            "description": "Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth opportunities.",
+            "image": imageUrl,
+            "datePublished": publishDate,
+            "dateModified": publishDate,
+            "author": {
+              "@type": "Person",
+              "name": "Dr. Sarah Chen",
+              "description": "Business Strategy Expert specializing in SMB growth and transformation"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://bizhealth.ai/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": canonicalUrl
+            },
+            "keywords": "strategic planning post-pandemic, post-pandemic business strategy, SMB strategic planning, remote work strategy, supply chain resilience, business transformation 2025",
+            "articleSection": "Strategic Planning",
+            "wordCount": 2200,
+            "inLanguage": "en-US"
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}
@@ -28,7 +99,7 @@ const StrategicPlanning = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Strategic Planning for the Post-Pandemic Business Landscape
+              Strategic Planning Post-Pandemic: Transform Your SMB for Long-Term Growth in 2025
             </h1>
             
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
@@ -48,9 +119,11 @@ const StrategicPlanning = () => {
             
             <img 
               src={strategicPlanningImage} 
-              alt="Strategic planning for post-pandemic business landscape with remote work and digital transformation elements"
+              alt="Strategic planning post-pandemic infographic showing SMB business strategy framework with remote work hybrid model supply chain resilience and customer-centric transformation for 2025"
               className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
               loading="lazy"
+              width="1200"
+              height="630"
             />
           </div>
         </div>
@@ -62,11 +135,11 @@ const StrategicPlanning = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                How to adapt your business strategy for the new realities of remote work, supply chain disruptions, and changing consumer behavior. Five years post-pandemic, the echoes of 2020 still reshape the business world. Small and medium-sized businesses navigating this landscape report 25% higher growth rates when they pivot strategically.
+                How to adapt your <strong>post-pandemic business strategy</strong> for the new realities of remote work, supply chain disruptions, and changing consumer behavior. Five years post-pandemic, the echoes of 2020 still reshape the business world. Small and medium-sized businesses navigating this landscape report 25% higher growth rates when they implement <strong>strategic planning post-pandemic</strong> frameworks effectively.
               </p>
 
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                At BizHealth.ai, as business growth experts guiding countless SMBs through data-driven transformations, we've seen firsthand how integrated strategic planning turns challenges into competitive edges. This read unpacks actionable strategies for each pillar, backed by frameworks like the Post-Pandemic Strategy Canvas from Harvard Business Review. Whether you're optimizing for hybrid teams, fortifying logistics, or realigning with value-driven consumers, you'll gain a roadmap to resilient growth.
+                At <Link to="/" className="text-primary hover:underline">BizHealth.ai</Link>, as business growth experts guiding countless SMBs through data-driven transformations, we've seen firsthand how integrated <strong>SMB strategic planning</strong> turns challenges into competitive edges. This comprehensive guide unpacks actionable strategies for each pillar, backed by frameworks like the Post-Pandemic Strategy Canvas from <a href="https://hbr.org/topic/subject/strategy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review</a>. Whether you're optimizing for hybrid teams, fortifying logistics, or realigning with value-driven consumers, you'll gain a roadmap to resilient growth through <strong>business transformation 2025</strong>.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Evolving Post-Pandemic Business Landscape: Key Challenges</h2>
@@ -78,9 +151,9 @@ const StrategicPlanning = () => {
                 Strategic planning for SMBs must weave these threads into a cohesive fabric. Ignore one, and the others unravel. Our approach at BizHealth.ai emphasizes data-backed pivots: use BI tools to forecast impacts and test MVPs.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 1: Mastering Remote and Hybrid Work Models</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 1: Mastering Remote Work Strategy and Hybrid Models</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Remote work isn't fading—it's foundational. Yet, 40% of SMBs report productivity dips from poor collaboration (2025 SHRM report). Effective strategic planning here focuses on tech enablement, culture building, and performance metrics.
+                <strong>Remote work strategy</strong> isn't fading—it's foundational for post-pandemic business success. Yet, 40% of SMBs report productivity dips from poor collaboration (2025 SHRM report). Effective <strong>hybrid work model</strong> strategic planning focuses on tech enablement, culture building, and performance metrics that drive results. Learn more about <Link to="/how-it-works" className="text-primary hover:underline">optimizing your business operations</Link>.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Core Tactics for SMB Strategic Planning:</h3>
@@ -109,9 +182,9 @@ const StrategicPlanning = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 2: Supply Chain Resilience and Diversification</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 2: Building Supply Chain Resilience Through Strategic Diversification</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Supply chains are no longer about efficiency alone—they're about resilience. The "just-in-time" model crumbled under pandemic stress, leaving SMBs scrambling. Strategic planning now prioritizes diversification and local sourcing.
+                <strong>Supply chain resilience</strong> is no longer about efficiency alone—it's about survival and competitive advantage. The "just-in-time" model crumbled under pandemic stress, leaving SMBs scrambling. Post-pandemic strategic planning now prioritizes diversification, nearshoring, and buffer inventory strategies. Discover <Link to="/blog/operational-resilience" className="text-primary hover:underline">operational resilience tactics</Link> for your business.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Resilience-Building Tactics:</h3>
@@ -122,9 +195,9 @@ const StrategicPlanning = () => {
                 <li>• <strong>Supplier Health Monitoring:</strong> Use financial health checks and performance scorecards to assess supplier stability</li>
               </ul>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 3: Customer-Centric Value Alignment</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 3: Customer-Centric Strategy and Value Alignment</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Post-pandemic consumers are more values-driven, sustainability-focused, and digitally savvy. They expect businesses to align with their personal values while delivering seamless digital experiences.
+                Post-pandemic consumers are more values-driven, sustainability-focused, and digitally savvy. A <strong>customer-centric strategy</strong> means businesses must align with personal values while delivering seamless digital experiences. This approach to strategic planning post-pandemic prioritizes authenticity, personalization, and environmental responsibility.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Customer Alignment Strategies:</h3>
@@ -135,9 +208,9 @@ const StrategicPlanning = () => {
                 <li>• <strong>Transparency and Authenticity:</strong> Communicate honestly about your business practices and values</li>
               </ul>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 4: Financial Flexibility and Cash Flow Management</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 4: Financial Flexibility SMB and Cash Flow Optimization</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                The pandemic taught us that cash is king. SMBs with strong cash positions weathered the storm better than their leveraged counterparts. Strategic financial planning now emphasizes flexibility and scenario planning.
+                The pandemic taught us that cash is king for small businesses. SMBs with strong cash positions weathered the storm better than their leveraged counterparts. <strong>Financial flexibility SMB</strong> strategic planning now emphasizes higher reserves, diversified revenue streams, and scenario modeling. Explore <Link to="/blog/financial-health-metrics" className="text-primary hover:underline">key financial health metrics</Link> for sustainable growth.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Financial Resilience Tactics:</h3>
@@ -148,9 +221,9 @@ const StrategicPlanning = () => {
                 <li>• <strong>Scenario Planning:</strong> Regularly model different economic scenarios and their impact on cash flow</li>
               </ul>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 5: Technology-Enabled Agility</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Strategy 5: Digital Transformation Strategy and Technology-Enabled Agility</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Technology adoption accelerated during the pandemic, and this trend continues. SMBs that embrace digital transformation gain competitive advantages in efficiency, customer experience, and market responsiveness.
+                Technology adoption accelerated during the pandemic, and this <strong>digital transformation strategy</strong> trend continues in 2025. SMBs that embrace systematic technology adoption gain competitive advantages in efficiency, customer experience, and market responsiveness. This pillar of post-pandemic business strategy focuses on cloud infrastructure, automation, data analytics, and cybersecurity. Check out <Link to="/blog/ai-business-analytics" className="text-primary hover:underline">AI-powered business analytics</Link> solutions.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">Technology Integration Priorities:</h3>
@@ -214,18 +287,20 @@ const StrategicPlanning = () => {
               </ul>
 
               <p className="mb-8 text-muted-foreground leading-relaxed">
-                The post-pandemic business landscape isn't just about surviving—it's about thriving in a new reality. By addressing these five strategic pillars with data-driven approaches and flexible execution, your SMB can turn challenges into competitive advantages. The future belongs to businesses that adapt, evolve, and execute with precision.
+                The <strong>post-pandemic business strategy</strong> landscape isn't just about surviving—it's about thriving through intentional transformation. By implementing these five strategic pillars of <strong>strategic planning post-pandemic</strong> with data-driven approaches and flexible execution, your SMB can turn ongoing challenges into lasting competitive advantages. The future belongs to businesses that continuously adapt, evolve, and execute with precision using proven <strong>SMB strategic planning</strong> frameworks. Ready to assess your business health? <Link to="/pricing" className="text-primary hover:underline font-semibold">Explore our assessment solutions</Link>.
               </p>
 
               {/* Call to Action */}
               <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
-                <h3 className="text-2xl font-bold mb-4">Ready to Build Your Post-Pandemic Strategy?</h3>
+                <h3 className="text-2xl font-bold mb-4">Ready to Build Your Post-Pandemic Strategic Plan?</h3>
                 <p className="text-white/90 mb-6">
-                  Get strategic insights and data-driven recommendations with BizHealth.ai's comprehensive business assessment.
+                  Get strategic insights and data-driven recommendations with BizHealth.ai's comprehensive business health assessment. Transform your SMB strategy today.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Your Strategic Assessment
-                </button>
+                <Link to="/pricing">
+                  <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Start Your Strategic Assessment Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -267,6 +267,23 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Data Protection Section */}
+        <div className="pb-12">
+          <div className="bg-biz-navy/5 rounded-2xl p-8 border border-biz-navy/10 backdrop-blur-sm">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <div className="flex justify-center mb-4">
+                <Shield className="w-12 h-12 text-biz-green" />
+              </div>
+              <h3 className="font-montserrat font-bold text-2xl text-biz-navy">
+                Your Business Data is Protected
+              </h3>
+              <p className="font-open-sans text-lg text-biz-grey leading-relaxed">
+                We use enterprise-grade encryption and robust security protocols to safeguard your sensitive business information. Your data is protected in compliance with all applicable data protection regulations, providing you peace of mind to focus on your company's growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Social Proof Stats */}
         <div className="pb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">

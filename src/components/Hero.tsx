@@ -279,6 +279,28 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Social Proof Stats */}
+        <div className="pb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">20x</p>
+              <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
+              <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">99%</p>
+              <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
+            </div>
+            <div>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">&lt;90min</p>
+              <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
+            </div>
+          </div>
+        </div>
+
         {/* Data Protection Section */}
         <div className="py-12">
           <div className="bg-biz-white/90 rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/10 shadow-lg max-w-4xl mx-auto">
@@ -308,28 +330,6 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Proof Stats */}
-        <div className="pb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">20x</p>
-              <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
-            </div>
-            <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
-              <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
-            </div>
-            <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">99%</p>
-              <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
-            </div>
-            <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">&lt;90min</p>
-              <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
             </div>
           </div>
         </div>

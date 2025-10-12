@@ -271,7 +271,7 @@ const Hero = () => {
         <div className="pb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">20-25x</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">20x</p>
               <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
             </div>
             <div>
@@ -279,11 +279,11 @@ const Hero = () => {
               <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">89%</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">99%</p>
               <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">60min</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">&lt;90min</p>
               <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
             </div>
           </div>

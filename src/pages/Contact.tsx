@@ -73,21 +73,21 @@ const Contact = () => {
       title: "Email Support",
       description: "Get detailed responses to your questions",
       contact: "support@bizhealth.ai",
-      note: "Response within 24 hours"
+      note: "Response within hours, not days"
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Speak directly with our team",
       contact: "1-855-476-8322",
-      note: "Mon-Fri, 9 AM - 6 PM EST"
+      note: "Mon-Fri, 9:30 AM - 5:30 PM EDT"
     },
     {
       icon: MessageSquare,
       title: "Live Chat",
       description: "Instant help when you need it",
       contact: "Available on our website",
-      note: "Mon-Fri, 9 AM - 9 PM EST"
+      note: "during normal business hours"
     }
   ];
 

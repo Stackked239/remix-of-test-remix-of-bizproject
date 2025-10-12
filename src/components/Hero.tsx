@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Brain, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Shield, Brain, TrendingUp, Users, Check } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { useState, useEffect } from "react";
 import bannerLogo from "@/assets/bizhealth-logo-banner.jpg";
@@ -263,6 +263,39 @@ const Hero = () => {
                 🚀 Get Started with {recommendedTier}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Data Protection Section */}
+        <div className="py-12">
+          <div className="bg-biz-white/90 rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/10 shadow-lg max-w-4xl mx-auto">
+            <div className="flex items-start space-x-4">
+              <div className="bg-biz-navy/5 rounded-lg p-3 flex-shrink-0">
+                <Shield className="w-8 h-8 text-biz-green" />
+              </div>
+              <div className="space-y-4 flex-1">
+                <h3 className="font-montserrat font-bold text-2xl text-biz-navy">
+                  Your Business Data is Protected
+                </h3>
+                <p className="font-open-sans text-base text-biz-grey leading-relaxed">
+                  We use enterprise-grade encryption and robust security protocols to safeguard your sensitive business information. Your data is protected in compliance with all applicable data protection regulations, providing you peace of mind to focus on your company's growth.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 pt-2">
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                    <span className="font-open-sans text-sm text-biz-navy font-medium">256-bit SSL Encryption</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                    <span className="font-open-sans text-sm text-biz-navy font-medium">GDPR & SOC 2 Compliant</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-5 h-5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
+                    <span className="font-open-sans text-sm text-biz-navy font-medium">100% Confidential</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

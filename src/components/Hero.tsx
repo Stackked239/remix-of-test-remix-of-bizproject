@@ -153,6 +153,12 @@ const Hero = () => {
                   <span className="font-semibold">Personal client portal</span> for easy sharing with your team
                 </p>
               </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-lg text-biz-navy">
+                  <span className="font-semibold">95% savings</span> compared to traditional business consulting
+                </p>
+              </div>
             </div>
 
             {/* CTAs */}

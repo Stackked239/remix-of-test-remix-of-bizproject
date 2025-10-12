@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "luc
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,24 +20,52 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const subject = encodeURIComponent(`${formData.subject} - ${formData.company || 'No Company'}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}\n` +
-      `Email: ${formData.email}\n` +
-      `Company: ${formData.company || 'N/A'}\n` +
-      `Subject: ${formData.subject}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:support@bizhealth.ai?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "Opening Email Client",
-      description: "Your default email client will open with the message pre-filled.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            type: "contact_form",
+            ...formData,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        subject: "General Inquiry",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const contactMethods = [
     {
@@ -199,9 +228,10 @@ const Contact = () => {
                   
                   <button 
                     type="submit"
-                    className="w-full py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4" />
                   </button>
                 </form>

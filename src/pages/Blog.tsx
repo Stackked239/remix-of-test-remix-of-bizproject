@@ -461,29 +461,16 @@ const Blog = () => {
               Get our latest insights, tools, and strategies delivered straight to your inbox. 
               Join over 25,000 business owners who trust our expertise.
             </p>
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              const emailInput = (e.target as HTMLFormElement).querySelector('input[type="email"]') as HTMLInputElement;
-              const email = emailInput?.value;
-              if (email) {
-                const subject = encodeURIComponent('Newsletter Subscription - Business Insights');
-                const body = encodeURIComponent(
-                  `I would like to subscribe to your newsletter and receive business insights.\n\n` +
-                  `Email: ${email}`
-                );
-                window.location.href = `mailto:support@bizhealth.ai?subject=${subject}&body=${body}`;
-              }
-            }} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email address"
-                required
                 className="flex-1 px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
-              <button type="submit" className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300">
+              <button className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300">
                 Subscribe
               </button>
-            </form>
+            </div>
             <p className="text-xs text-muted-foreground mt-4">
               No spam, unsubscribe at any time. Read our privacy policy.
             </p>

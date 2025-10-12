@@ -144,7 +144,7 @@ const Hero = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
                 <p className="font-open-sans text-lg text-biz-navy">
-                  <span className="font-semibold">No Consultant Risks</span> – instant, confidential analysis
+                  <span className="font-semibold">Quick results</span> - no waiting for consultants
                 </p>
               </div>
             </div>

@@ -14,7 +14,15 @@ const GlobalFooter = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      toast.success('Thank you for subscribing to our newsletter!');
+      const subject = encodeURIComponent('Newsletter Subscription Request');
+      const body = encodeURIComponent(
+        `I would like to subscribe to the BizHealth.ai newsletter.\n\n` +
+        `Email: ${email}`
+      );
+      
+      window.location.href = `mailto:support@bizhealth.ai?subject=${subject}&body=${body}`;
+      
+      toast.success('Opening email client to complete subscription');
       setEmail('');
     }
   };

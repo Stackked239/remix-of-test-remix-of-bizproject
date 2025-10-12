@@ -288,7 +288,7 @@ const Hero = () => {
             </div>
             <div>
               <p className="text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
-              <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
+              <p className="font-open-sans text-sm text-biz-grey">Reports Generated</p>
             </div>
             <div>
               <p className="text-3xl font-montserrat font-bold text-biz-green">99%</p>

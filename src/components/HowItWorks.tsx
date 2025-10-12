@@ -71,8 +71,8 @@ const HowItWorks = () => {
         {/* Timeline visual */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 bg-background px-8 py-4 rounded-full shadow-card border border-border/50">
-            <span className="text-sm font-medium text-muted-foreground">Average Response Time:</span>
-            <span className="text-lg font-bold text-primary">~37 minutes</span>
+            <span className="text-sm font-medium text-muted-foreground">Current Avg. Response Time:</span>
+            <span className="text-lg font-bold text-primary">42 minutes</span>
             <span className="text-sm text-muted-foreground">from Completed Questionnaire to Report</span>
           </div>
         </div>

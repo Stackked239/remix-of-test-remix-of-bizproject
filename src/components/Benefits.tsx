@@ -110,15 +110,15 @@ const Benefits = () => {
           
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-trust" />
+              <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />
               <span>256-bit SSL Encryption</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-trust" />
+              <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />
               <span>GDPR & SOC 2 Compliant</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-trust" />
+              <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />
               <span>100% Confidential</span>
             </div>
           </div>

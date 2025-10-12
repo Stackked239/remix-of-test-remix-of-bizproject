@@ -107,7 +107,7 @@ const Hero = () => {
                 <span className="text-biz-green block">Start Growing</span>
               </h1>
               <p className="font-open-sans text-xl lg:text-2xl text-biz-grey leading-relaxed">
-                Your Trusted Business Health Advisor – AI-Powered Diagnostics for SMBs
+                Your Trusted Business Health Advisor – Proprietary AI-Powered Diagnostics for SMBs
               </p>
             </div>
 

@@ -313,7 +313,7 @@ const BusinessIntelligenceROI = () => {
                   Discover how BizHealth.ai can deliver similar results for your SMB with our comprehensive business health assessment platform.
                 </p>
                 <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Calculate Your Potential ROI
+                  Access Your Potential ROI
                 </button>
               </div>
             </div>

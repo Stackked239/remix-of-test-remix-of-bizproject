@@ -25,7 +25,7 @@ const Benefits = () => {
     {
       icon: Users,
       title: "Optimize Team Performance and Reduce Turnover",
-      description: "Identify gaps in your HR practices, team structure, and leadership effectiveness. Get actionable steps to boost productivity and create a thriving workplace culture."
+      description: "Identify gaps in your team structure, leadership effectiveness and HR practices. Get actionable steps to boost productivity and create a thriving workplace culture."
     },
     {
       icon: TrendingUp,

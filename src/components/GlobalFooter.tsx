@@ -149,7 +149,7 @@ const GlobalFooter = () => {
                 {/* Social Media Icons */}
                 <div className="flex space-x-4 mb-6">
                   <a 
-                    href="https://linkedin.com/company/bizhealth-ai" 
+                    href="https://www.linkedin.com/company/bizhealth-ai/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-biz-grey hover:text-biz-teal transition-all duration-300 hover:scale-110"

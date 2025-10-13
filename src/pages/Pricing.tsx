@@ -568,15 +568,15 @@ const Pricing = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">4-8 weeks for initial assessment</span>
+                    <span className="text-muted-foreground">4-6 weeks for initial assessment</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Generic recommendations</span>
+                    <span className="text-muted-foreground">General recommendations</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Limited follow-up support</span>
+                    <span className="text-muted-foreground">Costly follow-up support</span>
                   </li>
                 </ul>
               </div>
@@ -605,11 +605,11 @@ const Pricing = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
-                      <span className="text-foreground font-medium">Instant results in 15-30 minutes</span>
+                      <span className="text-foreground font-medium">Results in minutes, not days</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />
-                      <span className="text-foreground font-medium">AI-powered personalized insights</span>
+                      <span className="text-foreground font-medium">Actionable insights specific to your business</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#8CBF2F' }} />

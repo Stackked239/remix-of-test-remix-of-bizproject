@@ -196,7 +196,7 @@ const GlobalFooter = () => {
                   </div>
                   <p 
                     id="newsletter-description"
-                    className="text-xs md:text-sm text-biz-grey font-open-sans leading-relaxed"
+                    className="text-xs md:text-sm text-biz-grey font-open-sans leading-relaxed text-center"
                   >
                     Receive business health insights and product updates via email; unsubscribe anytime.
                   </p>

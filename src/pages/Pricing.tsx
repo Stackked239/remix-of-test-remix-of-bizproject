@@ -660,7 +660,7 @@ const Pricing = () => {
               Start Your Business Transformation Today
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join over 10,000 business owners who've improved their operations with our AI-powered insights
+              Join over 2,500 business owners who've improved their operations with our proprietary AI-powered insights
             </p>
             <a 
               href="/" 

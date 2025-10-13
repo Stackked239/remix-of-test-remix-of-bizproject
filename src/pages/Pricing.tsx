@@ -137,9 +137,9 @@ const Pricing = () => {
     },
     {
       name: "Personalized Success Manager",
-      tooltip: "Dedicated support professional for strategic guidance",
+      tooltip: "Your personal ally for troubleshooting, inquiries, and account management",
       features: [
-        { name: "Personalized Success Manager", tooltip: "Dedicated success manager for ongoing strategic support" }
+        { name: "Personalized Success Manager", tooltip: "Your personal ally for troubleshooting, inquiries, and account management" }
       ],
       essentials: false,
       growth: false,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
@@ -31,6 +31,11 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [passwordStrength, setPasswordStrength] = useState(0);
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Redirect if already logged in
   if (user) {

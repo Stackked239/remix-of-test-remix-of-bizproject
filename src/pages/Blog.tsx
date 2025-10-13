@@ -17,6 +17,7 @@ import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
+import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -34,6 +35,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "2025 SMB Financial Trends: From Uncertainty to Predictable Growth",
+      excerpt: "Discover how SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics, small business cash flow strategies, and financial automation insights for 2025.",
+      author: "BizHealth Research Team",
+      date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+      readTime: "7 min read",
+      category: "Financial Management",
+      slug: "/blog/2025-smb-financial-trends",
+      imageUrl: smbFinancialTrendsImage,
+      altText: "Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"
+    },
     {
       title: "People-First Challenges: Solving SMB Workforce Gaps 2025",
       excerpt: "Discover actionable SMB growth strategies to solve workforce challenges in 2025. Learn how AI business analytics, talent planning tools, and data-driven insights can bridge talent gaps and boost retention.",

@@ -34,6 +34,11 @@ const PrivacyPolicy = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState("");
 
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Handle scroll progress and active section
   useEffect(() => {
     const handleScroll = () => {

@@ -224,7 +224,7 @@ const GlobalFooter = () => {
                       Business Hours
                     </h4>
                     <div className="text-biz-grey space-y-1">
-                      <div>Monday - Friday: 9:00 AM - 6:00 PM EST</div>
+                      <div>Monday - Friday: 9:30 AM - 5:30 PM EDT</div>
                       <div>Weekend: Email support only</div>
                       <div className="text-xs mt-2 italic">*Reports are generated instantly 24/7</div>
                     </div>

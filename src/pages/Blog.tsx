@@ -18,6 +18,7 @@ import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-vol
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
+import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,6 +36,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
+      excerpt: "Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!",
+      author: "The BizHealth.ai Research Team",
+      date: "October 13, 2025",
+      readTime: "7 min read",
+      category: "Business Strategy",
+      slug: "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025",
+      imageUrl: ecommerceScalingImage,
+      altText: "E-commerce analytics dashboard showing sales growth metrics and customer engagement data for SMB scaling strategies in 2025"
+    },
     {
       title: "2025 SMB Financial Trends: From Uncertainty to Predictable Growth",
       excerpt: "Discover how SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics, small business cash flow strategies, and financial automation insights for 2025.",

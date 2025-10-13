@@ -138,12 +138,10 @@ const Pricing = () => {
     {
       name: "Personalized Success Manager",
       tooltip: "Your personal ally for troubleshooting, inquiries, and account management",
+      sublist: true,
       features: [
-        { name: "Dedicated Client Success Partner (CSP)", tooltip: "Your personal ally for troubleshooting, inquiries, and account management" }
-      ],
-      essentials: false,
-      growth: false,
-      enterprise: true
+        { name: "Dedicated Client Success Partner (CSP)", tooltip: "Your personal ally for troubleshooting, inquiries, and account management", essentials: false, growth: false, enterprise: true }
+      ]
     }
   ];
 

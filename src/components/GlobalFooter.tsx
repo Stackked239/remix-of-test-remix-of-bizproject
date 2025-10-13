@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Linkedin, Twitter, Mail, HelpCircle, Facebook } from 'lucide-react';
+import { Linkedin, X, Mail, HelpCircle, Facebook } from 'lucide-react';
 import { toast } from 'sonner';
 import bizhealthLogo from '@/assets/bizhealth-logo-footer.png';
 
@@ -167,13 +167,13 @@ const GlobalFooter = () => {
                     <Facebook className="w-6 h-6" />
                   </a>
                   <a 
-                    href="https://twitter.com/bizhealthai" 
+                    href="https://x.com/AscentSherpa" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-biz-grey hover:text-biz-teal transition-all duration-300 hover:scale-110"
-                    aria-label="Twitter Social Icon - Follow BizHealth.ai updates"
+                    aria-label="X Social Icon - Follow AscentSherpa on X"
                   >
-                    <Twitter className="w-6 h-6" />
+                    <X className="w-6 h-6" />
                   </a>
                 </div>
 

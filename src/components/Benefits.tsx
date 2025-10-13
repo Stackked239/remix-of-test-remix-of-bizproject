@@ -5,7 +5,7 @@ const Benefits = () => {
     {
       icon: Shield,
       title: "Identify Critical Areas of Concern Before They Become Problems",
-      description: "Our AI analyzes over 200 business health indicators across 8 key areas to spot risks and opportunities you might miss. Get early warning systems for cash flow, operations, and growth bottlenecks."
+      description: "Our proprietary platform analyzes over 200 business health indicators across 12 key areas to spot risks and opportunities you might miss. Get early warning systems for cash flow, operations, and growth bottlenecks."
     },
     {
       icon: BarChart3,

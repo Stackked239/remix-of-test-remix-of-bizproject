@@ -586,7 +586,6 @@ const Pricing = () => {
                 <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   VS
                 </div>
-                <div className="mt-2 text-sm text-muted-foreground font-semibold">versus</div>
               </div>
 
               {/* BizHealth.ai Side */}

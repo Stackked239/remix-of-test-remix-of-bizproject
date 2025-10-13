@@ -132,18 +132,9 @@ const Pricing = () => {
           enterprise: true,
           locked: true
         },
-        { name: "Employees' Report", tooltip: "Team-level insights and engagement metrics", essentials: false, growth: false, enterprise: true, locked: true }
+        { name: "Employees' Report", tooltip: "Team-level insights and engagement metrics", essentials: false, growth: false, enterprise: true, locked: true },
+        { name: "Dedicated Client Success Partner (CSP)", tooltip: "Your personal ally for troubleshooting, inquiries, and account management", essentials: false, growth: false, enterprise: true }
       ]
-    },
-    {
-      name: "Personalized Success Manager",
-      tooltip: "Your personal ally for troubleshooting, inquiries, and account management",
-      features: [
-        { name: "Dedicated Client Success Partner (CSP)", tooltip: "Your personal ally for troubleshooting, inquiries, and account management" }
-      ],
-      essentials: false,
-      growth: false,
-      enterprise: true
     }
   ];
 

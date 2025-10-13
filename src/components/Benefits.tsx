@@ -71,28 +71,28 @@ const Benefits = () => {
         </div>
 
         {/* Success metrics */}
-        <div className="bg-biz-green rounded-2xl p-8 border border-biz-green mb-16">
+        <div className="bg-card rounded-2xl p-8 border border-border mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4 text-biz-white">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
               Measurable Results Our Clients Achieve
             </h3>
-            <p className="text-biz-white/90 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Real outcomes from businesses that transformed their operations using BizHealth.ai insights
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-biz-white mb-2">87%</div>
-              <div className="text-sm text-biz-white/80">Improved Cash Flow Management</div>
+              <div className="text-3xl font-bold text-primary mb-2">87%</div>
+              <div className="text-sm text-muted-foreground">Improved Cash Flow Management</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-biz-white mb-2">34%</div>
-              <div className="text-sm text-biz-white/80">Average Revenue Increase</div>
+              <div className="text-3xl font-bold text-growth mb-2">34%</div>
+              <div className="text-sm text-muted-foreground">Average Revenue Increase</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-biz-white mb-2">92%</div>
-              <div className="text-sm text-biz-white/80">Successfully Implemented Recommendations</div>
+              <div className="text-3xl font-bold text-trust mb-2">92%</div>
+              <div className="text-sm text-muted-foreground">Successfully Implemented Recommendations</div>
             </div>
           </div>
         </div>

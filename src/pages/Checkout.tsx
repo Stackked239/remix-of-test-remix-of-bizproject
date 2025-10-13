@@ -310,11 +310,11 @@ const Checkout = () => {
                         />
                         <Label htmlFor="terms" className="text-sm font-open-sans text-biz-grey cursor-pointer">
                           I agree to the{' '}
-                          <a href="/terms" className="text-biz-navy hover:text-biz-green transition-colors" target="_blank">
+                          <a href="/terms" className="text-biz-navy hover:text-biz-green transition-colors" target="_blank" rel="noopener noreferrer">
                             Terms of Service
                           </a>{' '}
                           and{' '}
-                          <a href="/privacy" className="text-biz-navy hover:text-biz-green transition-colors" target="_blank">
+                          <a href="/privacy" className="text-biz-navy hover:text-biz-green transition-colors" target="_blank" rel="noopener noreferrer">
                             Privacy Policy
                           </a>
                         </Label>

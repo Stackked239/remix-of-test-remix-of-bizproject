@@ -138,7 +138,7 @@ const Hero = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
                 <p className="font-open-sans text-lg text-biz-navy">
-                  <span className="font-semibold">20-25x ROI</span> from actionable AI-generated insights
+                  <span className="font-semibold">20x ROI</span> from actionable AI-generated insights
                 </p>
               </div>
               <div className="flex items-start space-x-3">

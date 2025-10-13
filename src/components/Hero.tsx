@@ -295,7 +295,7 @@ const Hero = () => {
               <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">&lt;90min</p>
+              <p className="text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
               <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
             </div>
           </div>

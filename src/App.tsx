@@ -45,6 +45,7 @@ import SMBFinancialTrends2025 from "./pages/blog/SMBFinancialTrends2025";
 import ECommerceScalingSMB2025 from "./pages/blog/ECommerceScalingSMB2025";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import Disclaimer from "./pages/Disclaimer";
 import FAQs from "./pages/FAQs";
 
 import Search from "./pages/Search";
@@ -99,6 +100,7 @@ const App = () => (
             <Route path="/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025" element={<ECommerceScalingSMB2025 />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/search" element={<Search />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

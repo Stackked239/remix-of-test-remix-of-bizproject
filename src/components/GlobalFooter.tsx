@@ -126,6 +126,14 @@ const GlobalFooter = () => {
                         Terms of Service
                       </Link>
                     </li>
+                    <li>
+                      <Link 
+                        to="/disclaimer" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                      >
+                        Disclaimer & Warranty
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </CardContent>

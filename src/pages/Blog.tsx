@@ -41,7 +41,7 @@ const Blog = () => {
       author: "BizHealth Research Team",
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
       readTime: "7 min read",
-      category: "Financial Management",
+      category: "Business Strategy, Financial Management",
       slug: "/blog/2025-smb-financial-trends",
       imageUrl: smbFinancialTrendsImage,
       altText: "Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"

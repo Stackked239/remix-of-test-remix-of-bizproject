@@ -134,6 +134,16 @@ const Pricing = () => {
         },
         { name: "Employees' Report", tooltip: "Team-level insights and engagement metrics", essentials: false, growth: false, enterprise: true, locked: true }
       ]
+    },
+    {
+      name: "Personalized Success Manager",
+      tooltip: "Dedicated support professional for strategic guidance",
+      features: [
+        { name: "Personalized Success Manager", tooltip: "Dedicated success manager for ongoing strategic support" }
+      ],
+      essentials: false,
+      growth: false,
+      enterprise: true
     }
   ];
 

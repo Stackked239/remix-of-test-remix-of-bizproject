@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { useEffect } from 'react';
@@ -30,9 +31,10 @@ const Terms = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-background to-biz-white/30">
+        <PromotionalBanner />
         <GlobalNavigation />
         
-        <main className="container mx-auto px-4 pt-32 pb-16 max-w-5xl">
+        <main className="container mx-auto px-4 pt-44 pb-16 max-w-5xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-biz-navy mb-4">
               Terms of Service

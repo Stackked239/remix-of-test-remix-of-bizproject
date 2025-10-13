@@ -107,7 +107,7 @@ const Hero = () => {
                 <span className="text-biz-green block">Start Growing</span>
               </h1>
               <p className="font-open-sans text-xl lg:text-2xl text-biz-grey leading-relaxed">
-                Our proprietary platform analyzes over 200 business health indicators across 12 key areas to spot risks and opportunities you might miss. Get early warning systems for cash flow, operations, and growth bottlenecks.
+                Your Trusted Business Health Advisor – Proprietary AI-Powered Diagnostics for SMBs
               </p>
             </div>
 

@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, HelpCircle, Facebook } from 'lucide-react';
+import { Mail, HelpCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import bizhealthLogo from '@/assets/bizhealth-logo-footer.png';
 import xLogo from '@/assets/x-logo.png';
 import linkedinLogo from '@/assets/linkedin-logo.png';
+import facebookLogo from '@/assets/facebook-logo.png';
 
 const GlobalFooter = () => {
   const [email, setEmail] = useState('');
@@ -163,10 +164,10 @@ const GlobalFooter = () => {
                     href="https://www.facebook.com/profile.php?id=61582021647636&sk=about" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-biz-grey hover:text-biz-teal transition-all duration-300 hover:scale-110"
+                    className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="Facebook Social Icon - Follow BizHealth.ai on Facebook"
                   >
-                    <Facebook className="w-6 h-6" />
+                    <img src={facebookLogo} alt="Facebook" className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://x.com/AscentSherpa" 

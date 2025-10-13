@@ -286,7 +286,7 @@ const ECommerceScalingSMB2025 = () => {
                 </p>
 
                 {/* Call to Action */}
-                <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-8 my-12 border border-primary/20">
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-8 my-12 border border-primary/20 max-w-2xl mx-auto text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     Ready to Scale Your E-Commerce Business?
                   </h3>

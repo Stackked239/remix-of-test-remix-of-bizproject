@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Linkedin, Twitter, Mail, HelpCircle } from 'lucide-react';
+import { Linkedin, Twitter, Mail, HelpCircle, Facebook } from 'lucide-react';
 import { toast } from 'sonner';
 import bizhealthLogo from '@/assets/bizhealth-logo-footer.png';
 
@@ -156,6 +156,15 @@ const GlobalFooter = () => {
                     aria-label="LinkedIn Social Icon - Connect with BizHealth.ai"
                   >
                     <Linkedin className="w-6 h-6" />
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61582021647636&sk=about" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-biz-grey hover:text-biz-teal transition-all duration-300 hover:scale-110"
+                    aria-label="Facebook Social Icon - Follow BizHealth.ai on Facebook"
+                  >
+                    <Facebook className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://twitter.com/bizhealthai" 

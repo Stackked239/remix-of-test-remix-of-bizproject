@@ -198,7 +198,7 @@ const GlobalFooter = () => {
                     id="newsletter-description"
                     className="text-xs md:text-sm text-biz-grey font-open-sans leading-relaxed"
                   >
-                    Get business health insights delivered to your inbox. Unsubscribe anytime.
+                    Receive business health insights and product updates via email; unsubscribe anytime.
                   </p>
                 </form>
               </CardContent>

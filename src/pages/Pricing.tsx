@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
@@ -526,9 +525,8 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <Link 
-                  to="/register"
-                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 mt-auto text-center"
+                <button 
+                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 mt-auto"
                   style={{
                     backgroundColor: tier.name === 'Essentials' ? 'hsl(59, 62%, 36%)' : tier.name === 'Growth' ? 'hsl(239, 35%, 23%)' : 'hsl(81, 61%, 47%)',
                     color: 'white',
@@ -541,9 +539,9 @@ const Pricing = () => {
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  <span className="flex-1 text-center">{tier.cta}</span>
-                  <ArrowRight className="w-4 h-4 absolute right-6" />
-                </Link>
+                  {tier.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             ))}
           </div>

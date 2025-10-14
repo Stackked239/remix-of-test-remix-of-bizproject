@@ -16,6 +16,7 @@ import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
+import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
@@ -57,6 +58,17 @@ const Blog = () => {
       slug: "/blog/2025-smb-financial-trends",
       imageUrl: smbFinancialTrendsImage,
       altText: "Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"
+    },
+    {
+      title: "Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages",
+      excerpt: "Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars and build resilient teams.",
+      author: "BizHealth.ai Research Team",
+      date: "October 14, 2025",
+      readTime: "7 min read",
+      category: "Business Leadership",
+      slug: "/blog/talent-wars-smb-hiring-2025",
+      imageUrl: talentWarsImage,
+      altText: "Professional SMB hiring interview showing business leader conducting talent acquisition strategy meeting with candidate discussing retention tips and leadership strategies for 2025 workforce challenges"
     },
     {
       title: "People-First Challenges: Solving SMB Workforce Gaps 2025",

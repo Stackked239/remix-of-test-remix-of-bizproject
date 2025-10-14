@@ -155,17 +155,32 @@ const Login = () => {
                     className="text-sm font-open-sans text-biz-grey leading-tight cursor-pointer"
                   >
                     I have read and agree to the{' '}
-                    <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors">
+                    <a 
+                      href="/terms" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-biz-navy hover:text-biz-green transition-colors"
+                    >
                       Terms of Service
-                    </Link>
+                    </a>
                     , acknowledge the{' '}
-                    <Link to="/disclaimer" className="text-biz-navy hover:text-biz-green transition-colors">
+                    <a 
+                      href="/disclaimer" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-biz-navy hover:text-biz-green transition-colors"
+                    >
                       Disclaimer
-                    </Link>
+                    </a>
                     , and consent to the{' '}
-                    <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors">
+                    <a 
+                      href="/privacy" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-biz-navy hover:text-biz-green transition-colors"
+                    >
                       Privacy Policy
-                    </Link>
+                    </a>
                     . <span className="text-red-500">*</span>
                   </label>
                 </div>

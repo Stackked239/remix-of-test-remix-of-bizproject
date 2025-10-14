@@ -391,7 +391,7 @@ const SMBCashFlowHacks2025 = () => {
                     href="/how-it-works" 
                     className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
-                    Get Your Free Assessment
+                    Begin Your Business Health Assessment
                   </a>
                 </div>
               </div>

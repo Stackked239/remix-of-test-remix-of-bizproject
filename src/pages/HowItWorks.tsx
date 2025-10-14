@@ -158,7 +158,7 @@ const HowItWorks = () => {
                     </div>
                   ) : index === 1 ? (
                     // Questionnaire screenshot for second step
-                    <div className="w-full max-w-md">
+                    <div className="w-full max-w-sm">
                       <img 
                         src={questionnaireImage} 
                         alt="BizHealth.ai business assessment questionnaire interface showing rating scale questions"

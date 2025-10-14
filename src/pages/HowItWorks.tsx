@@ -31,8 +31,8 @@ const HowItWorks = () => {
     {
       number: "04",
       icon: Download,
-      title: "Receive Your Actionable Report",
-      description: "Get your comprehensive business health report with tailored analyses, priority action items, and strategic roadmap.",
+      title: "Receive Your Actionable Reports",
+      description: "Get your comprehensive business health reports with tailored analyses, priority action items, and strategic roadmaps.",
       details: ["Downloadable PDF format", "Email delivery included", "90-day report updates available"]
     }
   ];

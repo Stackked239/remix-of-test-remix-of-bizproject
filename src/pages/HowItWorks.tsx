@@ -178,7 +178,7 @@ const HowItWorks = () => {
                     </div>
                   ) : (
                     // Report sample for fourth step
-                    <div className="w-full max-w-[420px]">
+                    <div className="w-full max-w-[357px]">
                       <img 
                         src={reportSampleImage} 
                         alt="BizHealth.ai comprehensive business health assessment report showing key performance indicators and SWOT analysis"

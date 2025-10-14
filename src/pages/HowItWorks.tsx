@@ -168,7 +168,7 @@ const HowItWorks = () => {
                     </div>
                   ) : index === 2 ? (
                     // AI Analysis dashboard for third step
-                    <div className="w-full max-w-[500px]">
+                    <div className="w-full max-w-[450px]">
                       <img 
                         src={aiAnalysisImage} 
                         alt="BizHealth.ai AI analytics dashboard showing business metrics, financial health, and performance benchmarking"

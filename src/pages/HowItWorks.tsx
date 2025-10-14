@@ -3,6 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, BarChart3, FileText, Download, Clock, Shield } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
+import reportSampleImage from "@/assets/business-health-report-sample.png";
 
 const HowItWorks = () => {
   const steps = [
@@ -176,8 +177,13 @@ const HowItWorks = () => {
                       />
                     </div>
                   ) : (
-                    <div className="w-80 h-80 rounded-2xl bg-muted border border-border flex items-center justify-center">
-                      <step.icon className="w-32 h-32 text-primary/20" />
+                    // Report sample for fourth step
+                    <div className="w-full max-w-[420px]">
+                      <img 
+                        src={reportSampleImage} 
+                        alt="BizHealth.ai comprehensive business health assessment report showing key performance indicators and SWOT analysis"
+                        className="rounded-2xl shadow-elegant w-full"
+                      />
                     </div>
                   )}
                 </div>

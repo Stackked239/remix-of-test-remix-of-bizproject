@@ -10,6 +10,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 
 const Login = () => {
   const { user, signIn, signInWithGoogle } = useAuth();
@@ -54,9 +55,10 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
+      <main className="flex-1 flex items-center justify-center px-4 py-12 pt-40">
         <div className="w-full max-w-md">
           <Card className="shadow-elegant border-border/50">
             <CardHeader className="space-y-2 text-center">

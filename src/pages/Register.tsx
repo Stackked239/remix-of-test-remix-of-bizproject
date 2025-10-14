@@ -64,24 +64,16 @@ const Register = () => {
   };
 
   const validateForm = () => {
+    if (!agreedToTerms || !agreedToDisclaimer || !agreedToPrivacy) {
+      setError('You must agree to the Terms of Service, acknowledge the Disclaimer, and consent to the Privacy Policy to proceed.');
+      return false;
+    }
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
       return false;
     }
     if (passwordStrength < 3) {
       setError('Password must be stronger (at least 8 characters with uppercase, lowercase, and numbers)');
-      return false;
-    }
-    if (!agreedToTerms) {
-      setError('You must agree to the Terms of Service');
-      return false;
-    }
-    if (!agreedToDisclaimer) {
-      setError('You must acknowledge the Disclaimer');
-      return false;
-    }
-    if (!agreedToPrivacy) {
-      setError('You must consent to the Privacy Policy');
       return false;
     }
     return true;

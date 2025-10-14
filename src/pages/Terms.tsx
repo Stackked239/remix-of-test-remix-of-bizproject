@@ -445,7 +445,7 @@ const Terms = () => {
                         asChild
                         className="bg-biz-teal hover:bg-biz-teal/90 text-white font-open-sans"
                       >
-                        <a href="/contact">Contact Our Legal Team</a>
+                        <a href="/contact">Contact Our Client Services Team</a>
                       </Button>
                     </div>
                   </article>

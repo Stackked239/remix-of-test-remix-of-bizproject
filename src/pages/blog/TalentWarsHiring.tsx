@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "@/components/GlobalNavigation";
+import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -94,8 +94,9 @@ const TalentWarsHiring = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         
-        <main className="container mx-auto px-6 py-12">
-          <article className="max-w-4xl mx-auto">
+        <article className="pt-32 pb-12">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
             {/* Breadcrumb Navigation */}
             <nav className="mb-8">
               <Link 
@@ -375,8 +376,9 @@ const TalentWarsHiring = () => {
                 The <strong>BizHealth.ai Research Team</strong> brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
               </p>
             </div>
-          </article>
-        </main>
+            </div>
+          </div>
+        </article>
 
         <RelatedArticles articles={relatedArticles} />
         <GlobalFooter />

@@ -15,7 +15,7 @@ const HowItWorks = () => {
       number: "02", 
       icon: FileText,
       title: "Complete Your Business Assessment",
-      description: "Answer our strategically designed questionnaire covering 12 critical business dimensions, from financial health to growth strategy.",
+      description: "Answer our strategically designed questionnaire covering key business dimensions, from financial health to growth strategy.",
       details: ["45-80 questions depending on tier", "Save and resume functionality", "Industry-specific question sets"]
     },
     {

@@ -206,25 +206,6 @@ const Register = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="font-open-sans font-medium">
-                    Business Email
-                  </Label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-biz-grey" />
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="john@company.com"
-                      className="pl-10 font-open-sans"
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
                   <Label htmlFor="company" className="font-open-sans font-medium">
                     Company Name
                   </Label>
@@ -237,6 +218,25 @@ const Register = () => {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Your Company LLC"
+                      className="pl-10 font-open-sans"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="font-open-sans font-medium">
+                    Business Email
+                  </Label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-biz-grey" />
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@company.com"
                       className="pl-10 font-open-sans"
                       required
                     />

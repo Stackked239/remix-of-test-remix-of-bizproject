@@ -116,6 +116,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
+        excerpt: "Master micro-business cash flow management with 5 proven strategies. Automate billing, forecast with AI, optimize inventory to boost liquidity by 30%.",
+        url: "/blog/smb-cash-flow-hacks-2025",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
         title: "The Complete Guide to Business Health Assessment in 2025",
         excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB.",
         url: "/blog/business-health-assessment-2025",

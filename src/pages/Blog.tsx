@@ -20,6 +20,7 @@ import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
+import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -37,6 +38,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
+      excerpt: "Master micro-business cash flow management with 5 proven strategies for 2025. Automate billing, forecast with AI, optimize inventory, negotiate terms, and diversify funding to boost liquidity by 30%.",
+      author: "BizHealth.ai Research Team",
+      date: "October 14, 2025",
+      readTime: "6 min read",
+      category: "Business Strategy, Financial Management",
+      slug: "/blog/smb-cash-flow-hacks-2025",
+      imageUrl: cashFlowHacksImage,
+      altText: "Micro-business owner analyzing cash flow strategies and financial management on computer with documents - essential cash flow hacks for 2025 success"
+    },
     {
       title: "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
       excerpt: "Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!",

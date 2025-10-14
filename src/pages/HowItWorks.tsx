@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, BarChart3, FileText, Download, Clock, Shield } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
+import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
 
 const HowItWorks = () => {
   const steps = [
@@ -162,6 +163,15 @@ const HowItWorks = () => {
                       <img 
                         src={questionnaireImage} 
                         alt="BizHealth.ai business assessment questionnaire interface showing rating scale questions"
+                        className="rounded-2xl shadow-elegant w-full"
+                      />
+                    </div>
+                  ) : index === 2 ? (
+                    // AI Analysis dashboard for third step
+                    <div className="w-full max-w-[500px]">
+                      <img 
+                        src={aiAnalysisImage} 
+                        alt="BizHealth.ai AI analytics dashboard showing business metrics, financial health, and performance benchmarking"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>

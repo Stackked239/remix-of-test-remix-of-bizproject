@@ -27,6 +27,8 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [agreedToDisclaimer, setAgreedToDisclaimer] = useState(false);
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
   const [agreedToMarketing, setAgreedToMarketing] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -71,7 +73,15 @@ const Register = () => {
       return false;
     }
     if (!agreedToTerms) {
-      setError('You must agree to the Terms of Service and Privacy Policy');
+      setError('You must agree to the Terms of Service');
+      return false;
+    }
+    if (!agreedToDisclaimer) {
+      setError('You must acknowledge the Disclaimer');
+      return false;
+    }
+    if (!agreedToPrivacy) {
+      setError('You must consent to the Privacy Policy');
       return false;
     }
     return true;
@@ -336,40 +346,73 @@ const Register = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-start space-x-2">
                     <Checkbox
                       id="terms"
                       checked={agreedToTerms}
                       onCheckedChange={(checked) => setAgreedToTerms(checked === true)}
                       required
+                      className="mt-1"
                     />
-                    <Label htmlFor="terms" className="text-sm font-open-sans text-biz-grey cursor-pointer">
-                      I agree to the{' '}
-                      <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors">
+                    <Label htmlFor="terms" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
+                      I have read and agree to the{' '}
+                      <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors underline">
                         Terms of Service
-                      </Link>{' '}
-                      and{' '}
-                      <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors">
-                        Privacy Policy
                       </Link>
+                      .
                     </Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-start space-x-2">
+                    <Checkbox
+                      id="disclaimer"
+                      checked={agreedToDisclaimer}
+                      onCheckedChange={(checked) => setAgreedToDisclaimer(checked === true)}
+                      required
+                      className="mt-1"
+                    />
+                    <Label htmlFor="disclaimer" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
+                      I have read and acknowledge the{' '}
+                      <Link to="/disclaimer" className="text-biz-navy hover:text-biz-green transition-colors underline">
+                        Disclaimer
+                      </Link>
+                      .
+                    </Label>
+                  </div>
+                  
+                  <div className="flex items-start space-x-2">
+                    <Checkbox
+                      id="privacy"
+                      checked={agreedToPrivacy}
+                      onCheckedChange={(checked) => setAgreedToPrivacy(checked === true)}
+                      required
+                      className="mt-1"
+                    />
+                    <Label htmlFor="privacy" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
+                      I have read and consent to the{' '}
+                      <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors underline">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </Label>
+                  </div>
+                  
+                  <div className="flex items-start space-x-2">
                     <Checkbox
                       id="marketing"
                       checked={agreedToMarketing}
                       onCheckedChange={(checked) => setAgreedToMarketing(checked === true)}
+                      className="mt-1"
                     />
-                    <Label htmlFor="marketing" className="text-sm font-open-sans text-biz-grey cursor-pointer">
-                      I'd like to receive business insights and product updates via email
+                    <Label htmlFor="marketing" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
+                      I'd like to receive business insights and product updates via email.
                     </Label>
                   </div>
                 </div>
                 
                 <Button
                   type="submit"
-                  disabled={loading || !agreedToTerms || passwordStrength < 3}
+                  disabled={loading || !agreedToTerms || !agreedToDisclaimer || !agreedToPrivacy || passwordStrength < 3}
                   className="w-full bg-biz-green hover:bg-biz-green/90 text-white font-montserrat font-semibold"
                 >
                   {loading ? 'Creating Account...' : 'Create Account'}

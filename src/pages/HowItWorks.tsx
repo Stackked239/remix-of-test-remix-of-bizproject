@@ -41,7 +41,7 @@ const HowItWorks = () => {
     {
       icon: Clock,
       title: "Time Efficient",
-      description: "Complete assessment in 15-30 minutes depending on your chosen tier"
+      description: "Complete questionnaire in 20-40 minutes depending on your chosen tier"
     },
     {
       icon: Shield,
@@ -51,7 +51,7 @@ const HowItWorks = () => {
     {
       icon: BarChart3,
       title: "Data-Driven Insights",
-      description: "AI-powered analysis backed by industry benchmarks and best practices"
+      description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices"
     }
   ];
 

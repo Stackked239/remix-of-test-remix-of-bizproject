@@ -108,7 +108,7 @@ const HowItWorks = () => {
                 <div className="flex-1 flex justify-center">
                   {index === 0 ? (
                     // Tier matrix snapshot for first step
-                    <div className="w-full max-w-md rounded-2xl bg-background border-2 border-border shadow-elegant overflow-hidden">
+                    <div className="w-full max-w-[403px] rounded-2xl bg-background border-2 border-border shadow-elegant overflow-hidden">
                       <div className="bg-primary/5 px-4 py-3 border-b border-border">
                         <h3 className="text-sm font-bold text-foreground">Assessment Tiers</h3>
                       </div>

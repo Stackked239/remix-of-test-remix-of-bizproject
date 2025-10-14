@@ -529,7 +529,7 @@ const Pricing = () => {
                 {tier.name === 'Essentials' ? (
                   <Link
                     to="/register"
-                    className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 mt-auto"
+                    className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(59, 62%, 36%)',
                       color: 'white',
@@ -542,8 +542,8 @@ const Pricing = () => {
                       e.currentTarget.style.transform = 'scale(1)';
                     }}
                   >
-                    {tier.cta}
-                    <ArrowRight className="w-4 h-4" />
+                    <span className="flex-1 text-center">{tier.cta}</span>
+                    <ArrowRight className="w-4 h-4 absolute right-6" />
                   </Link>
                 ) : (
                   <button 

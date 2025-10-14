@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from '@/components/ui/separator';
 import { Eye, EyeOff, Mail, Lock, AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useAuth } from '@/hooks/useAuth';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
@@ -19,6 +20,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   // Redirect if already logged in
   if (user) {
@@ -28,6 +30,12 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    
+    if (!termsAccepted) {
+      setError('You must agree to the Terms of Service, acknowledge the Disclaimer, and consent to the Privacy Policy to sign in.');
+      return;
+    }
+    
     setLoading(true);
     
     try {
@@ -66,7 +74,7 @@ const Login = () => {
                 Welcome Back
               </CardTitle>
               <CardDescription className="font-open-sans text-biz-grey">
-                Sign in to your BizHealth.ai account to access your business insights
+                Sign in to your BizHealth.ai account to access your client portal
               </CardDescription>
             </CardHeader>
             
@@ -133,6 +141,33 @@ const Login = () => {
                   >
                     Forgot password?
                   </Link>
+                </div>
+                
+                <div className="flex items-start space-x-2">
+                  <Checkbox
+                    id="terms"
+                    checked={termsAccepted}
+                    onCheckedChange={(checked) => setTermsAccepted(checked as boolean)}
+                    className="mt-0.5"
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="text-sm font-open-sans text-biz-grey leading-tight cursor-pointer"
+                  >
+                    I have read and agree to the{' '}
+                    <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors">
+                      Terms of Service
+                    </Link>
+                    , acknowledge the{' '}
+                    <Link to="/disclaimer" className="text-biz-navy hover:text-biz-green transition-colors">
+                      Disclaimer
+                    </Link>
+                    , and consent to the{' '}
+                    <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors">
+                      Privacy Policy
+                    </Link>
+                    . <span className="text-red-500">*</span>
+                  </label>
                 </div>
                 
                 <Button

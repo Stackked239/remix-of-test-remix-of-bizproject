@@ -526,24 +526,44 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <Link
-                  to="/register"
-                  className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
-                  style={{
-                    backgroundColor: tier.name === 'Essentials' ? 'hsl(59, 62%, 36%)' : tier.name === 'Growth' ? 'hsl(239, 35%, 23%)' : 'hsl(81, 61%, 47%)',
-                    color: 'white',
-                    transform: 'scale(1)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.05)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                >
-                  <span className="flex-1 text-center">{tier.cta}</span>
-                  <ArrowRight className="w-4 h-4 absolute right-6" />
-                </Link>
+                {tier.name === 'Essentials' ? (
+                  <Link
+                    to="/register"
+                    className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
+                    style={{
+                      backgroundColor: 'hsl(59, 62%, 36%)',
+                      color: 'white',
+                      transform: 'scale(1)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                  >
+                    <span className="flex-1 text-center">{tier.cta}</span>
+                    <ArrowRight className="w-4 h-4 absolute right-6" />
+                  </Link>
+                ) : (
+                  <button 
+                    className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 mt-auto"
+                    style={{
+                      backgroundColor: tier.name === 'Growth' ? 'hsl(239, 35%, 23%)' : 'hsl(81, 61%, 47%)',
+                      color: 'white',
+                      transform: 'scale(1)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                  >
+                    {tier.cta}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             ))}
           </div>

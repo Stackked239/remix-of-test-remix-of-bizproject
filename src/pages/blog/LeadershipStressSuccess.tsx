@@ -94,7 +94,7 @@ const LeadershipStressSuccess = () => {
                   </TooltipTrigger>
                   <TooltipContent className="max-w-xs">
                     <p className="text-sm">
-                      The BizHealth.ai Research Team brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
+                      The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
                     </p>
                   </TooltipContent>
                 </Tooltip>

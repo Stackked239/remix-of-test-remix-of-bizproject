@@ -359,7 +359,8 @@ const Register = () => {
                       <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors underline">
                         Terms of Service
                       </Link>
-                      .
+                      .{' '}
+                      <span className="text-red-500">*</span>
                     </Label>
                   </div>
                   
@@ -376,7 +377,8 @@ const Register = () => {
                       <Link to="/disclaimer" className="text-biz-navy hover:text-biz-green transition-colors underline">
                         Disclaimer
                       </Link>
-                      .
+                      .{' '}
+                      <span className="text-red-500">*</span>
                     </Label>
                   </div>
                   
@@ -393,7 +395,8 @@ const Register = () => {
                       <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors underline">
                         Privacy Policy
                       </Link>
-                      .
+                      .{' '}
+                      <span className="text-red-500">*</span>
                     </Label>
                   </div>
                   
@@ -405,7 +408,8 @@ const Register = () => {
                       className="mt-1"
                     />
                     <Label htmlFor="marketing" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
-                      I'd like to receive business insights and product updates via email.
+                      I'd like to receive business insights and product updates via email.{' '}
+                      <span className="text-muted-foreground">(Optional)</span>
                     </Label>
                   </div>
                 </div>

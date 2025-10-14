@@ -507,7 +507,7 @@ const Blog = () => {
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Get our latest insights, tools, and strategies delivered straight to your inbox. 
-              Join over 25,000 business owners who trust our expertise.
+              Join over 2,500 business owners who trust our expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 

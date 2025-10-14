@@ -185,7 +185,7 @@ const HowItWorks = () => {
               Why Choose Our Process
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Built on years of business consulting expertise and powered by cutting-edge AI technology
+              Built on decades of business consulting expertise and powered by a proprietary AI technology platform
             </p>
           </div>
           

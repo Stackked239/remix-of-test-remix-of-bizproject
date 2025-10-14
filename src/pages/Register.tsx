@@ -348,9 +348,14 @@ const Register = () => {
                     />
                     <Label htmlFor="terms" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
                       I have read and agree to the{' '}
-                      <Link to="/terms" className="text-biz-navy hover:text-biz-green transition-colors underline">
+                      <a 
+                        href="/terms" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-biz-navy hover:text-biz-green transition-colors underline"
+                      >
                         Terms of Service
-                      </Link>
+                      </a>
                       .{' '}
                       <span className="text-red-500">*</span>
                     </Label>
@@ -366,9 +371,14 @@ const Register = () => {
                     />
                     <Label htmlFor="disclaimer" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
                       I have read and acknowledge the{' '}
-                      <Link to="/disclaimer" className="text-biz-navy hover:text-biz-green transition-colors underline">
+                      <a 
+                        href="/disclaimer" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-biz-navy hover:text-biz-green transition-colors underline"
+                      >
                         Disclaimer
-                      </Link>
+                      </a>
                       .{' '}
                       <span className="text-red-500">*</span>
                     </Label>
@@ -384,9 +394,14 @@ const Register = () => {
                     />
                     <Label htmlFor="privacy" className="text-sm font-open-sans text-biz-grey cursor-pointer leading-relaxed">
                       I have read and consent to the{' '}
-                      <Link to="/privacy" className="text-biz-navy hover:text-biz-green transition-colors underline">
+                      <a 
+                        href="/privacy" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-biz-navy hover:text-biz-green transition-colors underline"
+                      >
                         Privacy Policy
-                      </Link>
+                      </a>
                       .{' '}
                       <span className="text-red-500">*</span>
                     </Label>

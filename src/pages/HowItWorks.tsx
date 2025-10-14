@@ -87,7 +87,7 @@ const HowItWorks = () => {
               <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 mb-20 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center shadow-elegant">
+                    <div className="w-16 h-16 rounded-full bg-biz-green text-white font-bold text-xl flex items-center justify-center shadow-elegant">
                       {step.number}
                     </div>
                     <div className="p-3 rounded-xl bg-primary/10">

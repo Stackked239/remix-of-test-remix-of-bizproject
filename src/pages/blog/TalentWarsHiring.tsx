@@ -2,9 +2,10 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const TalentWarsHiring = () => {
   const publishDate = "2025-10-14";
@@ -121,7 +122,21 @@ const TalentWarsHiring = () => {
               </h1>
               
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
-                <span className="font-medium text-foreground">{author}</span>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span className="font-medium text-foreground flex items-center gap-1.5 cursor-help">
+                        {author}
+                        <Info className="w-3.5 h-3.5 text-primary" />
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">
+                        The BizHealth.ai Research Team brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 <span>•</span>
                 <time dateTime={publishDate}>October 14, 2025</time>
                 <span>•</span>

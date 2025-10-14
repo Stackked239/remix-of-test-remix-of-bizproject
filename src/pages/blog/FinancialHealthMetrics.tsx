@@ -1,10 +1,11 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const FinancialHealthMetrics = () => {
   return (
@@ -82,10 +83,22 @@ const FinancialHealthMetrics = () => {
             </h1>
             
             <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>BizHealth.ai Research Team</span>
-              </div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center gap-2 cursor-help">
+                      <User className="w-4 h-4" />
+                      <span>BizHealth.ai Research Team</span>
+                      <Info className="w-3.5 h-3.5 text-primary" />
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p className="text-sm">
+                      The BizHealth.ai Research Team brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>October 12, 2025</span>

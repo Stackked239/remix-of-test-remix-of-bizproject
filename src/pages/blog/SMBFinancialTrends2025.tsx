@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import RelatedArticles from "@/components/RelatedArticles";
 import heroImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const SMBFinancialTrends2025 = () => {
   const publishDate = new Date().toISOString();
@@ -135,10 +136,22 @@ const SMBFinancialTrends2025 = () => {
 
               {/* Meta Information */}
               <div className="flex items-center gap-6 text-muted-foreground mb-8 flex-wrap">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span className="text-sm">The BizHealth.ai Research Team</span>
-                </div>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="flex items-center gap-2 cursor-help">
+                        <User className="w-4 h-4" />
+                        <span className="text-sm">The BizHealth.ai Research Team</span>
+                        <Info className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">
+                        The BizHealth.ai Research Team brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   <time dateTime={publishDate} className="text-sm">{formattedDate}</time>

@@ -9,13 +9,13 @@ const Pricing = () => {
   };
 
   const features = [
-    "Comprehensive 30-question business assessment",
-    "AI-powered analysis across 8 key categories", 
+    "Comprehensive business health assessment",
+    "Full business analysis across 12 key categories", 
     "Industry benchmarking and competitor comparison",
     "Personalized action plan with strategic recommendations",
     "Downloadable PDF report for your records",
-    "Email delivery for easy sharing with your team",
-    "Instant results - no waiting for consultants",
+    "Client portal for easy sharing with your team",
+    "Results in minutes - no waiting for consultants",
     "One-time fee - no recurring subscriptions"
   ];
 
@@ -23,7 +23,7 @@ const Pricing = () => {
     {
       icon: Shield,
       title: "100% Secure & Private",
-      description: "Your business data is encrypted and never shared"
+      description: "Your business data is fully encrypted"
     },
     {
       icon: Clock,
@@ -98,7 +98,7 @@ const Pricing = () => {
               </Button>
               
               <p className="text-sm text-muted-foreground">
-                💡 <strong>90% savings</strong> compared to traditional business consulting
+                💡 <strong>95% savings</strong> compared to traditional business consulting
               </p>
             </div>
             

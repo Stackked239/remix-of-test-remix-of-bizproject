@@ -101,18 +101,14 @@ const Hero = () => {
           {/* Left Column - Main Content */}
           <div className="space-y-8 relative z-10 px-2 sm:px-0">
             {/* Main Headlines */}
-            <div className="space-y-4 animate-fade-in">
-              <h1 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight text-biz-navy">
-                Stop Guessing About Your Business's Future—Get Actionable Insights Today.
+            <div className="space-y-4">
+              <h1 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-6xl leading-tight">
+                Stop Guessing, 
+                <span className="text-biz-green block">Start Growing</span>
               </h1>
-              <p className="font-open-sans text-base sm:text-lg lg:text-xl text-biz-grey leading-relaxed">
-                As a busy SMB leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
+              <p className="font-open-sans text-base sm:text-lg lg:text-2xl text-biz-grey leading-relaxed">
+                Your Trusted Business Health Advisor – Proprietary AI-Powered Diagnostics for SMBs
               </p>
-              <div className="pt-2">
-                <p className="font-open-sans text-sm sm:text-base text-biz-navy/80 font-semibold">
-                  Trusted by 2,500+ SMBs
-                </p>
-              </div>
             </div>
 
             {/* Statistical Hooks */}
@@ -170,16 +166,16 @@ const Hero = () => {
               <Button 
                 onClick={handleGetReport}
                 size="lg"
-                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 shadow-feature transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-4 shadow-feature"
               >
-                <span className="truncate text-center">Let's Get Started</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 flex-shrink-0" />
+                <span className="truncate text-center">Get Business Health Report</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1.5 sm:ml-2 flex-shrink-0" />
               </Button>
               
               {/* Risk-Free Guarantee */}
               <div className="flex items-center space-x-2 text-[10px] sm:text-xs lg:text-sm font-open-sans text-biz-grey max-w-full">
                 <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-biz-green flex-shrink-0" />
-                <span className="break-words">Reports generated 24/7 in 30-40 minutes</span>
+                <span className="break-words">Trusted by 2,500+ SMBs • Reports generated 24/7 in ~45 minutes</span>
               </div>
             </div>
           </div>

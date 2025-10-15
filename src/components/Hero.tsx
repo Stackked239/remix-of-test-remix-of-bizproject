@@ -181,85 +181,91 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-biz-navy rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm border border-biz-navy/20">
-            <div className="space-y-6">
-              <div className="text-center">
-                <h3 className="font-montserrat font-bold text-xl sm:text-2xl mb-2 text-biz-white">
+          <div className="bg-biz-navy rounded-2xl p-3 sm:p-6 lg:p-8 backdrop-blur-sm border border-biz-navy/20 max-w-full overflow-hidden">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="text-center px-2">
+                <h3 className="font-montserrat font-bold text-lg sm:text-xl lg:text-2xl mb-2 text-biz-white break-words">
                   Find Your Perfect Plan
                 </h3>
-                <p className="font-open-sans text-sm sm:text-base text-biz-white/80">
+                <p className="font-open-sans text-xs sm:text-sm lg:text-base text-biz-white/80 break-words">
                   Answer 3 quick questions to get personalized recommendations
                 </p>
               </div>
 
               {/* Quiz Questions */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6 px-1">
                 {/* Annual Revenue */}
-                <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-white">
+                <div className="space-y-2 sm:space-y-3">
+                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
                     Annual Revenue: ${revenue[0].toLocaleString()}
                   </label>
-                  <Slider
-                    value={revenue}
-                    onValueChange={setRevenue}
-                    max={50000000}
-                    min={0}
-                    step={50000}
-                    className="w-full"
-                  />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
+                  <div className="px-1">
+                    <Slider
+                      value={revenue}
+                      onValueChange={setRevenue}
+                      max={50000000}
+                      min={0}
+                      step={50000}
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
                     <span>$0</span>
                     <span>$50M</span>
                   </div>
                 </div>
 
                 {/* Employee Count */}
-                <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-white">
+                <div className="space-y-2 sm:space-y-3">
+                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
                     Employees: {employees[0]}
                   </label>
-                  <Slider
-                    value={employees}
-                    onValueChange={setEmployees}
-                    max={250}
-                    min={0}
-                    step={1}
-                    className="w-full"
-                  />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
+                  <div className="px-1">
+                    <Slider
+                      value={employees}
+                      onValueChange={setEmployees}
+                      max={250}
+                      min={0}
+                      step={1}
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
                     <span>0</span>
                     <span>250</span>
                   </div>
                 </div>
 
                 {/* Business Challenges */}
-                <div className="space-y-3">
-                  <label className="font-open-sans font-semibold text-sm text-biz-white">
-                    Business Challenges (Scale 0-10): {challenges[0]}
+                <div className="space-y-2 sm:space-y-3">
+                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
+                    Challenges (0-10): {challenges[0]}
                   </label>
-                  <Slider
-                    value={challenges}
-                    onValueChange={setChallenges}
-                    max={10}
-                    min={0}
-                    step={1}
-                    className="w-full"
-                  />
-                  <div className="flex justify-between text-xs font-open-sans text-biz-white/70">
+                  <div className="px-1">
+                    <Slider
+                      value={challenges}
+                      onValueChange={setChallenges}
+                      max={10}
+                      min={0}
+                      step={1}
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
                     <span>None</span>
-                    <span>Major Concerns</span>
+                    <span>Major</span>
                   </div>
                 </div>
               </div>
 
               {/* Recommendation */}
-              <div className="bg-biz-white rounded-lg p-3 sm:p-4 border border-biz-grey/60">
+              <div className="bg-biz-white rounded-lg p-3 sm:p-4 border border-biz-grey/60 mx-1">
                 <div className="text-center">
-                  <p className="font-open-sans text-xs sm:text-sm text-black mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-lg sm:text-xl text-biz-lime">
+                  <p className="font-open-sans text-[10px] sm:text-xs lg:text-sm text-black mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-base sm:text-lg lg:text-xl text-biz-lime break-words">
                     {recommendedTier}
                   </p>
-                  <p className="font-open-sans text-xs sm:text-sm text-black/90 mt-2">
+                  <p className="font-open-sans text-[10px] sm:text-xs lg:text-sm text-black/90 mt-2 break-words px-1">
                     {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
                     {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
                     {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
@@ -267,14 +273,16 @@ const Hero = () => {
                 </div>
               </div>
 
-              <Button 
-                onClick={handleGetReport}
-                className="w-full bg-gradient-to-r from-biz-green to-biz-green/90 hover:from-biz-green/90 hover:to-biz-green text-biz-white font-montserrat font-bold text-base sm:text-lg shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                size="lg"
-              >
-                🚀 Get Started with {recommendedTier}
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
-              </Button>
+              <div className="px-1">
+                <Button 
+                  onClick={handleGetReport}
+                  className="w-full bg-gradient-to-r from-biz-green to-biz-green/90 hover:from-biz-green/90 hover:to-biz-green text-biz-white font-montserrat font-bold text-sm sm:text-base lg:text-lg shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 py-4 sm:py-5"
+                  size="lg"
+                >
+                  <span className="truncate">🚀 Get Started with {recommendedTier}</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 flex-shrink-0" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>

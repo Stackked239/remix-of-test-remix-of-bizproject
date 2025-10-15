@@ -102,60 +102,60 @@ const Hero = () => {
           <div className="space-y-8 relative z-10">
             {/* Main Headlines */}
             <div className="space-y-4">
-              <h1 className="font-montserrat font-bold text-4xl lg:text-6xl leading-tight">
+              <h1 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-6xl leading-tight">
                 Stop Guessing, 
                 <span className="text-biz-green block">Start Growing</span>
               </h1>
-              <p className="font-open-sans text-xl lg:text-2xl text-biz-grey leading-relaxed">
+              <p className="font-open-sans text-base sm:text-lg lg:text-2xl text-biz-grey leading-relaxed">
                 Your Trusted Business Health Advisor – Proprietary AI-Powered Diagnostics for SMBs
               </p>
             </div>
 
             {/* Statistical Hooks */}
-            <div className="bg-biz-navy/5 rounded-xl p-6 backdrop-blur-sm border border-biz-navy/10">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="bg-biz-navy/5 rounded-xl p-4 sm:p-6 backdrop-blur-sm border border-biz-navy/10">
+              <div className="grid grid-cols-2 gap-3 sm:gap-6">
                 <div className="text-center">
-                  <p className="text-3xl font-montserrat font-bold text-biz-green">70%</p>
-                  <p className="text-sm font-open-sans text-biz-grey">SMB Cash Flow Strains</p>
-                  <p className="text-xs font-open-sans text-biz-grey opacity-75">SBA 2025 Report</p>
+                  <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">70%</p>
+                  <p className="text-xs sm:text-sm font-open-sans text-biz-grey">SMB Cash Flow Strains</p>
+                  <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">SBA 2025 Report</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-montserrat font-bold text-biz-green">60%</p>
-                  <p className="text-sm font-open-sans text-biz-grey">Growth Stalls by Year 3</p>
-                  <p className="text-xs font-open-sans text-biz-grey opacity-75">Gartner Research</p>
+                  <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">60%</p>
+                  <p className="text-xs sm:text-sm font-open-sans text-biz-grey">Growth Stalls by Year 3</p>
+                  <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">Gartner Research</p>
                 </div>
               </div>
             </div>
 
             {/* Value Propositions */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg text-biz-navy">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">Uncover Hidden Gaps</span> across 12 critical business areas
                 </p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg text-biz-navy">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">20x ROI</span> from actionable AI-generated insights
                 </p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg text-biz-navy">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">Quick results</span> - no waiting for consultants
                 </p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg text-biz-navy">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">Personal client portal</span> for easy sharing with your team
                 </p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-lg text-biz-navy">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">95% savings</span> compared to traditional business consulting
                 </p>
               </div>
@@ -166,28 +166,28 @@ const Hero = () => {
               <Button 
                 onClick={handleGetReport}
                 size="lg"
-                className="bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-lg px-8 py-4 shadow-feature"
+                className="w-full sm:w-auto bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-feature"
               >
                 Get Your Business Health Report
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
               </Button>
               
               {/* Risk-Free Guarantee */}
-              <div className="flex items-center space-x-2 text-sm font-open-sans text-biz-grey">
-                <Shield className="w-4 h-4 text-biz-green" />
+              <div className="flex items-center space-x-2 text-xs sm:text-sm font-open-sans text-biz-grey">
+                <Shield className="w-4 h-4 text-biz-green flex-shrink-0" />
                 <span>Trusted by 2,500+ SMBs • Reports generated 24/7 in ~45 minutes</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - Interactive KPI Quiz */}
-          <div className="bg-biz-navy rounded-2xl p-8 backdrop-blur-sm border border-biz-navy/20">
+          <div className="bg-biz-navy rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm border border-biz-navy/20">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="font-montserrat font-bold text-2xl mb-2 text-biz-white">
+                <h3 className="font-montserrat font-bold text-xl sm:text-2xl mb-2 text-biz-white">
                   Find Your Perfect Plan
                 </h3>
-                <p className="font-open-sans text-biz-white/80">
+                <p className="font-open-sans text-sm sm:text-base text-biz-white/80">
                   Answer 3 quick questions to get personalized recommendations
                 </p>
               </div>
@@ -253,13 +253,13 @@ const Hero = () => {
               </div>
 
               {/* Recommendation */}
-              <div className="bg-biz-white rounded-lg p-4 border border-biz-grey/60">
+              <div className="bg-biz-white rounded-lg p-3 sm:p-4 border border-biz-grey/60">
                 <div className="text-center">
-                  <p className="font-open-sans text-sm text-black mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-xl text-biz-lime">
+                  <p className="font-open-sans text-xs sm:text-sm text-black mb-1">Recommended Plan:</p>
+                  <p className="font-montserrat font-bold text-lg sm:text-xl text-biz-lime">
                     {recommendedTier}
                   </p>
-                  <p className="font-open-sans text-sm text-black/90 mt-2">
+                  <p className="font-open-sans text-xs sm:text-sm text-black/90 mt-2">
                     {recommendedTier === "Essentials" && "Perfect for getting started with core insights"}
                     {recommendedTier === "Growth" && "Ideal for scaling businesses needing comprehensive analysis"}
                     {recommendedTier === "Enterprise" && "Best for complex operations requiring full suite access"}
@@ -269,11 +269,11 @@ const Hero = () => {
 
               <Button 
                 onClick={handleGetReport}
-                className="w-full bg-gradient-to-r from-biz-green to-biz-green/90 hover:from-biz-green/90 hover:to-biz-green text-biz-white font-montserrat font-bold text-lg shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-biz-green to-biz-green/90 hover:from-biz-green/90 hover:to-biz-green text-biz-white font-montserrat font-bold text-base sm:text-lg shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 size="lg"
               >
                 🚀 Get Started with {recommendedTier}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
               </Button>
             </div>
           </div>
@@ -281,22 +281,22 @@ const Hero = () => {
 
         {/* Social Proof Stats */}
         <div className="pb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">20x</p>
-              <p className="font-open-sans text-sm text-biz-grey">Average ROI</p>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">20x</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Average ROI</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
-              <p className="font-open-sans text-sm text-biz-grey">SMBs Served</p>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">SMBs Served</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">99%</p>
-              <p className="font-open-sans text-sm text-biz-grey">Accuracy Rate</p>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">99%</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Accuracy Rate</p>
             </div>
             <div>
-              <p className="text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
-              <p className="font-open-sans text-sm text-biz-grey">Report Generation</p>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Report Generation</p>
             </div>
           </div>
         </div>

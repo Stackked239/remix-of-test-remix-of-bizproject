@@ -132,31 +132,37 @@ const Hero = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                 <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
-                  <span className="font-semibold">Uncover Hidden Gaps</span> across 12 critical business areas
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
-                  <span className="font-semibold">20x ROI</span> from actionable AI-generated insights
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
-                  <span className="font-semibold">Quick results</span> - no waiting for consultants
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
-                  <span className="font-semibold">Personal client portal</span> for easy sharing with your team
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
-                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
                   <span className="font-semibold">95% savings</span> compared to traditional business consulting
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
+                  <span className="font-semibold">Comprehensive business health assessment</span>
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
+                  <span className="font-semibold">Full business analysis</span> across 12 key categories
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
+                  <span className="font-semibold">Client portal</span> for easy sharing with your team
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
+                  <span className="font-semibold">Results in minutes</span> - no waiting for consultants
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
+                  <span className="font-semibold">Your business data is fully encrypted</span>
                 </p>
               </div>
             </div>

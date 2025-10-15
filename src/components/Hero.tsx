@@ -162,20 +162,20 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="space-y-4">
+            <div className="space-y-4 max-w-full">
               <Button 
                 onClick={handleGetReport}
                 size="lg"
-                className="w-full sm:w-auto bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-feature"
+                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-feature"
               >
-                Get Your Business Health Report
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
+                <span className="truncate">Get Your Business Health Report</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 flex-shrink-0" />
               </Button>
               
               {/* Risk-Free Guarantee */}
-              <div className="flex items-center space-x-2 text-xs sm:text-sm font-open-sans text-biz-grey">
-                <Shield className="w-4 h-4 text-biz-green flex-shrink-0" />
-                <span>Trusted by 2,500+ SMBs • Reports generated 24/7 in ~45 minutes</span>
+              <div className="flex items-center space-x-2 text-[10px] sm:text-xs lg:text-sm font-open-sans text-biz-grey max-w-full">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-biz-green flex-shrink-0" />
+                <span className="break-words">Trusted by 2,500+ SMBs • Reports generated 24/7 in ~45 minutes</span>
               </div>
             </div>
           </div>

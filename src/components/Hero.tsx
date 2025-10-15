@@ -166,10 +166,10 @@ const Hero = () => {
               <Button 
                 onClick={handleGetReport}
                 size="lg"
-                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-feature"
+                className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-4 shadow-feature"
               >
-                <span className="truncate">Get Your Business Health Report</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 flex-shrink-0" />
+                <span className="truncate text-center">Get Business Health Report</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1.5 sm:ml-2 flex-shrink-0" />
               </Button>
               
               {/* Risk-Free Guarantee */}

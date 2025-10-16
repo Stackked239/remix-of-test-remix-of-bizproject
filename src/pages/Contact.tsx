@@ -99,17 +99,9 @@ const Contact = () => {
       <section className="pt-24 pb-0 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-card">
-              {/* Background Image */}
-              <img 
-                src="/src/assets/business-health-dashboard.jpg" 
-                alt="Business health dashboard showing analytics of comprehensive business assessment"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              
-              {/* Semi-transparent Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90 flex flex-col items-center justify-center px-6">
+      <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-card">
+        {/* Hero Overlay */}
+        <div className="w-full h-full bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90 flex flex-col items-center justify-center px-6">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 md:mb-6">
                   Get in Touch
                 </h1>

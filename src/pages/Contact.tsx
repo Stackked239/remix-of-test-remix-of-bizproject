@@ -96,18 +96,16 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-0 bg-muted">
+      <section className="pt-40 pb-16 bg-primary">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-card">
-              {/* Background Image */}
-              <img 
-                src="/src/assets/business-health-dashboard.jpg" 
-                alt="Business health dashboard showing analytics of comprehensive business assessment"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+              Get in Touch
+            </h1>
+            <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
+              Have questions about our business health assessments? Need help accessing your reports?<br className="hidden sm:block" />
+              Our expert team is here to support your business growth journey.
+            </p>
           </div>
         </div>
       </section>

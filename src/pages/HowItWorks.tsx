@@ -59,56 +59,13 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* StoryBrand Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-background via-muted to-background overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight animate-fade-in">
-              Stop Guessing About Your Business's Future—Get Actionable Insights Today.
-            </h1>
-            
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              As a busy SMB leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
-            </p>
-            
-            {/* Credibility Builder */}
-            <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <CheckCircle className="w-5 h-5 text-growth" />
-              <p className="text-sm md:text-base text-muted-foreground font-medium">
-                Trusted by 2,500+ SMBs
-              </p>
-            </div>
-            
-            {/* CTA Button */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <a 
-                href="/onboarding"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-elegant hover:shadow-[0_0_40px_hsl(var(--primary)/0.4)]"
-              >
-                Let's Get Started
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="pt-20 pb-16 bg-muted">
+      {/* Hero Section */}
+      <section className="pt-40 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               How BizHealth.ai Works
-            </h2>
+            </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Our proven 4-step process transforms your business insights into actionable growth strategies. 
               From assessment to implementation, we guide you through every step of strengthening your business foundation.

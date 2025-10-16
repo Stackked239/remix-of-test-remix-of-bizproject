@@ -227,7 +227,7 @@ const About = () => {
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <CardContent className="p-8">
-                      <div className="text-5xl font-montserrat font-bold text-biz-teal/20 mb-4">
+                      <div className="text-5xl font-montserrat font-bold text-biz-teal mb-4">
                         {step.number}
                       </div>
                       <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-4">

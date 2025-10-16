@@ -75,7 +75,7 @@ const HowItWorks = () => {
               Stop Guessing About Your Business's Future—Get Actionable Insights Today.
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed animate-fade-in" style={{ fontFamily: 'Open Sans, sans-serif', animationDelay: '0.1s' }}>
-              As a busy SMB leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
+              As a busy business leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
             </p>
             
             {/* CTA Button */}

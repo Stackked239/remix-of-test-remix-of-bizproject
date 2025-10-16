@@ -291,17 +291,17 @@ const Contact = () => {
                 <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
                   <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
                   <div className="space-y-3">
-                    <a href="/pricing" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      View Pricing & Plans
-                    </a>
                     <a href="/how-it-works" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      How Our Assessment Works
+                      How BizHealth.ai Works
+                    </a>
+                    <a href="/pricing" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Pricing & Tier Plans
                     </a>
                     <a href="/blog" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      Business Insights Blog
+                      Business Insights blog
                     </a>
                     <a href="/faqs" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>

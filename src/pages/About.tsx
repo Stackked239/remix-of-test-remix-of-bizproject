@@ -267,11 +267,11 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="animate-fade-in">
-                  <TrendingUp className="w-32 h-32 text-biz-teal/20 mx-auto mb-6" />
+                  <TrendingUp className="w-32 h-32 text-biz-navy mx-auto mb-6" />
                   <h3 className="font-montserrat font-bold text-2xl text-biz-navy text-center mb-4">
                     Your Growth Partner
                   </h3>
-                  <p className="font-open-sans text-lg text-biz-grey leading-relaxed text-center">
+                  <p className="font-open-sans text-lg text-biz-navy leading-relaxed text-center">
                     We're committed to your success because your victory is ours too. Join thousands of SMB leaders who are transforming their businesses with data-driven insights and strategic clarity.
                   </p>
                 </div>

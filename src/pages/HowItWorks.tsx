@@ -78,16 +78,8 @@ const HowItWorks = () => {
               As a busy SMB leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
             </p>
             
-            {/* Credibility Builder */}
-            <div className="flex items-center justify-center gap-3 mb-8 text-white/80 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="p-2 rounded-full bg-white/20">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-sm font-medium">Trusted by 2,500+ businesses.</span>
-            </div>
-            
             {/* CTA Button */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="animate-fade-in mb-8" style={{ animationDelay: '0.2s' }}>
               <a 
                 href="/onboarding" 
                 className="inline-flex items-center justify-center px-8 py-4 bg-growth hover:bg-growth/90 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant"
@@ -95,6 +87,14 @@ const HowItWorks = () => {
               >
                 Let's Get Started
               </a>
+            </div>
+            
+            {/* Credibility Builder */}
+            <div className="flex items-center justify-center gap-3 text-white/80 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="p-2 rounded-full bg-white/20">
+                <Shield className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-sm font-medium">Trusted by 2,500+ businesses.</span>
             </div>
           </div>
         </div>

@@ -81,7 +81,7 @@ const HowItWorks = () => {
             {/* CTA Button */}
             <div className="animate-fade-in mb-8" style={{ animationDelay: '0.2s' }}>
               <a 
-                href="/onboarding" 
+                href="/register" 
                 className="inline-flex items-center justify-center px-8 py-4 bg-growth hover:bg-growth/90 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >

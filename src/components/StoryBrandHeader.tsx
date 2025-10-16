@@ -21,7 +21,7 @@ const StoryBrandHeader = () => {
           
           {/* Subheadline */}
           <p className="font-['Open_Sans'] text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            As an SMB leader juggling cash flow pressures, scaling obstacles, and unseen operational gaps, you need a streamlined AI tool that delivers comprehensive diagnostics and strategies in under an hour, empowering smarter decisions without the guesswork.
+            As an SMB leader juggling cash flow pressures, scaling obstacles, and unseen operational gaps, you need a streamlined tool that delivers comprehensive diagnostics and strategies in under an hour, empowering smarter decisions without the guesswork.
           </p>
           
           {/* CTA Button */}

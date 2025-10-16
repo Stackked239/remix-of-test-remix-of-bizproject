@@ -283,32 +283,34 @@ const Blog = () => {
         <div className="absolute inset-0 bg-primary/70" />
         
         {/* Content Container */}
-        <div className="relative h-full container mx-auto px-6 flex flex-col items-center justify-center">
-          <div className="max-w-4xl w-full text-center space-y-6">
-            {/* Search Bar */}
-            <div className="flex justify-center mb-6">
-              <div className="relative max-w-md w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search blogs, categories, keywords..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background/95 backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary shadow-lg"
-                />
-              </div>
+        <div className="relative h-full container mx-auto px-6 flex flex-col">
+          <div className="flex-1 flex items-center justify-center">
+            <div className="max-w-4xl w-full text-center space-y-6">
+              {/* Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                Business Insights & Analysis
+              </h1>
+              
+              {/* Description Text */}
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
+                of modern business. Learn from our team's decades of consulting experience.
+              </p>
             </div>
-            
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-              Business Insights & Analysis
-            </h1>
-            
-            {/* Description Text */}
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-              Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
-              of modern business. Learn from our team's decades of consulting experience.
-            </p>
+          </div>
+          
+          {/* Search Bar - Bottom of Hero */}
+          <div className="flex justify-center pb-8">
+            <div className="relative max-w-md w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search blogs, categories, keywords..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background/95 backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>

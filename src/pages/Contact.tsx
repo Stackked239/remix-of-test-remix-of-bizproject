@@ -107,17 +107,6 @@ const Contact = () => {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              
-              {/* Semi-transparent Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90 flex flex-col items-center justify-center px-6">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4 md:mb-6">
-                  Get in Touch
-                </h1>
-                <p className="text-base md:text-lg lg:text-xl text-white/95 text-center max-w-3xl leading-relaxed">
-                  Have questions about our business health assessments? Need help accessing your reports?<br className="hidden sm:block" />
-                  Our expert team is here to support your business growth journey.
-                </p>
-              </div>
             </div>
           </div>
         </div>

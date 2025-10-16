@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Users, Target, TrendingUp, Shield, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
@@ -96,15 +97,7 @@ const About = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        {/* Top Banner */}
-        <div className="bg-biz-navy py-3 fixed top-0 left-0 w-full z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-biz-white text-sm font-open-sans">
-              <strong>Stop Guessing, Start Growing</strong> — Your Business Health Matters
-            </p>
-          </div>
-        </div>
-
+        <PromotionalBanner />
         <GlobalNavigation />
 
         <main className="pt-20 pb-16">

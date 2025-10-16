@@ -72,31 +72,6 @@ const Hero = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Trust Indicators Bar */}
-        <div className="pt-8 pb-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {trustIndicators.map((indicator, index) => {
-              const IconComponent = indicator.icon;
-              return (
-                <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
-                  <div className="bg-biz-white/90 rounded-lg p-2 flex-shrink-0">
-                    <IconComponent className="w-5 h-5 text-biz-green" />
-                  </div>
-                  {/* Mobile/Tablet: Show simplified label */}
-                  <div className="block lg:hidden">
-                    <p className="text-xs font-montserrat font-semibold text-biz-navy">{indicator.label}</p>
-                  </div>
-                  {/* Desktop: Show full label and value */}
-                  <div className="hidden lg:block">
-                    <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
-                    <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
           {/* Left Column - Main Content */}
           <div className="space-y-8 relative z-10 px-2 sm:px-0">
@@ -288,7 +263,7 @@ const Hero = () => {
         </div>
 
         {/* Social Proof Stats */}
-        <div className="pb-16">
+        <div className="pb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div>
               <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">20x</p>
@@ -306,6 +281,31 @@ const Hero = () => {
               <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
               <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Report Generation</p>
             </div>
+          </div>
+        </div>
+
+        {/* Trust Indicators Bar - Repositioned to Bottom */}
+        <div className="pb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustIndicators.map((indicator, index) => {
+              const IconComponent = indicator.icon;
+              return (
+                <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
+                  <div className="bg-biz-white/90 rounded-lg p-2 flex-shrink-0">
+                    <IconComponent className="w-5 h-5 text-biz-green" />
+                  </div>
+                  {/* Mobile/Tablet: Show simplified label */}
+                  <div className="block lg:hidden">
+                    <p className="text-xs font-montserrat font-semibold text-biz-navy">{indicator.label}</p>
+                  </div>
+                  {/* Desktop: Show full label and value */}
+                  <div className="hidden lg:block">
+                    <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
+                    <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

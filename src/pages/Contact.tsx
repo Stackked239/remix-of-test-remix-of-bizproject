@@ -299,13 +299,13 @@ const Contact = () => {
                       <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       How Our Assessment Works
                     </a>
-                    <a href="/resources" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                      Free Business Resources
-                    </a>
                     <a href="/blog" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       Business Insights Blog
+                    </a>
+                    <a href="/faqs" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      FAQs
                     </a>
                   </div>
                 </div>

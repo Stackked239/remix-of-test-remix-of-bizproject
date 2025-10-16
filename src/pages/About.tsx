@@ -191,7 +191,7 @@ const About = () => {
           </section>
 
           {/* Team Section */}
-          <section className="py-16 md:py-20 bg-background">
+          <section className="py-8 md:py-12 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
                 <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">

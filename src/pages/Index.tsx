@@ -7,11 +7,13 @@ import Pricing from "@/components/Pricing";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
+import StoryBrandHeader from "@/components/StoryBrandHeader";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <GlobalNavigation />
+      <StoryBrandHeader />
       <Hero />
       <Benefits />
       <HowItWorks />

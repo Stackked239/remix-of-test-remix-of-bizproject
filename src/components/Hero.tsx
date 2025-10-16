@@ -63,7 +63,7 @@ const Hero = () => {
         />
       </div>
 
-      <section className="relative bg-biz-white text-biz-navy overflow-hidden" style={{ paddingTop: '160px' }}>
+      <section className="relative bg-biz-white text-biz-navy overflow-hidden" style={{ paddingTop: '40px' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-muted opacity-90"></div>
       <div className="absolute inset-0">

@@ -239,18 +239,18 @@ const Contact = () => {
               </div>
 
               {/* Company Info */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold mb-6 text-foreground">Company Information</h2>
+              <div className="space-y-6">
+                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
+                  <h2 className="text-2xl font-bold mb-8 text-foreground">Company Information</h2>
                   
                   <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <MapPin className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Headquarters</h3>
-                        <p className="text-muted-foreground">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-foreground mb-2">Headquarters</h3>
+                        <p className="text-muted-foreground leading-relaxed">
                           N. Orange Avenue<br />
                           Orlando, Florida 32801<br />
                           United States
@@ -258,26 +258,26 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <Clock className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
+                        <Clock className="w-6 h-6 text-primary" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Business Hours</h3>
-                        <p className="text-muted-foreground">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-foreground mb-2">Business Hours</h3>
+                        <p className="text-muted-foreground leading-relaxed">
                           Monday - Friday: 9:30 AM - 5:30 PM EDT<br />
                           Saturday & Sunday: Closed
                         </p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <HelpCircle className="w-5 h-5 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
+                        <HelpCircle className="w-6 h-6 text-primary" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Support</h3>
-                        <p className="text-muted-foreground">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-foreground mb-2">Support</h3>
+                        <p className="text-muted-foreground leading-relaxed">
                           24/7 email support<br />
                           Live chat during business hours<br />
                           Emergency support for Enterprise customers
@@ -288,19 +288,23 @@ const Contact = () => {
                 </div>
 
                 {/* Quick Links */}
-                <div className="bg-background rounded-lg p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
-                  <div className="space-y-2">
-                    <a href="/pricing" className="block text-primary hover:text-primary/80 transition-colors">
+                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
+                  <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
+                  <div className="space-y-3">
+                    <a href="/pricing" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       View Pricing & Plans
                     </a>
-                    <a href="/how-it-works" className="block text-primary hover:text-primary/80 transition-colors">
+                    <a href="/how-it-works" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       How Our Assessment Works
                     </a>
-                    <a href="/resources" className="block text-primary hover:text-primary/80 transition-colors">
+                    <a href="/resources" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       Free Business Resources
                     </a>
-                    <a href="/blog" className="block text-primary hover:text-primary/80 transition-colors">
+                    <a href="/blog" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                       Business Insights Blog
                     </a>
                   </div>

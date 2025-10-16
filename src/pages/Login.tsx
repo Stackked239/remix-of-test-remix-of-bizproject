@@ -62,7 +62,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
       <PromotionalBanner />
       <GlobalNavigation />
       

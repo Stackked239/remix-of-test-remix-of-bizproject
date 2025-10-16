@@ -154,7 +154,7 @@ const Register = () => {
                 Create Your Account
               </CardTitle>
               <CardDescription className="font-open-sans text-biz-grey">
-                Join 10,000+ SMBs getting AI-powered business insights
+                Join the 2,500+ SMBs already utilizing BizHealth.ai
               </CardDescription>
             </CardHeader>
             

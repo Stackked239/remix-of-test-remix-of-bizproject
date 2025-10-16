@@ -111,13 +111,6 @@ const HowItWorks = () => {
               Our proven 4-step process transforms your business insights into actionable growth strategies. 
               From assessment to implementation, we guide you through every step of strengthening your business foundation.
             </p>
-            <div className="mt-12">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="AI circuit board representing advanced business analytics technology"
-                className="rounded-xl shadow-elegant mx-auto max-w-3xl w-full"
-              />
-            </div>
           </div>
         </div>
       </section>

@@ -254,25 +254,25 @@ const HowItWorks = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-primary/5">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Ready to Unlock Your Business Potential?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-foreground/80 mb-8">
               Join thousands of business owners who've transformed their operations with data-driven insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/pricing" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 bg-growth hover:bg-growth/90 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant"
               >
                 View Pricing Options
               </a>
               <a 
                 href="mailto:support@bizhealth.ai" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-border bg-background text-foreground font-semibold rounded-lg hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/20 bg-background hover:bg-primary/5 text-foreground font-semibold rounded-lg transition-colors"
               >
                 Have Questions?
               </a>

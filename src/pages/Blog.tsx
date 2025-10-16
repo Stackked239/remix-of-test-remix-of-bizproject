@@ -242,22 +242,18 @@ const Blog = () => {
 
   // Filter and search logic
   const filteredPosts = useMemo(() => {
-    console.log('Blog search - searchTerm:', searchTerm, 'selectedCategory:', selectedCategory);
     let filtered = blogPosts;
 
     // Filter by category (support multiple categories separated by commas)
     if (selectedCategory !== "All Posts") {
-      console.log('Filtering by category:', selectedCategory);
       filtered = filtered.filter(post => {
         const categories = post.category.split(',').map(c => c.trim());
-        console.log('Post:', post.title, '- Categories:', categories, '- Match:', categories.includes(selectedCategory));
         return categories.includes(selectedCategory);
       });
     }
 
     // Filter by search term
     if (searchTerm) {
-      console.log('Filtering by search term:', searchTerm);
       filtered = filtered.filter(post => 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -266,7 +262,6 @@ const Blog = () => {
       );
     }
 
-    console.log('Blog search - filtered results:', filtered.length, 'of', blogPosts.length);
     return filtered;
   }, [selectedCategory, searchTerm]);
 

@@ -237,7 +237,7 @@ const HowItWorks = () => {
               Why Choose BizHealth.ai?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We know SMB struggles—<em>cash-flow stress</em> and <em>blind spots</em>. Our AI-driven assessment delivers clear, peer-benchmarked insights in 20-40 minutes, at a fraction of consulting costs.
+              We understand your struggles—like <em>cash-flow stress</em> and <em>blind spots</em>. Our proprietary AI-driven assessment delivers clear, industry-benchmarked insights in 20-40 minutes, at a fraction of consulting costs.
             </p>
           </div>
           

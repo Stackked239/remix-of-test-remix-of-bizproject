@@ -397,8 +397,15 @@ const Blog = () => {
                   placeholder="Search blog posts..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
+                  className="w-full pl-10 pr-20 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
+                <button
+                  onClick={() => document.activeElement instanceof HTMLElement && document.activeElement.blur()}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
+                >
+                  Search
+                </button>
               </div>
             </div>
 

@@ -97,7 +97,7 @@ const About = () => {
 
       <div className="min-h-screen bg-background">
         {/* Top Banner */}
-        <div className="bg-biz-navy py-2 sticky top-0 z-50">
+        <div className="bg-biz-navy py-3 fixed top-0 left-0 w-full z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-biz-white text-sm font-open-sans">
               <strong>Stop Guessing, Start Growing</strong> — Your Business Health Matters
@@ -107,7 +107,7 @@ const About = () => {
 
         <GlobalNavigation />
 
-        <main className="pt-36 pb-16">
+        <main className="pt-20 pb-16">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-teal/20 text-white py-16 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

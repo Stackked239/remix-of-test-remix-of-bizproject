@@ -79,11 +79,9 @@ const HowItWorks = () => {
             </p>
             
             {/* Credibility Builder */}
-            <div className="flex items-center justify-center gap-2 mb-8 text-white/80 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white" />
-                <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white" />
-                <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white" />
+            <div className="flex items-center justify-center gap-3 mb-8 text-white/80 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="p-2 rounded-full bg-white/20">
+                <Shield className="w-5 h-5 text-white" />
               </div>
               <span className="text-sm font-medium">Trusted by 2,500+ businesses.</span>
             </div>

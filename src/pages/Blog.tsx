@@ -415,7 +415,10 @@ const Blog = () => {
               {categories.map((category, index) => (
                 <button 
                   key={index}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => {
+                    setSelectedCategory(category);
+                    setSearchTerm("");
+                  }}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category 
                       ? 'bg-primary text-white' 

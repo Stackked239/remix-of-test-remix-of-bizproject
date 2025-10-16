@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const StoryBrandHeader = () => {
   return (
-    <section className="bg-gradient-to-br from-background via-muted to-background pt-32 pb-16 px-6 animate-fade-in">
+    <section className="bg-gradient-to-br from-background via-muted to-background pt-40 pb-16 px-6 animate-fade-in" style={{ paddingTop: '180px' }}>
       <div className="container mx-auto max-w-5xl">
         <div className="text-center space-y-6">
           {/* Headline */}

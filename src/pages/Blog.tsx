@@ -18,6 +18,7 @@ import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-vol
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
+import smbTeamHeroImage from "@/assets/smb-team-collaboration-hero.webp";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
@@ -268,11 +269,24 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-24 h-[400px] md:h-[500px] overflow-hidden">
+        {/* Background Image */}
+        <img 
+          src={smbTeamHeroImage} 
+          alt="Team discussing business growth strategies"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+        
+        {/* Semi-transparent Overlay */}
+        <div className="absolute inset-0 bg-primary/70" />
+        
+        {/* Content Container */}
+        <div className="relative h-full container mx-auto px-6 flex flex-col items-center justify-center">
+          <div className="max-w-4xl w-full text-center space-y-6">
             {/* Search Bar */}
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-6">
               <div className="relative max-w-md w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <input
@@ -280,30 +294,21 @@ const Blog = () => {
                   placeholder="Search blogs, categories, keywords..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background/95 backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary shadow-lg"
                 />
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary">
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Business Insights & Analysis
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            
+            {/* Description Text */}
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
               Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
               of modern business. Learn from our team's decades of consulting experience.
             </p>
-            <div className="mt-6">
-              <img 
-                src={businessAnalystImage} 
-                alt="Professional business analyst working on laptop with business health assessment dashboard - SMB data analytics and business intelligence tools for small business growth"
-                className="rounded-xl shadow-elegant mx-auto max-w-xl w-full h-auto"
-                width="600"
-                height="300"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
-            </div>
           </div>
         </div>
       </section>

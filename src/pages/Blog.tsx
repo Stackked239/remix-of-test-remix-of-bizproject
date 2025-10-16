@@ -21,6 +21,7 @@ import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
+import smbCollaborationHero from "@/assets/smb-collaboration-hero.webp";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -268,11 +269,11 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
             {/* Search Bar */}
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-8">
               <div className="relative max-w-md w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <input
@@ -280,29 +281,40 @@ const Blog = () => {
                   placeholder="Search blogs, categories, keywords..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                 />
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary">
-              Business Insights & Analysis
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
-              of modern business. Learn from our team's decades of consulting experience.
-            </p>
-            <div className="mt-6">
-              <img 
-                src={businessAnalystImage} 
-                alt="Professional business analyst working on laptop with business health assessment dashboard - SMB data analytics and business intelligence tools for small business growth"
-                className="rounded-xl shadow-elegant mx-auto max-w-xl w-full h-auto"
-                width="600"
-                height="300"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
+            {/* Hero Image with Overlay */}
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-elegant">
+              <div className="relative h-[400px] md:h-[500px]">
+                <img 
+                  src={smbCollaborationHero} 
+                  alt="Small Business Owner contemplating business growth strategies"
+                  className="w-full h-full object-cover"
+                  width="1920"
+                  height="500"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+                
+                {/* Semi-transparent Overlay */}
+                <div className="absolute inset-0 bg-primary/70 flex flex-col items-center justify-center px-6">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-6 leading-tight">
+                    SMB Growth Insights
+                  </h1>
+                  
+                  <button 
+                    onClick={() => window.scrollTo({ top: 600, behavior: 'smooth' })}
+                    className="group px-8 py-4 bg-[#FFD700] text-primary font-semibold rounded-lg shadow-lg hover:bg-[#FFC700] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                  >
+                    Read Latest Posts
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

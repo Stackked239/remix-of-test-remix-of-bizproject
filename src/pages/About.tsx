@@ -150,17 +150,14 @@ const About = () => {
           </section>
 
           {/* Mission Section */}
-          <section className="py-16 md:py-20 bg-biz-accent">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-biz-navy to-biz-teal">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
-                <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
+                <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-white mb-6">
                   Our Mission
                 </h2>
-                <p className="font-open-sans text-lg text-biz-grey leading-relaxed">
-                  We couldn't stand by. Convicted by the belief that every business deserves a level playing field, we built BizHealth.ai to change that. Our mantra—<strong>"Success is achieved by helping others be successful"</strong>—drives us, rooted in faith, integrity, and a passion to serve.
-                </p>
-                <p className="font-open-sans text-lg text-biz-navy font-semibold mt-4">
-                  We're not just creating a tool; we're igniting a paradigm shift where lack of knowledge or know-how no longer holds you back.
+                <p className="font-open-sans text-lg text-white/90 leading-relaxed">
+                  Empowering SMB leaders with the insights and tools to unlock their business's full potential
                 </p>
               </div>
 

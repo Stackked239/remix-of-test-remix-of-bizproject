@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import heroImage from "@/assets/contact-hero-dashboard.webp";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,8 +97,15 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-primary">
-        <div className="container mx-auto px-6">
+      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img 
+          src={heroImage} 
+          alt="Business health dashboard showing analytics of comprehensive business assessment"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-primary/80"></div>
+        <div className="relative container mx-auto px-6 h-full flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
               Get in Touch

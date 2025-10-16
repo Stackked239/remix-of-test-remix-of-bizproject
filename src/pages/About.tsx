@@ -1,207 +1,326 @@
-import Navigation from "@/components/Navigation";
-import GlobalFooter from "@/components/GlobalFooter";
-import { Users, Target, Award, Brain, Shield, Zap } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import GlobalNavigation from '@/components/GlobalNavigation';
+import GlobalFooter from '@/components/GlobalFooter';
+import { Users, Target, TrendingUp, Shield, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
-      icon: Brain,
-      title: "AI-Powered Intelligence",
-      description: "We leverage cutting-edge artificial intelligence to provide insights that would traditionally require expensive consulting engagements."
+      icon: Heart,
+      title: "Faith & Integrity",
+      description: "Rooted in serving with authenticity and transparency"
     },
     {
       icon: Shield,
-      title: "Trust & Transparency",
-      description: "Your business data is sacred. We maintain the highest standards of security and provide complete transparency in our analysis process."
+      title: "Empowerment",
+      description: "Leveling the playing field for all businesses"
     },
     {
-      icon: Target,
-      title: "Actionable Results",
-      description: "We don't just identify problems—we provide specific, prioritized recommendations that you can implement immediately."
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "Leveraging advanced AI for actionable insights"
     }
   ];
 
-  const team = [
+  const steps = [
     {
-      name: "Dennis Hough",
-      role: "CEO & Co-Founder",
-      bio: "With 30+ years in business strategy and scaling companies.",
-      speciality: "Strategic Planning & Business Growth"
+      number: "01",
+      title: "Quick Self-Assessment",
+      description: "Spend just 20–40 minutes answering targeted questions—no consultants required."
     },
     {
-      name: "Austin Warren",
-      role: "CTO & Co-Founder", 
-      bio: "Decades of experience in business operations & technology integration; Solution minded and an expert in business analytics and technology development & implementation.",
-      speciality: "Technology & Business Operations"
+      number: "02",
+      title: "Comprehensive Insights",
+      description: "Get a detailed report analyzing 12 key areas like sales, operations, finance, leadership, strategy, and technology, with benchmarks against peers."
     },
     {
-      name: "Scott Homan",
-      role: "Director of Client Experience",
-      bio: "Former business owner & seasoned business leader with an eye & knack for creating exceptional client engagement.",
-      speciality: "Client Relations & Business Leadership"
+      number: "03",
+      title: "Tailored Reports for Every Level",
+      description: "Dive deep with the Owner's Report, empower your team with Managers' and Employees' Reports, or get high-level overviews in the Executive Summary—all designed for how you communicate and act at each role."
     }
-  ];
-
-  const stats = [
-    { number: "10,000+", label: "Businesses Analyzed" },
-    { number: "85%", label: "Report Implementation Rate" },
-    { number: "94%", label: "Customer Satisfaction" },
-    { number: "3.2x", label: "Average ROI Improvement" }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
-              About BizHealth.ai
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We're democratizing business intelligence by making enterprise-level analysis accessible to every business owner. 
-              Our mission is to help small and mid-size businesses thrive through data-driven insights.
+    <>
+      <Helmet>
+        <title>About Us - BizHealth.ai | Stop Guessing, Start Growing</title>
+        <meta 
+          name="description" 
+          content="BizHealth.ai levels the playing field for SMB leaders with AI-powered business health diagnostics. Discover our mission to help small businesses unlock growth with comprehensive business intelligence tools." 
+        />
+        <meta 
+          name="keywords" 
+          content="SMB growth tools, business health diagnostic, small business analytics, SMB decision-makers, business intelligence for SMBs, operational efficiency tools" 
+        />
+        <link rel="canonical" href="https://bizhealth.ai/about" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bizhealth.ai/about" />
+        <meta property="og:title" content="About BizHealth.ai - Rooted in Transformation" />
+        <meta property="og:description" content="Empowering SMB leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
+        <meta property="og:image" content="https://bizhealth.ai/logo-512.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://bizhealth.ai/about" />
+        <meta property="twitter:title" content="About BizHealth.ai - Stop Guessing, Start Growing" />
+        <meta property="twitter:description" content="Discover how BizHealth.ai empowers SMB leaders with comprehensive business diagnostics and strategic growth tools." />
+        <meta property="twitter:image" content="https://bizhealth.ai/logo-512.jpg" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About BizHealth.ai",
+            "description": "BizHealth.ai provides AI-powered business health diagnostics for SMB leaders, offering comprehensive insights and strategic guidance.",
+            "url": "https://bizhealth.ai/about",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "description": "AI-powered business health diagnostic platform for small and mid-sized businesses",
+              "foundingDate": "2024",
+              "founder": {
+                "@type": "Person",
+                "name": "BizHealth.ai Founders"
+              },
+              "slogan": "Stop Guessing, Start Growing"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        {/* Top Banner */}
+        <div className="bg-biz-navy py-2 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-biz-white text-sm font-open-sans">
+              <strong>Stop Guessing, Start Growing</strong> — Your Business Health Matters
             </p>
-            <div className="mt-8">
-              <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="Professional team collaborating on business strategy with laptops"
-                className="rounded-xl shadow-card mx-auto max-w-3xl w-full"
-              />
-            </div>
           </div>
         </div>
-      </section>
 
-      {/* Our Story */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Story</h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    BizHealth.ai was born from a simple observation: traditional business consulting was pricing out the very businesses that needed it most. Small and mid-size companies were struggling with critical decisions while expensive consulting services remained out of reach.
+        <GlobalNavigation />
+
+        <main className="pt-36 pb-16">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-teal/20 text-white py-16 md:py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-4xl mx-auto animate-fade-in">
+                <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+                  About Us: Rooted in Transformation, not Transactions
+                </h1>
+                <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
+                  Empowering SMB leaders with the insights and tools to unlock their business's full potential
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Our Story Section */}
+          <section className="py-16 md:py-20 bg-background">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="animate-fade-in">
+                  <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
+                    Our Story Begins with You
+                  </h2>
+                  <div className="space-y-4 font-open-sans text-base md:text-lg text-biz-grey leading-relaxed">
+                    <p>
+                      As a small or mid-sized business owner, you're in the trenches every day—pouring your heart into building something meaningful. But the challenges are relentless: cash-flow uncertainties keep you up at night, scalability feels like an elusive dream after those first few years, and leadership blind spots creep in when you're stretched thin on time and resources.
+                    </p>
+                    <p>
+                      You know your business has untapped potential, but stepping back to assess it fully? That's a luxury most smaller businesses can't afford—until now.
+                    </p>
+                  </div>
+                </div>
+                <div className="animate-fade-in">
+                  <Card className="bg-biz-accent border-biz-teal/20 shadow-lg hover:shadow-xl transition-shadow">
+                    <CardContent className="p-8">
+                      <Users className="w-16 h-16 text-biz-teal mb-4" />
+                      <h3 className="font-montserrat font-bold text-2xl text-biz-navy mb-4">
+                        We Get It—We've Been There
+                      </h3>
+                      <p className="font-open-sans text-biz-grey leading-relaxed">
+                        At BizHealth.ai, our journey started because we've lived your story. Our co-founders, seasoned entrepreneurs and business leaders, saw how larger corporations monopolize the best tools, analyses, and expertise, leaving businesses like yours at a disadvantage. Why should big players have all the advantages while you juggle everything with limited bandwidth?
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Mission Section */}
+          <section className="py-16 md:py-20 bg-biz-accent">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
+                <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
+                  Our Mission
+                </h2>
+                <p className="font-open-sans text-lg text-biz-grey leading-relaxed">
+                  We couldn't stand by. Convicted by the belief that every business deserves a level playing field, we built BizHealth.ai to change that. Our mantra—<strong>"Success is achieved by helping others be successful"</strong>—drives us, rooted in faith, integrity, and a passion to serve.
+                </p>
+                <p className="font-open-sans text-lg text-biz-navy font-semibold mt-4">
+                  We're not just creating a tool; we're igniting a paradigm shift where lack of knowledge or know-how no longer holds you back.
+                </p>
+              </div>
+
+              {/* Core Values */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {values.map((value, index) => {
+                  const IconComponent = value.icon;
+                  return (
+                    <Card 
+                      key={index}
+                      className="bg-white border-biz-teal/20 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <CardContent className="p-8 text-center">
+                        <IconComponent className="w-12 h-12 text-biz-teal mx-auto mb-4" />
+                        <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-3">
+                          {value.title}
+                        </h3>
+                        <p className="font-open-sans text-biz-grey leading-relaxed">
+                          {value.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Team Section */}
+          <section className="py-16 md:py-20 bg-background">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
+                <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
+                  Meet Your Trusted Guides
+                </h2>
+                <p className="font-open-sans text-lg text-biz-grey leading-relaxed">
+                  We're a team of real-world experts who've walked in your shoes: business owners, former C-suite executives (CEOs, COOs, CFOs), consultants, tech developers, financial analysts, sales and marketing pros, operations leaders, HR managers, serial entrepreneurs, and global scaling strategists.
+                </p>
+                <p className="font-open-sans text-lg text-biz-grey leading-relaxed mt-4">
+                  We've owned, operated, and grown businesses at every level, so we understand the unique needs of owners, leaders, managers, and teams. That's why BizHealth.ai isn't a generic AI prompt—it's a proprietary platform leveraging advanced AI to deliver actionable, comprehensive business health diagnostics tailored to your reality.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* How We Guide You Section */}
+          <section className="py-16 md:py-20 bg-gradient-to-br from-biz-teal/10 to-biz-accent">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
+                <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
+                  Our Plan to Guide You to Success
+                </h2>
+                <p className="font-open-sans text-lg text-biz-grey leading-relaxed">
+                  We make it simple to uncover your business's true health and unlock its full potential:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                {steps.map((step, index) => (
+                  <Card 
+                    key={index}
+                    className="bg-white border-biz-teal/20 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <CardContent className="p-8">
+                      <div className="text-5xl font-montserrat font-bold text-biz-teal/20 mb-4">
+                        {step.number}
+                      </div>
+                      <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-4">
+                        {step.title}
+                      </h3>
+                      <p className="font-open-sans text-biz-grey leading-relaxed">
+                        {step.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 max-w-4xl mx-auto animate-fade-in">
+                <p className="font-open-sans text-lg text-biz-grey leading-relaxed mb-6">
+                  This isn't about overwhelming data; it's about actionable clarity that transforms uncertainty into confident growth. And we're just getting started—our vision is to evolve BizHealth.ai into a full SMB ecosystem, offering essential tools, leadership resources, growth strategies, and even hands-on mentoring or consulting, all shaped by your feedback and needs.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Potential Section */}
+          <section className="py-16 md:py-20 bg-background">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="animate-fade-in">
+                  <Card className="bg-gradient-to-br from-biz-navy to-biz-teal text-white shadow-xl">
+                    <CardContent className="p-8 md:p-12">
+                      <Target className="w-16 h-16 mb-6" />
+                      <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-6">
+                        Avoid the Pitfalls, Embrace Your Potential
+                      </h2>
+                      <p className="font-open-sans text-lg leading-relaxed">
+                        Without the right insights, businesses stall, opportunities slip away, and that "kingdom-sized" potential remains out of reach. But with BizHealth.ai as your guide, you'll avoid those traps—gaining the knowledge to scale sustainably, boost efficiency, and achieve breakthroughs you didn't think possible.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="animate-fade-in">
+                  <TrendingUp className="w-32 h-32 text-biz-teal/20 mx-auto mb-6" />
+                  <h3 className="font-montserrat font-bold text-2xl text-biz-navy text-center mb-4">
+                    Your Growth Partner
+                  </h3>
+                  <p className="font-open-sans text-lg text-biz-grey leading-relaxed text-center">
+                    We're committed to your success because your victory is ours too. Join thousands of SMB leaders who are transforming their businesses with data-driven insights and strategic clarity.
                   </p>
-                  <p>
-                    Our founders, having worked in top-tier consulting firms and successful startups, saw an opportunity to leverage artificial intelligence to democratize business intelligence. We spent three years developing our proprietary assessment methodology, drawing from thousands of real business cases and industry best practices.
-                  </p>
-                  <p>
-                    Today, we're proud to serve over 10,000 businesses worldwide, helping them identify opportunities, mitigate risks, and scale sustainably. Our AI-powered platform delivers insights that would traditionally cost tens of thousands of dollars—for a fraction of the price.
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-full max-w-md h-96 rounded-2xl bg-muted border border-border flex items-center justify-center">
-                  <Users className="w-32 h-32 text-primary/20" />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Values */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Values</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide every decision we make and every product we build
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex p-4 rounded-xl bg-background shadow-card mb-6 border border-border/50">
-                  <value.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+          {/* CTA Section */}
+          <section className="py-16 md:py-20 bg-gradient-to-br from-biz-navy via-biz-teal to-biz-navy text-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+              <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
+                Ready to Write Your Success Story?
+              </h2>
+              <p className="font-open-sans text-lg md:text-xl mb-8 leading-relaxed">
+                Stop guessing and start growing. Take the first step today—complete your BizHealth.ai assessment and discover the path forward. We're here to help you succeed, because your victory is ours too.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/register">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-biz-navy hover:bg-white/90 font-open-sans font-semibold px-8 py-6 text-lg transition-all hover:scale-105 shadow-lg"
+                  >
+                    Start Your Assessment
+                  </Button>
+                </Link>
+                <Link to="/how-it-works">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-biz-navy font-open-sans font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
+                  >
+                    Learn How It Works
+                  </Button>
+                </Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold mb-2 text-primary">
-                  {stat.number}
-                </div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Meet Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experienced professionals who've dedicated their careers to helping businesses succeed
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (
-              <div key={index} className="text-center bg-background rounded-lg p-8 border border-border">
-                <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{member.name}</h3>
-                <p className="text-primary font-medium mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{member.bio}</p>
-                <p className="text-xs text-growth font-medium">{member.speciality}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Statement */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex p-4 rounded-xl bg-primary/10 mb-8">
-              <Award className="w-12 h-12 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Mission</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              To empower every business owner with the insights they need to make confident, data-driven decisions. 
-              We believe that access to quality business intelligence shouldn't be limited by budget—it should be a fundamental right for any entrepreneur working to build something meaningful.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/pricing" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105"
-              >
-                Experience Our Platform
-              </a>
-              <a 
-                href="mailto:support@bizhealth.ai" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-border bg-background text-foreground font-semibold rounded-lg hover:bg-muted transition-colors"
-              >
-                Email Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </main>
 
-      <GlobalFooter />
-    </div>
+        <GlobalFooter />
+      </div>
+    </>
   );
 };
 

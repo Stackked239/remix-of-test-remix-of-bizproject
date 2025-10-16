@@ -107,6 +107,14 @@ const GlobalFooter = () => {
                     </li>
                     <li>
                       <Link 
+                        to="/about" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
                         to="/contact" 
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                       >

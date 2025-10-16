@@ -230,6 +230,14 @@ const GlobalNavigation = () => {
                 Blog
               </Link>
               <Link 
+                to="/about" 
+                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
+                  isActiveRoute('/about') ? 'text-biz-green' : 'text-biz-navy'
+                }`}
+              >
+                About
+              </Link>
+              <Link 
                 to="/contact" 
                 className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
                   isActiveRoute('/contact') ? 'text-biz-green' : 'text-biz-navy'
@@ -335,6 +343,9 @@ const GlobalNavigation = () => {
               </div>
               <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Blog
+              </Link>
+              <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                About
               </Link>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Contact

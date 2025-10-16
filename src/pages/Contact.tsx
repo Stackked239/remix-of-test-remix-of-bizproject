@@ -143,7 +143,7 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-background rounded-lg p-8 border border-border">
+              <div className="bg-background rounded-lg p-8 pb-12 border border-border">
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Send Us A Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">

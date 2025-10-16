@@ -106,7 +106,7 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto animate-fade-in">
                 <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-                  About Us: Rooted in Transformation, not Transactions
+                  Rooted in Transformation, not Transactions
                 </h1>
                 <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
                   Empowering SMB leaders with the insights and tools to unlock their business's full potential

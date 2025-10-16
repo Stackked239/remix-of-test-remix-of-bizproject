@@ -157,7 +157,10 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="font-open-sans text-lg text-white/90 leading-relaxed">
-                  Empowering SMB leaders with the insights and tools to unlock their business's full potential
+                  We couldn't stand by. Convicted by the belief that every business deserves a level playing field, we built BizHealth.ai to change that. Our mantra—<strong>"Success is achieved by helping others be successful"</strong>—drives us, rooted in faith, integrity, and a passion to serve.
+                </p>
+                <p className="font-open-sans text-lg text-white font-semibold mt-4">
+                  We're not just creating a tool; we're igniting a paradigm shift where lack of knowledge or know-how no longer holds you back.
                 </p>
               </div>
 

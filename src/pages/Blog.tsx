@@ -242,6 +242,7 @@ const Blog = () => {
 
   // Filter and search logic
   const filteredPosts = useMemo(() => {
+    console.log('Blog search - searchTerm:', searchTerm, 'selectedCategory:', selectedCategory);
     let filtered = blogPosts;
 
     // Filter by category (support multiple categories separated by commas)
@@ -261,8 +262,9 @@ const Blog = () => {
       );
     }
 
+    console.log('Blog search - filtered results:', filtered.length, 'of', blogPosts.length);
     return filtered;
-  }, [blogPosts, selectedCategory, searchTerm]);
+  }, [selectedCategory, searchTerm]);
 
   return (
     <div className="min-h-screen bg-background">

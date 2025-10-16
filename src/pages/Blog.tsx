@@ -247,13 +247,17 @@ const Blog = () => {
 
     // Filter by category (support multiple categories separated by commas)
     if (selectedCategory !== "All Posts") {
-      filtered = filtered.filter(post => 
-        post.category.split(',').map(c => c.trim()).includes(selectedCategory)
-      );
+      console.log('Filtering by category:', selectedCategory);
+      filtered = filtered.filter(post => {
+        const categories = post.category.split(',').map(c => c.trim());
+        console.log('Post:', post.title, '- Categories:', categories, '- Match:', categories.includes(selectedCategory));
+        return categories.includes(selectedCategory);
+      });
     }
 
     // Filter by search term
     if (searchTerm) {
+      console.log('Filtering by search term:', searchTerm);
       filtered = filtered.filter(post => 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||

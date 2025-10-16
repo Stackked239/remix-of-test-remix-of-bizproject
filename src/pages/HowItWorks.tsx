@@ -85,7 +85,7 @@ const HowItWorks = () => {
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white" />
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white" />
               </div>
-              <span className="text-sm font-medium">Trusted by 2,500+ SMBs</span>
+              <span className="text-sm font-medium">Trusted by 2,500+ businesses.</span>
             </div>
             
             {/* CTA Button */}

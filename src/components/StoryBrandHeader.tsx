@@ -35,10 +35,26 @@ const StoryBrandHeader = () => {
             </Button>
           </div>
           
-          {/* Credibility Badge */}
-          <div className="pt-6 flex items-center justify-center gap-2 text-sm text-white/80 bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10 inline-flex mx-auto">
-            <Shield className="h-4 w-4 text-biz-green" />
-            <span className="font-['Open_Sans']">Empowering 2,500+ SMBs Worldwide</span>
+          {/* Social Proof Stats - Repositioned from Hero */}
+          <div className="pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
+              <div>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">20x</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Average ROI</p>
+              </div>
+              <div>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">SMBs Served</p>
+              </div>
+              <div>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">99%</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Accuracy Rate</p>
+              </div>
+              <div>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Report Generation</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

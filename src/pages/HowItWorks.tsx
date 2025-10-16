@@ -44,14 +44,14 @@ const HowItWorks = () => {
       description: "Complete questionnaire in 20-40 minutes depending on your chosen tier"
     },
     {
-      icon: Shield,
-      title: "Secure & Confidential", 
-      description: "Enterprise-grade security with full data encryption and privacy protection"
-    },
-    {
       icon: BarChart3,
       title: "Data-Driven Insights",
       description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices"
+    },
+    {
+      icon: Shield,
+      title: "Secure & Confidential", 
+      description: "Enterprise-grade security with full data encryption and privacy protection"
     }
   ];
 

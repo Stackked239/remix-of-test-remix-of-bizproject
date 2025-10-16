@@ -72,7 +72,7 @@ const HowItWorks = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Stop Guessing About Your Business's Future—Get Actionable Insights Today.
+              Stop Guessing About the Future of Your Business—Get Actionable Insights Today.
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed animate-fade-in" style={{ fontFamily: 'Open Sans, sans-serif', animationDelay: '0.1s' }}>
               As a busy business leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.

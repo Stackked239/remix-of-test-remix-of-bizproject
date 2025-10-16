@@ -102,7 +102,7 @@ const About = () => {
 
         <main className="pt-20 pb-16">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-teal/20 text-white py-16 md:py-24">
+          <section className="bg-gradient-to-br from-biz-navy to-biz-green text-white py-16 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto animate-fade-in">
                 <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">

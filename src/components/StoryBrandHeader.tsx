@@ -16,7 +16,7 @@ const StoryBrandHeader = () => {
           {/* Headline */}
           <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Break Free from Business Uncertainty—
-            <span className="text-biz-green block mt-2">Unlock Growth with Proven Insights.</span>
+            <span className="text-white block mt-2">Unlock Growth with Proven Insights.</span>
           </h1>
           
           {/* Subheadline */}
@@ -39,15 +39,15 @@ const StoryBrandHeader = () => {
           <div className="pt-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">20x</p>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-white">20x</p>
                 <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Average ROI</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-white">2,500+</p>
                 <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">SMBs Served</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-white">~45 min.</p>
                 <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Report Generation</p>
               </div>
             </div>

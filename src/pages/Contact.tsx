@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
@@ -94,25 +95,46 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact BizHealth.ai | SMB Growth Support</title>
+        <meta 
+          name="description" 
+          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
+        />
+        <meta property="og:title" content="Contact BizHealth.ai | SMB Growth Support" />
+        <meta 
+          property="og:description" 
+          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
+        />
+        <meta name="twitter:title" content="Contact BizHealth.ai | SMB Growth Support" />
+        <meta 
+          name="twitter:description" 
+          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
+        />
+      </Helmet>
+
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         <img 
           src={heroImage} 
-          alt="Business health dashboard showing analytics of comprehensive business assessment"
+          alt="Compass for business growth - SMB business support and AI business assessment dashboard"
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-primary/80"></div>
-        <div className="relative container mx-auto px-6 h-full flex items-center justify-center">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
-              Get in Touch
+        <div className="relative container mx-auto px-4 sm:px-6 h-full flex items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+              Connect with Our Experts
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
-              Have questions about our business health assessments? Need help accessing your reports?<br className="hidden sm:block" />
-              Our expert team is here to support your business growth journey.
+            <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto mb-4">
+              <em className="not-italic">Have questions about our business health assessments? Need help accessing your reports?</em>
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
+              Our team of experts are here to support your business growth journey.
             </p>
           </div>
         </div>

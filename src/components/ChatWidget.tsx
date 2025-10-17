@@ -64,23 +64,32 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('bizhealth-chat', {
-        body: { 
-          messages: [...messages, userMessage].map(m => ({
-            role: m.role,
-            content: m.content
-          }))
-        }
+      // Call edge function directly via fetch for reliability
+      const FUNCTION_URL = 'https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/bizhealth-chat';
+      const PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg';
+
+      const resp = await fetch(FUNCTION_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage].map(m => ({ role: m.role, content: m.content }))
+        }),
       });
 
-      if (error) {
-        if (error.message?.includes('429')) {
+      if (!resp.ok) {
+        if (resp.status === 429) {
           toast.error('Too many requests. Please try again in a moment.');
-        } else if (error.message?.includes('402')) {
+        } else if (resp.status === 402) {
           toast.error('Service temporarily unavailable. Please try again later.');
         }
-        throw error;
+        const errData = await resp.json().catch(() => ({}));
+        throw new Error(errData.error || `Request failed with status ${resp.status}`);
       }
+
+      const data = await resp.json();
 
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -119,7 +128,7 @@ export default function ChatWidget() {
     return (
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-[60px] w-[60px] rounded-full shadow-lg text-white p-0 bg-gradient-to-br from-[#212653] to-[#969423] animate-[gradient_8s_ease_infinite] bg-[length:200%_200%] hover:shadow-xl transition-shadow"
+        className="fixed bottom-6 right-6 h-[60px] w-[60px] rounded-full shadow-elegant text-white p-0 bg-gradient-to-br from-biz-navy to-biz-green animate-gradient bg-[length:200%_200%] hover:shadow-xl transition-shadow"
         aria-label="Open chat"
       >
         <MessageCircle className="h-7 w-7" />

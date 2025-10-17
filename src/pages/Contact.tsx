@@ -131,7 +131,7 @@ const Contact = () => {
               Connect with Our Experts
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
-              <em className="not-italic">Have questions about our business health assessments? Need help accessing your reports?</em> Our team of experts are here to support your business growth journey.
+              <em>Have questions about our business health assessments? Need help accessing your reports?</em> Our team of experts are here to support your business growth journey.
             </p>
           </div>
         </div>

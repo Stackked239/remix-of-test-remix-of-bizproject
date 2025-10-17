@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import OrganizationSchema from "@/components/OrganizationSchema";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
@@ -94,24 +95,31 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Helmet>
-        <title>Contact BizHealth.ai | SMB Growth Support</title>
+        <title>Contact Us | BizHealth.ai – Stop Guessing. Start Growing.</title>
         <meta 
           name="description" 
           content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
         />
+        <link rel="canonical" href="https://www.bizhealth.ai/contact" />
         <meta property="og:title" content="Contact BizHealth.ai | SMB Growth Support" />
         <meta 
           property="og:description" 
           content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
         />
+        <meta property="og:url" content="https://www.bizhealth.ai/contact" />
+        <meta property="og:image" content="https://www.bizhealth.ai/logo-512.jpg" />
         <meta name="twitter:title" content="Contact BizHealth.ai | SMB Growth Support" />
         <meta 
           name="twitter:description" 
           content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
         />
+        <meta name="twitter:image" content="https://www.bizhealth.ai/logo-512.jpg" />
       </Helmet>
+      <OrganizationSchema />
+
+      <div className="min-h-screen bg-background">
 
       <Navigation />
       
@@ -355,7 +363,8 @@ const Contact = () => {
       </section>
 
       <GlobalFooter />
-    </div>
+      </div>
+    </>
   );
 };
 

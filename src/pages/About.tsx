@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import OrganizationSchema from '@/components/OrganizationSchema';
 import { Users, Target, TrendingUp, Shield, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
@@ -57,21 +58,21 @@ const About = () => {
           name="keywords" 
           content="SMB growth tools, business health diagnostic, small business analytics, SMB decision-makers, business intelligence for SMBs, operational efficiency tools" 
         />
-        <link rel="canonical" href="https://bizhealth.ai/about" />
+        <link rel="canonical" href="https://www.bizhealth.ai/about" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bizhealth.ai/about" />
+        <meta property="og:url" content="https://www.bizhealth.ai/about" />
         <meta property="og:title" content="About BizHealth.ai - Rooted in Transformation" />
         <meta property="og:description" content="Empowering SMB leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
-        <meta property="og:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="og:image" content="https://www.bizhealth.ai/logo-512.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://bizhealth.ai/about" />
+        <meta property="twitter:url" content="https://www.bizhealth.ai/about" />
         <meta property="twitter:title" content="About BizHealth.ai - Stop Guessing, Start Growing" />
         <meta property="twitter:description" content="Discover how BizHealth.ai empowers SMB leaders with comprehensive business diagnostics and strategic growth tools." />
-        <meta property="twitter:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="twitter:image" content="https://www.bizhealth.ai/logo-512.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -95,6 +96,7 @@ const About = () => {
           })}
         </script>
       </Helmet>
+      <OrganizationSchema />
 
       <div className="min-h-screen bg-background">
         <PromotionalBanner />

@@ -130,11 +130,8 @@ const Contact = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
               Connect with Our Experts
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto mb-4">
-              <em className="not-italic">Have questions about our business health assessments? Need help accessing your reports?</em>
-            </p>
             <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
-              Our team of experts are here to support your business growth journey.
+              <em className="not-italic">Have questions about our business health assessments? Need help accessing your reports?</em> Our team of experts are here to support your business growth journey.
             </p>
           </div>
         </div>

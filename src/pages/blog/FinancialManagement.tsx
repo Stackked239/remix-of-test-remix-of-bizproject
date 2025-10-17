@@ -3,11 +3,34 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
 
 const FinancialManagement = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Financial Management Insights | BizHealth.ai</title>
+        <meta name="description" content="Master financial planning, cash flow management, and business finance strategies for sustainable SMB growth." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/financial-management" />
+        <meta property="og:title" content="Financial Management Insights" />
+        <meta property="og:description" content="Master financial planning and cash flow management for SMBs." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/financial-management" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Financial Management Insights",
+            "description": "Master financial planning, cash flow management, and business finance strategies for SMB growth.",
+            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
+            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
+            "datePublished": "2025-09-12",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/financial-management" }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

@@ -3,97 +3,39 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 
 const DailyGrindFixes = () => {
-  useEffect(() => {
-    // Update document title and meta tags for SEO
-    document.title = "Daily Grind Fixes: Food Business Operations Tips 2025 | BizHealth.ai";
-    
-    // Meta description
-    const metaDescription = document.querySelector('meta[name="description"]') || document.createElement('meta');
-    metaDescription.setAttribute('name', 'description');
-    metaDescription.setAttribute('content', 'Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance—unlock sustainable growth now!');
-    if (!document.querySelector('meta[name="description"]')) {
-      document.head.appendChild(metaDescription);
-    }
-
-    // Keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
-    metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', 'food business operations, early-stage food business, restaurant operations, food startup tips, inventory management food, supply chain food business, food business scaling, SBA food business benchmarks');
-    if (!document.querySelector('meta[name="keywords"]')) {
-      document.head.appendChild(metaKeywords);
-    }
-
-    // Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
-    ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'Daily Grind Fixes: Food Business Operations Tips 2025');
-    if (!document.querySelector('meta[property="og:title"]')) {
-      document.head.appendChild(ogTitle);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
-    ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth.');
-    if (!document.querySelector('meta[property="og:description"]')) {
-      document.head.appendChild(ogDescription);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
-    ogImage.setAttribute('property', 'og:image');
-    ogImage.setAttribute('content', `${window.location.origin}${dailyGrindImage}`);
-    if (!document.querySelector('meta[property="og:image"]')) {
-      document.head.appendChild(ogImage);
-    }
-
-    // JSON-LD structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
-      "description": "Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth.",
-      "image": `${window.location.origin}${dailyGrindImage}`,
-      "author": {
-        "@type": "Organization",
-        "name": "BizHealth Research Team",
-        "url": "https://bizhealth.ai"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "BizHealth.ai",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://bizhealth.ai/logo.png"
-        }
-      },
-      "datePublished": "2025-09-25",
-      "dateModified": "2025-09-25",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": `${window.location.origin}/blog/daily-grind-fixes`
-      },
-      "articleSection": "Operations",
-      "keywords": ["food business operations", "early-stage food business", "restaurant operations", "food startup tips", "inventory management", "supply chain management"]
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup structured data script on unmount
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript && existingScript.textContent === JSON.stringify(structuredData)) {
-        document.head.removeChild(existingScript);
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Daily Grind Fixes: Food Business Operations Tips 2025 | BizHealth.ai</title>
+        <meta name="description" content="Transform your early-stage food business with smart operational strategies. Master inventory, supply chain, and lifestyle balance for sustainable growth." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/daily-grind-fixes" />
+        <meta property="og:title" content="Daily Grind Fixes: Food Business Operations Tips" />
+        <meta property="og:description" content="Smart operational strategies for early-stage food businesses." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/daily-grind-fixes" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.bizhealth.ai/assets/daily-grind-food-business-operations.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Daily Grind Fixes: Food Business Ops" />
+        <meta name="twitter:description" content="Operational strategies for early-stage food businesses." />
+        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/daily-grind-food-business-operations.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
+            "description": "Transform your early-stage food business with smart operational strategies for sustainable growth.",
+            "image": "https://www.bizhealth.ai/assets/daily-grind-food-business-operations.jpg",
+            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
+            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
+            "datePublished": "2025-09-25",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/daily-grind-fixes" }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

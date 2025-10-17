@@ -3,11 +3,41 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 
 const Operations = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Operations Insights | BizHealth.ai</title>
+        <meta name="description" content="Streamline business operations with proven strategies, process optimization, and operational excellence frameworks." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/operations" />
+        <meta property="og:title" content="Operations Insights" />
+        <meta property="og:description" content="Streamline your business operations with proven strategies." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/operations" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Operations Insights",
+            "description": "Streamline your business operations with proven strategies and process optimization techniques.",
+            "author": {
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" }
+            },
+            "datePublished": "2025-09-12",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/operations" }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

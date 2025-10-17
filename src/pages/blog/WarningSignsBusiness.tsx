@@ -3,12 +3,53 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const WarningSignsBusiness = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>5 Warning Signs Your Business Needs Immediate Attention | BizHealth.ai</title>
+        <meta name="description" content="Discover early indicators that suggest your business may be heading for trouble and what you can do about them." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/warning-signs-business" />
+        <meta property="og:title" content="5 Warning Signs Your Business Needs Immediate Attention" />
+        <meta property="og:description" content="Early indicators that your business needs immediate attention and corrective action." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/warning-signs-business" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.bizhealth.ai/assets/business-warning-signs-management.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="5 Warning Signs Your Business Needs Attention" />
+        <meta name="twitter:description" content="Early indicators your business may be heading for trouble." />
+        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/business-warning-signs-management.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "5 Warning Signs Your Business Needs Immediate Attention",
+            "description": "Discover the early indicators that suggest your business may be heading for trouble and what you can do about them.",
+            "image": "https://www.bizhealth.ai/assets/business-warning-signs-management.jpg",
+            "author": {
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.bizhealth.ai/logo-512.jpg"
+              }
+            },
+            "datePublished": "2025-09-12",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.bizhealth.ai/blog/warning-signs-business"
+            }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

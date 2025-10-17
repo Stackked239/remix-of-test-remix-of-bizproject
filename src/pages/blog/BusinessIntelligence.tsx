@@ -3,11 +3,49 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 
 const BusinessIntelligence = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Business Intelligence Insights | BizHealth.ai</title>
+        <meta name="description" content="Harness data-driven decision making with expert insights on analytics, reporting, and business intelligence tools for SMBs." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/business-intelligence" />
+        <meta property="og:title" content="Business Intelligence Insights | BizHealth.ai" />
+        <meta property="og:description" content="Expert insights on analytics, reporting, and business intelligence tools." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/business-intelligence" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Business Intelligence Insights" />
+        <meta name="twitter:description" content="Harness data-driven decision making with expert insights." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Business Intelligence Insights",
+            "description": "Harness the power of data-driven decision making with expert insights on analytics, reporting, and business intelligence tools.",
+            "author": {
+              "@type": "Organization",
+              "name": "BizHealth.ai Research Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "BizHealth.ai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.bizhealth.ai/logo-512.jpg"
+              }
+            },
+            "datePublished": "2025-09-12",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.bizhealth.ai/blog/business-intelligence"
+            }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

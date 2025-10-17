@@ -3,12 +3,35 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 
 const RiskManagement = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Risk Management Insights | BizHealth.ai</title>
+        <meta name="description" content="Identify, assess, and mitigate business risks with proven risk management frameworks and early warning strategies." />
+        <link rel="canonical" href="https://www.bizhealth.ai/blog/risk-management" />
+        <meta property="og:title" content="Risk Management Insights" />
+        <meta property="og:description" content="Identify and mitigate business risks with proven frameworks." />
+        <meta property="og:url" content="https://www.bizhealth.ai/blog/risk-management" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Risk Management Insights",
+            "description": "Identify, assess, and mitigate business risks with proven risk management frameworks.",
+            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
+            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
+            "datePublished": "2025-09-12",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/risk-management" }
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

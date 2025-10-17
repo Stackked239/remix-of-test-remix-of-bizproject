@@ -129,12 +129,12 @@ export default function ChatWidget() {
 
   return (
     <div 
-      className="fixed bottom-6 right-6 w-[380px] max-h-[calc(100vh-10rem)] bg-white rounded-xl shadow-2xl flex flex-col z-[80] md:w-[380px] sm:w-full sm:max-h-[calc(100vh-6rem)] sm:bottom-4 sm:right-0 sm:left-0 sm:mx-auto sm:rounded-xl"
+      className="fixed bottom-6 right-6 w-[380px] max-h-[calc(100vh-10rem)] bg-white rounded-xl shadow-2xl flex flex-col z-[80] sm:w-[90vw] sm:max-h-[calc(100vh-8rem)]"
       role="region"
       aria-label="Chat widget"
     >
       {/* Header */}
-      <div className="bg-[#212653] text-white p-4 rounded-t-xl flex items-center justify-between sm:rounded-none">
+      <div className="bg-[#212653] text-white p-4 rounded-t-xl flex items-center justify-between flex-shrink-0 sm:rounded-t-xl">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 bg-[#969423] rounded-full flex items-center justify-center">
             <MessageCircle className="h-5 w-5 text-white" />

@@ -119,7 +119,7 @@ export default function ChatWidget() {
     return (
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-[60px] w-[60px] rounded-full shadow-lg text-white p-0 bg-gradient-to-br from-biz-navy to-biz-green bg-[length:200%_200%] animate-gradient-shift hover:shadow-2xl transition-shadow duration-300"
+        className="fixed bottom-6 right-6 h-[60px] w-[60px] rounded-full shadow-lg text-white p-0 bg-gradient-to-br from-biz-navy to-biz-green bg-[length:200%_200%] animate-gradient-shift hover:shadow-2xl transition-shadow duration-300 z-[70]"
         aria-label="Open chat"
       >
         <MessageCircle className="h-7 w-7" />
@@ -129,7 +129,7 @@ export default function ChatWidget() {
 
   return (
     <div 
-      className="fixed bottom-6 right-6 w-[380px] h-[600px] bg-white rounded-xl shadow-2xl flex flex-col z-50 md:w-[380px] sm:w-full sm:h-screen sm:bottom-0 sm:right-0 sm:rounded-none"
+      className="fixed bottom-6 right-6 w-[380px] max-h-[calc(100vh-10rem)] bg-white rounded-xl shadow-2xl flex flex-col z-[80] md:w-[380px] sm:w-full sm:max-h-[calc(100vh-6rem)] sm:bottom-4 sm:right-0 sm:left-0 sm:mx-auto sm:rounded-xl"
       role="region"
       aria-label="Chat widget"
     >

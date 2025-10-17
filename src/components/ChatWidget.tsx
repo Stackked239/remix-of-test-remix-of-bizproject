@@ -129,7 +129,7 @@ export default function ChatWidget() {
 
   return (
     <div 
-      className="fixed bottom-6 right-6 w-[380px] max-h-[calc(100vh-10rem)] bg-white rounded-xl shadow-2xl flex flex-col z-[80] sm:w-[90vw] sm:max-h-[calc(100vh-8rem)]"
+      className="fixed bottom-6 right-6 w-[228px] max-h-[calc(100vh-10rem)] bg-white rounded-xl shadow-2xl flex flex-col z-[80] sm:w-[85vw] sm:max-h-[calc(100vh-8rem)]"
       role="region"
       aria-label="Chat widget"
     >

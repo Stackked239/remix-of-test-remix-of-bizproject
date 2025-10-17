@@ -52,7 +52,6 @@ import Disclaimer from "./pages/Disclaimer";
 import FAQs from "./pages/FAQs";
 
 import Search from "./pages/Search";
-import ChatWidget from "@/components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -64,7 +63,6 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
-          <ChatWidget />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/how-it-works" element={<HowItWorks />} />

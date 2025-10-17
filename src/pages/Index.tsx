@@ -8,7 +8,6 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import StoryBrandHeader from "@/components/StoryBrandHeader";
-import ChatWidget from "@/components/ChatWidget";
 
 const Index = () => {
   return (
@@ -22,7 +21,6 @@ const Index = () => {
       <Pricing />
       <GlobalFooter />
       <EmailCapturePopup />
-      <ChatWidget />
     </div>
   );
 };

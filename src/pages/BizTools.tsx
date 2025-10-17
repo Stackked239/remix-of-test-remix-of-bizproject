@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, ShoppingCart } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import OrganizationSchema from "@/components/OrganizationSchema";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
@@ -76,6 +78,19 @@ const BizTools = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>BizTools - Business Templates & Resources | BizHealth.ai – Stop Guessing. Start Growing.</title>
+        <meta name="description" content="Access professional business tools, templates, and automation resources. Transform insights into action with battle-tested resources." />
+        <link rel="canonical" href="https://www.bizhealth.ai/biztools" />
+        <meta property="og:title" content="BizTools - Business Templates & Resources | BizHealth.ai" />
+        <meta property="og:description" content="Scalable essentials at your fingertips for business growth and optimization." />
+        <meta property="og:url" content="https://www.bizhealth.ai/biztools" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="BizTools - Business Templates | BizHealth.ai" />
+        <meta name="twitter:description" content="Professional tools and templates for business growth." />
+      </Helmet>
+      <OrganizationSchema />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

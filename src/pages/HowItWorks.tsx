@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, BarChart3, FileText, Download, Clock, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import OrganizationSchema from "@/components/OrganizationSchema";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
 import reportSampleImage from "@/assets/business-health-report-sample.png";
@@ -57,6 +59,19 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>How It Works | BizHealth.ai – Stop Guessing. Start Growing.</title>
+        <meta name="description" content="Discover BizHealth.ai's 4-step AI-powered business health assessment process. From tier selection to actionable reports in 20-40 minutes." />
+        <link rel="canonical" href="https://www.bizhealth.ai/how-it-works" />
+        <meta property="og:title" content="How It Works | BizHealth.ai" />
+        <meta property="og:description" content="Learn how BizHealth.ai delivers comprehensive business health insights in just 4 simple steps." />
+        <meta property="og:url" content="https://www.bizhealth.ai/how-it-works" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="How It Works | BizHealth.ai" />
+        <meta name="twitter:description" content="Discover BizHealth.ai's 4-step AI-powered business health assessment process." />
+      </Helmet>
+      <OrganizationSchema />
       <Navigation />
       
       {/* StoryBrand Header */}

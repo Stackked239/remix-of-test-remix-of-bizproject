@@ -2,19 +2,21 @@
 
 ## Overview
 
-This site now uses **pre-rendering** to generate static HTML for all pages at build time. This significantly improves SEO and social media sharing by ensuring that search engines and social media crawlers receive fully-rendered HTML with all meta tags and content.
+This site uses **react-snap** for pre-rendering to generate static HTML for all pages at build time. This significantly improves SEO and social media sharing by ensuring that search engines and social media crawlers receive fully-rendered HTML with all meta tags and content.
 
 ## How It Works
 
 ### Build Process
 
-When you run `npm run build`, the build process:
+Pre-rendering happens automatically as a post-build step:
 
-1. **Builds the React application** - Vite compiles all your React components
-2. **Starts a local server** - Launches a temporary server to serve the built app
-3. **Renders each route** - Uses Puppeteer to visit each configured route
-4. **Captures HTML** - Saves the fully-rendered HTML for each page
-5. **Generates static files** - Creates individual HTML files in the `dist` folder
+1. **Build the React application** - Run `npm run build` which first compiles with Vite
+2. **react-snap runs automatically** - After Vite build completes, react-snap:
+   - Starts a local server serving the built app
+   - Uses Puppeteer to visit each configured route
+   - Captures the fully-rendered HTML for each page
+   - Replaces the `index.html` in each route folder with pre-rendered content
+3. **Static HTML generated** - Each route gets its own folder with a complete `index.html`
 
 ### Runtime Behavior
 
@@ -77,11 +79,12 @@ if (rootElement.hasChildNodes()) {
 
 ### Build Configuration
 
-Pre-rendering only runs during production builds (`npm run build`), not during development. The configuration in `vite.config.ts` uses conditional plugin loading:
+Pre-rendering is configured in `reactSnap.config.json` and runs automatically after production builds. The configuration includes:
 
-```typescript
-mode === 'production' && prerender({ ... })
-```
+- **include**: List of all routes to pre-render (50+ routes)
+- **skipThirdPartyRequests**: Speeds up crawling by skipping external resources
+- **minifyHtml**: Reduces file size by removing comments and whitespace
+- **puppeteerArgs**: Configuration for headless Chrome
 
 ## Adding New Routes
 
@@ -89,16 +92,17 @@ To pre-render a new page:
 
 1. **Create the page component** in `src/pages/`
 2. **Add the route** to `src/App.tsx`
-3. **Add the route path** to the `routes` array in `vite.config.ts`
+3. **Add the route path** to the `include` array in `reactSnap.config.json`
 
 Example:
-```typescript
-// vite.config.ts
-routes: [
-  '/',
-  '/new-page',  // Add your new route here
-  // ... other routes
-]
+```json
+{
+  "include": [
+    "/",
+    "/new-page",
+    ...
+  ]
+}
 ```
 
 ## Troubleshooting
@@ -151,6 +155,6 @@ The pre-rendering configuration requires minimal maintenance:
 
 ## Resources
 
-- [Vite Plugin Prerender](https://github.com/mswjs/vite-plugin-prerender)
+- [react-snap Documentation](https://github.com/stereobooster/react-snap)
 - [React Hydration](https://react.dev/reference/react-dom/client/hydrateRoot)
 - [SEO Best Practices](https://developers.google.com/search/docs)

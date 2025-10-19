@@ -8,3 +8,13 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </HelmetProvider>
 );
+
+// Dispatch event for prerendering
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const event = new Event('app-rendered');
+      document.dispatchEvent(event);
+    }, 100);
+  });
+}

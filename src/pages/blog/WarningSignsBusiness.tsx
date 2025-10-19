@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
@@ -9,6 +10,16 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const WarningSignsBusiness = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="5 Warning Signs Your Business Needs Immediate Attention"
+        description="Discover the critical warning signs 70% of SMBs face. Learn to spot cash flow issues, customer retention problems, and operational bottlenecks before they derail your business success."
+        keywords="business warning signs, SMB challenges, cash flow management, customer retention, operational efficiency, risk management, business health"
+        canonical="https://bizhealth.ai/blog/warning-signs-business"
+        ogType="article"
+        ogImage={warningSignsImage}
+        articlePublishedTime="2025-09-12T00:00:00Z"
+        articleAuthor="BizHealth.ai Research Team"
+      />
       <Navigation />
       
       {/* Hero Section */}

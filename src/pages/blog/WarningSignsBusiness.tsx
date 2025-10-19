@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
@@ -19,6 +20,15 @@ const WarningSignsBusiness = () => {
         ogImage={warningSignsImage}
         articlePublishedTime="2025-09-12T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
+      />
+      <StructuredData 
+        type="article"
+        headline="5 Warning Signs Your Business Needs Immediate Attention"
+        description="Are you losing sleep over stagnant growth or cash flow hiccups? You're not alone—70% of small and mid-sized businesses face critical challenges that, if ignored, can derail success."
+        image={warningSignsImage}
+        datePublished="2025-09-12T00:00:00Z"
+        author="BizHealth.ai Research Team"
+        url="https://bizhealth.ai/blog/warning-signs-business"
       />
       <Navigation />
       

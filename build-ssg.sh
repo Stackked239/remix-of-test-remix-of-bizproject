@@ -17,7 +17,18 @@ fi
 
 echo ""
 
-# Step 2: Build the Vite app
+# Step 2: Generate sitemap.xml
+echo "🗺️  Generating sitemap.xml..."
+node generate-sitemap.js
+
+if [ $? -ne 0 ]; then
+  echo "❌ Sitemap generation failed!"
+  exit 1
+fi
+
+echo ""
+
+# Step 3: Build the Vite app
 echo "📦 Building Vite app..."
 npm run build
 
@@ -29,7 +40,7 @@ fi
 echo "✅ Vite build complete!"
 echo ""
 
-# Step 3: Copy backup files
+# Step 4: Copy backup files
 echo "📄 Copying backup configuration files..."
 node post-build.js
 
@@ -39,7 +50,7 @@ fi
 
 echo ""
 
-# Step 4: Run prerender script
+# Step 5: Run prerender script
 echo "🎨 Prerendering all routes..."
 node prerender.js
 

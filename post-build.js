@@ -12,7 +12,9 @@ async function postBuild() {
   
   const filesToCopy = [
     { src: '_redirects', dest: 'dist/_redirects' },
-    { src: '_headers', dest: 'dist/_headers' }
+    { src: '_headers', dest: 'dist/_headers' },
+    { src: 'public/sitemap.xml', dest: 'dist/sitemap.xml' },
+    { src: 'public/robots.txt', dest: 'dist/robots.txt' }
   ];
   
   for (const { src, dest } of filesToCopy) {

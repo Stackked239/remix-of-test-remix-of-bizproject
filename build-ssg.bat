@@ -16,7 +16,18 @@ if %errorlevel% neq 0 (
 
 echo.
 
-REM Step 2: Build the Vite app
+REM Step 2: Generate sitemap.xml
+echo Generating sitemap.xml...
+node generate-sitemap.js
+
+if %errorlevel% neq 0 (
+  echo Sitemap generation failed!
+  exit /b %errorlevel%
+)
+
+echo.
+
+REM Step 3: Build the Vite app
 echo Building Vite app...
 call npm run build
 
@@ -28,7 +39,7 @@ if %errorlevel% neq 0 (
 echo Vite build complete!
 echo.
 
-REM Step 3: Copy backup files
+REM Step 4: Copy backup files
 echo Copying backup configuration files...
 node post-build.js
 
@@ -38,7 +49,7 @@ if %errorlevel% neq 0 (
 
 echo.
 
-REM Step 4: Run prerender script
+REM Step 5: Run prerender script
 echo Prerendering all routes...
 node prerender.js
 

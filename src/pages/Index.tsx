@@ -9,6 +9,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import StoryBrandHeader from "@/components/StoryBrandHeader";
 import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         keywords="business health assessment, SMB analytics, business intelligence, AI business analysis, operational efficiency, financial metrics, business strategy"
         canonical="https://bizhealth.ai/"
       />
+      <StructuredData type="organization" />
       <GlobalNavigation />
       <StoryBrandHeader />
       <Hero />

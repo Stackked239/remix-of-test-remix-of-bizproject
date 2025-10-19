@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const CodyHelmet = () => {
-  const settings = `window.codySettings = { widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef' };`;
+  const settings = `window.codySettings = { widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef', base_url: 'https://getcody.ai' };`;
 
   return (
     <Helmet>

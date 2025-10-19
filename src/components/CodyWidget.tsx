@@ -5,9 +5,17 @@ export const CodyWidget = () => {
     // Expose Cody settings before script loads
     (window as any).codySettings = {
       widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef',
+      base_url: 'https://getcody.ai',
     };
     // Debug
     try { console.debug('[CodyWidget] init with widget_id a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef'); } catch {}
+    // Capture widget errors for debugging (CSP, domain allowlist, invalid id)
+    window.addEventListener('unhandledrejection', (ev: any) => {
+      try { console.error('[CodyWidget] unhandled rejection', ev?.reason); } catch {}
+    });
+    window.addEventListener('error', (ev: any) => {
+      try { console.error('[CodyWidget] window error', ev?.message || ev?.error); } catch {}
+    });
 
     // Avoid duplicate injection (React 18 StrictMode double-invokes effects in dev)
     const existing = document.getElementById('cody-widget-loader') as HTMLScriptElement | null;

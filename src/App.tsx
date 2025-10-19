@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from '@/hooks/useAuth';
 import ScrollToTop from "@/components/ScrollToTop";
+import { CodyWidget } from "@/components/CodyWidget";
 import Index from "./pages/Index";
 import HowItWorks from "./pages/HowItWorks";
 import Pricing from "./pages/Pricing";
@@ -61,6 +62,7 @@ const App = () => (
       <AuthProvider>
         <Toaster />
         <Sonner />
+        <CodyWidget />
         <BrowserRouter>
           <ScrollToTop />
           <Routes>

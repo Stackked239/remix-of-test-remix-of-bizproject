@@ -47,8 +47,27 @@ export const CodyWidget = () => {
       document.body.appendChild(script);
     }
 
+    // Patch Cody iframes with required permissions and top z-index
+    const patchIframes = () => {
+      document.querySelectorAll('iframe.cody-iframe').forEach((el) => {
+        const iframe = el as HTMLIFrameElement;
+        if (!iframe.hasAttribute('data-cody-patched')) {
+          iframe.setAttribute('data-cody-patched', '1');
+          try { iframe.allow = 'microphone; camera; clipboard-write; autoplay'; } catch {}
+          // Ensure widget stays on top if site has overlays
+          if (!iframe.style.zIndex) iframe.style.zIndex = '2147483647';
+          iframe.addEventListener('load', () => { try { console.debug('[CodyWidget] iframe loaded', iframe.src); } catch {} });
+          iframe.addEventListener('error', (e) => { try { console.error('[CodyWidget] iframe error', e); } catch {} });
+        }
+      });
+    };
+    const observer = new MutationObserver(() => patchIframes());
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Initial pass in case iframes are already present after first click
+    patchIframes();
+
     // Do not remove the loader on cleanup to keep the widget persistent across routes
-    return () => {};
+    return () => { observer.disconnect(); };
   }, []);
 
   return null;

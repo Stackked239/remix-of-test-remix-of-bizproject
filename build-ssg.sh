@@ -29,7 +29,17 @@ fi
 echo "✅ Vite build complete!"
 echo ""
 
-# Step 3: Run prerender script
+# Step 3: Copy backup files
+echo "📄 Copying backup configuration files..."
+node post-build.js
+
+if [ $? -ne 0 ]; then
+  echo "⚠️  Warning: Post-build tasks had issues (non-critical)"
+fi
+
+echo ""
+
+# Step 4: Run prerender script
 echo "🎨 Prerendering all routes..."
 node prerender.js
 

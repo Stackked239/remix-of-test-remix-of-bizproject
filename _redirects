@@ -1,0 +1,11 @@
+# Netlify Redirects for BizHealth.ai
+# Note: This file is a backup - main config is in netlify.toml
+
+# Redirect www to non-www (if applicable)
+# https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+
+# Redirect old URLs (if any)
+# /old-path /new-path 301
+
+# SPA fallback - serve pre-rendered HTML or fallback to index.html
+/* /index.html 200

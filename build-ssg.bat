@@ -28,7 +28,17 @@ if %errorlevel% neq 0 (
 echo Vite build complete!
 echo.
 
-REM Step 3: Run prerender script
+REM Step 3: Copy backup files
+echo Copying backup configuration files...
+node post-build.js
+
+if %errorlevel% neq 0 (
+  echo Warning: Post-build tasks had issues (non-critical)
+)
+
+echo.
+
+REM Step 4: Run prerender script
 echo Prerendering all routes...
 node prerender.js
 

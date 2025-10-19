@@ -1,0 +1,86 @@
+# Netlify Configuration for BizHealth.ai
+# Static Site Generation (SSG) with SPA fallback
+
+[build]
+  # Build command - runs SSG pre-rendering
+  command = "chmod +x build-ssg.sh && ./build-ssg.sh"
+  
+  # Publish directory - contains pre-rendered HTML files
+  publish = "dist"
+  
+  # Environment variables for build
+  [build.environment]
+    NODE_VERSION = "18"
+
+# SPA fallback for client-side routing
+# Serves index.html for routes that don't have pre-rendered files
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false  # Only redirect if file doesn't exist
+  
+  # Don't redirect these file types
+  conditions = {path = ["!/**/*.html", "!/**/*.js", "!/**/*.css", "!/**/*.png", "!/**/*.jpg", "!/**/*.jpeg", "!/**/*.gif", "!/**/*.svg", "!/**/*.webp", "!/**/*.ico", "!/**/*.json", "!/**/*.xml", "!/**/*.txt"]}
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Don't cache HTML (we want fresh content)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Prerender specific blog posts for better SEO
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  
+  [plugins.inputs]
+    output_path = "lighthouse-reports"
+
+# Function configuration (if using Netlify Functions)
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Dev server settings
+[dev]
+  command = "npm run dev"
+  port = 8080
+  targetPort = 8080
+  autoLaunch = false

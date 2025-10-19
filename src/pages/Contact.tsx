@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
@@ -95,51 +93,26 @@ const Contact = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Contact Us | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta 
-          name="description" 
-          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
-        />
-        <link rel="canonical" href="https://www.bizhealth.ai/contact" />
-        <meta property="og:title" content="Contact BizHealth.ai | SMB Growth Support" />
-        <meta 
-          property="og:description" 
-          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
-        />
-        <meta property="og:url" content="https://www.bizhealth.ai/contact" />
-        <meta property="og:image" content="https://www.bizhealth.ai/logo-512.jpg" />
-        <meta name="twitter:title" content="Contact BizHealth.ai | SMB Growth Support" />
-        <meta 
-          name="twitter:description" 
-          content="Need help with your business health assessment? Contact BizHealth.ai's experts for AI-driven SMB growth solutions." 
-        />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/logo-512.jpg" />
-      </Helmet>
-      <OrganizationSchema />
-
-      <div className="min-h-screen bg-background">
-
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         <img 
           src={heroImage} 
-          alt="Compass for business growth - SMB business support and AI business assessment dashboard"
+          alt="Business health dashboard showing analytics of comprehensive business assessment"
           className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-primary/80"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 h-full flex items-center justify-center">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
-              Connect with Our Experts
+        <div className="relative container mx-auto px-6 h-full flex items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+              Get in Touch
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
-              <em>Have questions about our business health assessments? Need help accessing your reports?</em> Our team of experts are here to support your business growth journey.
+            <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto">
+              Have questions about our business health assessments? Need help accessing your reports?<br className="hidden sm:block" />
+              Our expert team is here to support your business growth journey.
             </p>
           </div>
         </div>
@@ -170,8 +143,8 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-background rounded-lg p-8 pb-12 border border-border">
-                <h2 className="text-2xl font-bold mb-6 text-foreground">Send Us A Message</h2>
+              <div className="bg-background rounded-lg p-8 border border-border">
+                <h2 className="text-2xl font-bold mb-6 text-foreground">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -363,8 +336,7 @@ const Contact = () => {
       </section>
 
       <GlobalFooter />
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
 import {
   Tooltip,
@@ -177,22 +175,7 @@ const Pricing = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Pricing | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Choose the right business health assessment plan for your SMB. Transparent pricing from $99-$799 with detailed insights and actionable recommendations." />
-        <link rel="canonical" href="https://www.bizhealth.ai/pricing" />
-        <meta property="og:title" content="Pricing | BizHealth.ai – Stop Guessing. Start Growing." />
-        <meta property="og:description" content="Choose the right business health assessment plan for your SMB. Transparent pricing from $99-$799." />
-        <meta property="og:url" content="https://www.bizhealth.ai/pricing" />
-        <meta property="og:image" content="https://www.bizhealth.ai/logo-512.jpg" />
-        <meta name="twitter:title" content="Pricing | BizHealth.ai – Stop Guessing. Start Growing." />
-        <meta name="twitter:description" content="Choose the right business health assessment plan for your SMB. Transparent pricing from $99-$799." />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/logo-512.jpg" />
-      </Helmet>
-      <OrganizationSchema />
-      
-      <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -740,8 +723,7 @@ const Pricing = () => {
       </section>
 
       <GlobalFooter />
-      </div>
-    </>
+    </div>
   );
 };
 

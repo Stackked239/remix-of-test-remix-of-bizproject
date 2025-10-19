@@ -3,42 +3,12 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 
 const BusinessLeadership = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Business Leadership Insights | BizHealth.ai</title>
-        <meta name="description" content="Expert guidance on business leadership, strategic decision-making, and management excellence for SMB leaders." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/business-leadership" />
-        <meta property="og:title" content="Business Leadership Insights" />
-        <meta property="og:description" content="Expert guidance on leadership and strategic decision-making." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/business-leadership" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Business Leadership Insights",
-            "description": "Expert guidance on business leadership, strategic decision-making, and management excellence.",
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth.ai Research Team"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" }
-            },
-            "datePublished": "2025-09-12",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/business-leadership" }
-          })}
-        </script>
-      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

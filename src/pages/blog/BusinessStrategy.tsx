@@ -3,34 +3,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 
 const BusinessStrategy = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Business Strategy Insights | BizHealth.ai</title>
-        <meta name="description" content="Strategic planning, competitive analysis, and growth strategies for SMB success and sustainable business expansion." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/business-strategy" />
-        <meta property="og:title" content="Business Strategy Insights" />
-        <meta property="og:description" content="Strategic planning and growth strategies for SMB success." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/business-strategy" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Business Strategy Insights",
-            "description": "Strategic planning, competitive analysis, and growth strategies for SMB success.",
-            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
-            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
-            "datePublished": "2025-09-12",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/business-strategy" }
-          })}
-        </script>
-      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

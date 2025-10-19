@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, GraduationCap } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
@@ -100,19 +98,6 @@ const BizGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>BizGrowth Academy - Strategic Education | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Master business skills through comprehensive courses. Strategic advancement for sustainable growth with expert instructors." />
-        <link rel="canonical" href="https://www.bizhealth.ai/bizgrowth" />
-        <meta property="og:title" content="BizGrowth Academy - Strategic Education | BizHealth.ai" />
-        <meta property="og:description" content="Strategic advancement awaits with comprehensive business education programs." />
-        <meta property="og:url" content="https://www.bizhealth.ai/bizgrowth" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="BizGrowth Academy | BizHealth.ai" />
-        <meta name="twitter:description" content="Master business skills through comprehensive strategic courses." />
-      </Helmet>
-      <OrganizationSchema />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

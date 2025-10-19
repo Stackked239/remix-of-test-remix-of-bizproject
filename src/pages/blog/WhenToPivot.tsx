@@ -3,39 +3,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 
 const WhenToPivot = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>When to Pivot: Data-Driven Signals | BizHealth.ai</title>
-        <meta name="description" content="Learn to recognize quantifiable indicators that signal when your business model needs a strategic pivot for sustainable growth." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/when-to-pivot" />
-        <meta property="og:title" content="When to Pivot: Data-Driven Signals" />
-        <meta property="og:description" content="Recognize quantifiable indicators for strategic business pivots." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/when-to-pivot" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.bizhealth.ai/assets/business-pivot-strategy-transformation.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="When to Pivot: Data-Driven Signals" />
-        <meta name="twitter:description" content="Quantifiable indicators that signal strategic business pivots." />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/business-pivot-strategy-transformation.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "When to Pivot: Data-Driven Signals That It's Time to Change Course",
-            "description": "Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot.",
-            "image": "https://www.bizhealth.ai/assets/business-pivot-strategy-transformation.jpg",
-            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
-            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
-            "datePublished": "2025-09-12",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/when-to-pivot" }
-          })}
-        </script>
-      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

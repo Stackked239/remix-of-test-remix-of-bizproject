@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, BarChart3, FileText, Download, Clock, Shield } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
 import reportSampleImage from "@/assets/business-health-report-sample.png";
@@ -46,32 +44,19 @@ const HowItWorks = () => {
       description: "Complete questionnaire in 20-40 minutes depending on your chosen tier"
     },
     {
-      icon: BarChart3,
-      title: "Data-Driven Insights",
-      description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices"
-    },
-    {
       icon: Shield,
       title: "Secure & Confidential", 
       description: "Enterprise-grade security with full data encryption and privacy protection"
+    },
+    {
+      icon: BarChart3,
+      title: "Data-Driven Insights",
+      description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>How It Works | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Discover BizHealth.ai's 4-step AI-powered business health assessment process. From tier selection to actionable reports in 20-40 minutes." />
-        <link rel="canonical" href="https://www.bizhealth.ai/how-it-works" />
-        <meta property="og:title" content="How It Works | BizHealth.ai" />
-        <meta property="og:description" content="Learn how BizHealth.ai delivers comprehensive business health insights in just 4 simple steps." />
-        <meta property="og:url" content="https://www.bizhealth.ai/how-it-works" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="How It Works | BizHealth.ai" />
-        <meta name="twitter:description" content="Discover BizHealth.ai's 4-step AI-powered business health assessment process." />
-      </Helmet>
-      <OrganizationSchema />
       <Navigation />
       
       {/* StoryBrand Header */}
@@ -249,18 +234,18 @@ const HowItWorks = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Why Choose BizHealth.ai?
+              Why Choose Our Process
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We understand your struggles—like <em>cash-flow stress</em> and <em>blind spots</em>. Our proprietary AI-driven assessment delivers clear, industry-benchmarked insights in 20-40 minutes, at a fraction of consulting costs.
+              Built on decades of business consulting expertise and powered by a proprietary AI technology platform
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex p-4 rounded-xl bg-white shadow-card mb-6 border border-border/50">
-                  <feature.icon className="w-8 h-8 text-growth" />
+                <div className="inline-flex p-4 rounded-xl bg-background shadow-card mb-6 border border-border/50">
+                  <feature.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>

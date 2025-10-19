@@ -3,39 +3,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
 
 const RetailRemoteTools = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Retail Remote Tools: 2025 Tech for Family-Owned Businesses | BizHealth.ai</title>
-        <meta name="description" content="Discover how family-owned micro retailers can leverage remote tools to streamline operations while preserving their personal touch." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/retail-remote-tools" />
-        <meta property="og:title" content="Retail Remote Tools for Family-Owned Businesses" />
-        <meta property="og:description" content="Remote tools for family-owned micro retailers in 2025." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/retail-remote-tools" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.bizhealth.ai/assets/retail-remote-tools-family-business.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Retail Remote Tools 2025" />
-        <meta name="twitter:description" content="Remote tools for family-owned micro retailers." />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/retail-remote-tools-family-business.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",
-            "description": "Discover how family-owned micro retailers can leverage remote tools to streamline operations while preserving their personal touch.",
-            "image": "https://www.bizhealth.ai/assets/retail-remote-tools-family-business.jpg",
-            "author": { "@type": "Organization", "name": "BizHealth.ai Research Team" },
-            "publisher": { "@type": "Organization", "name": "BizHealth.ai", "logo": { "@type": "ImageObject", "url": "https://www.bizhealth.ai/logo-512.jpg" } },
-            "datePublished": "2025-09-24",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.bizhealth.ai/blog/retail-remote-tools" }
-          })}
-        </script>
-      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

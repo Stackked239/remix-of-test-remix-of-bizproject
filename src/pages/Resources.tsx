@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { BookOpen, Calculator, TrendingUp, FileText, ExternalLink, Users, DollarSign, Target } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import OrganizationSchema from "@/components/OrganizationSchema";
 
 const Resources = () => {
   const resourceCategories = [
@@ -188,19 +186,6 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Business Resources & Tools | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Access free business calculators, templates, strategic planning tools, and growth resources for small business success." />
-        <link rel="canonical" href="https://www.bizhealth.ai/resources" />
-        <meta property="og:title" content="Business Resources & Tools | BizHealth.ai" />
-        <meta property="og:description" content="Comprehensive collection of calculators, templates, guides, and insights to support your business growth." />
-        <meta property="og:url" content="https://www.bizhealth.ai/resources" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Business Resources & Tools | BizHealth.ai" />
-        <meta name="twitter:description" content="Access free business calculators, templates, and growth resources." />
-      </Helmet>
-      <OrganizationSchema />
       <Navigation />
       
       {/* Hero Section */}

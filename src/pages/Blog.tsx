@@ -3,8 +3,6 @@ import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -269,19 +267,6 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Business Insights & Analysis | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Expert insights, practical strategies, and data-driven analysis for small business leaders. Learn from decades of consulting experience." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog" />
-        <meta property="og:title" content="Business Insights & Analysis | BizHealth.ai" />
-        <meta property="og:description" content="Expert insights and data-driven strategies to help navigate modern business complexities." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Business Insights & Analysis | BizHealth.ai" />
-        <meta name="twitter:description" content="Expert insights and practical strategies for small business leaders." />
-      </Helmet>
-      <OrganizationSchema />
       <Navigation />
       
       {/* Hero Section */}

@@ -2,6 +2,3 @@ project_id = "lnthvnzounlxjedsbkgc"
 
 [functions.send-notification]
 verify_jwt = false
-
-[functions.bizhealth-chat]
-verify_jwt = false

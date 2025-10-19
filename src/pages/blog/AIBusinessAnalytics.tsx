@@ -3,53 +3,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 
 const AIBusinessAnalytics = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>AI Revolutionizing Small Business Analytics | BizHealth.ai</title>
-        <meta name="description" content="Discover how AI is making enterprise-level business analytics accessible to SMBs. 91% of AI-using businesses report revenue boosts." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/ai-business-analytics" />
-        <meta property="og:title" content="How AI is Revolutionizing Small Business Analytics" />
-        <meta property="og:description" content="Explore how artificial intelligence makes enterprise-level business intelligence accessible to small and medium businesses." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/ai-business-analytics" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.bizhealth.ai/assets/ai-business-analytics-dashboard.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Revolutionizing Small Business Analytics" />
-        <meta name="twitter:description" content="91% of SMBs using AI report revenue boosts. Learn how AI transforms business analytics." />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/ai-business-analytics-dashboard.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "How AI is Revolutionizing Small Business Analytics",
-            "description": "Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses.",
-            "image": "https://www.bizhealth.ai/assets/ai-business-analytics-dashboard.jpg",
-            "author": {
-              "@type": "Person",
-              "name": "Jennifer Walsh"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.bizhealth.ai/logo-512.jpg"
-              }
-            },
-            "datePublished": "2025-09-12",
-            "dateModified": "2025-09-12",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.bizhealth.ai/blog/ai-business-analytics"
-            }
-          })}
-        </script>
-      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

@@ -3,26 +3,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 
 const RealTimeAnalyticsSMB = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Real-Time Analytics: Powering SMB Agility | BizHealth.ai</title>
-        <meta name="description" content="Transform your SMB with real-time BI in 2025. Expert insights on analytics agility and data-driven decisions for competitive advantage." />
-        <link rel="canonical" href="https://www.bizhealth.ai/blog/real-time-analytics-smb-agility" />
-        <meta property="og:title" content="Real-Time Analytics: Powering SMB Agility" />
-        <meta property="og:description" content="Transform your SMB with real-time business intelligence and analytics agility." />
-        <meta property="og:url" content="https://www.bizhealth.ai/blog/real-time-analytics-smb-agility" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.bizhealth.ai/assets/real-time-analytics-smb-agility-volatile-markets.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Real-Time Analytics for SMB Agility" />
-        <meta name="twitter:description" content="Real-time BI insights for competitive advantage in volatile markets." />
-        <meta name="twitter:image" content="https://www.bizhealth.ai/assets/real-time-analytics-smb-agility-volatile-markets.jpg" />
-      </Helmet>
       {/* JSON-LD Schema Markup */}
       <script
         type="application/ld+json"

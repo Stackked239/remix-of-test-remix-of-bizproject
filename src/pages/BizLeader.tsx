@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Crown, Users, TrendingUp, Award, CheckCircle, Play, BookOpen } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
@@ -90,19 +88,6 @@ const BizLeader = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>BizLeaDeR - Leadership Development | BizHealth.ai – Stop Guessing. Start Growing.</title>
-        <meta name="description" content="Transform your leadership with BizLeaDeR. Comprehensive development programs for executive skills, team building, and strategic growth." />
-        <link rel="canonical" href="https://www.bizhealth.ai/bizleader" />
-        <meta property="og:title" content="BizLeaDeR - Leadership Development | BizHealth.ai" />
-        <meta property="og:description" content="Drive scale with confidence through proven leadership development programs." />
-        <meta property="og:url" content="https://www.bizhealth.ai/bizleader" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="BizLeaDeR - Leadership Development | BizHealth.ai" />
-        <meta name="twitter:description" content="Transform your leadership capabilities with comprehensive development programs." />
-      </Helmet>
-      <OrganizationSchema />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

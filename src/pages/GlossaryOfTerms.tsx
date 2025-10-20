@@ -131,21 +131,30 @@ const GlossaryOfTerms = () => {
       <div className="min-h-screen bg-background">
         <StoryBrandHeader />
         <GlobalNavigation />
-
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-12">
-          {/* Page Title */}
-          <div className="mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <BookOpen className="w-10 h-10 text-biz-green" />
-              <h1 className="text-4xl font-montserrat font-bold text-foreground">
+        
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-biz-navy via-biz-navy to-biz-green/20 text-white pt-32 pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <BookOpen className="w-16 h-16 text-biz-green" />
+              </div>
+              <h1 className="text-5xl font-montserrat font-bold mb-6">
                 Business Terms Glossary
               </h1>
+              <p className="text-2xl font-open-sans mb-4 text-biz-accent">
+                Master the language of business success
+              </p>
+              <p className="text-lg font-open-sans text-white/90 max-w-3xl mx-auto">
+                Navigate 93 essential business terms with clear definitions, formulas, and real-world SMB applications. 
+                Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
+                this interactive glossary is your comprehensive guide to understanding key business concepts.
+              </p>
             </div>
-            <p className="text-lg text-muted-foreground max-w-3xl">
-              Navigate 93 essential business terms with clear definitions, formulas, and real-world SMB applications. 
-              Your comprehensive guide to understanding key business concepts.
-            </p>
           </div>
+        </section>
+
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Search and Filter Controls */}
           <div className="bg-card rounded-lg shadow-lg p-6 mb-8 border border-border sticky top-36 z-30">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">

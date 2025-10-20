@@ -150,7 +150,7 @@ const Reports = () => {
                   variant="outline"
                   size="lg"
                   asChild
-                  className="border-white text-white hover:bg-white/10 font-montserrat font-semibold text-lg px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-biz-navy font-montserrat font-semibold text-lg px-8 py-6 transition-all duration-300"
                 >
                   <a href="#comprehensive-report">See Sample Reports</a>
                 </Button>

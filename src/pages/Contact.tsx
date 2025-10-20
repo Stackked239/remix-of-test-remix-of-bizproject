@@ -85,10 +85,10 @@ const Contact = () => {
     },
     {
       icon: MessageSquare,
-      title: "Live Chat",
+      title: "Virtual Assistant",
       description: "Instant help when you need it",
       contact: "Available on our website",
-      note: "during normal business hours"
+      note: "Available 24/7, every day of the year."
     }
   ];
 

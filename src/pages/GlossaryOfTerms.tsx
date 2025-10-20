@@ -23,6 +23,7 @@ import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import StoryBrandHeader from '@/components/StoryBrandHeader';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { glossaryTerms, categories, categoryColors, GlossaryTerm } from '@/data/glossaryData';
 import {
   Select,
@@ -129,6 +130,7 @@ const GlossaryOfTerms = () => {
       />
 
       <div className="min-h-screen bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
         
         {/* Hero Section */}

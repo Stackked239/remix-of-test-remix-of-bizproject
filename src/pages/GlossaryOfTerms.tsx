@@ -129,7 +129,6 @@ const GlossaryOfTerms = () => {
       />
 
       <div className="min-h-screen bg-background">
-        <StoryBrandHeader />
         <GlobalNavigation />
         
         {/* Hero Section */}

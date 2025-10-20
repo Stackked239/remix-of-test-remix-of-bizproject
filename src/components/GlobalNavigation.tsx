@@ -187,7 +187,7 @@ const GlobalNavigation = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
-                    isActiveRoute('/pricing') || isActiveRoute('/how-it-works') || isActiveRoute('/faqs') ? 'text-biz-green' : 'text-biz-navy'
+                    isActiveRoute('/pricing') || isActiveRoute('/reports') || isActiveRoute('/how-it-works') || isActiveRoute('/faqs') ? 'text-biz-green' : 'text-biz-navy'
                   }`}>
                     Pricing
                     <ChevronDown className="w-4 h-4" />
@@ -200,6 +200,14 @@ const GlobalNavigation = () => {
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
                       <span className="font-medium text-biz-navy">Pricing Plans</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/reports"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Reports</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -341,6 +349,9 @@ const GlobalNavigation = () => {
               <div className="space-y-2">
                 <Link to="/pricing" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                   Pricing Plans
+                </Link>
+                <Link to="/reports" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Reports
                 </Link>
                 <Link to="/how-it-works" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   How It Works

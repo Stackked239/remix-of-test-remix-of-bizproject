@@ -26,6 +26,7 @@ function generateSitemap() {
     '/': { priority: 1.0, changefreq: 'weekly' },
     '/about': { priority: 0.9, changefreq: 'monthly' },
     '/pricing': { priority: 0.9, changefreq: 'monthly' },
+    '/reports': { priority: 0.8, changefreq: 'monthly' },
     '/how-it-works': { priority: 0.8, changefreq: 'monthly' },
     '/contact': { priority: 0.7, changefreq: 'monthly' },
     '/resources': { priority: 0.8, changefreq: 'weekly' },

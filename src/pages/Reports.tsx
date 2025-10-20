@@ -99,12 +99,11 @@ const Reports = () => {
   return (
     <>
       <SEO
-        title="Business Health Reports - Comprehensive Insights for SMBs | BizHealth.ai"
+        title="Business Health Reports - Comprehensive Insights for SMBs"
         description="Discover our 5 tailored business health reports: Comprehensive, Executive, Owner's, Managers', and Employees' reports. Transform insights into action."
         keywords="business health reports, SMB diagnostics, comprehensive business analysis, executive reports, management reports, employee engagement reports"
         canonical="https://bizhealth.ai/reports"
-        ogTitle="Tailored Business Health Reports | BizHealth.ai"
-        ogDescription="From 150-page comprehensive analyses to team-focused reports - get actionable insights for every role in your organization."
+        ogType="website"
         ogImage="https://bizhealth.ai/assets/bizhealth-logo-main.jpg"
       />
 
@@ -113,6 +112,8 @@ const Reports = () => {
         name="Business Health Reports"
         description="Comprehensive business health diagnostic reports for SMBs including Executive, Owner's, Managers', Employees', and Comprehensive reports"
         provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/reports"
       />
 
       <div className="min-h-screen bg-background">

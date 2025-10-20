@@ -52,6 +52,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
 import FAQs from "./pages/FAQs";
+import GlossaryOfTerms from "./pages/GlossaryOfTerms";
 
 import Search from "./pages/Search";
 
@@ -112,6 +113,7 @@ const App = () => (
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/faqs" element={<FAQs />} />
+            <Route path="/glossary-of-terms" element={<GlossaryOfTerms />} />
             <Route path="/search" element={<Search />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

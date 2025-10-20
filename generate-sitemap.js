@@ -35,6 +35,7 @@ function generateSitemap() {
     '/bizleader': { priority: 0.8, changefreq: 'weekly' },
     '/bizgrowth': { priority: 0.8, changefreq: 'weekly' },
     '/faqs': { priority: 0.7, changefreq: 'monthly' },
+    '/glossary-of-terms': { priority: 0.8, changefreq: 'monthly' },
     '/search': { priority: 0.5, changefreq: 'monthly' },
     '/privacy': { priority: 0.3, changefreq: 'yearly' },
     '/terms': { priority: 0.3, changefreq: 'yearly' },

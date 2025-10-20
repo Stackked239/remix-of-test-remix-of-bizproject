@@ -129,7 +129,13 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{method.title}</h3>
                 <p className="text-muted-foreground mb-4">{method.description}</p>
-                <p className="font-semibold text-primary mb-2">{method.contact}</p>
+                {method.contact.includes('@') ? (
+                  <a href={`mailto:${method.contact}`} className="font-semibold text-primary mb-2 hover:underline block">
+                    {method.contact}
+                  </a>
+                ) : (
+                  <p className="font-semibold text-primary mb-2">{method.contact}</p>
+                )}
                 <p className="text-sm text-muted-foreground">{method.note}</p>
               </div>
             ))}

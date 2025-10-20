@@ -289,13 +289,13 @@ const Blog = () => {
             <div className="max-w-4xl w-full text-center space-y-6">
               {/* Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                Business Insights & Analysis
+                Business Insights & Strategies
               </h1>
               
               {/* Description Text */}
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Expert insights, practical strategies, and data-driven analysis to help you navigate the complexities 
-                of modern business. Learn from our team's decades of consulting experience.
+                of modern business. Learn from our team's decades of experience.
               </p>
             </div>
           </div>

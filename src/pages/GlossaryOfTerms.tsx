@@ -142,10 +142,9 @@ const GlossaryOfTerms = () => {
                 Business Terms Glossary
               </h1>
               <p className="text-2xl font-open-sans mb-4 text-biz-accent">
-                Master the language of business success
+                Essential business terms with clear definitions, formulas, and real-world applications
               </p>
               <p className="text-lg font-open-sans text-white/90 max-w-3xl mx-auto">
-                Navigate 93 essential business terms with clear definitions, formulas, and real-world SMB applications. 
                 Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
                 this interactive glossary is your comprehensive guide to understanding key business concepts.
               </p>

@@ -52,6 +52,13 @@
   </url>
   
   <url>
+    <loc>https://bizhealth.ai/glossary-of-terms</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>https://bizhealth.ai/portal</loc>
     <lastmod>2025-10-15</lastmod>
     <changefreq>monthly</changefreq>

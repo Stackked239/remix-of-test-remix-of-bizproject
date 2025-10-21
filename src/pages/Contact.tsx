@@ -284,9 +284,9 @@ const Contact = () => {
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Support</h3>
                         <p className="text-white/90 leading-relaxed">
-                          24/7 email support<br />
-                          Live chat during business hours<br />
-                          Emergency support for Enterprise customers
+                          24/7 chat bot<br />
+                          Email during business hours<br />
+                          Dedicated support for Enterprise-level clients
                         </p>
                       </div>
                     </div>

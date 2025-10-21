@@ -219,10 +219,9 @@ const GlobalNavigation = () => {
                   <DropdownMenuItem asChild>
                     <Link 
                       to="/reports"
-                      className="flex flex-col items-start p-3 hover:bg-biz-accent transition-colors"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
                       <span className="font-medium text-biz-navy">Reports</span>
-                      <span className="text-sm text-biz-grey">Pricing</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -374,12 +373,9 @@ const GlobalNavigation = () => {
                 <Link to="/how-it-works" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   How It Works
                 </Link>
-                <div className="pl-4">
-                  <Link to="/reports" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                    Reports
-                  </Link>
-                  <span className="block text-sm text-biz-grey pl-4">Pricing</span>
-                </div>
+                <Link to="/reports" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Reports
+                </Link>
                 <Link to="/faqs" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   FAQs
                 </Link>

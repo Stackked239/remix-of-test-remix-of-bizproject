@@ -205,7 +205,7 @@ const GlobalNavigation = () => {
                       to="/pricing"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
-                      <span className="font-medium text-biz-navy">Pricing Plans</span>
+                      <span className="font-medium text-biz-navy">Pricing & Tier Plans</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -368,7 +368,7 @@ const GlobalNavigation = () => {
               </Link>
               <div className="space-y-2">
                 <Link to="/pricing" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                  Pricing Plans
+                  Pricing & Tier Plans
                 </Link>
                 <Link to="/how-it-works" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   How It Works

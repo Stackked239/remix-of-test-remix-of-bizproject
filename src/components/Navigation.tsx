@@ -151,7 +151,7 @@ const Navigation = () => {
                     href="/pricing"
                     className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
                   >
-                    <span className="text-foreground">Pricing</span>
+                    <span className="text-foreground">Pricing & Tier Plans</span>
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -296,7 +296,7 @@ const Navigation = () => {
                     className="block text-left text-foreground hover:text-primary transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Pricing
+                    Pricing & Tier Plans
                   </a>
                   <a 
                     href="/how-it-works"

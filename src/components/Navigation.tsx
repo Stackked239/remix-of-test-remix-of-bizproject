@@ -202,6 +202,13 @@ const Navigation = () => {
             </DropdownMenu>
             
             <a 
+              href="/about"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              About
+            </a>
+            
+            <a 
               href="/contact"
               className="text-foreground hover:text-primary transition-colors"
             >
@@ -335,6 +342,14 @@ const Navigation = () => {
                   </a>
                 </div>
               </div>
+              
+              <a 
+                href="/about"
+                className="text-left text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
               
               <a 
                 href="/contact"

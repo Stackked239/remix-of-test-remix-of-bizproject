@@ -230,8 +230,16 @@ const HowItWorks = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-growth/5 to-trust/5 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
               Why Choose BizHealth.ai
@@ -241,13 +249,16 @@ const HowItWorks = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex p-4 rounded-xl bg-background shadow-card mb-6 border border-border/50">
-                  <feature.icon className="w-8 h-8 text-primary" />
+              <div 
+                key={index} 
+                className="group text-center bg-background rounded-2xl p-8 shadow-card border border-border/50 hover:border-primary/30 hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="inline-flex p-5 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent shadow-card mb-6 group-hover:shadow-elegant group-hover:scale-110 transition-all duration-300">
+                  <feature.icon className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}

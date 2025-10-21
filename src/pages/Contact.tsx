@@ -265,8 +265,8 @@ const Contact = () => {
                     </div>
                     
                     <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                      <div className="p-3 rounded-xl bg-biz-accent flex-shrink-0">
-                        <Clock className="w-6 h-6 text-biz-navy" />
+                      <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
+                        <Clock className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Business Hours</h3>

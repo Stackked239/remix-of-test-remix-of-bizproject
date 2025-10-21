@@ -166,12 +166,35 @@ const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a 
-              href="/blog"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Blog
-            </a>
+            
+            {/* Blog Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
+                  Blog - Business Insights
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-background border border-border shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/blog"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">Blog - Business Insights</span>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/glossary-of-terms"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">Business Terms Glossary</span>
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <a 
               href="/contact"
               className="text-foreground hover:text-primary transition-colors"
@@ -283,13 +306,28 @@ const Navigation = () => {
                   </a>
                 </div>
               </div>
-              <a 
-                href="/blog"
-                className="text-left text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </a>
+              
+              {/* Mobile Blog Section */}
+              <div className="border-t border-border pt-4">
+                <h4 className="font-semibold text-foreground mb-3">Blog - Business Insights</h4>
+                <div className="space-y-3 pl-4">
+                  <a 
+                    href="/blog"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Blog - Business Insights
+                  </a>
+                  <a 
+                    href="/glossary-of-terms"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Business Terms Glossary
+                  </a>
+                </div>
+              </div>
+              
               <a 
                 href="/contact"
                 className="text-left text-foreground hover:text-primary transition-colors"

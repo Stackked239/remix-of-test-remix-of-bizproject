@@ -204,18 +204,18 @@ const GlobalNavigation = () => {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link 
-                      to="/reports"
-                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
-                    >
-                      <span className="font-medium text-biz-navy">Reports</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link 
                       to="/how-it-works"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
                       <span className="font-medium text-biz-navy">How It Works</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/reports"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Reports</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -364,11 +364,11 @@ const GlobalNavigation = () => {
                 <Link to="/pricing" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                   Pricing Plans
                 </Link>
-                <Link to="/reports" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  Reports
-                </Link>
                 <Link to="/how-it-works" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   How It Works
+                </Link>
+                <Link to="/reports" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Reports
                 </Link>
                 <Link to="/faqs" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   FAQs

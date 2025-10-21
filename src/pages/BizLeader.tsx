@@ -13,7 +13,7 @@ const BizLeader = () => {
 
   useEffect(() => {
     const updateCountdown = () => {
-      const launchDate = new Date('2026-01-07T13:00:00-05:00').getTime(); // Jan 7, 2026, 1:00 PM EST
+      const launchDate = new Date('2026-04-26T16:00:00-04:00').getTime(); // Apr 26, 2026, 4:00 PM EDT
       const now = new Date().getTime();
       const distance = launchDate - now;
       
@@ -93,7 +93,7 @@ const BizLeader = () => {
       {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
         <div className="text-biz-citrine text-sm md:text-base">
-          BizLeaDeR: Launching January 2026 - Explore the vision as we put on the finishing touches
+          BizLeaDeR: Launching April 26, 2026 - Explore the vision as we put on the finishing touches
         </div>
         <div className="text-white text-xs md:text-sm">
           {countdown}

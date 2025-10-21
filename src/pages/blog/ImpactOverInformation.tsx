@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
@@ -38,10 +39,11 @@ const ImpactOverInformation = () => {
       />
 
       <div className="min-h-screen bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         {/* Hero Section */}
-        <section className="relative py-12 md:py-20">
+        <section className="relative pt-40 pb-16 bg-muted">
           <div className="container mx-auto px-4">
             <Link
               to="/blog"

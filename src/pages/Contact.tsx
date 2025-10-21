@@ -246,17 +246,17 @@ const Contact = () => {
 
               {/* Company Info */}
               <div className="space-y-6">
-                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
-                  <h2 className="text-2xl font-bold mb-8 text-foreground">Company Information</h2>
+                <div className="bg-gradient-to-br from-biz-navy to-biz-navy-dark rounded-xl p-8 border border-biz-accent/20 shadow-lg hover:shadow-xl transition-shadow">
+                  <h2 className="text-2xl font-bold mb-8 text-white">Company Information</h2>
                   
                   <div className="space-y-6">
-                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
-                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
+                      <div className="p-3 rounded-xl bg-biz-green/20 flex-shrink-0 ring-2 ring-biz-green/30">
+                        <MapPin className="w-6 h-6 text-biz-green" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-2">Headquarters</h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <h3 className="font-semibold text-white mb-2">Headquarters</h3>
+                        <p className="text-white/80 leading-relaxed">
                           N. Orange Avenue<br />
                           Orlando, Florida 32801<br />
                           United States
@@ -264,26 +264,26 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
-                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
-                        <Clock className="w-6 h-6 text-primary" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
+                      <div className="p-3 rounded-xl bg-biz-accent/30 flex-shrink-0 ring-2 ring-biz-accent/40">
+                        <Clock className="w-6 h-6 text-biz-accent" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-2">Business Hours</h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <h3 className="font-semibold text-white mb-2">Business Hours</h3>
+                        <p className="text-white/80 leading-relaxed">
                           Monday - Friday: 9:30 AM - 5:30 PM EDT<br />
                           Saturday & Sunday: Closed
                         </p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
-                      <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
-                        <HelpCircle className="w-6 h-6 text-primary" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
+                      <div className="p-3 rounded-xl bg-biz-green/20 flex-shrink-0 ring-2 ring-biz-green/30">
+                        <HelpCircle className="w-6 h-6 text-biz-green" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-2">Support</h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <h3 className="font-semibold text-white mb-2">Support</h3>
+                        <p className="text-white/80 leading-relaxed">
                           24/7 email support<br />
                           Live chat during business hours<br />
                           Emergency support for Enterprise customers

@@ -235,7 +235,7 @@ const GlobalNavigation = () => {
                   <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
                     isActiveRoute('/blog') || isActiveRoute('/glossary-of-terms') ? 'text-biz-green' : 'text-biz-navy'
                   }`}>
-                    Blog - Business Insights
+                    Blog
                     <ChevronDown className="w-4 h-4" />
                   </button>
                 </DropdownMenuTrigger>
@@ -245,7 +245,7 @@ const GlobalNavigation = () => {
                       to="/blog"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
-                      <span className="font-medium text-biz-navy">Blog</span>
+                      <span className="font-medium text-biz-navy">Blog - Business Insights</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -376,6 +376,9 @@ const GlobalNavigation = () => {
               </div>
               <div className="space-y-2">
                 <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  Blog
+                </Link>
+                <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Blog - Business Insights
                 </Link>
                 <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">

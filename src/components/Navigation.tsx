@@ -171,7 +171,7 @@ const Navigation = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
-                  Blog - Business Insights
+                  Blog
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </DropdownMenuTrigger>
@@ -309,7 +309,7 @@ const Navigation = () => {
               
               {/* Mobile Blog Section */}
               <div className="border-t border-border pt-4">
-                <h4 className="font-semibold text-foreground mb-3">Blog - Business Insights</h4>
+                <h4 className="font-semibold text-foreground mb-3">Blog</h4>
                 <div className="space-y-3 pl-4">
                   <a 
                     href="/blog"

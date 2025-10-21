@@ -164,6 +164,14 @@ const Navigation = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a 
+                    href="/reports"
+                    className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
+                  >
+                    <span className="text-foreground">Reports</span>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a 
                     href="/faqs"
                     className="flex items-center p-3 hover:bg-accent transition-colors cursor-pointer"
                   >
@@ -311,6 +319,13 @@ const Navigation = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     How It Works
+                  </a>
+                  <a 
+                    href="/reports"
+                    className="block text-left text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Reports
                   </a>
                   <a 
                     href="/faqs"

@@ -141,7 +141,7 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
               {hubColor === "biz-growth" 
                 ? "Official Launch on June 10th"
                 : hubColor === "biz-leader"
-                ? "Official Launch on January 15th"
+                ? "Official Launch on April 26th"
                 : "Official Launch on Nov. 30th"
               }
             </p>

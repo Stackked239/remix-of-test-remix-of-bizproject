@@ -130,7 +130,7 @@ const ImpactOverInformation = () => {
                 <h2 className="text-3xl font-bold mt-12 mb-6">How BizHealth.ai Delivers Impactful Insights for Your Unique Business</h2>
 
                 <p className="text-lg leading-relaxed mb-6">
-                  BizHealth.ai isn't another generic SaaS—it's your trusted advisor, born from decades of combined expertise in ownership, consulting, development, and strategy. Tailored for SMBs with 1-500 employees and $100K-$50M revenue, our platform assesses 12 key areas, providing <Link to="/pricing" className="text-primary hover:underline">tiered reports</Link>: Essentials for solos ($99), Standard for small teams ($199), and Enterprise for mid-sized firms ($299).
+                  BizHealth.ai isn't another generic SaaS—it's your trusted advisor, born from decades of combined expertise in ownership, consulting, development, and strategy. Tailored for small & mid-size businesses with $100K-$50M revenue, our platform assesses 12 key areas, providing <Link to="/pricing" className="text-primary hover:underline">tiered pricing</Link>: Essentials for solos & micro-businesses ($199), Growth for small teams ($499), and Enterprise for mid-sized firms ($799).
                 </p>
 
                 <h3 className="text-2xl font-bold mt-8 mb-4">What Sets Us Apart?</h3>

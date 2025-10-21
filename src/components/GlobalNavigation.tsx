@@ -253,7 +253,7 @@ const GlobalNavigation = () => {
                       to="/glossary-of-terms"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
-                      <span className="font-medium text-biz-navy">Glossary of Terms</span>
+                      <span className="font-medium text-biz-navy">Business Terms Glossary</span>
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -379,7 +379,7 @@ const GlobalNavigation = () => {
                   Blog
                 </Link>
                 <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  Glossary of Terms
+                  Business Terms Glossary
                 </Link>
               </div>
               <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">

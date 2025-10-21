@@ -143,12 +143,12 @@ const GlossaryOfTerms = () => {
               <h1 className="text-5xl font-montserrat font-bold mb-6">
                 Business Terms Glossary
               </h1>
-              <p className="text-2xl font-open-sans mb-4 text-biz-accent">
-                Essential business terms with clear definitions, formulas, and real-world applications
-              </p>
               <p className="text-lg font-open-sans text-white/90 max-w-3xl mx-auto">
                 Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
                 this interactive glossary is your comprehensive guide to understanding key business concepts.
+              </p>
+              <p className="text-2xl font-open-sans mb-4 text-biz-accent">
+                Essential business terms with clear definitions, formulas, and real-world applications
               </p>
             </div>
           </div>

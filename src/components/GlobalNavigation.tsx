@@ -229,14 +229,36 @@ const GlobalNavigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              <Link 
-                to="/blog" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/blog') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Blog
-              </Link>
+              {/* Blog Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
+                    isActiveRoute('/blog') || isActiveRoute('/glossary-of-terms') ? 'text-biz-green' : 'text-biz-navy'
+                  }`}>
+                    Blog
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/blog"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Blog</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/glossary-of-terms"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Glossary of Terms</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <Link 
                 to="/about" 
                 className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
@@ -244,14 +266,6 @@ const GlobalNavigation = () => {
                 }`}
               >
                 About
-              </Link>
-              <Link 
-                to="/glossary-of-terms" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/glossary-of-terms') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Glossary
               </Link>
               <Link 
                 to="/contact" 
@@ -360,14 +374,16 @@ const GlobalNavigation = () => {
                   FAQs
                 </Link>
               </div>
-              <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Blog
-              </Link>
+              <div className="space-y-2">
+                <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  Blog
+                </Link>
+                <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Glossary of Terms
+                </Link>
+              </div>
               <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 About
-              </Link>
-              <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Glossary
               </Link>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Contact

@@ -48,6 +48,7 @@ import SMBFinancialTrends2025 from "./pages/blog/SMBFinancialTrends2025";
 import ECommerceScalingSMB2025 from "./pages/blog/ECommerceScalingSMB2025";
 import TalentWarsHiring from "./pages/blog/TalentWarsHiring";
 import SMBCashFlowHacks2025 from "./pages/blog/SMBCashFlowHacks2025";
+import ImpactOverInformation from "./pages/blog/ImpactOverInformation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -110,6 +111,7 @@ const App = () => (
             <Route path="/blog/2025-smb-financial-trends" element={<SMBFinancialTrends2025 />} />
             <Route path="/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025" element={<ECommerceScalingSMB2025 />} />
             <Route path="/blog/smb-cash-flow-hacks-2025" element={<SMBCashFlowHacks2025 />} />
+            <Route path="/blog/impact-over-information" element={<ImpactOverInformation />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

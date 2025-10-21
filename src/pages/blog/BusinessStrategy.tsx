@@ -99,6 +99,12 @@ const BusinessStrategy = () => {
 
       <RelatedArticles articles={[
         {
+          title: "The Pitfall of Information Overload: Why General Advice Falls Short",
+          slug: "impact-over-information",
+          category: "Business Strategy",
+          excerpt: "Discover why generic business advice fails SMBs and how AI-powered diagnostics deliver actionable insights."
+        },
+        {
           title: "Strategic Planning Post-Pandemic",
           slug: "strategic-planning-post-pandemic",
           category: "Strategic Planning",
@@ -109,12 +115,6 @@ const BusinessStrategy = () => {
           slug: "when-to-pivot",
           category: "Business Strategy",
           excerpt: "Discover the key indicators that signal it's time to pivot your business model for success."
-        },
-        {
-          title: "Operational Resilience Strategies",
-          slug: "operational-resilience",
-          category: "Business Strategy",
-          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
         }
       ]} />
 

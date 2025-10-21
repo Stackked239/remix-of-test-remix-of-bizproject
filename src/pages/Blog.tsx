@@ -22,6 +22,7 @@ import smbTeamHeroImage from "@/assets/smb-team-collaboration-hero.webp";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
+import informationOverloadImage from "@/assets/information-overload-business-leader.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -39,6 +40,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Pitfall of Information Overload: Why General Advice Falls Short",
+      excerpt: "Discover why generic business advice fails SMBs and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth.",
+      author: "BizHealth Research Team",
+      date: "October 21, 2025",
+      readTime: "9 min read",
+      category: "Business Strategy",
+      slug: "/blog/impact-over-information",
+      imageUrl: informationOverloadImage,
+      altText: "Frustrated business leader overwhelmed by information overload and generic business advice strategies"
+    },
     {
       title: "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
       excerpt: "Master micro-business cash flow management with 5 proven strategies for 2025. Automate billing, forecast with AI, optimize inventory, negotiate terms, and diversify funding to boost liquidity by 30%.",

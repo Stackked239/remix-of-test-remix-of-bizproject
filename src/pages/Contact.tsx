@@ -246,17 +246,17 @@ const Contact = () => {
 
               {/* Company Info */}
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-biz-navy to-biz-navy-dark rounded-xl p-8 border border-biz-accent/20 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-biz-navy rounded-xl p-8 shadow-lg">
                   <h2 className="text-2xl font-bold mb-8 text-white">Company Information</h2>
                   
                   <div className="space-y-6">
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
-                      <div className="p-3 rounded-xl bg-biz-green/20 flex-shrink-0 ring-2 ring-biz-green/30">
-                        <MapPin className="w-6 h-6 text-biz-green" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                      <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Headquarters</h3>
-                        <p className="text-white/80 leading-relaxed">
+                        <p className="text-white/90 leading-relaxed">
                           N. Orange Avenue<br />
                           Orlando, Florida 32801<br />
                           United States
@@ -264,26 +264,26 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
-                      <div className="p-3 rounded-xl bg-biz-accent/30 flex-shrink-0 ring-2 ring-biz-accent/40">
-                        <Clock className="w-6 h-6 text-biz-accent" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                      <div className="p-3 rounded-xl bg-biz-accent flex-shrink-0">
+                        <Clock className="w-6 h-6 text-biz-navy" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Business Hours</h3>
-                        <p className="text-white/80 leading-relaxed">
+                        <p className="text-white/90 leading-relaxed">
                           Monday - Friday: 9:30 AM - 5:30 PM EDT<br />
                           Saturday & Sunday: Closed
                         </p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 border border-white/10">
-                      <div className="p-3 rounded-xl bg-biz-green/20 flex-shrink-0 ring-2 ring-biz-green/30">
-                        <HelpCircle className="w-6 h-6 text-biz-green" />
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                      <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
+                        <HelpCircle className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Support</h3>
-                        <p className="text-white/80 leading-relaxed">
+                        <p className="text-white/90 leading-relaxed">
                           24/7 email support<br />
                           Live chat during business hours<br />
                           Emergency support for Enterprise customers

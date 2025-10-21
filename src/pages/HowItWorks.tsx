@@ -234,10 +234,10 @@ const HowItWorks = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Why Choose Our Process
+              Why Choose BizHealth.ai
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Built on decades of business consulting expertise and powered by a proprietary AI technology platform
+              Every business leader deserves the best support. With BizHealth.ai, you get decades of business expertise combined with cutting-edge, AI-driven diagnostics to deliver actionable insights for your company's growth and success.
             </p>
           </div>
           

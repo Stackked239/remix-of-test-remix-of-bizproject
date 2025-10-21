@@ -12,7 +12,7 @@ const BizGuides = () => {
 
   useEffect(() => {
     const updateCountdown = () => {
-      const launchDate = new Date('2025-11-30T15:21:00-05:00').getTime(); // Nov 30, 2025, 3:21 PM ET
+      const launchDate = new Date('2026-01-30T13:00:00-05:00').getTime(); // Jan 30, 2026, 1:00 PM EDT
       const now = new Date().getTime();
       const distance = launchDate - now;
       
@@ -71,7 +71,7 @@ const BizGuides = () => {
       {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
         <div className="text-biz-lime text-sm md:text-base">
-          BizGuides: Launching November 30, 2025 - Explore the vision as we put on the finishing touches
+          BizGuides: Launching January 30, 2026 - Explore the vision as we put on the finishing touches
         </div>
         <div className="text-white text-xs md:text-sm">
           {countdown}

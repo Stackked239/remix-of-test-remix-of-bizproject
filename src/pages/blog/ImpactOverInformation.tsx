@@ -138,11 +138,11 @@ const ImpactOverInformation = () => {
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span className="text-lg"><strong>Comparative Analysis:</strong> See how you stack up against competitors and peers—e.g., "Your CAC is 20% higher than similar e-commerce firms; here's how to trim it."</span>
+                    <span className="text-lg"><strong>Comparative Analysis:</strong> See how you stack up against competitors and peers—e.g., "Your Customer Acquisition Cost (CAC) is 20% higher than similar accounting firms; here's how to trim it."</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span className="text-lg"><strong>Digestible Outputs:</strong> No jargon—clear, motivational reports for owners, executives, and teams, with prioritized fixes and milestones.</span>
+                    <span className="text-lg"><strong>Digestible Outputs:</strong> No jargon—clear, motivational reports for owners, managers, and teams, with prioritized fixes and milestones.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-bold mt-1">•</span>

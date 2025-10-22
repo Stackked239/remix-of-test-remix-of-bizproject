@@ -87,8 +87,8 @@ const Contact = () => {
       icon: MessageSquare,
       title: "Virtual Assistant",
       description: "Instant help when you need it",
-      contact: "Available on our website",
-      note: "Available 24/7, every day of the year."
+      contact: "Available on website",
+      note: "Available 24/7"
     }
   ];
 

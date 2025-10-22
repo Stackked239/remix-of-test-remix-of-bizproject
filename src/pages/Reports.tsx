@@ -28,7 +28,8 @@ import {
   BarChart3,
   Shield,
   Zap,
-  Award
+  Award,
+  Lock
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
@@ -58,7 +59,13 @@ const Reports = () => {
     );
   };
 
-  const tierMapping = [
+  const tierMapping: Array<{
+    report: string;
+    essentials: boolean | 'optional';
+    growth: boolean | 'optional';
+    enterprise: boolean | 'optional';
+    alaCarte: string;
+  }> = [
     {
       report: 'Comprehensive Report',
       essentials: true,
@@ -76,8 +83,8 @@ const Reports = () => {
     {
       report: 'Executive Report',
       essentials: true,
-      growth: true,
-      enterprise: true,
+      growth: 'optional',
+      enterprise: 'optional',
       alaCarte: '$299'
     },
     {
@@ -178,13 +185,13 @@ const Reports = () => {
                       <tr key={index} className="border-b border-white/10 hover:bg-white/5 transition-colors">
                         <td className="py-4 px-4 font-open-sans">{row.report}</td>
                         <td className="text-center py-4 px-4">
-                          {row.essentials ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.essentials === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.essentials === 'optional' ? <Lock className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
                         <td className="text-center py-4 px-4">
-                          {row.growth ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.growth === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.growth === 'optional' ? <Lock className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
                         <td className="text-center py-4 px-4">
-                          {row.enterprise ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.enterprise === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.enterprise === 'optional' ? <Lock className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
                         <td className="text-center py-4 px-4 font-semibold text-biz-green">{row.alaCarte}</td>
                       </tr>
@@ -202,15 +209,15 @@ const Reports = () => {
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Essentials:</span>
-                      {row.essentials ? <CheckCircle className="w-4 h-4 text-biz-green" /> : <span className="text-white/30">-</span>}
+                      {row.essentials === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.essentials === 'optional' ? <Lock className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Growth:</span>
-                      {row.growth ? <CheckCircle className="w-4 h-4 text-biz-green" /> : <span className="text-white/30">-</span>}
+                      {row.growth === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.growth === 'optional' ? <Lock className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Enterprise:</span>
-                      {row.enterprise ? <CheckCircle className="w-4 h-4 text-biz-green" /> : <span className="text-white/30">-</span>}
+                      {row.enterprise === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.enterprise === 'optional' ? <Lock className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">A La Carte:</span>

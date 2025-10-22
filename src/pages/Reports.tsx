@@ -60,11 +60,11 @@ const Reports = () => {
 
   const tierMapping = [
     {
-      report: 'Executive Report',
-      essentials: true,
-      growth: true,
+      report: 'Comprehensive Report',
+      essentials: false,
+      growth: false,
       enterprise: true,
-      alaCarte: '$299'
+      alaCarte: '$1,499'
     },
     {
       report: 'Owner\'s Report',
@@ -72,6 +72,13 @@ const Reports = () => {
       growth: true,
       enterprise: true,
       alaCarte: '$599'
+    },
+    {
+      report: 'Executive Report',
+      essentials: true,
+      growth: true,
+      enterprise: true,
+      alaCarte: '$299'
     },
     {
       report: 'Managers\' Report',
@@ -86,13 +93,6 @@ const Reports = () => {
       growth: true,
       enterprise: true,
       alaCarte: '$149'
-    },
-    {
-      report: 'Comprehensive Report',
-      essentials: false,
-      growth: false,
-      enterprise: true,
-      alaCarte: '$1,499'
     }
   ];
 

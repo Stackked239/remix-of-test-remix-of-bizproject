@@ -199,6 +199,16 @@ const Reports = () => {
                   </tbody>
                 </table>
               </div>
+              <div className="mt-4 flex items-center justify-center gap-6 text-sm text-white/80">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-biz-green" />
+                  <span>Included</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-yellow-400" />
+                  <span>Upgrade Option</span>
+                </div>
+              </div>
             </div>
 
             {/* Tier Mapping - Mobile Cards */}
@@ -226,6 +236,16 @@ const Reports = () => {
                   </div>
                 </div>
               ))}
+              <div className="mt-6 flex items-center justify-center gap-6 text-sm text-white/80">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-biz-green" />
+                  <span>Included</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-yellow-400" />
+                  <span>Upgrade Option</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

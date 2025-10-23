@@ -42,16 +42,24 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
       };
 
       // Primary: Supabase client
+console.log('[EmailPopup] invoking edge function', payload);
       const { data: invokeData, error: invokeError } = await supabase.functions.invoke('send-notification', {
         body: payload,
       });
+      console.log('[EmailPopup] invoke response', invokeData);
+      if (invokeError) {
+        console.error('[EmailPopup] invoke error', invokeError);
+      }
 
       let respData: any = invokeData;
       if (invokeError) {
         // If the SDK couldn't reach the function, try a direct fetch as a fallback
         try {
+          console.log('[EmailPopup] fallback: calling edge function via fetch');
           const res = await fetch('https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification', {
             method: 'POST',
+            mode: 'cors',
+            credentials: 'omit',
             headers: {
               'Content-Type': 'application/json',
               // Publishable anon key required by Supabase functions
@@ -60,12 +68,16 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
             },
             body: JSON.stringify(payload),
           });
+          console.log('[EmailPopup] fallback response status', res.status);
+          const json = await res.json().catch(() => null);
+          console.log('[EmailPopup] fallback response body', json);
           if (!res.ok) {
             throw new Error(`HTTP ${res.status}`);
           }
-          respData = await res.json();
+          respData = json;
         } catch (fallbackErr: any) {
-          throw new Error(invokeError.message || fallbackErr?.message || 'Failed to reach edge function');
+          console.error('[EmailPopup] fallback error', fallbackErr);
+          throw new Error(invokeError?.message || fallbackErr?.message || 'Failed to reach edge function');
         }
       }
 

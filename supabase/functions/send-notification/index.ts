@@ -1,8 +1,11 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 import { z } from "npm:zod@3.23.8";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.57.4";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -41,12 +44,36 @@ const handler = async (req: Request): Promise<Response> => {
     const data = emailSchema.parse(payload);
     console.log("Received notification request:", data.type);
 
+    // Create Supabase client with service role key
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
     const fromEmail = "BizHealth.ai <hello@bizhealth.ai>";
 
     let emailSubject = "";
     let emailHtml = "";
 
     if (data.type === "popup_subscriber") {
+      // Store subscriber in database
+      const { error: dbError } = await supabase
+        .from("email_subscribers")
+        .insert({
+          email: data.email,
+          source: data.hubColor || "main_site_popup",
+          metadata: { hubColor: data.hubColor }
+        });
+
+      if (dbError) {
+        // If it's a unique constraint error (already subscribed), that's okay
+        if (!dbError.message.includes("duplicate") && !dbError.message.includes("unique")) {
+          console.error("Database insert error:", dbError);
+          throw new Error(`Failed to save subscriber: ${dbError.message}`);
+        } else {
+          console.log("Subscriber already exists, skipping insert");
+        }
+      } else {
+        console.log("Subscriber saved to database");
+      }
+
       emailSubject = "New Newsletter Subscriber";
       emailHtml = `
         <h2>New Newsletter Subscriber</h2>

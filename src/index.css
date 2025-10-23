@@ -150,3 +150,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Force-remove external builder badges (Lovable) */
+@layer base {
+  a[href*="lovable.dev"],
+  a[href*="lovable.app"],
+  [data-lovable-badge],
+  .lovable-badge,
+  [id*="lovable-badge"],
+  [class*="lovable-badge"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

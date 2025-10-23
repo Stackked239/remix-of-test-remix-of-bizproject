@@ -35,20 +35,46 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
       const emailSchema = z.string().trim().email().max(255);
       emailSchema.parse(email);
 
-      const { data, error } = await supabase.functions.invoke('send-notification', {
-        body: {
-          type: 'popup_subscriber',
-          email,
-          hubColor,
-        },
+      const payload = {
+        type: 'popup_subscriber',
+        email,
+        hubColor,
+      };
+
+      // Primary: Supabase client
+      const { data: invokeData, error: invokeError } = await supabase.functions.invoke('send-notification', {
+        body: payload,
       });
 
-      if (error) {
-        throw new Error(error.message);
+      let respData: any = invokeData;
+      if (invokeError) {
+        // If the SDK couldn't reach the function, try a direct fetch as a fallback
+        const unreachable = invokeError.message?.toLowerCase?.().includes('failed to send a request');
+        if (unreachable) {
+          try {
+            const res = await fetch('https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                // Publishable anon key required by Supabase functions
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg',
+              },
+              body: JSON.stringify(payload),
+            });
+            if (!res.ok) {
+              throw new Error(`HTTP ${res.status}`);
+            }
+            respData = await res.json();
+          } catch (fallbackErr: any) {
+            throw new Error(invokeError.message || fallbackErr?.message || 'Failed to reach edge function');
+          }
+        } else {
+          throw new Error(invokeError.message);
+        }
       }
 
-      if (data && data.success === false) {
-        throw new Error(data.error || 'Failed to subscribe');
+      if (respData && respData.success === false) {
+        throw new Error(respData.error || 'Failed to subscribe');
       }
 
       toast({

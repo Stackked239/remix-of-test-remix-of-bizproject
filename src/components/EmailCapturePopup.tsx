@@ -49,27 +49,23 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
       let respData: any = invokeData;
       if (invokeError) {
         // If the SDK couldn't reach the function, try a direct fetch as a fallback
-        const unreachable = invokeError.message?.toLowerCase?.().includes('failed to send a request');
-        if (unreachable) {
-          try {
-            const res = await fetch('https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                // Publishable anon key required by Supabase functions
-                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg',
-              },
-              body: JSON.stringify(payload),
-            });
-            if (!res.ok) {
-              throw new Error(`HTTP ${res.status}`);
-            }
-            respData = await res.json();
-          } catch (fallbackErr: any) {
-            throw new Error(invokeError.message || fallbackErr?.message || 'Failed to reach edge function');
+        try {
+          const res = await fetch('https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              // Publishable anon key required by Supabase functions
+              'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg',
+              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg'
+            },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) {
+            throw new Error(`HTTP ${res.status}`);
           }
-        } else {
-          throw new Error(invokeError.message);
+          respData = await res.json();
+        } catch (fallbackErr: any) {
+          throw new Error(invokeError.message || fallbackErr?.message || 'Failed to reach edge function');
         }
       }
 

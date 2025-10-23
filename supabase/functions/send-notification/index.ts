@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
+import { z } from "npm:zod@3.23.8";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -26,8 +27,21 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const data: EmailNotificationRequest = await req.json();
+    const payload = await req.json();
+    const emailSchema = z.object({
+      type: z.enum(["popup_subscriber", "contact_form"]),
+      email: z.string().trim().email(),
+      firstName: z.string().optional(),
+      lastName: z.string().optional(),
+      company: z.string().optional(),
+      subject: z.string().optional(),
+      message: z.string().optional(),
+      hubColor: z.string().optional(),
+    });
+    const data = emailSchema.parse(payload);
     console.log("Received notification request:", data.type);
+
+    const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "BizHealth Notifications <onboarding@resend.dev>";
 
     let emailSubject = "";
     let emailHtml = "";
@@ -55,16 +69,27 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     }
 
-    const emailResponse = await resend.emails.send({
-      from: "BizHealth Notifications <onboarding@resend.dev>",
+    const { data: sendData, error: sendError } = await resend.emails.send({
+      from: fromEmail,
       to: ["hello@bizhealth.ai"],
       subject: emailSubject,
       html: emailHtml,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    if (sendError) {
+      console.error("Resend send error:", sendError);
+      return new Response(
+        JSON.stringify({ success: false, error: sendError.message }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
+    console.log("Email sent successfully:", sendData);
+
+    return new Response(JSON.stringify({ success: true, data: sendData }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -73,10 +98,12 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-notification function:", error);
+    const status = error?.name === "ZodError" ? 400 : 500;
+    const message = error?.issues ? error.issues.map((i: any) => i.message).join(", ") : (error?.message || "Unknown error");
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ success: false, error: message }),
       {
-        status: 500,
+        status,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );

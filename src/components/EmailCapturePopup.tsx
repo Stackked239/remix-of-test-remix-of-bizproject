@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { X, Mail, Rocket } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
 
 interface EmailCapturePopupProps {
   hubColor?: string;
@@ -25,43 +27,43 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
 
     setIsSubmitting(true);
-    
-    try {
-      const response = await fetch(
-        "https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/send-notification",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            type: "popup_subscriber",
-            email,
-            hubColor,
-          }),
-        }
-      );
 
-      if (!response.ok) {
-        throw new Error("Failed to send notification");
+    try {
+      // Client-side validation
+      const emailSchema = z.string().trim().email().max(255);
+      emailSchema.parse(email);
+
+      const { data, error } = await supabase.functions.invoke('send-notification', {
+        body: {
+          type: 'popup_subscriber',
+          email,
+          hubColor,
+        },
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      if (data && data.success === false) {
+        throw new Error(data.error || 'Failed to subscribe');
       }
 
       toast({
-        title: "Success!",
+        title: 'Success!',
         description: "You're all set for launch day! Check your email for updates.",
       });
-      
-      setEmail("");
+
+      setEmail('');
       setIsOpen(false);
-    } catch (error) {
-      console.error("Error submitting email:", error);
+    } catch (error: any) {
+      console.error('Error submitting email:', error);
       toast({
-        title: "Error",
-        description: "Failed to subscribe. Please try again.",
-        variant: "destructive",
+        title: 'Error',
+        description: error?.message || 'Failed to subscribe. Please try again.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);

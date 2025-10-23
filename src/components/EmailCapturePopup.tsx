@@ -72,8 +72,7 @@ let invokeData: any = null;
             headers: {
               'Content-Type': 'application/json',
               // Publishable anon key required by Supabase functions
-              'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg',
-              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg'
+              'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxudGh2bnpvdW5seGplZHNia2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMTQyMzMsImV4cCI6MjA3Mzg5MDIzM30.qxcL_cxGzYNo_z68OGfGrmHMn7VGeaBEFcHiX4SeSXg'
             },
             body: JSON.stringify(payload),
           });

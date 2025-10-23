@@ -24,6 +24,16 @@ interface EmailNotificationRequest {
   hubColor?: string;
 }
 
+// HTML escaping function to prevent injection attacks
+const escapeHtml = (text: string): string => {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -33,12 +43,12 @@ const handler = async (req: Request): Promise<Response> => {
     const payload = await req.json();
     const emailSchema = z.object({
       type: z.enum(["popup_subscriber", "contact_form"]),
-      email: z.string().trim().email(),
-      firstName: z.string().optional(),
-      lastName: z.string().optional(),
-      company: z.string().optional(),
-      subject: z.string().optional(),
-      message: z.string().optional(),
+      email: z.string().trim().email().max(255, "Email must be less than 255 characters"),
+      firstName: z.string().trim().min(1, "First name is required").max(100, "First name must be less than 100 characters").optional(),
+      lastName: z.string().trim().min(1, "Last name is required").max(100, "Last name must be less than 100 characters").optional(),
+      company: z.string().trim().max(200, "Company name must be less than 200 characters").optional(),
+      subject: z.string().trim().max(200, "Subject must be less than 200 characters").optional(),
+      message: z.string().trim().min(1, "Message is required").max(5000, "Message must be less than 5000 characters").optional(),
       hubColor: z.string().optional(),
     });
     const data = emailSchema.parse(payload);
@@ -77,20 +87,20 @@ const handler = async (req: Request): Promise<Response> => {
       emailSubject = "New Newsletter Subscriber";
       emailHtml = `
         <h2>New Newsletter Subscriber</h2>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Source:</strong> ${data.hubColor || "Main site"} popup banner</p>
+        <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+        <p><strong>Source:</strong> ${escapeHtml(data.hubColor || "Main site")} popup banner</p>
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
       `;
     } else if (data.type === "contact_form") {
-      emailSubject = `New Contact Form: ${data.subject || "General Inquiry"}`;
+      emailSubject = `New Contact Form: ${escapeHtml(data.subject || "General Inquiry")}`;
       emailHtml = `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Company:</strong> ${data.company || "Not provided"}</p>
-        <p><strong>Subject:</strong> ${data.subject || "General Inquiry"}</p>
+        <p><strong>Name:</strong> ${escapeHtml(data.firstName || "")} ${escapeHtml(data.lastName || "")}</p>
+        <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+        <p><strong>Company:</strong> ${escapeHtml(data.company || "Not provided")}</p>
+        <p><strong>Subject:</strong> ${escapeHtml(data.subject || "General Inquiry")}</p>
         <p><strong>Message:</strong></p>
-        <p>${data.message}</p>
+        <p>${escapeHtml(data.message || "")}</p>
         <hr />
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
       `;

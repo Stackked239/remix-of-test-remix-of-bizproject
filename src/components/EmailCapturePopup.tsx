@@ -42,13 +42,22 @@ const EmailCapturePopup: React.FC<EmailCapturePopupProps> = ({ hubColor = "biz-n
       };
 
       // Primary: Supabase client
-console.log('[EmailPopup] invoking edge function', payload);
-      const { data: invokeData, error: invokeError } = await supabase.functions.invoke('send-notification', {
-        body: payload,
-      });
-      console.log('[EmailPopup] invoke response', invokeData);
-      if (invokeError) {
-        console.error('[EmailPopup] invoke error', invokeError);
+let invokeData: any = null;
+      let invokeError: any = null;
+      try {
+        console.log('[EmailPopup] invoking edge function', payload);
+        const res = await supabase.functions.invoke('send-notification', {
+          body: payload,
+        });
+        invokeData = res.data;
+        invokeError = res.error;
+        console.log('[EmailPopup] invoke response', invokeData);
+        if (invokeError) {
+          console.error('[EmailPopup] invoke error (returned error)', invokeError);
+        }
+      } catch (invokeThrown: any) {
+        invokeError = { message: invokeThrown?.message || 'invoke threw' };
+        console.error('[EmailPopup] invoke error (thrown)', invokeThrown);
       }
 
       let respData: any = invokeData;

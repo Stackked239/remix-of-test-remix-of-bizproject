@@ -41,7 +41,7 @@ const handler = async (req: Request): Promise<Response> => {
     const data = emailSchema.parse(payload);
     console.log("Received notification request:", data.type);
 
-    const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "BizHealth Notifications <onboarding@resend.dev>";
+    const fromEmail = "BizHealth.ai <hello@bizhealth.ai>";
 
     let emailSubject = "";
     let emailHtml = "";

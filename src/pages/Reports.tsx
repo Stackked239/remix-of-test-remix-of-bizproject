@@ -1459,7 +1459,7 @@ const Reports = () => {
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Reassessment</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">Discounted</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">discounted</td>
                       <td className="py-4 px-6 text-biz-grey">Additional fees</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">

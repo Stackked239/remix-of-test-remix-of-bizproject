@@ -527,32 +527,32 @@ const Reports = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              {/* CARD 2: OWNER'S REPORT */}
-              <AccordionItem value="owners" id="owners-report" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
-                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all">
+              {/* CARD 2: EXECUTIVE REPORT */}
+              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
+                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
-                    <Target className="w-8 h-8 text-emerald-600 shrink-0 mt-1" />
+                    <TrendingUp className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
-                          Owner's Report - Your Day-to-Day Playbook
+                          Executive Report - Strategic Overview for Leadership
                         </h3>
-                        <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          ALL TIERS
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          Optional Upgrade
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        35-55 pages | Actionable insights for 90-180 day wins
+                        10-15 pages | Boardroom-ready strategic insights
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">
-                          <BarChart3 className="w-4 h-4" /> 12 category overviews
+                          <BarChart3 className="w-4 h-4" /> High-level scorecards
                         </span>
                         <span className="flex items-center gap-1">
-                          <Target className="w-4 h-4" /> Prioritized action plan
+                          <Target className="w-4 h-4" /> Top 5-7 priorities
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" /> 90/180/365-day roadmap
+                          <DollarSign className="w-4 h-4" /> Clear ROI estimates
                         </span>
                       </div>
                     </div>
@@ -562,20 +562,20 @@ const Reports = () => {
                   <div className="space-y-8 pt-6">
                     {/* Image Placeholder */}
                     <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <Target className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">owners-report-sample.png</p>
-                      <p className="text-sm text-gray-500">800 × 600px - Owner's Report cover and sample action plan page</p>
+                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                      <p className="text-gray-600 font-semibold mb-2">executive-report-sample.png</p>
+                      <p className="text-sm text-gray-500">800 × 600px - Executive Report cover and sample dashboard page</p>
                     </div>
 
                     {/* StoryBrand Narrative */}
-                    <div className="bg-emerald-50 rounded-xl p-6 space-y-4">
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy">Your Daily Reality</h4>
+                    <div className="bg-blue-50 rounded-xl p-6 space-y-4">
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy">Your Leadership Challenge</h4>
                       <div className="space-y-3 font-open-sans text-biz-grey">
-                        <p><strong className="text-biz-navy">The Problem:</strong> You're juggling a thousand priorities with limited resources and no clear roadmap. Every business book promises transformation, but none tell you what to do <em>first</em> in <em>your</em> specific situation.</p>
-                        <p><strong className="text-biz-navy">The Stakes:</strong> Scattered focus leads to mediocre results everywhere. Team members pull in different directions. Opportunities fade while you fight fires. The business plateaus while you work harder, not smarter.</p>
-                        <p><strong className="text-biz-navy">The Guide (That's Us):</strong> BizHealth.ai acts as your experienced mentor, cutting through the noise to show you exactly where to focus for maximum impact with your available resources.</p>
-                        <p><strong className="text-biz-navy">The Plan:</strong> Our 35-55 page Owner's Report prioritizes your next 90 days with surgical precision—the 3-5 moves that will create momentum and compound results.</p>
-                        <p><strong className="text-emerald-700 font-semibold">The Success:</strong> Imagine waking up with clarity about today's priorities, confident you're building momentum toward transformation. Your team aligned. Your energy focused. Your business growing sustainably.</p>
+                        <p><strong className="text-biz-navy">The Problem:</strong> You're drowning in operational details when you need to focus on strategy. Board meetings require preparation you don't have time for. Investors ask questions you can't answer with confidence.</p>
+                        <p><strong className="text-biz-navy">The Stakes:</strong> Strategic opportunities slip away while you're stuck in tactical weeds. Board members question leadership direction. Investor confidence wavers without clear performance visibility.</p>
+                        <p><strong className="text-biz-navy">The Guide (That's Us):</strong> BizHealth.ai distills complex business data into executive-ready insights, giving you the clarity and confidence of a seasoned advisor in your back pocket.</p>
+                        <p><strong className="text-biz-navy">The Plan:</strong> Our 10-15 page Executive Report delivers boardroom-ready intelligence in the format busy leaders need—scannable, strategic, and action-oriented.</p>
+                        <p><strong className="text-blue-700 font-semibold">The Success:</strong> Walk into your next board meeting with data-backed confidence. Make strategic decisions in minutes, not days. Command the room with insights that demonstrate leadership mastery.</p>
                       </div>
                     </div>
 
@@ -583,15 +583,15 @@ const Reports = () => {
                     <div>
                       <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">Overview</h4>
                       <p className="font-open-sans text-biz-grey">
-                        The Owner's Report bridges strategic vision and tactical execution - your personal playbook for what matters most, where to act, and how to realize measurable gains in 90-180 days.
+                        A succinct, strategic resource tailored for C-suite executives, board members, and stakeholders. Delivers high-level insights with actionable next steps in a format optimized for time-constrained decision-makers.
                       </p>
                     </div>
 
                     {/* Interior Image */}
                     <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <Target className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">owners-report-interior.png</p>
-                      <p className="text-sm text-gray-500">1200 × 600px - Two-page spread showing Impact/Effort Matrix and 90-Day Action Plan</p>
+                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                      <p className="text-gray-600 font-semibold mb-2">executive-report-interior.png</p>
+                      <p className="text-sm text-gray-500">1200 × 600px - Two-page spread showing Executive Summary and Strategic Scorecard</p>
                     </div>
 
                     {/* What's Inside */}
@@ -600,31 +600,23 @@ const Reports = () => {
                       <ul className="space-y-2 font-open-sans text-biz-grey">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Executive Summary</strong> (3-4 pages): Overall health, heatmap, top 10 moves with quick-win tags</span>
+                          <span><strong>Executive Summary</strong> (1-2 pages): Overall scores, top strengths/risks, 3 transformative recommendations with ROI</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Company Snapshot & Dashboard</strong> (4 pages): Tile scorecards, category radar, trend comparisons</span>
+                          <span><strong>Category Summaries</strong> (6-8 pages): At-a-glance scorecards for Strategy, Sales, Operations, Financials, etc.</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>12 Category Overviews</strong> (14-24 pages): 1-2 pages per business pillar with current score vs benchmarks, 3 quick wins per category, cross-references to Comprehensive Report (Enterprise)</span>
+                          <span><strong>Comparative Analysis</strong> (1 page): Industry/stage benchmarks</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Interdependencies</strong> (2 pages): Cross-category effects and flywheels</span>
+                          <span><strong>Top Risks & Opportunities</strong> (2 pages): 5-7 prioritized issues with heatmaps</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Risk/Compliance</strong> (2 pages): Top gaps and mitigations</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Prioritized Roadmap</strong> (6-8 pages): Impact/effort matrix, sequenced plan with owners and timelines</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Benchmarks Summary</strong> (2-3 pages): Industry positioning overview</span>
+                          <span><strong>Action Plan & Resources</strong> (1 page): Timeline, next steps, template links</span>
                         </li>
                       </ul>
                     </div>
@@ -635,23 +627,23 @@ const Reports = () => {
                       <div className="grid md:grid-cols-2 gap-3">
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Optimized for skimmability with visual economy</span>
+                          <span className="font-open-sans text-sm text-biz-grey">References Comprehensive Report for drilldown details (Enterprise tier)</span>
                         </div>
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Plain language with empathetic, owner-centric tone</span>
+                          <span className="font-open-sans text-sm text-biz-grey">Mobile-optimized for reading on-the-go</span>
                         </div>
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Hyperlinked to Comprehensive Report sections (Enterprise)</span>
+                          <span className="font-open-sans text-sm text-biz-grey">Crisp infographics and visual dashboards</span>
                         </div>
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Impact/effort prioritization matrix</span>
+                          <span className="font-open-sans text-sm text-biz-grey">Hyperlinked for instant navigation</span>
                         </div>
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Timeline-based implementation guidance</span>
+                          <span className="font-open-sans text-sm text-biz-grey">Secure PDF with embedded assets</span>
                         </div>
                       </div>
                     </div>

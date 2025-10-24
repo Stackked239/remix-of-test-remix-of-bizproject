@@ -1450,7 +1450,7 @@ const Reports = () => {
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Timeline</td>
                       <td className="py-4 px-6 text-biz-green font-bold">&lt; 2 hours</td>
-                      <td className="py-4 px-6 text-biz-grey">~4 - 12 weeks</td>
+                      <td className="py-4 px-6 text-biz-grey">4 - 12 weeks</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Depth</td>

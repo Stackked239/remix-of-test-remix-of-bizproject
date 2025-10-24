@@ -944,8 +944,11 @@ const Reports = () => {
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
                           Managers' Report - Operational Excellence Toolkit
                         </h3>
-                        <span className="bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          ENTERPRISE | OPTIONAL UPGRADE
+                        <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          ENTERPRISE
+                        </span>
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          Optional Upgrade
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">

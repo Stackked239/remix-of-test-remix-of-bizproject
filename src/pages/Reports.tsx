@@ -527,203 +527,7 @@ const Reports = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              {/* CARD 2: EXECUTIVE REPORT */}
-              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
-                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all">
-                  <div className="flex items-start gap-4 w-full text-left">
-                    <TrendingUp className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
-                          Executive Report - Strategic Overview for Leadership
-                        </h3>
-                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          Optional Upgrade
-                        </span>
-                      </div>
-                      <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        10-15 pages | Boardroom-ready strategic insights
-                      </p>
-                      <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
-                        <span className="flex items-center gap-1">
-                          <BarChart3 className="w-4 h-4" /> High-level scorecards
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Target className="w-4 h-4" /> Top 5-7 priorities
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <DollarSign className="w-4 h-4" /> Clear ROI estimates
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-8 bg-white">
-                  <div className="space-y-8 pt-6">
-                    {/* Image Placeholder */}
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">executive-report-sample.png</p>
-                      <p className="text-sm text-gray-500">800 × 600px - Executive Report cover and sample dashboard page</p>
-                    </div>
-
-                    {/* StoryBrand Narrative */}
-                    <div className="bg-blue-50 rounded-xl p-6 space-y-4">
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy">Your Leadership Challenge</h4>
-                      <div className="space-y-3 font-open-sans text-biz-grey">
-                        <p><strong className="text-biz-navy">The Problem:</strong> You're drowning in operational details when you need to focus on strategy. Board meetings require preparation you don't have time for. Investors ask questions you can't answer with confidence.</p>
-                        <p><strong className="text-biz-navy">The Stakes:</strong> Strategic opportunities slip away while you're stuck in tactical weeds. Board members question leadership direction. Investor confidence wavers without clear performance visibility.</p>
-                        <p><strong className="text-biz-navy">The Guide (That's Us):</strong> BizHealth.ai distills complex business data into executive-ready insights, giving you the clarity and confidence of a seasoned advisor in your back pocket.</p>
-                        <p><strong className="text-biz-navy">The Plan:</strong> Our 10-15 page Executive Report delivers boardroom-ready intelligence in the format busy leaders need—scannable, strategic, and action-oriented.</p>
-                        <p><strong className="text-blue-700 font-semibold">The Success:</strong> Walk into your next board meeting with data-backed confidence. Make strategic decisions in minutes, not days. Command the room with insights that demonstrate leadership mastery.</p>
-                      </div>
-                    </div>
-
-                    {/* Overview */}
-                    <div>
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">Overview</h4>
-                      <p className="font-open-sans text-biz-grey">
-                        A succinct, strategic resource tailored for C-suite executives, board members, and stakeholders. Delivers high-level insights with actionable next steps in a format optimized for time-constrained decision-makers.
-                      </p>
-                    </div>
-
-                    {/* Interior Image */}
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">executive-report-interior.png</p>
-                      <p className="text-sm text-gray-500">1200 × 600px - Two-page spread showing Executive Summary and Strategic Scorecard</p>
-                    </div>
-
-                    {/* What's Inside */}
-                    <div>
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">What's Inside</h4>
-                      <ul className="space-y-2 font-open-sans text-biz-grey">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Executive Summary</strong> (1-2 pages): Overall scores, top strengths/risks, 3 transformative recommendations with ROI</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Category Summaries</strong> (6-8 pages): At-a-glance scorecards for Strategy, Sales, Operations, Financials, etc.</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Comparative Analysis</strong> (1 page): Industry/stage benchmarks</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Top Risks & Opportunities</strong> (2 pages): 5-7 prioritized issues with heatmaps</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
-                          <span><strong>Action Plan & Resources</strong> (1 page): Timeline, next steps, template links</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Key Features */}
-                    <div className="bg-biz-accent rounded-xl p-6">
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-4">Key Features</h4>
-                      <div className="grid md:grid-cols-2 gap-3">
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">References Comprehensive Report for drilldown details (Enterprise tier)</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Mobile-optimized for reading on-the-go</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Crisp infographics and visual dashboards</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Hyperlinked for instant navigation</span>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
-                          <span className="font-open-sans text-sm text-biz-grey">Secure PDF with embedded assets</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Value Proposition */}
-                    <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-xl p-6 border-l-4 border-blue-600">
-                      <p className="font-montserrat font-bold text-xl text-biz-navy mb-2">
-                        Saves executives 10+ hours of analysis time
-                      </p>
-                      <p className="font-open-sans text-biz-grey">
-                        Perfect for board presentations and strategic planning sessions.
-                      </p>
-                    </div>
-
-                    {/* Transformation */}
-                    <div>
-                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">How It Transforms Your Leadership</h4>
-                      <ul className="space-y-2 font-open-sans text-biz-grey">
-                        <li className="flex items-start gap-2">
-                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                          <span>Board prep time reduced from 8 hours to 45 minutes</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                          <span>Strategic decisions made with data-backed confidence</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                          <span>Investor conversations become partnership discussions</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                          <span>Leadership team aligned around shared priorities</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                          <span>More time for strategic thinking, less time gathering data</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* ROI Highlight */}
-                    <div className="bg-white rounded-xl p-6 border-2 border-blue-200">
-                      <p className="font-montserrat font-bold text-biz-navy text-lg mb-3 text-center">
-                        Executive Impact Metrics
-                      </p>
-                      <div className="grid grid-cols-2 gap-4 text-center">
-                        <div>
-                          <p className="text-3xl font-bold text-blue-600">40%</p>
-                          <p className="text-sm text-biz-grey">Faster strategic decisions</p>
-                        </div>
-                        <div>
-                          <p className="text-3xl font-bold text-blue-600">25%</p>
-                          <p className="text-sm text-biz-grey">Higher confidence in outcomes</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                      <Button
-                        asChild
-                        size="lg"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-montserrat font-semibold flex-1"
-                      >
-                        <Link to="/pricing">Get Started - All Tiers</Link>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="border-blue-600 text-blue-600 hover:bg-blue-50 font-montserrat font-semibold flex-1"
-                      >
-                        See Sample Report
-                      </Button>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
-              {/* CARD 3: OWNER'S REPORT */}
+              {/* CARD 2: OWNER'S REPORT */}
               <AccordionItem value="owners" id="owners-report" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
@@ -928,6 +732,202 @@ const Reports = () => {
                         className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-montserrat font-semibold flex-1"
                       >
                         Compare Report Types
+                      </Button>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* CARD 3: EXECUTIVE REPORT */}
+              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
+                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all">
+                  <div className="flex items-start gap-4 w-full text-left">
+                    <TrendingUp className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2 flex-wrap">
+                        <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
+                          Executive Report - Strategic Overview for Leadership
+                        </h3>
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          Optional Upgrade
+                        </span>
+                      </div>
+                      <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
+                        10-15 pages | Boardroom-ready strategic insights
+                      </p>
+                      <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
+                        <span className="flex items-center gap-1">
+                          <BarChart3 className="w-4 h-4" /> High-level scorecards
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Target className="w-4 h-4" /> Top 5-7 priorities
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <DollarSign className="w-4 h-4" /> Clear ROI estimates
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-8 bg-white">
+                  <div className="space-y-8 pt-6">
+                    {/* Image Placeholder */}
+                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
+                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                      <p className="text-gray-600 font-semibold mb-2">executive-report-sample.png</p>
+                      <p className="text-sm text-gray-500">800 × 600px - Executive Report cover and sample dashboard page</p>
+                    </div>
+
+                    {/* StoryBrand Narrative */}
+                    <div className="bg-blue-50 rounded-xl p-6 space-y-4">
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy">Your Leadership Challenge</h4>
+                      <div className="space-y-3 font-open-sans text-biz-grey">
+                        <p><strong className="text-biz-navy">The Problem:</strong> You're drowning in operational details when you need to focus on strategy. Board meetings require preparation you don't have time for. Investors ask questions you can't answer with confidence.</p>
+                        <p><strong className="text-biz-navy">The Stakes:</strong> Strategic opportunities slip away while you're stuck in tactical weeds. Board members question leadership direction. Investor confidence wavers without clear performance visibility.</p>
+                        <p><strong className="text-biz-navy">The Guide (That's Us):</strong> BizHealth.ai distills complex business data into executive-ready insights, giving you the clarity and confidence of a seasoned advisor in your back pocket.</p>
+                        <p><strong className="text-biz-navy">The Plan:</strong> Our 10-15 page Executive Report delivers boardroom-ready intelligence in the format busy leaders need—scannable, strategic, and action-oriented.</p>
+                        <p><strong className="text-blue-700 font-semibold">The Success:</strong> Walk into your next board meeting with data-backed confidence. Make strategic decisions in minutes, not days. Command the room with insights that demonstrate leadership mastery.</p>
+                      </div>
+                    </div>
+
+                    {/* Overview */}
+                    <div>
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">Overview</h4>
+                      <p className="font-open-sans text-biz-grey">
+                        A succinct, strategic resource tailored for C-suite executives, board members, and stakeholders. Delivers high-level insights with actionable next steps in a format optimized for time-constrained decision-makers.
+                      </p>
+                    </div>
+
+                    {/* Interior Image */}
+                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
+                      <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                      <p className="text-gray-600 font-semibold mb-2">executive-report-interior.png</p>
+                      <p className="text-sm text-gray-500">1200 × 600px - Two-page spread showing Executive Summary and Strategic Scorecard</p>
+                    </div>
+
+                    {/* What's Inside */}
+                    <div>
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">What's Inside</h4>
+                      <ul className="space-y-2 font-open-sans text-biz-grey">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
+                          <span><strong>Executive Summary</strong> (1-2 pages): Overall scores, top strengths/risks, 3 transformative recommendations with ROI</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
+                          <span><strong>Category Summaries</strong> (6-8 pages): At-a-glance scorecards for Strategy, Sales, Operations, Financials, etc.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
+                          <span><strong>Comparative Analysis</strong> (1 page): Industry/stage benchmarks</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
+                          <span><strong>Top Risks & Opportunities</strong> (2 pages): 5-7 prioritized issues with heatmaps</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0 mt-0.5" />
+                          <span><strong>Action Plan & Resources</strong> (1 page): Timeline, next steps, template links</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Key Features */}
+                    <div className="bg-biz-accent rounded-xl p-6">
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-4">Key Features</h4>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
+                          <span className="font-open-sans text-sm text-biz-grey">References Comprehensive Report for drilldown details (Enterprise tier)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
+                          <span className="font-open-sans text-sm text-biz-grey">Mobile-optimized for reading on-the-go</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
+                          <span className="font-open-sans text-sm text-biz-grey">Crisp infographics and visual dashboards</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
+                          <span className="font-open-sans text-sm text-biz-grey">Hyperlinked for instant navigation</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-biz-green shrink-0" />
+                          <span className="font-open-sans text-sm text-biz-grey">Secure PDF with embedded assets</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Value Proposition */}
+                    <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-xl p-6 border-l-4 border-blue-600">
+                      <p className="font-montserrat font-bold text-xl text-biz-navy mb-2">
+                        Saves executives 10+ hours of analysis time
+                      </p>
+                      <p className="font-open-sans text-biz-grey">
+                        Perfect for board presentations and strategic planning sessions.
+                      </p>
+                    </div>
+
+                    {/* Transformation */}
+                    <div>
+                      <h4 className="font-montserrat font-bold text-lg text-biz-navy mb-3">How It Transforms Your Leadership</h4>
+                      <ul className="space-y-2 font-open-sans text-biz-grey">
+                        <li className="flex items-start gap-2">
+                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span>Board prep time reduced from 8 hours to 45 minutes</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span>Strategic decisions made with data-backed confidence</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span>Investor conversations become partnership discussions</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span>Leadership team aligned around shared priorities</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Zap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span>More time for strategic thinking, less time gathering data</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* ROI Highlight */}
+                    <div className="bg-white rounded-xl p-6 border-2 border-blue-200">
+                      <p className="font-montserrat font-bold text-biz-navy text-lg mb-3 text-center">
+                        Executive Impact Metrics
+                      </p>
+                      <div className="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                          <p className="text-3xl font-bold text-blue-600">40%</p>
+                          <p className="text-sm text-biz-grey">Faster strategic decisions</p>
+                        </div>
+                        <div>
+                          <p className="text-3xl font-bold text-blue-600">25%</p>
+                          <p className="text-sm text-biz-grey">Higher confidence in outcomes</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* CTAs */}
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                      <Button
+                        asChild
+                        size="lg"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-montserrat font-semibold flex-1"
+                      >
+                        <Link to="/pricing">Get Started - All Tiers</Link>
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-blue-600 text-blue-600 hover:bg-blue-50 font-montserrat font-semibold flex-1"
+                      >
+                        See Sample Report
                       </Button>
                     </div>
                   </div>

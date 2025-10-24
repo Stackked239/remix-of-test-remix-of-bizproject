@@ -286,7 +286,7 @@ const Reports = () => {
                           Comprehensive Report - Your Complete Business Reference Library
                         </h3>
                         <span className="bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          ENTERPRISE ONLY
+                          ALL TIERS
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">

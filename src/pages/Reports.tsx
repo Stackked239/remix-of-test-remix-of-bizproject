@@ -183,7 +183,14 @@ const Reports = () => {
                   <tbody>
                     {tierMapping.map((row, index) => (
                       <tr key={index} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                        <td className="py-4 px-4 font-open-sans">{row.report}</td>
+                        <td className="py-4 px-4 font-open-sans">
+                          <a 
+                            href={`#${row.report.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
+                            className="text-white hover:text-biz-lime transition-colors underline decoration-transparent hover:decoration-biz-lime"
+                          >
+                            {row.report}
+                          </a>
+                        </td>
                         <td className="text-center py-4 px-4">
                           {row.essentials === true ? <CheckCircle className="w-5 h-5 text-biz-lime mx-auto" /> : row.essentials === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
@@ -215,7 +222,14 @@ const Reports = () => {
             <div className="lg:hidden space-y-4">
               {tierMapping.map((row, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                  <h4 className="font-montserrat font-bold text-lg text-white mb-4">{row.report}</h4>
+                  <h4 className="font-montserrat font-bold text-lg text-white mb-4">
+                    <a 
+                      href={`#${row.report.toLowerCase().replace(/[']/g, '').replace(/\s+/g, '-')}`}
+                      className="text-white hover:text-biz-lime transition-colors underline decoration-transparent hover:decoration-biz-lime"
+                    >
+                      {row.report}
+                    </a>
+                  </h4>
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Essentials:</span>
@@ -542,7 +556,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 2: EXECUTIVE REPORT */}
-              <AccordionItem value="executive" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg">
+              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <TrendingUp className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
@@ -738,7 +752,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 3: OWNER'S REPORT */}
-              <AccordionItem value="owners" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg">
+              <AccordionItem value="owners" id="owners-report" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Target className="w-8 h-8 text-emerald-600 shrink-0 mt-1" />
@@ -949,7 +963,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 4: MANAGERS' REPORT */}
-              <AccordionItem value="managers" className="border-2 border-orange-400 rounded-2xl overflow-hidden shadow-lg">
+              <AccordionItem value="managers" id="managers-report" className="border-2 border-orange-400 rounded-2xl overflow-hidden shadow-lg">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Users className="w-8 h-8 text-orange-600 shrink-0 mt-1" />
@@ -1150,7 +1164,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 5: EMPLOYEES' REPORT */}
-              <AccordionItem value="employees" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg">
+              <AccordionItem value="employees" id="employees-report" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-purple-50 to-violet-50 hover:from-purple-100 hover:to-violet-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Star className="w-8 h-8 text-purple-600 shrink-0 mt-1" />

@@ -22,7 +22,6 @@ import {
   CheckCircle,
   ArrowRight,
   Download,
-  Search,
   DollarSign,
   Clock,
   BarChart3,
@@ -31,11 +30,9 @@ import {
   Award,
   Plus
 } from 'lucide-react';
-import { Input } from '@/components/ui/input';
 
 const Reports = () => {
   const [revenueSlider, setRevenueSlider] = useState(500000);
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedReports, setSelectedReports] = useState<string[]>([]);
 
   // Calculate ROI based on revenue slider
@@ -264,31 +261,6 @@ const Reports = () => {
           </div>
         </section>
 
-        {/* Search Bar Section */}
-        <section className="py-8 px-6 bg-biz-accent border-b border-border">
-          <div className="container mx-auto max-w-4xl">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-biz-grey w-5 h-5" />
-              <Input
-                type="search"
-                placeholder="Search for specific terms (e.g., EBITDA) - links to Glossary..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 py-6 text-lg border-border focus:ring-biz-green focus:border-biz-green"
-              />
-            </div>
-            {searchTerm && (
-              <div className="mt-4 text-center">
-                <Link 
-                  to={`/glossary-of-terms?search=${encodeURIComponent(searchTerm)}`}
-                  className="text-biz-green hover:text-biz-green/80 font-medium inline-flex items-center gap-2"
-                >
-                  Search "{searchTerm}" in Glossary <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            )}
-          </div>
-        </section>
 
         {/* Report Cards Section */}
         <section className="py-16 px-6 bg-background">

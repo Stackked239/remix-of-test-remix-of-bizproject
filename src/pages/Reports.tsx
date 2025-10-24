@@ -1444,12 +1444,12 @@ const Reports = () => {
                   <tbody className="font-open-sans">
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Cost</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">$199-$799</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">$199 - $799</td>
                       <td className="py-4 px-6 text-biz-grey">$15,000-50,000+</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Timeline</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">&lt;2 hours</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">&lt; 2 hours</td>
                       <td className="py-4 px-6 text-biz-grey">4-12 weeks</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
@@ -1459,7 +1459,7 @@ const Reports = () => {
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Reassessment</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">Quarterly included</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">Discounted</td>
                       <td className="py-4 px-6 text-biz-grey">Additional fees</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">

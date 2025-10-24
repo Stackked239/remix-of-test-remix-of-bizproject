@@ -185,15 +185,15 @@ const Reports = () => {
                       <tr key={index} className="border-b border-white/10 hover:bg-white/5 transition-colors">
                         <td className="py-4 px-4 font-open-sans">{row.report}</td>
                         <td className="text-center py-4 px-4">
-                          {row.essentials === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.essentials === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.essentials === true ? <CheckCircle className="w-5 h-5 text-biz-lime mx-auto" /> : row.essentials === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
                         <td className="text-center py-4 px-4">
-                          {row.growth === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.growth === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.growth === true ? <CheckCircle className="w-5 h-5 text-biz-lime mx-auto" /> : row.growth === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
                         <td className="text-center py-4 px-4">
-                          {row.enterprise === true ? <CheckCircle className="w-5 h-5 text-biz-green mx-auto" /> : row.enterprise === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
+                          {row.enterprise === true ? <CheckCircle className="w-5 h-5 text-biz-lime mx-auto" /> : row.enterprise === 'optional' ? <Plus className="w-5 h-5 text-yellow-400 mx-auto" /> : <span className="text-white/30">-</span>}
                         </td>
-                        <td className="text-center py-4 px-4 font-semibold text-biz-green">{row.alaCarte}</td>
+                        <td className="text-center py-4 px-4 font-semibold text-biz-lime">{row.alaCarte}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -201,7 +201,7 @@ const Reports = () => {
               </div>
               <div className="mt-4 flex items-center justify-center gap-6 text-sm text-white/80">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-biz-green" />
+                  <CheckCircle className="w-4 h-4 text-biz-lime" />
                   <span>Included</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -219,26 +219,26 @@ const Reports = () => {
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Essentials:</span>
-                      {row.essentials === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.essentials === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
+                      {row.essentials === true ? <CheckCircle className="w-4 h-4 text-biz-lime" /> : row.essentials === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Growth:</span>
-                      {row.growth === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.growth === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
+                      {row.growth === true ? <CheckCircle className="w-4 h-4 text-biz-lime" /> : row.growth === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">Enterprise:</span>
-                      {row.enterprise === true ? <CheckCircle className="w-4 h-4 text-biz-green" /> : row.enterprise === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
+                      {row.enterprise === true ? <CheckCircle className="w-4 h-4 text-biz-lime" /> : row.enterprise === 'optional' ? <Plus className="w-4 h-4 text-yellow-400" /> : <span className="text-white/30">-</span>}
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-white/80">A La Carte:</span>
-                      <span className="text-biz-green font-semibold">{row.alaCarte}</span>
+                      <span className="text-biz-lime font-semibold">{row.alaCarte}</span>
                     </div>
                   </div>
                 </div>
               ))}
               <div className="mt-6 flex items-center justify-center gap-6 text-sm text-white/80">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-biz-green" />
+                  <CheckCircle className="w-4 h-4 text-biz-lime" />
                   <span>Included</span>
                 </div>
                 <div className="flex items-center gap-2">

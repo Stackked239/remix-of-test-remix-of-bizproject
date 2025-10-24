@@ -537,7 +537,7 @@ const Reports = () => {
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
                           Executive Report - Strategic Overview for Leadership
                         </h3>
-                        <span className="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                           Optional Upgrade
                         </span>
                       </div>

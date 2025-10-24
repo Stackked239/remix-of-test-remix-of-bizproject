@@ -973,7 +973,7 @@ const Reports = () => {
                           Managers' Report - Operational Excellence Toolkit
                         </h3>
                         <span className="bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          GROWTH & ENTERPRISE
+                          ENTERPRISE | OPTIONAL UPGRADE
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
@@ -1141,7 +1141,7 @@ const Reports = () => {
                         size="lg"
                         className="bg-orange-600 hover:bg-orange-700 text-white font-montserrat font-semibold flex-1"
                       >
-                        <Link to="/pricing">Upgrade to Growth Tier</Link>
+                        <Link to="/pricing">Upgrade to Enterprise</Link>
                       </Button>
                       <Button
                         variant="outline"
@@ -1156,7 +1156,7 @@ const Reports = () => {
                     {/* Upsell */}
                     <div className="bg-blue-50 border-l-4 border-orange-600 rounded-r-xl p-4">
                       <p className="font-open-sans text-sm text-biz-grey">
-                        <strong className="text-orange-600">Included in Growth tier</strong> - upgrade from Essentials to empower your management team with tailored operational insights.
+                        <strong className="text-orange-600">Included in Enterprise tier</strong> - available as an optional upgrade for Essentials & Growth tiers to empower your management team with tailored operational insights.
                       </p>
                     </div>
                   </div>

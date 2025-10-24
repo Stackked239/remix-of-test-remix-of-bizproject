@@ -1149,7 +1149,10 @@ const Reports = () => {
                           Employees' Report - Celebrate Wins & Drive Engagement
                         </h3>
                         <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          ENTERPRISE | OPTIONAL UPGRADE
+                          ENTERPRISE
+                        </span>
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          Optional Upgrade
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">

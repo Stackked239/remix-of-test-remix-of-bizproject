@@ -1454,7 +1454,7 @@ const Reports = () => {
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Depth</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">Multiple Reports</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">multiple reports</td>
                       <td className="py-4 px-6 text-biz-grey">varies</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
@@ -1464,12 +1464,12 @@ const Reports = () => {
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Team Reports</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">Included (Enterprise)</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">included (Enterprise)</td>
                       <td className="py-4 px-6 text-biz-grey">typically additional</td>
                     </tr>
                     <tr className="hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Benchmarks</td>
-                      <td className="py-4 px-6 text-biz-green font-bold">Comprehensive</td>
+                      <td className="py-4 px-6 text-biz-green font-bold">comprehensive</td>
                       <td className="py-4 px-6 text-biz-grey">varies</td>
                     </tr>
                   </tbody>

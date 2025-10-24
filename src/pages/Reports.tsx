@@ -213,7 +213,7 @@ const Reports = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Plus className="w-4 h-4 text-yellow-400" />
-                  <span>Upgrade Option</span>
+                  <span>Optional upgrade</span>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@ const Reports = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Plus className="w-4 h-4 text-yellow-400" />
-                  <span>Upgrade Option</span>
+                  <span>Optional upgrade</span>
                 </div>
               </div>
             </div>

@@ -1445,17 +1445,17 @@ const Reports = () => {
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Cost</td>
                       <td className="py-4 px-6 text-biz-green font-bold">$199 - $799</td>
-                      <td className="py-4 px-6 text-biz-grey">$15,000-50,000+</td>
+                      <td className="py-4 px-6 text-biz-grey">$15,000 - $50,000+</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Timeline</td>
                       <td className="py-4 px-6 text-biz-green font-bold">&lt; 2 hours</td>
-                      <td className="py-4 px-6 text-biz-grey">4-12 weeks</td>
+                      <td className="py-4 px-6 text-biz-grey">~4 - 12 weeks</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Depth</td>
                       <td className="py-4 px-6 text-biz-green font-bold">Multiple Reports</td>
-                      <td className="py-4 px-6 text-biz-grey">Varies</td>
+                      <td className="py-4 px-6 text-biz-grey">varies</td>
                     </tr>
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Reassessment</td>
@@ -1465,12 +1465,12 @@ const Reports = () => {
                     <tr className="border-b border-border hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Team Reports</td>
                       <td className="py-4 px-6 text-biz-green font-bold">Included (Enterprise)</td>
-                      <td className="py-4 px-6 text-biz-grey">Usually separate</td>
+                      <td className="py-4 px-6 text-biz-grey">typically additional</td>
                     </tr>
                     <tr className="hover:bg-biz-accent transition-colors">
                       <td className="py-4 px-6 font-semibold text-biz-navy">Benchmarks</td>
                       <td className="py-4 px-6 text-biz-green font-bold">Comprehensive</td>
-                      <td className="py-4 px-6 text-biz-grey">Limited</td>
+                      <td className="py-4 px-6 text-biz-grey">varies</td>
                     </tr>
                   </tbody>
                 </table>

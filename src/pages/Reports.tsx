@@ -71,14 +71,14 @@ const Reports = () => {
       essentials: true,
       growth: true,
       enterprise: true,
-      alaCarte: '$1,499'
+      alaCarte: 'Included'
     },
     {
       report: 'Owner\'s Report',
       essentials: true,
       growth: true,
       enterprise: true,
-      alaCarte: '$599'
+      alaCarte: 'Included'
     },
     {
       report: 'Executive Report',

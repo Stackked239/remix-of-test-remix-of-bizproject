@@ -304,7 +304,7 @@ const Reports = () => {
 
             <Accordion type="single" collapsible className="space-y-6">
               {/* CARD 1: COMPREHENSIVE REPORT */}
-              <AccordionItem value="comprehensive" id="comprehensive-report" className="border-2 border-amber-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-32">
+              <AccordionItem value="comprehensive" id="comprehensive-report" className="border-2 border-amber-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-36">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <FileText className="w-8 h-8 text-amber-600 shrink-0 mt-1" />
@@ -556,7 +556,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 2: EXECUTIVE REPORT */}
-              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-32">
+              <AccordionItem value="executive" id="executive-report" className="border-2 border-blue-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-36">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <TrendingUp className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
@@ -752,7 +752,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 3: OWNER'S REPORT */}
-              <AccordionItem value="owners" id="owners-report" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-32">
+              <AccordionItem value="owners" id="owners-report" className="border-2 border-emerald-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-36">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Target className="w-8 h-8 text-emerald-600 shrink-0 mt-1" />
@@ -963,7 +963,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 4: MANAGERS' REPORT */}
-              <AccordionItem value="managers" id="managers-report" className="border-2 border-orange-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-32">
+              <AccordionItem value="managers" id="managers-report" className="border-2 border-orange-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-36">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Users className="w-8 h-8 text-orange-600 shrink-0 mt-1" />
@@ -1164,7 +1164,7 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 5: EMPLOYEES' REPORT */}
-              <AccordionItem value="employees" id="employees-report" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-32">
+              <AccordionItem value="employees" id="employees-report" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-36">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-purple-50 to-violet-50 hover:from-purple-100 hover:to-violet-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Star className="w-8 h-8 text-purple-600 shrink-0 mt-1" />

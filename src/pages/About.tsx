@@ -157,7 +157,7 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="font-open-sans text-lg text-white/90 leading-relaxed">
-                  Here's what ignited us: engaging with far too many talented business owners struggling—not because they lacked drive or vision, but because they lacked access to the strategic insights that could change everything. That's why we built BizHealth.ai.
+                  Here's what ignited us: engaging with far too many talented business owners struggling—not because they lacked drive or vision, but because they lacked access to the strategic insights that could change everything. <strong>That's why we built BizHealth.ai.</strong>
                 </p>
                 <p className="font-open-sans text-lg text-white/90 leading-relaxed mt-4">
                   Driven by our mantra <strong>"Success is achieved by helping others be successful,"</strong> we're democratizing access to the strategic insights and expert guidance that were once available only to larger companies with deep pockets.

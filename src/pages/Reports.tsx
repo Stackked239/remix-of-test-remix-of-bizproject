@@ -317,8 +317,8 @@ const Reports = () => {
                         src={businessHealthReportSample}
                         alt="Comprehensive Business Health Assessment Report sample pages showing business category scores, critical status indicators, performance metrics, financial benchmarks, firm profile analysis, and strategic recommendations dashboard for small to medium businesses"
                         loading="lazy"
-                        width="1200"
-                        height="900"
+                        width="800"
+                        height="400"
                         className="w-full h-auto"
                       />
                     </div>

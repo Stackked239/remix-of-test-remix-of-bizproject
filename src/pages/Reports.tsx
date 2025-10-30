@@ -349,7 +349,7 @@ const Reports = () => {
                         src={comprehensiveReportInterior} 
                         alt="Comprehensive Business Health Assessment Report showing Strategy Performance Analysis dashboard with business dimensions, category scores, implementation approach timeline, and performance metrics benchmarking" 
                         loading="lazy"
-                        width="800"
+                        width="600"
                         height="300"
                         className="w-full h-auto"
                       />

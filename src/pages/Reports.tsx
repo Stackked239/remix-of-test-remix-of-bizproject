@@ -30,6 +30,7 @@ import {
   Award,
   Plus
 } from 'lucide-react';
+import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
 
 const Reports = () => {
   const [revenueSlider, setRevenueSlider] = useState(500000);
@@ -335,11 +336,16 @@ const Reports = () => {
                       </p>
                     </div>
 
-                    {/* Interior Image Placeholder */}
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <FileText className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">comprehensive-report-interior.png</p>
-                      <p className="text-sm text-gray-500">1200 × 600px - Two-page spread showing Executive Summary dashboard and Category Analysis sample</p>
+                    {/* Interior Image */}
+                    <div className="rounded-xl overflow-hidden border border-gray-200 shadow-md">
+                      <img 
+                        src={comprehensiveReportInterior} 
+                        alt="Comprehensive Business Health Assessment Report showing Strategy Performance Analysis dashboard with business dimensions, category scores, implementation approach timeline, and performance metrics benchmarking" 
+                        loading="lazy"
+                        width="1200"
+                        height="600"
+                        className="w-full h-auto"
+                      />
                     </div>
 
                     {/* What's Inside */}

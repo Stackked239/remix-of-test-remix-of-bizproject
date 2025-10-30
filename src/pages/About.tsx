@@ -157,10 +157,13 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="font-open-sans text-lg text-white/90 leading-relaxed">
-                  We couldn't stand by. Convicted by the belief that every business deserves a level playing field, we built BizHealth.ai to change that. Our mantra—<strong>"Success is achieved by helping others be successful"</strong>—drives us, rooted in faith, integrity, and a passion to serve.
+                  Here's what ignited us: engaging with far too many talented business owners struggling—not because they lacked drive or vision, but because they lacked access to the strategic insights that could change everything. That's why we built BizHealth.ai.
+                </p>
+                <p className="font-open-sans text-lg text-white/90 leading-relaxed mt-4">
+                  Driven by our mantra <strong>"Success is achieved by helping others be successful,"</strong> we're democratizing access to the strategic insights and expert guidance that were once available only to larger companies with deep pockets.
                 </p>
                 <p className="font-open-sans text-lg text-white font-semibold mt-4">
-                  We're not just creating a tool; we're igniting a paradigm shift where lack of knowledge or know-how no longer holds you back.
+                  We're not just creating a platform. We're leveling the playing field so that lack of knowledge or know-how no longer determines your success.
                 </p>
               </div>
 

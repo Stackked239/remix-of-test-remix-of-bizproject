@@ -31,6 +31,7 @@ import {
   Plus
 } from 'lucide-react';
 import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
+import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.png';
 
 const Reports = () => {
   const [revenueSlider, setRevenueSlider] = useState(500000);
@@ -483,11 +484,25 @@ const Reports = () => {
                     </div>
 
                     {/* ROI Highlight */}
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <DollarSign className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">comprehensive-report-roi.png</p>
-                      <p className="text-sm text-gray-500 mb-4">800 × 400px - Infographic showing ROI breakdown and value delivery timeline</p>
-                      <div className="bg-white rounded-lg p-4 max-w-md mx-auto">
+                    <div 
+                      className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center relative overflow-hidden"
+                      style={{
+                        backgroundImage: `url(${comprehensiveReportRoiInfographic})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    >
+                      {/* Faint overlay to make background subtle */}
+                      <div className="absolute inset-0 bg-gray-100/90"></div>
+                      
+                      {/* Content */}
+                      <div className="relative z-10">
+                        <DollarSign className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                        <p className="text-gray-600 font-semibold mb-2">comprehensive-report-roi.png</p>
+                        <p className="text-sm text-gray-500 mb-4">800 × 400px - Infographic showing ROI breakdown and value delivery timeline</p>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 max-w-md mx-auto relative z-10">
                         <p className="font-montserrat font-bold text-biz-navy text-lg mb-2">
                           Average Impact in Year 1
                         </p>

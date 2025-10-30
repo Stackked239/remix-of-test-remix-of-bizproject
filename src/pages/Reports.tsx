@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
 import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.png';
+import businessHealthReportSample from '@/assets/business-health-report-sample.png';
 
 const Reports = () => {
   const [revenueSlider, setRevenueSlider] = useState(500000);
@@ -310,11 +311,16 @@ const Reports = () => {
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-8 bg-white">
                   <div className="space-y-8 pt-6">
-                    {/* Image Placeholder */}
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-                      <FileText className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <p className="text-gray-600 font-semibold mb-2">comprehensive-report-sample.png</p>
-                      <p className="text-sm text-gray-500">800 × 600px - Professional mockup of Comprehensive Report cover and sample interior pages</p>
+                    {/* Sample Report Image */}
+                    <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                      <img
+                        src={businessHealthReportSample}
+                        alt="Comprehensive Business Health Assessment Report sample pages showing business category scores, critical status indicators, performance metrics, financial benchmarks, firm profile analysis, and strategic recommendations dashboard for small to medium businesses"
+                        loading="lazy"
+                        width="1200"
+                        height="900"
+                        className="w-full h-auto"
+                      />
                     </div>
 
                     {/* StoryBrand Narrative */}

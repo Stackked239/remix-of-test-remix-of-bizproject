@@ -32,7 +32,7 @@ import {
 } from 'lucide-react';
 import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
 import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.png';
-import businessHealthReportSample from '@/assets/business-health-report-sample.png';
+import businessHealthReportSample from '@/assets/business-health-report-sample-new.jpg';
 
 const Reports = () => {
   const [revenueSlider, setRevenueSlider] = useState(500000);

@@ -153,16 +153,16 @@ const GlossaryOfTerms = () => {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Search and Filter Controls */}
           <div className="bg-card rounded-lg shadow-lg p-6 mb-8 border border-border sticky top-36 z-30">
+            <p className="text-sm text-muted-foreground mb-6 text-center">
+              Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
+              this interactive glossary is your comprehensive guide to understanding key business concepts.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
               {/* Search Bar */}
               <div className="md:col-span-5">
                 <label className="text-sm font-semibold text-foreground mb-2 block">
                   Search Terms
                 </label>
-                <p className="text-xs text-muted-foreground mb-3">
-                  Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
-                  this interactive glossary is your comprehensive guide to understanding key business concepts.
-                </p>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input

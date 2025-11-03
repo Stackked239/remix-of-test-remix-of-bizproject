@@ -205,7 +205,7 @@ const GlossaryOfTerms = () => {
 
               {/* Results Count and Clear */}
               <div className="md:col-span-3 flex flex-col items-end justify-end space-y-2">
-                <p className="text-sm font-semibold text-muted-foreground">
+                <p className="text-sm font-semibold text-white">
                   Showing {filteredTerms.length} of {glossaryTerms.length} terms
                 </p>
                 {hasActiveFilters && (

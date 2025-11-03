@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -488,57 +488,60 @@ const Blog = () => {
             {filteredPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post, index) => (
-                  <article key={index} className="border border-border rounded-lg overflow-hidden bg-background hover:shadow-card transition-all duration-300 hover-scale animate-fade-in">
-                    {/* Thumbnail Image */}
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={post.imageUrl} 
-                        alt={`Thumbnail: ${post.altText}`}
-                        className="w-full h-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
-                        style={{ aspectRatio: '16/9' }}
-                        loading="lazy"
-                      />
-                    </div>
-                    
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">
-                          {post.category}
-                        </span>
+                  <Link 
+                    key={index} 
+                    to={post.slug}
+                    className="group"
+                  >
+                    <article className="border border-border rounded-lg overflow-hidden bg-background transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 animate-fade-in cursor-pointer h-full flex flex-col">
+                      {/* Thumbnail Image */}
+                      <div className="relative overflow-hidden">
+                        <img 
+                          src={post.imageUrl} 
+                          alt={`Thumbnail: ${post.altText}`}
+                          className="w-full h-48 md:h-42 object-cover transition-transform duration-300 group-hover:scale-105"
+                          style={{ aspectRatio: '16/9' }}
+                          loading="lazy"
+                        />
                       </div>
                       
-                      <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight hover:text-primary transition-colors">
-                        {post.title}
-                      </h3>
-                      
-                      <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
-                        {post.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <User className="w-3 h-3" />
-                          <span>{post.author}</span>
+                      <div className="p-6 flex-1 flex flex-col">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">
+                            {post.category}
+                          </span>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>{post.date}</span>
+                        
+                        <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight group-hover:text-primary transition-colors">
+                          {post.title}
+                        </h3>
+                        
+                        <p className="text-muted-foreground mb-4 leading-relaxed text-sm flex-1">
+                          {post.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
+                          <div className="flex items-center gap-1">
+                            <User className="w-3 h-3" />
+                            <span>{post.author}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-3 h-3" />
+                            <span>{post.date}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            <span>{post.readTime}</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          <span>{post.readTime}</span>
+                        
+                        <div className="inline-flex items-center gap-2 text-primary group-hover:text-primary/80 transition-colors font-medium text-sm">
+                          Read Article
+                          <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
                         </div>
                       </div>
-                      
-                      <a 
-                        href={post.slug} 
-                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm story-link"
-                      >
-                        Read Article
-                        <ArrowRight className="w-3 h-3" />
-                      </a>
-                    </div>
-                  </article>
+                    </article>
+                  </Link>
                 ))}
               </div>
             ) : (

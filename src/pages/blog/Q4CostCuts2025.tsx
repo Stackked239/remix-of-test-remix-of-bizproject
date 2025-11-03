@@ -401,7 +401,7 @@ const Q4CostCuts2025 = () => {
                   Q4 2025 doesn't have to mean cash crunches—with targeted <strong>operational cost fixes</strong>, awareness of <strong>inflation's ops impact</strong>, and <strong>efficiency diagnostics</strong>, you can sustain growth amid uncertainty. BizHealth.ai cuts the middleman, delivering expeditious insights to uncover 15-20% efficiencies and foster resilient scaling.
                 </p>
 
-                <div className="bg-primary text-white p-8 rounded-lg mt-12 mb-8">
+                <div className="bg-primary text-white p-8 rounded-lg mt-12 mb-8 text-center">
                   <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business Operations?</h3>
                   <p className="mb-6">
                     Schedule your 30-minute business health assessment at BizHealth.ai today. Your growth starts here.

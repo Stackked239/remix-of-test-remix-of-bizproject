@@ -734,16 +734,16 @@ const Pricing = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Start Your Business Transformation Today
+              Discover Your Path to Improvement
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join over 2,500 business owners who've improved their operations with our proprietary AI-powered insights
+              Join thousands of business leaders who rely on BizHealth.ai for clear, actionable insights tailored to your growth goals.
             </p>
             <a 
-              href="/" 
+              href="/how-it-works" 
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Get Started Now
+              See How It Works
             </a>
           </div>
         </div>

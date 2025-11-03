@@ -194,8 +194,7 @@ const Q4CostCuts2025 = () => {
 
                 {/* Business Trends 2025 Image */}
                 <div className="my-12">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">2025 Small Business Trends</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-2">
                     <img 
                       src={businessTrendsImage} 
                       alt="2025 Small Business Trends infographic showing business plans, startup costs, top states, and industries"
@@ -203,6 +202,7 @@ const Q4CostCuts2025 = () => {
                       loading="lazy"
                     />
                   </div>
+                  <p className="text-sm font-semibold text-foreground mb-1">2025 Small Business Trends</p>
                   <p className="text-sm text-muted-foreground italic">
                     Source: <a href="https://www.guidantfinancial.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">Guidant Financial</a>
                   </p>
@@ -254,8 +254,7 @@ const Q4CostCuts2025 = () => {
 
                 {/* Small Business Index Image */}
                 <div className="my-12">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Small Business Index Shows Inflation is Top Concern in 2025</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-4 bg-white p-6">
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-2 bg-white p-6">
                     <img 
                       src={businessIndexImage} 
                       alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing trends in business confidence"
@@ -263,6 +262,7 @@ const Q4CostCuts2025 = () => {
                       loading="lazy"
                     />
                   </div>
+                  <p className="text-sm font-semibold text-foreground mb-1">Small Business Index Shows Inflation is Top Concern in 2025</p>
                   <p className="text-sm text-muted-foreground italic">
                     Source: <a href="https://www.uschamber.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">U.S. Chamber of Commerce</a>
                   </p>
@@ -367,8 +367,7 @@ const Q4CostCuts2025 = () => {
 
                 {/* Cost Reduction Strategies Image */}
                 <div className="my-12">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">10 Simple Ways to Cut Business Costs</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-2">
                     <img 
                       src={costReductionImage} 
                       alt="American Express Business Class infographic showing 10 simple ways to cut business costs including supply expenses, production costs, and efficiency improvements"
@@ -376,6 +375,7 @@ const Q4CostCuts2025 = () => {
                       loading="lazy"
                     />
                   </div>
+                  <p className="text-sm font-semibold text-foreground mb-1">10 Simple Ways to Cut Business Costs</p>
                   <p className="text-sm text-muted-foreground italic">
                     Source: <a href="https://www.americanexpress.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">American Express</a>
                   </p>

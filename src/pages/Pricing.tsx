@@ -231,7 +231,7 @@ const Pricing = () => {
                             <td colSpan={4} className="p-4">
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <div className="font-semibold text-foreground flex items-center gap-2 cursor-help" style={{ fontSize: '16px', lineHeight: '1.5' }}>
+                                  <div className="font-semibold text-foreground flex items-center gap-2 cursor-help" style={{ fontSize: '18px', lineHeight: '1.5' }}>
                                     {category.name}
                                     <span className="text-sm text-muted-foreground">ⓘ</span>
                                   </div>
@@ -372,7 +372,7 @@ const Pricing = () => {
                         onClick={() => setExpandedRow(expandedRow === catIndex ? null : catIndex)}
                         className="w-full p-4 flex items-center justify-between bg-growth/10 hover:bg-growth/20 transition-colors"
                       >
-                        <span className="font-bold text-foreground text-left" style={{ fontSize: '16px', lineHeight: '1.5', fontWeight: '700' }}>
+                        <span className="font-bold text-foreground text-left" style={{ fontSize: '18px', lineHeight: '1.5', fontWeight: '700' }}>
                           {category.name}
                         </span>
                         {expandedRow === catIndex ? (

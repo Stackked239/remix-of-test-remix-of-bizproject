@@ -143,10 +143,6 @@ const GlossaryOfTerms = () => {
               <h1 className="text-5xl font-montserrat font-bold mb-6">
                 Business Terms Glossary
               </h1>
-              <p className="text-lg font-open-sans text-white/90 max-w-3xl mx-auto">
-                Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
-                this interactive glossary is your comprehensive guide to understanding key business concepts.
-              </p>
               <p className="text-2xl font-open-sans mb-4 text-biz-accent">
                 Essential business terms with clear definitions, formulas, and real-world applications
               </p>
@@ -163,6 +159,10 @@ const GlossaryOfTerms = () => {
                 <label className="text-sm font-semibold text-foreground mb-2 block">
                   Search Terms
                 </label>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
+                  this interactive glossary is your comprehensive guide to understanding key business concepts.
+                </p>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input

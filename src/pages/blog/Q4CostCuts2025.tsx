@@ -255,7 +255,7 @@ const Q4CostCuts2025 = () => {
                 {/* Small Business Index Image */}
                 <div className="my-12">
                   <h3 className="text-2xl font-bold text-foreground mb-4">Small Business Index Shows Inflation is Top Concern in 2025</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-4 bg-white p-6">
                     <img 
                       src={businessIndexImage} 
                       alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing trends in business confidence"

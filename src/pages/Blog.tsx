@@ -24,6 +24,7 @@ import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-20
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 import informationOverloadImage from "@/assets/information-overload-business-leader.jpg";
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
+import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -41,6 +42,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
+      excerpt: "Master cash flow management for small business in 2025. Learn crisis prevention strategies, cash flow planning tips, and how to avoid the pitfalls affecting 60% of SMBs today.",
+      author: "BizHealth.ai Research Team",
+      date: "November 3, 2025",
+      readTime: "8 min read",
+      category: "Financial Management, Business Strategy, Technology",
+      slug: "/blog/cash-flow-crisis-management",
+      imageUrl: cashFlowCrisisImage,
+      altText: "Small business owner analyzing cash flow crisis management strategies with financial documents and analytics dashboard showing crisis prevention metrics for 2025"
+    },
     {
       title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
       excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings.",

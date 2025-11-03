@@ -414,32 +414,6 @@ const Q4CostCuts2025 = () => {
                   </a>
                 </div>
 
-                {/* Additional Resources */}
-                <div className="bg-muted/30 p-8 rounded-lg mt-12">
-                  <h3 className="text-xl font-bold mb-4">Additional Resources</h3>
-                  <ul className="space-y-3">
-                    <li>
-                      <a href="/blog/financial-health-metrics" className="text-primary hover:underline font-medium">
-                        Financial Health Metrics Every Business Owner Should Track
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog/operational-resilience" className="text-primary hover:underline font-medium">
-                        Building Operational Resilience in Uncertain Times
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog/real-time-analytics-smb-agility" className="text-primary hover:underline font-medium">
-                        Real-Time Analytics: Powering SMB Agility in Volatile Markets
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.uschamber.com/" target="_blank" rel="nofollow noopener" className="text-primary hover:underline font-medium">
-                        U.S. Chamber of Commerce Small Business Index
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

@@ -259,7 +259,8 @@ const GlossaryOfTerms = () => {
                 return (
                   <Card 
                     key={term.id}
-                    className={`group hover:shadow-xl transition-all duration-300 ${
+                    onClick={() => toggleTerm(term.id)}
+                    className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
                       isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
                     }`}
                   >
@@ -277,7 +278,10 @@ const GlossaryOfTerms = () => {
                           </Badge>
                         </div>
                         <button
-                          onClick={() => toggleFavorite(term.id)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFavorite(term.id);
+                          }}
                           className={`ml-2 transition-colors ${
                             isFavorite ? 'text-yellow-500' : 'text-muted-foreground hover:text-yellow-500'
                           }`}
@@ -349,7 +353,10 @@ const GlossaryOfTerms = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              onClick={() => copyToClipboard(term)}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                copyToClipboard(term);
+                              }}
                               className="w-full"
                             >
                               {isCopied ? (
@@ -370,7 +377,10 @@ const GlossaryOfTerms = () => {
 
                       {/* Expand/Collapse Button */}
                       <button
-                        onClick={() => toggleTerm(term.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleTerm(term.id);
+                        }}
                         className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
                       >
                         <span>{isExpanded ? 'Show Less' : 'Read More'}</span>

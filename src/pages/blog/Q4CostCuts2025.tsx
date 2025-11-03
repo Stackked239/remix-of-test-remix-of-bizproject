@@ -259,7 +259,7 @@ const Q4CostCuts2025 = () => {
                     <img 
                       src={businessIndexImage} 
                       alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing trends in business confidence"
-                      className="w-full h-auto object-cover"
+                      className="w-full h-auto object-cover bg-white"
                       loading="lazy"
                     />
                   </div>

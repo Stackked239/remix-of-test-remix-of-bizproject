@@ -248,7 +248,7 @@ const Pricing = () => {
                                 <td className="p-4 pl-8">
                                   <Tooltip>
                                     <TooltipTrigger asChild>
-                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '15px', lineHeight: '1.5' }}>
+                                      <span className="text-foreground cursor-help flex items-center gap-2" style={{ fontSize: '15px', lineHeight: '1.5' }}>
                                         {feature.name}
                                         <span className="text-sm">ⓘ</span>
                                       </span>
@@ -287,7 +287,7 @@ const Pricing = () => {
                                 <td className="p-4 pl-8">
                                   <Tooltip>
                                     <TooltipTrigger asChild>
-                                      <span className="text-muted-foreground cursor-help flex items-center gap-2" style={{ fontSize: '15px', lineHeight: '1.5' }}>
+                                      <span className="text-foreground cursor-help flex items-center gap-2" style={{ fontSize: '15px', lineHeight: '1.5' }}>
                                         {feature.name}
                                         <span className="text-sm">ⓘ</span>
                                       </span>

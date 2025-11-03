@@ -466,6 +466,24 @@ const Pricing = () => {
                   ))}
                 </TooltipProvider>
               </div>
+
+              {/* Legend */}
+              <div className="bg-muted/30 px-4 py-3 border-t border-border">
+                <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4" style={{ color: '#28A745' }} />
+                    <span className="text-muted-foreground">Included</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <X className="w-4 h-4" style={{ color: '#DC3545' }} />
+                    <span className="text-muted-foreground">Not included</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lock className="w-4 h-4" style={{ color: '#6B7280' }} />
+                    <span className="text-muted-foreground">Optional upgrade</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

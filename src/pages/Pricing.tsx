@@ -227,7 +227,7 @@ const Pricing = () => {
                     <tbody>
                       {featureCategories.map((category, catIndex) => (
                         <React.Fragment key={catIndex}>
-                          <tr className="border-t-2 border-border bg-muted/40">
+                          <tr className="border-t-2 border-border bg-growth/10">
                             <td colSpan={4} className="p-4">
                               <Tooltip>
                                 <TooltipTrigger asChild>
@@ -370,7 +370,7 @@ const Pricing = () => {
                     <div key={catIndex} className="border-b-2 border-border">
                       <button
                         onClick={() => setExpandedRow(expandedRow === catIndex ? null : catIndex)}
-                        className="w-full p-4 flex items-center justify-between bg-muted/40 hover:bg-muted/60 transition-colors"
+                        className="w-full p-4 flex items-center justify-between bg-growth/10 hover:bg-growth/20 transition-colors"
                       >
                         <span className="font-bold text-foreground text-left" style={{ fontSize: '16px', lineHeight: '1.5', fontWeight: '700' }}>
                           {category.name}

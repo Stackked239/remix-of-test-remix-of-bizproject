@@ -206,25 +206,20 @@ const Pricing = () => {
 
             {/* Feature Comparison Matrix */}
             <div className="bg-background rounded-2xl shadow-elegant border-2 border-border overflow-hidden">
-              <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 px-6 py-6 border-b-2 border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Feature Breakdown by Tier</h3>
-                <p className="text-muted-foreground text-base">See what's included in each Tier Level</p>
-              </div>
-
               {/* Desktop View - Table */}
               <div className="hidden md:block overflow-x-auto">
                 <TooltipProvider>
                   <table className="w-full" style={{ fontFamily: 'system-ui, -apple-system, Roboto, sans-serif' }}>
                     <thead className="bg-muted/50">
                       <tr>
-                        <th className="text-left p-4 font-bold text-foreground" style={{ fontSize: '17px', lineHeight: '1.5', fontWeight: '700' }}>Features</th>
-                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '17px', lineHeight: '1.5', fontWeight: '700' }}>
+                        <th className="text-left p-4 font-bold text-foreground" style={{ fontSize: '20px', lineHeight: '1.5', fontWeight: '700' }}>Features</th>
+                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '20px', lineHeight: '1.5', fontWeight: '700' }}>
                           Essentials
                         </th>
-                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '17px', lineHeight: '1.5', fontWeight: '700' }}>
+                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '20px', lineHeight: '1.5', fontWeight: '700' }}>
                           Growth
                         </th>
-                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '17px', lineHeight: '1.5', fontWeight: '700' }}>
+                        <th className="text-center p-4 font-bold text-primary" style={{ fontSize: '20px', lineHeight: '1.5', fontWeight: '700' }}>
                           Enterprise
                         </th>
                       </tr>

@@ -10,6 +10,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
+import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
+import businessCostsImage from '@/assets/q4-cost-cuts-2025-business-costs.jpg';
+import smallBusinessIndexImage from '@/assets/q4-cost-cuts-small-business-index.jpg';
+import inflationImpactImage from '@/assets/q4-cost-cuts-inflation-impact.jpg';
+import efficiencyDiagnosticsImage from '@/assets/q4-cost-cuts-efficiency-diagnostics.jpg';
+import waysToCutCostsImage from '@/assets/q4-cost-cuts-ways-to-cut-costs.jpg';
+import costReductionStrategiesImage from '@/assets/q4-cost-cuts-cost-reduction-strategies.png';
 
 const Q4CostCuts2025 = () => {
   const publishDate = "2025-11-03";
@@ -205,6 +212,26 @@ const Q4CostCuts2025 = () => {
                   Recognizing signs early is key: monitor KPIs like EBITDA and CAC for dips, and watch for operational bottlenecks that inflate costs. BizHealth.ai's 30-40 minute questionnaire pinpoints these, offering tailored reports like the Owner's Report to guide quick, data-backed adjustments.
                 </p>
 
+                {/* 2025 Business Trends Infographic */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={businessTrendsImage} 
+                    alt="2025 small business trends showing investment plans including staff increases, digital marketing, and business expansion statistics"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Business Costs Breakdown */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={businessCostsImage} 
+                    alt="Cost breakdown for starting a business in 2025 showing investment ranges and top business industries"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Inflation's Ops Impact on SMB Operations
                 </h2>
@@ -232,6 +259,26 @@ const Q4CostCuts2025 = () => {
                 <p className="mb-8">
                   The result? Chronic cash squeezes that limit innovation, with 70% of SMBs affected per SBA benchmarks. Yet, this creates opportunities for targeted fixes, leveraging AI to forecast and mitigate.
                 </p>
+
+                {/* Small Business Index Chart */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={smallBusinessIndexImage} 
+                    alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing inflation as top concern for small businesses"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Inflation Impact Infographic */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={inflationImpactImage} 
+                    alt="Inflation's operational impact on small businesses showing rising costs and supply chain pressures in 2025"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Practical Operational Cost Fixes for 2025
@@ -325,6 +372,16 @@ const Q4CostCuts2025 = () => {
                   For instance, if <strong>inflation's ops impact</strong> shows in your Financials, our diagnostics auto-recommend fixes—like linking to BizGrowth Academy courses for <a href="/blog/smb-cash-flow-hacks-2025" className="text-primary hover:underline">cash flow forecasting</a>. This fosters 30%+ cross-transitions in our Integrated Growth Suite, yielding 20-25x ROI on $99-$299 assessments. Gartner's 2025 trends underscore AI's role in scaling smarter, with diagnostics enabling predictive maintenance to avert costly downtimes.
                 </p>
 
+                {/* Efficiency Diagnostics Visualization */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={efficiencyDiagnosticsImage} 
+                    alt="Efficiency diagnostics dashboard showing AI-powered business health assessment tools for cost optimization"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className="bg-primary/5 border-l-4 border-primary p-6 mb-8 rounded">
                   <p className="font-semibold mb-2">💡 Pro Tip:</p>
                   <p>Start small: Use our Employees Report to spot delegation opportunities, reducing overload and enhancing morale. In 2025, with 53% SMB AI adoption per SBA, tools like ours level the playing field against Fortune 500 resources, turning inflation pressures into efficiency levers.</p>
@@ -341,6 +398,26 @@ const Q4CostCuts2025 = () => {
                 <p className="mb-8">
                   Our universal KPIs (e.g., OKRs, McKinsey 7S) ensure seamless fit, empowering owners in Toronto or Sydney to address cash squeezes affordably.
                 </p>
+
+                {/* Ways to Cut Business Costs */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={waysToCutCostsImage} 
+                    alt="10 simple ways to cut business costs including supply expenses, marketing optimization, and virtual technology from American Express"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Cost Reduction Strategies */}
+                <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={costReductionStrategiesImage} 
+                    alt="Cost reduction strategies and operational efficiency improvements for small business financial management"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Conclusion: Stop Guessing, Start Growing

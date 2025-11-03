@@ -10,10 +10,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
-import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
-import businessCostsImage from '@/assets/q4-cost-cuts-2025-business-costs.jpg';
-import smallBusinessIndexImage from '@/assets/q4-cost-cuts-small-business-index.jpg';
-import waysToCutCostsImage from '@/assets/q4-cost-cuts-ways-to-cut-costs.jpg';
 
 const Q4CostCuts2025 = () => {
   const publishDate = "2025-11-03";
@@ -209,38 +205,6 @@ const Q4CostCuts2025 = () => {
                   Recognizing signs early is key: monitor KPIs like EBITDA and CAC for dips, and watch for operational bottlenecks that inflate costs. BizHealth.ai's 30-40 minute questionnaire pinpoints these, offering tailored reports like the Owner's Report to guide quick, data-backed adjustments.
                 </p>
 
-                {/* 2025 Business Trends Infographic */}
-                <div className="my-12">
-                  <h3 className="text-xl font-bold text-foreground mb-3">2025 Small Business Trends</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-3">
-                    <img 
-                      src={businessTrendsImage} 
-                      alt="2025 small business trends showing investment plans including staff increases, digital marketing, and business expansion statistics"
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    Source: <a href="https://www.guidantfinancial.com/small-business-trends/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">Guidant Financial - Small Business Trends</a>
-                  </p>
-                </div>
-
-                {/* Business Costs Breakdown */}
-                <div className="my-12">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Plans for 2025 & Cost to Start a Business</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-3">
-                    <img 
-                      src={businessCostsImage} 
-                      alt="Cost breakdown for starting a business in 2025 showing investment ranges and top business industries"
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    Source: <a href="https://www.guidantfinancial.com/small-business-trends/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">Guidant Financial - 2025 Small Business Trends</a>
-                  </p>
-                </div>
-
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Inflation's Ops Impact on SMB Operations
                 </h2>
@@ -268,22 +232,6 @@ const Q4CostCuts2025 = () => {
                 <p className="mb-8">
                   The result? Chronic cash squeezes that limit innovation, with 70% of SMBs affected per SBA benchmarks. Yet, this creates opportunities for targeted fixes, leveraging AI to forecast and mitigate.
                 </p>
-
-                {/* Small Business Index Chart */}
-                <div className="my-12">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Small Business Index Score Q2 2021 - Q1 2025</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-3">
-                    <img 
-                      src={smallBusinessIndexImage} 
-                      alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing inflation as top concern for small businesses"
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    Source: <a href="https://www.uschamber.com/small-business/small-business-index" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">U.S. Chamber of Commerce - Small Business Index</a>
-                  </p>
-                </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Practical Operational Cost Fixes for 2025
@@ -393,22 +341,6 @@ const Q4CostCuts2025 = () => {
                 <p className="mb-8">
                   Our universal KPIs (e.g., OKRs, McKinsey 7S) ensure seamless fit, empowering owners in Toronto or Sydney to address cash squeezes affordably.
                 </p>
-
-                {/* Ways to Cut Business Costs */}
-                <div className="my-12">
-                  <h3 className="text-xl font-bold text-foreground mb-3">10 Simple Ways to Cut Business Costs</h3>
-                  <div className="rounded-lg overflow-hidden shadow-lg mb-3">
-                    <img 
-                      src={waysToCutCostsImage} 
-                      alt="10 simple ways to cut business costs including supply expenses, marketing optimization, and virtual technology from American Express"
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    Source: <a href="https://www.americanexpress.com/en-gb/business/trends-and-insights/articles/10-simple-ways-to-cut-business-costs/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">American Express Business Class - Ways to Cut Business Costs</a>
-                  </p>
-                </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Conclusion: Stop Guessing, Start Growing

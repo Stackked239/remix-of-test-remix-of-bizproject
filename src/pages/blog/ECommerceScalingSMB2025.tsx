@@ -304,13 +304,13 @@ const ECommerceScalingSMB2025 = () => {
                     Ready to Scale Your E-Commerce Business?
                   </h3>
                   <p className="text-foreground/90 mb-6">
-                    Get a comprehensive business health assessment and discover personalized strategies to accelerate your growth in 2026.
+                    Get a comprehensive business health assessment and discover personalized strategies to accelerate your growth.
                   </p>
                   <Link 
                     to="/"
                     className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
-                    Start Your Free Assessment
+                    Let's Get Started
                   </Link>
                 </div>
               </div>

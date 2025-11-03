@@ -330,7 +330,7 @@ const Pricing = () => {
                             ))
                           ) : (
                             <tr className="border-t border-border hover:bg-muted/20 transition-colors">
-                              <td className="p-4 pl-8 text-muted-foreground" style={{ fontSize: '15px', lineHeight: '1.5' }}>
+                              <td className="p-4 pl-8 text-foreground" style={{ fontSize: '15px', lineHeight: '1.5' }}>
                                 {category.features.map(f => f.name).join(', ')}
                               </td>
                               <td className="p-4 text-center">
@@ -438,7 +438,7 @@ const Pricing = () => {
                             ))
                           ) : (
                             <>
-                              <div className="text-sm text-muted-foreground mb-3">
+                              <div className="text-sm text-foreground mb-3">
                                 Includes: {category.features.map(f => f.name).join(', ')}
                               </div>
                               <div className="grid grid-cols-3 gap-2 text-center">

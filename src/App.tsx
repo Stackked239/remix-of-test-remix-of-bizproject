@@ -50,6 +50,7 @@ import TalentWarsHiring from "./pages/blog/TalentWarsHiring";
 import SMBCashFlowHacks2025 from "./pages/blog/SMBCashFlowHacks2025";
 import ImpactOverInformation from "./pages/blog/ImpactOverInformation";
 import Q4CostCuts2025 from "./pages/blog/Q4CostCuts2025";
+import CashFlowCrisisManagement from "./pages/blog/CashFlowCrisisManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -114,6 +115,7 @@ const App = () => (
             <Route path="/blog/smb-cash-flow-hacks-2025" element={<SMBCashFlowHacks2025 />} />
             <Route path="/blog/impact-over-information" element={<ImpactOverInformation />} />
             <Route path="/blog/Q4-Cost-Cuts-2025" element={<Q4CostCuts2025 />} />
+            <Route path="/blog/cash-flow-crisis-management" element={<CashFlowCrisisManagement />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

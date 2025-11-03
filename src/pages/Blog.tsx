@@ -23,6 +23,7 @@ import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flo
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 import informationOverloadImage from "@/assets/information-overload-business-leader.jpg";
+import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,6 +41,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
+      excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings.",
+      author: "BizHealth.ai Research Team",
+      date: "November 3, 2025",
+      readTime: "5 min read",
+      category: "Operations, Financial Management",
+      slug: "/blog/Q4-Cost-Cuts-2025",
+      imageUrl: q4CostCutsImage,
+      altText: "Operational cost cutting strategies with scissors cutting through stacks of cash representing small business financial management and cost reduction for 2025"
+    },
     {
       title: "The Pitfall of Information Overload: Why General Advice Falls Short",
       excerpt: "Discover why generic business advice fails SMBs and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth.",

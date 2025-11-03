@@ -116,6 +116,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
+        excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings.",
+        url: "/blog/Q4-Cost-Cuts-2025",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
         title: "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
         excerpt: "Master micro-business cash flow management with 5 proven strategies. Automate billing, forecast with AI, optimize inventory to boost liquidity by 30%.",
         url: "/blog/smb-cash-flow-hacks-2025",

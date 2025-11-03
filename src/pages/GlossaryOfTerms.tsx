@@ -153,7 +153,7 @@ const GlossaryOfTerms = () => {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Search and Filter Controls */}
           <div className="bg-card rounded-lg shadow-lg p-6 mb-8 border border-border sticky top-36 z-30">
-            <p className="text-sm text-biz-blue mb-6 text-center">
+            <p className="text-base text-biz-blue mb-6 text-center">
               Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
               this interactive glossary is your comprehensive guide to understanding key business concepts.
             </p>

@@ -402,15 +402,15 @@ const Q4CostCuts2025 = () => {
                 </p>
 
                 <div className="bg-primary text-white p-8 rounded-lg mt-12 mb-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business Operations?</h3>
+                  <h3 className="text-2xl font-bold mb-4">Ready to Stop Guessing and Start Growing?</h3>
                   <p className="mb-6">
-                    Schedule your 30-minute business health assessment at BizHealth.ai today. Your growth starts here.
+                    Begin growing your business today with a comprehensive business health assessment. Your growth starts here.
                   </p>
                   <a 
                     href="/onboarding" 
                     className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors"
                   >
-                    Start Your Assessment
+                    Start My Assessment
                   </a>
                 </div>
 

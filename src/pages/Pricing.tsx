@@ -523,8 +523,8 @@ const Pricing = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-foreground">{tier.name}</h3>
                   <div className="mb-2">
-                    <div className="inline-block bg-warning/10 border border-warning px-3 py-1 rounded-full">
-                      <span className="text-warning font-semibold text-xs">⏰ Limited Time Offer</span>
+                    <div className="inline-block bg-warning border-2 border-warning px-3 py-1 rounded-full shadow-lg">
+                      <span className="text-foreground font-bold text-xs">⏰ Limited Time Offer</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-center gap-2 mb-2">

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
 import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
-import businessIndexImage from '@/assets/q4-cost-cuts-small-business-index.jpg';
+import businessIndexImage from '@/assets/q4-cost-cuts-small-business-index-white.png';
 import costReductionImage from '@/assets/q4-cost-cuts-cost-reduction-strategies.png';
 
 const Q4CostCuts2025 = () => {

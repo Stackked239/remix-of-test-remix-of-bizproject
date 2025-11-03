@@ -60,15 +60,7 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* StoryBrand Header */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
-        </div>
-        
+      <section className="relative pt-32 pb-20 overflow-hidden bg-primary">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in" style={{ fontFamily: 'Montserrat, sans-serif' }}>

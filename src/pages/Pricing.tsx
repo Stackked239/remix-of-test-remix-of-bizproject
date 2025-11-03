@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
+import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Plus, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -292,7 +292,7 @@ const Pricing = () => {
                                   {feature.name === "Stakeholders Report" ? (
                                     <X className="w-5 h-5 mx-auto" style={{ color: '#DC3545' }} />
                                   ) : feature.locked && !feature.essentials ? (
-                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    <Plus className="w-5 h-5 mx-auto" style={{ color: '#FFC107' }} />
                                   ) : feature.essentials ? (
                                     <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
@@ -301,7 +301,7 @@ const Pricing = () => {
                                 </td>
                                 <td className="p-2 text-center">
                                   {feature.locked && !feature.growth ? (
-                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    <Plus className="w-5 h-5 mx-auto" style={{ color: '#FFC107' }} />
                                   ) : feature.growth ? (
                                     <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
@@ -310,7 +310,7 @@ const Pricing = () => {
                                 </td>
                                 <td className="p-2 text-center">
                                   {feature.locked && !feature.enterprise ? (
-                                    <Lock className="w-5 h-5 mx-auto" style={{ color: '#6B7280' }} />
+                                    <Plus className="w-5 h-5 mx-auto" style={{ color: '#FFC107' }} />
                                   ) : feature.enterprise ? (
                                     <Check className="w-5 h-5 mx-auto" style={{ color: '#28A745' }} />
                                   ) : (
@@ -397,7 +397,7 @@ const Pricing = () => {
                                     {feature.name === "Stakeholders Report" ? (
                                       <X className="w-4 h-4 mx-auto" style={{ color: '#DC3545' }} />
                                     ) : feature.locked && !feature.essentials ? (
-                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
+                                      <Plus className="w-4 h-4 mx-auto" style={{ color: '#FFC107' }} />
                                     ) : feature.essentials ? (
                                       <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (
@@ -407,7 +407,7 @@ const Pricing = () => {
                                   <div>
                                     <div className="text-xs font-bold text-primary mb-0.5">Growth</div>
                                     {feature.locked && !feature.growth ? (
-                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
+                                      <Plus className="w-4 h-4 mx-auto" style={{ color: '#FFC107' }} />
                                     ) : feature.growth ? (
                                       <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (
@@ -417,7 +417,7 @@ const Pricing = () => {
                                   <div>
                                     <div className="text-xs font-bold text-primary mb-0.5">Enterprise</div>
                                     {feature.locked && !feature.enterprise ? (
-                                      <Lock className="w-4 h-4 mx-auto" style={{ color: '#6B7280' }} />
+                                      <Plus className="w-4 h-4 mx-auto" style={{ color: '#FFC107' }} />
                                     ) : feature.enterprise ? (
                                       <Check className="w-4 h-4 mx-auto" style={{ color: '#28A745' }} />
                                     ) : (

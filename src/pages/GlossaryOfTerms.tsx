@@ -371,7 +371,7 @@ const GlossaryOfTerms = () => {
                       {/* Expand/Collapse Button */}
                       <button
                         onClick={() => toggleTerm(term.id)}
-                        className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-blue/80 transition-colors font-medium"
+                        className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
                       >
                         <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
                         {isExpanded ? (

@@ -10,6 +10,9 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
+import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
+import businessIndexImage from '@/assets/q4-cost-cuts-small-business-index.jpg';
+import costReductionImage from '@/assets/q4-cost-cuts-cost-reduction-strategies.png';
 
 const Q4CostCuts2025 = () => {
   const publishDate = "2025-11-03";
@@ -189,6 +192,22 @@ const Q4CostCuts2025 = () => {
                   At BizHealth.ai, we serve as your Business Health Coach, providing <a href="/blog/ai-business-analytics" className="text-primary hover:underline">AI-driven diagnostics</a> to cut through uncertainty and spotlight operational efficiencies. Our platform uncovers blind spots across 12 key areas, including Operations and Financials, helping you affirm strengths and address gaps without the risks of traditional consulting. In this guide, we'll explore small business cash crunch realities, inflation's ops impact, and practical <strong>operational cost fixes for 2025</strong>. We'll also highlight how <strong>efficiency diagnostics</strong> can deliver 15-20% gains, turning Q4 challenges into sustainable momentum. Let's transform operational cost fixes and efficiency diagnostics into your roadmap for resilient growth.
                 </p>
 
+                {/* Business Trends 2025 Image */}
+                <div className="my-12">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">2025 Small Business Trends</h3>
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src={businessTrendsImage} 
+                      alt="2025 Small Business Trends infographic showing business plans, startup costs, top states, and industries"
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground italic">
+                    Source: <a href="https://www.guidantfinancial.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">Guidant Financial</a>
+                  </p>
+                </div>
+
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Understanding Q4 Cash Crunches in 2025
                 </h2>
@@ -232,6 +251,22 @@ const Q4CostCuts2025 = () => {
                 <p className="mb-8">
                   The result? Chronic cash squeezes that limit innovation, with 70% of SMBs affected per SBA benchmarks. Yet, this creates opportunities for targeted fixes, leveraging AI to forecast and mitigate.
                 </p>
+
+                {/* Small Business Index Image */}
+                <div className="my-12">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Small Business Index Shows Inflation is Top Concern in 2025</h3>
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src={businessIndexImage} 
+                      alt="Small Business Index score chart from Q2 2021 to Q1 2025 showing trends in business confidence"
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground italic">
+                    Source: <a href="https://www.uschamber.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">U.S. Chamber of Commerce</a>
+                  </p>
+                </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
                   Practical Operational Cost Fixes for 2025
@@ -328,6 +363,22 @@ const Q4CostCuts2025 = () => {
                 <div className="bg-primary/5 border-l-4 border-primary p-6 mb-8 rounded">
                   <p className="font-semibold mb-2">💡 Pro Tip:</p>
                   <p>Start small: Use our Employees Report to spot delegation opportunities, reducing overload and enhancing morale. In 2025, with 53% SMB AI adoption per SBA, tools like ours level the playing field against Fortune 500 resources, turning inflation pressures into efficiency levers.</p>
+                </div>
+
+                {/* Cost Reduction Strategies Image */}
+                <div className="my-12">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">10 Simple Ways to Cut Business Costs</h3>
+                  <div className="rounded-lg overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src={costReductionImage} 
+                      alt="American Express Business Class infographic showing 10 simple ways to cut business costs including supply expenses, production costs, and efficiency improvements"
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground italic">
+                    Source: <a href="https://www.americanexpress.com/" target="_blank" rel="nofollow noopener noreferrer" className="text-primary hover:underline">American Express</a>
+                  </p>
                 </div>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">

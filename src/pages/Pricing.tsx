@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PricingStoryBrandHeader from "@/components/PricingStoryBrandHeader";
+import SEO from "@/components/SEO";
 import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
 import {
   Tooltip,
@@ -176,19 +178,21 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Transparent Pricing - Business Diagnostics That Scale | BizHealth.ai"
+        description="Affordable business diagnostics and tiered solutions that help you identify gaps, confirm strengths, and fuel sustainable success. Transparent pricing for small business analysis and strategic planning."
+        keywords="business diagnostics, small business pricing, tiered solutions, transparent pricing, affordable AI business health, SMB solutions, business health assessment pricing"
+        canonical="https://bizhealth.ai/pricing"
+      />
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-muted">
+      {/* StoryBrand Hero Header */}
+      <PricingStoryBrandHeader />
+      
+      {/* Feature Comparison Section */}
+      <section id="feature-comparison" className="pt-16 pb-16 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
-              Pricing That Scales With You
-            </h1>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Choose the assessment level that matches your business needs. From quick health checks to comprehensive strategic analysis,
-              we have the right solution to drive your growth.
-            </p>
 
             {/* Feature Comparison Matrix */}
             <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden max-w-2xl mx-auto">
@@ -490,7 +494,7 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-20">
+      <section id="pricing-tiers" className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {tiers.map((tier, index) => (

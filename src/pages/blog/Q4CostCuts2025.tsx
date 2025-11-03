@@ -193,7 +193,7 @@ const Q4CostCuts2025 = () => {
                 </p>
 
                 {/* Business Trends 2025 Image */}
-                <div className="my-12 max-w-[70%] mx-auto">
+                <div className="my-12 max-w-[85%] mx-auto">
                   <div className="rounded-lg overflow-hidden shadow-lg mb-2">
                     <img 
                       src={businessTrendsImage} 
@@ -253,7 +253,7 @@ const Q4CostCuts2025 = () => {
                 </p>
 
                 {/* Small Business Index Image */}
-                <div className="my-12 max-w-[70%] mx-auto">
+                <div className="my-12 max-w-[85%] mx-auto">
                   <div className="rounded-lg overflow-hidden shadow-lg mb-2 bg-white p-6">
                     <img 
                       src={businessIndexImage} 
@@ -366,7 +366,7 @@ const Q4CostCuts2025 = () => {
                 </div>
 
                 {/* Cost Reduction Strategies Image */}
-                <div className="my-12 max-w-[70%] mx-auto">
+                <div className="my-12 max-w-[85%] mx-auto">
                   <div className="rounded-lg overflow-hidden shadow-lg mb-2">
                     <img 
                       src={costReductionImage} 

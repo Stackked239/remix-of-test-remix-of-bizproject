@@ -1,6 +1,6 @@
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import GlobalNavigation from "@/components/GlobalNavigation";
+import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
@@ -58,7 +58,7 @@ const CashFlowCrisisManagement = () => {
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-        <GlobalNavigation />
+        <Navigation />
         
         <article className="container mx-auto px-4 py-12 max-w-4xl">
           {/* Back Button */}

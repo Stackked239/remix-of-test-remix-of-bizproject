@@ -198,7 +198,7 @@ const Pricing = () => {
             <div className="bg-background rounded-xl shadow-elegant border border-border overflow-hidden max-w-2xl mx-auto">
               <div className="bg-primary/5 px-3 py-2 border-b border-border">
                 <h2 className="text-lg font-extrabold text-foreground">Compare Features Across Tiers</h2>
-                <p className="text-muted-foreground text-sm mt-0.5">See what's included in each assessment level</p>
+                <p className="text-muted-foreground text-sm mt-0.5">See what's included in each Tier Level</p>
               </div>
 
               {/* Desktop View - Table */}

@@ -154,6 +154,7 @@ const GlossaryOfTerms = () => {
           {/* Search and Filter Controls */}
           <div className="bg-biz-green/10 rounded-lg shadow-lg p-6 mb-8 border border-border sticky top-36 z-30">
             <p className="text-base text-biz-blue mb-6 text-center">
+              <span className="font-bold">Interactive Glossary - </span>
               Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
               this interactive glossary is your comprehensive guide to understanding key business concepts.
             </p>

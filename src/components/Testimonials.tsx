@@ -99,7 +99,7 @@ const Testimonials = () => {
             <div className="text-sm text-muted-foreground">Quick Delivery</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-foreground mb-2">$15K</div>
+            <div className="text-3xl font-bold text-biz-green mb-2">$15K</div>
             <div className="text-sm text-muted-foreground">Avg. Savings vs. Consulting</div>
           </div>
         </div>

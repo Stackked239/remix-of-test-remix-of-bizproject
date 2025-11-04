@@ -193,7 +193,7 @@ const Hero = () => {
                 {/* Employee Count */}
                 <div className="space-y-2 sm:space-y-3">
                   <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
-                    Employees: {employees[0]}
+                    Employees: {employees[0] === 150 ? '150+' : employees[0]}
                   </label>
                   <div className="px-1">
                     <Slider

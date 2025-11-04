@@ -4,6 +4,9 @@ import Navigation from '@/components/Navigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
 import blindSpotsHero from '@/assets/business-blind-spots-assessment.png';
+import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
+import frameworkImage from '@/assets/blindspot-analysis-framework.jpg';
+import johariWindow from '@/assets/johari-window-business-blind-spots.png';
 
 const BusinessBlindSpots2025 = () => {
   const publishDate = '2025-11-04';
@@ -80,6 +83,21 @@ const BusinessBlindSpots2025 = () => {
           <p className="text-lg leading-relaxed text-muted-foreground mb-6">
             In the grind of running a small or mid-sized business (SMB) in 2025, you're likely no stranger to that nagging feeling: sales are sluggish, costs are creeping up, and despite your best efforts, growth feels stalled. Take this Reddit thread from r/smallbusiness, where one owner vents, "I've had my store for 9+ years, growth every year until 2024. 2025 has seen my sales down every month over 2024." Echoed by others in similar posts, like "Retail Brick and Mortar Sales Decline" and "Sales down 20% for the year," a common theme emerges: 60% of businesses report being "down" this year, yet most attribute it to "market conditions" or "the economy"—without digging into their own operations. Here's the paradox: as a small & mid-size business leader you're too immersed in daily fires to spot the root causes. These hidden "business blind spots" aren't obvious; they're systemic gaps in finance, operations, talent, customer experience, and strategy that silently drain resources.
           </p>
+
+          {/* Market Report Chart */}
+          <figure className="my-10">
+            <img
+              src={marketReportChart}
+              alt="Blind Spot Monitor Global Market Report showing market growth from 2024 to 2034 with CAGR trends and business intelligence analytics"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-sm text-muted-foreground mt-4">
+              <strong>Blind Spot Monitor Market Report 2025 - Trends & Forecast To 2034</strong>
+              <br />
+              Source: <a href="https://www.thebusinessresearchcompany.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The Business Research Company</a>
+            </figcaption>
+          </figure>
 
           <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
             The Psychology of Business Blind Spots
@@ -247,6 +265,10 @@ const BusinessBlindSpots2025 = () => {
               <li>Escalating commitment</li>
               <li>Constrained perspective</li>
             </ul>
+            
+            <p className="text-center text-sm text-muted-foreground mt-4">
+              Source: <a href="https://fourweekmba.com/blindspot-analysis/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FourWeekMBA - Blindspot Analysis</a>
+            </p>
           </div>
 
           <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
@@ -268,6 +290,19 @@ const BusinessBlindSpots2025 = () => {
           <p className="text-muted-foreground mb-6">
             Uncover blind spots with this five-step framework:
           </p>
+
+          {/* Framework Image */}
+          <figure className="my-10">
+            <img
+              src={frameworkImage}
+              alt="Five-step framework for uncovering business blind spots including holistic analysis, multi-source feedback, industry benchmarking, impact prioritization, and continuous monitoring"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-sm text-muted-foreground mt-4">
+              <strong>The 5-Step Framework for Uncovering Business Blind Spots</strong>
+            </figcaption>
+          </figure>
 
           <h3 className="text-2xl font-bold text-foreground mt-10 mb-4">
             Step 1: Conduct Holistic Business Analysis
@@ -307,6 +342,21 @@ const BusinessBlindSpots2025 = () => {
           <p className="text-muted-foreground mb-6">
             This methodology turns unknowns into action, with AI accelerating discovery.
           </p>
+
+          {/* Johari Window Image */}
+          <figure className="my-10">
+            <img
+              src={johariWindow}
+              alt="The Johari Window model showing known and unknown business factors including blind spots, mutual understanding, stature appreciation, and unknown potential in organizational development"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              loading="lazy"
+            />
+            <figcaption className="text-center text-sm text-muted-foreground mt-4">
+              <strong>The Johari Window: Uncovering the Blind Spots in Business</strong>
+              <br />
+              Source: <a href="https://www.valueprop.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ValueProp - The Johari Window</a>
+            </figcaption>
+          </figure>
 
           <div className="bg-muted/30 p-6 rounded-lg mb-8">
             <h4 className="text-xl font-bold text-foreground mb-4">The Johari Window</h4>

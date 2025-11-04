@@ -6,6 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/smb-scaling-paradox-2025.jpg";
+import scalingStrategiesImage from "@/assets/smb-scaling-strategies-uzio.jpg";
+import businessScalingFramework from "@/assets/business-scaling-framework.png";
+import revenueModelFramework from "@/assets/revenue-model-framework.png";
 
 const SMBScalingParadox2025 = () => {
   const publishDate = "2025-11-04T09:00:00-08:00";
@@ -126,12 +129,25 @@ const SMBScalingParadox2025 = () => {
                   Real-world X insights underscore this: industry leaders note that SMB growth starts with people-side wins, like resilient teams amid volatility. In global markets like Canada (58% SMB increase) or the UK (101% fastest growth), universal KPIs enable profitable scaling without major tweaks. BizHealth.ai's diagnostics reveal these shifts early, linking Financials gaps to BizGrowth courses for sustainable models.
                 </p>
 
+                {/* Embedded Image 1 */}
+                <figure className="my-10">
+                  <img 
+                    src={scalingStrategiesImage} 
+                    alt="5 Essential Strategies for Scaling Your SMB infographic showing customer persona creation, marketing research, new channels, diversifying offerings, and payroll software"
+                    className="w-full rounded-xl shadow-elegant"
+                    loading="lazy"
+                  />
+                  <figcaption className="text-sm text-muted-foreground mt-3 text-center">
+                    5 Essential Strategies for Scaling Your SMB. Source: <a href="https://uzio.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">uzio.com</a>
+                  </figcaption>
+                </figure>
+
                 <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg my-8">
                   <p className="text-lg font-semibold text-foreground mb-2">
                     Key Insight:
                   </p>
                   <p className="text-foreground">
-                    Profitability trumps revenue because it builds buffers: Target 3-6 months of expenses in reserves to weather stalls. As Clutch's 2025 Playbook advises, data-driven decisions turn challenges into catalysts, yielding 20-25x ROI. For ICP pains like cash constraints, this paradigm ensures growth without breaking.
+                    Profitability trumps revenue because it builds buffers: Target 3-6 months of expenses in reserves to weather stalls. As Clutch's 2025 Playbook advises, data-driven decisions turn challenges into catalysts, yielding 20x ROI. For ICP pains like cash constraints, this paradigm ensures growth without breaking.
                   </p>
                 </div>
 
@@ -171,6 +187,19 @@ const SMBScalingParadox2025 = () => {
                 <p className="mb-8">
                   BizHealth.ai integrates these: Our 30-min questionnaire evaluates 12 areas against 2x scenarios, auto-recommending fixes for 15-20% efficiency.
                 </p>
+
+                {/* Embedded Image 2 */}
+                <figure className="my-10">
+                  <img 
+                    src={businessScalingFramework} 
+                    alt="Business Scaling Journey framework showing progression from niche market to mass market with scaling up and scaling out phases"
+                    className="w-full rounded-xl shadow-elegant"
+                    loading="lazy"
+                  />
+                  <figcaption className="text-sm text-muted-foreground mt-3 text-center">
+                    Business Scaling Framework by Gennaro Cuofano. Source: <a href="https://businessengineer.ai" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">businessengineer.ai</a>
+                  </figcaption>
+                </figure>
 
                 {/* Section 3 */}
                 <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">
@@ -361,8 +390,21 @@ const SMBScalingParadox2025 = () => {
                 </div>
 
                 <p className="mb-8">
-                  Tailor to ICP: Subscriptions for ongoing health, hybrids for global markets with high need. <em>Source: <a href="https://altexsoft.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">altexsoft.com</a></em>
+                  Tailor to ICP: Subscriptions for ongoing health, hybrids for global markets with high need.
                 </p>
+
+                {/* Embedded Image 3 */}
+                <figure className="my-10">
+                  <img 
+                    src={revenueModelFramework} 
+                    alt="Revenue Model Choice Framework showing paid value proposition vs free-to-use value proposition with pricing tactics and third-party revenue generators"
+                    className="w-full rounded-xl shadow-elegant"
+                    loading="lazy"
+                  />
+                  <figcaption className="text-sm text-muted-foreground mt-3 text-center">
+                    Revenue Model Types and Examples. Source: <a href="https://altexsoft.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">altexsoft.com</a>
+                  </figcaption>
+                </figure>
 
                 {/* Conclusion */}
                 <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">

@@ -25,10 +25,10 @@ const Hero = () => {
   const getRevenueAmount = (sliderValue: number) => {
     if (sliderValue === 0) return 0;
     // Logarithmic scale: 0-100 slider maps to $0-$7M
-    // Using exponent 3.8 for pronounced curve (50 slider ≈ $500k)
+    // Using exponent 2.2 for gentler curve at low end (easier to reach $10k-$50k)
     const maxRevenue = 7000000;
     const normalized = sliderValue / 100;
-    const rawAmount = Math.pow(normalized, 3.8) * maxRevenue;
+    const rawAmount = Math.pow(normalized, 2.2) * maxRevenue;
     
     // Apply smart rounding based on value
     if (rawAmount < 500000) {

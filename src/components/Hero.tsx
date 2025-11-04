@@ -93,6 +93,9 @@ const Hero = () => {
     }
     
     // Growth triggers
+    if (challengeValue > 3 && employeeValue > 5 && revenueValue > 200000) {
+      return "Growth";
+    }
     if (revenueValue > 400000 || employeeValue > 10) {
       return "Growth";
     }

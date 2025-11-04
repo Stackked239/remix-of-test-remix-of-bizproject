@@ -172,7 +172,7 @@ const Hero = () => {
                 {/* Annual Revenue */}
                 <div className="space-y-2 sm:space-y-3">
                   <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
-                    Annual Revenue: ${revenue[0].toLocaleString()}
+                    Annual Revenue: {revenue[0] === 7000000 ? '$7M+' : `$${revenue[0].toLocaleString()}`}
                   </label>
                   <div className="px-1">
                     <Slider

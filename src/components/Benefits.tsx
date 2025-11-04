@@ -48,22 +48,30 @@ const Benefits = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl p-8 border border-border shadow-card hover:shadow-feature transition-all duration-300 hover:-translate-y-1 group"
-            >
-              <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <benefit.icon className="w-8 h-8 text-primary" />
+          {benefits.map((benefit, index) => {
+            // Specific badges get BizGreen background, others keep primary (blue)
+            const useBizGreen = index === 0 || index === 2 || index === 4;
+            const bgClass = useBizGreen ? 'bg-biz-green/10' : 'bg-primary/10';
+            const hoverBgClass = useBizGreen ? 'group-hover:bg-biz-green/20' : 'group-hover:bg-primary/20';
+            const iconColorClass = useBizGreen ? 'text-biz-green' : 'text-primary';
+            
+            return (
+              <div
+                key={index}
+                className="bg-card rounded-xl p-8 border border-border shadow-card hover:shadow-feature transition-all duration-300 hover:-translate-y-1 group"
+              >
+                <div className={`${bgClass} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${hoverBgClass} transition-colors`}>
+                  <benefit.icon className={`w-8 h-8 ${iconColorClass}`} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-card-foreground leading-tight">
+                  {benefit.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-card-foreground leading-tight">
-                {benefit.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Success metrics */}

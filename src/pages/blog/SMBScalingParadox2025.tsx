@@ -96,9 +96,6 @@ const SMBScalingParadox2025 = () => {
                   width={1200}
                   height={675}
                 />
-                <figcaption className="text-sm text-muted-foreground mt-3 text-center">
-                  Visual representation of business scaling and growth architecture
-                </figcaption>
               </figure>
               
               {/* Article Content */}
@@ -109,7 +106,7 @@ const SMBScalingParadox2025 = () => {
                 </p>
 
                 <p className="mb-8">
-                  At <Link to="/" className="text-primary hover:text-primary/80 font-semibold">BizHealth.ai</Link>, we provide AI-driven diagnostics across 12 key areas to eliminate guesswork and affirm strengths. Our platform helps uncover blind spots in Strategy, Financials, and more, delivering 20-25x ROI on $99-$299 assessments. In this guide, we'll explore the shift to profitable scaling, decision-making frameworks for readiness, the 12 areas that fracture under pressure, real founder mistakes from Reddit and X, and scalable revenue models. Let's navigate SMB growth strategy 2025 and business scaling challenges to turn potential pitfalls into resilient advancement.
+                  At <Link to="/" className="text-primary hover:text-primary/80 font-semibold">BizHealth.ai</Link>, we provide AI-driven diagnostics across 12 key areas to eliminate guesswork and affirm strengths. Our platform helps uncover blind spots in Strategy, Financials, and more, delivering 20x ROI on $199-$699 business health assessments. In this guide, we'll explore the shift to profitable scaling, decision-making frameworks for readiness, the 12 areas that fracture under pressure, real founder mistakes from Reddit and X, and scalable revenue models. Let's navigate SMB growth strategy 2025 and business scaling challenges to turn potential pitfalls into resilient advancement.
                 </p>
 
                 {/* Section 1 */}

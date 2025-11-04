@@ -283,10 +283,6 @@ const BusinessBlindSpots2025 = () => {
             <strong>Lack of baseline:</strong> 80% of failed businesses never knew health metrics pre-crisis. Data vs. intuition: LinkedIn shows gut-reliant founders struggle with AI due to skepticism without explainability. False security from metrics like revenue ignores comprehensive gaps. In 2025, with 53% AI adoption, traditional methods miss what unbiased diagnostics reveal.
           </p>
 
-          <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
-            The Framework for Uncovering What You Can't See
-          </h2>
-
           {/* Framework Image */}
           <figure className="my-10">
             <img
@@ -296,9 +292,15 @@ const BusinessBlindSpots2025 = () => {
               loading="lazy"
             />
             <figcaption className="text-center text-sm text-muted-foreground mt-4">
-              <strong>The 5-Step Framework for Uncovering Business Blind Spots</strong>
+              <strong>Blindspot Analysis In A Nutshell</strong>
+              <br />
+              Source: <a href="https://fourweekmba.com/blindspot-analysis/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FourWeekMBA - Blindspot Analysis</a>
             </figcaption>
           </figure>
+
+          <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+            The Framework for Uncovering What You Can't See
+          </h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-8 mb-6">
             Uncover blind spots with this five-step framework:

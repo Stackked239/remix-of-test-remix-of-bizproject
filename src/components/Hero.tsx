@@ -21,11 +21,22 @@ const Hero = () => {
     return Math.round(Math.pow(normalized, 1.5) * maxEmployees);
   };
 
+  // Convert linear slider value to logarithmic revenue amount
+  const getRevenueAmount = (sliderValue: number) => {
+    if (sliderValue === 0) return 0;
+    // Logarithmic scale: 0-100 slider maps to $0-$7M
+    // Using exponent 3.8 for pronounced curve (50 slider ≈ $500k)
+    const maxRevenue = 7000000;
+    const normalized = sliderValue / 100;
+    return Math.round(Math.pow(normalized, 3.8) * maxRevenue);
+  };
+
   const employeeCount = getEmployeeCount(employees[0]);
+  const revenueAmount = getRevenueAmount(revenue[0]);
 
   // Calculate recommended tier based on quiz inputs
   const calculateTier = () => {
-    const revenueValue = revenue[0];
+    const revenueValue = revenueAmount;
     const employeeValue = employeeCount;
     const challengeValue = challenges[0];
     
@@ -184,15 +195,15 @@ const Hero = () => {
                 {/* Annual Revenue */}
                 <div className="space-y-2 sm:space-y-3">
                   <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
-                    Annual Revenue: {revenue[0] === 7000000 ? '$7M+' : `$${revenue[0].toLocaleString()}`}
+                    Annual Revenue: {revenue[0] === 100 ? '$7M+' : `$${revenueAmount.toLocaleString()}`}
                   </label>
                   <div className="px-1">
                     <Slider
                       value={revenue}
                       onValueChange={setRevenue}
-                      max={7000000}
+                      max={100}
                       min={0}
-                      step={25000}
+                      step={1}
                       className="w-full"
                     />
                   </div>

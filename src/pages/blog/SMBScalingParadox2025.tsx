@@ -130,7 +130,7 @@ const SMBScalingParadox2025 = () => {
                 </p>
 
                 {/* Embedded Image 1 */}
-                <figure className="my-10">
+                <figure className="my-10 mx-auto" style={{ width: '85%' }}>
                   <img 
                     src={scalingStrategiesImage} 
                     alt="5 Essential Strategies for Scaling Your SMB infographic showing customer persona creation, marketing research, new channels, diversifying offerings, and payroll software"
@@ -189,7 +189,7 @@ const SMBScalingParadox2025 = () => {
                 </p>
 
                 {/* Embedded Image 2 */}
-                <figure className="my-10">
+                <figure className="my-10 mx-auto" style={{ width: '85%' }}>
                   <img 
                     src={businessScalingFramework} 
                     alt="Business Scaling Journey framework showing progression from niche market to mass market with scaling up and scaling out phases"
@@ -394,7 +394,7 @@ const SMBScalingParadox2025 = () => {
                 </p>
 
                 {/* Embedded Image 3 */}
-                <figure className="my-10">
+                <figure className="my-10 mx-auto" style={{ width: '85%' }}>
                   <img 
                     src={revenueModelFramework} 
                     alt="Revenue Model Choice Framework showing paid value proposition vs free-to-use value proposition with pricing tactics and third-party revenue generators"

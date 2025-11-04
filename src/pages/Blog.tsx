@@ -43,6 +43,17 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)",
+      excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025.",
+      author: "BizHealth.ai Research Team",
+      date: "November 4, 2025",
+      readTime: "10 min read",
+      category: "Business Strategy, Risk Management, Business Leadership",
+      slug: "/blog/smb-scaling-paradox-2025",
+      imageUrl: require("@/assets/smb-scaling-paradox-2025.jpg"),
+      altText: "Modern green and white commercial building representing scaling small business growth and SMB expansion strategy with upward trending architecture"
+    },
+    {
       title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
       excerpt: "Master cash flow management for small business in 2025. Learn crisis prevention strategies, cash flow planning tips, and how to avoid the pitfalls affecting 60% of SMBs today.",
       author: "BizHealth.ai Research Team",

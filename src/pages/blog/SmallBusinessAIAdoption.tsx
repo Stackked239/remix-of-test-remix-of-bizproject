@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import GlobalNavigation from '@/components/GlobalNavigation';
+import Navigation from '@/components/Navigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
@@ -36,9 +36,10 @@ const SmallBusinessAIAdoption = () => {
         url={articleUrl}
       />
 
-      <GlobalNavigation />
+      <div className="min-h-screen bg-background">
+        <Navigation />
 
-      <article className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+        <article className="pt-24 pb-16 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           {/* Breadcrumb Navigation */}
           <nav className="mb-8" aria-label="Breadcrumb">
@@ -303,7 +304,8 @@ const SmallBusinessAIAdoption = () => {
             ]}
           />
         </div>
-      </article>
+        </article>
+      </div>
 
       <GlobalFooter />
     </>

@@ -8,12 +8,16 @@ import bannerLogo from "@/assets/bizhealth-logo-banner.jpg";
 const Hero = () => {
   const [revenue, setRevenue] = useState([0]);
   const [employees, setEmployees] = useState([0]);
-  const [challenges, setChallenges] = useState([1]);
+  const [challenges, setChallenges] = useState([0]);
   const [recommendedTier, setRecommendedTier] = useState("Growth");
   const [scrollY, setScrollY] = useState(0);
 
   // Challenge scale descriptors
   const challengeData: { [key: number]: { descriptor: string; description: string } } = {
+    0: {
+      descriptor: "None",
+      description: "Your business is thriving without any hurdles—everything's aligned, efficient, and poised for seamless growth."
+    },
     1: {
       descriptor: "Minimal",
       description: "Your business is running smoothly with few, if any, hurdles—perhaps just routine operational tweaks."
@@ -296,13 +300,13 @@ const Hero = () => {
                       value={challenges}
                       onValueChange={setChallenges}
                       max={5}
-                      min={1}
+                      min={0}
                       step={1}
                       className="w-full"
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
-                    <span>1 - Minimal</span>
+                    <span>0 - None</span>
                     <span>5 - Major</span>
                   </div>
                 </div>

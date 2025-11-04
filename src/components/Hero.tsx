@@ -309,8 +309,8 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
-                    <span>0 - None</span>
-                    <span>5 - Major</span>
+                    <span>None</span>
+                    <span>Major</span>
                   </div>
                 </div>
               </div>

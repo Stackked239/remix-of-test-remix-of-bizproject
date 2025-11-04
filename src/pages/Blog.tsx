@@ -27,6 +27,7 @@ import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
+import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,6 +45,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One",
+      excerpt: "Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from the 23.2% that fail within 12 months.",
+      author: "BizHealth.ai Research Team",
+      date: "October 24, 2025",
+      readTime: "11 min read",
+      category: "Business Strategy, Business Leadership, Risk Management",
+      slug: "/blog/small-business-survival-checklist-2025",
+      imageUrl: survivalChecklistImage,
+      altText: "Small business owner in crisis management - first year survival strategies and business health assessment 2025"
+    },
     {
       title: "AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners",
       excerpt: "Skip the hype. Discover practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.",

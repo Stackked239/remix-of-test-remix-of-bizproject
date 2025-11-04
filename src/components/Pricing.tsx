@@ -69,8 +69,8 @@ const Pricing = () => {
                 Complete Business Health Report
               </h3>
               <div className="mb-6">
-                <div className="inline-block bg-warning/10 border border-warning px-4 py-2 rounded-lg mb-4">
-                  <span className="text-warning font-semibold text-sm">⏰ Limited Time Offer</span>
+                <div className="inline-block px-3 py-1 rounded-full shadow-lg mb-4" style={{ backgroundColor: '#FFC107', border: '2px solid #FFA000' }}>
+                  <span className="font-bold text-xs" style={{ color: '#000000' }}>⏰ Limited Time Offer</span>
                 </div>
                 <div className="flex items-center justify-center gap-4">
                   <div className="text-center">

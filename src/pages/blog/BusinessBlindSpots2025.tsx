@@ -286,10 +286,6 @@ const BusinessBlindSpots2025 = () => {
           <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
             The Framework for Uncovering What You Can't See
           </h2>
-          
-          <p className="text-muted-foreground mb-6">
-            Uncover blind spots with this five-step framework:
-          </p>
 
           {/* Framework Image */}
           <figure className="my-10">
@@ -303,6 +299,10 @@ const BusinessBlindSpots2025 = () => {
               <strong>The 5-Step Framework for Uncovering Business Blind Spots</strong>
             </figcaption>
           </figure>
+
+          <h3 className="text-xl font-semibold text-foreground mt-8 mb-6">
+            Uncover blind spots with this five-step framework:
+          </h3>
 
           <h3 className="text-2xl font-bold text-foreground mt-10 mb-4">
             Step 1: Conduct Holistic Business Analysis
@@ -358,30 +358,6 @@ const BusinessBlindSpots2025 = () => {
             </figcaption>
           </figure>
 
-          <div className="bg-muted/30 p-6 rounded-lg mb-8">
-            <h4 className="text-xl font-bold text-foreground mb-4">The Johari Window</h4>
-            <table className="w-full border-collapse">
-              <thead>
-                <tr>
-                  <th className="border border-border p-3 bg-muted text-left"></th>
-                  <th className="border border-border p-3 bg-muted text-left">Known to Company</th>
-                  <th className="border border-border p-3 bg-muted text-left">Not Known to Company</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-border p-3 font-semibold">Known to Others</td>
-                  <td className="border border-border p-3">Mutually Understood</td>
-                  <td className="border border-border p-3 bg-primary/10">Blind Spot</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3 font-semibold">Not Known to Others</td>
-                  <td className="border border-border p-3">Truth About Your Company</td>
-                  <td className="border border-border p-3">Unknown Potential</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
 
           <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
             Real-World Consequences of Ignoring Blind Spots

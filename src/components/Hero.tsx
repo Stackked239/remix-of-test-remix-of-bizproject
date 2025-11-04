@@ -50,10 +50,13 @@ const Hero = () => {
     const challengeValue = challenges[0];
     
     // Enterprise triggers
+    if (revenueValue > 3000000) {
+      return "Enterprise";
+    }
     if (revenueValue > 2000000 && employeeValue > 5) {
       return "Enterprise";
     }
-    if (revenueValue > 7000000 || employeeValue > 75 || (challengeValue > 2 && employeeValue > 10)) {
+    if (employeeValue > 75 || (challengeValue > 2 && employeeValue > 10)) {
       return "Enterprise";
     }
     

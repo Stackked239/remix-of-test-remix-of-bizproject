@@ -25,6 +25,7 @@ import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 import informationOverloadImage from "@/assets/information-overload-business-leader.jpg";
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
+import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -50,7 +51,7 @@ const Blog = () => {
       readTime: "10 min read",
       category: "Business Strategy, Risk Management, Business Leadership",
       slug: "/blog/smb-scaling-paradox-2025",
-      imageUrl: require("@/assets/smb-scaling-paradox-2025.jpg"),
+      imageUrl: smbScalingParadoxImage,
       altText: "Modern green and white commercial building representing scaling small business growth and SMB expansion strategy with upward trending architecture"
     },
     {

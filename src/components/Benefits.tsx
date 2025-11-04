@@ -20,7 +20,7 @@ const Benefits = () => {
     {
       icon: Zap,
       title: "Save Time and Money with AI-Driven Analysis",
-      description: "Skip the $5,000+ consultant fees and months of waiting. Get professional-grade strategic analysis in minutes, not days, for 98% less than traditional business consulting."
+      description: "Skip the $10,000+ consultant fees and months of waiting. Get professional-grade strategic analysis in minutes, not weeks, for 90% less than traditional business consulting."
     },
     {
       icon: Users,

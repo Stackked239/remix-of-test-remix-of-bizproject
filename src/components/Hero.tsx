@@ -85,6 +85,9 @@ const Hero = () => {
     if (revenueValue > 2000000 && employeeValue > 5) {
       return "Enterprise";
     }
+    if (challengeValue > 3 && employeeValue > 5 && revenueValue > 250000) {
+      return "Enterprise";
+    }
     if (employeeValue > 75 || (challengeValue >= 4 && employeeValue > 10)) {
       return "Enterprise";
     }

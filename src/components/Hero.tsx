@@ -14,11 +14,11 @@ const Hero = () => {
   // Convert linear slider value to logarithmic employee count
   const getEmployeeCount = (sliderValue: number) => {
     if (sliderValue === 0) return 0;
-    // Logarithmic scale: 0-100 slider maps to 0-250 employees
-    // Using exponential function for smooth logarithmic feel
-    const maxEmployees = 250;
+    // Logarithmic scale: 0-100 slider maps to 0-150 employees
+    // Using exponent 1.5 for pronounced curve (50 slider ≈ 53 employees)
+    const maxEmployees = 150;
     const normalized = sliderValue / 100;
-    return Math.round(Math.pow(normalized, 0.5) * maxEmployees);
+    return Math.round(Math.pow(normalized, 1.5) * maxEmployees);
   };
 
   const employeeCount = getEmployeeCount(employees[0]);
@@ -205,7 +205,7 @@ const Hero = () => {
                 {/* Employee Count */}
                 <div className="space-y-2 sm:space-y-3">
                   <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
-                    Employees: {employees[0] === 100 ? '250+' : employeeCount}
+                    Employees: {employees[0] === 100 ? '150+' : employeeCount}
                   </label>
                   <div className="px-1">
                     <Slider
@@ -219,7 +219,7 @@ const Hero = () => {
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
                     <span>0</span>
-                    <span>250+</span>
+                    <span>150+</span>
                   </div>
                 </div>
 

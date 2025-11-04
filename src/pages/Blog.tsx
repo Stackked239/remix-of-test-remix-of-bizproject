@@ -28,6 +28,7 @@ import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,6 +46,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)",
+      excerpt: "Discover the 5 dangerous business blind spots draining SMB profits in 2025. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually.",
+      author: "BizHealth.ai Research Team",
+      date: "November 4, 2025",
+      readTime: "11 min read",
+      category: "Business Strategy, Financial Management, Business Intelligence",
+      slug: "/blog/small-business-blind-spots-2025",
+      imageUrl: blindSpotsImage,
+      altText: "Business leader with blindfold representing small business blind spots and hidden operational challenges in strategic planning"
+    },
     {
       title: "The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One",
       excerpt: "Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from the 23.2% that fail within 12 months.",

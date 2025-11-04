@@ -178,15 +178,15 @@ const Hero = () => {
                     <Slider
                       value={revenue}
                       onValueChange={setRevenue}
-                      max={50000000}
+                      max={10000000}
                       min={0}
-                      step={50000}
+                      step={25000}
                       className="w-full"
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
                     <span>$0</span>
-                    <span>$50M</span>
+                    <span>$10M+</span>
                   </div>
                 </div>
 

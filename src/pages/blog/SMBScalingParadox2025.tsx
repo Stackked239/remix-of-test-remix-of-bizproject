@@ -425,7 +425,7 @@ const SMBScalingParadox2025 = () => {
                     Get Your Business Health Assessment Today
                   </h3>
                   <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Discover your company's vital signs across 12 critical areas and get actionable insights to scale profitably. 20-25x ROI on assessments starting at just $99.
+                    Discover your company's vital signs across 12 critical areas and get actionable insights to scale profitably. Our diagnostics provide a 20x ROI on assessments starting at just $199.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     <Link 

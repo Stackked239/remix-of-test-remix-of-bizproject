@@ -39,7 +39,7 @@ const StoryBrandHeader = () => {
           <div className="pt-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">20x</p>
+                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">27x</p>
                 <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Average ROI</p>
               </div>
               <div>

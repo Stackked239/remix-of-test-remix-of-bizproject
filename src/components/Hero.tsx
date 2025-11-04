@@ -45,7 +45,7 @@ const Hero = () => {
   const trustIndicators = [
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
     { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
-    { icon: TrendingUp, label: "Proven Results", value: "20x Avg. ROI" },
+    { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
     { icon: Users, label: "Trusted by SMBs", value: "2,500+ Businesses" }
   ];
 
@@ -113,7 +113,7 @@ const Hero = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-biz-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                 <p className="font-open-sans text-sm sm:text-base lg:text-lg text-biz-navy">
-                  <span className="font-semibold">20x ROI</span> from actionable AI-generated insights
+                  <span className="font-semibold">27x ROI</span> from actionable AI-generated insights
                 </p>
               </div>
               <div className="flex items-start space-x-3">

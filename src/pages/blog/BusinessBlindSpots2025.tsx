@@ -413,7 +413,7 @@ const BusinessBlindSpots2025 = () => {
             View as due diligence: Diagnose before solutions. Urgency: Each quarter costs lost profit, opportunities.
           </p>
 
-          <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg mt-8 mb-8">
+          <div className="bg-[hsl(var(--biz-green)_/_0.08)] border-l-4 border-[hsl(var(--biz-green))] p-6 rounded-r-lg mt-8 mb-8">
             <p className="text-foreground font-semibold mb-2">
               Ready to uncover your business blind spots?
             </p>

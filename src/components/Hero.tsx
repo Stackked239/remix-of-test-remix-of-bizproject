@@ -1,15 +1,40 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Brain, TrendingUp, Users, Check } from "lucide-react";
+import { ArrowRight, Shield, Brain, TrendingUp, Users, Check, Info } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState, useEffect } from "react";
 import bannerLogo from "@/assets/bizhealth-logo-banner.jpg";
 
 const Hero = () => {
   const [revenue, setRevenue] = useState([0]);
   const [employees, setEmployees] = useState([0]);
-  const [challenges, setChallenges] = useState([0]);
+  const [challenges, setChallenges] = useState([1]);
   const [recommendedTier, setRecommendedTier] = useState("Growth");
   const [scrollY, setScrollY] = useState(0);
+
+  // Challenge scale descriptors
+  const challengeData: { [key: number]: { descriptor: string; description: string } } = {
+    1: {
+      descriptor: "Minimal",
+      description: "Your business is running smoothly with few, if any, hurdles—perhaps just routine operational tweaks."
+    },
+    2: {
+      descriptor: "Minor",
+      description: "Occasional issues arise, like minor cash flow dips or team adjustments, but they're manageable without major disruption."
+    },
+    3: {
+      descriptor: "Moderate",
+      description: "You're facing noticeable challenges, such as inconsistent revenue or scaling pains, requiring focused attention to resolve."
+    },
+    4: {
+      descriptor: "Significant",
+      description: "Multiple or persistent obstacles, like market competition or operational inefficiencies, are impacting growth and stability."
+    },
+    5: {
+      descriptor: "Major",
+      description: "Critical challenges dominate, such as severe financial strain or strategic roadblocks, demanding immediate and comprehensive action."
+    }
+  };
 
   // Convert linear slider value to logarithmic employee count
   const getEmployeeCount = (sliderValue: number) => {
@@ -56,7 +81,7 @@ const Hero = () => {
     if (revenueValue > 2000000 && employeeValue > 5) {
       return "Enterprise";
     }
-    if (employeeValue > 75 || (challengeValue > 2 && employeeValue > 10)) {
+    if (employeeValue > 75 || (challengeValue >= 4 && employeeValue > 10)) {
       return "Enterprise";
     }
     
@@ -251,22 +276,34 @@ const Hero = () => {
 
                 {/* Business Challenges */}
                 <div className="space-y-2 sm:space-y-3">
-                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
-                    Challenges (0-10): {challenges[0]}
-                  </label>
+                  <div className="flex items-center gap-2">
+                    <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white break-words">
+                      Challenges: {challenges[0]} - {challengeData[challenges[0]].descriptor}
+                    </label>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Info className="w-4 h-4 text-biz-white/70 hover:text-biz-white cursor-help flex-shrink-0" />
+                        </TooltipTrigger>
+                        <TooltipContent className="max-w-xs bg-biz-navy border-biz-white/20 text-biz-white">
+                          <p className="text-xs">{challengeData[challenges[0]].description}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </div>
                   <div className="px-1">
                     <Slider
                       value={challenges}
                       onValueChange={setChallenges}
-                      max={10}
-                      min={0}
+                      max={5}
+                      min={1}
                       step={1}
                       className="w-full"
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
-                    <span>None</span>
-                    <span>Major</span>
+                    <span>1 - Minimal</span>
+                    <span>5 - Major</span>
                   </div>
                 </div>
               </div>

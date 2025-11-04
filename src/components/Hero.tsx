@@ -28,7 +28,16 @@ const Hero = () => {
     // Using exponent 3.8 for pronounced curve (50 slider ≈ $500k)
     const maxRevenue = 7000000;
     const normalized = sliderValue / 100;
-    return Math.round(Math.pow(normalized, 3.8) * maxRevenue);
+    const rawAmount = Math.pow(normalized, 3.8) * maxRevenue;
+    
+    // Apply smart rounding based on value
+    if (rawAmount < 500000) {
+      // Round to nearest $10k below $500k
+      return Math.round(rawAmount / 10000) * 10000;
+    } else {
+      // Round to nearest $50k above $500k
+      return Math.round(rawAmount / 50000) * 50000;
+    }
   };
 
   const employeeCount = getEmployeeCount(employees[0]);

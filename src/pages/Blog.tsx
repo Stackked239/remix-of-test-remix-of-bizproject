@@ -26,6 +26,7 @@ import informationOverloadImage from "@/assets/information-overload-business-lea
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
+import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,6 +44,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners",
+      excerpt: "Skip the hype. Discover practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.",
+      author: "BizHealth.ai Research Team",
+      date: "November 4, 2025",
+      readTime: "12 min read",
+      category: "Technology, Business Strategy",
+      slug: "/blog/small-business-ai-adoption",
+      imageUrl: aiAdoptionImage,
+      altText: "Small business owner analyzing AI adoption strategies and skeptical approach to business technology implementation in 2025"
+    },
     {
       title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)",
       excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025.",

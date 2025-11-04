@@ -89,7 +89,7 @@ const BusinessBlindSpots2025 = () => {
             <img
               src={marketReportChart}
               alt="Blind Spot Monitor Global Market Report showing market growth from 2024 to 2034 with CAGR trends and business intelligence analytics"
-              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[85%] mx-auto"
               loading="lazy"
             />
             <figcaption className="text-center text-sm text-muted-foreground mt-4">
@@ -288,7 +288,7 @@ const BusinessBlindSpots2025 = () => {
             <img
               src={frameworkImage}
               alt="Five-step framework for uncovering business blind spots including holistic analysis, multi-source feedback, industry benchmarking, impact prioritization, and continuous monitoring"
-              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[85%] mx-auto"
               loading="lazy"
             />
             <figcaption className="text-center text-sm text-muted-foreground mt-4">
@@ -350,7 +350,7 @@ const BusinessBlindSpots2025 = () => {
             <img
               src={johariWindow}
               alt="The Johari Window model showing known and unknown business factors including blind spots, mutual understanding, stature appreciation, and unknown potential in organizational development"
-              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[90%] mx-auto"
+              className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[85%] mx-auto"
               loading="lazy"
             />
             <figcaption className="text-center text-sm text-muted-foreground mt-4">

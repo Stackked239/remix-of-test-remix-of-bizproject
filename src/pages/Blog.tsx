@@ -29,6 +29,7 @@ import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,6 +47,17 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",
+      excerpt: "Learn how AI-powered business health assessments help SMB leaders identify operational weaknesses, hidden business gaps, and blind spots without consultant fees—discover affordable diagnostic tools for 2025.",
+      author: "BizHealth.ai Research Team",
+      date: "November 5, 2025",
+      readTime: "8 min read",
+      category: "Business Strategy, Business Intelligence, Operations",
+      slug: "/blog/confirm-business-weaknesses-without-consultants",
+      imageUrl: confirmWeaknessesImage,
+      altText: "Business diagnostic assessment revealing operational weaknesses and hidden business gaps for small business owners seeking affordable alternatives to expensive consultants"
+    },
     {
       title: "The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)",
       excerpt: "Discover the 5 dangerous business blind spots draining SMB profits in 2025. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually.",

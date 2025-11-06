@@ -322,25 +322,25 @@ const Search = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen bg-background pt-40 pb-12">
+      <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 pt-40 pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Search Header */}
           <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-montserrat">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-biz-green to-biz-navy bg-clip-text text-transparent font-montserrat">
               Search BizHealth.ai
             </h1>
             
             {/* Search Bar */}
-            <Card className="mb-6">
+            <Card className="mb-6 border-2 border-primary/20 shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur-sm">
               <CardContent className="p-4">
                 <div className="relative">
-                  <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-primary" />
                   <Input
                     type="text"
                     placeholder="Search pages, blogs, FAQs..."
                     value={searchTerm}
                     onChange={(e) => handleSearch(e.target.value)}
-                    className="pl-10 h-12 text-base"
+                    className="pl-10 h-12 text-base border-muted-foreground/20 focus:border-primary"
                     autoFocus
                   />
                 </div>
@@ -356,7 +356,7 @@ const Search = () => {
                     variant={selectedFilter === filter ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedFilter(filter)}
-                    className="font-open-sans"
+                    className="font-open-sans shadow-sm hover:shadow-md transition-shadow"
                   >
                     {filter}
                     {filter === "All" && ` (${filteredResults.total})`}
@@ -384,21 +384,26 @@ const Search = () => {
               {displayResults.length > 0 ? (
                 displayResults.map((result, index) => {
                   const IconComponent = result.icon;
+                  const getTypeColor = () => {
+                    if (result.type === "Page") return "bg-biz-navy/10 text-biz-navy border-biz-navy/20";
+                    if (result.type === "Blog Post") return "bg-biz-green/10 text-biz-green border-biz-green/20";
+                    return "bg-primary/10 text-primary border-primary/20";
+                  };
                   return (
-                    <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <Card key={index} className="hover:shadow-xl hover:border-primary/30 transition-all duration-300 border-2 bg-card/80 backdrop-blur-sm group">
                       <CardContent className="p-6">
-                        <Link to={result.url} className="group">
+                        <Link to={result.url} className="block">
                           <div className="flex items-start gap-4">
-                            <div className="mt-1">
-                              <IconComponent className="w-5 h-5 text-primary" />
+                            <div className={`mt-1 p-2 rounded-lg ${getTypeColor()} border`}>
+                              <IconComponent className="w-5 h-5" />
                             </div>
                             <div className="flex-1">
                               <div className="flex items-center gap-2 mb-2">
-                                <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">
+                                <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${getTypeColor()}`}>
                                   {result.type}
                                 </span>
                                 {result.type === "Blog Post" && 'category' in result && (
-                                  <span className="text-xs text-muted-foreground">
+                                  <span className="text-xs font-medium text-muted-foreground bg-muted/50 px-2 py-1 rounded">
                                     {String(result.category)}
                                   </span>
                                 )}
@@ -421,8 +426,8 @@ const Search = () => {
                   );
                 })
               ) : (
-                <Card className="p-12 text-center">
-                  <SearchIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+                <Card className="p-12 text-center border-2 border-dashed border-muted-foreground/20">
+                  <SearchIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground/50" />
                   <h3 className="text-xl font-bold mb-2 font-montserrat">No results found</h3>
                   <p className="text-muted-foreground mb-6 font-open-sans">
                     Try adjusting your search terms or browse our popular pages below

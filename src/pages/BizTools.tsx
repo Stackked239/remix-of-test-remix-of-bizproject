@@ -373,7 +373,7 @@ const BizTools = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-bold mb-6 font-montserrat text-white">
+              <h3 className="text-5xl font-bold mb-6 font-montserrat text-white leading-tight">
                 Ready to Optimize Your Operations?
               </h3>
               <p className="text-xl mb-8 font-open-sans text-white/90">

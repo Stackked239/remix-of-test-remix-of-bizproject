@@ -13,22 +13,26 @@ const BizTools = () => {
     {
       icon: Wrench,
       title: "Business Templates",
-      description: "Ready-to-use templates for financial planning, operations, marketing, and strategic planning."
+      description: "Ready-to-use templates for financial planning, operations, marketing, and strategic planning.",
+      iconColor: "text-biz-copper"
     },
     {
       icon: Settings,
       title: "Automation Tools",
-      description: "Streamline your operations with automated workflows and process optimization tools."
+      description: "Streamline your operations with automated workflows and process optimization tools.",
+      iconColor: "text-biz-navy"
     },
     {
       icon: Zap,
       title: "Productivity Boosters",
-      description: "Enhance efficiency with tools designed to eliminate bottlenecks and accelerate growth."
+      description: "Enhance efficiency with tools designed to eliminate bottlenecks and accelerate growth.",
+      iconColor: "text-biz-copper"
     },
     {
       icon: Download,
       title: "Instant Access",
-      description: "Download and customize all tools immediately to start implementing improvements today."
+      description: "Download and customize all tools immediately to start implementing improvements today.",
+      iconColor: "text-biz-navy"
     }
   ];
 
@@ -102,7 +106,7 @@ const BizTools = () => {
               <Card key={index} className="text-center border-border/50 shadow-hub-copper hover:shadow-hub-copper/80 transition-all duration-300">
                 <CardHeader>
                   <div className="bg-biz-copper/10 rounded-xl p-4 w-fit mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-biz-copper" />
+                    <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />
                   </div>
                   <CardTitle className="text-xl font-montserrat">{feature.title}</CardTitle>
                 </CardHeader>

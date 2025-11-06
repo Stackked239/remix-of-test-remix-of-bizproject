@@ -166,8 +166,8 @@ const BizTools = () => {
                 <CardContent>
                   <div className="space-y-3">
                     {category.tools.map((tool, toolIndex) => (
-                      <div key={toolIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-biz-copper flex-shrink-0" />
+                      <div key={toolIndex} className="flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group">
+                        <CheckCircle className="w-5 h-5 text-biz-lime flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
                         <span className="font-open-sans text-foreground">{tool}</span>
                       </div>
                     ))}

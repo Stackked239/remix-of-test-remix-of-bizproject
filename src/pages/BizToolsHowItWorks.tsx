@@ -212,10 +212,10 @@ const BizToolsHowItWorks = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-biz-navy mb-4">
-                  The Challenges Every SMB Owner Faces
+                  The Challenges Every SMB Leader Faces
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  You're not alone. These are the top pain points we hear from 10,000+ business owners—and why BizTools was built.
+                  You're not alone. These are the top pain points we hear from thousand of business leaders—and why BizTools was built.
                 </p>
               </div>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, Star } from "lucide-react";
@@ -194,11 +195,14 @@ const BizTools = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button
+                  asChild
                   size="lg"
                   className="bg-biz-copper text-white hover:bg-[#B8591A] font-montserrat font-semibold text-base px-8 py-[14px] shadow-[0_2px_8px_rgba(210,105,30,0.25)] hover:shadow-[0_4px_12px_rgba(210,105,30,0.35)] hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  See How It Works
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <Link to="/biztools/how-it-works">
+                    See How It Works
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
                 </Button>
                 
                 <Button

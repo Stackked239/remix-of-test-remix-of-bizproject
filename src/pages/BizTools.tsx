@@ -78,7 +78,9 @@ const BizTools = () => {
     <div className="min-h-screen bg-background">
       <PromotionalBanner />
       
-      {/* Sticky Banner - positioned below header and nav bar */}
+      <GlobalNavigation />
+      
+      {/* Sticky Banner - positioned below navigation */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
         <div className="text-biz-lime text-sm md:text-base">
           BizTools: Launching February 28, 2026 - Explore the vision as we put on the finishing touches
@@ -87,8 +89,6 @@ const BizTools = () => {
           {countdown}
         </div>
       </div>
-      
-      <GlobalNavigation />
       
       {/* Features Section */}
       <section id="tools-section" className="py-20 bg-muted scroll-mt-48">

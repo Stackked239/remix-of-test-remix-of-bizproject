@@ -237,28 +237,46 @@ const BizTools = () => {
             {/* Right Column - 40% */}
             <div className="lg:col-span-2 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[500px] aspect-square">
-                <div className="absolute inset-0 bg-biz-copper/5 rounded-2xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="bg-biz-copper/10 rounded-full p-8 w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                      <Wrench className="w-16 h-16 text-biz-copper" />
-                    </div>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-center gap-3">
-                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
-                          <Settings className="w-6 h-6 text-biz-copper" />
-                        </div>
-                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
-                          <Zap className="w-6 h-6 text-biz-copper" />
-                        </div>
-                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
-                          <Download className="w-6 h-6 text-biz-copper" />
-                        </div>
-                      </div>
-                      <div className="font-montserrat font-semibold text-biz-navy text-lg">
-                        Business Toolkit
-                      </div>
-                    </div>
+                {/* Background gradient circle */}
+                <div className="absolute inset-0 bg-gradient-to-br from-biz-copper/10 via-biz-copper/5 to-transparent rounded-full blur-2xl"></div>
+                
+                {/* Main container */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* Center icon with glow */}
+                  <div className="absolute z-10 bg-white rounded-2xl shadow-2xl p-8 border-2 border-biz-copper/20">
+                    <Wrench className="w-20 h-20 text-biz-copper" />
                   </div>
+                  
+                  {/* Floating tool cards - positioned around center */}
+                  {/* Top Left Card */}
+                  <div className="absolute top-8 left-4 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+                    <Settings className="w-8 h-8 text-biz-copper mb-2" />
+                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Financial<br/>Tools</div>
+                  </div>
+                  
+                  {/* Top Right Card */}
+                  <div className="absolute top-12 right-8 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform rotate-6 hover:rotate-0 transition-transform duration-300">
+                    <Zap className="w-8 h-8 text-biz-copper mb-2" />
+                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Operations<br/>Suite</div>
+                  </div>
+                  
+                  {/* Bottom Left Card */}
+                  <div className="absolute bottom-16 left-12 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <Download className="w-8 h-8 text-biz-copper mb-2" />
+                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Templates<br/>Library</div>
+                  </div>
+                  
+                  {/* Bottom Right Card */}
+                  <div className="absolute bottom-8 right-4 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <CheckCircle className="w-8 h-8 text-biz-copper mb-2" />
+                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Strategic<br/>Planning</div>
+                  </div>
+                  
+                  {/* Decorative connecting lines/dots */}
+                  <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 5 }}>
+                    <circle cx="50%" cy="50%" r="100" fill="none" stroke="rgb(210, 105, 30)" strokeWidth="1" strokeDasharray="4 4" opacity="0.2" />
+                    <circle cx="50%" cy="50%" r="150" fill="none" stroke="rgb(210, 105, 30)" strokeWidth="1" strokeDasharray="4 4" opacity="0.1" />
+                  </svg>
                 </div>
               </div>
             </div>

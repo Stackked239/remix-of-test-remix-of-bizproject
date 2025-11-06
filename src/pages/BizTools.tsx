@@ -78,9 +78,7 @@ const BizTools = () => {
     <div className="min-h-screen bg-background">
       <PromotionalBanner />
       
-      <GlobalNavigation />
-      
-      {/* Sticky Banner - positioned below navigation */}
+      {/* Sticky Banner - positioned below header and nav bar */}
       <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
         <div className="text-biz-lime text-sm md:text-base">
           BizTools: Launching February 28, 2026 - Explore the vision as we put on the finishing touches
@@ -90,8 +88,55 @@ const BizTools = () => {
         </div>
       </div>
       
+      <GlobalNavigation />
+      
+      {/* Hero Section */}
+      <section className="relative bg-biz-copper text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="bg-white/20 rounded-full p-4">
+                <Wrench className="w-12 h-12 text-biz-navy" />
+              </div>
+            </div>
+            
+            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
+              BizTools
+            </h1>
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
+              Scalable Essentials at Your Fingertips
+            </p>
+            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 text-white/85">
+              Your comprehensive resource center for business tools and templates. Transform insights from your health assessment into actionable improvements with battle-tested resources.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                className="bg-white text-biz-navy hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+              >
+                Browse Tools
+                <ShoppingCart className="w-5 h-5 ml-2" />
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg"
+                className="bg-biz-navy border-biz-copper text-biz-white hover:bg-biz-copper hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
+              >
+                View Downloads
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="tools-section" className="py-20 bg-muted scroll-mt-48">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -120,96 +165,6 @@ const BizTools = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Hero Section - StoryBrand Framework */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
-            {/* Left Column - Content (60%) */}
-            <div className="lg:col-span-3">
-              <h1 className="font-montserrat font-bold text-[32px] lg:text-[48px] leading-tight tracking-tight text-biz-navy mb-5 max-w-[600px]">
-                Get the Business Tools You Need to Scale—Without the Guesswork
-              </h1>
-              
-              <p className="font-open-sans text-base lg:text-lg text-biz-grey leading-relaxed max-w-[580px] mb-8">
-                Affordable tools, frameworks, and resources hand-picked for business leaders who want practical solutions—not expensive consultants. Based on your business health assessment, these scalable essentials help you implement improvements fast.
-              </p>
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <Button 
-                  size="lg"
-                  className="bg-biz-copper hover:bg-[#B8591A] text-white font-montserrat font-semibold text-base px-8 py-3.5 rounded shadow-[0_2px_8px_rgba(210,105,30,0.25)] hover:shadow-[0_4px_12px_rgba(210,105,30,0.35)] hover:-translate-y-0.5 transition-all duration-300"
-                  onClick={() => {
-                    const toolsSection = document.querySelector('#tools-section');
-                    toolsSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  See How It Works
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white font-montserrat font-semibold text-base px-8 py-3.5 rounded transition-all duration-300"
-                  onClick={() => window.location.href = '/'}
-                >
-                  Take Assessment First
-                </Button>
-              </div>
-              
-              {/* Trust Signals */}
-              <div className="flex flex-wrap items-center gap-4 text-sm font-open-sans text-biz-grey">
-                <span className="flex items-center gap-1.5">
-                  📦 <span className="font-medium">500+ Resources</span>
-                </span>
-                <span className="text-biz-grey/40">|</span>
-                <span className="flex items-center gap-1.5">
-                  ⭐ <span className="font-medium">4.9/5 Rating</span>
-                </span>
-                <span className="text-biz-grey/40">|</span>
-                <span className="flex items-center gap-1.5">
-                  🔧 <span className="font-medium">Updated Monthly</span>
-                </span>
-              </div>
-            </div>
-            
-            {/* Right Column - Visual (40%) */}
-            <div className="lg:col-span-2 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[500px] aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-biz-navy/5 to-biz-copper/10 rounded-2xl"></div>
-                <div className="relative h-full flex items-center justify-center p-8">
-                  <div className="grid grid-cols-2 gap-6 w-full">
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-biz-grey/10">
-                      <Wrench className="w-10 h-10 text-biz-copper mb-3" />
-                      <div className="h-2 bg-biz-grey/10 rounded mb-2"></div>
-                      <div className="h-2 bg-biz-grey/10 rounded w-3/4"></div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-biz-grey/10 mt-8">
-                      <Settings className="w-10 h-10 text-biz-copper mb-3" />
-                      <div className="h-2 bg-biz-grey/10 rounded mb-2"></div>
-                      <div className="h-2 bg-biz-grey/10 rounded w-3/4"></div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-biz-grey/10 -mt-4">
-                      <Zap className="w-10 h-10 text-biz-copper mb-3" />
-                      <div className="h-2 bg-biz-grey/10 rounded mb-2"></div>
-                      <div className="h-2 bg-biz-grey/10 rounded w-3/4"></div>
-                    </div>
-                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-biz-grey/10 mt-4">
-                      <Download className="w-10 h-10 text-biz-copper mb-3" />
-                      <div className="h-2 bg-biz-grey/10 rounded mb-2"></div>
-                      <div className="h-2 bg-biz-grey/10 rounded w-3/4"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Section Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-biz-grey/20 to-transparent"></div>
       </section>
 
       {/* Tool Categories Section */}

@@ -93,7 +93,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
               </div>
 
               {/* Hero Image */}
-              <div className="mb-12 rounded-lg overflow-hidden">
+              <div className="mb-12 rounded-lg overflow-hidden w-1/2 mx-auto">
                 <img
                   src={heroImage}
                   alt="AI-powered business weakness assessment dashboard showing operational efficiency gaps and small business blind spots identification tools for SMB growth"

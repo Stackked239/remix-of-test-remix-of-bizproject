@@ -434,7 +434,7 @@ const BizTools = () => {
                   Save $300 Today!
                 </div>
                 <div className="text-sm text-biz-grey mb-6 font-open-sans">
-                  or $29/month subscription
+                  or $49/month subscription
                 </div>
                 <Button 
                   className="bg-biz-copper text-white hover:bg-[#B8591A] font-montserrat font-semibold w-full shadow-[0_4px_20px_rgba(210,105,30,0.4)] hover:shadow-[0_8px_28px_rgba(210,105,30,0.6)] hover:-translate-y-1 transition-all duration-300"

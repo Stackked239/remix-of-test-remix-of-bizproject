@@ -14,25 +14,29 @@ const BizTools = () => {
       icon: Wrench,
       title: "Business Templates",
       description: "Ready-to-use templates for financial planning, operations, marketing, and strategic planning.",
-      iconColor: "text-biz-copper"
+      iconColor: "text-biz-copper",
+      hoverClass: "hover:shadow-[0_8px_24px_rgba(210,105,30,0.25)] hover:border-biz-copper/40 hover:-translate-y-1"
     },
     {
       icon: Settings,
       title: "Automation Tools",
       description: "Streamline your operations with automated workflows and process optimization tools.",
-      iconColor: "text-biz-navy"
+      iconColor: "text-biz-navy",
+      hoverClass: "hover:shadow-[0_8px_24px_rgba(15,28,56,0.25)] hover:border-biz-navy/40 hover:-translate-y-1"
     },
     {
       icon: Zap,
       title: "Productivity Boosters",
       description: "Enhance efficiency with tools designed to eliminate bottlenecks and accelerate growth.",
-      iconColor: "text-biz-copper"
+      iconColor: "text-biz-copper",
+      hoverClass: "hover:shadow-[0_8px_24px_rgba(210,105,30,0.25)] hover:border-biz-copper/40 hover:-translate-y-1"
     },
     {
       icon: Download,
       title: "Instant Access",
       description: "Download and customize all tools immediately to start implementing improvements today.",
-      iconColor: "text-biz-navy"
+      iconColor: "text-biz-navy",
+      hoverClass: "hover:shadow-[0_8px_24px_rgba(15,28,56,0.25)] hover:border-biz-navy/40 hover:-translate-y-1"
     }
   ];
 
@@ -103,10 +107,10 @@ const BizTools = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center border-border/50 shadow-hub-copper hover:shadow-hub-copper/80 transition-all duration-300">
+              <Card key={index} className={`text-center border-border/50 transition-all duration-300 ${feature.hoverClass}`}>
                 <CardHeader>
-                  <div className="bg-biz-copper/10 rounded-xl p-4 w-fit mx-auto mb-4">
-                    <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />
+                  <div className="bg-biz-copper/10 rounded-xl p-4 w-fit mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <feature.icon className={`w-8 h-8 ${feature.iconColor} transition-transform duration-300`} />
                   </div>
                   <CardTitle className="text-xl font-montserrat">{feature.title}</CardTitle>
                 </CardHeader>

@@ -89,6 +89,23 @@ const BizTools = () => {
             <p className="font-open-sans font-bold text-base max-w-3xl mx-auto text-biz-navy">
               Your comprehensive resource center for business tools and templates. Transform insights from your health assessment into actionable improvements with battle-tested resources.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-biz-navy hover:bg-biz-navy/90 text-white"
+              >
+                <a href="/biztools/how-it-works">Learn How It Works</a>
+              </Button>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline"
+                className="border-biz-navy text-biz-navy hover:bg-biz-navy/10"
+              >
+                <a href="/onboarding">Start Free Assessment</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

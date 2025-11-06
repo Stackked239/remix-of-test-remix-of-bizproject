@@ -420,14 +420,17 @@ const BizTools = () => {
                   One-time purchase for lifetime access to all current and future tools
                 </p>
                 
-                {/* Original Price - Strikethrough */}
-                <div className="text-2xl font-bold font-montserrat text-biz-grey/50 line-through mb-2">
-                  $799
-                </div>
-                
-                {/* Discounted Price */}
-                <div className="text-6xl font-bold mb-2 font-montserrat text-biz-copper group-hover:scale-110 inline-block transition-transform duration-300 drop-shadow-lg">
-                  $499
+                {/* Pricing Container - Side by Side */}
+                <div className="flex items-center justify-center gap-4 mb-2">
+                  {/* Original Price - Strikethrough in Red */}
+                  <div className="text-2xl font-bold font-montserrat text-red-600 line-through">
+                    $799
+                  </div>
+                  
+                  {/* Discounted Price */}
+                  <div className="text-6xl font-bold font-montserrat text-biz-copper group-hover:scale-110 inline-block transition-transform duration-300 drop-shadow-lg">
+                    $499
+                  </div>
                 </div>
                 
                 <div className="text-sm font-semibold text-green-600 mb-2 font-montserrat">

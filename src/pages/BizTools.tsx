@@ -193,7 +193,7 @@ const BizTools = () => {
             {/* Left Column - 60% */}
             <div className="lg:col-span-3">
               <h1 className="font-montserrat font-bold text-[2rem] md:text-[3rem] leading-tight text-biz-navy mb-5 max-w-[600px] tracking-tight">
-                Get the Business Tools You Need to Scale—Without the Guesswork
+                Get the Business Tools You Need to Scale—<span className="text-biz-green">Without the Guesswork</span>
               </h1>
               
               <p className="font-open-sans text-base md:text-lg leading-relaxed text-biz-grey mb-8 max-w-[580px]">

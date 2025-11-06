@@ -90,6 +90,38 @@ const BizTools = () => {
       
       <GlobalNavigation />
       
+      {/* Features Section */}
+      <section id="tools-section" className="py-20 bg-muted">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Professional Tools, Proven Results
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Access the same tools used by successful businesses to optimize operations and drive growth
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="text-center border-border/50 shadow-hub-copper hover:shadow-hub-copper/80 transition-all duration-300">
+                <CardHeader>
+                  <div className="bg-biz-copper/10 rounded-xl p-4 w-fit mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-biz-copper" />
+                  </div>
+                  <CardTitle className="text-xl font-montserrat">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="font-open-sans leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section - StoryBrand Framework */}
       <section className="relative bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
@@ -178,38 +210,6 @@ const BizTools = () => {
         
         {/* Section Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-biz-grey/20 to-transparent"></div>
-      </section>
-
-      {/* Features Section */}
-      <section id="tools-section" className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Professional Tools, Proven Results
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Access the same tools used by successful businesses to optimize operations and drive growth
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center border-border/50 shadow-hub-copper hover:shadow-hub-copper/80 transition-all duration-300">
-                <CardHeader>
-                  <div className="bg-biz-copper/10 rounded-xl p-4 w-fit mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-biz-copper" />
-                  </div>
-                  <CardTitle className="text-xl font-montserrat">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="font-open-sans leading-relaxed">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Tool Categories Section */}

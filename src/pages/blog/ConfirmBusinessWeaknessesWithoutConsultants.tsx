@@ -266,30 +266,6 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
             </div>
           </div>
 
-          {/* Author Bio */}
-          <div className="container mx-auto px-6 mt-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-muted rounded-lg p-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-3xl font-bold text-primary">BH</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">BizHealth.ai Research Team</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Our research team combines expertise in business analytics, AI technology, and SMB operations to deliver actionable insights. With decades of collective experience analyzing thousands of small and mid-size businesses, we understand the unique challenges facing today's entrepreneurs and provide data-driven solutions that drive real growth.
-                    </p>
-                    <div className="flex gap-4 text-sm">
-                      <span className="text-primary font-semibold">Expertise:</span>
-                      <span className="text-muted-foreground">Business Intelligence • AI Analytics • SMB Operations • Strategic Planning</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </article>
 
         {/* Related Articles */}

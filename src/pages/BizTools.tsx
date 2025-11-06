@@ -362,53 +362,82 @@ const BizTools = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-biz-copper text-white">
-        <div className="container mx-auto px-6">
+      {/* CTA Section - Premium Redesign */}
+      <section className="py-20 bg-gradient-to-br from-biz-navy via-biz-navy to-biz-navy/95 text-white relative overflow-hidden">
+        {/* Background accent elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-96 h-96 bg-biz-copper/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-biz-copper/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-bold mb-6 font-montserrat">
+              <h3 className="text-4xl font-bold mb-6 font-montserrat text-white">
                 Ready to Optimize Your Operations?
               </h3>
-              <p className="text-xl mb-8 font-open-sans opacity-90">
+              <p className="text-xl mb-8 font-open-sans text-white/90">
                 Get instant access to our complete library of business tools and templates. Start implementing improvements today.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                  <span className="font-open-sans">Instant download access</span>
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Instant download access</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                  <span className="font-open-sans">Customizable templates</span>
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Customizable templates</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                  <span className="font-open-sans">Regular updates and new tools</span>
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Regular updates and new tools</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20 shadow-2xl hover:shadow-[0_20px_60px_rgba(210,105,30,0.3)] transition-all duration-500">
               <div className="text-center">
-                <ShoppingCart className="w-12 h-12 mx-auto mb-6" />
-                <h4 className="text-2xl font-bold mb-4 font-montserrat">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-biz-copper to-biz-copper/90 flex items-center justify-center shadow-lg">
+                  <ShoppingCart className="w-9 h-9 text-white" />
+                </div>
+                <h4 className="text-2xl font-bold mb-4 font-montserrat text-white">
                   Complete Access Bundle
                 </h4>
-                <p className="font-open-sans mb-6 opacity-90">
+                <p className="font-open-sans mb-6 text-white/80">
                   One-time purchase for lifetime access to all current and future tools
                 </p>
-                <div className="text-4xl font-bold mb-6 font-montserrat">
+                <div className="text-5xl font-bold mb-2 font-montserrat text-biz-copper">
                   $299
                 </div>
+                <div className="text-sm text-white/60 mb-6 font-open-sans">
+                  or $29/month subscription
+                </div>
                 <Button 
-                  className="bg-white text-biz-copper hover:bg-white/90 font-montserrat font-semibold w-full"
+                  className="bg-biz-copper text-white hover:bg-[#B8591A] font-montserrat font-semibold w-full shadow-[0_4px_20px_rgba(210,105,30,0.4)] hover:shadow-[0_8px_28px_rgba(210,105,30,0.6)] hover:-translate-y-1 transition-all duration-300"
                   size="lg"
                 >
                   Get All Tools Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
+                
+                {/* Trust badges */}
+                <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-center gap-6 text-xs text-white/70 font-open-sans">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                    30-day guarantee
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                    Secure checkout
+                  </span>
+                </div>
               </div>
             </div>
           </div>

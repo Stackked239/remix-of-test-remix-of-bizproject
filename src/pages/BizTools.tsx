@@ -67,7 +67,7 @@ const BizTools = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44 pb-12">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-white/20 rounded-full p-4">
+              <div className="bg-biz-copper rounded-full p-4">
                 <Wrench className="w-12 h-12 text-biz-navy" />
               </div>
             </div>

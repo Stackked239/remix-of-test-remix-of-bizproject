@@ -78,8 +78,10 @@ const BizTools = () => {
     <div className="min-h-screen bg-background">
       <PromotionalBanner />
       
+      <GlobalNavigation />
+      
       {/* Sticky Banner - positioned below header and nav bar */}
-      <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30">
+      <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30 mb-6 md:mb-8">
         <div className="text-biz-lime text-sm md:text-base">
           BizTools: Launching February 28, 2026 - Explore the vision as we put on the finishing touches
         </div>
@@ -88,8 +90,6 @@ const BizTools = () => {
         </div>
       </div>
       
-      <GlobalNavigation />
-      
       {/* Hero Section */}
       <section className="relative bg-biz-copper text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -97,7 +97,7 @@ const BizTools = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="bg-white/20 rounded-full p-4">

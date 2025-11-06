@@ -197,7 +197,7 @@ const BizToolsHowItWorks = () => {
                   asChild 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white/10"
+                  className="border-white bg-transparent text-white hover:bg-white hover:text-biz-navy transition-colors"
                 >
                   <Link to="/biztools">Browse Free Tools</Link>
                 </Button>

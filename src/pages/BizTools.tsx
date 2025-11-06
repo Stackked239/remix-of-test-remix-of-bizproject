@@ -372,36 +372,6 @@ const BizTools = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-5xl font-bold mb-6 font-montserrat text-white leading-tight">
-                Ready to Optimize Your Operations?
-              </h3>
-              <p className="text-xl mb-8 font-open-sans text-white/90">
-                Get instant access to our complete library of business tools and templates. Start implementing improvements today.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
-                  </div>
-                  <span className="font-open-sans text-white/90">Instant download access</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
-                  </div>
-                  <span className="font-open-sans text-white/90">Customizable templates</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
-                  </div>
-                  <span className="font-open-sans text-white/90">Regular updates and new tools</span>
-                </div>
-              </div>
-            </div>
-            
             <div className="bg-white rounded-2xl p-8 border border-biz-copper/20 shadow-2xl hover:shadow-[0_20px_60px_rgba(210,105,30,0.4)] hover:scale-105 hover:border-biz-copper/40 transition-all duration-500 group cursor-pointer">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-lg group-hover:shadow-[0_8px_24px_rgba(234,179,8,0.5)] group-hover:scale-110 transition-all duration-500 border-2 border-biz-navy">
@@ -462,6 +432,36 @@ const BizTools = () => {
               
               {/* Animated gradient overlay on hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-biz-copper/0 via-biz-copper/5 to-biz-copper/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            </div>
+            
+            <div>
+              <h3 className="text-5xl font-bold mb-6 font-montserrat text-white leading-tight">
+                Ready to Optimize Your Operations?
+              </h3>
+              <p className="text-xl mb-8 font-open-sans text-white/90">
+                Get instant access to our complete library of business tools and templates. Start implementing improvements today.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Instant download access</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Customizable templates</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  </div>
+                  <span className="font-open-sans text-white/90">Regular updates and new tools</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

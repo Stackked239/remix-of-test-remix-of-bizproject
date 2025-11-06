@@ -44,7 +44,7 @@ const BizToolsHowItWorks = () => {
     {
       number: 1,
       icon: FileCheck,
-      headline: "Take Your Free Assessment",
+      headline: "Take A Business Health Assessment",
       body: "Complete our 30-minute business health diagnostic covering 12 critical areas: Strategy, Operations, Finance, Marketing, HR, and more. No credit card required—just honest answers about where your business stands today.",
       details: [
         "87 questions, mobile-optimized",

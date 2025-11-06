@@ -428,7 +428,7 @@ const BizTools = () => {
                   </div>
                   
                   {/* Discounted Price */}
-                  <div className="text-6xl font-bold font-montserrat text-biz-copper group-hover:scale-110 inline-block transition-transform duration-300 drop-shadow-lg">
+                  <div className="text-6xl font-bold font-montserrat text-biz-navy group-hover:scale-110 inline-block transition-transform duration-300 drop-shadow-lg">
                     $499
                   </div>
                 </div>

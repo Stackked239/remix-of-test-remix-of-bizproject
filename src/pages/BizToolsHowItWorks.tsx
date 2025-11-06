@@ -168,7 +168,7 @@ const BizToolsHowItWorks = () => {
         <GlobalNavigation />
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy/90 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy/90 text-white pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 right-10 w-72 h-72 bg-biz-copper/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 left-10 w-96 h-96 bg-biz-copper/5 rounded-full blur-3xl"></div>

@@ -234,49 +234,122 @@ const BizTools = () => {
               </div>
             </div>
             
-            {/* Right Column - 40% */}
+            {/* Right Column - 40% Premium Interactive Visual */}
             <div className="lg:col-span-2 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[500px] aspect-square">
-                {/* Background gradient circle */}
-                <div className="absolute inset-0 bg-gradient-to-br from-biz-copper/10 via-biz-copper/5 to-transparent rounded-full blur-2xl"></div>
+              <div className="relative w-full max-w-[550px] h-[550px]">
+                {/* Animated gradient background orbs */}
+                <div className="absolute inset-0">
+                  <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-biz-copper/20 via-biz-copper/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-biz-navy/10 via-biz-copper/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
                 
-                {/* Main container */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  {/* Center icon with glow */}
-                  <div className="absolute z-10 bg-white rounded-2xl shadow-2xl p-8 border-2 border-biz-copper/20">
-                    <Wrench className="w-20 h-20 text-biz-copper" />
+                {/* Main 3D Stack Container */}
+                <div className="relative w-full h-full flex items-center justify-center perspective-1000">
+                  
+                  {/* Back Layer - Dashboard Preview */}
+                  <div className="absolute w-[85%] h-[70%] bg-gradient-to-br from-white to-biz-copper/5 rounded-2xl shadow-2xl border border-biz-copper/20 transform rotate-3 translate-y-8 scale-95 opacity-60"
+                       style={{ transformStyle: 'preserve-3d' }}>
+                    <div className="p-6 space-y-3">
+                      <div className="h-3 bg-biz-copper/20 rounded w-3/4"></div>
+                      <div className="h-3 bg-biz-navy/10 rounded w-1/2"></div>
+                      <div className="grid grid-cols-3 gap-2 mt-4">
+                        <div className="h-16 bg-gradient-to-br from-biz-copper/10 to-biz-copper/5 rounded"></div>
+                        <div className="h-16 bg-gradient-to-br from-biz-copper/10 to-biz-copper/5 rounded"></div>
+                        <div className="h-16 bg-gradient-to-br from-biz-copper/10 to-biz-copper/5 rounded"></div>
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Floating tool cards - positioned around center */}
-                  {/* Top Left Card */}
-                  <div className="absolute top-8 left-4 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
-                    <Settings className="w-8 h-8 text-biz-copper mb-2" />
-                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Financial<br/>Tools</div>
+                  {/* Middle Layer - Tools Collection */}
+                  <div className="absolute w-[90%] h-[75%] bg-gradient-to-br from-white via-white to-biz-copper/5 rounded-2xl shadow-[0_20px_50px_rgba(210,105,30,0.15)] border-2 border-biz-copper/30 transform -rotate-2 translate-y-4 scale-[0.97] opacity-80 hover:scale-100 transition-all duration-500 cursor-pointer"
+                       style={{ transformStyle: 'preserve-3d' }}>
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-biz-copper to-biz-copper/80 flex items-center justify-center shadow-lg">
+                          <Zap className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="h-3 bg-biz-navy/80 rounded w-32 mb-1.5"></div>
+                          <div className="h-2 bg-biz-grey/30 rounded w-24"></div>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="h-20 bg-gradient-to-br from-biz-copper/15 to-biz-copper/5 rounded-lg border border-biz-copper/20"></div>
+                        <div className="h-20 bg-gradient-to-br from-biz-copper/15 to-biz-copper/5 rounded-lg border border-biz-copper/20"></div>
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Top Right Card */}
-                  <div className="absolute top-12 right-8 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform rotate-6 hover:rotate-0 transition-transform duration-300">
-                    <Zap className="w-8 h-8 text-biz-copper mb-2" />
-                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Operations<br/>Suite</div>
+                  {/* Front Layer - Featured Tool Card */}
+                  <div className="absolute w-[95%] h-[80%] bg-gradient-to-br from-white via-white to-biz-copper/10 rounded-2xl shadow-[0_25px_60px_rgba(210,105,30,0.25)] border-2 border-biz-copper/40 transform hover:scale-105 hover:-rotate-1 transition-all duration-500 cursor-pointer z-10 group"
+                       style={{ transformStyle: 'preserve-3d' }}>
+                    
+                    {/* Premium badge */}
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-br from-biz-copper to-biz-copper/90 text-white text-xs font-montserrat font-bold px-4 py-1.5 rounded-full shadow-lg border-2 border-white">
+                      PREMIUM
+                    </div>
+                    
+                    <div className="p-8 h-full flex flex-col">
+                      {/* Header */}
+                      <div className="flex items-start gap-4 mb-6">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-biz-copper via-biz-copper to-biz-copper/90 flex items-center justify-center shadow-[0_8px_20px_rgba(210,105,30,0.4)] group-hover:shadow-[0_12px_28px_rgba(210,105,30,0.5)] transition-shadow duration-500">
+                          <Wrench className="w-9 h-9 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-montserrat font-bold text-xl text-biz-navy mb-1">Complete Toolkit</h4>
+                          <p className="font-open-sans text-sm text-biz-grey">500+ Premium Resources</p>
+                        </div>
+                      </div>
+                      
+                      {/* Tool Categories Grid */}
+                      <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div className="bg-gradient-to-br from-biz-copper/10 to-white rounded-xl p-4 border border-biz-copper/20 hover:border-biz-copper/40 hover:shadow-lg transition-all duration-300 group/card">
+                          <Settings className="w-8 h-8 text-biz-copper mb-2 group-hover/card:scale-110 transition-transform" />
+                          <div className="text-xs font-montserrat font-semibold text-biz-navy">Financial<br/>Management</div>
+                          <div className="text-[10px] text-biz-grey mt-1">125+ Tools</div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-br from-biz-copper/10 to-white rounded-xl p-4 border border-biz-copper/20 hover:border-biz-copper/40 hover:shadow-lg transition-all duration-300 group/card">
+                          <Zap className="w-8 h-8 text-biz-copper mb-2 group-hover/card:scale-110 transition-transform" />
+                          <div className="text-xs font-montserrat font-semibold text-biz-navy">Operations<br/>Excellence</div>
+                          <div className="text-[10px] text-biz-grey mt-1">150+ Tools</div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-br from-biz-copper/10 to-white rounded-xl p-4 border border-biz-copper/20 hover:border-biz-copper/40 hover:shadow-lg transition-all duration-300 group/card">
+                          <Download className="w-8 h-8 text-biz-copper mb-2 group-hover/card:scale-110 transition-transform" />
+                          <div className="text-xs font-montserrat font-semibold text-biz-navy">Templates<br/>Library</div>
+                          <div className="text-[10px] text-biz-grey mt-1">135+ Templates</div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-br from-biz-copper/10 to-white rounded-xl p-4 border border-biz-copper/20 hover:border-biz-copper/40 hover:shadow-lg transition-all duration-300 group/card">
+                          <CheckCircle className="w-8 h-8 text-biz-copper mb-2 group-hover/card:scale-110 transition-transform" />
+                          <div className="text-xs font-montserrat font-semibold text-biz-navy">Strategic<br/>Frameworks</div>
+                          <div className="text-[10px] text-biz-grey mt-1">90+ Resources</div>
+                        </div>
+                      </div>
+                      
+                      {/* Footer badges */}
+                      <div className="mt-auto flex items-center justify-between text-[10px] font-open-sans text-biz-grey border-t border-biz-copper/10 pt-4">
+                        <span className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                          Updated Monthly
+                        </span>
+                        <span>Instant Access</span>
+                        <span>Cloud Storage</span>
+                      </div>
+                    </div>
+                    
+                    {/* Subtle glow effect on hover */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-biz-copper/0 via-biz-copper/0 to-biz-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   </div>
                   
-                  {/* Bottom Left Card */}
-                  <div className="absolute bottom-16 left-12 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Download className="w-8 h-8 text-biz-copper mb-2" />
-                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Templates<br/>Library</div>
+                  {/* Floating particles/dots for depth */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-biz-copper/30 animate-pulse"></div>
+                    <div className="absolute top-[25%] right-[15%] w-1.5 h-1.5 rounded-full bg-biz-copper/40 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute bottom-[20%] left-[15%] w-1 h-1 rounded-full bg-biz-copper/30 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute bottom-[30%] right-[10%] w-2 h-2 rounded-full bg-biz-copper/35 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
                   </div>
-                  
-                  {/* Bottom Right Card */}
-                  <div className="absolute bottom-8 right-4 bg-white rounded-xl shadow-lg p-4 border border-biz-copper/10 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <CheckCircle className="w-8 h-8 text-biz-copper mb-2" />
-                    <div className="text-xs font-montserrat font-semibold text-biz-navy">Strategic<br/>Planning</div>
-                  </div>
-                  
-                  {/* Decorative connecting lines/dots */}
-                  <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 5 }}>
-                    <circle cx="50%" cy="50%" r="100" fill="none" stroke="rgb(210, 105, 30)" strokeWidth="1" strokeDasharray="4 4" opacity="0.2" />
-                    <circle cx="50%" cy="50%" r="150" fill="none" stroke="rgb(210, 105, 30)" strokeWidth="1" strokeDasharray="4 4" opacity="0.1" />
-                  </svg>
                 </div>
               </div>
             </div>

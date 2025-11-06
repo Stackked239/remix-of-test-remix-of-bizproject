@@ -91,7 +91,7 @@ const BizTools = () => {
       <GlobalNavigation />
       
       {/* Features Section */}
-      <section id="tools-section" className="py-20 bg-muted">
+      <section id="tools-section" className="py-20 bg-muted scroll-mt-48">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">

@@ -111,7 +111,7 @@ const BizTools = () => {
             <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
               Scalable Essentials at Your Fingertips
             </p>
-            <p className="font-open-sans text-xl max-w-3xl mx-auto text-white/85">
+            <p className="font-open-sans text-base max-w-3xl mx-auto text-biz-navy">
               Your comprehensive resource center for business tools and templates. Transform insights from your health assessment into actionable improvements with battle-tested resources.
             </p>
           </div>

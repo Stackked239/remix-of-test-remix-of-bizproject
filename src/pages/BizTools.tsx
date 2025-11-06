@@ -410,11 +410,28 @@ const BizTools = () => {
                 <h4 className="text-2xl font-bold mb-4 font-montserrat text-biz-navy group-hover:text-biz-copper transition-colors duration-300">
                   Complete Access Bundle
                 </h4>
+                
+                {/* Limited Time Offer Badge */}
+                <div className="inline-block bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-montserrat font-bold px-4 py-1.5 rounded-full mb-4 animate-pulse">
+                  LIMITED TIME OFFER
+                </div>
+                
                 <p className="font-open-sans mb-6 text-biz-navy group-hover:text-biz-navy/80 transition-colors duration-300">
                   One-time purchase for lifetime access to all current and future tools
                 </p>
-                <div className="text-5xl font-bold mb-2 font-montserrat text-biz-copper group-hover:scale-110 inline-block transition-transform duration-300">
-                  $299
+                
+                {/* Original Price - Strikethrough */}
+                <div className="text-2xl font-bold font-montserrat text-biz-grey/50 line-through mb-2">
+                  $799
+                </div>
+                
+                {/* Discounted Price */}
+                <div className="text-6xl font-bold mb-2 font-montserrat text-biz-copper group-hover:scale-110 inline-block transition-transform duration-300 drop-shadow-lg">
+                  $499
+                </div>
+                
+                <div className="text-sm font-semibold text-green-600 mb-2 font-montserrat">
+                  Save $300 Today!
                 </div>
                 <div className="text-sm text-biz-grey mb-6 font-open-sans">
                   or $29/month subscription

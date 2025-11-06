@@ -408,7 +408,7 @@ const BizTools = () => {
                   <Trophy className="w-9 h-9 text-white group-hover:animate-pulse" />
                 </div>
                 <h4 className="text-2xl font-bold mb-4 font-montserrat text-biz-navy group-hover:text-biz-copper transition-colors duration-300">
-                  Complete Access Bundle
+                  Unlimited Access Bundle
                 </h4>
                 
                 {/* Limited Time Offer Badge */}
@@ -417,7 +417,7 @@ const BizTools = () => {
                 </div>
                 
                 <p className="font-open-sans mb-6 text-biz-navy group-hover:text-biz-navy/80 transition-colors duration-300">
-                  One-time purchase for lifetime access to all current and future tools
+                  One-time purchase for unlimited access to all current and future BizTools tools & resources
                 </p>
                 
                 {/* Pricing Container - Side by Side */}

@@ -8,29 +8,6 @@ import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizTools = () => {
-  const [countdown, setCountdown] = useState("");
-
-  useEffect(() => {
-    const updateCountdown = () => {
-      const launchDate = new Date('2026-02-28T13:00:00-05:00').getTime(); // Feb 28, 2026, 1:00 PM EDT
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-      
-      if (distance > 0) {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        setCountdown(`Official Launch in: ${days} days, ${hours} hours, ${minutes} minutes`);
-      } else {
-        setCountdown("Launched!");
-      }
-    };
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 60000); // Update every minute
-
-    return () => clearInterval(interval);
-  }, []);
 
   const features = [
     {
@@ -79,16 +56,6 @@ const BizTools = () => {
       <PromotionalBanner />
       
       <GlobalNavigation />
-      
-      {/* Sticky Banner - positioned below header and nav bar */}
-      <div className="sticky top-36 w-full bg-biz-navy px-4 py-3 text-center font-montserrat font-bold z-30 mb-6 md:mb-8">
-        <div className="text-biz-lime text-sm md:text-base">
-          BizTools: Launching February 28, 2026 - Explore the vision as we put on the finishing touches
-        </div>
-        <div className="text-white text-xs md:text-sm">
-          {countdown}
-        </div>
-      </div>
       
       {/* Hero Section */}
       <section className="relative bg-biz-copper text-white overflow-hidden">

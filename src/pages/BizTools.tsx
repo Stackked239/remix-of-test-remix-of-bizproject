@@ -203,6 +203,91 @@ const BizTools = () => {
         </div>
       </section>
 
+      {/* StoryBrand Conversion Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
+            {/* Left Column - 60% */}
+            <div className="lg:col-span-3">
+              <h1 className="font-montserrat font-bold text-[2rem] md:text-[3rem] leading-tight text-biz-navy mb-5 max-w-[600px] tracking-tight">
+                Get the Business Tools You Need to Scale—Without the Guesswork
+              </h1>
+              
+              <p className="font-open-sans text-base md:text-lg leading-relaxed text-biz-grey mb-8 max-w-[580px]">
+                Affordable tools, frameworks, and resources hand-picked for business leaders who want practical solutions—not expensive consultants. Based on your business health assessment, these scalable essentials help you implement improvements fast.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <Button
+                  size="lg"
+                  className="bg-biz-copper text-white hover:bg-[#B8591A] font-montserrat font-semibold text-base px-8 py-[14px] shadow-[0_2px_8px_rgba(210,105,30,0.25)] hover:shadow-[0_4px_12px_rgba(210,105,30,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  See How It Works
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-transparent text-biz-navy border-2 border-biz-navy hover:bg-biz-navy hover:text-white font-montserrat font-semibold text-base px-8 py-[14px] transition-all duration-300"
+                >
+                  Take Assessment First
+                </Button>
+              </div>
+              
+              {/* Trust Signals */}
+              <div className="flex flex-wrap items-center gap-4 text-sm font-open-sans text-biz-grey">
+                <span className="flex items-center gap-2">
+                  📦 <span>500+ Resources</span>
+                </span>
+                <span className="text-biz-grey/40">|</span>
+                <span className="flex items-center gap-2">
+                  ⭐ <span>4.9/5 Rating</span>
+                </span>
+                <span className="text-biz-grey/40">|</span>
+                <span className="flex items-center gap-2">
+                  🔧 <span>Updated Monthly</span>
+                </span>
+              </div>
+            </div>
+            
+            {/* Right Column - 40% */}
+            <div className="lg:col-span-2 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[500px] aspect-square">
+                <div className="absolute inset-0 bg-biz-copper/5 rounded-2xl flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="bg-biz-copper/10 rounded-full p-8 w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                      <Wrench className="w-16 h-16 text-biz-copper" />
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-center gap-3">
+                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
+                          <Settings className="w-6 h-6 text-biz-copper" />
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
+                          <Zap className="w-6 h-6 text-biz-copper" />
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-3 border border-biz-copper/20">
+                          <Download className="w-6 h-6 text-biz-copper" />
+                        </div>
+                      </div>
+                      <div className="font-montserrat font-semibold text-biz-navy text-lg">
+                        Business Toolkit
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Section Divider */}
+        <div className="max-w-7xl mx-auto mt-20">
+          <div className="h-px bg-gradient-to-r from-transparent via-biz-grey/20 to-transparent"></div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-biz-copper text-white">
         <div className="container mx-auto px-6">

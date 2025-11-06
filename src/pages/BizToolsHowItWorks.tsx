@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
@@ -165,6 +166,7 @@ const BizToolsHowItWorks = () => {
       />
 
       <div className="min-h-screen bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         {/* Hero Section */}

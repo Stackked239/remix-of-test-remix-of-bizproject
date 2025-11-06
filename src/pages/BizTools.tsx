@@ -97,7 +97,7 @@ const BizTools = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="bg-white/20 rounded-full p-4">
@@ -111,26 +111,9 @@ const BizTools = () => {
             <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
               Scalable Essentials at Your Fingertips
             </p>
-            <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 text-white/85">
+            <p className="font-open-sans text-xl max-w-3xl mx-auto text-white/85">
               Your comprehensive resource center for business tools and templates. Transform insights from your health assessment into actionable improvements with battle-tested resources.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-white text-biz-navy hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
-              >
-                Browse Tools
-                <ShoppingCart className="w-5 h-5 ml-2" />
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="bg-biz-navy border-biz-copper text-biz-white hover:bg-biz-copper hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
-              >
-                View Downloads
-              </Button>
-            </div>
           </div>
         </div>
       </section>

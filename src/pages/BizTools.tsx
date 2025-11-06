@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, ShoppingCart } from "lucide-react";
+import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, Trophy } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
@@ -405,7 +405,7 @@ const BizTools = () => {
             <div className="bg-white rounded-2xl p-8 border border-biz-copper/20 shadow-2xl hover:shadow-[0_20px_60px_rgba(210,105,30,0.4)] hover:scale-105 hover:border-biz-copper/40 transition-all duration-500 group cursor-pointer">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-biz-copper to-biz-copper/90 flex items-center justify-center shadow-lg group-hover:shadow-[0_8px_24px_rgba(210,105,30,0.5)] group-hover:scale-110 transition-all duration-500">
-                  <ShoppingCart className="w-9 h-9 text-white group-hover:animate-pulse" />
+                  <Trophy className="w-9 h-9 text-white group-hover:animate-pulse" />
                 </div>
                 <h4 className="text-2xl font-bold mb-4 font-montserrat text-biz-navy group-hover:text-biz-copper transition-colors duration-300">
                   Complete Access Bundle

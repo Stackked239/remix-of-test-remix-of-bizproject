@@ -58,7 +58,7 @@ const BizTools = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-biz-copper text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-biz-copper/20 via-biz-copper/10 to-background text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>

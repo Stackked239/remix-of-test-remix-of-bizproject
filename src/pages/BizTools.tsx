@@ -402,21 +402,21 @@ const BizTools = () => {
               </div>
             </div>
             
-            <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20 shadow-2xl hover:shadow-[0_20px_60px_rgba(210,105,30,0.3)] transition-all duration-500">
+            <div className="bg-white rounded-2xl p-8 border border-biz-copper/20 shadow-2xl hover:shadow-[0_20px_60px_rgba(210,105,30,0.3)] transition-all duration-500">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-biz-copper to-biz-copper/90 flex items-center justify-center shadow-lg">
                   <ShoppingCart className="w-9 h-9 text-white" />
                 </div>
-                <h4 className="text-2xl font-bold mb-4 font-montserrat text-white">
+                <h4 className="text-2xl font-bold mb-4 font-montserrat text-biz-navy">
                   Complete Access Bundle
                 </h4>
-                <p className="font-open-sans mb-6 text-white/80">
+                <p className="font-open-sans mb-6 text-biz-navy">
                   One-time purchase for lifetime access to all current and future tools
                 </p>
                 <div className="text-5xl font-bold mb-2 font-montserrat text-biz-copper">
                   $299
                 </div>
-                <div className="text-sm text-white/60 mb-6 font-open-sans">
+                <div className="text-sm text-biz-grey mb-6 font-open-sans">
                   or $29/month subscription
                 </div>
                 <Button 
@@ -428,7 +428,7 @@ const BizTools = () => {
                 </Button>
                 
                 {/* Trust badges */}
-                <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-center gap-6 text-xs text-white/70 font-open-sans">
+                <div className="mt-6 pt-6 border-t border-biz-copper/10 flex items-center justify-center gap-6 text-xs text-biz-grey font-open-sans">
                   <span className="flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-biz-copper" />
                     30-day guarantee

@@ -65,7 +65,7 @@ const BizTools = () => {
       tools: ["Process Mapping Tools", "Quality Checklists", "Inventory Management", "Performance Metrics"]
     },
     {
-      title: "Marketing & Sales",
+      title: "Sales & Marketing",
       tools: ["Campaign Planners", "Lead Tracking System", "Customer Journey Maps", "Sales Funnels"]
     },
     {

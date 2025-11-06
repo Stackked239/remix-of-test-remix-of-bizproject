@@ -151,10 +151,10 @@ const BizTools = () => {
       </section>
 
       {/* Tool Categories Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-biz-green/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold mb-6 text-foreground font-montserrat">
+            <h3 className="text-5xl font-bold mb-6 text-foreground font-montserrat">
               Complete Business Toolkit
             </h3>
             <p className="text-lg text-muted-foreground font-open-sans">

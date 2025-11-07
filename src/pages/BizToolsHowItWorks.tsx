@@ -162,7 +162,7 @@ const BizToolsHowItWorks = () => {
     <>
       <SEO
         title="How It Works | BizTools by BizHealth.ai - Free Business Resources & Premium Tools"
-        description="Learn how BizTools works: Take a free business health assessment, get custom recommendations, access free tools, and upgrade when ready. See how SMB owners achieve real results with our step-by-step process."
+        description="Learn how BizTools works: Take a business health assessment, get custom recommendations, access free tools, and upgrade when ready. See how SMB owners achieve real results with our step-by-step process."
         keywords="how it works, business tools how it works, free business resources for small business, business health assessment tools, SMB business analytics platform, business planning tools for entrepreneurs, business financial planning tools, small business operational tools"
         canonical="https://bizhealth.ai/biztools/how-it-works"
         ogType="website"

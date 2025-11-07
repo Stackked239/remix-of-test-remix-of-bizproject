@@ -464,7 +464,7 @@ const BizTools = () => {
       </section>
 
       <GlobalFooter />
-      <EmailCapturePopup hubColor="biz-tools" />
+      {/* <EmailCapturePopup hubColor="biz-tools" /> */}
     </div>
   );
 };

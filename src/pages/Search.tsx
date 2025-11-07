@@ -390,7 +390,7 @@ const Search = () => {
                     return "bg-primary/10 text-primary border-primary/20";
                   };
                   return (
-                    <Card key={index} className="hover:shadow-xl hover:border-primary/30 transition-all duration-300 border-2 bg-card/80 backdrop-blur-sm group">
+                    <Card key={index} className="hover:shadow-xl hover:border-primary/30 transition-all duration-300 border-2 bg-biz-green/5 backdrop-blur-sm group">
                       <CardContent className="p-6">
                         <Link to={result.url} className="block">
                           <div className="flex items-start gap-4">

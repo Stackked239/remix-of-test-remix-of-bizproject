@@ -80,7 +80,7 @@ const Search = () => {
       {
         type: "Page",
         title: "How It Works - BizTools",
-        excerpt: "Learn how BizTools works: Take a free business health assessment, get custom recommendations, access free tools, and upgrade when ready.",
+        excerpt: "Learn how BizTools works: Take a business health assessment, get custom recommendations, access free tools, and upgrade when ready.",
         url: "/biztools/how-it-works",
         icon: HelpCircle
       },

@@ -8,7 +8,10 @@ import {
   TrendingUp,
   AlertCircle,
   BarChart3,
-  DollarSign
+  DollarSign,
+  Truck,
+  Factory,
+  Utensils
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
@@ -114,7 +117,10 @@ const BizToolsHowItWorks = () => {
       ],
       outcome: "📈 Improved cash flow predictability by 40% in 6 months",
       industry: "🚚 Logistics",
-      vcabTag: "Group 1 | High Tech Comfort | Data-Driven"
+      vcabTag: "Group 1 | High Tech Comfort | Data-Driven",
+      icon: Truck,
+      iconColor: "text-biz-copper",
+      iconBgColor: "bg-biz-copper/20"
     },
     {
       name: "Chen, 45",
@@ -128,7 +134,10 @@ const BizToolsHowItWorks = () => {
       ],
       outcome: "💰 Optimized margins by 12%, identified $400K in annual cost savings",
       industry: "🏭 Manufacturing",
-      vcabTag: "Group 2 | CFO-Level | Advanced Business Acumen"
+      vcabTag: "Group 2 | CFO-Level | Advanced Business Acumen",
+      icon: Factory,
+      iconColor: "text-biz-navy",
+      iconBgColor: "bg-biz-navy/20"
     },
     {
       name: "Carmen, 42",
@@ -142,7 +151,10 @@ const BizToolsHowItWorks = () => {
       ],
       outcome: "🚀 Doubled revenue in 18 months with clear strategic roadmap",
       industry: "🍽️ Food & Beverage",
-      vcabTag: "Transition User | Pragmatic | Results-Focused"
+      vcabTag: "Transition User | Pragmatic | Results-Focused",
+      icon: Utensils,
+      iconColor: "text-biz-green",
+      iconBgColor: "bg-biz-green/20"
     }
   ];
 
@@ -351,8 +363,8 @@ const BizToolsHowItWorks = () => {
                     <CardContent className="p-8">
                       {/* Profile */}
                       <div className="text-center mb-6">
-                        <div className="w-24 h-24 bg-biz-copper/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                          <BarChart3 className="w-12 h-12 text-biz-copper" />
+                        <div className={`w-24 h-24 ${persona.iconBgColor} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                          <persona.icon className={`w-12 h-12 ${persona.iconColor}`} />
                         </div>
                         <h3 className="text-xl font-bold text-biz-navy mb-1">
                           {persona.name}

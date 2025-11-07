@@ -55,8 +55,8 @@ const BizToolsHowItWorks = () => {
         "Takes 30-40 minutes",
         "100% confidential"
       ],
-      ctaText: "Start Free Assessment",
-      ctaLink: "/onboarding"
+      ctaText: "Start Your Business Health Assessment",
+      ctaLink: "/register"
     },
     {
       number: 2,
@@ -203,7 +203,7 @@ const BizToolsHowItWorks = () => {
                   size="lg" 
                   className="bg-biz-copper hover:bg-biz-copper/90 text-white"
                 >
-                  <Link to="/onboarding">Start Free Assessment</Link>
+                  <Link to="/register">Start Your Business Health Assessment</Link>
                 </Button>
                 <Button 
                   asChild 
@@ -436,7 +436,7 @@ const BizToolsHowItWorks = () => {
                   size="lg" 
                   className="bg-biz-copper hover:bg-biz-copper/90 text-white"
                 >
-                  <Link to="/onboarding">Start Free Assessment Now</Link>
+                  <Link to="/register">Start Your Business Health Assessment</Link>
                 </Button>
                 <Button 
                   asChild 

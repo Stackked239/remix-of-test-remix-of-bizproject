@@ -140,7 +140,7 @@ const BizToolsToolbox = () => {
           <div className="text-center space-y-6">
             {/* Headline */}
             <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              Welcome to Your BizTools Toolbox—<span className="text-biz-green"> Where Insights Become Action.</span>
+              Welcome to BizTools Toolbox—<span className="text-biz-green"> Where Insights Become Action.</span>
             </h1>
             
             {/* Subheadline */}

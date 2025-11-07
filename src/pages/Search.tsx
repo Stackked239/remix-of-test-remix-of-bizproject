@@ -79,6 +79,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "How It Works - BizTools",
+        excerpt: "Learn how BizTools works: Take a free business health assessment, get custom recommendations, access free tools, and upgrade when ready.",
+        url: "/biztools/how-it-works",
+        icon: HelpCircle
+      },
+      {
+        type: "Page",
         title: "Frequently Asked Questions - FAQs",
         excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
         url: "/faqs",

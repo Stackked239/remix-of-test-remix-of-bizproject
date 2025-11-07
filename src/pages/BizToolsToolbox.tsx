@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -123,7 +124,8 @@ const BizToolsToolbox = () => {
         canonical="https://bizhealth.ai/biztools/toolbox"
         ogImage="https://bizhealth.ai/og-biztools-toolbox.jpg"
       />
-
+      
+      <PromotionalBanner />
       <GlobalNavigation />
       
       {/* StoryBrand Header */}

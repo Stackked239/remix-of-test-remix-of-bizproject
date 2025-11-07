@@ -349,8 +349,8 @@ const BizToolsHowItWorks = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-biz-navy mb-4">
-                  Who BizTools Is For: Real Users, Real Results
+                <h2 className="text-4xl md:text-5xl font-bold text-biz-navy mb-4">
+                  Real Users, <span className="text-biz-green">Real Results</span>
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   See how business owners like you are using BizTools to gain clarity, save time, and drive measurable growth.

@@ -26,6 +26,7 @@ import BizTools from "./pages/BizTools";
 import BizLeader from "./pages/BizLeader";
 import BizGrowth from "./pages/BizGrowth";
 import BizToolsHowItWorks from "./pages/BizToolsHowItWorks";
+import BizToolsToolbox from "./pages/BizToolsToolbox";
 import WarningSignsBusiness from "./pages/blog/WarningSignsBusiness";
 import OperationalResilience from "./pages/blog/OperationalResilience";
 import FinancialHealthMetrics from "./pages/blog/FinancialHealthMetrics";
@@ -95,6 +96,7 @@ const App = () => (
             <Route path="/bizguides" element={<BizGuides />} />
             <Route path="/biztools" element={<BizTools />} />
             <Route path="/biztools/how-it-works" element={<BizToolsHowItWorks />} />
+            <Route path="/biztools/toolbox" element={<BizToolsToolbox />} />
             <Route path="/bizleader" element={<BizLeader />} />
             <Route path="/bizgrowth" element={<BizGrowth />} />
             <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />

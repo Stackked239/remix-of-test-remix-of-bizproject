@@ -104,7 +104,7 @@ const BizTools = () => {
                 variant="outline"
                 className="border-biz-navy text-biz-navy hover:bg-biz-navy/10"
               >
-                <a href="/onboarding">Start Free Assessment</a>
+                <a href="/biztools/toolbox">Let's Get Started</a>
               </Button>
             </div>
           </div>

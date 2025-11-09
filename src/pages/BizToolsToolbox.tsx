@@ -194,14 +194,29 @@ const BizToolsToolbox = () => {
             {/* Filter Tabs */}
             <div className="mt-8 flex justify-center">
               <Tabs defaultValue="all" className="w-full max-w-2xl">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="all" onClick={() => setActiveFilter("all")}>
+                <TabsList className="grid w-full grid-cols-3 bg-background border-2 border-border/50 p-1.5 h-auto gap-2 shadow-md">
+                  <TabsTrigger 
+                    value="all" 
+                    onClick={() => setActiveFilter("all")}
+                    className="data-[state=active]:bg-biz-navy data-[state=active]:text-white data-[state=active]:shadow-lg font-montserrat font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-biz-navy/10"
+                  >
+                    <BarChart3 className="w-4 h-4 mr-2 inline-block" />
                     All Tools
                   </TabsTrigger>
-                  <TabsTrigger value="free" onClick={() => setActiveFilter("free")}>
+                  <TabsTrigger 
+                    value="free" 
+                    onClick={() => setActiveFilter("free")}
+                    className="data-[state=active]:bg-biz-green data-[state=active]:text-white data-[state=active]:shadow-lg font-montserrat font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-biz-green/10"
+                  >
+                    <Download className="w-4 h-4 mr-2 inline-block" />
                     Free Tools
                   </TabsTrigger>
-                  <TabsTrigger value="premium" onClick={() => setActiveFilter("premium")}>
+                  <TabsTrigger 
+                    value="premium" 
+                    onClick={() => setActiveFilter("premium")}
+                    className="data-[state=active]:bg-biz-copper data-[state=active]:text-white data-[state=active]:shadow-lg font-montserrat font-semibold py-3 px-6 rounded-md transition-all duration-300 hover:bg-biz-copper/10"
+                  >
+                    <Zap className="w-4 h-4 mr-2 inline-block" />
                     Premium Bundles
                   </TabsTrigger>
                 </TabsList>

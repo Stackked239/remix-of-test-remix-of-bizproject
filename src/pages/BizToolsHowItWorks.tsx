@@ -86,7 +86,7 @@ const BizToolsHowItWorks = () => {
         { icon: "📧", name: "Email Marketing Guide" }
       ],
       ctaText: "Browse Free Tools",
-      ctaLink: "/biztools"
+      ctaLink: "/biztools/toolbox"
     },
     {
       number: 4,
@@ -211,7 +211,7 @@ const BizToolsHowItWorks = () => {
                   variant="outline" 
                   className="border-white bg-transparent text-white hover:bg-white hover:text-biz-navy transition-colors"
                 >
-                  <Link to="/biztools">Browse Free Tools</Link>
+                  <Link to="/biztools/toolbox">Browse Free Tools</Link>
                 </Button>
               </div>
             </div>

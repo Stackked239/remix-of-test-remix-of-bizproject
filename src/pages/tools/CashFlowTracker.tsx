@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CashFlowProvider } from '@/contexts/CashFlowContext';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { LayoutDashboard, TrendingUp, TrendingDown, FileText, Settings, BarChart3 } from 'lucide-react';
@@ -25,6 +26,7 @@ const CashFlowTracker = () => {
           keywords="cash flow tracker, small business finance, expense tracking, income management, financial forecasting, invoice management"
         />
         
+        <PromotionalBanner />
         <GlobalNavigation />
         
         {/* Hero Section */}

@@ -64,6 +64,7 @@ import Disclaimer from "./pages/Disclaimer";
 import FAQs from "./pages/FAQs";
 import GlossaryOfTerms from "./pages/GlossaryOfTerms";
 import Reports from "./pages/Reports";
+import CashFlowTracker from "./pages/tools/CashFlowTracker";
 
 import Search from "./pages/Search";
 
@@ -136,6 +137,7 @@ const App = () => (
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/glossary-of-terms" element={<GlossaryOfTerms />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/biztools/toolbox/cash-flow-tracker" element={<CashFlowTracker />} />
             <Route path="/search" element={<Search />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

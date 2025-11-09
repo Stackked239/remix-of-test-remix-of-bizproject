@@ -113,6 +113,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "Cash Flow Tracker - Free Financial Management Tool",
+        excerpt: "Track income, expenses, and cash flow for your small business. Professional-grade financial management with Excel export, invoicing, and forecasting.",
+        url: "/biztools/toolbox/cash-flow-tracker",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "BizLeaDeR - Drive Scale with Confidence",
         excerpt: "Leadership development courses and webinars for business owners and executives. Coming Spring 2026.",

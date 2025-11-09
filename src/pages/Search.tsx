@@ -107,6 +107,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "BizTools Toolbox - Complete Business Toolkit",
+        excerpt: "Explore our complete business toolbox with free tools and premium bundles. Access financial calculators, templates, and resources to grow your SMB.",
+        url: "/biztools/toolbox",
+        icon: Home
+      },
+      {
+        type: "Page",
         title: "BizLeaDeR - Drive Scale with Confidence",
         excerpt: "Leadership development courses and webinars for business owners and executives. Coming Spring 2026.",
         url: "/bizleader",

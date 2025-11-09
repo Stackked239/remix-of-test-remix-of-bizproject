@@ -121,6 +121,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "404 Error - Page Not Found",
+        excerpt: "The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need.",
+        url: "*",
+        icon: Home
+      },
+      {
+        type: "Page",
         title: "BizLeaDeR - Drive Scale with Confidence",
         excerpt: "Leadership development courses and webinars for business owners and executives. Coming Spring 2026.",
         url: "/bizleader",

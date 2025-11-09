@@ -2,3 +2,9 @@ project_id = "lnthvnzounlxjedsbkgc"
 
 [functions.send-notification]
 verify_jwt = false
+
+[functions.log-404-error]
+verify_jwt = false
+
+[functions.send-404-report]
+verify_jwt = false

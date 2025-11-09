@@ -74,6 +74,39 @@ export type Database = {
         }
         Relationships: []
       }
+      page_not_found_logs: {
+        Row: {
+          attempted_url: string
+          created_at: string | null
+          id: string
+          ip_address: string | null
+          referrer: string | null
+          timestamp: string | null
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          attempted_url: string
+          created_at?: string | null
+          id?: string
+          ip_address?: string | null
+          referrer?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          attempted_url?: string
+          created_at?: string | null
+          id?: string
+          ip_address?: string | null
+          referrer?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           company_name: string | null

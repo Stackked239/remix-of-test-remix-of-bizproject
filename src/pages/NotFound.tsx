@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, Search, ArrowLeft, BookOpen, Wrench, AlertCircle } from "lucide-react";
@@ -6,8 +7,42 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
+import { supabase } from "@/integrations/supabase/client";
 
 const NotFound = () => {
+  const location = useLocation();
+
+  // Log 404 error to database
+  useEffect(() => {
+    const log404Error = async () => {
+      try {
+        // Get user session
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        // Call edge function to log the error
+        const { error } = await supabase.functions.invoke('log-404-error', {
+          body: {
+            attemptedUrl: location.pathname,
+            referrer: document.referrer || undefined,
+            userAgent: navigator.userAgent,
+          },
+          headers: session?.access_token ? {
+            Authorization: `Bearer ${session.access_token}`
+          } : undefined
+        });
+
+        if (error) {
+          console.error('Error logging 404:', error);
+        } else {
+          console.log('404 error logged successfully');
+        }
+      } catch (error) {
+        console.error('Error in 404 logging:', error);
+      }
+    };
+
+    log404Error();
+  }, [location.pathname]);
   const helpfulLinks = [
     {
       icon: Home,

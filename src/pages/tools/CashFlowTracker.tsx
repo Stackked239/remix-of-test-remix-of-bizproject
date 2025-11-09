@@ -28,7 +28,7 @@ const CashFlowTracker = () => {
         <GlobalNavigation />
         
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy pt-40 pb-12 px-6" style={{ paddingTop: '140px' }}>
+        <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy pt-40 pb-12 px-6" style={{ paddingTop: '180px' }}>
           <div className="container mx-auto max-w-7xl">
             <div className="text-center space-y-4">
               <h1 className="font-montserrat font-bold text-4xl md:text-5xl text-white leading-tight">

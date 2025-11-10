@@ -120,6 +120,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "Process Mapping & SOP Builder Tools",
+        excerpt: "Create professional process maps and standard operating procedures with our visual drag-and-drop process mapping tool. Build process maps, document workflows, and export to Word, Excel, PDF. Free process mapping tools for small businesses.",
+        url: "/biztools/toolbox/process-mapping-tools",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "404 Error - Page Not Found",
         excerpt: "The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need.",

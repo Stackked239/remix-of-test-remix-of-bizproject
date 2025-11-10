@@ -90,6 +90,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
   const quadrantConfig = {
     strength: {
       title: 'STRENGTHS',
+      singular: 'Strength',
       subtitle: 'Internal • Positive',
       icon: '💪',
       borderColor: 'border-green-500',
@@ -99,6 +100,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
     },
     weakness: {
       title: 'WEAKNESSES',
+      singular: 'Weakness',
       subtitle: 'Internal • Negative',
       icon: '⚠️',
       borderColor: 'border-red-500',
@@ -108,6 +110,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
     },
     opportunity: {
       title: 'OPPORTUNITIES',
+      singular: 'Opportunity',
       subtitle: 'External • Positive',
       icon: '🎯',
       borderColor: 'border-blue-500',
@@ -117,6 +120,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
     },
     threat: {
       title: 'THREATS',
+      singular: 'Threat',
       subtitle: 'External • Negative',
       icon: '🛡️',
       borderColor: 'border-orange-500',
@@ -209,7 +213,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
             }}
           >
             <Plus className="h-4 w-4 mr-1" />
-            Add {config.title.slice(0, -1)}
+            Add {config.singular}
           </Button>
           <Button size="sm" variant="ghost" className="w-full text-xs">
             <Sparkles className="h-3 w-3 mr-1" />
@@ -267,7 +271,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle>
-              {editingItem ? 'Edit' : 'Add'} {quadrantConfig[activeQuadrant].title.slice(0, -1)}
+              {editingItem ? 'Edit' : 'Add'} {quadrantConfig[activeQuadrant].singular}
             </DialogTitle>
           </DialogHeader>
 

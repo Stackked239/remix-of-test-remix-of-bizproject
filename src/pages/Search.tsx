@@ -127,6 +127,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "SWOT Analysis Tool - Strategic Planning Framework",
+        excerpt: "Conduct comprehensive SWOT analysis for your small business. Interactive 2x2 matrix builder to identify strengths, weaknesses, opportunities, and threats. Export to Word, Excel, PDF. Free SWOT analysis tool, SWOT framework, strategic planning tool.",
+        url: "/biztools/toolbox/swot-analysis-tool",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "404 Error - Page Not Found",
         excerpt: "The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need.",

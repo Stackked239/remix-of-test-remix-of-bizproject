@@ -56,7 +56,7 @@ const BizTools = () => {
     },
     {
       title: "Strategic Planning",
-      tools: ["SWOT Analysis Framework", "Goal Setting Templates", "Action Plan Builder", "Progress Trackers"]
+      tools: ["SWOT Analysis Tool", "Goal Setting Templates", "Action Plan Builder", "Progress Trackers"]
     }
   ];
 

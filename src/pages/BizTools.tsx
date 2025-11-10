@@ -143,60 +143,6 @@ const BizTools = () => {
         </div>
       </section>
 
-      {/* Tool Categories Section */}
-      <section className="py-20 bg-biz-green/5">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h3 className="text-5xl font-bold mb-6 text-foreground font-montserrat">
-              Complete Business Toolkit
-            </h3>
-            <p className="text-lg text-muted-foreground font-open-sans">
-              Everything you need to address gaps identified in your business health assessment
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {toolCategories.map((category, index) => (
-              <Card key={index} className="border-border/50 shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-montserrat text-biz-copper">
-                    {category.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {category.tools.map((tool, toolIndex) => {
-                      const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools";
-                      const toolUrl = tool === "Cash Flow Tracker" 
-                        ? "/biztools/toolbox/cash-flow-tracker"
-                        : tool === "Process Mapping Tools"
-                        ? "/biztools/toolbox/process-mapping-tools"
-                        : "#";
-                      const content = (
-                        <div className="flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group">
-                          <CheckCircle className="w-5 h-5 text-biz-lime flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                          <span className="font-open-sans text-foreground">{tool}</span>
-                        </div>
-                      );
-                      
-                      return isClickable ? (
-                        <Link key={toolIndex} to={toolUrl}>
-                          {content}
-                        </Link>
-                      ) : (
-                        <div key={toolIndex}>
-                          {content}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* StoryBrand Conversion Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

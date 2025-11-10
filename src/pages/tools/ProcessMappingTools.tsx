@@ -118,23 +118,31 @@ const ProcessMappingTools = () => {
 
               {/* Step Content */}
               <div className="bg-card rounded-lg border shadow-sm p-8">
-                {currentStep === 1 && <ProcessSetupStep onNext={() => setCurrentStep(2)} />}
+                {currentStep === 1 && (
+                  <ProcessSetupStep 
+                    onNext={() => setCurrentStep(2)} 
+                    onExit={handleExitProcess}
+                  />
+                )}
                 {currentStep === 2 && (
                   <ProcessMappingStep
                     onBack={() => setCurrentStep(1)}
                     onNext={() => setCurrentStep(3)}
+                    onExit={handleExitProcess}
                   />
                 )}
                 {currentStep === 3 && (
                   <TaskDetailsStep
                     onBack={() => setCurrentStep(2)}
                     onNext={() => setCurrentStep(4)}
+                    onExit={handleExitProcess}
                   />
                 )}
                 {currentStep === 4 && (
                   <ReviewExportStep
                     onBack={() => setCurrentStep(3)}
                     onComplete={handleBackToDashboard}
+                    onExit={handleExitProcess}
                   />
                 )}
               </div>

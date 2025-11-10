@@ -7,14 +7,26 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent } from '@/components/ui/card';
 import { useProcessMapStore } from '@/stores/processMapStore';
-import { CheckCircle2, Circle, Plus, X } from 'lucide-react';
+import { CheckCircle2, Circle, Plus, X, ChevronLeft } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 interface TaskDetailsStepProps {
   onBack: () => void;
   onNext: () => void;
+  onExit: () => void;
 }
 
-const TaskDetailsStep = ({ onBack, onNext }: TaskDetailsStepProps) => {
+const TaskDetailsStep = ({ onBack, onNext, onExit }: TaskDetailsStepProps) => {
   const { currentProcess, updateNode } = useProcessMapStore();
   const [selectedNodeIndex, setSelectedNodeIndex] = useState(0);
   
@@ -342,9 +354,34 @@ const TaskDetailsStep = ({ onBack, onNext }: TaskDetailsStepProps) => {
       </div>
 
       <div className="flex justify-between pt-6 border-t">
-        <Button variant="outline" onClick={onBack}>
-          ← Back
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={onBack}>
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">
+                <X className="w-4 h-4 mr-2" />
+                Exit
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={onExit}>
+                  Agree - Please Exit
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
         <Button onClick={handleComplete} size="lg">
           Next: Review & Export →
         </Button>

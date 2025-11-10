@@ -14,11 +14,23 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import { Button } from '@/components/ui/button';
 import { useProcessMapStore } from '@/stores/processMapStore';
-import { Square, Diamond, FileText, Clock, Circle } from 'lucide-react';
+import { Square, Diamond, FileText, Clock, Circle, X, ChevronLeft } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 interface ProcessMappingStepProps {
   onBack: () => void;
   onNext: () => void;
+  onExit: () => void;
 }
 
 const nodeTypes = [
@@ -29,7 +41,7 @@ const nodeTypes = [
   { type: 'end', label: 'End', icon: Circle, color: '#F44336' },
 ];
 
-const ProcessMappingStep = ({ onBack, onNext }: ProcessMappingStepProps) => {
+const ProcessMappingStep = ({ onBack, onNext, onExit }: ProcessMappingStepProps) => {
   const { currentProcess, updateProcess } = useProcessMapStore();
   
   // Convert stored nodes to ReactFlow format
@@ -213,9 +225,34 @@ const ProcessMappingStep = ({ onBack, onNext }: ProcessMappingStepProps) => {
       </div>
 
       <div className="flex justify-between pt-6 border-t">
-        <Button variant="outline" onClick={onBack}>
-          ← Back
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={onBack}>
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">
+                <X className="w-4 h-4 mr-2" />
+                Exit
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={onExit}>
+                  Agree - Please Exit
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
         <Button onClick={handleSaveAndContinue} size="lg">
           Next: Add Details →
         </Button>

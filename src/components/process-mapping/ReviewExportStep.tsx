@@ -5,15 +5,27 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { useProcessMapStore } from '@/stores/processMapStore';
 import { exportToWord } from '@/utils/processExport';
-import { Download, FileText, Table, File, Image, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Download, FileText, Table, File, Image, CheckCircle2, AlertCircle, X, ChevronLeft } from 'lucide-react';
 import { toast } from 'sonner';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 interface ReviewExportStepProps {
   onBack: () => void;
   onComplete: () => void;
+  onExit: () => void;
 }
 
-const ReviewExportStep = ({ onBack, onComplete }: ReviewExportStepProps) => {
+const ReviewExportStep = ({ onBack, onComplete, onExit }: ReviewExportStepProps) => {
   const { currentProcess } = useProcessMapStore();
   const [exportFormats, setExportFormats] = useState({
     word: true,
@@ -308,9 +320,34 @@ const ReviewExportStep = ({ onBack, onComplete }: ReviewExportStepProps) => {
       </Card>
 
       <div className="flex justify-between pt-6 border-t">
-        <Button variant="outline" onClick={onBack}>
-          ← Back
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={onBack}>
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">
+                <X className="w-4 h-4 mr-2" />
+                Exit
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={onExit}>
+                  Agree - Please Exit
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
         <div className="flex gap-2">
           <Button variant="outline" onClick={onComplete}>
             Save as Draft

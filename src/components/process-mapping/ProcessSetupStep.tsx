@@ -6,10 +6,22 @@ import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useProcessMapStore } from '@/stores/processMapStore';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, X } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 interface ProcessSetupStepProps {
   onNext: () => void;
+  onExit: () => void;
 }
 
 const departments = [
@@ -22,7 +34,7 @@ const departments = [
   'Custom',
 ];
 
-const ProcessSetupStep = ({ onNext }: ProcessSetupStepProps) => {
+const ProcessSetupStep = ({ onNext, onExit }: ProcessSetupStepProps) => {
   const { currentProcess, createProcess, updateProcess } = useProcessMapStore();
   
   const [formData, setFormData] = useState({
@@ -183,7 +195,29 @@ const ProcessSetupStep = ({ onNext }: ProcessSetupStepProps) => {
         </div>
       </div>
 
-      <div className="flex justify-end pt-6 border-t">
+      <div className="flex justify-between pt-6 border-t">
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline">
+              <X className="w-4 h-4 mr-2" />
+              Exit
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+              <AlertDialogDescription>
+                Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction onClick={onExit}>
+                Agree - Please Exit
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
         <Button onClick={handleSubmit} size="lg">
           Next: Map Process →
         </Button>

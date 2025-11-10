@@ -189,7 +189,7 @@ const BizTools = () => {
                 </span>
                 <span className="text-biz-grey/40">|</span>
                 <span className="flex items-center gap-2">
-                  🔧 <span>Updated Monthly</span>
+                  🔧 <span>Monthly Updates</span>
                 </span>
               </div>
             </div>
@@ -292,7 +292,7 @@ const BizTools = () => {
                       <div className="mt-auto flex items-center justify-between text-[10px] font-open-sans text-biz-grey border-t border-biz-copper/10 pt-4">
                         <span className="flex items-center gap-1.5">
                           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                          Updated Monthly
+                          Monthly Updates
                         </span>
                         <span>Instant Access</span>
                         <span>Cloud Storage</span>

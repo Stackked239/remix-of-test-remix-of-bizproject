@@ -14,7 +14,7 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
   const handleScrollToSaved = () => {
     const savedSection = document.getElementById('saved-analyses-section');
     if (savedSection) {
-      const yOffset = -120; // Offset for nav bar height
+      const yOffset = -180; // Offset for nav bar height
       const y = savedSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }

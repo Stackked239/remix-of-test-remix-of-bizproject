@@ -1,7 +1,10 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useSWOTStore } from "@/stores/swotStore";
-import { Download, FileText, FileSpreadsheet, ArrowLeft } from "lucide-react";
+import { Download, FileText, FileSpreadsheet, ArrowLeft, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { Document, Packer, Paragraph, TextRun, Table, TableCell, TableRow, WidthType, BorderStyle, AlignmentType } from "docx";
 import { saveAs } from "file-saver";
@@ -12,7 +15,14 @@ interface InsightsViewProps {
 }
 
 export const InsightsView = ({ onBack }: InsightsViewProps) => {
+  const navigate = useNavigate();
   const { currentAnalysis } = useSWOTStore();
+  const [showCompleteDialog, setShowCompleteDialog] = useState(false);
+
+  const handleComplete = () => {
+    toast.success("SWOT Analysis completed!");
+    navigate('/biztools/toolbox');
+  };
 
   const getQuadrantCount = (quadrant: string) => {
     return currentAnalysis?.items.filter(item => item.quadrant === quadrant).length || 0;
@@ -301,10 +311,49 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Matrix
         </Button>
-        <Button className="bg-biz-lime hover:bg-biz-lime/90 text-biz-navy">
+        <Button 
+          onClick={() => setShowCompleteDialog(true)}
+          className="bg-biz-lime hover:bg-biz-lime/90 text-biz-navy"
+        >
+          <CheckCircle className="h-4 w-4 mr-2" />
           Complete Analysis
         </Button>
       </div>
+
+      {/* Completion Dialog */}
+      <AlertDialog open={showCompleteDialog} onOpenChange={setShowCompleteDialog}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2 text-2xl">
+              <CheckCircle className="h-6 w-6 text-green-600" />
+              Congratulations!
+            </AlertDialogTitle>
+            <AlertDialogDescription className="space-y-4 text-base">
+              <p className="font-semibold text-foreground">
+                You've successfully completed your SWOT Analysis! 🎉
+              </p>
+              <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                <p className="text-sm text-amber-900">
+                  <strong>Important:</strong> Don't forget to export your analysis using the buttons above to save your work. 
+                  Your analysis will be lost if you exit without exporting.
+                </p>
+              </div>
+              <p className="text-sm">
+                Ready to return to your toolbox?
+              </p>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Continue Reviewing</AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={handleComplete}
+              className="bg-biz-lime hover:bg-biz-lime/90 text-biz-navy"
+            >
+              Return to Toolbox
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

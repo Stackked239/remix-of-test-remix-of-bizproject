@@ -66,6 +66,7 @@ import GlossaryOfTerms from "./pages/GlossaryOfTerms";
 import Reports from "./pages/Reports";
 import CashFlowTracker from "./pages/tools/CashFlowTracker";
 import ProcessMappingTools from "./pages/tools/ProcessMappingTools";
+import ProcessMappingGuide from "./pages/tools/ProcessMappingGuide";
 
 import Search from "./pages/Search";
 
@@ -140,6 +141,7 @@ const App = () => (
             <Route path="/reports" element={<Reports />} />
             <Route path="/biztools/toolbox/cash-flow-tracker" element={<CashFlowTracker />} />
             <Route path="/biztools/toolbox/process-mapping-tools" element={<ProcessMappingTools />} />
+            <Route path="/biztools/toolbox/process-mapping-tools/guide" element={<ProcessMappingGuide />} />
             <Route path="/search" element={<Search />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

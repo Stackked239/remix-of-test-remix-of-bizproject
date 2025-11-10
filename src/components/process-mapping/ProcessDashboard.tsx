@@ -80,12 +80,15 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
             Create New Process Map
           </Button>
           <Button 
+            asChild
             variant="outline" 
             size="lg" 
             className="gap-2 border-2 hover:bg-primary/5 hover:border-primary transition-all duration-300"
           >
-            <BookOpen className="w-5 h-5" />
-            Getting Started Guide
+            <a href="/biztools/toolbox/process-mapping-tools/guide" target="_blank" rel="noopener noreferrer">
+              <BookOpen className="w-5 h-5" />
+              Getting Started Guide
+            </a>
           </Button>
         </div>
 

@@ -140,7 +140,7 @@ const ProcessMappingStep = ({ onBack, onNext }: ProcessMappingStepProps) => {
         </div>
 
         {/* Canvas */}
-        <div className="flex-1 border rounded-lg overflow-hidden" style={{ height: '600px' }}>
+        <div className="flex-1 border-2 border-primary/20 rounded-lg overflow-hidden shadow-lg" style={{ height: '700px' }}>
           <ReactFlow
             nodes={nodes}
             edges={edges}
@@ -148,21 +148,67 @@ const ProcessMappingStep = ({ onBack, onNext }: ProcessMappingStepProps) => {
             onEdgesChange={onEdgesChange}
             onConnect={onConnect}
             fitView
+            panOnScroll
+            panOnDrag
+            zoomOnScroll
+            zoomOnPinch
+            minZoom={0.1}
+            maxZoom={4}
+            defaultViewport={{ x: 0, y: 0, zoom: 1 }}
           >
-            <Controls />
-            <MiniMap />
-            <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+            <Controls 
+              position="bottom-right"
+              showZoom={true}
+              showFitView={true}
+              showInteractive={true}
+              className="bg-background/95 backdrop-blur-sm border-2 border-primary/20 rounded-lg shadow-lg m-4"
+            />
+            <MiniMap 
+              position="bottom-left"
+              className="bg-background/95 backdrop-blur-sm border-2 border-primary/20 rounded-lg shadow-lg m-4"
+              nodeColor={(node) => String(node.style?.background || '#E3F2FD')}
+              maskColor="rgba(0, 0, 0, 0.1)"
+            />
+            <Background 
+              variant={BackgroundVariant.Dots} 
+              gap={16} 
+              size={1.5}
+              color="#94a3b8"
+              className="bg-muted/30"
+            />
           </ReactFlow>
         </div>
       </div>
 
-      <div className="bg-muted/50 p-4 rounded-lg">
-        <h4 className="font-semibold text-sm mb-2 text-foreground">Quick Tips:</h4>
-        <ul className="text-sm text-muted-foreground space-y-1">
-          <li>• Click a node type on the left to add it to the canvas</li>
-          <li>• Drag nodes to reposition them</li>
-          <li>• Connect nodes by dragging from one node's edge to another</li>
-          <li>• Double-click a node to edit its label</li>
+      <div className="bg-gradient-to-br from-primary/5 via-biz-green/5 to-biz-copper/5 p-6 rounded-xl border-2 border-primary/10">
+        <h4 className="font-semibold text-base mb-3 text-foreground flex items-center gap-2">
+          <span className="text-2xl">💡</span> Quick Tips:
+        </h4>
+        <ul className="text-sm text-muted-foreground space-y-2 grid md:grid-cols-2 gap-x-8">
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            Click a node type on the left to add it to the canvas
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            Drag nodes to reposition them anywhere
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            Click and drag the canvas to pan around
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            Use zoom controls (bottom-right) or mouse wheel
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            Connect nodes by dragging from one edge to another
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary font-bold">•</span>
+            View the mini-map (bottom-left) for navigation
+          </li>
         </ul>
       </div>
 

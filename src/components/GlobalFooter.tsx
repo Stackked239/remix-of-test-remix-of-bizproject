@@ -101,8 +101,8 @@ const GlobalFooter = () => {
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                         aria-label="Frequently Asked Questions"
                       >
-                        <HelpCircle className="w-4 h-4 inline mr-2" />
                         FAQs
+                        <HelpCircle className="w-4 h-4 inline ml-2" />
                       </Link>
                     </li>
                     <li>

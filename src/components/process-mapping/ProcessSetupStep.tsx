@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useProcessMapStore } from '@/stores/processMapStore';
-import { Sparkles, X } from 'lucide-react';
+import { Sparkles, X, ChevronLeft } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,6 +21,7 @@ import {
 
 interface ProcessSetupStepProps {
   onNext: () => void;
+  onBack: () => void;
   onExit: () => void;
 }
 
@@ -34,7 +35,7 @@ const departments = [
   'Custom',
 ];
 
-const ProcessSetupStep = ({ onNext, onExit }: ProcessSetupStepProps) => {
+const ProcessSetupStep = ({ onNext, onBack, onExit }: ProcessSetupStepProps) => {
   const { currentProcess, createProcess, updateProcess } = useProcessMapStore();
   
   const [formData, setFormData] = useState({
@@ -196,28 +197,34 @@ const ProcessSetupStep = ({ onNext, onExit }: ProcessSetupStepProps) => {
       </div>
 
       <div className="flex justify-between pt-6 border-t">
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
-            <Button variant="outline" className="bg-destructive/10 hover:bg-destructive/20 text-destructive border-destructive/30">
-              <X className="w-4 h-4 mr-2" />
-              Exit
-            </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
-              <AlertDialogDescription>
-                Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={onExit}>
-                Agree - Please Exit
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={onBack}>
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline" className="bg-destructive/10 hover:bg-destructive/20 text-destructive border-destructive/30">
+                <X className="w-4 h-4 mr-2" />
+                Exit
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={onExit}>
+                  Agree - Please Exit
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
         <Button onClick={handleSubmit} size="lg">
           Next: Map Process →
         </Button>

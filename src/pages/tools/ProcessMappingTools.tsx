@@ -120,7 +120,8 @@ const ProcessMappingTools = () => {
               <div className="bg-card rounded-lg border shadow-sm p-8">
                 {currentStep === 1 && (
                   <ProcessSetupStep 
-                    onNext={() => setCurrentStep(2)} 
+                    onNext={() => setCurrentStep(2)}
+                    onBack={handleBackToDashboard}
                     onExit={handleExitProcess}
                   />
                 )}

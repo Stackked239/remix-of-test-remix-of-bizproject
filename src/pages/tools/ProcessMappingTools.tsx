@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { useProcessMapStore } from '@/stores/processMapStore';
 import ProcessDashboard from '@/components/process-mapping/ProcessDashboard';
 import ProcessSetupStep from '@/components/process-mapping/ProcessSetupStep';
@@ -35,6 +36,7 @@ const ProcessMappingTools = () => {
       />
 
       <div className="min-h-screen flex flex-col bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         <main className="flex-1 pt-40">

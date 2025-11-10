@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -26,6 +26,19 @@ import { Badge } from "@/components/ui/badge";
 
 const BizToolsToolbox = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to hash target if present in URL
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const toolCategories = [
     {
@@ -181,7 +194,7 @@ const BizToolsToolbox = () => {
       </section>
 
       {/* Complete Business Toolkit Section */}
-      <section className="py-20 bg-biz-green/5">
+      <section id="business-toolkit" className="py-20 bg-biz-green/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-foreground font-montserrat">

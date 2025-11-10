@@ -45,7 +45,7 @@ const ProcessMappingTools = () => {
     setShowWizard(false);
     setCurrentProcess(null);
     setCurrentStep(1);
-    navigate('/biztools/toolbox');
+    navigate('/biztools/toolbox#business-toolkit');
   };
 
   return (

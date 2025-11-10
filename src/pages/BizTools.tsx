@@ -101,8 +101,7 @@ const BizTools = () => {
               <Button 
                 asChild 
                 size="lg" 
-                variant="outline"
-                className="border-biz-navy text-biz-navy hover:bg-biz-navy/10"
+                className="bg-biz-copper text-white hover:bg-biz-copper/90"
               >
                 <a href="/biztools/toolbox">Let's Get Started</a>
               </Button>

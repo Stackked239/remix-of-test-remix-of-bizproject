@@ -54,10 +54,10 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
       {/* Hero Header */}
       <div className="mb-12 text-center relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-biz-green/5 to-biz-copper/5 rounded-3xl blur-3xl -z-10"></div>
-        <div className="relative bg-gradient-to-br from-background via-primary/5 to-biz-green/5 rounded-2xl p-8 border border-primary/10 shadow-lg">
+        <div className="relative bg-gradient-to-br from-background via-primary/5 to-biz-green/5 rounded-2xl p-8 pb-10 border border-primary/10 shadow-lg">
           <div className="flex items-center justify-center gap-2 mb-3">
             <Sparkles className="w-6 h-6 text-primary animate-pulse" />
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-biz-green to-biz-navy bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-biz-green to-biz-navy bg-clip-text text-transparent leading-tight pb-2">
               Process Mapping & SOP Builder
             </h1>
             <Sparkles className="w-6 h-6 text-biz-green animate-pulse" />

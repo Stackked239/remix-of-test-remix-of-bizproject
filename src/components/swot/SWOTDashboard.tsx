@@ -21,7 +21,7 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
   };
 
   return (
-    <div className="min-h-screen bg-biz-green/25">
+    <div className="min-h-screen bg-biz-green/15">
       <div className="container mx-auto px-4 pt-44 pb-12 max-w-6xl">
         {/* Hero Section */}
         <div className="text-center mb-12">

@@ -21,14 +21,14 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-biz-lime/5">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-biz-green/15">
       <div className="container mx-auto px-4 pt-44 pb-12 max-w-6xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-4 text-biz-navy">
             SWOT Analysis Tool
           </h1>
-          <p className="font-montserrat font-semibold text-xl lg:text-2xl mb-2 text-biz-lime">
+          <p className="font-montserrat font-semibold text-xl lg:text-2xl mb-2 text-biz-copper">
             Assess Your Strategic Position in Minutes
           </p>
           <p className="font-open-sans text-base text-muted-foreground max-w-2xl mx-auto">

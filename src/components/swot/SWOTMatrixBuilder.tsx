@@ -7,9 +7,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useSWOTStore, SWOTItem } from "@/stores/swotStore";
-import { Plus, Sparkles, X, Edit2, Save, Info } from "lucide-react";
+import { Plus, Sparkles, X, Edit2, Save, Info, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 interface SWOTMatrixBuilderProps {
   onNext: () => void;
@@ -27,6 +29,9 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
     evidence: '',
     impactLevel: 'medium' as 'low' | 'medium' | 'high',
   });
+  const [showAIDialog, setShowAIDialog] = useState(false);
+  const [aiSuggestions, setAiSuggestions] = useState<Array<{ text: string; impactLevel: 'low' | 'medium' | 'high'; selected: boolean }>>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const getQuadrantItems = (quadrant: string) => {
     return currentAnalysis?.items.filter(item => item.quadrant === quadrant) || [];
@@ -85,6 +90,67 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
   const handleNext = () => {
     saveAnalysis();
     onNext();
+  };
+
+  const handleGetAIIdeas = async (quadrant: 'strength' | 'weakness' | 'opportunity' | 'threat') => {
+    if (!currentAnalysis?.businessProfile) {
+      toast.error('Please complete business profile first');
+      return;
+    }
+
+    setActiveQuadrant(quadrant);
+    setIsGenerating(true);
+    setShowAIDialog(true);
+    setAiSuggestions([]);
+
+    try {
+      const existingItems = getQuadrantItems(quadrant).map(item => item.text);
+      
+      const { data, error } = await supabase.functions.invoke('generate-swot-ideas', {
+        body: {
+          quadrant,
+          businessProfile: currentAnalysis.businessProfile,
+          existingItems,
+        }
+      });
+
+      if (error) throw error;
+
+      if (data?.suggestions) {
+        setAiSuggestions(data.suggestions.map((s: any) => ({ ...s, selected: false })));
+        toast.success('AI suggestions generated!');
+      } else {
+        throw new Error('No suggestions received');
+      }
+    } catch (error: any) {
+      console.error('Error generating AI ideas:', error);
+      toast.error(error.message || 'Failed to generate suggestions');
+      setShowAIDialog(false);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handleAddAISuggestions = () => {
+    const selectedSuggestions = aiSuggestions.filter(s => s.selected);
+    
+    selectedSuggestions.forEach(suggestion => {
+      addSWOTItem({
+        quadrant: activeQuadrant,
+        text: suggestion.text,
+        impactLevel: suggestion.impactLevel,
+      });
+    });
+
+    toast.success(`Added ${selectedSuggestions.length} suggestion(s)`);
+    setShowAIDialog(false);
+    setAiSuggestions([]);
+  };
+
+  const toggleSuggestion = (index: number) => {
+    setAiSuggestions(prev => 
+      prev.map((s, i) => i === index ? { ...s, selected: !s.selected } : s)
+    );
   };
 
   const quadrantConfig = {
@@ -215,7 +281,12 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
             <Plus className="h-4 w-4 mr-1" />
             Add {config.singular}
           </Button>
-          <Button size="sm" variant="ghost" className="w-full text-xs">
+          <Button 
+            size="sm" 
+            variant="ghost" 
+            className="w-full text-xs"
+            onClick={() => handleGetAIIdeas(quadrant)}
+          >
             <Sparkles className="h-3 w-3 mr-1" />
             Get AI Ideas
           </Button>
@@ -265,6 +336,67 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
           </Button>
         </div>
       </div>
+
+      {/* AI Suggestions Dialog */}
+      <Dialog open={showAIDialog} onOpenChange={setShowAIDialog}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-biz-navy" />
+              AI Suggestions: {quadrantConfig[activeQuadrant].singular}
+            </DialogTitle>
+          </DialogHeader>
+
+          {isGenerating ? (
+            <div className="flex flex-col items-center justify-center py-8 gap-3">
+              <Loader2 className="h-8 w-8 animate-spin text-biz-navy" />
+              <p className="text-muted-foreground">Generating AI suggestions for your business...</p>
+            </div>
+          ) : (
+            <>
+              <div className="space-y-3">
+                <p className="text-sm text-muted-foreground">
+                  Select suggestions to add to your SWOT analysis:
+                </p>
+                {aiSuggestions.map((suggestion, index) => (
+                  <Card 
+                    key={index}
+                    className="p-3 hover:bg-accent/50 transition-colors cursor-pointer"
+                    onClick={() => toggleSuggestion(index)}
+                  >
+                    <div className="flex items-start gap-3">
+                      <Checkbox
+                        checked={suggestion.selected}
+                        onCheckedChange={() => toggleSuggestion(index)}
+                        className="mt-0.5"
+                      />
+                      <div className="flex-1">
+                        <p className="text-sm">{suggestion.text}</p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Impact: <span className="font-semibold capitalize">{suggestion.impactLevel}</span>
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setShowAIDialog(false)}>
+                  Cancel
+                </Button>
+                <Button
+                  onClick={handleAddAISuggestions}
+                  disabled={!aiSuggestions.some(s => s.selected)}
+                  className="bg-biz-navy hover:bg-biz-navy/90"
+                >
+                  Add Selected ({aiSuggestions.filter(s => s.selected).length})
+                </Button>
+              </DialogFooter>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Add/Edit Dialog */}
       <Dialog open={showAddDialog} onOpenChange={setShowAddDialog}>

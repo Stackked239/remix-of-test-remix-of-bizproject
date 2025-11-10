@@ -181,7 +181,7 @@ const BizTools = () => {
               {/* Trust Signals */}
               <div className="flex flex-wrap items-center gap-4 text-sm font-open-sans text-biz-grey">
                 <span className="flex items-center gap-2">
-                  📦 <span>500+ Resources</span>
+                  📦 <span>100+ Resources</span>
                 </span>
                 <span className="text-biz-grey/40">|</span>
                 <span className="flex items-center gap-2">
@@ -257,7 +257,7 @@ const BizTools = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-montserrat font-bold text-xl text-biz-navy mb-1">Complete Toolkit</h4>
-                          <p className="font-open-sans text-sm text-biz-grey">500+ Premium Resources</p>
+                          <p className="font-open-sans text-sm text-biz-grey">100+ Premium Resources</p>
                         </div>
                       </div>
                       

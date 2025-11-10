@@ -31,7 +31,7 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
           <p className="font-montserrat font-semibold text-xl lg:text-2xl mb-2 text-biz-copper">
             Assess Your Strategic Position in Minutes
           </p>
-          <p className="font-open-sans text-base text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-open-sans text-base text-biz-blue max-w-2xl mx-auto">
             Identify your business strengths, weaknesses, opportunities, and threats
             with our interactive SWOT analysis framework
           </p>

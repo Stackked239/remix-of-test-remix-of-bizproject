@@ -37,7 +37,7 @@ const ProcessMappingTools = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <GlobalNavigation />
 
-        <main className="flex-1 pt-20">
+        <main className="flex-1 pt-32">
           {!showWizard && !currentProcess ? (
             <ProcessDashboard onCreateNew={handleCreateNew} />
           ) : (
@@ -45,7 +45,7 @@ const ProcessMappingTools = () => {
               {/* Progress Indicator */}
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-foreground">
+                  <h2 className="text-2xl font-bold text-foreground text-center">
                     {currentProcess?.name || 'New Process Map'}
                   </h2>
                   <span className="text-sm text-muted-foreground">Step {currentStep} of 4</span>

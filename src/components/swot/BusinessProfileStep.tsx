@@ -61,7 +61,7 @@ export const BusinessProfileStep = ({ onNext, onSkip }: BusinessProfileStepProps
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl">
+    <div className="container mx-auto px-4 pt-32 pb-8 max-w-3xl">
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <h2 className="font-montserrat font-bold text-3xl text-biz-navy">

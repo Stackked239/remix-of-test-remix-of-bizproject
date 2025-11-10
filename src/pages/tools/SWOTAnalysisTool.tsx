@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useSWOTStore } from "@/stores/swotStore";
@@ -72,6 +73,7 @@ const SWOTAnalysisTool = () => {
       />
 
       <div className="min-h-screen flex flex-col bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         {/* Exit Button (shown when in analysis) */}

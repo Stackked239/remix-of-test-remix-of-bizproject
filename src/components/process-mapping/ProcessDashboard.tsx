@@ -50,17 +50,17 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="container mx-auto px-4 py-4 max-w-7xl">
       {/* Hero Header */}
-      <div className="mb-6 text-center relative">
+      <div className="mb-4 text-center relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-biz-green/5 to-biz-copper/5 rounded-3xl blur-3xl -z-10"></div>
-        <div className="relative bg-biz-green/50 backdrop-blur-sm rounded-2xl p-6 pb-8 border border-primary/10 shadow-lg">
+        <div className="relative bg-biz-grey/10 backdrop-blur-sm rounded-2xl p-5 pb-7 border border-primary/10 shadow-lg">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <Map className="w-6 h-6 text-white" />
+            <Map className="w-6 h-6 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold text-biz-navy leading-tight pb-2">
               Process Mapping & SOP Builder
             </h1>
-            <Map className="w-6 h-6 text-white" />
+            <Map className="w-6 h-6 text-primary" />
           </div>
           <p className="text-lg text-biz-navy max-w-2xl mx-auto font-semibold">
             Create, document, and optimize your business processes with professional SOPs

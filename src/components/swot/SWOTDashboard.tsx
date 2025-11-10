@@ -12,7 +12,7 @@ export const SWOTDashboard = ({ onStartNew }: SWOTDashboardProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-biz-lime/5">
-      <div className="container mx-auto px-4 pt-32 pb-12 max-w-6xl">
+      <div className="container mx-auto px-4 pt-44 pb-12 max-w-6xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="font-montserrat font-bold text-4xl lg:text-5xl mb-4 text-biz-navy">

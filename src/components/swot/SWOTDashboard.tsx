@@ -5,10 +5,18 @@ import { Plus, FileText, Lightbulb, Target } from "lucide-react";
 
 interface SWOTDashboardProps {
   onStartNew: () => void;
+  onLoadAnalysis: (id: string) => void;
 }
 
-export const SWOTDashboard = ({ onStartNew }: SWOTDashboardProps) => {
-  const { savedAnalyses, loadAnalysis } = useSWOTStore();
+export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps) => {
+  const { savedAnalyses } = useSWOTStore();
+
+  const handleScrollToSaved = () => {
+    const savedSection = document.getElementById('saved-analyses-section');
+    if (savedSection) {
+      savedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-biz-lime/5">
@@ -41,6 +49,7 @@ export const SWOTDashboard = ({ onStartNew }: SWOTDashboardProps) => {
             <Button
               size="lg"
               variant="outline"
+              onClick={handleScrollToSaved}
               className="border-biz-navy text-biz-navy hover:bg-biz-navy/5"
             >
               <FileText className="mr-2 h-5 w-5" />
@@ -177,7 +186,7 @@ export const SWOTDashboard = ({ onStartNew }: SWOTDashboardProps) => {
 
         {/* Saved Analyses */}
         {savedAnalyses.length > 0 && (
-          <div className="mt-8">
+          <div id="saved-analyses-section" className="mt-8">
             <h2 className="font-montserrat font-bold text-2xl mb-4 text-biz-navy">
               Your Saved Analyses
             </h2>
@@ -186,7 +195,7 @@ export const SWOTDashboard = ({ onStartNew }: SWOTDashboardProps) => {
                 <Card
                   key={analysis.id}
                   className="p-4 hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => loadAnalysis(analysis.id)}
+                  onClick={() => onLoadAnalysis(analysis.id)}
                 >
                   <h3 className="font-montserrat font-semibold text-lg mb-2">
                     {analysis.businessProfile?.businessName || 'Untitled Analysis'}

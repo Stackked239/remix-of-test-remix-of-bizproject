@@ -23,6 +23,13 @@ const SWOTAnalysisTool = () => {
     setCurrentStep(1);
   };
 
+  const handleLoadAnalysis = (id: string) => {
+    const { loadAnalysis } = useSWOTStore.getState();
+    loadAnalysis(id);
+    setCurrentStep(2); // Start at SWOT Matrix since profile is already filled
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleExit = () => {
     setShowExitDialog(true);
   };
@@ -34,7 +41,7 @@ const SWOTAnalysisTool = () => {
 
   const renderStep = () => {
     if (!currentAnalysis) {
-      return <SWOTDashboard onStartNew={handleStartNew} />;
+      return <SWOTDashboard onStartNew={handleStartNew} onLoadAnalysis={handleLoadAnalysis} />;
     }
 
     switch (currentStep) {
@@ -59,7 +66,7 @@ const SWOTAnalysisTool = () => {
           />
         );
       default:
-        return <SWOTDashboard onStartNew={handleStartNew} />;
+        return <SWOTDashboard onStartNew={handleStartNew} onLoadAnalysis={handleLoadAnalysis} />;
     }
   };
 

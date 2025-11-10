@@ -368,10 +368,12 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
                       <Checkbox
                         checked={suggestion.selected}
                         onCheckedChange={(checked) => {
-                          setAiSuggestions(prev => 
-                            prev.map((s, i) => i === index ? { ...s, selected: checked === true } : s)
+                          const isChecked = checked === true;
+                          setAiSuggestions(prev =>
+                            prev.map((s, i) => (i === index ? { ...s, selected: isChecked } : s))
                           );
                         }}
+                        onClick={(e) => e.stopPropagation()}
                         className="mt-0.5"
                       />
                       <div className="flex-1">

@@ -54,15 +54,15 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
       {/* Hero Header */}
       <div className="mb-12 text-center relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-biz-green/5 to-biz-copper/5 rounded-3xl blur-3xl -z-10"></div>
-        <div className="relative bg-gradient-to-br from-background via-primary/5 to-biz-green/5 rounded-2xl p-8 pb-10 border border-primary/10 shadow-lg">
+        <div className="relative bg-biz-green/60 backdrop-blur-sm rounded-2xl p-8 pb-10 border border-primary/10 shadow-lg">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+            <Sparkles className="w-6 h-6 text-white animate-pulse" />
             <h1 className="text-4xl md:text-5xl font-bold text-biz-navy leading-tight pb-2">
               Process Mapping & SOP Builder
             </h1>
-            <Sparkles className="w-6 h-6 text-biz-green animate-pulse" />
+            <Sparkles className="w-6 h-6 text-white animate-pulse" />
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-biz-navy max-w-2xl mx-auto font-semibold">
             Create, document, and optimize your business processes with professional SOPs
           </p>
         </div>
@@ -72,23 +72,22 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
       <div className="mb-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 shadow-sm">
         <div className="flex flex-wrap gap-3">
           <Button 
-            onClick={onCreateNew} 
-            size="lg" 
-            className="gap-2 bg-gradient-to-r from-primary to-biz-green hover:from-primary/90 hover:to-biz-green/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            <Plus className="w-5 h-5" />
-            Create New Process Map
-          </Button>
-          <Button 
             asChild
-            variant="outline" 
             size="lg" 
-            className="gap-2 border-2 hover:bg-primary/5 hover:border-primary transition-all duration-300"
+            className="gap-2 bg-biz-navy hover:bg-biz-navy/90 text-white border-2 hover:border-white transition-all duration-300"
           >
             <a href="/biztools/toolbox/process-mapping-tools/guide" target="_blank" rel="noopener noreferrer">
               <BookOpen className="w-5 h-5" />
               Getting Started Guide
             </a>
+          </Button>
+          <Button 
+            onClick={onCreateNew} 
+            size="lg" 
+            className="gap-2 bg-biz-green hover:bg-biz-green/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <Plus className="w-5 h-5" />
+            Create New Process Map
           </Button>
         </div>
 

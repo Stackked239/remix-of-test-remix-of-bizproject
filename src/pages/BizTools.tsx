@@ -7,6 +7,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import cashFlowBg from "@/assets/cash-flow-tracker-bg.png";
 
 const BizTools = () => {
 
@@ -68,7 +69,13 @@ const BizTools = () => {
       
       {/* Hero Section */}
       <section className="relative bg-white text-white overflow-hidden">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08]"
+            style={{ backgroundImage: `url(${cashFlowBg})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
         </div>

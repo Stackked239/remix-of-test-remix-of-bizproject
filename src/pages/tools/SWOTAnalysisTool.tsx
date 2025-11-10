@@ -83,7 +83,7 @@ const SWOTAnalysisTool = () => {
               variant="outline"
               size="sm"
               onClick={handleExit}
-              className="shadow-lg bg-white"
+              className="shadow-lg bg-red-50 hover:bg-red-100 border-red-200 text-red-700 hover:text-red-800"
             >
               <X className="h-4 w-4 mr-2" />
               Exit Tool

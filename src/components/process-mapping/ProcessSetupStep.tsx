@@ -198,7 +198,7 @@ const ProcessSetupStep = ({ onNext, onExit }: ProcessSetupStepProps) => {
       <div className="flex justify-between pt-6 border-t">
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="outline">
+            <Button variant="outline" className="bg-destructive/10 hover:bg-destructive/20 text-destructive border-destructive/30">
               <X className="w-4 h-4 mr-2" />
               Exit
             </Button>

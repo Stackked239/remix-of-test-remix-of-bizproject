@@ -235,23 +235,31 @@ const GlobalNavigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              {/* Blog Dropdown */}
+              {/* Tools Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
-                    isActiveRoute('/blog') || isActiveRoute('/glossary-of-terms') ? 'text-biz-green' : 'text-biz-navy'
+                    isActiveRoute('/blog') || isActiveRoute('/glossary-of-terms') || isActiveRoute('/biztools') ? 'text-biz-green' : 'text-biz-navy'
                   }`}>
-                    Blog
+                    Tools
                     <ChevronDown className="w-4 h-4" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
                   <DropdownMenuItem asChild>
                     <Link 
+                      to="/biztools"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">BizTools - Tools & Resources</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
                       to="/blog"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
-                      <span className="font-medium text-biz-navy">Blog - Business Insights</span>
+                      <span className="font-medium text-biz-navy">Business Insights & Strategies</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -381,11 +389,14 @@ const GlobalNavigation = () => {
                 </Link>
               </div>
               <div className="space-y-2">
-                <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                  Blog
+                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  Tools
+                </Link>
+                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  BizTools - Tools & Resources
                 </Link>
                 <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  Blog - Business Insights
+                  Business Insights & Strategies
                 </Link>
                 <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Business Terms Glossary

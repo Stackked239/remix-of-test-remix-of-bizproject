@@ -10,10 +10,23 @@ import ProcessSetupStep from '@/components/process-mapping/ProcessSetupStep';
 import ProcessMappingStep from '@/components/process-mapping/ProcessMappingStep';
 import TaskDetailsStep from '@/components/process-mapping/TaskDetailsStep';
 import ReviewExportStep from '@/components/process-mapping/ReviewExportStep';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 const ProcessMappingTools = () => {
   const navigate = useNavigate();
-  const { currentProcess, currentStep, setCurrentStep } = useProcessMapStore();
+  const { currentProcess, currentStep, setCurrentStep, setCurrentProcess } = useProcessMapStore();
   const [showWizard, setShowWizard] = useState(false);
 
   const handleCreateNew = () => {
@@ -24,6 +37,13 @@ const ProcessMappingTools = () => {
   const handleBackToDashboard = () => {
     setShowWizard(false);
     setCurrentStep(1);
+  };
+
+  const handleExitProcess = () => {
+    setShowWizard(false);
+    setCurrentProcess(null);
+    setCurrentStep(1);
+    navigate('/biztools/toolbox');
   };
 
   return (
@@ -50,7 +70,31 @@ const ProcessMappingTools = () => {
                   <h2 className="text-2xl font-bold text-foreground text-center">
                     {currentProcess?.name || 'New Process Map'}
                   </h2>
-                  <span className="text-sm text-muted-foreground">Step {currentStep} of 4</span>
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm text-muted-foreground">Step {currentStep} of 4</span>
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline" size="sm" className="gap-2">
+                          <X className="w-4 h-4" />
+                          Exit
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction onClick={handleExitProcess}>
+                            Agree - Please Exit
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
                 </div>
 
                 <div className="flex gap-2">

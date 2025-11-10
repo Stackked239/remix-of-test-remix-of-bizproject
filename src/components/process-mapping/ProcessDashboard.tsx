@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Search, FileText, Edit, Download, Trash2, Copy } from 'lucide-react';
+import { Plus, Search, FileText, Edit, Download, Trash2, Copy, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -52,7 +52,6 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       <div className="mb-8 text-center">
-        <p className="text-sm font-semibold text-primary mb-2">BizHealth.ai</p>
         <h1 className="text-4xl font-bold mb-2 text-foreground">
           Process Mapping & SOP Builder
         </h1>
@@ -62,10 +61,16 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
       </div>
 
       <div className="mb-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-        <Button onClick={onCreateNew} size="lg" className="gap-2">
-          <Plus className="w-5 h-5" />
-          Create New Process Map
-        </Button>
+        <div className="flex gap-3">
+          <Button onClick={onCreateNew} size="lg" className="gap-2">
+            <Plus className="w-5 h-5" />
+            Create New Process Map
+          </Button>
+          <Button variant="outline" size="lg" className="gap-2">
+            <BookOpen className="w-5 h-5" />
+            Getting Started Guide
+          </Button>
+        </div>
 
         <div className="relative w-full sm:w-80">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
@@ -180,10 +185,28 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
               <div className="text-sm text-muted-foreground">Start from pre-built processes</div>
             </div>
           </Button>
-          <Button variant="outline" className="justify-start h-auto py-4">
+          <Button 
+            variant="outline" 
+            className="justify-start h-auto py-4"
+            onClick={() => {
+              if (filteredProcesses.length === 0) {
+                alert('No process maps to download. Create one first!');
+                return;
+              }
+              // Download all processes as a single document
+              import('@/utils/processExport').then(({ exportToWord }) => {
+                filteredProcesses.forEach(process => {
+                  exportToWord(process);
+                });
+              });
+            }}
+          >
             <div className="text-left">
-              <div className="font-semibold">Getting Started Guide</div>
-              <div className="text-sm text-muted-foreground">Learn how to use the tool</div>
+              <div className="font-semibold flex items-center gap-2">
+                <Download className="w-4 h-4" />
+                Download Process Maps
+              </div>
+              <div className="text-sm text-muted-foreground">Export all as .docx files</div>
             </div>
           </Button>
         </div>

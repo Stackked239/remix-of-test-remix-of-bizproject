@@ -37,7 +37,7 @@ const ProcessMappingTools = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <GlobalNavigation />
 
-        <main className="flex-1 pt-32">
+        <main className="flex-1 pt-40">
           {!showWizard && !currentProcess ? (
             <ProcessDashboard onCreateNew={handleCreateNew} />
           ) : (

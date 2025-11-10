@@ -74,7 +74,7 @@ const BizToolsToolbox = () => {
     },
     {
       title: "Strategic Planning",
-      tools: ["SWOT Analysis Framework", "Goal Setting Templates", "Action Plan Builder", "Progress Trackers"],
+      tools: ["SWOT Analysis Tool", "Goal Setting Templates", "Action Plan Builder", "Progress Trackers"],
       icon: Target,
       color: "text-biz-copper",
       bgColor: "bg-biz-copper/10",
@@ -273,11 +273,13 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
                           ? "/biztools/toolbox/process-mapping-tools"
+                          : tool === "SWOT Analysis Tool"
+                          ? "/biztools/toolbox/swot-analysis-tool"
                           : "#";
                         const content = (
                           <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">

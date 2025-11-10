@@ -495,7 +495,7 @@ const BizToolsToolbox = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-biz-navy font-montserrat font-semibold text-lg px-8 py-6"
+              className="border-2 border-white text-biz-navy hover:bg-white hover:text-biz-green font-montserrat font-semibold text-lg px-8 py-6 bg-white transition-colors"
             >
               <Link to="/biztools/how-it-works">Learn More</Link>
             </Button>

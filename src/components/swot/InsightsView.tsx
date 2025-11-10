@@ -19,6 +19,11 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
   const { currentAnalysis } = useSWOTStore();
   const [showCompleteDialog, setShowCompleteDialog] = useState(false);
 
+  const handleBack = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    onBack();
+  };
+
   const handleComplete = () => {
     toast.success("SWOT Analysis completed!");
     navigate('/biztools/toolbox');
@@ -307,7 +312,7 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 justify-between">
-        <Button variant="outline" onClick={onBack}>
+        <Button variant="outline" onClick={handleBack}>
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Matrix
         </Button>

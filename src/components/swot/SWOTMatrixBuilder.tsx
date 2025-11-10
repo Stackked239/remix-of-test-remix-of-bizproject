@@ -89,7 +89,13 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
 
   const handleNext = () => {
     saveAnalysis();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     onNext();
+  };
+
+  const handleBack = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    onBack();
   };
 
   const handleGetAIIdeas = async (quadrant: 'strength' | 'weakness' | 'opportunity' | 'threat') => {
@@ -319,7 +325,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 justify-between">
-        <Button variant="outline" onClick={onBack}>
+        <Button variant="outline" onClick={handleBack}>
           ← Back
         </Button>
         <div className="flex gap-3">

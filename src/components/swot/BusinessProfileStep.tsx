@@ -57,7 +57,13 @@ export const BusinessProfileStep = ({ onNext, onSkip }: BusinessProfileStepProps
       updatedAt: new Date(),
     };
     setBusinessProfile(profile);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     onNext();
+  };
+
+  const handleSkip = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    onSkip();
   };
 
   return (
@@ -197,7 +203,7 @@ export const BusinessProfileStep = ({ onNext, onSkip }: BusinessProfileStepProps
             <Button
               type="button"
               variant="outline"
-              onClick={onSkip}
+              onClick={handleSkip}
               className="sm:w-auto"
             >
               Skip Setup

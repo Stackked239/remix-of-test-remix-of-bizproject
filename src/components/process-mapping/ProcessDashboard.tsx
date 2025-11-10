@@ -52,6 +52,7 @@ const ProcessDashboard = ({ onCreateNew }: ProcessDashboardProps) => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       <div className="mb-8 text-center">
+        <p className="text-sm font-semibold text-primary mb-2">BizHealth.ai</p>
         <h1 className="text-4xl font-bold mb-2 text-foreground">
           Process Mapping & SOP Builder
         </h1>

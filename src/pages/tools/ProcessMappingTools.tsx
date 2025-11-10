@@ -32,11 +32,13 @@ const ProcessMappingTools = () => {
   const handleCreateNew = () => {
     setShowWizard(true);
     setCurrentStep(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleBackToDashboard = () => {
     setShowWizard(false);
     setCurrentStep(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleExitProcess = () => {
@@ -120,28 +122,46 @@ const ProcessMappingTools = () => {
               <div className="bg-card rounded-lg border shadow-sm p-8">
                 {currentStep === 1 && (
                   <ProcessSetupStep 
-                    onNext={() => setCurrentStep(2)}
+                    onNext={() => {
+                      setCurrentStep(2);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     onBack={handleBackToDashboard}
                     onExit={handleExitProcess}
                   />
                 )}
                 {currentStep === 2 && (
                   <ProcessMappingStep
-                    onBack={() => setCurrentStep(1)}
-                    onNext={() => setCurrentStep(3)}
+                    onBack={() => {
+                      setCurrentStep(1);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onNext={() => {
+                      setCurrentStep(3);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     onExit={handleExitProcess}
                   />
                 )}
                 {currentStep === 3 && (
                   <TaskDetailsStep
-                    onBack={() => setCurrentStep(2)}
-                    onNext={() => setCurrentStep(4)}
+                    onBack={() => {
+                      setCurrentStep(2);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onNext={() => {
+                      setCurrentStep(4);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     onExit={handleExitProcess}
                   />
                 )}
                 {currentStep === 4 && (
                   <ReviewExportStep
-                    onBack={() => setCurrentStep(3)}
+                    onBack={() => {
+                      setCurrentStep(3);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     onComplete={handleBackToDashboard}
                     onExit={handleExitProcess}
                   />

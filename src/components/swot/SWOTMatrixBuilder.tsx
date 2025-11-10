@@ -6,8 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useSWOTStore, SWOTItem } from "@/stores/swotStore";
-import { Plus, Sparkles, X, Edit2, Save } from "lucide-react";
+import { Plus, Sparkles, X, Edit2, Save, Info } from "lucide-react";
 import { toast } from "sonner";
 
 interface SWOTMatrixBuilderProps {
@@ -94,6 +95,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
       borderColor: 'border-green-500',
       bgColor: 'bg-green-50',
       textColor: 'text-green-700',
+      helpText: 'Internal positive factors you control. What does your business do well? What unique resources, skills, or advantages do you have? Examples: Strong brand reputation, skilled team, proprietary technology, loyal customer base, prime location.',
     },
     weakness: {
       title: 'WEAKNESSES',
@@ -102,6 +104,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
       borderColor: 'border-red-500',
       bgColor: 'bg-red-50',
       textColor: 'text-red-700',
+      helpText: 'Internal negative factors you need to improve. What could your business do better? Where are you lacking resources or capabilities? Examples: Limited cash flow, outdated equipment, skill gaps, poor online presence, inefficient processes.',
     },
     opportunity: {
       title: 'OPPORTUNITIES',
@@ -110,6 +113,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
       borderColor: 'border-blue-500',
       bgColor: 'bg-blue-50',
       textColor: 'text-blue-700',
+      helpText: 'External positive factors in the market. What favorable trends, market conditions, or circumstances could you leverage? Examples: Growing market demand, new technology, partnerships, untapped customer segments, government incentives.',
     },
     threat: {
       title: 'THREATS',
@@ -118,6 +122,7 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
       borderColor: 'border-orange-500',
       bgColor: 'bg-orange-50',
       textColor: 'text-orange-700',
+      helpText: 'External negative factors you need to prepare for. What market conditions, competitors, or external forces could harm your business? Examples: New competitors, economic downturn, changing regulations, supply chain disruptions, shifting customer preferences.',
     },
   };
 
@@ -130,9 +135,23 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
         <div className="flex items-center gap-2 mb-3">
           <span className="text-2xl">{config.icon}</span>
           <div className="flex-1">
-            <h3 className={`font-montserrat font-bold text-lg ${config.textColor}`}>
-              {config.title}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className={`font-montserrat font-bold text-lg ${config.textColor}`}>
+                {config.title}
+              </h3>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button className="focus:outline-none">
+                      <Info className={`h-4 w-4 ${config.textColor} opacity-60 hover:opacity-100 transition-opacity`} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs bg-card border-2 shadow-lg">
+                    <p className="text-sm leading-relaxed">{config.helpText}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
             <p className="text-xs text-muted-foreground">{config.subtitle}</p>
           </div>
           <span className="text-sm font-semibold text-muted-foreground">

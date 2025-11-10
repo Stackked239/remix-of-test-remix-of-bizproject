@@ -404,20 +404,20 @@ const BizTools = () => {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  <div className="w-6 h-6 rounded-full bg-biz-lime/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-lime" />
                   </div>
                   <span className="font-open-sans text-white/90">Instant download access</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  <div className="w-6 h-6 rounded-full bg-biz-lime/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-lime" />
                   </div>
                   <span className="font-open-sans text-white/90">Customizable templates</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 rounded-full bg-biz-copper/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-biz-copper" />
+                  <div className="w-6 h-6 rounded-full bg-biz-lime/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-biz-lime" />
                   </div>
                   <span className="font-open-sans text-white/90">Regular updates and new tools</span>
                 </div>

@@ -367,7 +367,11 @@ export const SWOTMatrixBuilder = ({ onNext, onBack }: SWOTMatrixBuilderProps) =>
                     <div className="flex items-start gap-3">
                       <Checkbox
                         checked={suggestion.selected}
-                        onCheckedChange={() => toggleSuggestion(index)}
+                        onCheckedChange={(checked) => {
+                          setAiSuggestions(prev => 
+                            prev.map((s, i) => i === index ? { ...s, selected: checked === true } : s)
+                          );
+                        }}
                         className="mt-0.5"
                       />
                       <div className="flex-1">

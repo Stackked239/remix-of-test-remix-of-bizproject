@@ -84,7 +84,7 @@ const BizTools = () => {
             <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
               BizTools
             </h1>
-            <p className="font-montserrat font-semibold text-2xl mb-4 text-biz-lime">
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-biz-copper">
               Scalable Essentials at Your Fingertips
             </p>
             <p className="font-open-sans font-bold text-base max-w-3xl mx-auto text-biz-navy">

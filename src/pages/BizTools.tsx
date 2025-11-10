@@ -67,7 +67,7 @@ const BizTools = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-biz-copper/60 text-white overflow-hidden">
+      <section className="relative bg-white text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
@@ -84,7 +84,7 @@ const BizTools = () => {
             <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
               BizTools
             </h1>
-            <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-biz-lime">
               Scalable Essentials at Your Fingertips
             </p>
             <p className="font-open-sans font-bold text-base max-w-3xl mx-auto text-biz-navy">

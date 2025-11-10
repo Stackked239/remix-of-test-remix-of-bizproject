@@ -14,7 +14,9 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
   const handleScrollToSaved = () => {
     const savedSection = document.getElementById('saved-analyses-section');
     if (savedSection) {
-      savedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const yOffset = -120; // Offset for nav bar height
+      const y = savedSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
@@ -187,9 +189,12 @@ export const SWOTDashboard = ({ onStartNew, onLoadAnalysis }: SWOTDashboardProps
         {/* Saved Analyses */}
         {savedAnalyses.length > 0 && (
           <div id="saved-analyses-section" className="mt-8">
-            <h2 className="font-montserrat font-bold text-2xl mb-4 text-biz-navy">
+            <h2 className="font-montserrat font-bold text-2xl mb-2 text-biz-navy">
               Your Saved Analyses
             </h2>
+            <p className="font-open-sans text-sm text-muted-foreground mb-4 italic">
+              Click on an analysis to open and continue working
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {savedAnalyses.map((analysis) => (
                 <Card

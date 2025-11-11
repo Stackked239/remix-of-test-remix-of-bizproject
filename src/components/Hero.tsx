@@ -356,8 +356,8 @@ const Hero = () => {
               const IconComponent = indicator.icon;
               return (
                 <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
-                  <div className="bg-biz-green rounded-lg p-2 flex-shrink-0">
-                    <IconComponent className="w-5 h-5 text-biz-navy" />
+                  <div className="bg-biz-navy rounded-lg p-2 flex-shrink-0">
+                    <IconComponent className="w-5 h-5 text-white" />
                   </div>
                   {/* Mobile/Tablet: Show simplified label */}
                   <div className="block lg:hidden">

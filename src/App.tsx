@@ -71,6 +71,7 @@ import SWOTAnalysisTool from "./pages/tools/SWOTAnalysisTool";
 import CustomerJourneyMapsTool from "./pages/tools/CustomerJourneyMapsTool";
 
 import Search from "./pages/Search";
+import ForAIAssistants from "./pages/ForAIAssistants";
 
 const queryClient = new QueryClient();
 
@@ -147,6 +148,7 @@ const App = () => (
             <Route path="/biztools/toolbox/swot-analysis-tool" element={<SWOTAnalysisTool />} />
             <Route path="/biztools/toolbox/customer-journey-maps-tool" element={<CustomerJourneyMapsTool />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

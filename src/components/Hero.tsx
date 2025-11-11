@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Brain, TrendingUp, Users, Check, Info } from "lucide-react";
+import { ArrowRight, Shield, Clock, TrendingUp, Users, Check, Info } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import bannerLogo from "@/assets/bizhealth-logo-banner.jpg";
 
 const Hero = () => {
@@ -103,9 +104,10 @@ const Hero = () => {
     return "Essentials";
   };
 
+  const navigate = useNavigate();
+
   const handleGetReport = () => {
-    const element = document.getElementById('pricing');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    navigate('/how-it-works');
   };
 
   // Update tier when inputs change
@@ -117,7 +119,7 @@ const Hero = () => {
 
   const trustIndicators = [
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
-    { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
+    { icon: Clock, label: "Reports Generated", value: "24 hrs/day" },
     { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
     { icon: Users, label: "Trusted Worldwide", value: "2,500+ Businesses" }
   ];
@@ -216,7 +218,7 @@ const Hero = () => {
                 size="lg"
                 className="w-full bg-biz-green hover:bg-biz-green/90 text-biz-white font-montserrat font-semibold text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-4 shadow-feature"
               >
-                <span className="truncate text-center">Get Business Health Report</span>
+                <span className="truncate text-center">See How It Works</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-1.5 sm:ml-2 flex-shrink-0" />
               </Button>
               

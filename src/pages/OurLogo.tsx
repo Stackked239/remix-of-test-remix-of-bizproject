@@ -50,7 +50,7 @@ const OurLogo = () => {
         </section>
 
         {/* Core Message Grid */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="pt-16 md:pt-20 pb-8 md:pb-10 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {/* What It Means Card */}
@@ -81,7 +81,7 @@ const OurLogo = () => {
         </section>
 
         {/* Philosophy Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-biz-accent via-biz-teal/5 to-background">
+        <section className="pt-8 md:pt-10 pb-16 md:pb-20 bg-gradient-to-br from-biz-accent via-biz-teal/5 to-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="bg-white border-biz-grey/20 shadow-xl">
               <CardContent className="p-10 md:p-12">

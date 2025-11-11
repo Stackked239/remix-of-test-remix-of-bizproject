@@ -190,7 +190,7 @@ let invokeData: any = null;
                 ? "Official Launch on February 28th"
                 : hubColor === "biz-guides"
                 ? "Official Launch on January 30th"
-                : "Official Launch on Nov. 30th"
+                : "Official U.S. Launch on Dec. 1st"
               }
             </p>
             <p className={`${colors.text}/80 text-sm`}>

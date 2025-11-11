@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +10,25 @@ import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 const WhenToPivot = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="When to Pivot: Data-Driven Business Signals | BizHealth.ai"
+        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot. Data-driven decision making for SMB leaders."
+        keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, SMB strategy"
+        canonical="https://bizhealth.ai/blog/when-to-pivot"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        articlePublishedTime="2025-09-12"
+        articleAuthor="BizHealth Research Team"
+      />
+      <StructuredData 
+        type="article"
+        headline="When to Pivot: Data-Driven Signals That It's Time to Change Course"
+        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot."
+        image="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        datePublished="2025-09-12"
+        author="BizHealth Research Team"
+        url="https://bizhealth.ai/blog/when-to-pivot"
+      />
       <Navigation />
       
       {/* Hero Section */}

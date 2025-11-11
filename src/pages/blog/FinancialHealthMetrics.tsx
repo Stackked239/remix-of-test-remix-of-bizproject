@@ -1,63 +1,35 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const FinancialHealthMetrics = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Financial Health Metrics Guide 2025 | BizHealth.ai</title>
-        <meta name="description" content="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking. Boost business performance—read now!" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/financial-health-metrics" />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="Financial Health Metrics Every Business Owner Should Track in 2025" />
-        <meta property="og:description" content="Discover 8 essential financial KPIs that reveal your business's true health. Learn how to track profit margins, cash flow, and growth rates effectively." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/financial-health-metrics" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Financial Health Metrics Guide 2025 | BizHealth.ai" />
-        <meta name="twitter:description" content="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking." />
-        <meta name="twitter:image" content="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg" />
-        
-        {/* JSON-LD Article Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Financial Health Metrics Every Business Owner Should Track in 2025",
-            "description": "A comprehensive guide to 8 essential financial health metrics that help SMB owners monitor business performance, optimize cash flow, and drive sustainable growth.",
-            "image": "https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg",
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth.ai Research Team",
-              "description": "Business Analytics Experts specializing in SMB financial strategy and performance optimization"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo.png"
-              }
-            },
-            "datePublished": "2025-10-12",
-            "dateModified": "2025-10-12",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://bizhealth.ai/blog/financial-health-metrics"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Financial Health Metrics Guide 2025 | BizHealth.ai"
+        description="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking. Boost business performance—read now!"
+        keywords="financial health metrics, business KPIs, profit margins, cash flow management, financial ratios, SMB metrics, business performance indicators"
+        canonical="https://bizhealth.ai/blog/financial-health-metrics"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg"
+        articlePublishedTime="2025-09-12"
+        articleAuthor="BizHealth Research Team"
+      />
+      <StructuredData 
+        type="article"
+        headline="Financial Health Metrics Every Business Owner Should Track"
+        description="A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance."
+        image="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg"
+        datePublished="2025-09-12"
+        author="BizHealth Research Team"
+        url="https://bizhealth.ai/blog/financial-health-metrics"
+      />
       <Navigation />
       
       {/* Hero Section */}

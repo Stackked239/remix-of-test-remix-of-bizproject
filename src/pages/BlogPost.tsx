@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +10,25 @@ import businessHealthImage from "@/assets/business-health-assessment-comprehensi
 const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="The Complete Guide to Business Health Assessment in 2025 | BizHealth.ai"
+        description="Comprehensive guide to business health assessments for SMBs. Learn what they are, why they matter, and how they can transform your business with actionable insights and expert recommendations."
+        keywords="business health assessment, SMB diagnostics, business evaluation, performance metrics, operational assessment, financial health check, strategic assessment"
+        canonical="https://bizhealth.ai/blog/business-health-assessment-2025"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/business-health-assessment-comprehensive.jpg"
+        articlePublishedTime="2025-07-27"
+        articleAuthor="Dennis Hough"
+      />
+      <StructuredData 
+        type="article"
+        headline="The Complete Guide to Business Health Assessment in 2025"
+        description="A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
+        image="https://bizhealth.ai/assets/business-health-assessment-comprehensive.jpg"
+        datePublished="2025-07-27"
+        author="Dennis Hough"
+        url="https://bizhealth.ai/blog/business-health-assessment-2025"
+      />
       <Navigation />
       
       {/* Hero Section */}

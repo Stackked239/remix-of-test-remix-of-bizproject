@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -14,72 +15,25 @@ const StrategicPlanning = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>Strategic Planning Post-Pandemic 2025 | BizHealth.ai</title>
-        <meta name="title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
-        <meta name="description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
-        <meta name="keywords" content="strategic planning post-pandemic, post-pandemic business strategy, SMB strategic planning, remote work strategy, supply chain resilience, business transformation 2025, hybrid work model, customer-centric strategy, financial flexibility SMB, digital transformation strategy" />
-        <link rel="canonical" href={canonicalUrl} />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
-        <meta property="og:description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="article:published_time" content={publishDate} />
-        <meta property="article:author" content="BizHealth.ai Research Team" />
-        <meta property="article:section" content="Strategic Planning" />
-        <meta property="article:tag" content="Strategic Planning" />
-        <meta property="article:tag" content="Post-Pandemic" />
-        <meta property="article:tag" content="Business Strategy" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={canonicalUrl} />
-        <meta name="twitter:title" content="Strategic Planning Post-Pandemic 2025 | BizHealth.ai" />
-        <meta name="twitter:description" content="Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth—read now!" />
-        <meta name="twitter:image" content={imageUrl} />
-        
-        {/* hreflang for language targeting */}
-        <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-        
-        {/* JSON-LD Article Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Strategic Planning for the Post-Pandemic Business Landscape",
-            "description": "Master post-pandemic business strategy with proven frameworks for remote work, supply chain resilience, and customer alignment. Transform SMB challenges into growth opportunities.",
-            "image": imageUrl,
-            "datePublished": publishDate,
-            "dateModified": publishDate,
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth.ai Research Team",
-              "description": "Business Strategy Experts specializing in SMB growth and transformation"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo.png"
-              }
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": canonicalUrl
-            },
-            "keywords": "strategic planning post-pandemic, post-pandemic business strategy, SMB strategic planning, remote work strategy, supply chain resilience, business transformation 2025",
-            "articleSection": "Strategic Planning",
-            "wordCount": 2200,
-            "inLanguage": "en-US"
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Strategic Planning Post-Pandemic 2025 | BizHealth.ai"
+        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape. Expert strategies for SMBs."
+        keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, SMB planning, business adaptation"
+        canonical="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        articlePublishedTime="2025-10-12"
+        articleAuthor="BizHealth Research Team"
+      />
+      <StructuredData 
+        type="article"
+        headline="Strategic Planning for the Post-Pandemic Business Landscape"
+        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
+        image="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        datePublished="2025-10-12"
+        author="BizHealth Research Team"
+        url="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
+      />
       <Navigation />
       
       {/* Hero Section */}

@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
@@ -363,6 +365,15 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Business Insights & Growth Strategies Blog | BizHealth.ai"
+        description="Expert insights, practical strategies, and data-driven analysis for SMB leaders. Learn from business intelligence experts about operations, finance, leadership, and growth."
+        keywords="business blog, SMB insights, business strategy, operational excellence, financial management, leadership development, business intelligence, growth strategies"
+        canonical="https://bizhealth.ai/blog"
+      />
+      <StructuredData 
+        type="organization"
+      />
       <Navigation />
       
       {/* Hero Section */}

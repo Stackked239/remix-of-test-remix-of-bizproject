@@ -1,63 +1,35 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const OperationalResilience = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Operational Resilience Strategies 2025 | BizHealth.ai</title>
-        <meta name="description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/operational-resilience" />
-        
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Operational Resilience Strategies 2025 | BizHealth.ai" />
-        <meta property="og:description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/operational-resilience" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/operational-resilience-strategy.jpg" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Operational Resilience Strategies 2025 | BizHealth.ai" />
-        <meta name="twitter:description" content="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!" />
-        <meta name="twitter:image" content="https://bizhealth.ai/assets/operational-resilience-strategy.jpg" />
-        
-        {/* JSON-LD Article Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Building Operational Resilience Strategies for SMBs in Uncertain Times 2025",
-            "image": "https://bizhealth.ai/assets/operational-resilience-strategy.jpg",
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth.ai Research Team",
-              "description": "Experts in operational resilience and business continuity planning for small and medium-sized businesses"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo.png"
-              }
-            },
-            "datePublished": "2025-10-12",
-            "dateModified": "2025-10-12",
-            "description": "Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://bizhealth.ai/blog/operational-resilience"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Operational Resilience Strategies 2025 | BizHealth.ai"
+        description="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!"
+        keywords="operational resilience, business continuity, crisis management, risk mitigation, SMB resilience, business systems, market volatility"
+        canonical="https://bizhealth.ai/blog/operational-resilience"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/operational-resilience-strategy.jpg"
+        articlePublishedTime="2025-09-12"
+        articleAuthor="BizHealth Research Team"
+      />
+      <StructuredData 
+        type="article"
+        headline="Building Operational Resilience in Uncertain Times"
+        description="Strategies for creating business systems that can withstand market volatility and unexpected challenges."
+        image="https://bizhealth.ai/assets/operational-resilience-strategy.jpg"
+        datePublished="2025-09-12"
+        author="BizHealth Research Team"
+        url="https://bizhealth.ai/blog/operational-resilience"
+      />
       <Navigation />
       
       {/* Hero Section */}

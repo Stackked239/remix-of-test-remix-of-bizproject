@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +10,25 @@ import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 const AIBusinessAnalytics = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="How AI is Revolutionizing Small Business Analytics | BizHealth.ai"
+        description="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs. Learn about AI-powered analytics, automated insights, and data-driven decision making for small businesses."
+        keywords="AI business analytics, small business intelligence, AI for SMBs, business analytics tools, machine learning, data-driven decisions, automated insights"
+        canonical="https://bizhealth.ai/blog/ai-business-analytics"
+        ogType="article"
+        ogImage="https://bizhealth.ai/assets/ai-business-analytics-dashboard.jpg"
+        articlePublishedTime="2025-09-12"
+        articleAuthor="Jennifer Walsh"
+      />
+      <StructuredData 
+        type="article"
+        headline="How AI is Revolutionizing Small Business Analytics"
+        description="Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses."
+        image="https://bizhealth.ai/assets/ai-business-analytics-dashboard.jpg"
+        datePublished="2025-09-12"
+        author="Jennifer Walsh"
+        url="https://bizhealth.ai/blog/ai-business-analytics"
+      />
       <Navigation />
       
       {/* Hero Section */}

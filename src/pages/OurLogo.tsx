@@ -124,8 +124,9 @@ const OurLogo = () => {
               Not the one in the design guide, but the one you experience when it matters.
             </p>
             <div className="pt-6 flex justify-center">
-              <div className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-biz-navy rounded-lg shadow-xl font-open-sans text-lg md:text-xl font-bold cursor-default">
-                No CTA here. Just gratitude for letting us be part of your journey.
+              <div className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-biz-navy rounded-lg shadow-xl font-open-sans text-lg md:text-xl cursor-default">
+                <div className="font-bold">No CTA here.</div>
+                <div className="italic mt-1">Just gratitude for letting us be part of your journey.</div>
               </div>
             </div>
           </div>

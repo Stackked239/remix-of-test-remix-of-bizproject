@@ -447,39 +447,80 @@ const Search = () => {
               {displayResults.length > 0 ? (
                 displayResults.map((result, index) => {
                   const IconComponent = result.icon;
-                  const getTypeColor = () => {
-                    if (result.type === "Page") return "bg-biz-navy/10 text-biz-navy border-biz-navy/20";
-                    if (result.type === "Blog Post") return "bg-biz-green/10 text-biz-green border-biz-green/20";
-                    return "bg-primary/10 text-primary border-primary/20";
+                  
+                  // Enhanced color schemes for each type
+                  const getTypeStyles = () => {
+                    if (result.type === "Page") {
+                      return {
+                        cardBg: "bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-blue-950/30 dark:via-background dark:to-indigo-950/30",
+                        iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
+                        iconColor: "text-white",
+                        badgeBg: "bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",
+                        border: "border-blue-200 dark:border-blue-800",
+                        hoverBorder: "hover:border-blue-400 dark:hover:border-blue-600"
+                      };
+                    }
+                    if (result.type === "Blog Post") {
+                      return {
+                        cardBg: "bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-background dark:to-teal-950/30",
+                        iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
+                        iconColor: "text-white",
+                        badgeBg: "bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
+                        border: "border-emerald-200 dark:border-emerald-800",
+                        hoverBorder: "hover:border-emerald-400 dark:hover:border-emerald-600"
+                      };
+                    }
+                    if (result.type === "Tool") {
+                      return {
+                        cardBg: "bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-amber-950/30 dark:via-background dark:to-orange-950/30",
+                        iconBg: "bg-gradient-to-br from-amber-500 to-orange-600",
+                        iconColor: "text-white",
+                        badgeBg: "bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800",
+                        border: "border-amber-200 dark:border-amber-800",
+                        hoverBorder: "hover:border-amber-400 dark:hover:border-amber-600"
+                      };
+                    }
+                    // FAQ
+                    return {
+                      cardBg: "bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-purple-950/30 dark:via-background dark:to-pink-950/30",
+                      iconBg: "bg-gradient-to-br from-purple-500 to-pink-600",
+                      iconColor: "text-white",
+                      badgeBg: "bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800",
+                      border: "border-purple-200 dark:border-purple-800",
+                      hoverBorder: "hover:border-purple-400 dark:hover:border-purple-600"
+                    };
                   };
+                  
+                  const styles = getTypeStyles();
+                  
                   return (
-                    <Card key={index} className="hover:shadow-xl hover:border-primary/30 transition-all duration-300 border-2 bg-biz-green/5 backdrop-blur-sm group">
+                    <Card key={index} className={`${styles.cardBg} ${styles.border} ${styles.hoverBorder} hover:shadow-xl transition-all duration-300 border-2 backdrop-blur-sm group animate-fade-in`}>
                       <CardContent className="p-6">
                         <Link to={result.url} className="block">
                           <div className="flex items-start gap-4">
-                            <div className={`mt-1 p-2 rounded-lg ${getTypeColor()} border`}>
-                              <IconComponent className="w-5 h-5" />
+                            <div className={`mt-1 p-3 rounded-xl ${styles.iconBg} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                              <IconComponent className={`w-5 h-5 ${styles.iconColor}`} />
                             </div>
                             <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-2">
-                                <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${getTypeColor()}`}>
+                              <div className="flex items-center gap-2 mb-3">
+                                <span className={`text-xs font-bold px-3 py-1.5 rounded-full ${styles.badgeBg} border shadow-sm`}>
                                   {result.type}
                                 </span>
                                 {result.type === "Blog Post" && 'category' in result && (
-                                  <span className="text-xs font-medium text-muted-foreground bg-muted/50 px-2 py-1 rounded">
+                                  <span className="text-xs font-semibold text-muted-foreground bg-gradient-to-r from-muted/80 to-muted/60 px-3 py-1.5 rounded-full border border-muted-foreground/20">
                                     {String(result.category)}
                                   </span>
                                 )}
                               </div>
-                              <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 font-montserrat">
+                              <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2 font-montserrat leading-tight">
                                 {result.title}
                               </h3>
-                              <p className="text-muted-foreground text-sm line-clamp-2 mb-3 font-open-sans">
+                              <p className="text-muted-foreground text-sm line-clamp-2 mb-4 font-open-sans leading-relaxed">
                                 {result.excerpt}
                               </p>
-                              <div className="flex items-center text-primary text-sm font-medium group-hover:gap-2 transition-all">
-                                <span>View {result.type.toLowerCase()}</span>
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                              <div className="flex items-center text-primary text-sm font-semibold group-hover:gap-2 transition-all">
+                                <span className="group-hover:underline">View {result.type.toLowerCase()}</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                               </div>
                             </div>
                           </div>

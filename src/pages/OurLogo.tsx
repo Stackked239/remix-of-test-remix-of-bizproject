@@ -10,9 +10,9 @@ const OurLogo = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Our Logo - BizHealth.ai Brand Story"
-        description="Discover the meaning behind the BizHealth.ai logo. More than just design, it represents comprehensive business health assessment and your journey to growth and success."
-        keywords="BizHealth.ai logo, brand story, business health symbol, company values, brand meaning"
+        title="Our Logo - BizHealth.ai Company Logo & Brand Story"
+        description="This is our company logo. Discover the meaning behind the BizHealth.ai logo - more than just design, it represents comprehensive business health assessment and your journey to growth and success."
+        keywords="our logo, company logo, BizHealth.ai logo, BizHealth logo, brand story, business health symbol, company values, brand meaning, logo design"
         canonical="https://bizhealth.ai/logo"
       />
       <StructuredData 

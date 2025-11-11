@@ -124,9 +124,9 @@ const OurLogo = () => {
               Not the one in the design guide, but the one you experience when it matters.
             </p>
             <div className="pt-6 flex justify-center">
-              <div className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-biz-navy rounded-lg shadow-xl font-open-sans text-lg md:text-xl cursor-default">
-                <div className="font-bold">No CTA here.</div>
-                <div className="italic mt-1">Just gratitude for letting us be part of your journey.</div>
+              <div className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-biz-navy rounded-lg shadow-xl border-2 border-biz-navy font-open-sans cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-biz-teal">
+                <div className="font-bold text-lg md:text-xl">No CTA here.</div>
+                <div className="italic mt-1 text-sm md:text-base">Just gratitude for letting us be part of your journey.</div>
               </div>
             </div>
           </div>

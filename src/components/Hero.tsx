@@ -361,12 +361,12 @@ const Hero = () => {
                   </div>
                   {/* Mobile/Tablet: Show simplified label */}
                   <div className="block lg:hidden">
-                    <p className="text-xs font-montserrat font-semibold text-biz-navy">{indicator.label}</p>
+                    <p className="text-xs font-montserrat font-semibold text-black">{indicator.label}</p>
                   </div>
                   {/* Desktop: Show full label and value */}
                   <div className="hidden lg:block">
-                    <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
-                    <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>
+                    <p className="text-xs font-open-sans text-black">{indicator.label}</p>
+                    <p className="text-sm font-montserrat font-semibold text-black">{indicator.value}</p>
                   </div>
                 </div>
               );

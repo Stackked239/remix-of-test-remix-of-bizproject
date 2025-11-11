@@ -118,7 +118,7 @@ const OurLogo = () => {
             <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
               Not the one in the design guide, but the one you experience when it matters.
             </p>
-            <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed pt-6">
+            <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed pt-6 font-bold">
               No CTA here. Just gratitude for letting us be part of your journey.
             </p>
           </div>

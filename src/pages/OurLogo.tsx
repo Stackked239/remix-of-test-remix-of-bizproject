@@ -117,7 +117,7 @@ const OurLogo = () => {
         {/* Closing Statement */}
         <section className="py-16 bg-gradient-to-br from-biz-navy via-biz-teal to-biz-green">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-4 animate-fade-in">
-            <p className="font-open-sans text-xl md:text-2xl font-semibold leading-relaxed">
+            <p className="font-open-sans text-2xl md:text-3xl font-semibold leading-relaxed">
               That&apos;s the brand we&apos;re building.
             </p>
             <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">

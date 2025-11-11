@@ -8,6 +8,37 @@
   status = 301
   force = true
 
+# Fix soft 404s - Redirect incorrect/old URLs to correct pages
+[[redirects]]
+  from = "/blog/e-commerce-scaling-smb-2025"
+  to = "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq"
+  to = "/faqs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/forgot-password"
+  to = "/login"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/refund"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/security"
+  to = "/privacy"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering
   command = "chmod +x build-ssg.sh && ./build-ssg.sh"

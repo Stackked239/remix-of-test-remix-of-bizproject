@@ -4,8 +4,12 @@
 # Redirect www to non-www
 https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 
-# Redirect old URLs (if any)
-# /old-path /new-path 301
+# Fix soft 404s - Redirect incorrect/old URLs to correct pages
+/blog/e-commerce-scaling-smb-2025 /blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025 301
+/faq /faqs 301
+/forgot-password /login 301
+/refund /terms 301
+/security /privacy 301
 
 # SPA fallback - serve pre-rendered HTML or fallback to index.html
 /* /index.html 200

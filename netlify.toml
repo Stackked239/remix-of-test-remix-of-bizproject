@@ -39,6 +39,31 @@
   status = 301
   force = true
 
+# Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
+[[redirects]]
+  from = "/biz-tools"
+  to = "/biztools"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biz-leader"
+  to = "/bizleader"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/smb-financial-trends-2025"
+  to = "/blog/2025-smb-financial-trends"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/strategic-planning"
+  to = "/blog/strategic-planning-post-pandemic"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering
   command = "chmod +x build-ssg.sh && ./build-ssg.sh"

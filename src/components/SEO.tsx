@@ -25,7 +25,9 @@ const SEO = ({
 }: SEOProps) => {
   const siteTitle = 'BizHealth.ai';
   const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
-  const url = canonical || `https://bizhealth.ai${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+  // Always use non-www domain for canonical URLs to avoid duplicate content issues
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const url = canonical || `https://bizhealth.ai${pathname}`;
 
   return (
     <Helmet>

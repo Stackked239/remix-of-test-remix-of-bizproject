@@ -1,6 +1,13 @@
 # Netlify Configuration for BizHealth.ai
 # Static Site Generation (SSG) with SPA fallback
 
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.bizhealth.ai/*"
+  to = "https://bizhealth.ai/:splat"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering
   command = "chmod +x build-ssg.sh && ./build-ssg.sh"

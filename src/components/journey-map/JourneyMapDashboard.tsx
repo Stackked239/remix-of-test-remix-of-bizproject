@@ -9,7 +9,7 @@ import { format } from "date-fns";
 import { toast } from "sonner";
 
 interface JourneyMapDashboardProps {
-  onStartNew: () => void;
+  onStartNew: (name: string) => void;
   onLoadMap: (id: string) => void;
 }
 
@@ -23,7 +23,7 @@ export const JourneyMapDashboard = ({ onStartNew, onLoadMap }: JourneyMapDashboa
       toast.error("Please enter a map name");
       return;
     }
-    onStartNew();
+    onStartNew(newMapName.trim());
     setIsDialogOpen(false);
     setNewMapName("");
   };

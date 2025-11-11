@@ -27,12 +27,9 @@ const CustomerJourneyMapsTool = () => {
   const [showGuide, setShowGuide] = useState(false);
   const [activeDragItem, setActiveDragItem] = useState<any>(null);
 
-  const handleStartNew = () => {
-    const name = prompt("Enter journey map name:");
-    if (name?.trim()) {
-      createNewMap(name);
-      toast.success("New journey map created");
-    }
+  const handleStartNew = (name: string) => {
+    createNewMap(name);
+    toast.success("New journey map created");
   };
 
   const handleLoadMap = (id: string) => {

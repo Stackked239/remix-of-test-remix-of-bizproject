@@ -193,7 +193,7 @@ const CustomerJourneyMapsTool = () => {
         )}
 
         {/* Main Content */}
-        <main className="flex-1">
+        <main className="flex-1 pt-32">
           {!currentMap ? (
             <JourneyMapDashboard onStartNew={handleStartNew} onLoadMap={handleLoadMap} />
           ) : (

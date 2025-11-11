@@ -119,7 +119,7 @@ const Hero = () => {
     { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
     { icon: Brain, label: "AI-Powered Analysis", value: "GPT-4 Insights" },
     { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
-    { icon: Users, label: "Trusted by SMBs", value: "2,500+ Businesses" }
+    { icon: Users, label: "Trusted Worldwide", value: "2,500+ Businesses" }
   ];
 
   return (

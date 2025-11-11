@@ -40,7 +40,7 @@ const OurLogo = () => {
               {/* Hero Text */}
               <div className="text-white space-y-6 animate-fade-in">
                 <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-4xl leading-tight">
-                  This is our company logo. We&apos;re proud of it—not because it&apos;s perfect, but because it represents something we genuinely believe in.
+                  This is our company logo. We&apos;re proud of it—not because it&apos;s perfect, but because it represents something we believe in.
                 </h1>
                 <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
                   While we love the design, the typography, and that little grid icon that symbolizes the structured insights we bring to business health, we&apos;re far more proud when this logo shows up in your success story.

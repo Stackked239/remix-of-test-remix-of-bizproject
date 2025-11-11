@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import bizhealthLogoFull from "@/assets/bizhealth-logo-full.jpg";
+import bizhealthLogoInline from "@/assets/bizhealth-logo-inline.jpg";
 
 const OurLogo = () => {
   return (
@@ -88,6 +89,13 @@ const OurLogo = () => {
                 <h2 className="font-montserrat font-bold text-2xl md:text-3xl text-biz-navy text-center mb-8">
                   More than A Logo
                 </h2>
+                <div className="flex justify-center mb-8">
+                  <img 
+                    src={bizhealthLogoInline} 
+                    alt="BizHealth.ai logo" 
+                    className="h-12 md:h-16 w-auto"
+                  />
+                </div>
                 <div className="space-y-6 font-open-sans text-lg text-foreground/80 leading-relaxed text-center">
                   <p>
                     We designed BizHealth.ai to be your Business Health Coach—to stop the guessing and start the growing. But honestly? You&apos;re the one doing the heavy lifting. You&apos;re running the business, making the calls, taking the risks. Our logo is just along for the ride.

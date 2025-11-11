@@ -282,10 +282,10 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/swot-analysis-tool"
                           : "#";
                         const content = (
-                          <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">
+                            <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">
                             <div className="flex items-center space-x-3">
                               <CheckCircle className="w-5 h-5 text-biz-lime flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                              <span className="font-open-sans text-foreground">{tool}</span>
+                              <span className={`font-open-sans text-foreground ${isClickable ? 'font-bold' : ''}`}>{tool}</span>
                             </div>
                             <ArrowRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>

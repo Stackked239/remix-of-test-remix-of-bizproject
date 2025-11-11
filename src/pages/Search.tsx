@@ -167,6 +167,13 @@ const Search = () => {
         excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",
         url: "/for-ai-assistants",
         icon: Home
+      },
+      {
+        type: "Page",
+        title: "Our Logo - BizHealth.ai Company Logo",
+        excerpt: "Our logo, company logo, BizHealth.ai logo. This is our company logo - discover the meaning behind the BizHealth.ai logo and brand story. The grid represents 12 key business health areas.",
+        url: "/logo",
+        icon: Home
       }
     ],
     blogs: [

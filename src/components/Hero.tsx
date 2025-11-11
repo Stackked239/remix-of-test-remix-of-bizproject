@@ -223,7 +223,7 @@ const Hero = () => {
               </Button>
               
               {/* Risk-Free Guarantee */}
-              <div className="flex items-center space-x-2 text-[10px] sm:text-xs lg:text-sm font-open-sans text-biz-grey max-w-full">
+              <div className="flex items-center justify-center space-x-2 text-[10px] sm:text-xs lg:text-sm font-open-sans text-biz-grey max-w-full">
                 <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-biz-navy flex-shrink-0" />
                 <span className="break-words">No Subscriptions • Transparent Pricing • Free Tools Included</span>
               </div>

@@ -115,6 +115,15 @@ const GlobalFooter = () => {
                     </li>
                     <li>
                       <Link 
+                        to="/logo" 
+                        className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
+                        aria-label="Our Logo and Brand Story"
+                      >
+                        Our Logo
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
                         to="/contact" 
                         className="text-biz-grey hover:text-biz-teal transition-colors duration-300 hover:scale-105 inline-block"
                       >

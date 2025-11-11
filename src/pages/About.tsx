@@ -140,7 +140,7 @@ const About = () => {
                         We Get It—We've Been There
                       </h3>
                       <p className="font-open-sans text-biz-grey leading-relaxed">
-                        At BizHealth.ai, our journey started because we've lived your story. Our co-founders, seasoned entrepreneurs and business leaders, saw how larger corporations monopolize the best tools, analyses, and expertise, leaving businesses like yours at a disadvantage. Why should big players have all the advantages while you juggle everything with limited bandwidth?
+                        At <Link to="/logo" className="text-biz-teal hover:text-biz-navy transition-colors underline decoration-biz-teal/30">BizHealth.ai</Link>, our journey started because we've lived your story. Our co-founders, seasoned entrepreneurs and business leaders, saw how larger corporations monopolize the best tools, analyses, and expertise, leaving businesses like yours at a disadvantage. Why should big players have all the advantages while you juggle everything with limited bandwidth?
                       </p>
                     </CardContent>
                   </Card>

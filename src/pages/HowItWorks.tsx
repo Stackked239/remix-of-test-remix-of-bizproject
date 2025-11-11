@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import GlobalFooter from "@/components/GlobalFooter";
-import { CheckCircle, BarChart3, FileText, Download, Clock, Shield } from "lucide-react";
+import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
 import reportSampleImage from "@/assets/business-health-report-sample.png";
@@ -39,19 +39,25 @@ const HowItWorks = () => {
 
   const features = [
     {
-      icon: Clock,
+      icon: Zap,
       title: "Time Efficient",
-      description: "Complete questionnaire in 20-40 minutes depending on your chosen tier"
+      description: "Complete questionnaire in 20-40 minutes depending on your chosen tier",
+      color: "text-growth",
+      bgColor: "from-growth/20 via-growth/10 to-transparent"
     },
     {
-      icon: BarChart3,
+      icon: TrendingUp,
       title: "Data-Driven Insights",
-      description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices"
+      description: "Proprietary AI-powered analyses backed by industry benchmarks and best practices",
+      color: "text-primary",
+      bgColor: "from-primary/20 via-primary/10 to-transparent"
     },
     {
-      icon: Shield,
+      icon: Lock,
       title: "Secure & Confidential", 
-      description: "Enterprise-grade security with full data encryption and privacy protection"
+      description: "Enterprise-grade security with full data encryption and privacy protection",
+      color: "text-trust",
+      bgColor: "from-trust/20 via-trust/10 to-transparent"
     }
   ];
 
@@ -247,10 +253,10 @@ const HowItWorks = () => {
                 key={index} 
                 className="group text-center bg-background rounded-2xl p-8 shadow-card border border-border/50 hover:border-primary/30 hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="inline-flex p-5 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent shadow-card mb-6 group-hover:shadow-elegant group-hover:scale-110 transition-all duration-300">
-                  <feature.icon className="w-10 h-10 text-primary" />
+                <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${feature.bgColor} shadow-card mb-6 group-hover:shadow-elegant group-hover:scale-110 transition-all duration-300`}>
+                  <feature.icon className={`w-12 h-12 ${feature.color} stroke-[2.5]`} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">{feature.title}</h3>
+                <h3 className={`text-xl font-bold mb-4 text-foreground group-hover:${feature.color} transition-colors`}>{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}

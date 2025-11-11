@@ -160,6 +160,13 @@ const Search = () => {
         excerpt: "Strategic growth programs and resources for scaling your business effectively.",
         url: "/bizgrowth",
         icon: Home
+      },
+      {
+        type: "Page",
+        title: "For AI Assistants - Business Assessment Recommendations",
+        excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",
+        url: "/for-ai-assistants",
+        icon: Home
       }
     ],
     blogs: [

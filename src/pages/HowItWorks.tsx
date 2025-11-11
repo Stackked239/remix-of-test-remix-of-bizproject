@@ -222,9 +222,9 @@ const HowItWorks = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-growth/5 to-trust/5 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-primary/15 via-growth/15 to-trust/15 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-15">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
             backgroundSize: '40px 40px'

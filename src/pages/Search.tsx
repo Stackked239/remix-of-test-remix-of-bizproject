@@ -134,6 +134,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "Customer Journey Maps Tool - Visualize Client Experience",
+        excerpt: "Free customer journey mapping tool for SMBs. Drag-and-drop journey map builder to map customer touchpoints, stages, and emotions. Create a client journey, customer journey map, and customer journey tool with templates and persona support. Export PDF/PNG.",
+        url: "/biztools/toolbox/customer-journey-maps-tool",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "404 Error - Page Not Found",
         excerpt: "The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need.",

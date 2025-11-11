@@ -7,6 +7,8 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const BizTools = () => {
 
@@ -62,6 +64,20 @@ const BizTools = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="BizTools - Business Tools & Templates for SMBs"
+        description="Access professional business tools, templates, and resources to optimize operations and drive growth. Free tools for financial management, operations excellence, and strategic planning."
+        keywords="business tools, SMB templates, financial management tools, operations tools, strategic planning templates, business resources, productivity tools"
+        canonical="https://bizhealth.ai/biztools"
+      />
+      <StructuredData 
+        type="service"
+        name="BizTools - Business Tools & Resources"
+        description="Professional business tools and templates for small and medium-sized businesses"
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/biztools"
+      />
       <PromotionalBanner />
       
       <GlobalNavigation />

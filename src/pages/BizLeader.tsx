@@ -7,6 +7,8 @@ import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import LeadershipQuiz from "@/components/LeadershipQuiz";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const BizLeader = () => {
   const [countdown, setCountdown] = useState("");
@@ -88,6 +90,20 @@ const BizLeader = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="BizLeaDeR - Leadership Development for Business Owners"
+        description="Transform your leadership capabilities with comprehensive development programs. Executive coaching, strategic leadership training, and certification programs for business owners and executives."
+        keywords="leadership development, executive coaching, business leadership training, strategic leadership, management training, leadership certification"
+        canonical="https://bizhealth.ai/bizleader"
+      />
+      <StructuredData 
+        type="service"
+        name="BizLeaDeR - Leadership Development Programs"
+        description="Comprehensive leadership development and executive coaching for business owners"
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/bizleader"
+      />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

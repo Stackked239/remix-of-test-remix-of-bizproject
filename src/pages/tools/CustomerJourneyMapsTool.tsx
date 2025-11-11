@@ -18,6 +18,7 @@ import { X, Save, Download, HelpCircle } from "lucide-react";
 import { toast } from "sonner";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import StructuredData from "@/components/StructuredData";
 
 const CustomerJourneyMapsTool = () => {
   const navigate = useNavigate();
@@ -119,10 +120,18 @@ const CustomerJourneyMapsTool = () => {
   return (
     <>
       <SEO
-        title="Customer Journey Maps Tool | BizHealth.ai"
-        description="Create professional customer journey maps for your small business. Visualize customer experience, map touchpoints, identify pain points and opportunities. Free drag-and-drop tool with templates."
-        keywords="customer journey map tool, customer journey mapping, journey map template, customer experience visualization, touchpoint mapping, customer journey tool, free journey map, small business customer experience, client journey map"
+        title="Free Customer Journey Map Tool - Visualize Client Experience | BizHealth.ai"
+        description="Create professional customer journey maps with our free tool. Drag-and-drop interface for mapping customer touchpoints, client journey stages, pain points & opportunities. Templates included for SMBs."
+        keywords="customer journey, customer journey tool, journey map, client journey, customer journey map tool, customer journey mapping, journey map template, client journey map, customer experience visualization, touchpoint mapping, free journey map tool, small business customer journey, customer journey builder"
         canonical="https://bizhealth.ai/biztools/toolbox/customer-journey-maps-tool"
+      />
+      <StructuredData
+        type="service"
+        name="Customer Journey Maps Tool"
+        description="Free online customer journey mapping tool for small businesses. Create, visualize, and export professional customer journey maps with drag-and-drop interface, templates, and persona builders."
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/biztools/toolbox/customer-journey-maps-tool"
       />
 
       <div className="min-h-screen flex flex-col bg-background">

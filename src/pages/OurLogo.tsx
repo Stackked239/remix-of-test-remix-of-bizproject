@@ -38,7 +38,7 @@ const OurLogo = () => {
 
               {/* Hero Text */}
               <div className="text-white space-y-6 animate-fade-in">
-                <h1 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
+                <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-4xl leading-tight">
                   This is our company logo. We&apos;re proud of it—not because it&apos;s perfect, but because it represents something we genuinely believe in.
                 </h1>
                 <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
@@ -85,6 +85,9 @@ const OurLogo = () => {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="bg-white border-biz-grey/20 shadow-xl">
               <CardContent className="p-10 md:p-12">
+                <h2 className="font-montserrat font-bold text-2xl md:text-3xl text-biz-navy text-center mb-8">
+                  More than A Logo
+                </h2>
                 <div className="space-y-6 font-open-sans text-lg text-foreground/80 leading-relaxed text-center">
                   <p>
                     We designed BizHealth.ai to be your Business Health Coach—to stop the guessing and start the growing. But honestly? You&apos;re the one doing the heavy lifting. You&apos;re running the business, making the calls, taking the risks. Our logo is just along for the ride.

@@ -86,9 +86,6 @@ const OurLogo = () => {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="bg-white border-biz-grey/20 shadow-xl">
               <CardContent className="p-10 md:p-12">
-                <h2 className="font-montserrat font-bold text-2xl md:text-3xl text-biz-navy text-center mb-8">
-                  More than A Logo
-                </h2>
                 <div className="flex justify-center mb-8">
                   <img 
                     src={bizhealthLogoInline} 
@@ -104,7 +101,7 @@ const OurLogo = () => {
                     We built this platform with five decades of combined experience—not to impress you with credentials, but because we&apos;ve been the overwhelmed founder, the cash-strapped executive, the leader who didn&apos;t know what they didn&apos;t know. We created the tool we wish we&apos;d had.
                   </p>
                   <div className="pt-6 border-t border-biz-grey/20 mt-8">
-                    <p className="font-semibold text-xl text-biz-navy mb-2">
+                    <p className="font-semibold text-2xl md:text-3xl text-biz-green mb-2">
                       A logo is just a logo. Pixels on a screen. A mark on a report.
                     </p>
                     <p>
@@ -126,9 +123,11 @@ const OurLogo = () => {
             <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
               Not the one in the design guide, but the one you experience when it matters.
             </p>
-            <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed pt-6 font-bold">
-              No CTA here. Just gratitude for letting us be part of your journey.
-            </p>
+            <div className="pt-6 flex justify-center">
+              <div className="inline-block px-8 md:px-12 py-4 md:py-5 bg-white text-biz-navy rounded-lg shadow-xl font-open-sans text-lg md:text-xl font-bold cursor-default">
+                No CTA here. Just gratitude for letting us be part of your journey.
+              </div>
+            </div>
           </div>
         </section>
       </main>

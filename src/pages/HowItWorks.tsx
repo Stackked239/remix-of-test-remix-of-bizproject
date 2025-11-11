@@ -33,7 +33,7 @@ const HowItWorks = () => {
       icon: Download,
       title: "Receive Your Actionable Insights",
       description: "Get your comprehensive business health assessment with tailored analyses, priority action items, and strategic roadmaps.",
-      details: ["Downloadable PDF format", "Email delivery included", "90-day report updates available"]
+      details: ["Downloadable PDF format", "Personal Client Portal included", "Discounts on Quarterly Assessments"]
     }
   ];
 

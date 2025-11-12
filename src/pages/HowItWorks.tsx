@@ -66,8 +66,16 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-10 bg-muted">
-        <div className="container mx-auto px-6">
+      <section className="relative pt-32 pb-10 bg-gradient-to-br from-primary/10 via-background to-growth/10 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               How BizHealth.ai Works

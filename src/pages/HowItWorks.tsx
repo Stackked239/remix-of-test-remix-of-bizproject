@@ -66,7 +66,7 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-10 bg-gradient-to-br from-primary/10 via-background to-growth/10 overflow-hidden">
+      <section className="relative pt-32 pb-10 bg-gradient-to-br from-primary/15 via-background to-growth/15 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{

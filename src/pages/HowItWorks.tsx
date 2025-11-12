@@ -81,7 +81,7 @@ const HowItWorks = () => {
       </section>
 
       {/* Process Steps */}
-      <section className="py-20">
+      <section className="py-20 pb-10">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {steps.map((step, index) => (
@@ -193,7 +193,7 @@ const HowItWorks = () => {
       </section>
 
       {/* StoryBrand Header */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-primary">
+      <section className="relative pt-16 pb-20 overflow-hidden bg-primary">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in" style={{ fontFamily: 'Montserrat, sans-serif' }}>

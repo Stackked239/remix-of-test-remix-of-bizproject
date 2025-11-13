@@ -444,7 +444,7 @@ const Blog = () => {
         />
         
         {/* Semi-transparent Overlay */}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-accent/70" />
         
         {/* Content Container */}
         <div className="relative h-full container mx-auto px-6 flex flex-col">

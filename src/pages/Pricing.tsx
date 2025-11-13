@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import PricingStoryBrandHeader from "@/components/PricingStoryBrandHeader";
 import SEO from "@/components/SEO";
 import { CheckCircle, Star, ArrowRight, DollarSign, Rocket, Check, X, Lock, ChevronDown, ChevronUp, TrendingDown, TrendingUp } from "lucide-react";
@@ -750,6 +751,7 @@ const Pricing = () => {
       </section>
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

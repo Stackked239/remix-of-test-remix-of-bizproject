@@ -81,7 +81,7 @@ const HowItWorks = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
               How BizHealth.ai Works
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-foreground/90 mb-8 leading-relaxed font-medium">
               Our proven 4-step process transforms your business insights into actionable growth strategies. 
               From assessment to implementation, we guide you through every step of strengthening your business foundation.
             </p>

@@ -3,6 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -392,13 +393,6 @@ const SmallBusinessStruggles = () => {
               </section>
             </div>
 
-            {/* Author Bio */}
-            <div className="mt-12 p-6 bg-muted/50 rounded-lg border border-border">
-              <h3 className="text-lg font-semibold mb-2">About the BizHealth.ai Team</h3>
-              <p className="text-muted-foreground">
-                Our team combines expertise in business strategy, AI analytics, and small business operations to deliver actionable insights that drive growth. We're passionate about helping SMB leaders make data-driven decisions without expensive consultants.
-              </p>
-            </div>
           </div>
         </article>
 
@@ -427,6 +421,7 @@ const SmallBusinessStruggles = () => {
         />
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

@@ -60,7 +60,8 @@ const Blog = () => {
       category: "Business Strategy, Business Leadership",
       slug: "/blog/small-business-struggles",
       imageUrl: smallBusinessStrugglesImage,
-      altText: "Small business owner facing operational challenges and pain points in 2025"
+      altText: "Small business owner facing operational challenges and pain points in 2025",
+      keywords: "business health analysis, small business diagnostics, SMB pain points, cash flow challenges, business growth strategies, blind spots, operational issues, business assessment, diagnostic tools, AI analytics"
     },
     {
       title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",
@@ -71,7 +72,8 @@ const Blog = () => {
       category: "Business Strategy, Business Intelligence, Operations",
       slug: "/blog/confirm-business-weaknesses-without-consultants",
       imageUrl: confirmWeaknessesImage,
-      altText: "Business diagnostic assessment revealing operational weaknesses and hidden business gaps for small business owners seeking affordable alternatives to expensive consultants"
+      altText: "Business diagnostic assessment revealing operational weaknesses and hidden business gaps for small business owners seeking affordable alternatives to expensive consultants",
+      keywords: "business weaknesses, operational gaps, diagnostic tools, consultant alternatives, business assessment, affordability, AI analytics, hidden gaps, business intelligence, SMB diagnostics"
     },
     {
       title: "The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)",
@@ -82,7 +84,8 @@ const Blog = () => {
       category: "Business Strategy, Financial Management, Business Intelligence",
       slug: "/blog/small-business-blind-spots-2025",
       imageUrl: blindSpotsImage,
-      altText: "Business leader with blindfold representing small business blind spots and hidden operational challenges in strategic planning"
+      altText: "Business leader with blindfold representing small business blind spots and hidden operational challenges in strategic planning",
+      keywords: "blind spots, financial losses, hidden costs, strategic gaps, profit drains, visibility issues, business intelligence, operational blind spots, financial blind spots, risk assessment"
     },
     {
       title: "The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One",
@@ -93,7 +96,8 @@ const Blog = () => {
       category: "Business Strategy, Business Leadership, Risk Management",
       slug: "/blog/small-business-survival-checklist-2025",
       imageUrl: survivalChecklistImage,
-      altText: "Small business owner in crisis management - first year survival strategies and business health assessment 2025"
+      altText: "Small business owner in crisis management - first year survival strategies and business health assessment 2025",
+      keywords: "survival checklist, first year business, startup metrics, KPIs, business failure, founder insights, Reddit founders, startup survival, year one challenges, success metrics"
     },
     {
       title: "AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners",
@@ -104,7 +108,8 @@ const Blog = () => {
       category: "Technology, Business Strategy",
       slug: "/blog/small-business-ai-adoption",
       imageUrl: aiAdoptionImage,
-      altText: "Small business owner analyzing AI adoption strategies and skeptical approach to business technology implementation in 2025"
+      altText: "Small business owner analyzing AI adoption strategies and skeptical approach to business technology implementation in 2025",
+      keywords: "AI adoption, artificial intelligence, automation tools, business efficiency, technology implementation, skeptical owners, practical AI, small business technology, AI tools, business automation"
     },
     {
       title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)",
@@ -115,7 +120,8 @@ const Blog = () => {
       category: "Business Strategy, Risk Management, Business Leadership",
       slug: "/blog/smb-scaling-paradox-2025",
       imageUrl: smbScalingParadoxImage,
-      altText: "Modern green and white commercial building representing scaling small business growth and SMB expansion strategy with upward trending architecture"
+      altText: "Modern green and white commercial building representing scaling small business growth and SMB expansion strategy with upward trending architecture",
+      keywords: "business scaling, growth challenges, scaling paradox, rapid growth, sustainable scaling, scaling strategies, business expansion, SMB growth, scaling frameworks, growth management"
     },
     {
       title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
@@ -126,7 +132,8 @@ const Blog = () => {
       category: "Financial Management, Business Strategy, Technology",
       slug: "/blog/cash-flow-crisis-management",
       imageUrl: cashFlowCrisisImage,
-      altText: "Small business owner analyzing cash flow crisis management strategies with financial documents and analytics dashboard showing crisis prevention metrics for 2025"
+      altText: "Business financial crisis with declining cash flow charts and warning indicators for small business cash management",
+      keywords: "cash flow crisis, cash management, financial planning, working capital, liquidity management, crisis prevention, cash flow forecasting, financial health, cash flow strategies, SMB finance"
     },
     {
       title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
@@ -137,7 +144,8 @@ const Blog = () => {
       category: "Operations, Financial Management",
       slug: "/blog/Q4-Cost-Cuts-2025",
       imageUrl: q4CostCutsImage,
-      altText: "Operational cost cutting strategies with scissors cutting through stacks of cash representing small business financial management and cost reduction for 2025"
+      altText: "Operational cost cutting strategies with scissors cutting through stacks of cash representing small business financial management and cost reduction for 2025",
+      keywords: "Q4 cost cuts, operational costs, cost reduction, efficiency improvements, inflation strategies, cost savings, expense management, small business costs, Q4 planning, operational efficiency"
     },
     {
       title: "The Pitfall of Information Overload: Why General Advice Falls Short",
@@ -148,7 +156,8 @@ const Blog = () => {
       category: "Business Strategy",
       slug: "/blog/impact-over-information",
       imageUrl: informationOverloadImage,
-      altText: "Frustrated business leader overwhelmed by information overload and generic business advice strategies"
+      altText: "Frustrated business leader overwhelmed by information overload and generic business advice strategies",
+      keywords: "information overload, generic advice, business diagnostics, actionable insights, specific solutions, targeted strategies, business intelligence, data-driven decisions, customized advice, practical solutions"
     },
     {
       title: "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
@@ -159,7 +168,8 @@ const Blog = () => {
       category: "Business Strategy, Financial Management",
       slug: "/blog/smb-cash-flow-hacks-2025",
       imageUrl: cashFlowHacksImage,
-      altText: "Micro-business owner analyzing cash flow strategies and financial management on computer with documents - essential cash flow hacks for 2025 success"
+      altText: "Micro-business owner analyzing cash flow strategies and financial management on computer with documents - essential cash flow hacks for 2025 success",
+      keywords: "cash flow hacks, micro-business, liquidity management, billing automation, AI forecasting, inventory optimization, payment terms, funding diversification, working capital, cash flow tips"
     },
     {
       title: "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
@@ -170,7 +180,8 @@ const Blog = () => {
       category: "Business Strategy",
       slug: "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025",
       imageUrl: ecommerceScalingImage,
-      altText: "E-commerce analytics dashboard showing sales growth metrics and customer engagement data for SMB scaling strategies in 2025"
+      altText: "E-commerce analytics dashboard showing sales growth metrics and customer engagement data for SMB scaling strategies in 2025",
+      keywords: "e-commerce scaling, online business, digital commerce, AI personalization, omnichannel sales, mobile optimization, data-driven growth, e-commerce strategies, SMB e-commerce, online retail"
     },
     {
       title: "2025 SMB Financial Trends: From Uncertainty to Predictable Growth",
@@ -181,7 +192,8 @@ const Blog = () => {
       category: "Business Strategy, Financial Management",
       slug: "/blog/2025-smb-financial-trends",
       imageUrl: smbFinancialTrendsImage,
-      altText: "Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"
+      altText: "Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025",
+      keywords: "financial trends 2025, SMB finance, predictable growth, financial automation, AI analytics, data-driven decisions, business forecasting, financial planning, revenue trends, growth strategies"
     },
     {
       title: "Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages",
@@ -192,7 +204,8 @@ const Blog = () => {
       category: "Business Leadership",
       slug: "/blog/talent-wars-smb-hiring-2025",
       imageUrl: talentWarsImage,
-      altText: "Professional SMB hiring interview showing business leader conducting talent acquisition strategy meeting with candidate discussing retention tips and leadership strategies for 2025 workforce challenges"
+      altText: "Professional SMB hiring interview showing business leader conducting talent acquisition strategy meeting with candidate discussing retention tips and leadership strategies for 2025 workforce challenges",
+      keywords: "talent wars, hiring strategies, talent shortages, recruitment, retention strategies, HR tactics, workforce planning, talent acquisition, employee retention, leadership hiring"
     },
     {
       title: "People-First Challenges: Solving SMB Workforce Gaps 2025",
@@ -203,7 +216,8 @@ const Blog = () => {
       category: "Business Leadership, Operations",
       slug: "/blog/solving-smb-workforce-gaps-2025",
       imageUrl: workforceGapsImage,
-      altText: "Business leaders analyzing SMB workforce talent gaps and retention metrics on digital analytics dashboard displaying performance data charts in modern office 2025"
+      altText: "Business leaders analyzing SMB workforce talent gaps and retention metrics on digital analytics dashboard displaying performance data charts in modern office 2025",
+      keywords: "workforce gaps, talent planning, people analytics, retention strategies, staffing challenges, HR solutions, talent management, workforce optimization, employee engagement, skills gaps"
     },
     {
       title: "Real-Time Analytics: Powering SMB Agility in Volatile Markets",
@@ -214,7 +228,8 @@ const Blog = () => {
       category: "Business Intelligence",
       slug: "/blog/real-time-analytics-smb-agility",
       imageUrl: realTimeAnalyticsImage,
-      altText: "Real-time analytics dashboard displaying SMB business intelligence metrics for volatile market agility with team collaboration in modern office setting"
+      altText: "Real-time analytics dashboard displaying SMB business intelligence metrics for volatile market agility with team collaboration in modern office setting",
+      keywords: "real-time analytics, business intelligence, market agility, performance tracking, data dashboards, competitive advantage, market volatility, analytics tools, live data, business metrics"
     },
     {
       title: "Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses",
@@ -225,7 +240,8 @@ const Blog = () => {
       category: "Operations",
       slug: "/blog/daily-grind-fixes",
       imageUrl: dailyGrindImage,
-      altText: "Professional food service team in commercial kitchen preparing healthy meal components with fresh ingredients, demonstrating efficient food business operations and teamwork"
+      altText: "Professional food service team in commercial kitchen preparing healthy meal components with fresh ingredients, demonstrating efficient food business operations and teamwork",
+      keywords: "food business operations, restaurant management, inventory management, supply chain, operational efficiency, kitchen operations, food service, startup restaurant, food industry, operational tips"
     },
     {
       title: "Why Success Feels Like a Mirage and How to Overcome Leadership Stress",
@@ -236,7 +252,8 @@ const Blog = () => {
       category: "Business Leadership",
       slug: "/blog/leadership-stress-success",
       imageUrl: leadershipStressImage,
-      altText: "Business leader experiencing stress while working with financial reports and analytics charts on desk"
+      altText: "Business leader experiencing stress while working with financial reports and analytics charts on desk",
+      keywords: "leadership stress, business success, mental health, resilience building, stress management, leadership challenges, work-life balance, entrepreneurial stress, leader wellbeing, stress relief"
     },
     {
       title: "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",
@@ -247,7 +264,8 @@ const Blog = () => {
       category: "Technology",
       slug: "/blog/retail-remote-tools",
       imageUrl: retailToolsImage,
-      altText: "Multi-generational family business team collaborating with technology in modern retail environment"
+      altText: "Multi-generational family business team collaborating with technology in modern retail environment",
+      keywords: "retail technology, remote tools, family business, micro retail, operational tools, POS systems, inventory software, retail automation, small retail, business technology"
     },
     {
       title: "5 Warning Signs Your Business Needs Immediate Attention",
@@ -258,7 +276,8 @@ const Blog = () => {
       category: "Risk Management",
       slug: "/blog/warning-signs-business",
       imageUrl: warningSignsImage,
-      altText: "Business warning signs and risk management visualization with danger indicators and declining performance metrics"
+      altText: "Business warning signs and risk management visualization with danger indicators and declining performance metrics",
+      keywords: "warning signs, business risks, red flags, early indicators, crisis prevention, business trouble, risk assessment, decline warning, business health check, danger signals"
     },
     {
       title: "How AI is Revolutionizing Small Business Analytics",
@@ -269,7 +288,8 @@ const Blog = () => {
       category: "Technology",
       slug: "/blog/ai-business-analytics",
       imageUrl: aiAnalyticsImage,
-      altText: "AI-powered business analytics dashboard with futuristic data visualizations and machine learning for small business success"
+      altText: "AI-powered business analytics dashboard with futuristic data visualizations and machine learning for small business success",
+      keywords: "AI analytics, artificial intelligence, business intelligence, machine learning, data analytics, AI tools, predictive analytics, automated insights, smart analytics, AI revolution"
     },
     {
       title: "Financial Health Metrics Every Business Owner Should Track",
@@ -280,7 +300,8 @@ const Blog = () => {
       category: "Financial Management",
       slug: "/blog/financial-health-metrics",
       imageUrl: financialMetricsImage,
-      altText: "Financial health metrics and KPI dashboard with profit charts and business performance indicators"
+      altText: "Financial health metrics and KPI dashboard with profit charts and business performance indicators",
+      keywords: "financial metrics, KPIs, financial indicators, profit margins, revenue tracking, cash flow metrics, financial ratios, performance metrics, financial health, business KPIs"
     },
     {
       title: "Building Operational Resilience in Uncertain Times",
@@ -291,7 +312,8 @@ const Blog = () => {
       category: "Operations",
       slug: "/blog/operational-resilience",
       imageUrl: resilienceImage,
-      altText: "Operational resilience and business continuity strategy with interconnected systems and adaptive processes"
+      altText: "Operational resilience and business continuity strategy with interconnected systems and adaptive processes",
+      keywords: "operational resilience, business continuity, crisis management, adaptive systems, risk mitigation, operational stability, contingency planning, resilient operations, business flexibility, disruption management"
     },
     {
       title: "The ROI of Business Intelligence for SMBs",
@@ -302,7 +324,8 @@ const Blog = () => {
       category: "Business Intelligence",
       slug: "/blog/business-intelligence-roi",
       imageUrl: biRoiImage,
-      altText: "Business intelligence ROI visualization with investment returns and analytics charts for small business success"
+      altText: "Business intelligence ROI visualization with investment returns and analytics charts for small business success",
+      keywords: "business intelligence ROI, BI investment, analytics returns, data ROI, BI case studies, analytics value, investment returns, BI benefits, measurable results, analytics impact"
     },
     {
       title: "Strategic Planning for the Post-Pandemic Business Landscape",
@@ -313,7 +336,8 @@ const Blog = () => {
       category: "Business Leadership",
       slug: "/blog/strategic-planning-post-pandemic",
       imageUrl: strategicPlanningImage,
-      altText: "Strategic planning for post-pandemic business landscape with remote work and digital transformation elements"
+      altText: "Strategic planning for post-pandemic business landscape with remote work and digital transformation elements",
+      keywords: "strategic planning, post-pandemic, business adaptation, remote work strategy, supply chain, consumer behavior, business transformation, pandemic recovery, strategic adaptation, business strategy"
     },
     {
       title: "When to Pivot: Data-Driven Signals That It's Time to Change Course",
@@ -324,7 +348,8 @@ const Blog = () => {
       category: "Business Leadership",
       slug: "/blog/when-to-pivot",
       imageUrl: pivotImage,
-      altText: "Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
+      altText: "Business pivot and strategic transformation with directional arrows and data-driven decision making charts",
+      keywords: "business pivot, strategic change, pivot signals, business transformation, strategic pivot, course correction, business model change, pivot strategy, data signals, strategic shift"
     }
   ];
 
@@ -351,7 +376,7 @@ const Blog = () => {
     }
   }, [searchParams]);
 
-  // Filter and search logic
+  // Enhanced filter and search logic
   const filteredPosts = useMemo(() => {
     let filtered = blogPosts;
 
@@ -363,13 +388,16 @@ const Blog = () => {
       });
     }
 
-    // Filter by search term
+    // Enhanced search across all fields including keywords
     if (searchTerm) {
+      const searchLower = searchTerm.toLowerCase();
       filtered = filtered.filter(post => 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.author.toLowerCase().includes(searchTerm.toLowerCase())
+        post.title.toLowerCase().includes(searchLower) ||
+        post.excerpt.toLowerCase().includes(searchLower) ||
+        post.category.toLowerCase().includes(searchLower) ||
+        post.author.toLowerCase().includes(searchLower) ||
+        post.altText.toLowerCase().includes(searchLower) ||
+        (post.keywords && post.keywords.toLowerCase().includes(searchLower))
       );
     }
 

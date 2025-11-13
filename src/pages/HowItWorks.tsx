@@ -1,7 +1,7 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield, Workflow } from "lucide-react";
+import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield, Settings } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
 import reportSampleImage from "@/assets/business-health-report-sample.png";
@@ -79,7 +79,7 @@ const HowItWorks = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Workflow className="w-12 h-12 text-primary" />
+              <Settings className="w-12 h-12 text-primary" />
               <h1 className="text-4xl md:text-6xl font-bold text-primary">
                 How BizHealth.ai Works
               </h1>

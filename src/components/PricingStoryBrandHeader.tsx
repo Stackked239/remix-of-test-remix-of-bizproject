@@ -5,7 +5,7 @@ const PricingStoryBrandHeader = () => {
   const handleScrollToPlans = () => {
     const plansSection = document.getElementById('pricing-tiers');
     if (plansSection) {
-      const navbarHeight = 60; // Account for fixed navigation bar height + extra spacing
+      const navbarHeight = 160; // Account for banner (80px) + navbar (64px) + extra spacing
       const elementPosition = plansSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 

@@ -418,7 +418,7 @@ const Blog = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative pt-24 h-[400px] md:h-[500px] overflow-hidden">
+      <section className="relative pt-40 h-[400px] md:h-[500px] overflow-hidden">
         {/* Background Image */}
         <img 
           src={smbTeamHeroImage} 

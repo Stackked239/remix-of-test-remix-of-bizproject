@@ -22,7 +22,7 @@ const OurLogo = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-20 pb-16">
+      <main className="pt-40 pb-16">
         {/* Hero Section with Logo */}
         <section className="bg-gradient-to-br from-biz-navy via-biz-teal to-biz-navy py-20 md:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

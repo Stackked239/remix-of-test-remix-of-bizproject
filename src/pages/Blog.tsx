@@ -404,21 +404,6 @@ const Blog = () => {
     return filtered;
   }, [selectedCategory, searchTerm, blogPosts]);
 
-  // Scroll to search results
-  const scrollToResults = () => {
-    const resultsSection = document.getElementById('blog-results');
-    if (resultsSection) {
-      const navbarHeight = 160; // Account for banner (80px) + navbar (64px) + extra spacing
-      const elementPosition = resultsSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -444,7 +429,7 @@ const Blog = () => {
         />
         
         {/* Semi-transparent Overlay */}
-        <div className="absolute inset-0 bg-accent/90" />
+        <div className="absolute inset-0 bg-primary/70" />
         
         {/* Content Container */}
         <div className="relative h-full container mx-auto px-6 flex flex-col">
@@ -476,7 +461,7 @@ const Blog = () => {
                 className="w-full pl-10 pr-20 py-3 border border-border rounded-lg bg-background/95 backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary shadow-lg"
               />
               <button
-                onClick={scrollToResults}
+                onClick={() => document.activeElement instanceof HTMLElement && document.activeElement.blur()}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
               >
                 Search
@@ -565,7 +550,7 @@ const Blog = () => {
                   className="w-full pl-10 pr-20 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
                 <button
-                  onClick={scrollToResults}
+                  onClick={() => document.activeElement instanceof HTMLElement && document.activeElement.blur()}
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
                 >
                   Search
@@ -597,7 +582,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section id="blog-results" className="pt-8 pb-20">
+      <section className="pt-8 pb-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Results Count */}

@@ -2,6 +2,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
@@ -673,6 +674,7 @@ const Blog = () => {
       </section>
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

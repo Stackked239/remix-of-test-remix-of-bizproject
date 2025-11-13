@@ -533,49 +533,52 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-8 border-b border-border">
+      {/* Search & Categories Section */}
+      <section className="py-10 bg-secondary/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto space-y-6">
-            {/* Search Bar - Blog Posts Only */}
-            <div className="flex justify-center">
-              <div className="relative max-w-md w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search blog posts..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
-                  className="w-full pl-10 pr-20 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                />
-                <button
-                  onClick={() => document.activeElement instanceof HTMLElement && document.activeElement.blur()}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
-                >
-                  Search
-                </button>
+          <div className="max-w-6xl mx-auto">
+            {/* Desktop: Side by Side | Mobile: Stacked */}
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start lg:items-center">
+              
+              {/* Search Bar */}
+              <div className="w-full lg:w-96 flex-shrink-0">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary/60 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search articles by title, topic..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
+                    className="w-full pl-12 pr-4 py-3.5 border-2 border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary shadow-sm hover:shadow-md transition-all"
+                  />
+                </div>
               </div>
-            </div>
 
-            {/* Categories Filter */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category, index) => (
-                <button 
-                  key={index}
-                  onClick={() => {
-                    setSelectedCategory(category);
-                    setSearchTerm("");
-                  }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category 
-                      ? 'bg-primary text-white' 
-                      : 'bg-background border border-border text-muted-foreground hover:bg-muted'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+              {/* Divider - Desktop Only */}
+              <div className="hidden lg:block w-px h-10 bg-border"></div>
+
+              {/* Categories Filter */}
+              <div className="flex-1 w-full">
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category, index) => (
+                    <button 
+                      key={index}
+                      onClick={() => {
+                        setSelectedCategory(category);
+                        setSearchTerm("");
+                      }}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        selectedCategory === category 
+                          ? 'bg-primary text-white shadow-md scale-105' 
+                          : 'bg-background border-2 border-border text-foreground hover:border-primary/50 hover:bg-primary/5 hover:scale-105'
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

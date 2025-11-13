@@ -98,7 +98,7 @@ const Contact = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+      <section className="relative w-full h-[250px] md:h-[300px] overflow-hidden">
         <img 
           src={heroImage} 
           alt="Business health dashboard showing analytics of comprehensive business assessment"

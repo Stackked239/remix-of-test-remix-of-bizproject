@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
@@ -188,6 +189,7 @@ const Operations = () => {
       ]} />
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

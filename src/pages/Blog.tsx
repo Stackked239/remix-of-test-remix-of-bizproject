@@ -542,6 +542,9 @@ const Blog = () => {
               
               {/* Search Bar */}
               <div className="w-full lg:w-96 flex-shrink-0">
+                <label className="block text-sm font-semibold text-foreground mb-2 pl-1">
+                  Search Articles
+                </label>
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary/60 w-5 h-5" />
                   <input

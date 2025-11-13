@@ -100,7 +100,7 @@ const About = () => {
         <PromotionalBanner />
         <GlobalNavigation />
 
-        <main className="pt-20 pb-16">
+        <main className="pt-40 pb-16">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-biz-navy to-biz-green text-white py-16 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

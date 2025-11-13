@@ -376,7 +376,7 @@ const SmallBusinessStruggles = () => {
                   Stop reacting. Start diagnosing. Your business deserves a better way forward.
                 </p>
 
-                <div className="bg-gradient-to-r from-primary/20 to-growth/20 border border-primary/20 rounded-xl p-8 text-center">
+                <div className="bg-growth/25 border border-primary/20 rounded-xl p-8 text-center">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">
                     Take Our Trusted Business Health Assessment
                   </h3>

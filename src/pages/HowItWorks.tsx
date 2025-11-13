@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
@@ -63,7 +63,7 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-10 bg-gradient-to-br from-primary/20 via-background to-growth/20 overflow-hidden">

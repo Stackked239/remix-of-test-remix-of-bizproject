@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Navigation from '@/components/Navigation';
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
@@ -37,7 +37,7 @@ const SmallBusinessAIAdoption = () => {
       />
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
 
         <article className="pt-24 pb-16 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4 py-12 max-w-4xl">

@@ -1,6 +1,6 @@
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
-import Navigation from '@/components/Navigation';
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
 import blindSpotsHero from '@/assets/business-blind-spots-assessment.png';
@@ -15,7 +15,7 @@ const BusinessBlindSpots2025 = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <GlobalNavigation />
       
       <SEO
         title="Small Business Blind Spots Costing $50K+ | BizHealth.ai"

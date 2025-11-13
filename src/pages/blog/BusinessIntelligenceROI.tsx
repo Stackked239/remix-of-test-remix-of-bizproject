@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -33,7 +33,7 @@ const BusinessIntelligenceROI = () => {
         url="https://bizhealth.ai/blog/business-intelligence-roi"
       />
       
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="pt-40 pb-16 bg-muted">

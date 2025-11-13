@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
@@ -63,7 +63,7 @@ const RealTimeAnalyticsSMB = () => {
       <meta name="twitter:description" content="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking." />
       <meta name="twitter:image" content={realTimeAnalyticsImage} />
 
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <header className="pt-40 pb-16 bg-muted">

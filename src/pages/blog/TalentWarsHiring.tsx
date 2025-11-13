@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Info } from "lucide-react";
@@ -93,7 +93,7 @@ const TalentWarsHiring = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
         
         <article className="pt-32 pb-12">
           <div className="container mx-auto px-6">

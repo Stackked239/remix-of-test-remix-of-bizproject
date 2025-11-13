@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import Navigation from '@/components/Navigation';
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
 import { Calendar, Clock, User, Info } from 'lucide-react';
@@ -112,7 +112,7 @@ const SMBCashFlowHacks2025 = () => {
           </script>
         </Helmet>
 
-        <Navigation />
+        <GlobalNavigation />
 
         <article className="pt-32 pb-12">
           <div className="container mx-auto px-6">

@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
@@ -40,7 +40,7 @@ const SMBScalingParadox2025 = () => {
       />
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
         
         {/* Hero Section */}
         <article className="pt-24 pb-16">

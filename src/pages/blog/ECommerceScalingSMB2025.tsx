@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Clock, Calendar, User, Info } from "lucide-react";
@@ -79,7 +79,7 @@ const ECommerceScalingSMB2025 = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
         
         {/* Hero Section */}
         <section className="pt-24 pb-12 bg-gradient-to-b from-muted to-background">

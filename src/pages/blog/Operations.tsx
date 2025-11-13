@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +8,7 @@ import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 const Operations = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-muted">

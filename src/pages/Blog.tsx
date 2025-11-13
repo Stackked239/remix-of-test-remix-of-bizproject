@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -374,7 +374,7 @@ const Blog = () => {
       <StructuredData 
         type="organization"
       />
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="relative pt-24 h-[400px] md:h-[500px] overflow-hidden">

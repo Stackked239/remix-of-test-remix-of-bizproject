@@ -1,6 +1,6 @@
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
@@ -57,7 +57,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
       />
       
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
         
         <article className="pt-24 pb-16">
           {/* Hero Section */}

@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
@@ -30,7 +30,7 @@ const WarningSignsBusiness = () => {
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/warning-signs-business"
       />
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="pt-40 pb-16 bg-muted">

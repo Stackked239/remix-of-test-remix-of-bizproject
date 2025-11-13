@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
@@ -94,7 +94,7 @@ const DailyGrindFixes = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <article className="pt-32 pb-12">

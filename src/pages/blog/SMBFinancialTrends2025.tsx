@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -107,7 +107,7 @@ const SMBFinancialTrends2025 = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <GlobalNavigation />
 
         {/* Hero Section */}
         <article className="pt-24 pb-16">

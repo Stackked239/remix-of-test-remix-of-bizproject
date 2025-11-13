@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PricingStoryBrandHeader from "@/components/PricingStoryBrandHeader";
 import SEO from "@/components/SEO";
@@ -184,7 +184,7 @@ const Pricing = () => {
         keywords="business diagnostics, small business pricing, tiered solutions, transparent pricing, affordable AI business health, SMB solutions, business health assessment pricing"
         canonical="https://bizhealth.ai/pricing"
       />
-      <Navigation />
+      <GlobalNavigation />
       
       {/* StoryBrand Hero Header */}
       <PricingStoryBrandHeader />

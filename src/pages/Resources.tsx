@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import { BookOpen, Calculator, TrendingUp, FileText, ExternalLink, Users, DollarSign, Target } from "lucide-react";
 
@@ -186,7 +186,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <GlobalNavigation />
       
       {/* Hero Section */}
       <section className="pt-40 pb-16 bg-muted">

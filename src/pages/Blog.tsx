@@ -61,7 +61,7 @@ const Blog = () => {
       slug: "/blog/small-business-struggles",
       imageUrl: smallBusinessStrugglesImage,
       altText: "Small business owner facing operational challenges and pain points in 2025",
-      keywords: "business health analysis, small business diagnostics, SMB pain points, cash flow challenges, business growth strategies, blind spots, operational issues, business assessment, diagnostic tools, AI analytics"
+      keywords: "small business, small business struggles, business health analysis, small business diagnostics, SMB pain points, cash flow challenges, business growth strategies, blind spots, operational issues, business assessment, diagnostic tools, AI analytics"
     },
     {
       title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",

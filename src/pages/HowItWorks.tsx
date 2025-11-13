@@ -97,7 +97,7 @@ const HowItWorks = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 mb-20 p-8 rounded-2xl transition-all ${index % 2 === 0 ? 'bg-background' : 'bg-muted/30'} ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 mb-20 p-8 rounded-2xl transition-all ${index % 2 === 0 ? 'bg-background' : 'bg-muted/50'} ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 rounded-full bg-biz-green text-white font-bold text-xl flex items-center justify-center shadow-elegant">

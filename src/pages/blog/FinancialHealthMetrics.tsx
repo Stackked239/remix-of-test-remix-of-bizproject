@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -281,6 +282,7 @@ const FinancialHealthMetrics = () => {
       ]} />
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

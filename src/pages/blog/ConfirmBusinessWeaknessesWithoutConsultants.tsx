@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
@@ -272,6 +273,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         <RelatedArticles articles={relatedArticles} />
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

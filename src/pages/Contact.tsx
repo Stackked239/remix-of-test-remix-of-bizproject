@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
@@ -342,6 +343,7 @@ const Contact = () => {
       </section>
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

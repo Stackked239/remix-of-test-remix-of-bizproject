@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
@@ -301,6 +302,7 @@ const HowItWorks = () => {
       </section>
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

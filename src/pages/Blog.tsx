@@ -534,7 +534,7 @@ const Blog = () => {
       </section>
 
       {/* Search & Categories Section */}
-      <section className="py-10 bg-secondary/30">
+      <section className="py-10 bg-biz-green/5">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Desktop: Side by Side | Mobile: Stacked */}

@@ -33,6 +33,7 @@ import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
+import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,7 +59,7 @@ const Blog = () => {
       readTime: "12 min read",
       category: "Business Strategy, Business Leadership",
       slug: "/blog/small-business-struggles",
-      imageUrl: businessHealthImage,
+      imageUrl: smallBusinessStrugglesImage,
       altText: "Small business owner facing operational challenges and pain points in 2025"
     },
     {

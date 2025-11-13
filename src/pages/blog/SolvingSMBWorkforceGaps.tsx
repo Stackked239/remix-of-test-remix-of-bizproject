@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -379,6 +380,7 @@ const SolvingSMBWorkforceGaps = () => {
         ]} />
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

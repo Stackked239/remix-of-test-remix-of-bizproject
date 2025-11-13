@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -439,6 +440,7 @@ const CashFlowCrisisManagement = () => {
         </article>
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

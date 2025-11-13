@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -208,6 +209,7 @@ const WarningSignsBusiness = () => {
       ]} />
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

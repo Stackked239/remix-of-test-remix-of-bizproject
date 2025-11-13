@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Clock, Calendar, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -342,6 +343,7 @@ const ECommerceScalingSMB2025 = () => {
         />
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

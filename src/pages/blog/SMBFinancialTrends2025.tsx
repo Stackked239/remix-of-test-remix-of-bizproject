@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -401,6 +402,7 @@ const SMBFinancialTrends2025 = () => {
         <RelatedArticles articles={relatedArticles} />
 
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

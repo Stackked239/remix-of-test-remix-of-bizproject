@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -376,6 +377,7 @@ const RealTimeAnalyticsSMB = () => {
       ]} />
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
@@ -344,6 +345,7 @@ const DailyGrindFixes = () => {
       ]} />
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

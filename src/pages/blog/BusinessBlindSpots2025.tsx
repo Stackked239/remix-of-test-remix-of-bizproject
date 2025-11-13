@@ -2,6 +2,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
 import blindSpotsHero from '@/assets/business-blind-spots-assessment.png';
 import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
@@ -471,6 +472,7 @@ const BusinessBlindSpots2025 = () => {
       </div>
 
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
@@ -397,6 +398,7 @@ const TalentWarsHiring = () => {
 
         <RelatedArticles articles={relatedArticles} />
         <GlobalFooter />
+        <PromotionalBanner />
       </div>
     </>
   );

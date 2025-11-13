@@ -582,7 +582,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="pt-8 pb-20 bg-biz-grey/20">
+      <section className="pt-8 pb-20 bg-biz-grey/10">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Results Count */}

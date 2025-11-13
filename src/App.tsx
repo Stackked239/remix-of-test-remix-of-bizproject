@@ -58,6 +58,7 @@ import SmallBusinessAIAdoption from "./pages/blog/SmallBusinessAIAdoption";
 import SmallBusinessSurvivalChecklist from "./pages/blog/SmallBusinessSurvivalChecklist";
 import BusinessBlindSpots2025 from "./pages/blog/BusinessBlindSpots2025";
 import ConfirmBusinessWeaknessesWithoutConsultants from "./pages/blog/ConfirmBusinessWeaknessesWithoutConsultants";
+import SmallBusinessStruggles from "./pages/blog/SmallBusinessStruggles";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -139,6 +140,7 @@ const App = () => (
             <Route path="/blog/small-business-survival-checklist-2025" element={<SmallBusinessSurvivalChecklist />} />
             <Route path="/blog/small-business-blind-spots-2025" element={<BusinessBlindSpots2025 />} />
             <Route path="/blog/confirm-business-weaknesses-without-consultants" element={<ConfirmBusinessWeaknessesWithoutConsultants />} />
+            <Route path="/blog/small-business-struggles" element={<SmallBusinessStruggles />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

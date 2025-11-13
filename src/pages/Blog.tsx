@@ -50,6 +50,17 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
+      excerpt: "Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive sustainable growth without guesswork.",
+      author: "BizHealth.ai Team",
+      date: "November 13, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Business Leadership",
+      slug: "/blog/small-business-struggles",
+      imageUrl: businessHealthImage,
+      altText: "Small business owner facing operational challenges and pain points in 2025"
+    },
+    {
       title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",
       excerpt: "Learn how AI-powered business health assessments help SMB leaders identify operational weaknesses, hidden business gaps, and blind spots without consultant fees—discover affordable diagnostic tools for 2025.",
       author: "BizHealth.ai Research Team",

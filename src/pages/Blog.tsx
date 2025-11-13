@@ -402,7 +402,7 @@ const Blog = () => {
     }
 
     return filtered;
-  }, [selectedCategory, searchTerm]);
+  }, [selectedCategory, searchTerm, blogPosts]);
 
   return (
     <div className="min-h-screen bg-background">

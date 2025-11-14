@@ -10,6 +10,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Download, FileText, TrendingUp, AlertCircle, Star, Lock } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import SEO from '@/components/SEO';
 
 interface Report {
   id: string;
@@ -91,6 +92,11 @@ const Portal = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO 
+        title="Dashboard - BizHealth.ai"
+        description="Your business health dashboard and reports"
+        noindex={true}
+      />
       <GlobalNavigation />
       
       <main className="flex-1 container mx-auto px-4 py-8">

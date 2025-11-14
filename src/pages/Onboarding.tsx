@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, ArrowRight, FileText, Clock, BarChart } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import SEO from '@/components/SEO';
 
 const Onboarding = () => {
   const { user, loading } = useAuth();
@@ -24,6 +25,11 @@ const Onboarding = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO 
+        title="Onboarding - BizHealth.ai"
+        description="Get started with your business health assessment"
+        noindex={true}
+      />
       <GlobalNavigation />
       
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">

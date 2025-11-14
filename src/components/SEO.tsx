@@ -10,6 +10,7 @@ interface SEOProps {
   articlePublishedTime?: string;
   articleModifiedTime?: string;
   articleAuthor?: string;
+  noindex?: boolean;
 }
 
 const SEO = ({
@@ -22,6 +23,7 @@ const SEO = ({
   articlePublishedTime,
   articleModifiedTime,
   articleAuthor,
+  noindex = false,
 }: SEOProps) => {
   const siteTitle = 'BizHealth.ai';
   const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
@@ -69,9 +71,9 @@ const SEO = ({
       )}
 
       {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content={noindex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="bingbot" content={noindex ? "noindex, nofollow" : "index, follow"} />
     </Helmet>
   );
 };

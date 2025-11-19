@@ -601,8 +601,18 @@ const FAQs = () => {
                   }}
                   onClick={openCodyChat}
                 >
-                  <Bot className="w-5 h-5" />
-                  Chat with Cody AI
+                  <span 
+                    className="flex items-center justify-center rounded-full w-6 h-6"
+                    style={{
+                      backgroundColor: 'hsl(var(--biz-lime))'
+                    }}
+                  >
+                    <HelpCircle 
+                      className="w-4 h-4" 
+                      style={{ color: 'hsl(var(--biz-navy))' }}
+                    />
+                  </span>
+                  Chat w/ 'Sherpa' bot
                   <ArrowDownRight className="w-4 h-4 ml-1" />
                 </Button>
               </div>

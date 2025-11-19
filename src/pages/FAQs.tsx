@@ -638,7 +638,7 @@ const FAQs = () => {
       {showBackToTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-24 right-8 rounded-full w-12 h-12 shadow-lg z-40"
+          className="fixed bottom-24 left-8 rounded-full w-12 h-12 shadow-lg z-40"
           style={{
             backgroundColor: 'hsl(var(--biz-green))',
             color: 'hsl(var(--biz-white))'

@@ -34,6 +34,7 @@ export default {
 				'biz-green': 'hsl(var(--biz-green))',
 				'biz-grey': 'hsl(var(--biz-grey))',
 				'biz-white': 'hsl(var(--biz-white))',
+				'biz-blue-faint': 'hsl(var(--biz-blue-faint))',
 				
 				/* Hub Colors */
 				'biz-teal': 'hsl(var(--biz-teal))',

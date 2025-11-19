@@ -64,6 +64,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/talent-wars-hiring"
+  to = "/blog/talent-wars-smb-hiring-2025"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering
   command = "chmod +x build-ssg.sh && ./build-ssg.sh"

@@ -251,7 +251,7 @@ const Contact = () => {
                   <h2 className="text-2xl font-bold mb-8 text-white">Company Information</h2>
                   
                   <div className="space-y-6">
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/15 hover:bg-white/20 transition-colors">
                       <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
                         <MapPin className="w-6 h-6 text-white" />
                       </div>
@@ -265,7 +265,7 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/15 hover:bg-white/20 transition-colors">
                       <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
@@ -278,7 +278,7 @@ const Contact = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4 p-5 rounded-lg bg-white/15 hover:bg-white/20 transition-colors">
                       <div className="p-3 rounded-xl bg-biz-green flex-shrink-0">
                         <HelpCircle className="w-6 h-6 text-white" />
                       </div>

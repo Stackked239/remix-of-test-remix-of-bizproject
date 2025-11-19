@@ -546,7 +546,7 @@ const FAQs = () => {
           {/* Contact Support CTA */}
           <Card className="mt-12 shadow-lg border-2" style={{
             borderColor: 'hsl(var(--biz-green))',
-            backgroundColor: 'hsl(var(--biz-navy))'
+            backgroundColor: 'hsl(var(--biz-navy) / 0.5)'
           }}>
             <CardContent className="p-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{

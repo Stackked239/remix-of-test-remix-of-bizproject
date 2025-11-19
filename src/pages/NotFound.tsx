@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Search, ArrowLeft, BookOpen, Wrench, AlertCircle } from "lucide-react";
+import { Home, Search, ArrowLeft, BookOpen, Wrench, SearchX } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -93,7 +93,7 @@ const NotFound = () => {
       <section className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy pt-40 pb-20 px-6" style={{ paddingTop: '180px' }}>
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-8">
-            <AlertCircle className="w-24 h-24 text-biz-copper mx-auto mb-6 animate-bounce-subtle" />
+            <SearchX className="w-24 h-24 text-biz-copper mx-auto mb-6 animate-bounce-subtle" />
             <h1 className="font-montserrat font-bold text-6xl md:text-7xl text-white mb-4">
               404
             </h1>

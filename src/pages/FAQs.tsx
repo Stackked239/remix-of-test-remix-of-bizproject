@@ -286,10 +286,11 @@ const FAQs = () => {
           </div>
 
           {/* Search Bar */}
-          <Card className="mb-8 shadow-lg border-2" style={{
-            borderColor: 'hsl(var(--biz-green))',
-            backgroundColor: 'hsl(var(--biz-white))'
-          }}>
+          <div className="max-w-4xl mx-auto mb-8">
+            <Card className="shadow-lg border-2" style={{
+              borderColor: 'hsl(var(--biz-green))',
+              backgroundColor: 'hsl(var(--biz-white))'
+            }}>
             <CardContent className="p-6">
               <div className="relative">
                 <Search 
@@ -319,6 +320,7 @@ const FAQs = () => {
               )}
             </CardContent>
           </Card>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sticky Table of Contents - Desktop */}

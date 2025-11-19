@@ -2,7 +2,7 @@ import { useState } from "react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
 
@@ -416,52 +416,52 @@ const Contact = () => {
                 <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
                   <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
                   <div className="space-y-3">
-                    <a href="/how-it-works" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group" 
-                       style={{ color: 'hsl(var(--biz-teal))' }}
+                    <a href="/how-it-works" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold" 
+                       style={{ color: 'hsl(var(--biz-green))' }}
                        onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-teal) / 0.05)';
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
                        }}
                        onMouseLeave={(e) => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-teal))' }}></span>
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
                       How BizHealth.ai Works
                     </a>
-                    <a href="/pricing" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
-                       style={{ color: 'hsl(var(--biz-copper))' }}
+                    <a href="/pricing" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
+                       style={{ color: 'hsl(var(--biz-green))' }}
                        onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-copper) / 0.05)';
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
                        }}
                        onMouseLeave={(e) => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-copper))' }}></span>
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
                       Pricing & Tier Plans
                     </a>
-                    <a href="/blog" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
-                       style={{ color: 'hsl(var(--biz-lime))' }}
+                    <a href="/blog" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
+                       style={{ color: 'hsl(var(--biz-green))' }}
                        onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-lime) / 0.05)';
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
                        }}
                        onMouseLeave={(e) => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-lime))' }}></span>
-                      Business Insights blog
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
+                      Business Insights & Strategies
                     </a>
-                    <a href="/faqs" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
-                       style={{ color: 'hsl(var(--biz-citrine))' }}
+                    <a href="/faqs" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
+                       style={{ color: 'hsl(var(--biz-green))' }}
                        onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-citrine) / 0.05)';
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
                        }}
                        onMouseLeave={(e) => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-citrine))' }}></span>
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
                       FAQs
                     </a>
                   </div>

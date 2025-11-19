@@ -199,13 +199,13 @@ const FAQs = () => {
           content="Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Trusted insights for growth." 
         />
         <meta name="keywords" content="BizHealth FAQs, SMB business health, business assessment questions, business performance platform" />
-        <link rel="canonical" href="https://www.bizhealth.ai/faqs" />
+        <link rel="canonical" href="https://bizhealth.ai/faqs" />
         
         {/* Open Graph */}
         <meta property="og:title" content="BizHealth.ai FAQs | SMB Health Answers 2025" />
         <meta property="og:description" content="Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Trusted insights for growth." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bizhealth.ai/faqs" />
+        <meta property="og:url" content="https://bizhealth.ai/faqs" />
         
         {/* Schema.org markup for FAQs */}
         <script type="application/ld+json">

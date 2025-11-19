@@ -336,6 +336,16 @@ const Contact = () => {
                     {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4" />
                   </button>
+                  
+                  {/* Response Info & Encouragement */}
+                  <div className="mt-6 pt-6 border-t text-center space-y-2" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
+                    <p className="text-sm font-semibold" style={{ color: 'hsl(var(--biz-green))' }}>
+                      ⏱️ We typically respond within 2-4 business hours
+                    </p>
+                    <p className="text-sm italic" style={{ color: 'hsl(var(--biz-grey))' }}>
+                      "Your business success is our priority. We're here to help you thrive."
+                    </p>
+                  </div>
                 </form>
               </div>
 

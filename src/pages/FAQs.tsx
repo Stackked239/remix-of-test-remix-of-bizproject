@@ -29,7 +29,8 @@ import {
   ArrowUp,
   CheckCircle2,
   Bot,
-  ArrowDownRight
+  ArrowDownRight,
+  Mail
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import bizHealthLogo from "@/assets/bizhealth-logo-main.jpg";
@@ -573,7 +574,7 @@ const FAQs = () => {
                       fontWeight: '600'
                     }}
                   >
-                    <HelpCircle className="w-5 h-5" />
+                    <Mail className="w-5 h-5" />
                     Email Support
                   </Button>
                 </a>

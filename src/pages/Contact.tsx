@@ -413,7 +413,10 @@ const Contact = () => {
                 </div>
 
                 {/* Quick Links */}
-                <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
+                <div className="rounded-xl p-8 border shadow-sm" style={{ 
+                  backgroundColor: 'hsl(var(--biz-green) / 0.08)',
+                  borderColor: 'hsl(var(--biz-green) / 0.2)'
+                }}>
                   <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
                   <div className="space-y-3">
                     <a href="/how-it-works" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold" 

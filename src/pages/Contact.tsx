@@ -120,9 +120,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
             <div className="text-center border border-border rounded-lg p-8 bg-background hover:shadow-card transition-shadow">
               <div className="inline-flex p-4 rounded-xl mb-6" style={{ backgroundColor: 'hsl(var(--biz-teal) / 0.15)' }}>
                 <Mail className="w-8 h-8" style={{ color: 'hsl(var(--biz-teal))' }} />

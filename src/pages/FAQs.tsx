@@ -583,17 +583,17 @@ const FAQs = () => {
                   style={{
                     borderColor: 'hsl(var(--biz-white))',
                     color: 'hsl(var(--biz-white))',
-                    backgroundColor: 'hsl(var(--biz-navy) / 0.5)',
+                    backgroundColor: 'hsl(var(--biz-green) / 0.5)',
                     fontFamily: 'Montserrat, sans-serif',
                     fontWeight: '600'
                   }}
                   onClick={() => window.location.href = '/contact'}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-navy) / 0.8)';
+                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.7)';
                     e.currentTarget.style.transform = 'scale(1.05)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-navy) / 0.5)';
+                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.5)';
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >

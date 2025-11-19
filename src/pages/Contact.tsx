@@ -338,12 +338,16 @@ const Contact = () => {
                   </button>
                   
                   {/* Response Info & Encouragement */}
-                  <div className="mt-6 pt-6 border-t text-center space-y-2" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
+                  <div className="mt-6 pt-6 border-t text-center space-y-4" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
                     <p className="text-sm font-semibold" style={{ color: 'hsl(var(--biz-green))' }}>
-                      ⏱️ We typically respond within 2-4 business hours
+                      ⏱️ We typically respond within one business hour
                     </p>
-                    <p className="text-sm italic" style={{ color: 'hsl(var(--biz-grey))' }}>
-                      "Your business success is our priority. We're here to help you thrive."
+                    <p className="text-sm italic leading-relaxed" style={{ color: 'hsl(var(--biz-grey))' }}>
+                      "Stop Guessing, Start Growing.<br />
+                      Your business deserves clarity — we're here to deliver it."<br />
+                      <span className="text-xs font-semibold not-italic mt-2 inline-block" style={{ color: 'hsl(var(--biz-green))' }}>
+                        — BizHealth.ai Team
+                      </span>
                     </p>
                   </div>
                 </form>

@@ -343,10 +343,10 @@ const Contact = () => {
                       ⏱️ We typically respond within one business hour
                     </p>
                     <div className="text-sm leading-relaxed" style={{ color: 'hsl(var(--biz-grey))' }}>
-                      <p className="font-bold text-base mb-2" style={{ color: 'hsl(var(--biz-green))' }}>
+                      <p className="font-bold text-base mb-2" style={{ color: 'hsl(var(--biz-blue))' }}>
                         Stop Guessing. Start Growing.
                       </p>
-                      <p className="italic">
+                      <p className="italic" style={{ color: 'hsl(var(--biz-blue))' }}>
                         Your business deserves clarity — we're here to deliver it.
                       </p>
                       <p className="text-xs font-semibold not-italic mt-3" style={{ color: 'hsl(var(--biz-green))' }}>

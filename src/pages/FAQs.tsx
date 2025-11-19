@@ -579,15 +579,23 @@ const FAQs = () => {
                 </a>
                 <Button 
                   variant="outline"
-                  className="gap-2 text-base px-6 py-6"
+                  className="gap-2 text-base px-6 py-6 transition-all duration-300"
                   style={{
                     borderColor: 'hsl(var(--biz-white))',
                     color: 'hsl(var(--biz-white))',
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'hsl(var(--biz-navy) / 0.5)',
                     fontFamily: 'Montserrat, sans-serif',
                     fontWeight: '600'
                   }}
                   onClick={() => window.location.href = '/contact'}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-navy) / 0.8)';
+                    e.currentTarget.style.transform = 'scale(1.05)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'hsl(var(--biz-navy) / 0.5)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
                 >
                   Visit Contact Page
                 </Button>

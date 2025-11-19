@@ -284,10 +284,10 @@ const Contact = () => {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Support</h3>
-                        <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
-                          <li className="flex items-start gap-1">
-                            <span className="mt-1">•</span>
-                            <span className="inline-flex items-center gap-1.5 flex-1">
+                        <ul className="text-white/90 leading-relaxed space-y-2">
+                          <li className="flex items-center gap-1">
+                            <span className="text-white/90">•</span>
+                            <span className="inline-flex items-center gap-1.5">
                               24/7 'Sherpa' chat bot
                               <span 
                                 className="flex items-center justify-center rounded-full w-5 h-5"
@@ -304,8 +304,14 @@ const Contact = () => {
                               <ArrowDownRight className="w-4 h-4" />
                             </span>
                           </li>
-                          <li>Email during business hours</li>
-                          <li>Dedicated support for Enterprise-level clients</li>
+                          <li className="flex items-center gap-1">
+                            <span className="text-white/90">•</span>
+                            <span>Email during business hours</span>
+                          </li>
+                          <li className="flex items-center gap-1">
+                            <span className="text-white/90">•</span>
+                            <span>Dedicated support for Enterprise-level clients</span>
+                          </li>
                         </ul>
                       </div>
                     </div>

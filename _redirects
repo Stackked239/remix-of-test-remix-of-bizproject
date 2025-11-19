@@ -16,6 +16,7 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /biz-leader /bizleader 301
 /blog/smb-financial-trends-2025 /blog/2025-smb-financial-trends 301
 /blog/strategic-planning /blog/strategic-planning-post-pandemic 301
+/blog/talent-wars-hiring /blog/talent-wars-smb-hiring-2025 301
 
 # SPA fallback - serve pre-rendered HTML or fallback to index.html
 /* /index.html 200

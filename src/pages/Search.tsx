@@ -385,7 +385,7 @@ const Search = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 pt-40 pb-12">
+      <main className="min-h-screen bg-gradient-to-b from-biz-green/5 via-background to-biz-green/10 pt-40 pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Search Header */}
           <div className="mb-8">

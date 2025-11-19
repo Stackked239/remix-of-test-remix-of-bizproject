@@ -337,18 +337,22 @@ const Contact = () => {
                     <Send className="w-4 h-4" />
                   </button>
                   
-                  {/* Response Info & Encouragement */}
-                  <div className="mt-6 pt-6 border-t text-center space-y-4" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
+                  {/* Response Info & Encouragement - Anchored to bottom */}
+                  <div className="mt-auto pt-8 border-t text-center space-y-6" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
                     <p className="text-sm font-semibold" style={{ color: 'hsl(var(--biz-green))' }}>
                       ⏱️ We typically respond within one business hour
                     </p>
-                    <p className="text-sm italic leading-relaxed" style={{ color: 'hsl(var(--biz-grey))' }}>
-                      "Stop Guessing, Start Growing.<br />
-                      Your business deserves clarity — we're here to deliver it."<br />
-                      <span className="text-xs font-semibold not-italic mt-2 inline-block" style={{ color: 'hsl(var(--biz-green))' }}>
+                    <div className="text-sm leading-relaxed" style={{ color: 'hsl(var(--biz-grey))' }}>
+                      <p className="font-bold text-base mb-2" style={{ color: 'hsl(var(--biz-green))' }}>
+                        Stop Guessing. Start Growing.
+                      </p>
+                      <p className="italic">
+                        Your business deserves clarity — we're here to deliver it.
+                      </p>
+                      <p className="text-xs font-semibold not-italic mt-3" style={{ color: 'hsl(var(--biz-green))' }}>
                         — BizHealth.ai Team
-                      </span>
-                    </p>
+                      </p>
+                    </div>
                   </div>
                 </form>
               </div>

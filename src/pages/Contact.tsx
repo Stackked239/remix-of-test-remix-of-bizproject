@@ -284,27 +284,29 @@ const Contact = () => {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Support</h3>
-                        <p className="text-white/90 leading-relaxed">
-                          <span className="inline-flex items-center gap-1.5">
-                            24/7 'Sherpa' chat bot
-                            <span 
-                              className="flex items-center justify-center rounded-full w-5 h-5"
-                              style={{ 
-                                backgroundColor: 'hsl(var(--biz-lime))',
-                                padding: '2px'
-                              }}
-                            >
-                              <HelpCircle 
-                                className="w-4 h-4" 
-                                style={{ color: 'hsl(var(--biz-navy))' }}
-                              />
+                        <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
+                          <li className="flex items-start gap-1">
+                            <span className="mt-1">•</span>
+                            <span className="inline-flex items-center gap-1.5 flex-1">
+                              24/7 'Sherpa' chat bot
+                              <span 
+                                className="flex items-center justify-center rounded-full w-5 h-5"
+                                style={{ 
+                                  backgroundColor: 'hsl(var(--biz-lime))',
+                                  padding: '2px'
+                                }}
+                              >
+                                <HelpCircle 
+                                  className="w-4 h-4" 
+                                  style={{ color: 'hsl(var(--biz-navy))' }}
+                                />
+                              </span>
+                              <ArrowDownRight className="w-4 h-4" />
                             </span>
-                            <ArrowDownRight className="w-4 h-4" />
-                          </span>
-                          <br />
-                          Email during business hours<br />
-                          Dedicated support for Enterprise-level clients
-                        </p>
+                          </li>
+                          <li>Email during business hours</li>
+                          <li>Dedicated support for Enterprise-level clients</li>
+                        </ul>
                       </div>
                     </div>
                   </div>

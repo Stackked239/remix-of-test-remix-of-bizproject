@@ -425,7 +425,7 @@ const Contact = () => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
                       How BizHealth.ai Works
                     </a>
                     <a href="/pricing" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
@@ -437,7 +437,7 @@ const Contact = () => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
                       Pricing & Tier Plans
                     </a>
                     <a href="/blog" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
@@ -449,7 +449,7 @@ const Contact = () => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
                       Business Insights & Strategies
                     </a>
                     <a href="/faqs" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
@@ -461,7 +461,7 @@ const Contact = () => {
                          e.currentTarget.style.backgroundColor = 'transparent';
                        }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-green))' }} />
+                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
                       FAQs
                     </a>
                   </div>

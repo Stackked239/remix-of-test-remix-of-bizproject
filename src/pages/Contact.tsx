@@ -169,7 +169,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-teal))' }}>First Name</label>
+                      <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>First Name</label>
                       <input 
                         type="text"
                         name="firstName"
@@ -181,8 +181,8 @@ const Contact = () => {
                           borderColor: 'hsl(var(--border))',
                         }}
                         onFocus={(e) => {
-                          e.currentTarget.style.borderColor = 'hsl(var(--biz-teal))';
-                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-teal) / 0.1)';
+                          e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                         }}
                         onBlur={(e) => {
                           e.currentTarget.style.borderColor = 'hsl(var(--border))';
@@ -192,7 +192,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-teal))' }}>Last Name</label>
+                      <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>Last Name</label>
                       <input 
                         type="text"
                         name="lastName"
@@ -204,8 +204,8 @@ const Contact = () => {
                           borderColor: 'hsl(var(--border))',
                         }}
                         onFocus={(e) => {
-                          e.currentTarget.style.borderColor = 'hsl(var(--biz-teal))';
-                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-teal) / 0.1)';
+                          e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                         }}
                         onBlur={(e) => {
                           e.currentTarget.style.borderColor = 'hsl(var(--border))';
@@ -217,7 +217,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-copper))' }}>Email Address</label>
+                    <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>Email Address</label>
                     <input 
                       type="email"
                       name="email"
@@ -229,8 +229,8 @@ const Contact = () => {
                         borderColor: 'hsl(var(--border))',
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper))';
-                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-copper) / 0.1)';
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                       }}
                       onBlur={(e) => {
                         e.currentTarget.style.borderColor = 'hsl(var(--border))';
@@ -241,7 +241,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-copper))' }}>Company Name</label>
+                    <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>Company Name</label>
                     <input 
                       type="text"
                       name="company"
@@ -252,8 +252,8 @@ const Contact = () => {
                         borderColor: 'hsl(var(--border))',
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper))';
-                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-copper) / 0.1)';
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                       }}
                       onBlur={(e) => {
                         e.currentTarget.style.borderColor = 'hsl(var(--border))';
@@ -264,7 +264,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-lime))' }}>Subject</label>
+                    <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>Subject</label>
                     <select 
                       name="subject"
                       value={formData.subject}
@@ -274,8 +274,8 @@ const Contact = () => {
                         borderColor: 'hsl(var(--border))',
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = 'hsl(var(--biz-lime))';
-                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-lime) / 0.1)';
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                       }}
                       onBlur={(e) => {
                         e.currentTarget.style.borderColor = 'hsl(var(--border))';
@@ -291,7 +291,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-citrine))' }}>Message</label>
+                    <label className="block text-sm font-bold mb-2" style={{ color: 'hsl(var(--biz-green))' }}>Message</label>
                     <textarea 
                       name="message"
                       value={formData.message}
@@ -303,8 +303,8 @@ const Contact = () => {
                         borderColor: 'hsl(var(--border))',
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = 'hsl(var(--biz-citrine))';
-                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-citrine) / 0.1)';
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-green) / 0.1)';
                       }}
                       onBlur={(e) => {
                         e.currentTarget.style.borderColor = 'hsl(var(--border))';

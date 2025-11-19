@@ -123,23 +123,37 @@ const Contact = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {contactMethods.map((method, index) => (
-              <div key={index} className="text-center border border-border rounded-lg p-8 bg-background hover:shadow-card transition-shadow">
-                <div className="inline-flex p-4 rounded-xl bg-primary/10 mb-6">
-                  <method.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">{method.title}</h3>
-                <p className="text-muted-foreground mb-4">{method.description}</p>
-                {method.contact.includes('@') ? (
-                  <a href={`mailto:${method.contact}`} className="font-semibold text-primary mb-2 hover:underline block">
-                    {method.contact}
-                  </a>
-                ) : (
-                  <p className="font-semibold text-primary mb-2">{method.contact}</p>
-                )}
-                <p className="text-sm text-muted-foreground">{method.note}</p>
+            <div className="text-center border border-border rounded-lg p-8 bg-background hover:shadow-card transition-shadow">
+              <div className="inline-flex p-4 rounded-xl mb-6" style={{ backgroundColor: 'hsl(var(--biz-teal) / 0.15)' }}>
+                <Mail className="w-8 h-8" style={{ color: 'hsl(var(--biz-teal))' }} />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold mb-3 text-foreground">{contactMethods[0].title}</h3>
+              <p className="text-muted-foreground mb-4">{contactMethods[0].description}</p>
+              <a href={`mailto:${contactMethods[0].contact}`} className="font-semibold mb-2 hover:underline block" style={{ color: 'hsl(var(--biz-teal))' }}>
+                {contactMethods[0].contact}
+              </a>
+              <p className="text-sm text-muted-foreground">{contactMethods[0].note}</p>
+            </div>
+            
+            <div className="text-center border border-border rounded-lg p-8 bg-background hover:shadow-card transition-shadow">
+              <div className="inline-flex p-4 rounded-xl mb-6" style={{ backgroundColor: 'hsl(var(--biz-copper) / 0.15)' }}>
+                <Phone className="w-8 h-8" style={{ color: 'hsl(var(--biz-copper))' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">{contactMethods[1].title}</h3>
+              <p className="text-muted-foreground mb-4">{contactMethods[1].description}</p>
+              <p className="font-semibold mb-2" style={{ color: 'hsl(var(--biz-copper))' }}>{contactMethods[1].contact}</p>
+              <p className="text-sm text-muted-foreground">{contactMethods[1].note}</p>
+            </div>
+            
+            <div className="text-center border border-border rounded-lg p-8 bg-background hover:shadow-card transition-shadow">
+              <div className="inline-flex p-4 rounded-xl mb-6" style={{ backgroundColor: 'hsl(var(--biz-lime) / 0.15)' }}>
+                <MessageSquare className="w-8 h-8" style={{ color: 'hsl(var(--biz-lime))' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">{contactMethods[2].title}</h3>
+              <p className="text-muted-foreground mb-4">{contactMethods[2].description}</p>
+              <p className="font-semibold mb-2" style={{ color: 'hsl(var(--biz-lime))' }}>{contactMethods[2].contact}</p>
+              <p className="text-sm text-muted-foreground">{contactMethods[2].note}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -151,67 +165,122 @@ const Contact = () => {
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-background rounded-lg p-8 border border-border">
-                <h2 className="text-2xl font-bold mb-6 text-foreground">Send Us a Message</h2>
+                <h2 className="text-2xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-foreground">First Name</label>
+                      <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-teal))' }}>First Name</label>
                       <input 
                         type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                        style={{ 
+                          borderColor: 'hsl(var(--border))',
+                        }}
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'hsl(var(--biz-teal))';
+                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-teal) / 0.1)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}
                         placeholder="Your first name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-foreground">Last Name</label>
+                      <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-teal))' }}>Last Name</label>
                       <input 
                         type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                        style={{ 
+                          borderColor: 'hsl(var(--border))',
+                        }}
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'hsl(var(--biz-teal))';
+                          e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-teal) / 0.1)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}
                         placeholder="Your last name"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Email Address</label>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-copper))' }}>Email Address</label>
                     <input 
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                      style={{ 
+                        borderColor: 'hsl(var(--border))',
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-copper) / 0.1)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
                       placeholder="your@email.com"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Company Name</label>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-copper))' }}>Company Name</label>
                     <input 
                       type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                      style={{ 
+                        borderColor: 'hsl(var(--border))',
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-copper) / 0.1)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
                       placeholder="Your company name"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Subject</label>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-lime))' }}>Subject</label>
                     <select 
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                      style={{ 
+                        borderColor: 'hsl(var(--border))',
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-lime))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-lime) / 0.1)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
                     >
                       <option>General Inquiry</option>
                       <option>Technical Support</option>
@@ -222,14 +291,25 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Message</label>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--biz-citrine))' }}>Message</label>
                     <textarea 
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full px-4 py-3 border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 transition-all"
+                      style={{ 
+                        borderColor: 'hsl(var(--border))',
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-citrine))';
+                        e.currentTarget.style.boxShadow = '0 0 0 2px hsl(var(--biz-citrine) / 0.1)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--border))';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
                       placeholder="Tell us how we can help you..."
                     ></textarea>
                   </div>
@@ -237,7 +317,21 @@ const Contact = () => {
                   <button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-4 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{
+                      backgroundColor: 'hsl(var(--biz-green))',
+                      color: 'hsl(var(--biz-white))'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSubmitting) {
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--growth-hover))';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green))';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4" />
@@ -322,20 +416,52 @@ const Contact = () => {
                 <div className="bg-background rounded-xl p-8 border border-border shadow-sm">
                   <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
                   <div className="space-y-3">
-                    <a href="/how-it-works" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <a href="/how-it-works" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group" 
+                       style={{ color: 'hsl(var(--biz-teal))' }}
+                       onMouseEnter={(e) => {
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-teal) / 0.05)';
+                       }}
+                       onMouseLeave={(e) => {
+                         e.currentTarget.style.backgroundColor = 'transparent';
+                       }}
+                    >
+                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-teal))' }}></span>
                       How BizHealth.ai Works
                     </a>
-                    <a href="/pricing" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <a href="/pricing" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
+                       style={{ color: 'hsl(var(--biz-copper))' }}
+                       onMouseEnter={(e) => {
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-copper) / 0.05)';
+                       }}
+                       onMouseLeave={(e) => {
+                         e.currentTarget.style.backgroundColor = 'transparent';
+                       }}
+                    >
+                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-copper))' }}></span>
                       Pricing & Tier Plans
                     </a>
-                    <a href="/blog" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <a href="/blog" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
+                       style={{ color: 'hsl(var(--biz-lime))' }}
+                       onMouseEnter={(e) => {
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-lime) / 0.05)';
+                       }}
+                       onMouseLeave={(e) => {
+                         e.currentTarget.style.backgroundColor = 'transparent';
+                       }}
+                    >
+                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-lime))' }}></span>
                       Business Insights blog
                     </a>
-                    <a href="/faqs" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-lg hover:bg-primary/5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <a href="/faqs" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group"
+                       style={{ color: 'hsl(var(--biz-citrine))' }}
+                       onMouseEnter={(e) => {
+                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-citrine) / 0.05)';
+                       }}
+                       onMouseLeave={(e) => {
+                         e.currentTarget.style.backgroundColor = 'transparent';
+                       }}
+                    >
+                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--biz-citrine))' }}></span>
                       FAQs
                     </a>
                   </div>

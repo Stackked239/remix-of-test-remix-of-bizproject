@@ -101,7 +101,7 @@ const NotFound = () => {
               Page Not Found
             </h2>
             <p className="font-open-sans text-lg text-white/90 max-w-2xl mx-auto">
-              Oops! The page you're looking for doesn't exist. It may have been moved, deleted, or the URL might be incorrect.
+              Well, this is awkward. The page you're looking for seems to have wandered off for a coffee break. It may have been moved, deleted, or perhaps it never existed (we don't judge).
             </p>
           </div>
           
@@ -127,10 +127,10 @@ const NotFound = () => {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground font-montserrat">
-              Where would you like to go?
+              No worries, let's get you back on track
             </h3>
             <p className="text-lg text-muted-foreground font-open-sans">
-              Here are some popular pages to help you find what you need
+              Here are some popular destinations that definitely exist
             </p>
           </div>
           
@@ -160,10 +160,10 @@ const NotFound = () => {
       <section className="py-16 bg-biz-navy/5">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h3 className="text-2xl font-bold mb-4 text-foreground font-montserrat">
-            Still can't find what you're looking for?
+            Still lost in the digital wilderness?
           </h3>
           <p className="text-muted-foreground mb-6 font-open-sans">
-            Get in touch with our team and we'll help you find the right resources for your business needs.
+            No problem! Our team is like a GPS for business resources. Reach out and we'll get you exactly where you need to go.
           </p>
           <Button asChild size="lg" className="bg-biz-copper hover:bg-biz-copper/90">
             <Link to="/contact">

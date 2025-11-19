@@ -338,7 +338,7 @@ const Contact = () => {
                   </button>
                   
                   {/* Response Info & Encouragement - Anchored to bottom */}
-                  <div className="mt-auto pt-8 border-t text-center space-y-6" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
+                  <div className="mt-auto pt-4 border-t text-center space-y-6" style={{ borderColor: 'hsl(var(--biz-green) / 0.2)' }}>
                     <p className="text-sm font-semibold" style={{ color: 'hsl(var(--biz-green))' }}>
                       ⏱️ We typically respond within one business hour
                     </p>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
 
@@ -285,7 +285,11 @@ const Contact = () => {
                       <div className="flex-1">
                         <h3 className="font-semibold text-white mb-2">Support</h3>
                         <p className="text-white/90 leading-relaxed">
-                          24/7 chat bot<br />
+                          <span className="inline-flex items-center gap-1">
+                            24/7 'Sherpa' chat bot
+                            <ArrowDownRight className="w-4 h-4" />
+                          </span>
+                          <br />
                           Email during business hours<br />
                           Dedicated support for Enterprise-level clients
                         </p>

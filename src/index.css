@@ -13,6 +13,7 @@
     --biz-green: 59 62% 36%;  /* #969423 */
     --biz-grey: 0 0% 49%;     /* #7C7C7C */
     --biz-white: 0 0% 100%;   /* #FFFFFF */
+    --biz-blue-faint: 233 20% 98%; /* Very light blue tint based on BizNavy */
     
     /* Hub Accent Colors */
     --biz-teal: 212 73% 59%;     /* #4A90E2 - BizGuides */

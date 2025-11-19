@@ -27,7 +27,9 @@ import {
   ThumbsUp, 
   ThumbsDown, 
   ArrowUp,
-  CheckCircle2
+  CheckCircle2,
+  Bot,
+  ArrowDownRight
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import bizHealthLogo from "@/assets/bizhealth-logo-main.jpg";
@@ -181,6 +183,20 @@ const FAQs = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const openCodyChat = () => {
+    // Try to find and click the Cody widget button
+    const codyButton = document.querySelector('.cody-iframe') as HTMLElement;
+    if (codyButton) {
+      codyButton.click();
+    } else {
+      // If Cody button not found, try to find any Cody-related element
+      const codyElements = document.querySelectorAll('[class*="cody"]');
+      if (codyElements.length > 0) {
+        (codyElements[0] as HTMLElement).click();
+      }
+    }
   };
 
   const scrollToCategory = (category: string) => {
@@ -574,6 +590,20 @@ const FAQs = () => {
                   onClick={() => window.location.href = '/contact'}
                 >
                   Visit Contact Page
+                </Button>
+                <Button 
+                  className="gap-2 text-base px-6 py-6 relative"
+                  style={{
+                    backgroundColor: 'hsl(var(--biz-white))',
+                    color: 'hsl(var(--biz-navy))',
+                    fontFamily: 'Montserrat, sans-serif',
+                    fontWeight: '600'
+                  }}
+                  onClick={openCodyChat}
+                >
+                  <Bot className="w-5 h-5" />
+                  Chat with Cody AI
+                  <ArrowDownRight className="w-4 h-4 ml-1" />
                 </Button>
               </div>
             </CardContent>

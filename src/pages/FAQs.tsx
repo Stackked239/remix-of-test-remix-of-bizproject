@@ -288,7 +288,7 @@ const FAQs = () => {
           {/* Search Bar */}
           <div className="max-w-4xl mx-auto mb-8">
             <Card className="shadow-lg border-2" style={{
-              borderColor: 'hsl(var(--biz-green))',
+              borderColor: 'hsl(var(--biz-blue))',
               backgroundColor: 'hsl(var(--biz-white))'
             }}>
             <CardContent className="p-6">
@@ -304,7 +304,7 @@ const FAQs = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-12 h-12 text-base border-2"
                   style={{
-                    borderColor: 'hsl(var(--biz-green))',
+                    borderColor: 'hsl(var(--biz-blue))',
                     fontFamily: 'Open Sans, sans-serif'
                   }}
                   aria-label="Search FAQs"

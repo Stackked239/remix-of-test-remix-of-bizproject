@@ -61,7 +61,7 @@ const Blog = () => {
       slug: "/blog/success-begins-with-2026-strategy",
       imageUrl: businessAnalystImage,
       altText: "Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop",
-      keywords: "2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment, 2026 growth, growth plan, business planning"
+      keywords: "business planning, 2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment, 2026 growth, growth plan"
     },
     {
       title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",

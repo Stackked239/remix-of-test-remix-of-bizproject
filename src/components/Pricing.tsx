@@ -74,7 +74,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-center justify-center gap-4">
                   <div className="text-center">
-                    <div className="text-muted-foreground line-through text-2xl mb-1">$199 - $699</div>
+                    <div className="text-muted-foreground line-through text-2xl mb-1">$199 - $799</div>
                     <div className="text-sm text-muted-foreground">Regular Price</div>
                   </div>
                   <div className="text-center">

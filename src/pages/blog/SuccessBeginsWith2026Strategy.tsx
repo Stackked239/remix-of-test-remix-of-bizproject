@@ -125,7 +125,7 @@ const SuccessBeginsWith2026Strategy = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="mb-8">
+            <div className="mb-8 mx-auto" style={{ maxWidth: '85%' }}>
               <img
                 src={heroImage}
                 alt="Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop"

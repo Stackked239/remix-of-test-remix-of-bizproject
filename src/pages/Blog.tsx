@@ -52,6 +52,18 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
+      excerpt: "Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics.",
+      author: "BizHealth.ai Research Team",
+      date: "November 20, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Business Leadership, Business Intelligence, Risk Management",
+      slug: "/blog/success-begins-with-2026-strategy",
+      imageUrl: businessAnalystImage,
+      altText: "Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop",
+      keywords: "2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment"
+    },
+    {
       title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
       excerpt: "Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive sustainable growth without guesswork.",
       author: "BizHealth.ai Team",

@@ -188,67 +188,6 @@ const SuccessBeginsWith2026Strategy = () => {
                 Focus on 3-5 goals to avoid overload. As X posts from SMB leaders note, organic strategies like new products for existing customers drive sustainable growth without overextension. Setting these now maintains momentum amid year-end chaos.
               </p>
 
-              {/* Personal Plan Example */}
-              <h3 className="text-2xl font-semibold mt-10 mb-4" style={{ color: 'hsl(var(--biz-navy))' }}>
-                Personal Plan Example
-              </h3>
-
-              <p className="text-lg leading-relaxed">
-                A well-structured personal plan helps set clear goals, track progress, and achieve lasting success. This roadmap outlines key milestones for personal, financial, and professional growth over five years—ensuring steady improvement and balanced development.
-              </p>
-
-              {/* 5-Year Roadmap Table */}
-              <div className="overflow-x-auto my-8">
-                <table className="w-full border-collapse" style={{ borderColor: 'hsl(var(--border))' }}>
-                  <thead>
-                    <tr style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.1)' }}>
-                      <th className="border p-4 text-left font-semibold" style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--biz-navy))' }}>2026</th>
-                      <th className="border p-4 text-left font-semibold" style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--biz-navy))' }}>2027</th>
-                      <th className="border p-4 text-left font-semibold" style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--biz-navy))' }}>2028</th>
-                      <th className="border p-4 text-left font-semibold" style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--biz-navy))' }}>2029</th>
-                      <th className="border p-4 text-left font-semibold" style={{ borderColor: 'hsl(var(--border))', color: 'hsl(var(--biz-navy))' }}>2030</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border p-4" style={{ borderColor: 'hsl(var(--border))' }}>
-                        <strong className="block mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>BUILD STRONG FOUNDATION</strong>
-                        Focus on learning new skills to boost career opportunities, improve daily productivity habits, and create a simple monthly savings plan.
-                      </td>
-                      <td className="border p-4" style={{ borderColor: 'hsl(var(--border))' }}>
-                        <strong className="block mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>EXPAND KNOWLEDGE BASE</strong>
-                        Work toward completing professional certifications, read one book every month, and actively participate in networking groups to grow.
-                      </td>
-                      <td className="border p-4" style={{ borderColor: 'hsl(var(--border))' }}>
-                        <strong className="block mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>BOOST FINANCIAL HEALTH</strong>
-                        Prioritize paying off high-interest debts, increase monthly investments, and monitor spending closely to cut unnecessary expenses.
-                      </td>
-                      <td className="border p-4" style={{ borderColor: 'hsl(var(--border))' }}>
-                        <strong className="block mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>IMPROVE PHYSICAL WELLNESS</strong>
-                        Commit to a regular workout schedule, adopt balanced eating habits, and keep up with routine health checkups to maintain energy.
-                      </td>
-                      <td className="border p-4" style={{ borderColor: 'hsl(var(--border))' }}>
-                        <strong className="block mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>ENHANCE PERSONAL GROWTH</strong>
-                        Develop public speaking abilities, take on leadership roles, and practice mindfulness daily to strengthen confidence and well-being.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <p className="text-sm italic text-center" style={{ color: 'hsl(var(--foreground) / 0.6)' }}>
-                Personal 5-Year Roadmap Plan Example [Source:{' '}
-                <a 
-                  href="https://slidebazaar.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="underline hover:no-underline"
-                  style={{ color: 'hsl(var(--biz-navy))' }}
-                >
-                  slidebazaar.com
-                </a>
-                ]
-              </p>
 
               {/* Section 3: Update and Align Your Plans */}
               <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>

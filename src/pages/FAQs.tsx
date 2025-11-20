@@ -263,22 +263,24 @@ const FAQs = () => {
       <main className="min-h-screen bg-biz-blue-faint pt-44 pb-12 lg:pt-48 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header Section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 -mx-4 px-4 py-12 md:py-16" style={{
+            backgroundColor: 'hsl(var(--biz-blue))'
+          }}>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{
               fontFamily: 'Montserrat, sans-serif',
-              color: 'hsl(var(--biz-navy))'
+              color: 'hsl(var(--biz-white))'
             }}>
               Frequently Asked Questions
             </h1>
             <p className="text-lg md:text-xl mb-2" style={{ 
               fontFamily: 'Open Sans, sans-serif',
-              color: 'hsl(var(--biz-grey))',
+              color: 'hsl(var(--biz-white) / 0.95)',
               lineHeight: '1.5'
             }}>
               We're here to simplify your journey
             </p>
             <p className="text-sm" style={{ 
-              color: 'hsl(var(--biz-grey))',
+              color: 'hsl(var(--biz-white) / 0.85)',
               fontFamily: 'Open Sans, sans-serif'
             }}>
               Last Updated: October 9, 2025

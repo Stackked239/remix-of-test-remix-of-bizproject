@@ -55,7 +55,7 @@ const SuccessBeginsWith2026Strategy = () => {
         </div>
 
         {/* Hero Section */}
-        <header className="container mx-auto px-4 pb-8">
+        <header className="container mx-auto px-4 pt-4 pb-8">
           <div className="max-w-4xl mx-auto">
             {/* Categories */}
             <div className="flex flex-wrap gap-2 mb-6">

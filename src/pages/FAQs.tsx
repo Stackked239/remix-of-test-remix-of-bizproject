@@ -261,8 +261,8 @@ const FAQs = () => {
       />
 
       <main className="min-h-screen bg-biz-blue-faint pt-44 pb-12 lg:pt-48 lg:pb-16" style={{ scrollMarginTop: '180px' }}>
-        {/* Header Section - Full Width BizBlue Background */}
-        <div className="bg-biz-blue py-12 md:py-16 mb-12">
+        {/* Header Section - Full Width BizNavy Background */}
+        <div className="bg-biz-navy py-12 md:py-16 mb-12">
           <div className="container mx-auto px-4 max-w-7xl text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-biz-white" style={{
               fontFamily: 'Montserrat, sans-serif'

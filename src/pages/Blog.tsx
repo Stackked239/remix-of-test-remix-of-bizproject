@@ -477,7 +477,7 @@ const Blog = () => {
               <button
                 onClick={() => {
                   document.activeElement instanceof HTMLElement && document.activeElement.blur();
-                  const offset = 100; // Account for navbar height
+                  const offset = 80; // Account for navbar height
                   const elementPosition = resultsRef.current?.getBoundingClientRect().top ?? 0;
                   const offsetPosition = elementPosition + window.pageYOffset - offset;
                   window.scrollTo({ top: offsetPosition, behavior: 'smooth' });

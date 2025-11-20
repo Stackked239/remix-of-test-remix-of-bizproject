@@ -154,6 +154,12 @@ const App = () => (
             <Route path="/biztools/toolbox/customer-journey-maps-tool" element={<CustomerJourneyMapsTool />} />
             <Route path="/search" element={<Search />} />
             <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
+            
+            {/* Redirects for common URL variations */}
+            <Route path="/faq" element={<FAQs />} />
+            <Route path="/blog/e-commerce-scaling-smb-2025" element={<ECommerceScalingSMB2025 />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

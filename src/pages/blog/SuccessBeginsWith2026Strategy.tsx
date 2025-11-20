@@ -125,26 +125,14 @@ const SuccessBeginsWith2026Strategy = () => {
             </div>
 
             {/* Hero Image */}
-            <figure className="mb-8 rounded-xl overflow-hidden shadow-lg">
+            <div className="mb-8">
               <img
                 src={heroImage}
                 alt="Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-xl"
                 loading="eager"
               />
-              <figcaption className="text-sm mt-3 text-center" style={{ color: 'hsl(var(--foreground) / 0.6)' }}>
-                Strategic planning in action | Photo by{' '}
-                <a 
-                  href="https://unsplash.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="underline hover:no-underline"
-                  style={{ color: 'hsl(var(--biz-navy))' }}
-                >
-                  Unsplash
-                </a>
-              </figcaption>
-            </figure>
+            </div>
           </div>
         </header>
 
@@ -193,7 +181,7 @@ const SuccessBeginsWith2026Strategy = () => {
               </p>
 
               <p className="text-lg leading-relaxed">
-                Break goals into steps: If AI adoption is key (with 56% of under-35 founders leading the charge), start with integrating tools for customer support or marketing. BizHealth.ai's tiers—from <Link to="/pricing" className="font-semibold underline hover:no-underline" style={{ color: 'hsl(var(--biz-navy))' }}>$99 Basics to $299 Team Alignment</Link>—provide clarity-first reports to prioritize these. Projections show B2B SaaS hitting $300B by 2025, extending into 2026 with superapps for workflows.
+                Break goals into steps: If AI adoption is key (with 56% of under-35 founders leading the charge), start with integrating tools for customer support or marketing. BizHealth.ai's tiers—from <Link to="/pricing" className="font-semibold underline hover:no-underline" style={{ color: 'hsl(var(--biz-navy))' }}>$199 Essentials to $799 Enterprise</Link>—provide clarity-first reports to prioritize these. Projections show B2B SaaS hitting $300B by 2025, extending into 2026 with superapps for workflows.
               </p>
 
               <p className="text-lg leading-relaxed">
@@ -397,10 +385,10 @@ const SuccessBeginsWith2026Strategy = () => {
                   background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-blue)))',
                 }}
               >
-                <h3 className="text-2xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--biz-blue))' }}>
                   Start Your 2026 Strategy Today
                 </h3>
-                <p className="text-lg mb-6 text-white/90">
+                <p className="text-lg mb-6" style={{ color: 'hsl(var(--biz-blue))' }}>
                   Get your comprehensive business health assessment and unlock AI-powered insights for sustainable growth.
                 </p>
                 <Link
@@ -415,21 +403,6 @@ const SuccessBeginsWith2026Strategy = () => {
                 </Link>
               </div>
 
-              {/* Author Bio */}
-              <div 
-                className="mt-12 p-6 rounded-lg border-l-4"
-                style={{
-                  backgroundColor: 'hsl(var(--biz-navy) / 0.05)',
-                  borderColor: 'hsl(var(--biz-navy))',
-                }}
-              >
-                <h3 className="text-xl font-semibold mb-3" style={{ color: 'hsl(var(--biz-navy))' }}>
-                  About the Author
-                </h3>
-                <p style={{ color: 'hsl(var(--foreground))' }}>
-                  The <strong>BizHealth.ai Research Team</strong> consists of business analysts, data scientists, and SMB strategy experts with over 50 years of combined experience in AI-driven business intelligence, financial analytics, and strategic planning. Our team is dedicated to helping small and medium-sized businesses make data-driven decisions that drive sustainable growth.
-                </p>
-              </div>
 
             </div>
           </div>

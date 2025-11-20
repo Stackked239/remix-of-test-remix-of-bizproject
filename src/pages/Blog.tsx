@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
@@ -38,6 +38,7 @@ import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixin
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const resultsRef = useRef<HTMLElement>(null);
   
   const featuredPost = {
     title: "The Complete Guide to Business Health Assessment in 2025",
@@ -474,7 +475,10 @@ const Blog = () => {
                 className="w-full pl-10 pr-20 py-3 border border-border rounded-lg bg-background/95 backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary shadow-lg"
               />
               <button
-                onClick={() => document.activeElement instanceof HTMLElement && document.activeElement.blur()}
+                onClick={() => {
+                  document.activeElement instanceof HTMLElement && document.activeElement.blur();
+                  resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
               >
                 Search
@@ -601,7 +605,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="pt-8 pb-20 bg-biz-grey/10">
+      <section ref={resultsRef} className="pt-8 pb-20 bg-biz-grey/10">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Results Count */}

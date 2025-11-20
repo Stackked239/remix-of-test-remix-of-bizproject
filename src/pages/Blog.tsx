@@ -21,6 +21,7 @@ import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-vol
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
 import smbTeamHeroImage from "@/assets/smb-team-collaboration-hero.webp";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
@@ -59,7 +60,7 @@ const Blog = () => {
       readTime: "12 min read",
       category: "Business Strategy, Business Leadership, Business Intelligence, Risk Management",
       slug: "/blog/success-begins-with-2026-strategy",
-      imageUrl: businessAnalystImage,
+      imageUrl: businessStrategyPlanningImage,
       altText: "Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop",
       keywords: "business planning, 2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment, 2026 growth, growth plan"
     },

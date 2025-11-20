@@ -287,7 +287,7 @@ const FAQs = () => {
 
           {/* Search Bar */}
           <div className="max-w-4xl mx-auto mb-8 p-6 rounded-lg" style={{
-            backgroundColor: 'hsl(var(--biz-green) / 0.05)'
+            backgroundColor: 'hsl(var(--biz-green) / 0.25)'
           }}>
             <Card className="shadow-lg border-2" style={{
               borderColor: 'hsl(var(--biz-blue))',

@@ -477,7 +477,10 @@ const Blog = () => {
               <button
                 onClick={() => {
                   document.activeElement instanceof HTMLElement && document.activeElement.blur();
-                  resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  const offset = 100; // Account for navbar height
+                  const elementPosition = resultsRef.current?.getBoundingClientRect().top ?? 0;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/90 text-white px-4 py-1.5 rounded-md transition-colors text-sm font-medium"
               >

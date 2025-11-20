@@ -179,6 +179,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
+        excerpt: "Discover why proactive 2026 business planning and a clear growth plan are essential for SMBs. Learn practical business planning strategies, 2026 growth prep, and how to align your team around a focused roadmap.",
+        url: "/blog/success-begins-with-2026-strategy",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
         title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
         excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings.",
         url: "/blog/Q4-Cost-Cuts-2025",

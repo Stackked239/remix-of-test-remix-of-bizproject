@@ -91,10 +91,10 @@ const Pricing = () => {
                 variant="hero" 
                 size="lg"
                 onClick={handlePayment}
-                className="text-xl px-12 py-6 h-auto mb-8"
+                className="text-sm sm:text-base md:text-xl px-4 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 h-auto mb-8 w-full sm:w-auto"
               >
                 Get Your Business Report Now
-                <CreditCard className="w-6 h-6" />
+                <CreditCard className="w-5 h-5 sm:w-6 sm:h-6" />
               </Button>
               
               <p className="text-sm text-muted-foreground">

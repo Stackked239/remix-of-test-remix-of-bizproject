@@ -13,6 +13,7 @@ import { CreditCard, Check, ArrowLeft, Shield } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import SEO from '@/components/SEO';
 
 const TIER_PRICING = {
   essentials: { price: 99, originalPrice: 199, name: 'Essentials', questions: 50, reports: "Owner's Report", savings: 100 },
@@ -114,6 +115,11 @@ const Checkout = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO 
+        title="Checkout - BizHealth.ai"
+        description="Complete your business health assessment purchase"
+        noindex={true}
+      />
       <GlobalNavigation />
       
       <main className="flex-1 container mx-auto px-4 py-8 max-w-4xl">

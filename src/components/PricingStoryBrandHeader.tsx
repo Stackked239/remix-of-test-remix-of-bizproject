@@ -72,7 +72,7 @@ const PricingStoryBrandHeader = () => {
             <Button
               onClick={handleScrollToPlans}
               size="lg"
-              className="font-open-sans font-semibold text-lg px-10 py-7 h-auto bg-biz-green hover:bg-growth-hover text-biz-navy transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-biz-green/50 focus:outline-none"
+              className="font-open-sans font-semibold text-lg px-10 py-7 h-auto bg-biz-green hover:bg-growth-hover text-biz-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-biz-green/50 focus:outline-none"
               aria-label="Scroll to pricing options"
             >
               See Your Options Below
@@ -80,7 +80,7 @@ const PricingStoryBrandHeader = () => {
             </Button>
 
             {/* Visual trust indicators with proper spacing */}
-            <div className="mt-16 pt-12 border-t border-biz-grey/30">
+            <div className="mt-10 pt-8 border-t border-biz-grey/30">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">

@@ -84,7 +84,7 @@ const PricingStoryBrandHeader = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">
-                    95%
+                    90%
                   </div>
                   <p className="font-open-sans text-sm md:text-base text-biz-white">
                     Savings vs. Traditional Consulting
@@ -92,7 +92,7 @@ const PricingStoryBrandHeader = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">
-                    30-40min
+                    30-40 min.
                   </div>
                   <p className="font-open-sans text-sm md:text-base text-biz-white">
                     Fast Report Delivery

@@ -45,7 +45,7 @@ const PricingStoryBrandHeader = () => {
       </script>
 
       <section 
-        className="relative bg-biz-navy text-biz-white pt-40 pb-20 md:pb-28 overflow-hidden"
+        className="relative bg-biz-navy text-biz-white pt-44 pb-20 md:pb-28 overflow-hidden"
         role="banner"
         aria-label="Pricing page header"
       >

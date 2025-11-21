@@ -100,11 +100,8 @@ const NotFound = () => {
             <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-white mb-4">
               Page Not Found
             </h2>
-            <p className="font-open-sans text-lg text-white/90 max-w-2xl mx-auto mb-4">
-              Well, this is awkward. The page you're looking for appears to be "Out of the Office". It may have been moved, deleted, or perhaps it never existed (we don't judge).
-            </p>
-            <p className="font-open-sans text-xl font-semibold text-biz-lime max-w-2xl mx-auto">
-              Let's get you back on the beaten path.
+            <p className="font-open-sans text-lg text-white/90 max-w-2xl mx-auto">
+              Well, this is awkward. The page you're looking for appears to be 'Out of the Office'. It may have been moved, deleted, or perhaps it never existed (we don't judge).
             </p>
           </div>
           

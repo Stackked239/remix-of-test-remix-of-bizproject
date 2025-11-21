@@ -1,7 +1,21 @@
 # Netlify Configuration for BizHealth.ai
 # Static Site Generation (SSG) with SPA fallback
 
-# Redirect www to non-www
+# Redirect HTTP to HTTPS for www
+[[redirects]]
+  from = "http://www.bizhealth.ai/*"
+  to = "https://bizhealth.ai/:splat"
+  status = 301
+  force = true
+
+# Redirect HTTP to HTTPS for non-www
+[[redirects]]
+  from = "http://bizhealth.ai/*"
+  to = "https://bizhealth.ai/:splat"
+  status = 301
+  force = true
+
+# Redirect HTTPS www to non-www
 [[redirects]]
   from = "https://www.bizhealth.ai/*"
   to = "https://bizhealth.ai/:splat"

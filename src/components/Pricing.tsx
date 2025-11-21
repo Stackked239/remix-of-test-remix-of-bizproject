@@ -132,7 +132,7 @@ const Pricing = () => {
             <div className="grid md:grid-cols-4 gap-6 pt-8 border-t border-border/50">
               {included.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex p-3 rounded-xl bg-growth shadow-sm mb-3">
+                  <div className="inline-flex p-3 rounded-xl bg-growth shadow-sm mb-3 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-growth-hover cursor-pointer">
                     <item.icon className="w-6 h-6 text-growth-foreground" />
                   </div>
                   <h5 className="font-semibold text-sm mb-1 text-foreground">{item.title}</h5>

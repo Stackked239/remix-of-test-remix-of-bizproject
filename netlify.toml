@@ -84,6 +84,36 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/solving-smb-workforce-gaps"
+  to = "/blog/solving-smb-workforce-gaps-2025"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/real-time-analytics-smb"
+  to = "/blog/real-time-analytics-smb-agility"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biz-growth"
+  to = "/bizgrowth"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biz-guides"
+  to = "/bizguides"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering
   command = "chmod +x build-ssg.sh && ./build-ssg.sh"

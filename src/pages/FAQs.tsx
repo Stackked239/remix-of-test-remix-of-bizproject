@@ -82,7 +82,7 @@ const FAQs = () => {
     {
       id: "pricing",
       question: "How much does BizHealth.ai cost?",
-      answer: "Pricing ranges from $99 to $699 for a one-time diagnostic, delivering 20-25x ROI by replacing costly consulting. Visit bizhealth.ai/pricing for details.",
+      answer: "Pricing ranges from $199 to $799 for a one-time assessment with diagnostics, delivering 20x ROI versus costly consultants. Visit <a href='https://bizhealth.ai/pricing' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>Pricing & Tier Plans</a> for details.",
       icon: DollarSign,
       category: "Pricing"
     },

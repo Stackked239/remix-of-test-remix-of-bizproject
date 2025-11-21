@@ -155,16 +155,6 @@ const App = () => (
             <Route path="/search" element={<Search />} />
             <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
             
-            {/* Redirects for common URL variations */}
-            <Route path="/faq" element={<FAQs />} />
-            <Route path="/blog/e-commerce-scaling-smb-2025" element={<ECommerceScalingSMB2025 />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/biz-growth" element={<BizGrowth />} />
-            <Route path="/biz-guides" element={<BizGuides />} />
-            <Route path="/blog/solving-smb-workforce-gaps" element={<SolvingSMBWorkforceGaps />} />
-            <Route path="/blog/talent-wars-hiring" element={<TalentWarsHiring />} />
-            <Route path="/blog/real-time-analytics-smb" element={<RealTimeAnalyticsSMB />} />
-            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

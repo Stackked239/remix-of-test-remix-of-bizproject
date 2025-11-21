@@ -86,7 +86,7 @@ const PricingStoryBrandHeader = () => {
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">
                     95%
                   </div>
-                  <p className="font-open-sans text-sm md:text-base text-biz-grey">
+                  <p className="font-open-sans text-sm md:text-base text-biz-white">
                     Savings vs. Traditional Consulting
                   </p>
                 </div>
@@ -94,7 +94,7 @@ const PricingStoryBrandHeader = () => {
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">
                     30-40min
                   </div>
-                  <p className="font-open-sans text-sm md:text-base text-biz-grey">
+                  <p className="font-open-sans text-sm md:text-base text-biz-white">
                     Fast Report Delivery
                   </p>
                 </div>
@@ -102,7 +102,7 @@ const PricingStoryBrandHeader = () => {
                   <div className="text-3xl md:text-4xl font-montserrat font-bold text-biz-green mb-2">
                     No Lock-in
                   </div>
-                  <p className="font-open-sans text-sm md:text-base text-biz-grey">
+                  <p className="font-open-sans text-sm md:text-base text-biz-white">
                     One-Time Payment, No Subscriptions
                   </p>
                 </div>

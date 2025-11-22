@@ -30,7 +30,8 @@ import {
   CheckCircle2,
   Bot,
   ArrowDownRight,
-  Mail
+  Mail,
+  AlertCircle
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import bizHealthLogo from "@/assets/bizhealth-logo-main.jpg";
@@ -91,6 +92,20 @@ const FAQs = () => {
       question: "Is my data secure?",
       answer: "Yes, we use encryption (in-transit/at-rest), access controls, and SOC 2-aligned audits to protect your data. We collect only business inputs (e.g., revenue, KPIs), comply with GDPR/CCPA, and offer rights to access/delete. See our Privacy Policy at bizhealth.ai/privacy.",
       icon: Lock,
+      category: "Security"
+    },
+    {
+      id: "data-protection-measures",
+      question: "What specific measures protect my client data?",
+      answer: "BizHealth.ai employs bank-level security including TLS 1.3 encryption for data in transit, AES-256 encryption at rest, multi-factor authentication (MFA), role-based access controls (RBAC), and automated daily backups with geographic redundancy. We partner with enterprise-grade providers like Google Cloud (SOC 2/3, ISO 27001) and Stripe (PCI DSS Level 1) to ensure your data is protected by industry-leading infrastructure.",
+      icon: Shield,
+      category: "Security"
+    },
+    {
+      id: "data-breach-protection",
+      question: "How does BizHealth.ai handle potential security incidents?",
+      answer: "We maintain a comprehensive incident response plan with 24/7 monitoring, automated threat detection, and a dedicated security team. In the unlikely event of a security incident, we follow strict protocols: immediate detection and containment, transparent communication within 72 hours per GDPR requirements, detailed incident reports, and implementation of corrective measures. Our proactive approach includes regular security audits, penetration testing, and continuous system monitoring to prevent incidents before they occur.",
+      icon: AlertCircle,
       category: "Security"
     },
     {

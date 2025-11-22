@@ -26,11 +26,11 @@ const Security = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen bg-background pt-4">
+      <main className="min-h-screen bg-background pt-12">
         <SecurityHero />
 
         {/* Security Commitment Section */}
-        <section className="py-16 bg-background">
+        <section className="py-10 bg-background">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="border-l-4 border-biz-green pl-8">
               <p className="text-lg text-foreground leading-relaxed mb-6">
@@ -557,7 +557,7 @@ const Security = () => {
         </SecuritySection>
 
         {/* Questions & Support Section */}
-        <section className="py-16 bg-biz-navy text-white">
+        <section className="py-12 bg-biz-navy text-white">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="text-3xl font-bold text-white mb-4 text-center">Have Security Questions? We're Here to Help.</h2>
             <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
@@ -603,7 +603,7 @@ const Security = () => {
         </section>
 
         {/* Updates Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-8 bg-muted/30">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center mb-8">
               <p className="text-sm text-muted-foreground">

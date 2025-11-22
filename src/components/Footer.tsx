@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-sm">
                 <Shield className="w-4 h-4" />
-                <span>SOC 2 Compliant</span>
+                <span>SOC 2 Type II (In Progress)</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <FileText className="w-4 h-4" />

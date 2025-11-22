@@ -118,7 +118,7 @@ const Hero = () => {
   // Remove scroll animation - banner stays fixed
 
   const trustIndicators = [
-    { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 Certified" },
+    { icon: Shield, label: "Bank-Grade Security", value: "SOC 2 (In Progress)" },
     { icon: Clock, label: "Reports Generated", value: "24 hrs/day" },
     { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
     { icon: Users, label: "Trusted Worldwide", value: "2,500+ Businesses" }

@@ -296,7 +296,7 @@ const GlobalFooter = () => {
                   </span>
                   <span className="flex items-center space-x-1">
                     <span role="img" aria-label="Certification">🏆</span>
-                    <span>SOC 2 Type II</span>
+                    <span>SOC 2 Type II (In Progress)</span>
                   </span>
                 </div>
               </div>

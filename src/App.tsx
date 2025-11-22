@@ -65,6 +65,7 @@ import Disclaimer from "./pages/Disclaimer";
 import FAQs from "./pages/FAQs";
 import GlossaryOfTerms from "./pages/GlossaryOfTerms";
 import Reports from "./pages/Reports";
+import Security from "./pages/Security";
 import CashFlowTracker from "./pages/tools/CashFlowTracker";
 import ProcessMappingTools from "./pages/tools/ProcessMappingTools";
 import ProcessMappingGuide from "./pages/tools/ProcessMappingGuide";
@@ -141,9 +142,10 @@ const App = () => (
             <Route path="/blog/confirm-business-weaknesses-without-consultants" element={<ConfirmBusinessWeaknessesWithoutConsultants />} />
             <Route path="/blog/small-business-struggles" element={<SmallBusinessStruggles />} />
             <Route path="/blog/success-begins-with-2026-strategy" element={<SuccessBeginsWith2026Strategy />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/security" element={<Security />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/glossary-of-terms" element={<GlossaryOfTerms />} />
             <Route path="/reports" element={<Reports />} />

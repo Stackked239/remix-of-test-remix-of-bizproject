@@ -119,7 +119,7 @@ const Benefits = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />
-              <span className="font-bold">GDPR Compliant & SOC 2 (In Progress)</span>
+              <span className="font-bold">Enterprise Security</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />

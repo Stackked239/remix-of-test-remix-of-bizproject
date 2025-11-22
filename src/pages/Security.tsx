@@ -2,6 +2,7 @@ import { Shield, Lock, Key, FileCheck, Activity, Users, Cloud, TrendingUp, BookO
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalNavigation from '@/components/GlobalNavigation';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Button } from '@/components/ui/button';
 import SecurityHero from '@/components/security/SecurityHero';
 import SecuritySection from '@/components/security/SecuritySection';
@@ -22,9 +23,10 @@ const Security = () => {
 
       <StructuredData type="organization" />
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background pt-4">
         <SecurityHero />
 
         {/* Security Commitment Section */}

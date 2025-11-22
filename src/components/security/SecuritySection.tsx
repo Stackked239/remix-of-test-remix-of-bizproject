@@ -17,7 +17,7 @@ const SecuritySection = ({
   bgColor = "bg-background" 
 }: SecuritySectionProps) => {
   return (
-    <section className={`py-16 md:py-20 ${bgColor}`}>
+    <section className={`py-10 md:py-12 ${bgColor}`}>
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex items-start gap-4 mb-8">
           <div className={`${iconColor} flex-shrink-0`}>

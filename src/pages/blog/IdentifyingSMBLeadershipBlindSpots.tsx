@@ -2,6 +2,7 @@ import { ArrowLeft, BookOpen, TrendingUp, Users, AlertTriangle, Target } from "l
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -58,6 +59,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
       />
 
       <div className="min-h-screen bg-background">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         <article className="container mx-auto px-4 py-12 max-w-4xl">

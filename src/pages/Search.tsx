@@ -242,6 +242,14 @@ const Search = () => {
       },
       {
         type: "Blog Post",
+        title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
+        excerpt: "Discover proven strategies for small businesses to scale operations sustainably. Learn the SCALE framework, avoid growth traps, build operational architecture for controlled expansion.",
+        url: "/blog/scaling-operations-without-losing-control",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
         title: "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",
         excerpt: "How family-owned micro retailers can leverage remote tools while preserving their personal touch.",
         url: "/blog/retail-remote-tools",

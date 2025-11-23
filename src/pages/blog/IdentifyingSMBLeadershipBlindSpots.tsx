@@ -178,7 +178,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               Meanwhile, <Link to="/blog/scaling-operations-without-losing-control" className="text-primary hover:underline">delegation represents the ultimate growth mechanism</Link>. It frees you to focus on strategic priorities while developing the leadership pipeline your business will need to thrive beyond your direct involvement.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> If your team can't make meaningful decisions when you're unavailable for a week, you have a control problem masquerading as quality assurance.
               </p>
@@ -206,7 +206,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               SMB environments can intensify this dynamic. With smaller teams and less formal structure, the lines between personal and professional relationships blur. Employees may hesitate to share critical feedback because they don't want to damage what feels like a friendship, or because they fear the personal impact in a small organization where everyone knows everyone.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> When was the last time a team member told you something you genuinely didn't want to hear? If you can't remember, your echo chamber may be more soundproof than you realize.
               </p>
@@ -230,7 +230,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               The Federal Reserve reports that 94% of small business owners have faced financial challenges, with 54% specifically citing uneven cash flow. These aren't abstract statistics—they represent real businesses where leaders couldn't see what they weren't measuring.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> Can you articulate your current cash conversion cycle? Your break-even point by product line? If these questions require research to answer, you may be flying financially blind.
               </p>
@@ -258,7 +258,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               The trap's power lies in its plausibility. Today's urgency is real. The customer issue is genuinely important. This week's deadline does matter. But when urgency consistently displaces importance, you end up building a business that can handle today but isn't prepared for tomorrow.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> List your top three strategic priorities from twelve months ago. How much progress have you actually made? If they're still on the list, the urgent is eating your important.
               </p>
@@ -286,7 +286,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               Surveys reveal that over 50% of employees say their companies do little with the feedback they provide. This creates a particularly damaging loop: leaders ask for input, employees share concerns, nothing visibly changes, and employees conclude their voices don't matter. The next time leadership asks for feedback, participation and honesty decline.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> Ask three team members to explain your company's top priority for this quarter. If you get three different answers—or uncertain looks—your communication may not be landing the way you think it is.
               </p>
@@ -310,7 +310,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               The hiring mirror also manifests in capability gaps. Leaders naturally gravitate toward hiring for strengths they understand and value, potentially underweighting capabilities outside their expertise. A technically brilliant founder might consistently hire for technical skills while underinvesting in operational, financial, or people leadership capabilities.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> Think about your last three significant hires. Do they represent genuinely different perspectives, or variations on familiar patterns?
               </p>
@@ -334,7 +334,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               The companies that continue growing are often those that remain paranoid about what they can't see—systematically questioning their assumptions even when results suggest everything is working.
             </p>
 
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r">
+            <div className="bg-[hsl(var(--biz-green)/0.15)] border-l-4 border-[hsl(var(--biz-green))] p-6 my-8 rounded-r">
               <p className="font-semibold text-foreground m-0">
                 <strong>The Reality Check:</strong> What was true about your business two years ago that's no longer true today? If your answer is "not much," you may not be looking closely enough.
               </p>

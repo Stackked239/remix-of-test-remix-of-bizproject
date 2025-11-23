@@ -450,14 +450,21 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               Your business reflects your leadership—its strengths and its limitations. The gaps you can't see are still shaping outcomes, still affecting your team, still influencing your trajectory. The question isn't whether you have blind spots. It's whether you're willing to look.
             </p>
 
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 my-12">
-              <h3 className="text-xl font-bold text-foreground mb-4">Illuminate Your Leadership Blind Spots</h3>
-              <p className="text-foreground/80 mb-6">
-                BizHealth.ai helps small and mid-size business leaders gain clarity on what's working and what isn't. Our <Link to="/how-it-works" className="text-primary hover:underline font-medium">Business Health Analysis</Link> tools provide objective diagnostic insights that illuminate blind spots and create actionable roadmaps for leadership development and business improvement.
+            <div className="rounded-lg p-8 my-12" style={{
+              backgroundColor: 'hsl(var(--biz-green) / 0.15)',
+              borderLeft: '4px solid hsl(var(--biz-green))'
+            }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--biz-navy))' }}>Illuminate Your Leadership Blind Spots</h3>
+              <p className="mb-6" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
+                BizHealth.ai helps small and mid-size business leaders gain clarity on what's working and what isn't. Our <Link to="/how-it-works" className="font-medium hover:underline" style={{ color: 'hsl(var(--biz-navy))' }}>Business Health Analysis</Link> tools provide objective diagnostic insights that illuminate blind spots and create actionable roadmaps for leadership development and business improvement.
               </p>
               <Link
                 to="/pricing"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-medium"
+                style={{
+                  backgroundColor: 'hsl(var(--biz-navy))',
+                  color: 'white'
+                }}
               >
                 <TrendingUp className="h-5 w-5" />
                 Start Your Assessment

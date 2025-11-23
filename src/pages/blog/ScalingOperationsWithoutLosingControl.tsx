@@ -216,7 +216,11 @@ const ScalingOperationsWithoutLosingControl = () => {
                 </li>
               </ul>
 
-              <p className="mb-8 font-medium" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.05)', padding: '1rem', borderRadius: '0.5rem' }}>
+              <p className="mb-8 font-medium p-6 rounded-lg" style={{ 
+                backgroundColor: 'hsl(var(--biz-green) / 0.15)', 
+                borderLeft: '4px solid hsl(var(--biz-green))',
+                color: 'hsl(var(--biz-navy))'
+              }}>
                 If three or more of these symptoms sound familiar, it's time to stop, assess, and restructure before proceeding further.
               </p>
 

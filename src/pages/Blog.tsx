@@ -35,6 +35,7 @@ import survivalChecklistImage from "@/assets/small-business-survival-checklist-2
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -53,6 +54,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
+      excerpt: "Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture that turns growth from chaos into strength.",
+      author: "BizHealth.ai Research Team",
+      date: "November 23, 2025",
+      readTime: "12 min read",
+      category: "Operations, Business Strategy, Business Intelligence, Business Leadership",
+      slug: "/blog/scaling-operations-without-losing-control",
+      imageUrl: scalingOperationsImage,
+      altText: "Manufacturing team leaders discussing operational scaling strategies in modern facility - small business growth without losing control",
+      keywords: "business scaling, operations management, SMB growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
+    },
     {
       title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
       excerpt: "Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics.",

@@ -174,6 +174,13 @@ const Search = () => {
         excerpt: "Our logo, company logo, BizHealth.ai logo. This is our company logo - discover the meaning behind the BizHealth.ai logo and brand story. The grid represents 12 key business health areas.",
         url: "/logo",
         icon: Home
+      },
+      {
+        type: "Page",
+        title: "Security & Data Protection - BizHealth.ai",
+        excerpt: "Learn how BizHealth.ai protects your data with enterprise security, bank-level encryption, SOC 2 Type II (In Progress), GDPR compliance, secure infrastructure, data protection, risk management, and transparent security practices for SMBs.",
+        url: "/security",
+        icon: Home
       }
     ],
     blogs: [

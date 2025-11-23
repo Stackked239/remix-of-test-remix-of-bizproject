@@ -293,7 +293,7 @@ const FAQs = () => {
             <p className="text-sm text-biz-white/85" style={{ 
               fontFamily: 'Open Sans, sans-serif'
             }}>
-              Last Updated: October 9, 2025
+              Last Updated: November 22, 2025
             </p>
           </div>
         </div>

@@ -62,7 +62,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
         <PromotionalBanner />
         <GlobalNavigation />
 
-        <article className="container mx-auto px-4 pt-32 pb-12 max-w-4xl">
+        <article className="container mx-auto px-4 pt-28 pb-12 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
             <Link to="/blog" className="hover:text-foreground transition-colors flex items-center gap-2">

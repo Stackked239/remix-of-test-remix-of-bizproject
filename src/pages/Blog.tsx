@@ -36,6 +36,7 @@ import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -54,6 +55,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
+      excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in their leaders and how to build organizational self-awareness with practical strategies.",
+      author: "BizHealth.ai Research Team",
+      date: "November 23, 2025",
+      readTime: "12 min read",
+      category: "Business Leadership, Business Strategy, Risk Management",
+      slug: "/blog/identifying-smb-leadership-blind-spots",
+      imageUrl: leadershipBlindSpotsImage,
+      altText: "Business leader in office reflecting on leadership blind spots and team dynamics in professional environment",
+      keywords: "leadership blind spots, SMB leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies, perception gap, leadership effectiveness"
+    },
     {
       title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
       excerpt: "Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture that turns growth from chaos into strength.",

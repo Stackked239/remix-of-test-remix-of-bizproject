@@ -242,6 +242,14 @@ const Search = () => {
       },
       {
         type: "Blog Post",
+        title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
+        excerpt: "Discover the 7 critical leadership blind spots affecting SMB success. Learn practical strategies to build organizational self-awareness, improve leadership effectiveness, and close the perception gap.",
+        url: "/blog/identifying-smb-leadership-blind-spots",
+        icon: FileText,
+        category: "Business Leadership"
+      },
+      {
+        type: "Blog Post",
         title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
         excerpt: "Discover proven strategies for small businesses to scale operations sustainably. Learn the SCALE framework, avoid growth traps, build operational architecture for controlled expansion.",
         url: "/blog/scaling-operations-without-losing-control",

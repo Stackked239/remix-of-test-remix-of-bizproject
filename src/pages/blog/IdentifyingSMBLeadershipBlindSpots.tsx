@@ -73,23 +73,35 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
 
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-6">
-            <Link to="/blog?category=business-leadership">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
-                <Users className="h-3 w-3" />
-                Business Leadership
-              </span>
+            <Link
+              to="/blog?category=business-leadership"
+              className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
+                color: 'hsl(var(--biz-navy))',
+              }}
+            >
+              Business Leadership
             </Link>
-            <Link to="/blog?category=business-strategy">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 text-secondary-foreground hover:bg-secondary/20 transition-colors">
-                <Target className="h-3 w-3" />
-                Business Strategy
-              </span>
+            <Link
+              to="/blog?category=business-strategy"
+              className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
+                color: 'hsl(var(--biz-navy))',
+              }}
+            >
+              Business Strategy
             </Link>
-            <Link to="/blog?category=risk-management">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent-foreground hover:bg-accent/20 transition-colors">
-                <AlertTriangle className="h-3 w-3" />
-                Risk Management
-              </span>
+            <Link
+              to="/blog?category=risk-management"
+              className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
+              style={{
+                backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
+                color: 'hsl(var(--biz-navy))',
+              }}
+            >
+              Risk Management
             </Link>
           </div>
 

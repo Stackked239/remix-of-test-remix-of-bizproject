@@ -526,8 +526,8 @@ const ScalingOperationsWithoutLosingControl = () => {
               </p>
 
               <div className="mt-12 p-8 rounded-lg" style={{ 
-                backgroundColor: 'hsl(var(--biz-navy) / 0.05)', 
-                borderLeft: '4px solid hsl(var(--biz-navy))'
+                backgroundColor: 'hsl(var(--biz-green) / 0.15)', 
+                borderLeft: '4px solid hsl(var(--biz-green))'
               }}>
                 <p className="text-lg font-semibold mb-4" style={{ color: 'hsl(var(--biz-navy))' }}>
                   Stop guessing. Start building systems that scale.

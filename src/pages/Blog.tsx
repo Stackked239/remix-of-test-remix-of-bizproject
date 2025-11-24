@@ -63,7 +63,7 @@ const Blog = () => {
       date: "July 27, 2025",
       readTime: "15 min read",
       category: "Business Strategy",
-      slug: "/blog/business-health-assessment",
+      slug: "/blog/business-health-assessment-2025",
       imageUrl: businessHealthImage,
       altText: "Comprehensive business health assessment with diagnostic charts and performance metrics for overall company wellness",
       keywords: "business health assessment, business diagnostic, company analysis, operational health, financial assessment, business metrics, health check, business evaluation"
@@ -453,6 +453,13 @@ const Blog = () => {
         (post.keywords && post.keywords.toLowerCase().includes(searchLower))
       );
     }
+
+    // Sort by date (most recent first)
+    filtered = filtered.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
 
     return filtered;
   }, [selectedCategory, searchTerm, blogPosts]);

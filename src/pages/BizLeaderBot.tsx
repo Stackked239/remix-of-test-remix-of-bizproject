@@ -154,8 +154,8 @@ const BizLeaderBot = () => {
                         <MessageSquare className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-white font-bold text-lg">BizLeaDeR Leadership Mentor</h2>
-                        <div className="flex items-center gap-2 text-white/70 text-sm">
+                        <h2 className="text-biz-navy font-bold text-lg">BizLeaDeR Leadership Mentor</h2>
+                        <div className="flex items-center gap-2 text-biz-navy/70 text-sm">
                           <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-biz-green opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-biz-green"></span>
@@ -166,7 +166,7 @@ const BizLeaderBot = () => {
                     </div>
 
                     {/* Right: Privacy Badge */}
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <div className="flex items-center gap-2 text-biz-navy/60 text-sm">
                       <Shield className="w-4 h-4" />
                       <span>Private Conversation</span>
                     </div>

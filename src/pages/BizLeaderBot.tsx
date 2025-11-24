@@ -117,7 +117,7 @@ const BizLeaderBot = () => {
               {/* Limited Time Badge */}
               <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-yellow-400 text-biz-navy text-sm font-semibold uppercase tracking-wider mb-8 animate-fade-in-up shadow-[0_4px_14px_rgba(163,230,53,0.4)] hover:scale-105 hover:shadow-[0_6px_20px_rgba(163,230,53,0.5)] transition-all duration-300 cursor-pointer">
                 <Clock className="w-4 h-4 text-biz-navy" />
-                Limited Time: Free Access
+                Limited Time: FREE Access
               </div>
 
               {/* Headline */}

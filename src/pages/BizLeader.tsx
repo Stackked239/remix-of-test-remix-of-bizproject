@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Crown, Users, TrendingUp, Award, CheckCircle, Play, BookOpen } from "lucide-react";
@@ -147,9 +148,12 @@ const BizLeader = () => {
               <Button 
                 size="lg"
                 className="bg-white text-biz-navy hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+                asChild
               >
-                Start Your Journey
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link to="/bizleader/leadership-development-bot">
+                  Start Your Journey
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </Button>
               <Button 
                 variant="outline"
@@ -305,9 +309,12 @@ const BizLeader = () => {
           <Button 
             size="lg"
             className="bg-white text-biz-lime hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+            asChild
           >
-            Start Your Leadership Journey
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <Link to="/bizleader/leadership-development-bot">
+              Start Your Leadership Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </Button>
         </div>
       </section>

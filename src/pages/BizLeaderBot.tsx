@@ -146,7 +146,7 @@ const BizLeaderBot = () => {
               {/* Bot Container */}
               <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
                 {/* Bot Header */}
-                <div className="bg-gradient-to-r from-biz-navy to-biz-navy-deep border-b-4 border-biz-green px-6 py-4">
+                <div className="bg-gradient-to-r from-biz-blue to-biz-blue-dark border-b-4 border-biz-green px-6 py-4">
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     {/* Left: Avatar and Info */}
                     <div className="flex items-center gap-4">

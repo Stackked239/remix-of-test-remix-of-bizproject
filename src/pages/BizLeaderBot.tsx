@@ -159,8 +159,8 @@ const BizLeaderBot = () => {
                         <h2 className="text-biz-navy font-bold text-lg">BizLeadership Sherpa</h2>
                         <div className="flex items-center gap-2 text-biz-navy/70 text-sm">
                           <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-biz-green opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-biz-green"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400"></span>
                           </span>
                           Online & Ready to Help
                         </div>

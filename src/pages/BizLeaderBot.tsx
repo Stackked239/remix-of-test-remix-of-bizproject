@@ -156,7 +156,7 @@ const BizLeaderBot = () => {
                         <MessageSquare className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-biz-navy font-bold text-lg">BizLeaDeR Leadership Mentor</h2>
+                        <h2 className="text-biz-navy font-bold text-lg">BizLeadership Sherpa</h2>
                         <div className="flex items-center gap-2 text-biz-navy/70 text-sm">
                           <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-biz-green opacity-75"></span>
@@ -185,10 +185,10 @@ const BizLeaderBot = () => {
                     frameBorder={1} 
                     marginHeight={0} 
                     marginWidth={0} 
-                    height="800px" 
+                    height="550px" 
                     width="100%" 
                     allowFullScreen
-                    title="BizLeaDeR Leadership Development AI Mentor"
+                    title="BizLeadership Sherpa"
                     className="rounded-lg"
                   />
                 </div>

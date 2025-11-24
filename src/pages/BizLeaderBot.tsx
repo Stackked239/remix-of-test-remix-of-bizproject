@@ -8,6 +8,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 
 const BizLeaderBot = () => {
@@ -100,6 +101,7 @@ const BizLeaderBot = () => {
       />
 
       <div className="min-h-screen bg-white">
+        <PromotionalBanner />
         <GlobalNavigation />
 
         {/* Hero Section */}
@@ -138,7 +140,7 @@ const BizLeaderBot = () => {
         </section>
 
         {/* Embedded Chatbot Section */}
-        <section className="relative -mt-12 pb-16">
+        <section className="relative -mt-12 pb-16 bg-biz-gray">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Bot Container */}

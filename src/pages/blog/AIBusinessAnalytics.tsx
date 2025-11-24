@@ -9,81 +9,99 @@ import { Link } from "react-router-dom";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 
 const AIBusinessAnalytics = () => {
+  const publishDate = '2024-12-15';
+  const modifiedDate = '2024-12-15';
+  const articleUrl = 'https://bizhealth.ai/blog/ai-business-analytics';
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <SEO 
         title="How AI is Revolutionizing Small Business Analytics | BizHealth.ai"
         description="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs. Learn about AI-powered analytics, automated insights, and data-driven decision making for small businesses."
-        keywords="AI business analytics, small business intelligence, AI for SMBs, business analytics tools, machine learning, data-driven decisions, automated insights"
-        canonical="https://bizhealth.ai/blog/ai-business-analytics"
+        keywords="AI business analytics, small business intelligence, AI for SMBs, business analytics tools, machine learning, data-driven decisions, automated insights, predictive analytics, business intelligence AI, SMB analytics 2025"
+        canonical={articleUrl}
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/ai-business-analytics-dashboard.jpg"
-        articlePublishedTime="2025-09-12"
+        ogImage={aiAnalyticsImage}
+        articlePublishedTime={publishDate}
+        articleModifiedTime={modifiedDate}
         articleAuthor="Jennifer Walsh"
       />
       <StructuredData 
         type="article"
         headline="How AI is Revolutionizing Small Business Analytics"
         description="Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses."
-        image="https://bizhealth.ai/assets/ai-business-analytics-dashboard.jpg"
-        datePublished="2025-09-12"
+        image={aiAnalyticsImage}
+        datePublished={publishDate}
+        dateModified={modifiedDate}
         author="Jennifer Walsh"
-        url="https://bizhealth.ai/blog/ai-business-analytics"
+        url={articleUrl}
       />
-      <GlobalNavigation />
-      
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Technology
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              How AI is Revolutionizing Small Business Analytics
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>Jennifer Walsh</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>September 12, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>10 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={aiAnalyticsImage} 
-              alt="AI-powered business analytics dashboard with futuristic data visualizations and machine learning for small business success"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
 
-      {/* Article Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
+      <div className="min-h-screen bg-background">
+        <GlobalNavigation />
+        
+        <article className="pt-40 pb-16 bg-gradient-to-b from-background to-muted/20">
+          <div className="container mx-auto px-4 py-12 max-w-4xl">
+            {/* Breadcrumb Navigation */}
+            <nav className="mb-8" aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+                <li className="select-none">/</li>
+                <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+                <li className="select-none">/</li>
+                <li className="text-foreground font-medium">AI Business Analytics</li>
+              </ol>
+            </nav>
+
+            {/* Article Header */}
+            <header className="mb-12">
+              <div className="flex flex-wrap gap-3 mb-6">
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  Technology
+                </span>
+                <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium">
+                  Business Intelligence
+                </span>
+                <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary-foreground rounded-full text-sm font-medium">
+                  Analytics
+                </span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                How AI is Revolutionizing Small Business Analytics
+              </h1>
+              
+              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-8">
+                <span className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  By Jennifer Walsh
+                </span>
+                <span className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  December 15, 2024
+                </span>
+                <span className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  10 minute read
+                </span>
+              </div>
+
+              {/* Hero Image */}
+              <figure className="mb-10 mx-auto" style={{ width: '85%' }}>
+                <img 
+                  src={aiAnalyticsImage} 
+                  alt="AI-powered business analytics dashboard with real-time data visualizations and machine learning insights for small business decision-making"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                  loading="eager"
+                />
+                <figcaption className="text-sm text-muted-foreground text-center mt-3 italic">
+                  AI analytics dashboards transform raw data into actionable business insights
+                </figcaption>
+              </figure>
+            </header>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Ever felt overwhelmed by the sheer volume of data in your small business, wondering how larger enterprises seem to turn it into gold while you're still sifting through spreadsheets? You're not alone—75% of small and medium-sized businesses are now experimenting with AI to level the playing field.
               </p>
@@ -161,7 +179,7 @@ const AIBusinessAnalytics = () => {
                 Despite AI's potential, many SMBs hesitate to adopt it. Let's address the most common concerns:
               </p>
 
-              <div className="bg-gradient-subtle rounded-lg p-6 mb-6">
+              <div className="bg-card border border-border rounded-lg p-6 mb-6">
                 <h4 className="font-semibold text-foreground mb-3">Concern: "It's Too Expensive"</h4>
                 <p className="text-muted-foreground mb-2">
                   <strong>Reality:</strong> Many AI tools now offer affordable, pay-as-you-go pricing. The ROI often justifies the cost within months.
@@ -171,7 +189,7 @@ const AIBusinessAnalytics = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-subtle rounded-lg p-6 mb-6">
+              <div className="bg-card border border-border rounded-lg p-6 mb-6">
                 <h4 className="font-semibold text-foreground mb-3">Concern: "We Don't Have the Technical Expertise"</h4>
                 <p className="text-muted-foreground mb-2">
                   <strong>Reality:</strong> Modern AI tools are designed for non-technical users with intuitive interfaces.
@@ -181,7 +199,7 @@ const AIBusinessAnalytics = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-subtle rounded-lg p-6 mb-6">
+              <div className="bg-card border border-border rounded-lg p-6 mb-6">
                 <h4 className="font-semibold text-foreground mb-3">Concern: "Our Data Isn't Ready"</h4>
                 <p className="text-muted-foreground mb-2">
                   <strong>Reality:</strong> You don't need perfect data to get started. AI can work with existing data and improve over time.
@@ -214,21 +232,35 @@ const AIBusinessAnalytics = () => {
               </p>
 
               {/* Call to Action */}
-              <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
-                <h3 className="text-2xl font-bold mb-4">Ready to Revolutionize Your Business Analytics?</h3>
-                <p className="text-white/90 mb-6">
-                  Discover how BizHealth.ai's AI-powered analytics can transform your business insights and decision-making.
-                </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Explore AI Analytics
-                </button>
+              <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-xl p-8 mt-12 mb-12 border border-primary/20">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mb-4">
+                    Ready to Revolutionize Your Business Analytics?
+                  </h3>
+                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Discover how BizHealth.ai's AI-powered analytics can transform your business insights and decision-making with comprehensive health assessments.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link 
+                      to="/pricing" 
+                      className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      Get Your Assessment
+                    </Link>
+                    <Link 
+                      to="/how-it-works" 
+                      className="inline-flex items-center justify-center bg-background border border-border px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <RelatedArticles articles={[
+        <RelatedArticles articles={[
         {
           title: "Business Intelligence ROI: Maximizing Returns",
           slug: "business-intelligence-roi",
@@ -247,11 +279,12 @@ const AIBusinessAnalytics = () => {
           category: "Financial Management",
           excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
         }
-      ]} />
+        ]} />
 
-      <GlobalFooter />
-      <PromotionalBanner />
-    </div>
+        <GlobalFooter />
+        <PromotionalBanner />
+      </div>
+    </>
   );
 };
 

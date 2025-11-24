@@ -75,10 +75,10 @@ const BizLeaderBot = () => {
   ];
 
   const metrics = [
-    { label: "Financial Health", value: 78, color: "bg-biz-green" },
-    { label: "Operational Efficiency", value: 65, color: "bg-biz-navy" },
-    { label: "Team & Culture", value: 82, color: "bg-biz-green" },
-    { label: "Strategic Alignment", value: 71, color: "bg-[#d4a853]" }
+    { label: "Financial Health", value: 71, color: "bg-yellow-500" },
+    { label: "Operational Efficiency", value: 62, color: "bg-biz-copper" },
+    { label: "Team & Culture", value: 86, color: "bg-green-500" },
+    { label: "Strategic Alignment", value: 56, color: "bg-red-400" }
   ];
 
   return (
@@ -378,7 +378,7 @@ const BizLeaderBot = () => {
                       <div key={index}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-sm font-medium text-biz-navy">{metric.label}</span>
-                          <span className="text-lg font-bold text-biz-navy">{metric.value}%</span>
+                          <span className="text-lg font-bold text-biz-navy">{metric.value}/100</span>
                         </div>
                         <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                           <div 

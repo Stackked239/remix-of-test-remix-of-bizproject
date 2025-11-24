@@ -153,7 +153,7 @@ const FAQs = () => {
     {
       id: "contact",
       question: "How do I contact support?",
-      answer: "Email us at <a href='mailto:support@bizhealth.ai' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>support@bizhealth.ai</a> or call our support line. We're here to simplify your journey and ensure you get the most out of your BizHealth.ai experience.",
+      answer: "We offer multiple ways to get help: (1) Use <strong>Sherpa</strong>, our AI chatbot available 24/7 in the bottom right corner of the website for instant answers, (2) Submit your question via our <a href='/contact' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>Contact Us page</a>, or (3) Email us directly at <a href='mailto:support@bizhealth.ai' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>support@bizhealth.ai</a>. We're here to simplify your journey and ensure you get the most out of your BizHealth.ai experience.",
       icon: HelpCircle,
       category: "Support"
     },

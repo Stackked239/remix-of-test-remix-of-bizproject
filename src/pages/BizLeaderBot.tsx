@@ -396,13 +396,13 @@ const BizLeaderBot = () => {
         </section>
 
         {/* Footer CTA */}
-        <section className="py-20 bg-gradient-to-br from-biz-navy via-biz-navy-deep to-biz-navy-deep">
+        <section className="py-20 bg-biz-gray">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-biz-navy mb-6">
                 Ready to Level Up Your Leadership?
               </h2>
-              <p className="text-xl text-white/70 mb-8 leading-relaxed">
+              <p className="text-xl text-biz-grey mb-8 leading-relaxed">
                 The best leaders never stop learning. Start a conversation with your leadership mentor above, 
                 or explore more BizLeaDeR resources.
               </p>
@@ -414,7 +414,7 @@ const BizLeaderBot = () => {
                 </Button>
               </Link>
 
-              <p className="text-white/50 text-sm mt-6">
+              <p className="text-biz-grey/60 text-sm mt-6">
                 Free access for registered BizHealth.ai users • Premium features coming soon
               </p>
             </div>

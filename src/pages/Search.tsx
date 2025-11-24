@@ -181,6 +181,13 @@ const Search = () => {
         excerpt: "Learn how BizHealth.ai protects your data with enterprise security, bank-level encryption, SOC 2 Type II (In Progress), GDPR compliance, secure infrastructure, data protection, risk management, and transparent security practices for SMBs.",
         url: "/security",
         icon: Home
+      },
+      {
+        type: "Page",
+        title: "Client Support & Concerns - BizHealth.ai",
+        excerpt: "Having concerns about your BizHealth.ai experience? Our Client Success team is here to help. Share your concerns about refunds, guarantees, or any issues. We're committed to making things right. No refund policy, but personalized support for all client concerns and questions about money-back guarantees.",
+        url: "/concerns",
+        icon: HelpCircle
       }
     ],
     blogs: [

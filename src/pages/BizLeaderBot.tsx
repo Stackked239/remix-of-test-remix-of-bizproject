@@ -367,8 +367,8 @@ const BizLeaderBot = () => {
                       <TrendingUp className="w-6 h-6 text-biz-green" />
                     </div>
                     <div>
-                      <div className="text-sm text-biz-grey uppercase tracking-wider">Business Health Score</div>
-                      <div className="font-bold text-biz-navy">Sample Assessment Preview</div>
+                      <div className="text-base font-bold text-biz-blue uppercase tracking-wider">Business Health Score</div>
+                      <div className="text-sm text-biz-navy">Sample Assessment Preview</div>
                     </div>
                   </div>
 

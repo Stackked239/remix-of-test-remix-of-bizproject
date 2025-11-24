@@ -75,7 +75,7 @@ const BizLeaderBot = () => {
   ];
 
   const metrics = [
-    { label: "Financial Health", value: 73, color: "bg-[#FFED29]" },
+    { label: "Financial Health", value: 73, color: "bg-[#008000]" },
     { label: "Operational Efficiency", value: 61, color: "bg-[#FFED29]" },
     { label: "Team & Culture", value: 88, color: "bg-[#008000]" },
     { label: "Strategic Alignment", value: 52, color: "bg-[#991923]" }

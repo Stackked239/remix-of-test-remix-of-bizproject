@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { HandHeart, Lightbulb, Wrench, TrendingUp, FileText, Mail, CheckCircle2, Users, Clock, Target } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -125,8 +126,9 @@ const Concerns = () => {
           description="Your concern has been received. Our Client Success team will be in touch soon."
           noindex={true}
         />
+        <PromotionalBanner />
         <GlobalNavigation />
-        <main className="min-h-screen bg-background pt-32 pb-20">
+        <main className="min-h-screen bg-background pt-40 pb-20">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <div className="mb-8 flex justify-center">
               <div className="w-20 h-20 rounded-full bg-biz-green/10 flex items-center justify-center">
@@ -165,10 +167,11 @@ const Concerns = () => {
         keywords="BizHealth.ai support, client concerns, business health analysis help, customer service, technical support"
         canonical="https://bizhealth.ai/concerns"
       />
+      <PromotionalBanner />
       <GlobalNavigation />
 
       {/* Hero Header */}
-      <section className="relative bg-gradient-to-br from-biz-navy to-[#2a3168] pt-32 pb-16 md:pb-20">
+      <section className="relative bg-gradient-to-br from-biz-navy to-[#2a3168] pt-40 pb-16 md:pb-20">
         <div className="max-w-[1200px] mx-auto px-6 text-center">
           <div className="mb-6 flex justify-center">
             <HandHeart className="w-16 h-16 text-biz-green" strokeWidth={1.5} />

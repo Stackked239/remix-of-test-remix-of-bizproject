@@ -21,6 +21,8 @@ export default {
 			fontFamily: {
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'open-sans': ['Open Sans', 'sans-serif'],
+				'serif': ['Cormorant Garamond', 'serif'],
+				'sans': ['DM Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -31,9 +33,14 @@ export default {
 				
 				/* Brand Colors */
 				'biz-navy': 'hsl(var(--biz-navy))',
+				'biz-navy-deep': 'hsl(var(--biz-navy-deep))',
+				'biz-navy-light': 'hsl(var(--biz-navy-light))',
 				'biz-green': 'hsl(var(--biz-green))',
+				'biz-green-light': 'hsl(var(--biz-green-light))',
 				'biz-grey': 'hsl(var(--biz-grey))',
 				'biz-white': 'hsl(var(--biz-white))',
+				'biz-cream': 'hsl(var(--biz-cream))',
+				'biz-warm': 'hsl(var(--biz-warm))',
 				'biz-blue-faint': 'hsl(var(--biz-blue-faint))',
 				
 				/* Hub Colors */

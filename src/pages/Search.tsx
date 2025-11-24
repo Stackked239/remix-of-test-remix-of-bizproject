@@ -155,6 +155,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "BizLeaDeR Leadership Development Bot - Free AI Leadership Mentor",
+        excerpt: "Your personal leadership mentor with decades of experience, available 24/7. Navigate difficult conversations, motivate your team, make strategic decisions with confidence. Free AI leadership coach, leadership mentor bot, leadership development, team motivation, strategic decisions, conflict resolution, delegation, personal growth. Private and confidential.",
+        url: "/bizleader/leadership-development-bot",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "BizGrowth - Strategic Advancement Awaits",
         excerpt: "Strategic growth programs and resources for scaling your business effectively.",

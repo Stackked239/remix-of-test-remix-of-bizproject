@@ -186,7 +186,7 @@ const Concerns = () => {
       </section>
 
       {/* Commitment Statement */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/30 dark:via-teal-950/30 dark:to-cyan-950/30">
         <div className="max-w-[720px] mx-auto px-6 text-center">
           <p className="text-lg text-biz-grey leading-relaxed mb-6">
             At BizHealth.ai, we're committed to delivering real value to every business owner who trusts us with their business health journey. We understand that investing in tools for your business is a significant decision, and we take that trust seriously.
@@ -198,14 +198,14 @@ const Concerns = () => {
       </section>
 
       {/* How We Can Help */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-biz-navy text-center mb-12">
             How We Can Help
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow p-8">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-biz-green">
               <div className="mb-4">
                 <Lightbulb className="w-10 h-10 text-biz-green" strokeWidth={1.5} />
               </div>
@@ -218,9 +218,9 @@ const Concerns = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow p-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-biz-navy">
               <div className="mb-4">
-                <Wrench className="w-10 h-10 text-biz-green" strokeWidth={1.5} />
+                <Wrench className="w-10 h-10 text-biz-navy" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold text-biz-navy mb-3">
                 Technical Support
@@ -231,9 +231,9 @@ const Concerns = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-background rounded-lg shadow-md hover:shadow-lg transition-shadow p-8">
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/20 dark:to-cyan-950/20 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-biz-teal">
               <div className="mb-4">
-                <TrendingUp className="w-10 h-10 text-biz-green" strokeWidth={1.5} />
+                <TrendingUp className="w-10 h-10 text-biz-teal" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold text-biz-navy mb-3">
                 Plan Optimization
@@ -247,7 +247,7 @@ const Concerns = () => {
       </section>
 
       {/* Understanding Our Policy */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-950/30 dark:via-blue-950/30 dark:to-indigo-950/30">
         <div className="max-w-[900px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-biz-navy mb-8">
             A Note on Our Policy
@@ -265,7 +265,7 @@ const Concerns = () => {
           </div>
 
           {/* Callout Box */}
-          <div className="mt-8 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-lg border-l-4 border-biz-green p-6">
+          <div className="mt-8 bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-lg border-l-4 border-biz-green p-6 shadow-md">
             <div className="flex items-start gap-3">
               <Lightbulb className="w-5 h-5 text-biz-green flex-shrink-0 mt-0.5" />
               <div>
@@ -284,10 +284,15 @@ const Concerns = () => {
       {/* Client Concerns Form */}
       <section className="py-16 bg-background">
         <div className="max-w-[800px] mx-auto px-6">
-          <div className="bg-background rounded-lg shadow-lg p-8 md:p-10 border">
-            <h2 className="text-3xl font-bold text-biz-navy mb-3">
-              Share Your Concerns
-            </h2>
+          <div className="bg-gradient-to-br from-white via-blue-50/30 to-teal-50/30 dark:from-slate-950 dark:via-blue-950/20 dark:to-teal-950/20 rounded-lg shadow-xl p-8 md:p-10 border-2 border-biz-navy/10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-biz-green/10 flex items-center justify-center">
+                <HandHeart className="w-6 h-6 text-biz-green" strokeWidth={1.5} />
+              </div>
+              <h2 className="text-3xl font-bold text-biz-navy">
+                Share Your Concerns
+              </h2>
+            </div>
             <p className="text-biz-grey mb-8">
               Tell us what's on your mind, and a member of our Client Success team will personally review your situation and respond within 1-2 business days.
             </p>
@@ -542,17 +547,17 @@ const Concerns = () => {
       </section>
 
       {/* What Happens Next */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50 dark:from-teal-950/30 dark:via-emerald-950/30 dark:to-green-950/30">
         <div className="max-w-[1000px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-biz-navy text-center mb-12">
             What Happens After You Submit
           </h2>
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Step 1 */}
-            <div className="text-center">
+            <div className="text-center bg-white/60 dark:bg-slate-950/40 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
               <div className="mb-4 flex justify-center">
-                <div className="w-16 h-16 rounded-full bg-biz-green/10 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-biz-green" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
               </div>
               <div className="mb-2 text-biz-green font-bold text-lg">Step 1</div>
@@ -565,13 +570,13 @@ const Concerns = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
+            <div className="text-center bg-white/60 dark:bg-slate-950/40 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
               <div className="mb-4 flex justify-center">
-                <div className="w-16 h-16 rounded-full bg-biz-green/10 flex items-center justify-center">
-                  <Clock className="w-8 h-8 text-biz-green" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center shadow-lg">
+                  <Clock className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <div className="mb-2 text-biz-green font-bold text-lg">Step 2</div>
+              <div className="mb-2 text-biz-navy font-bold text-lg">Step 2</div>
               <h3 className="text-xl font-bold text-biz-navy mb-3">
                 We Reach Out
               </h3>
@@ -581,13 +586,13 @@ const Concerns = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
+            <div className="text-center bg-white/60 dark:bg-slate-950/40 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
               <div className="mb-4 flex justify-center">
-                <div className="w-16 h-16 rounded-full bg-biz-green/10 flex items-center justify-center">
-                  <Target className="w-8 h-8 text-biz-green" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center shadow-lg">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <div className="mb-2 text-biz-green font-bold text-lg">Step 3</div>
+              <div className="mb-2 text-biz-teal font-bold text-lg">Step 3</div>
               <h3 className="text-xl font-bold text-biz-navy mb-3">
                 We Work Toward Resolution
               </h3>
@@ -607,9 +612,9 @@ const Concerns = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Resource Card 1 */}
-            <div className="bg-muted/50 rounded-lg p-8 hover:shadow-md transition-shadow">
+            <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20 rounded-lg p-8 hover:shadow-xl transition-all duration-300 border-t-4 border-biz-navy">
               <div className="mb-4">
-                <FileText className="w-10 h-10 text-biz-green" />
+                <FileText className="w-10 h-10 text-biz-navy" />
               </div>
               <h3 className="text-xl font-bold text-biz-navy mb-3">
                 Help Center & FAQ
@@ -617,13 +622,13 @@ const Concerns = () => {
               <p className="text-biz-grey mb-4">
                 Find answers to common questions about reports, subscriptions, and platform features.
               </p>
-              <Link to="/faqs" className="text-biz-green hover:underline font-medium inline-flex items-center">
+              <Link to="/faqs" className="text-biz-navy hover:text-biz-green hover:underline font-medium inline-flex items-center transition-colors">
                 Browse Help Articles →
               </Link>
             </div>
 
             {/* Resource Card 2 */}
-            <div className="bg-muted/50 rounded-lg p-8 hover:shadow-md transition-shadow">
+            <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20 rounded-lg p-8 hover:shadow-xl transition-all duration-300 border-t-4 border-biz-green">
               <div className="mb-4">
                 <Mail className="w-10 h-10 text-biz-green" />
               </div>
@@ -633,7 +638,7 @@ const Concerns = () => {
               <p className="text-biz-grey mb-4">
                 For general inquiries, reach our support team directly.
               </p>
-              <a href="mailto:support@bizhealth.ai" className="text-biz-green hover:underline font-medium inline-flex items-center">
+              <a href="mailto:support@bizhealth.ai" className="text-biz-green hover:text-biz-teal hover:underline font-medium inline-flex items-center transition-colors">
                 Email support@bizhealth.ai →
               </a>
             </div>
@@ -642,8 +647,13 @@ const Concerns = () => {
       </section>
 
       {/* Closing Reassurance */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-950/40 dark:via-indigo-950/40 dark:to-purple-950/40">
         <div className="max-w-[800px] mx-auto px-6 text-center">
+          <div className="mb-6 flex justify-center">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-biz-green to-biz-teal flex items-center justify-center shadow-lg">
+              <HandHeart className="w-8 h-8 text-white" strokeWidth={1.5} />
+            </div>
+          </div>
           <p className="text-lg text-biz-grey leading-relaxed mb-6">
             We know that behind every concern is a business owner working hard to build something meaningful. That's exactly who BizHealth.ai was created to serve. Whatever brought you to this page, we're grateful you're giving us the opportunity to make things right.
           </p>

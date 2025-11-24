@@ -156,6 +156,13 @@ const FAQs = () => {
       answer: "Email us at <a href='mailto:support@bizhealth.ai' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>support@bizhealth.ai</a> or call our support line. We're here to simplify your journey and ensure you get the most out of your BizHealth.ai experience.",
       icon: HelpCircle,
       category: "Support"
+    },
+    {
+      id: "concerns-issues",
+      question: "What if I have concerns about my experience or need additional help?",
+      answer: "If something isn't working as expected or you need personalized assistance, visit our <a href='/concerns' style='color: hsl(var(--biz-green)); text-decoration: underline; font-weight: 600;'>Client Concerns page</a>. Our Client Success team will personally review your situation and reach out within 1-2 business days to explore solutions—whether that's technical support, guidance on using the platform, or plan adjustments to better fit your needs.",
+      icon: Mail,
+      category: "Support"
     }
   ];
 

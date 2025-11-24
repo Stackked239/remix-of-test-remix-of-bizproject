@@ -10,6 +10,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
+import { CodyWidget } from "@/components/CodyWidget";
 
 const BizLeaderBot = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -83,6 +84,7 @@ const BizLeaderBot = () => {
 
   return (
     <>
+      <CodyWidget />
       <SEO
         title="Free AI Leadership Mentor | BizLeaDeR Leadership Development Bot | BizHealth.ai"
         description="Get instant leadership advice from an AI-powered business mentor. Navigate difficult conversations, boost team motivation, and make strategic decisions with confidence. Free for BizHealth.ai users."
@@ -174,21 +176,11 @@ const BizLeaderBot = () => {
                 </div>
 
                 {/* Bot Embed Area */}
-                <div className="bg-biz-warm p-4 md:p-6">
-                  <iframe 
-                    src="https://embed.cody.bot/9dc6343e-cc5f-4ea4-803b-1862d1c4b04a" 
-                    style={{ border: 0 }} 
-                    name="codyai" 
-                    scrolling="no" 
-                    frameBorder="1" 
-                    marginHeight={0} 
-                    marginWidth={0} 
-                    height="600px" 
-                    width="100%" 
-                    allowFullScreen
-                    title="BizLeaDeR Leadership Development AI Mentor"
-                    className="rounded-lg"
-                  />
+                <div className="bg-biz-warm p-4 md:p-6 rounded-lg" style={{ minHeight: "600px" }}>
+                  <div className="text-center py-12">
+                    <p className="text-biz-navy/70 mb-4">Chat widget will appear here once loaded</p>
+                    <p className="text-sm text-biz-grey">Click the chat button to start a conversation</p>
+                  </div>
                 </div>
               </div>
             </div>

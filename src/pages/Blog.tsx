@@ -37,6 +37,7 @@ import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
 import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
+import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -55,6 +56,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Complete Guide to Business Health Assessment for 2026",
+      excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth.",
+      author: "BizHealth.ai Research Team",
+      date: "November 24, 2025",
+      readTime: "15 min read",
+      category: "Business Strategy, Business Intelligence, Business Leadership",
+      slug: "/blog/complete-guide-business-health-assessment-2026",
+      imageUrl: businessHealthAssessment2026Image,
+      altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning",
+      keywords: "business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
+    },
     {
       title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
       excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in their leaders and how to build organizational self-awareness with practical strategies.",

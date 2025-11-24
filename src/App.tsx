@@ -61,6 +61,7 @@ import SmallBusinessStruggles from "./pages/blog/SmallBusinessStruggles";
 import SuccessBeginsWith2026Strategy from "./pages/blog/SuccessBeginsWith2026Strategy";
 import ScalingOperationsWithoutLosingControl from "./pages/blog/ScalingOperationsWithoutLosingControl";
 import IdentifyingSMBLeadershipBlindSpots from "./pages/blog/IdentifyingSMBLeadershipBlindSpots";
+import CompleteGuideBusinessHealthAssessment2026 from "./pages/blog/CompleteGuideBusinessHealthAssessment2026";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -146,6 +147,7 @@ const App = () => (
             <Route path="/blog/success-begins-with-2026-strategy" element={<SuccessBeginsWith2026Strategy />} />
             <Route path="/blog/scaling-operations-without-losing-control" element={<ScalingOperationsWithoutLosingControl />} />
             <Route path="/blog/identifying-smb-leadership-blind-spots" element={<IdentifyingSMBLeadershipBlindSpots />} />
+            <Route path="/blog/complete-guide-business-health-assessment-2026" element={<CompleteGuideBusinessHealthAssessment2026 />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

@@ -44,29 +44,29 @@ const Blog = () => {
   const resultsRef = useRef<HTMLElement>(null);
   
   const featuredPost = {
-    title: "The Complete Guide to Business Health Assessment in 2025",
-    excerpt: "As a business leader, you're no stranger to the whirlwind of running a company—juggling finances, operations, and team dynamics while keeping your eyes on the horizon for growth. But what if the cracks forming beneath the surface are quietly stalling your progress? That's where a Business Health Assessment comes in—a clear-eyed look at your company's vital signs to spot issues before they spiral into costly problems.",
-    author: "Dennis Hough",
-    date: "July 27, 2025",
+    title: "The Complete Guide to Business Health Assessment for 2026",
+    excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth.",
+    author: "BizHealth.ai Research Team",
+    date: "November 24, 2025",
     readTime: "15 min read",
     category: "Business Strategy",
     featured: true,
-    imageUrl: businessHealthImage,
-    altText: "Comprehensive business health assessment with diagnostic charts and performance metrics for overall company wellness"
+    imageUrl: businessHealthAssessment2026Image,
+    altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
   };
 
   const blogPosts = [
     {
-      title: "The Complete Guide to Business Health Assessment for 2026",
-      excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth.",
-      author: "BizHealth.ai Research Team",
-      date: "November 24, 2025",
+      title: "The Complete Guide to Business Health Assessment in 2025",
+      excerpt: "As a business leader, you're no stranger to the whirlwind of running a company—juggling finances, operations, and team dynamics while keeping your eyes on the horizon for growth. But what if the cracks forming beneath the surface are quietly stalling your progress? That's where a Business Health Assessment comes in—a clear-eyed look at your company's vital signs to spot issues before they spiral into costly problems.",
+      author: "Dennis Hough",
+      date: "July 27, 2025",
       readTime: "15 min read",
-      category: "Business Strategy, Business Intelligence, Business Leadership",
-      slug: "/blog/complete-guide-business-health-assessment-2026",
-      imageUrl: businessHealthAssessment2026Image,
-      altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning",
-      keywords: "business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
+      category: "Business Strategy",
+      slug: "/blog/business-health-assessment",
+      imageUrl: businessHealthImage,
+      altText: "Comprehensive business health assessment with diagnostic charts and performance metrics for overall company wellness",
+      keywords: "business health assessment, business diagnostic, company analysis, operational health, financial assessment, business metrics, health check, business evaluation"
     },
     {
       title: "Identifying Small & Mid-Size Business Leadership Blind Spots",

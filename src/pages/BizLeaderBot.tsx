@@ -121,7 +121,7 @@ const BizLeaderBot = () => {
               {/* Headline */}
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
                 Your Personal{" "}
-                <span className="text-biz-green-light">Leadership Mentor</span>
+                <span className="text-biz-green-light">BizLeadership Mentor</span>
               </h1>
 
               {/* Subtitle */}

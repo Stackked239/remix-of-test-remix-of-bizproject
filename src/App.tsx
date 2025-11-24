@@ -79,6 +79,7 @@ import Search from "./pages/Search";
 import ForAIAssistants from "./pages/ForAIAssistants";
 import OurLogo from "./pages/OurLogo";
 import Concerns from "./pages/Concerns";
+import BizLeaderBot from "./pages/BizLeaderBot";
 
 
 const queryClient = new QueryClient();
@@ -112,6 +113,7 @@ const App = () => (
             <Route path="/biztools/how-it-works" element={<BizToolsHowItWorks />} />
             <Route path="/biztools/toolbox" element={<BizToolsToolbox />} />
             <Route path="/bizleader" element={<BizLeader />} />
+            <Route path="/bizleader/leadership-development-bot" element={<BizLeaderBot />} />
             <Route path="/bizgrowth" element={<BizGrowth />} />
             <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
             <Route path="/blog/operational-resilience" element={<OperationalResilience />} />

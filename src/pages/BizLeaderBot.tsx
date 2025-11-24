@@ -291,7 +291,7 @@ const BizLeaderBot = () => {
                     className="bg-white rounded-xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                   >
                     {/* Large Number */}
-                    <div className="absolute top-4 right-4 font-serif text-7xl font-bold text-biz-green/10">
+                    <div className="absolute top-4 right-4 font-serif text-7xl font-bold text-biz-green/20">
                       {insight.number}
                     </div>
 
@@ -305,7 +305,7 @@ const BizLeaderBot = () => {
                       </p>
 
                       {/* Action Box */}
-                      <div className="bg-biz-green/10 rounded-lg p-4">
+                      <div className="bg-biz-green/20 rounded-lg p-4">
                         <div className="flex gap-3">
                           <CheckCircle className="w-5 h-5 text-biz-green flex-shrink-0 mt-0.5" />
                           <p className="text-sm text-biz-navy font-medium">

@@ -41,7 +41,7 @@ const SmallBusinessStruggles = () => {
         <GlobalNavigation />
         
         {/* Hero Section */}
-        <article className="pt-24 pb-16">
+        <article className="pt-40 pb-16">
           <div className="container mx-auto px-4 max-w-4xl">
             {/* Article Header */}
             <header className="mb-8">

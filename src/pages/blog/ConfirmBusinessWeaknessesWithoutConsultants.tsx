@@ -60,7 +60,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        <article className="pt-24 pb-16">
+        <article className="pt-40 pb-16">
           {/* Hero Section */}
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">

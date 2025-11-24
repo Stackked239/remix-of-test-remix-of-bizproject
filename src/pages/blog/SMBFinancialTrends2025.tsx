@@ -111,7 +111,7 @@ const SMBFinancialTrends2025 = () => {
         <GlobalNavigation />
 
         {/* Hero Section */}
-        <article className="pt-24 pb-16">
+        <article className="pt-40 pb-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               {/* Back Link */}

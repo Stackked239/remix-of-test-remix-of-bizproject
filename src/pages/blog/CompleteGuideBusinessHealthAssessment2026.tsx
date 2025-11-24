@@ -41,7 +41,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-28 pb-16">
+        <article className="pt-40 pb-16">
           {/* Hero Section */}
           <div className="relative py-16" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
             <div className="container mx-auto px-4">

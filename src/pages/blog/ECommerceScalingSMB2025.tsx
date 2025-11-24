@@ -83,7 +83,7 @@ const ECommerceScalingSMB2025 = () => {
         <GlobalNavigation />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-12 bg-gradient-to-b from-muted to-background">
+        <section className="pt-40 pb-12 bg-gradient-to-b from-muted to-background">
           <div className="container mx-auto px-6">
             <Link 
               to="/blog" 

@@ -61,7 +61,7 @@ const CashFlowCrisisManagement = () => {
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
         <GlobalNavigation />
         
-        <article className="container mx-auto px-4 py-12 max-w-4xl">
+        <article className="container mx-auto px-4 pt-32 pb-12 max-w-4xl">
           {/* Back Button */}
           <Button
             variant="ghost"

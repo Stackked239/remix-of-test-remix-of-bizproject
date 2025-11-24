@@ -43,7 +43,7 @@ const ScalingOperationsWithoutLosingControl = () => {
 
       <article className="min-h-screen" style={{ backgroundColor: 'hsl(var(--background))' }}>
         {/* Back Button */}
-        <div className="container mx-auto px-4 pt-24 pb-4">
+        <div className="container mx-auto px-4 pt-40 pb-4">
           <Link 
             to="/blog" 
             className="inline-flex items-center gap-2 hover:gap-3 transition-all duration-200"

@@ -78,6 +78,7 @@ import CustomerJourneyMapsTool from "./pages/tools/CustomerJourneyMapsTool";
 import Search from "./pages/Search";
 import ForAIAssistants from "./pages/ForAIAssistants";
 import OurLogo from "./pages/OurLogo";
+import Concerns from "./pages/Concerns";
 
 
 const queryClient = new QueryClient();
@@ -153,6 +154,7 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/security" element={<Security />} />
             <Route path="/faqs" element={<FAQs />} />
+            <Route path="/concerns" element={<Concerns />} />
             <Route path="/glossary-of-terms" element={<GlossaryOfTerms />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/biztools/toolbox/cash-flow-tracker" element={<CashFlowTracker />} />

@@ -43,7 +43,7 @@
 
 [[redirects]]
   from = "/refund"
-  to = "/terms"
+  to = "/concerns"
   status = 301
   force = true
 

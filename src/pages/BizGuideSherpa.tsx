@@ -118,7 +118,7 @@ const BizGuideSherpa = () => {
               <div className="flex flex-col items-center gap-3 mb-8">
                 {/* Hub Label */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-semibold uppercase tracking-[1.5px] animate-fade-in-up">
-                  <User className="w-3 h-3" />
+                  <Compass className="w-3 h-3" />
                   BIZGUIDES HUB
                 </div>
 

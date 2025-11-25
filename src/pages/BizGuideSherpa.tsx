@@ -76,10 +76,10 @@ const BizGuideSherpa = () => {
   ];
 
   const metrics = [
-    { label: "Financial Health", value: 72, color: "bg-[#969423]" },
-    { label: "Operational Efficiency", value: 58, color: "bg-[#d4a853]" },
-    { label: "Team & Culture", value: 81, color: "bg-[#969423]" },
-    { label: "Strategic Alignment", value: 67, color: "bg-[#212653]" }
+    { label: "Financial Health", value: 73, color: "bg-[#008000]" },
+    { label: "Operational Efficiency", value: 61, color: "bg-[#FFED29]" },
+    { label: "Team & Culture", value: 88, color: "bg-[#008000]" },
+    { label: "Strategic Alignment", value: 52, color: "bg-[#991923]" }
   ];
 
   return (

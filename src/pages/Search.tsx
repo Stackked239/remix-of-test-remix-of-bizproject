@@ -162,6 +162,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "BizGuide Sherpa - Free AI Business Advisor",
+        excerpt: "Your on-demand business advisor available 24/7. Navigate cash flow challenges, scale operations, build teams, and grow strategically. Free tool for business growth, business questions, SMB advisor, business mentor, cash flow management, scaling operations, team building, pricing strategy, growth strategy, operations efficiency. Ask business questions privately and confidentially.",
+        url: "/bizguides/bizguide-sherpa",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "BizGrowth - Strategic Advancement Awaits",
         excerpt: "Strategic growth programs and resources for scaling your business effectively.",

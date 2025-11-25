@@ -80,6 +80,7 @@ import ForAIAssistants from "./pages/ForAIAssistants";
 import OurLogo from "./pages/OurLogo";
 import Concerns from "./pages/Concerns";
 import BizLeaderBot from "./pages/BizLeaderBot";
+import BizGuideSherpa from "./pages/BizGuideSherpa";
 
 
 const queryClient = new QueryClient();
@@ -109,6 +110,7 @@ const App = () => (
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/bizguides" element={<BizGuides />} />
+            <Route path="/bizguides/bizguide-sherpa" element={<BizGuideSherpa />} />
             <Route path="/biztools" element={<BizTools />} />
             <Route path="/biztools/how-it-works" element={<BizToolsHowItWorks />} />
             <Route path="/biztools/toolbox" element={<BizToolsToolbox />} />

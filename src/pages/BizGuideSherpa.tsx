@@ -415,19 +415,19 @@ const BizGuideSherpa = () => {
               <h2 className="font-bold text-3xl md:text-4xl text-white mb-6" style={{ fontFamily: 'Libre Baskerville, serif' }}>
                 Ready to Tackle Your Biggest Challenge?
               </h2>
-              <p className="text-white/70 text-lg mb-8 leading-relaxed" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
+              <p className="text-white/90 text-lg mb-8 leading-relaxed" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
                 Your business questions deserve real answers. Start a conversation with BizGuide Sherpa above, 
                 or explore more resources in the BizGuides Hub.
               </p>
               
               <Link to="/bizguides">
-                <Button className="group bg-white text-biz-green hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 font-bold" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
-                  <BookOpen className="w-4 h-4 mr-2" />
+                <Button className="group bg-biz-navy text-white hover:bg-biz-navy-deep hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 font-bold px-8 py-6 text-base" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
+                  <BookOpen className="w-5 h-5 mr-2" />
                   Explore BizGuides Hub
                 </Button>
               </Link>
 
-              <p className="text-white/50 text-sm mt-6" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
+              <p className="text-white/70 text-sm mt-6" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
                 Free access for registered BizHealth.ai users • Premium features coming soon
               </p>
             </div>

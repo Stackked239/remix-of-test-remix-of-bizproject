@@ -166,23 +166,20 @@ const BizGuideSherpa = () => {
                       </div>
                       <div>
                         <h2 className="text-white font-bold text-lg" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>BizGuide Sherpa</h2>
-                        <p className="text-white/60 text-sm" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>Ask what you can't ask your team.</p>
+                        <div className="flex items-center gap-2 text-white/70 text-sm">
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                          </span>
+                          Online & Ready to Help
+                        </div>
                       </div>
                     </div>
 
-                    {/* Right: Status and Privacy */}
-                    <div className="flex flex-col items-end gap-1">
-                      <div className="flex items-center gap-2 text-white/70 text-sm">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-                        </span>
-                        Ready to Help
-                      </div>
-                      <div className="flex items-center gap-2 text-white/60 text-sm">
-                        <Shield className="w-3 h-3" />
-                        Private Conversation
-                      </div>
+                    {/* Right: Privacy Badge */}
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <Shield className="w-4 h-4" />
+                      <span>Private Conversation</span>
                     </div>
                   </div>
                 </div>

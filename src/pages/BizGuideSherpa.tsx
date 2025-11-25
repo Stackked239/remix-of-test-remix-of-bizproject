@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
   Clock, Shield, Lightbulb, Compass, ArrowRight, CheckCircle, ChevronRight, BookOpen,
-  DollarSign, Rocket, Users, BarChart3, TrendingUp, Settings, HelpCircle, Briefcase, User
+  DollarSign, Rocket, Users, BarChart3, TrendingUp, Settings, HelpCircle, Briefcase, User, Copy
 } from "lucide-react";
+import { toast } from "sonner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from "@/components/GlobalNavigation";
@@ -263,11 +264,22 @@ const BizGuideSherpa = () => {
 
                       {/* Sample Question */}
                       {isExpanded && (
-                        <div className="mt-4 pt-4 border-t-2 border-gray-100 animate-fade-in">
+                        <div className="mt-4 pt-4 border-t-2 border-gray-100 animate-fade-in" onClick={(e) => e.stopPropagation()}>
                           <div className="bg-[#faf9f7] border-l-[3px] border-[#969423] p-4 rounded-r-lg">
-                            <p className="text-[#212653] italic text-sm leading-relaxed" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
+                            <p className="text-[#212653] italic text-sm leading-relaxed mb-3" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
                               "{challenge.sample}"
                             </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                navigator.clipboard.writeText(challenge.sample);
+                                toast.success("Question copied to clipboard!");
+                              }}
+                              className="flex items-center gap-2 text-[#969423] hover:text-[#212653] font-semibold text-xs transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white"
+                            >
+                              <Copy className="w-3.5 h-3.5" />
+                              Copy Question
+                            </button>
                           </div>
                         </div>
                       )}

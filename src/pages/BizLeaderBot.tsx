@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
   Clock, MessageSquare, Shield, Lightbulb, Users, Compass, Target, Brain,
-  Zap, CheckCircle, MessageCircle, ArrowRight, BookOpen, ChevronRight, TrendingUp, User
+  Zap, CheckCircle, MessageCircle, ArrowRight, BookOpen, ChevronRight, TrendingUp, User, Copy
 } from "lucide-react";
+import { toast } from "sonner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from "@/components/GlobalNavigation";
@@ -260,11 +261,22 @@ const BizLeaderBot = () => {
 
                       {/* Sample Question */}
                       {isExpanded && (
-                        <div className="mt-4 pt-4 border-t-2 border-gray-100 animate-fade-in">
+                        <div className="mt-4 pt-4 border-t-2 border-gray-100 animate-fade-in" onClick={(e) => e.stopPropagation()}>
                           <div className="bg-biz-cream border-l-4 border-biz-green p-4 rounded-r-lg">
-                            <p className="text-biz-navy italic text-sm leading-relaxed">
+                            <p className="text-biz-navy italic text-sm leading-relaxed mb-3">
                               "{scenario.sample}"
                             </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                navigator.clipboard.writeText(scenario.sample);
+                                toast.success("Question copied to clipboard!");
+                              }}
+                              className="flex items-center gap-2 text-biz-green hover:text-biz-navy font-semibold text-xs transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white"
+                            >
+                              <Copy className="w-3.5 h-3.5" />
+                              Copy Question
+                            </button>
                           </div>
                         </div>
                       )}

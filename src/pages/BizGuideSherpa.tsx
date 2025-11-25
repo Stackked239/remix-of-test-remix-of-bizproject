@@ -157,19 +157,19 @@ const BizGuideSherpa = () => {
               {/* Bot Container */}
               <div className="bg-white rounded-[20px] shadow-[0_12px_40px_rgba(33,38,83,0.15)] overflow-hidden">
                 {/* Bot Header */}
-                <div className="bg-gradient-to-r from-[#212653] to-[#2d3268] border-b-[3px] border-[#969423] px-7 py-5">
+                <div className="bg-biz-white border-b-[3px] border-biz-green px-7 py-5">
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     {/* Left: Avatar and Info */}
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-[10px] bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded-[10px] bg-gradient-to-br from-biz-green to-biz-green-light flex items-center justify-center flex-shrink-0">
                         <Compass className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-white font-bold text-lg" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>BizGuide Sherpa</h2>
-                        <div className="flex items-center gap-2 text-white/70 text-sm">
+                        <h2 className="text-biz-navy font-bold text-lg" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>BizGuide Sherpa</h2>
+                        <div className="flex items-center gap-2 text-biz-navy/70 text-sm">
                           <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400"></span>
                           </span>
                           Online & Ready to Help
                         </div>
@@ -177,7 +177,7 @@ const BizGuideSherpa = () => {
                     </div>
 
                     {/* Right: Privacy Badge */}
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <div className="flex items-center gap-2 text-biz-navy/60 text-sm">
                       <Shield className="w-4 h-4" />
                       <span>Private Conversation</span>
                     </div>

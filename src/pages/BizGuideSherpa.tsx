@@ -305,7 +305,7 @@ const BizGuideSherpa = () => {
                     className="bg-white rounded-xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                   >
                     {/* Large Number */}
-                    <div className="absolute top-4 right-4 text-[4.5rem] font-bold text-[#969423]/8" style={{ fontFamily: 'Libre Baskerville, serif' }}>
+                    <div className="absolute top-4 right-4 text-[4.5rem] font-bold text-[#969423]/20" style={{ fontFamily: 'Libre Baskerville, serif' }}>
                       {win.number}
                     </div>
 

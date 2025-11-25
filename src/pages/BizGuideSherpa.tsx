@@ -151,7 +151,7 @@ const BizGuideSherpa = () => {
         </section>
 
         {/* Embedded Chatbot Section */}
-        <section className="relative -mt-5 pb-16 bg-[#faf9f7]">
+        <section className="relative -mt-12 pb-16 bg-[#faf9f7]">
           <div className="container mx-auto px-4">
             <div className="max-w-[1000px] mx-auto">
               {/* Bot Container */}

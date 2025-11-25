@@ -409,7 +409,7 @@ const BizGuideSherpa = () => {
         </section>
 
         {/* Footer CTA */}
-        <section className="bg-gradient-to-br from-[#212653] to-[#181b3d] py-16">
+        <section className="bg-biz-green py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-[600px] mx-auto text-center">
               <h2 className="font-bold text-3xl md:text-4xl text-white mb-6" style={{ fontFamily: 'Libre Baskerville, serif' }}>
@@ -421,7 +421,7 @@ const BizGuideSherpa = () => {
               </p>
               
               <Link to="/bizguides">
-                <Button className="group bg-[#969423] text-white hover:bg-[#b8b344] hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 font-bold" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
+                <Button className="group bg-white text-biz-green hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 font-bold" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>
                   <BookOpen className="w-4 h-4 mr-2" />
                   Explore BizGuides Hub
                 </Button>

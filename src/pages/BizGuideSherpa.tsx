@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
   Clock, Shield, Lightbulb, Compass, ArrowRight, CheckCircle, ChevronRight, BookOpen,
-  DollarSign, Rocket, Users, BarChart3, TrendingUp, Settings, HelpCircle, Briefcase
+  DollarSign, Rocket, Users, BarChart3, TrendingUp, Settings, HelpCircle, Briefcase, User
 } from "lucide-react";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -113,17 +113,20 @@ const BizGuideSherpa = () => {
           <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#969423]/5 rounded-full blur-3xl" />
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Hub Label */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-semibold uppercase tracking-[1.5px] mb-4 animate-fade-in-up">
-                <Briefcase className="w-3 h-3" />
-                BIZGUIDES HUB
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+              {/* Badges Container */}
+              <div className="flex flex-col items-center gap-3 mb-8">
+                {/* Hub Label */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-semibold uppercase tracking-[1.5px] animate-fade-in-up">
+                  <User className="w-3 h-3" />
+                  BIZGUIDES HUB
+                </div>
 
-              {/* Limited Time Badge */}
-              <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#d5ff00] text-[#212653] text-sm font-bold tracking-wider mb-8 animate-fade-in-up shadow-[0_4px_14px_rgba(255,255,255,0.4)] hover:scale-105 hover:shadow-[0_6px_20px_rgba(255,255,255,0.5)] transition-all duration-300 cursor-pointer" style={{ animationDelay: '300ms' }}>
-                <Clock className="w-4 h-4 text-[#212653]" />
-                Limited Time: FREE Access
+                {/* Limited Time Badge */}
+                <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#d5ff00] text-[#212653] text-sm font-bold tracking-wider animate-fade-in-up shadow-[0_4px_14px_rgba(255,255,255,0.4)] hover:scale-105 hover:shadow-[0_6px_20px_rgba(255,255,255,0.5)] transition-all duration-300 cursor-pointer" style={{ animationDelay: '100ms' }}>
+                  <Clock className="w-4 h-4 text-[#212653]" />
+                  Limited Time: FREE Access
+                </div>
               </div>
 
               {/* Headline */}

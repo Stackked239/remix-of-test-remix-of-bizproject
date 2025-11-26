@@ -29,7 +29,7 @@ const Index = () => {
       <Testimonials />
       <Pricing />
       <GlobalFooter />
-      <EmailCapturePopup />
+      {/* <EmailCapturePopup /> */}
     </div>
   );
 };

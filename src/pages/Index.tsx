@@ -1,3 +1,4 @@
+// Deployment trigger: Force SSG rebuild for sitemap update
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";

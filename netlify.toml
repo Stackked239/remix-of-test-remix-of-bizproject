@@ -115,8 +115,8 @@
   force = true
 
 [build]
-  # Build command - runs SSG pre-rendering
-  command = "chmod +x build-ssg.sh && ./build-ssg.sh"
+  # Build command - runs SSG pre-rendering with Puppeteer support
+  command = "chmod +x netlify-build.sh && ./netlify-build.sh"
   
   # Publish directory - contains pre-rendered HTML files
   publish = "dist"

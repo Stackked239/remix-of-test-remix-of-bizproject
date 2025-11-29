@@ -18,7 +18,7 @@ const Index = () => {
       <SEO 
         title="BizHealth.ai - Business Health Analysis for Strategic Growth"
         description="Transform your SMB with BizHealth.ai's comprehensive business health assessment. Get actionable insights, expert recommendations, and data-driven strategies in minutes."
-        keywords="business health assessment, SMB analytics, business intelligence, AI business analysis, operational efficiency, financial metrics, business strategy"
+        keywords="BizHealth, business health assessment, strategic business diagnostics, executive business analysis, small business advisor, business growth strategy"
         canonical="https://bizhealth.ai/"
       />
       <StructuredData type="organization" />

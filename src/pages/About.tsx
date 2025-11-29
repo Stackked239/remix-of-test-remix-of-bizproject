@@ -6,7 +6,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import { Users, Target, TrendingUp, Shield, Heart, Lightbulb } from 'lucide-react';
+import { Users, Target, Shield, Heart, Lightbulb } from 'lucide-react';
+import growthPartnerLogo from '@/assets/bizhealth-growth-partner-logo.jpg';
 
 const About = () => {
   const values = [
@@ -270,7 +271,11 @@ const About = () => {
                   </Card>
                 </div>
                 <div className="animate-fade-in">
-                  <TrendingUp className="w-32 h-32 text-biz-navy mx-auto mb-6" />
+                  <img 
+                    src={growthPartnerLogo} 
+                    alt="BizHealth.ai Growth Partner Logo" 
+                    className="w-32 h-32 mx-auto mb-6 object-contain"
+                  />
                   <h3 className="font-montserrat font-bold text-2xl text-biz-navy text-center mb-4">
                     Your Growth Partner
                   </h3>

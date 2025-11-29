@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="BizHealth.ai - AI-Powered Business Health Assessment"
+        title="BizHealth.ai - Business Health Analysis for Strategic Growth"
         description="Transform your SMB with BizHealth.ai's comprehensive business health assessment. Get actionable insights, expert recommendations, and data-driven strategies in minutes."
         keywords="business health assessment, SMB analytics, business intelligence, AI business analysis, operational efficiency, financial metrics, business strategy"
         canonical="https://bizhealth.ai/"

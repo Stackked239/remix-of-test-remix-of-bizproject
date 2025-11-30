@@ -37,18 +37,22 @@ const StoryBrandHeader = () => {
           
           {/* Social Proof Stats - Repositioned from Hero */}
           <div className="pt-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">27x</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Average ROI</p>
+                <p className="text-xl sm:text-2xl font-montserrat font-bold text-biz-green">Bank-Grade Security</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Enterprise Security</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">SMBs Served</p>
+                <p className="text-xl sm:text-2xl font-montserrat font-bold text-biz-green">Reports Generated</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">24 hrs/day</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Report Generation</p>
+                <p className="text-xl sm:text-2xl font-montserrat font-bold text-biz-green">Proven Results</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">27x Avg. ROI</p>
+              </div>
+              <div>
+                <p className="text-xl sm:text-2xl font-montserrat font-bold text-biz-green">Trusted Worldwide</p>
+                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">2,500+ Businesses</p>
               </div>
             </div>
           </div>

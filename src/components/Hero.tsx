@@ -118,10 +118,9 @@ const Hero = () => {
   // Remove scroll animation - banner stays fixed
 
   const trustIndicators = [
-    { icon: Shield, label: "Bank-Grade Security", value: "Enterprise Security" },
-    { icon: Clock, label: "Reports Generated", value: "24 hrs/day" },
-    { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
-    { icon: Users, label: "Trusted Worldwide", value: "2,500+ Businesses" }
+    { icon: TrendingUp, label: "27x", value: "Average ROI" },
+    { icon: Users, label: "2,500+", value: "SMBs Served" },
+    { icon: Clock, label: "~45 min.", value: "Report Generation" }
   ];
 
   return (
@@ -351,7 +350,7 @@ const Hero = () => {
 
         {/* Trust Indicators Bar - Repositioned to Bottom */}
         <div className="pb-16">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {trustIndicators.map((indicator, index) => {
               const IconComponent = indicator.icon;
               return (

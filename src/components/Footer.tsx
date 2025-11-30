@@ -81,7 +81,7 @@ const Footer = () => {
             © 2025 Business Health Analyzer. All rights reserved.
           </div>
           <div className="text-background/60 text-sm">
-            Your Trusted Business Health Advisor - Stop Guessing, Start Growing
+            Your Trusted Business Health Analyst - Stop Guessing, Start Growing
           </div>
         </div>
       </div>

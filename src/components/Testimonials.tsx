@@ -83,26 +83,6 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        
-        {/* Trust indicators */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">2,700+</div>
-            <div className="text-sm text-muted-foreground">Reports Generated</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-growth mb-2">98%</div>
-            <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-trust mb-2">24/7</div>
-            <div className="text-sm text-muted-foreground">Quick Delivery</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-biz-green mb-2">$15K</div>
-            <div className="text-sm text-muted-foreground">Avg. Savings vs. Consulting</div>
-          </div>
-        </div>
       </div>
     </section>
   );

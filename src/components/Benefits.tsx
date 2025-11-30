@@ -102,7 +102,7 @@ const Benefits = () => {
         </div>
 
         {/* Trust elements */}
-        <div className="bg-muted rounded-2xl p-8 border border-border">
+        <div className="bg-muted/90 rounded-2xl p-8 border border-border">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Your Business Data is Protected

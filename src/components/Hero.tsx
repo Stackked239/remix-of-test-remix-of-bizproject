@@ -160,12 +160,12 @@ const Hero = () => {
               <div className="grid grid-cols-2 gap-3 sm:gap-6">
                 <div className="text-center">
                   <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">70%</p>
-                  <p className="text-xs sm:text-sm font-open-sans text-biz-grey">SMB Cash Flow Strains</p>
+                  <p className="text-xs sm:text-sm font-open-sans text-biz-navy">SMB Cash Flow Strains</p>
                   <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">SBA 2025 Report</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">60%</p>
-                  <p className="text-xs sm:text-sm font-open-sans text-biz-grey">Growth Stalls by Year 3</p>
+                  <p className="text-xs sm:text-sm font-open-sans text-biz-navy">Growth Stalls by Year 3</p>
                   <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">Gartner Research</p>
                 </div>
               </div>

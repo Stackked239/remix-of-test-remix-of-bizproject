@@ -155,22 +155,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Statistical Hooks */}
-            <div className="bg-biz-navy/5 rounded-xl p-4 sm:p-6 backdrop-blur-sm border border-biz-navy/10">
-              <div className="grid grid-cols-2 gap-3 sm:gap-6">
-                <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">70%</p>
-                  <p className="text-xs sm:text-sm font-open-sans text-biz-navy">SMB Cash Flow Strains</p>
-                  <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">SBA 2025 Report</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">60%</p>
-                  <p className="text-xs sm:text-sm font-open-sans text-biz-navy">Growth Stalls by Year 3</p>
-                  <p className="text-xs font-open-sans text-biz-grey opacity-75 hidden sm:block">Gartner Research</p>
-                </div>
-              </div>
-            </div>
-
             {/* Value Propositions */}
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3">

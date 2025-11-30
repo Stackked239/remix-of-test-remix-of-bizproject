@@ -79,7 +79,7 @@ const Pricing = () => {
                   </div>
                   <div className="text-center">
                     <div className="text-6xl font-bold text-primary">$99 - $499</div>
-                    <div className="text-sm text-primary font-semibold mt-1">Save up to $300!</div>
+                    <div className="text-sm text-red-600 font-semibold mt-1">Save up to $300!</div>
                   </div>
                 </div>
               </div>

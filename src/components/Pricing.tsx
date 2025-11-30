@@ -83,7 +83,7 @@ const Pricing = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-biz-navy mb-8">
                 One-time payment • Instant access • No monthly fees
               </p>
               

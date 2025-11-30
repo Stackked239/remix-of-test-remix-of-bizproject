@@ -107,12 +107,12 @@ const Benefits = () => {
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Your Business Data is Protected
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-biz-navy mb-6 max-w-2xl mx-auto">
               We use enterprise-grade encryption and robust security protocols to safeguard your sensitive business information. Your data is protected in compliance with all applicable data protection regulations, providing you peace of mind to focus on your company's growth.
             </p>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-biz-navy">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" style={{ color: '#8CBF2F' }} />
               <span className="font-bold">256-bit SSL Encryption</span>

@@ -117,12 +117,6 @@ const Hero = () => {
 
   // Remove scroll animation - banner stays fixed
 
-  const trustIndicators = [
-    { icon: Shield, label: "Bank-Grade Security", value: "Enterprise Security" },
-    { icon: Clock, label: "Reports Generated", value: "24 hrs/day" },
-    { icon: TrendingUp, label: "Proven Results", value: "27x Avg. ROI" },
-    { icon: Users, label: "Trusted Worldwide", value: "2,500+ Businesses" }
-  ];
 
   return (
     <>
@@ -349,28 +343,21 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Trust Indicators Bar - Repositioned to Bottom */}
+        {/* Social Proof Stats */}
         <div className="pb-16">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {trustIndicators.map((indicator, index) => {
-              const IconComponent = indicator.icon;
-              return (
-                <div key={index} className="flex items-center space-x-3 text-center lg:text-left">
-                  <div className="bg-biz-navy rounded-lg p-2 flex-shrink-0">
-                    <IconComponent className="w-5 h-5 text-white" />
-                  </div>
-                  {/* Mobile/Tablet: Show simplified label */}
-                  <div className="block lg:hidden">
-                    <p className="text-xs font-montserrat font-semibold text-biz-navy">{indicator.label}</p>
-                  </div>
-                  {/* Desktop: Show full label and value */}
-                  <div className="hidden lg:block">
-                    <p className="text-xs font-open-sans text-biz-grey">{indicator.label}</p>
-                    <p className="text-sm font-montserrat font-semibold text-biz-navy">{indicator.value}</p>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
+            <div>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">27x</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Average ROI</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">SMBs Served</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
+              <p className="font-open-sans text-xs sm:text-sm text-biz-grey">Report Generation</p>
+            </div>
           </div>
         </div>
       </div>

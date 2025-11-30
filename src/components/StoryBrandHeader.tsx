@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { Shield, Clock, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -35,20 +35,56 @@ const StoryBrandHeader = () => {
             </Button>
           </div>
           
-          {/* Social Proof Stats - Repositioned from Hero */}
+          {/* Trust Indicators */}
           <div className="pt-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
-              <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">27x</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Average ROI</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex items-center space-x-3 text-center lg:text-left">
+                <div className="bg-biz-green rounded-lg p-2 flex-shrink-0">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+                <div className="block lg:hidden">
+                  <p className="text-xs font-montserrat font-semibold text-white">Bank-Grade Security</p>
+                </div>
+                <div className="hidden lg:block">
+                  <p className="text-xs font-['Open_Sans'] text-white/80">Bank-Grade Security</p>
+                  <p className="text-sm font-montserrat font-semibold text-white">Enterprise Security</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">2,500+</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">SMBs Served</p>
+              <div className="flex items-center space-x-3 text-center lg:text-left">
+                <div className="bg-biz-green rounded-lg p-2 flex-shrink-0">
+                  <Clock className="w-5 h-5 text-white" />
+                </div>
+                <div className="block lg:hidden">
+                  <p className="text-xs font-montserrat font-semibold text-white">Reports Generated</p>
+                </div>
+                <div className="hidden lg:block">
+                  <p className="text-xs font-['Open_Sans'] text-white/80">Reports Generated</p>
+                  <p className="text-sm font-montserrat font-semibold text-white">24 hrs/day</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-montserrat font-bold text-biz-green">~45 min.</p>
-                <p className="font-['Open_Sans'] text-xs sm:text-sm text-white/80">Report Generation</p>
+              <div className="flex items-center space-x-3 text-center lg:text-left">
+                <div className="bg-biz-green rounded-lg p-2 flex-shrink-0">
+                  <TrendingUp className="w-5 h-5 text-white" />
+                </div>
+                <div className="block lg:hidden">
+                  <p className="text-xs font-montserrat font-semibold text-white">Proven Results</p>
+                </div>
+                <div className="hidden lg:block">
+                  <p className="text-xs font-['Open_Sans'] text-white/80">Proven Results</p>
+                  <p className="text-sm font-montserrat font-semibold text-white">27x Avg. ROI</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3 text-center lg:text-left">
+                <div className="bg-biz-green rounded-lg p-2 flex-shrink-0">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div className="block lg:hidden">
+                  <p className="text-xs font-montserrat font-semibold text-white">Trusted Worldwide</p>
+                </div>
+                <div className="hidden lg:block">
+                  <p className="text-xs font-['Open_Sans'] text-white/80">Trusted Worldwide</p>
+                  <p className="text-sm font-montserrat font-semibold text-white">2,500+ Businesses</p>
+                </div>
               </div>
             </div>
           </div>

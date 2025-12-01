@@ -1,163 +1,490 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import RelatedArticles from "@/components/RelatedArticles";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
+import { Button } from "@/components/ui/button";
+import { 
+  Calendar, 
+  Clock, 
+  ChevronLeft, 
+  ChevronRight, 
+  ArrowRight,
+  DollarSign,
+  Settings,
+  Compass,
+  Monitor,
+  Users
+} from "lucide-react";
+import operationalResilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
-import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
+
+// Blog post data structure
+interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  featuredImage: string;
+  subcategory: string;
+  author: string;
+  publishedAt: string;
+  readTime: number;
+}
+
+// Mock blog posts data - replace with actual data fetching
+const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    slug: 'operational-resilience',
+    title: 'Building Operational Resilience in Uncertain Times',
+    excerpt: 'Learn how to build a resilient business that can adapt and thrive through disruption, economic uncertainty, and unexpected challenges.',
+    featuredImage: operationalResilienceImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Dec 5, 2025',
+    readTime: 12
+  },
+  {
+    id: '2',
+    slug: 'warning-signs-business',
+    title: 'Critical Warning Signs Your Business Needs Immediate Attention',
+    excerpt: 'Recognize the early warning signs of business trouble before they escalate into major problems that threaten your company\'s survival.',
+    featuredImage: warningSignsImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Nov 18, 2025',
+    readTime: 10
+  }
+];
 
 const RiskManagement = () => {
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('All');
+  const [sortOrder, setSortOrder] = useState<string>('recent');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  
+  const subcategories = [
+    'All',
+    'Business Continuity',
+    'Insurance',
+    'Compliance',
+    'Crisis Management',
+    'Cybersecurity Risk'
+  ];
+
+  const relatedCategories = [
+    {
+      name: 'Financial Management',
+      icon: DollarSign,
+      link: '/blog/financial-management',
+      description: 'Master your business finances'
+    },
+    {
+      name: 'Operations',
+      icon: Settings,
+      link: '/blog/operations',
+      description: 'Streamline processes and efficiency'
+    },
+    {
+      name: 'Business Strategy',
+      icon: Compass,
+      link: '/blog/business-strategy',
+      description: 'Develop winning business strategies'
+    },
+    {
+      name: 'Technology',
+      icon: Monitor,
+      link: '/blog/technology',
+      description: 'Navigate the digital landscape'
+    },
+    {
+      name: 'Leadership',
+      icon: Users,
+      link: '/blog/leadership',
+      description: 'Strengthen your leadership skills'
+    }
+  ];
+
+  const totalPosts = blogPosts.length;
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#faf9f7]">
+      <SEO
+        title="Risk Management Insights for SMBs"
+        description="Practical risk management guidance for small and mid-sized business owners. Learn about business continuity, insurance, compliance, crisis management, and protecting your business."
+        keywords="business risk management, SMB risk, business continuity planning, small business insurance, compliance management, crisis management, business resilience, cybersecurity risk"
+        canonical="https://bizhealth.ai/blog/risk-management"
+      />
+      
+      <StructuredData
+        type="service"
+        name="Risk Management Insights"
+        description="Practical risk management guidance for small and mid-sized business owners."
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/blog/risk-management"
+      />
+
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <a 
-              href="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </a>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Risk Management Insights
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Identify, assess, and mitigate business risks with expert strategies for building resilient operations and protecting your bottom line.
-            </p>
-            
-            <img 
-              src={warningSignsImage} 
-              alt="Business warning signs and risk management visualization with danger indicators and declining performance metrics"
-              className="w-full rounded-xl shadow-elegant"
-            />
+      {/* Section 1: Category Hero Header */}
+      <section 
+        className="pt-32 pb-16 px-6"
+        style={{
+          background: 'linear-gradient(170deg, #212653 0%, #181b3d 100%)'
+        }}
+      >
+        <div className="container mx-auto max-w-4xl text-center">
+          {/* Breadcrumb Navigation */}
+          <nav className="mb-6 text-sm" aria-label="Breadcrumb">
+            <Link to="/" className="text-white/60 hover:text-white transition-colors">
+              Home
+            </Link>
+            <span className="mx-2 text-white/60">/</span>
+            <Link to="/blog" className="text-white/60 hover:text-white transition-colors">
+              Blog
+            </Link>
+            <span className="mx-2 text-white/60">/</span>
+            <span className="text-white">Risk Management</span>
+          </nav>
+
+          {/* Category Title */}
+          <h1 
+            className="font-bold text-white mb-4"
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: 'clamp(2.25rem, 5vw, 3.25rem)',
+              fontWeight: 700
+            }}
+          >
+            Risk Management
+          </h1>
+
+          {/* Category Description */}
+          <p 
+            className="text-white/80 mb-6 mx-auto leading-relaxed"
+            style={{
+              fontSize: '1.15rem',
+              lineHeight: 1.7,
+              maxWidth: '700px'
+            }}
+          >
+            Protect what you've built. Practical guidance on identifying threats, preparing for the unexpected, 
+            and building a resilient business that can weather any storm.
+          </p>
+
+          {/* Post Count Badge */}
+          <div 
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-4 py-2 rounded-full text-white/70"
+            style={{ fontSize: '0.9rem' }}
+          >
+            {totalPosts} {totalPosts === 1 ? 'Article' : 'Articles'}
           </div>
         </div>
       </section>
 
-      {/* Featured Articles */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                      Featured
-                    </span>
-                  </div>
-                  <CardTitle className="text-2xl">5 Warning Signs Your Business Needs Immediate Attention</CardTitle>
-                  <CardDescription>
-                    Discover the early indicators that suggest your business may be heading for trouble and what you can do about them.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-6 text-muted-foreground mb-4">
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth Research Team</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>September 12, 2025</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>8 min read</span>
-                    </div>
-                  </div>
-                  <a 
-                    href="/blog/warning-signs-business" 
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-                  >
-                    Read Full Article
-                    <ArrowLeft className="w-4 h-4 rotate-180" />
-                  </a>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                      Latest
-                    </span>
-                  </div>
-                  <CardTitle className="text-2xl">Why Success Feels Like a Mirage and How to Overcome Leadership Stress</CardTitle>
-                  <CardDescription>
-                    As a business leader, discover how to reframe risks, build resilience, and find peace in the storm of leadership without adding more burden to your plate.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-6 text-muted-foreground mb-4">
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth Research Team</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>September 24, 2025</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>12 min read</span>
-                    </div>
-                  </div>
-                  <a 
-                    href="/blog/leadership-stress-success" 
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-                  >
-                    Read Full Article
-                    <ArrowLeft className="w-4 h-4 rotate-180" />
-                  </a>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="text-center">
-              <p className="text-muted-foreground mb-6">
-                More risk management articles coming soon. Stay tuned for expert insights on crisis management, 
-                compliance strategies, and business continuity planning.
-              </p>
-              <a 
-                href="/blog" 
-                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+      {/* Section 2: Filter & Sort Bar */}
+      <div className="sticky top-0 z-50 bg-white border-b border-[#212653]/8 px-6 py-4">
+        <div className="container mx-auto max-w-6xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          {/* Filter Tags */}
+          <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
+            {subcategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedSubcategory(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                  selectedSubcategory === cat
+                    ? 'bg-[#969423] text-white'
+                    : 'bg-[#faf9f7] text-[#212653] hover:border hover:border-[#969423]'
+                }`}
               >
-                View All Blog Posts
-                <ArrowLeft className="w-4 h-4 rotate-180" />
-              </a>
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Sort Dropdown */}
+          <div className="flex items-center gap-2">
+            <label htmlFor="sort" className="text-sm text-[#7C7C7C]">Sort by:</label>
+            <select
+              id="sort"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+              className="border border-[#212653]/15 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#969423]"
+            >
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Popular</option>
+              <option value="oldest">Oldest First</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 3: Blog Posts Grid */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5"
+              >
+                {/* Featured Image */}
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={post.featuredImage}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Category Tag */}
+                  <span 
+                    className="absolute top-4 left-4 bg-[#969423] text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded"
+                    style={{ letterSpacing: '0.5px' }}
+                  >
+                    {post.subcategory}
+                  </span>
+                </div>
+
+                {/* Card Body */}
+                <div className="p-6">
+                  {/* Post Title */}
+                  <Link to={`/blog/${post.slug}`}>
+                    <h3 
+                      className="font-semibold text-[#212653] mb-3 hover:text-[#969423] transition-colors line-clamp-2"
+                      style={{
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: '1.2rem',
+                        lineHeight: 1.4,
+                        fontWeight: 600
+                      }}
+                    >
+                      {post.title}
+                    </h3>
+                  </Link>
+
+                  {/* Post Excerpt */}
+                  <p 
+                    className="text-[#7C7C7C] mb-4 line-clamp-3"
+                    style={{
+                      fontSize: '0.95rem',
+                      lineHeight: 1.6
+                    }}
+                  >
+                    {post.excerpt}
+                  </p>
+
+                  {/* Post Meta */}
+                  <div className="flex items-center gap-4 text-[#a8a8a8] mb-4 text-sm">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{post.publishedAt}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{post.readTime} min read</span>
+                    </div>
+                  </div>
+
+                  {/* Read More Link */}
+                  <Link 
+                    to={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-2 text-[#969423] font-semibold text-sm hover:gap-3 transition-all"
+                  >
+                    Read Article
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Pagination */}
+      <section className="pb-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center justify-center gap-2">
+            <button
+              disabled={currentPage === 1}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Previous
+            </button>
+            
+            <button
+              className="w-10 h-10 rounded-lg bg-[#212653] text-white font-semibold"
+            >
+              1
+            </button>
+
+            <button
+              disabled={currentPage === Math.ceil(totalPosts / 12)}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            >
+              Next
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+          
+          <p className="text-center mt-4 text-sm text-[#7C7C7C]">
+            Showing 1-{Math.min(12, totalPosts)} of {totalPosts} articles
+          </p>
+        </div>
+      </section>
+
+      {/* Section 5: Related Categories */}
+      <section className="py-16 px-6 bg-white border-t border-[#212653]/8">
+        <div className="container mx-auto max-w-5xl">
+          <h2 
+            className="text-center mb-8 text-[#212653]"
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: '1.5rem',
+              fontWeight: 600
+            }}
+          >
+            Explore More Topics
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {relatedCategories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <Link
+                  key={category.name}
+                  to={category.link}
+                  className="flex items-center gap-4 p-5 bg-[#faf9f7] border border-transparent rounded-lg hover:border-[#969423]/30 hover:bg-white hover:shadow-sm transition-all"
+                >
+                  <div className="w-11 h-11 flex items-center justify-center bg-[#969423]/12 rounded-lg flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[#969423]" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#212653]">{category.name}</h3>
+                    <p className="text-sm text-[#7C7C7C]">{category.description}</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: CTA Banner */}
+      <section 
+        className="py-16 px-6"
+        style={{
+          background: 'linear-gradient(135deg, #212653 0%, #2d3268 100%)'
+        }}
+      >
+        <div className="container mx-auto max-w-5xl">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            {/* Left Column - Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <p 
+                className="text-[#b8b344] mb-3 uppercase tracking-widest"
+                style={{
+                  fontSize: '0.8rem',
+                  letterSpacing: '1.5px',
+                  fontWeight: 600
+                }}
+              >
+                The Risks You Don't See Are the Most Dangerous
+              </p>
+              
+              <h2 
+                className="text-white mb-4"
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
+                  fontWeight: 700
+                }}
+              >
+                You Can't Protect What You Don't Understand
+              </h2>
+              
+              <p 
+                className="text-white/80 mb-7 leading-relaxed"
+                style={{
+                  fontSize: '1.05rem',
+                  lineHeight: 1.7
+                }}
+              >
+                Real risk management starts with seeing the full picture. Our Business Health Assessment 
+                uncovers vulnerabilities across your operations, finances, team, and strategy—so you can 
+                address weaknesses before they become crises.
+              </p>
+              
+              <Button
+                asChild
+                className="bg-[#969423] hover:bg-[#b8b344] text-white font-bold text-base px-8 py-6 rounded-md hover:-translate-y-0.5 transition-all shadow-lg"
+              >
+                <Link to="/pricing" className="inline-flex items-center gap-2">
+                  Get Your Business Health Assessment
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Right Column - Stats */}
+            <div className="flex-1 w-full">
+              <div 
+                className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col sm:flex-row justify-around gap-6 text-center"
+              >
+                <div>
+                  <div className="text-white text-4xl font-bold mb-1">43%</div>
+                  <div className="text-white/70 text-sm">of SMBs lack a continuity plan</div>
+                </div>
+                <div>
+                  <div className="text-white text-4xl font-bold mb-1">4 Pillars</div>
+                  <div className="text-white/70 text-sm">of business health analyzed</div>
+                </div>
+                <div>
+                  <div className="text-white text-4xl font-bold mb-1">Blind Spots</div>
+                  <div className="text-white/70 text-sm">identified before they hurt you</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <RelatedArticles articles={[
-        {
-          title: "Warning Signs Your Business Needs Attention",
-          slug: "warning-signs-business",
-          category: "Risk Management",
-          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
-        },
-        {
-          title: "Operational Resilience Strategies",
-          slug: "operational-resilience",
-          category: "Business Strategy",
-          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
-        },
-        {
-          title: "Financial Health Metrics Every Business Owner Should Track",
-          slug: "financial-health-metrics",
-          category: "Financial Management",
-          excerpt: "Learn the essential financial KPIs that help monitor business performance and drive growth."
-        }
-      ]} />
+      {/* Section 7: Newsletter Signup */}
+      <section className="py-12 px-6 bg-[#f5f3ef] border-t border-[#212653]/8">
+        <div className="container mx-auto max-w-2xl text-center">
+          <h2 
+            className="mb-3 text-[#212653]"
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: '1.5rem',
+              fontWeight: 600
+            }}
+          >
+            Stay Ahead of Business Risks
+          </h2>
+          
+          <p className="text-[#7C7C7C] mb-6">
+            Get practical risk management strategies, compliance updates, and business continuity tips delivered to your inbox weekly.
+          </p>
+          
+          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-md border border-[#212653]/15 focus:outline-none focus:ring-2 focus:ring-[#969423]"
+              required
+            />
+            <Button
+              type="submit"
+              className="bg-[#212653] hover:bg-[#2d3268] text-white font-semibold px-6 py-3 rounded-md transition-colors"
+            >
+              Subscribe
+            </Button>
+          </form>
+        </div>
+      </section>
 
       <GlobalFooter />
       <PromotionalBanner />

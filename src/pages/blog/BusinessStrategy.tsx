@@ -198,7 +198,7 @@ const BusinessStrategy = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" size="lg" className="w-full mt-6" asChild>
+                <Button variant="default" size="lg" className="w-full mt-6" asChild>
                   <a href="/onboarding">
                     Start Your Business Health Assessment
                   </a>

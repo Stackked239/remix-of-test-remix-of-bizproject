@@ -133,7 +133,7 @@ const BusinessStrategy = () => {
             <div className="text-center mb-12">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
                 Business Strategy:<br />
-                <span className="text-primary">Plan Smart, Grow Strong</span>
+                <span className="text-primary">Plan Smart, BizGreen</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto font-medium">

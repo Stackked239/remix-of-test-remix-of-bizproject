@@ -143,7 +143,7 @@ const BusinessStrategy = () => {
               
               <p className="text-lg text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
                 Learn how to develop winning strategies, make better decisions, and position your business for sustainable growth. 
-                Backed by proven frameworks and real-world success stories from SMBs generating $250K–$25M in revenue.
+                Backed by proven frameworks and real-world success stories from small & mid-size businesses like yours.
               </p>
 
               {/* Post Count Badge */}

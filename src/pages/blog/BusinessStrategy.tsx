@@ -157,7 +157,7 @@ const BusinessStrategy = () => {
       </section>
 
       {/* Value Prop Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/40">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">

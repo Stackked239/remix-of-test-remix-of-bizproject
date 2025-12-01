@@ -98,7 +98,7 @@ const Operations = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+      <section className="relative pt-40 pb-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
         <div className="container mx-auto px-6 relative">
           <div className="max-w-5xl mx-auto">

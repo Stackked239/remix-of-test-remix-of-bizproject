@@ -126,8 +126,8 @@ const Operations = () => {
               </p>
               
               <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all" asChild>
-                <a href="/pricing">
-                  Take the 30-Min Operations Health Check
+                <a href="/onboarding">
+                  Get Your Complete Business Health Assessment
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
@@ -178,8 +178,8 @@ const Operations = () => {
                   ))}
                 </ul>
                 <Button variant="outline" size="lg" className="w-full mt-6" asChild>
-                  <a href="/pricing">
-                    Get Your Operational Score Now – Only $99
+                  <a href="/onboarding">
+                    Start Your Business Health Assessment
                   </a>
                 </Button>
               </div>
@@ -310,14 +310,14 @@ const Operations = () => {
             </p>
             
             <Button size="lg" className="text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all" asChild>
-              <a href="/pricing">
-                Start Your Operations Diagnostic – Instant Report
+              <a href="/onboarding">
+                Get Your Complete Business Health Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
             
             <p className="text-sm text-muted-foreground mt-6">
-              Takes ~30 minutes · From $99 · 20–25x ROI reported by users
+              Comprehensive analysis covering operations, finance, strategy & more
             </p>
           </div>
         </div>

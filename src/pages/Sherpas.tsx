@@ -164,7 +164,7 @@ const Sherpas = () => {
     {
       icon: Users,
       stat: "1000+",
-      label: "SMBs Served"
+      label: "Leaders Served"
     },
     {
       icon: Shield,

@@ -572,12 +572,25 @@ const Sherpas = () => {
             {/* Right - Visual */}
             <div className="bg-white rounded-xl p-8 shadow-lg border border-[#212653]/8">
               <div className="grid grid-cols-3 gap-4">
-                {['Strategy', 'Finance', 'HR', 'Operations', 'Sales', 'Marketing', 'Technology', 'Risk', 'Legal', 'Customer', 'Product', 'Innovation'].map((area) => (
-                  <div key={area} className="bg-[#faf9f7] rounded-lg p-3 text-center">
-                    <div className="w-8 h-8 bg-[#969423]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <BarChart3 className="w-4 h-4 text-[#969423]" />
+                {[
+                  { name: 'Strategy', color: 'text-[#969423]', bgColor: 'bg-[#969423]/10' },
+                  { name: 'Finance', color: 'text-green-600', bgColor: 'bg-green-50' },
+                  { name: 'HR', color: 'text-blue-600', bgColor: 'bg-blue-50' },
+                  { name: 'Operations', color: 'text-purple-600', bgColor: 'bg-purple-50' },
+                  { name: 'Sales', color: 'text-orange-600', bgColor: 'bg-orange-50' },
+                  { name: 'Marketing', color: 'text-pink-600', bgColor: 'bg-pink-50' },
+                  { name: 'Technology', color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
+                  { name: 'Risk', color: 'text-red-600', bgColor: 'bg-red-50' },
+                  { name: 'Legal', color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+                  { name: 'Customer', color: 'text-teal-600', bgColor: 'bg-teal-50' },
+                  { name: 'Product', color: 'text-amber-600', bgColor: 'bg-amber-50' },
+                  { name: 'Innovation', color: 'text-violet-600', bgColor: 'bg-violet-50' }
+                ].map((area) => (
+                  <div key={area.name} className="bg-[#faf9f7] rounded-lg p-3 text-center hover:shadow-md transition-shadow duration-200">
+                    <div className={`w-8 h-8 ${area.bgColor} rounded-full flex items-center justify-center mx-auto mb-2`}>
+                      <BarChart3 className={`w-4 h-4 ${area.color}`} />
                     </div>
-                    <p className="text-xs text-[#7C7C7C] font-medium">{area}</p>
+                    <p className="text-xs text-[#7C7C7C] font-medium">{area.name}</p>
                   </div>
                 ))}
               </div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Button } from '@/components/ui/button';
@@ -207,6 +208,7 @@ const Sherpas = () => {
         url="https://bizhealth.ai/sherpas"
       />
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
       {/* Hero Section */}
@@ -240,23 +242,23 @@ const Sherpas = () => {
           {/* Dual Tool Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-8 animate-fade-in">
             {/* BizGuide Sherpa Card */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <Compass className="w-8 h-8 text-[#969423] mb-4" />
+            <div className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg">
+              <Compass className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
                 BizGuide Sherpa
               </h3>
-              <p className="text-white/70 leading-relaxed">
+              <p className="text-white/85 leading-relaxed">
                 Your strategic and operational 'how-to' guide for the entire business.
               </p>
             </div>
 
             {/* BizLeaDeR Sherpa Card */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <Users className="w-8 h-8 text-[#969423] mb-4" />
+            <div className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg">
+              <Users className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
                 BizLeaDeR Sherpa
               </h3>
-              <p className="text-white/70 leading-relaxed">
+              <p className="text-white/85 leading-relaxed">
                 Your leadership-development co-pilot to grow stronger, more scalable leaders.
               </p>
             </div>
@@ -284,7 +286,7 @@ const Sherpas = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:border-white font-semibold px-8 py-6 transition-all duration-300"
+              className="border-2 border-[#b8b344] bg-transparent text-[#b8b344] hover:bg-[#b8b344] hover:text-[#212653] font-semibold px-8 py-6 transition-all duration-300"
             >
               <a href="#how-it-works">
                 See How It Works

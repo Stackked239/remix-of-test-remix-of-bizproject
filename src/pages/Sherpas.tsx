@@ -673,7 +673,7 @@ const Sherpas = () => {
               <div className="bg-[#faf9f7] border-l-3 border-[#969423] rounded-r-lg p-6 mb-6">
                 <p className="text-[#212653] italic">
                   "Ask <span className="font-bold">BizLeaDeR Sherpa</span> how to lead through tough calls—get scripts, frameworks, 
-                  and next steps in seconds."
+                  and next steps without needing a leadership coach."
                 </p>
               </div>
 

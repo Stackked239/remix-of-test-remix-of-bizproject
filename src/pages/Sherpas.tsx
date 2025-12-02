@@ -22,7 +22,14 @@ import {
   Shield,
   ChevronDown,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Settings,
+  Megaphone,
+  Cpu,
+  Scale,
+  Heart,
+  Package,
+  Lightbulb
 } from 'lucide-react';
 import {
   Accordion,
@@ -572,14 +579,30 @@ const Sherpas = () => {
             {/* Right - Visual */}
             <div className="bg-white rounded-xl p-8 shadow-lg border border-[#212653]/8">
               <div className="grid grid-cols-3 gap-4">
-                {['Strategy', 'Finance', 'HR', 'Operations', 'Sales', 'Marketing', 'Technology', 'Risk', 'Legal', 'Customer', 'Product', 'Innovation'].map((area) => (
-                  <div key={area} className="bg-[#faf9f7] rounded-lg p-3 text-center">
-                    <div className="w-8 h-8 bg-[#969423]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <BarChart3 className="w-4 h-4 text-[#969423]" />
+                {[
+                  { name: 'Strategy', icon: Target, color: 'text-[#4A90E2]', bg: 'bg-[#4A90E2]/10' },
+                  { name: 'Finance', icon: DollarSign, color: 'text-[#969423]', bg: 'bg-[#969423]/10' },
+                  { name: 'HR', icon: Users, color: 'text-[#8CBF2F]', bg: 'bg-[#8CBF2F]/10' },
+                  { name: 'Operations', icon: Settings, color: 'text-[#D2691E]', bg: 'bg-[#D2691E]/10' },
+                  { name: 'Sales', icon: TrendingUp, color: 'text-[#E6B800]', bg: 'bg-[#E6B800]/10' },
+                  { name: 'Marketing', icon: Megaphone, color: 'text-[#4A90E2]', bg: 'bg-[#4A90E2]/10' },
+                  { name: 'Technology', icon: Cpu, color: 'text-[#2d3268]', bg: 'bg-[#2d3268]/10' },
+                  { name: 'Risk', icon: Shield, color: 'text-[#b8b344]', bg: 'bg-[#b8b344]/10' },
+                  { name: 'Legal', icon: Scale, color: 'text-[#D2691E]', bg: 'bg-[#D2691E]/10' },
+                  { name: 'Customer', icon: Heart, color: 'text-[#4A90E2]', bg: 'bg-[#4A90E2]/10' },
+                  { name: 'Product', icon: Package, color: 'text-[#E6B800]', bg: 'bg-[#E6B800]/10' },
+                  { name: 'Innovation', icon: Lightbulb, color: 'text-[#8CBF2F]', bg: 'bg-[#8CBF2F]/10' }
+                ].map((area) => {
+                  const Icon = area.icon;
+                  return (
+                    <div key={area.name} className="bg-[#faf9f7] rounded-lg p-3 text-center">
+                      <div className={`w-8 h-8 ${area.bg} rounded-full flex items-center justify-center mx-auto mb-2`}>
+                        <Icon className={`w-4 h-4 ${area.color}`} />
+                      </div>
+                      <p className="text-xs text-[#7C7C7C] font-medium">{area.name}</p>
                     </div>
-                    <p className="text-xs text-[#7C7C7C] font-medium">{area}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

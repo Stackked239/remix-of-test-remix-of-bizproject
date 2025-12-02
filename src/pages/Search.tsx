@@ -170,6 +170,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "Business & Leadership Sherpas - Free AI Guides",
+        excerpt: "Access two free tools: BizGuide Sherpa for business insights and BizLeaDeR Sherpa for leadership development. Get business questions answered, free business tool, leadership development, sherpa, business tool, biztool, bizleadership, business leadership guidance. Ask business and leadership questions privately 24/7.",
+        url: "/sherpas",
+        icon: Home
+      },
+      {
+        type: "Page",
         title: "BizGrowth - Strategic Advancement Awaits",
         excerpt: "Strategic growth programs and resources for scaling your business effectively.",
         url: "/bizgrowth",

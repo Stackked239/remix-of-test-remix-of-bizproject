@@ -5,10 +5,122 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
+ * AUTOMATED SITEMAP GENERATOR
+ * 
+ * This script automatically generates sitemap.xml from all discovered routes.
+ * 
+ * HOW IT WORKS:
+ * 1. Reads routes from routes.json (extracted from App.tsx)
+ * 2. Auto-categorizes routes (homepage, blog, tools, pages, legal)
+ * 3. Determines file modification dates for accurate lastmod
+ * 4. Assigns priorities and changefreq based on route patterns
+ * 5. Generates valid XML sitemap
+ * 
+ * TO ADD NEW CONTENT TYPES:
+ * - Just add routes to App.tsx - they'll be auto-detected
+ * - Blog posts: /blog/* automatically get priority 0.7
+ * - Tools: /biztools/* automatically get priority 0.8-0.9
+ * - Main pages: manually configured below for SEO optimization
+ * 
+ * RUNS AUTOMATICALLY:
+ * - During build: ./build-ssg.sh or build-ssg.bat
+ * - Manual: node generate-sitemap.js
+ */
+
+/**
+ * Get the last modification date of a file
+ * Falls back to current date if file doesn't exist
+ */
+function getFileLastModified(routePath) {
+  // Map route to potential source file
+  const possiblePaths = [
+    path.join(__dirname, 'src', 'pages', `${routePath.slice(1) || 'Index'}.tsx`),
+    path.join(__dirname, 'src', 'pages', routePath.slice(1), 'index.tsx'),
+    path.join(__dirname, 'src', 'pages', 'blog', `${routePath.split('/').pop()}.tsx`),
+  ];
+  
+  for (const filePath of possiblePaths) {
+    if (fs.existsSync(filePath)) {
+      const stats = fs.statSync(filePath);
+      return stats.mtime.toISOString().split('T')[0];
+    }
+  }
+  
+  // Fallback to current date
+  return new Date().toISOString().split('T')[0];
+}
+
+/**
+ * Auto-categorize route and assign priority/changefreq
+ */
+function getRouteConfig(route) {
+  // Homepage - highest priority
+  if (route === '/') {
+    return { priority: 1.0, changefreq: 'weekly' };
+  }
+  
+  // Blog posts - high priority, updated monthly
+  if (route.startsWith('/blog/') && route !== '/blog') {
+    return { priority: 0.7, changefreq: 'monthly' };
+  }
+  
+  // Blog listing - very high priority, updated weekly
+  if (route === '/blog') {
+    return { priority: 0.9, changefreq: 'weekly' };
+  }
+  
+  // BizTools pages - high priority
+  if (route.startsWith('/biztools/toolbox')) {
+    return { priority: 0.9, changefreq: 'monthly' };
+  }
+  if (route.startsWith('/biztools')) {
+    return { priority: 0.8, changefreq: 'weekly' };
+  }
+  
+  // BizGuides, BizLeader, BizGrowth - high priority
+  if (route.match(/^\/(bizguides|bizleader|bizgrowth|sherpas)/)) {
+    return { priority: 0.8, changefreq: 'weekly' };
+  }
+  
+  // Key pages - high priority
+  if (route.match(/^\/(pricing|reports|about|how-it-works)$/)) {
+    return { priority: 0.9, changefreq: 'monthly' };
+  }
+  
+  // Resources and glossary - high priority
+  if (route.match(/^\/(resources|glossary-of-terms|faqs)$/)) {
+    return { priority: 0.8, changefreq: 'monthly' };
+  }
+  
+  // Contact - medium-high priority
+  if (route === '/contact') {
+    return { priority: 0.7, changefreq: 'monthly' };
+  }
+  
+  // Auth pages - medium priority
+  if (route.match(/^\/(login|register|portal|checkout|onboarding)$/)) {
+    return { priority: 0.5, changefreq: 'monthly' };
+  }
+  
+  // Legal pages - low priority
+  if (route.match(/^\/(privacy|terms|disclaimer)$/)) {
+    return { priority: 0.3, changefreq: 'yearly' };
+  }
+  
+  // Search - medium-low priority
+  if (route === '/search') {
+    return { priority: 0.5, changefreq: 'monthly' };
+  }
+  
+  // Default for any other routes
+  return { priority: 0.6, changefreq: 'monthly' };
+}
+
+/**
  * Generate sitemap.xml from routes.json
  */
 function generateSitemap() {
-  console.log('🗺️  Generating sitemap.xml...\n');
+  console.log('🗺️  Generating automated sitemap.xml...\n');
   
   // Load routes
   const routesPath = path.join(__dirname, 'routes.json');
@@ -19,67 +131,71 @@ function generateSitemap() {
   
   const routes = JSON.parse(fs.readFileSync(routesPath, 'utf-8'));
   const baseUrl = 'https://bizhealth.ai';
-  const currentDate = new Date().toISOString().split('T')[0];
   
-  // Define route priorities and change frequencies
-  const routeConfig = {
-    '/': { priority: 1.0, changefreq: 'weekly' },
-    '/about': { priority: 0.9, changefreq: 'monthly' },
-    '/pricing': { priority: 0.9, changefreq: 'monthly' },
-    '/reports': { priority: 0.8, changefreq: 'monthly' },
-    '/how-it-works': { priority: 0.8, changefreq: 'monthly' },
-    '/contact': { priority: 0.7, changefreq: 'monthly' },
-    '/resources': { priority: 0.8, changefreq: 'weekly' },
-    '/blog': { priority: 0.9, changefreq: 'weekly' },
-    '/bizguides': { priority: 0.8, changefreq: 'weekly' },
-    '/biztools': { priority: 0.8, changefreq: 'weekly' },
-    '/biztools/how-it-works': { priority: 0.8, changefreq: 'monthly' },
-    '/biztools/toolbox': { priority: 0.9, changefreq: 'weekly' },
-    '/biztools/toolbox/cash-flow-tracker': { priority: 0.9, changefreq: 'monthly' },
-    '/biztools/toolbox/process-mapping-tools': { priority: 0.9, changefreq: 'monthly' },
-    '/biztools/toolbox/process-mapping-tools/guide': { priority: 0.8, changefreq: 'monthly' },
-    '/bizleader': { priority: 0.8, changefreq: 'weekly' },
-    '/bizgrowth': { priority: 0.8, changefreq: 'weekly' },
-    '/faqs': { priority: 0.7, changefreq: 'monthly' },
-    '/glossary-of-terms': { priority: 0.8, changefreq: 'monthly' },
-    '/search': { priority: 0.5, changefreq: 'monthly' },
-    '/privacy': { priority: 0.3, changefreq: 'yearly' },
-    '/terms': { priority: 0.3, changefreq: 'yearly' },
-    '/disclaimer': { priority: 0.3, changefreq: 'yearly' },
-    '/login': { priority: 0.4, changefreq: 'monthly' },
-    '/register': { priority: 0.4, changefreq: 'monthly' },
-    '/portal': { priority: 0.6, changefreq: 'monthly' },
-    '/checkout': { priority: 0.6, changefreq: 'monthly' },
-    '/onboarding': { priority: 0.5, changefreq: 'monthly' },
-  };
-  
-  const blogPostDefaults = { priority: 0.8, changefreq: 'monthly' };
-  
+  // Build XML sitemap (no BOM, no leading whitespace)
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
+  let urlCount = 0;
+  const categorizedRoutes = {
+    homepage: [],
+    mainPages: [],
+    blog: [],
+    tools: [],
+    auth: [],
+    legal: []
+  };
+  
   for (const route of routes) {
-    // Skip wildcard routes
-    if (route.includes('*')) continue;
+    // Skip wildcard routes and dynamic parameters
+    if (route.includes('*') || route.includes(':')) {
+      console.log(`⏭️  Skipping dynamic route: ${route}`);
+      continue;
+    }
     
-    const config = routeConfig[route] || 
-                   (route.startsWith('/blog/') ? blogPostDefaults : { priority: 0.5, changefreq: 'monthly' });
+    // Get automated config
+    const config = getRouteConfig(route);
+    const lastMod = getFileLastModified(route);
+    
+    // Categorize for reporting
+    if (route === '/') categorizedRoutes.homepage.push(route);
+    else if (route.startsWith('/blog')) categorizedRoutes.blog.push(route);
+    else if (route.startsWith('/biztools')) categorizedRoutes.tools.push(route);
+    else if (route.match(/^\/(login|register|portal)/)) categorizedRoutes.auth.push(route);
+    else if (route.match(/^\/(privacy|terms|disclaimer)/)) categorizedRoutes.legal.push(route);
+    else categorizedRoutes.mainPages.push(route);
     
     xml += '  <url>\n';
     xml += `    <loc>${baseUrl}${route}</loc>\n`;
-    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += `    <lastmod>${lastMod}</lastmod>\n`;
     xml += `    <changefreq>${config.changefreq}</changefreq>\n`;
     xml += `    <priority>${config.priority}</priority>\n`;
     xml += '  </url>\n';
+    
+    urlCount++;
   }
   
   xml += '</urlset>';
+  
+  // Validate XML - ensure no BOM or leading whitespace
+  if (xml.charCodeAt(0) === 0xFEFF) {
+    xml = xml.substring(1);
+  }
+  xml = xml.trim();
   
   // Write to public folder
   const sitemapPath = path.join(__dirname, 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, xml, 'utf-8');
   
-  console.log(`✅ Sitemap generated with ${routes.length} URLs`);
+  console.log(`✅ Sitemap generated successfully!\n`);
+  console.log(`📊 STATISTICS:`);
+  console.log(`   Total URLs: ${urlCount}`);
+  console.log(`   Homepage: ${categorizedRoutes.homepage.length}`);
+  console.log(`   Main Pages: ${categorizedRoutes.mainPages.length}`);
+  console.log(`   Blog Posts: ${categorizedRoutes.blog.length}`);
+  console.log(`   Tools: ${categorizedRoutes.tools.length}`);
+  console.log(`   Auth Pages: ${categorizedRoutes.auth.length}`);
+  console.log(`   Legal Pages: ${categorizedRoutes.legal.length}\n`);
   console.log(`📁 Saved to: ${sitemapPath}\n`);
   
   // Also copy to dist if it exists
@@ -88,6 +204,9 @@ function generateSitemap() {
     fs.writeFileSync(distSitemapPath, xml, 'utf-8');
     console.log(`✅ Also copied to: ${distSitemapPath}\n`);
   }
+  
+  console.log(`🎯 TIP: New pages added to App.tsx are automatically included!`);
+  console.log(`   Just run: ./build-ssg.sh (or build-ssg.bat on Windows)\n`);
 }
 
 generateSitemap();

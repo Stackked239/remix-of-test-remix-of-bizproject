@@ -453,8 +453,8 @@ const Sherpas = () => {
             <p className="text-white text-lg leading-relaxed text-center">
               With BizHealth.ai's Business Sherpas, you get the benefits of having a seasoned business 
               advisor and leadership coach on call 24/7—without the $10,000+ monthly retainer. It's like 
-              having a senior consultant in your pocket, trained specifically on the challenges SMB owners 
-              face every single day.
+              having a senior consultant in your pocket, trained specifically on the challenges small & mid-size businesses 
+              face every day.
             </p>
           </div>
 

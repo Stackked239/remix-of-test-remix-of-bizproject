@@ -391,7 +391,7 @@ const Sherpas = () => {
           {/* Why Business Sherpas Matter */}
           <div className="mb-16">
             <h3 className="font-montserrat font-semibold text-[#212653] text-3xl text-center mb-12">
-              Why Your Business Needs a Sherpa
+              Why <span className="font-bold">Your Business</span> Needs a Sherpa
             </h3>
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">

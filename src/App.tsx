@@ -81,6 +81,7 @@ import OurLogo from "./pages/OurLogo";
 import Concerns from "./pages/Concerns";
 import BizLeaderBot from "./pages/BizLeaderBot";
 import BizGuideSherpa from "./pages/BizGuideSherpa";
+import Sherpas from "./pages/Sherpas";
 
 
 const queryClient = new QueryClient();
@@ -111,6 +112,8 @@ const App = () => (
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/bizguides" element={<BizGuides />} />
             <Route path="/bizguides/bizguide-sherpa" element={<BizGuideSherpa />} />
+            <Route path="/sherpas" element={<Sherpas />} />
+            <Route path="/business-leadership-sherpas" element={<Sherpas />} />
             <Route path="/biztools" element={<BizTools />} />
             <Route path="/biztools/how-it-works" element={<BizToolsHowItWorks />} />
             <Route path="/biztools/toolbox" element={<BizToolsToolbox />} />

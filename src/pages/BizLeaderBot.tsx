@@ -88,7 +88,7 @@ const BizLeaderBot = () => {
       <CodyWidget />
       <SEO
         title="Free AI Leadership Mentor | BizLeaDeR Leadership Development Bot | BizHealth.ai"
-        description="Get instant leadership advice from an AI-powered business mentor. Navigate difficult conversations, boost team motivation, and make strategic decisions with confidence. Free for BizHealth.ai users."
+        description="BizLeaDeR Leadership Development Sherpa - FREE Leadership Development Business Tool"
         keywords="leadership development, business leadership mentor, AI leadership coach, SMB leadership, leadership skills, team management, leadership advice, small business leadership"
         canonical="https://bizhealth.ai/bizleader/leadership-development-bot"
         ogType="website"

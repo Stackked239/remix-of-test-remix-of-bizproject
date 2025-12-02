@@ -811,7 +811,7 @@ const Sherpas = () => {
                 Register & Activate My Sherpas
               </Link>
             </Button>
-            <p className="text-sm text-[#a8a8a8]">
+            <p className="text-sm text-[#4A90E2]">
               No credit card required • Takes 2 minutes • Start using immediately
             </p>
           </div>

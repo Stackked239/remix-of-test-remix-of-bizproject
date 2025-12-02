@@ -781,8 +781,7 @@ const Sherpas = () => {
             <p className="text-lg text-[#212653] leading-relaxed">
               As an introductory offer, registered <span className="font-bold">BizHealth.ai clients</span> can access <span className="underline">both</span> online <span className="font-bold">BizSherpas</span> for <span className="font-bold">FREE</span>, layered 
               on top of our already high-ROI diagnostics that deliver 20x value on modest assessment fees. 
-              As BizHealth.ai scales, ongoing access to <span className="font-bold">BizGuide Sherpa</span> and 
-              <span className="font-bold">BizLeaDeR Sherpa</span> will become part of an optional monthly subscription plan, turning one-time insights into 
+              As BizHealth.ai scales, ongoing access to <span className="font-bold">BizGuide Sherpa</span> and <span className="font-bold">BizLeaDeR Sherpa</span> will become part of an optional monthly subscription plan, turning one-time insights into 
               a living, evolving system of business and leadership support.
             </p>
           </div>

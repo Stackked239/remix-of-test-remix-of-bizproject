@@ -618,7 +618,7 @@ const Sherpas = () => {
               <div className="space-y-4">
                 {['Emerging Leader', 'Confident Manager', 'Scalable Executive'].map((stage, index) => (
                   <div key={stage} className="flex items-center gap-4 bg-white rounded-lg p-4 shadow-sm">
-                    <div className="w-10 h-10 bg-[#969423] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#4A90E2] rounded-full flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -627,7 +627,7 @@ const Sherpas = () => {
                         {[...Array(3)].map((_, i) => (
                           <div 
                             key={i} 
-                            className={`h-1.5 w-8 rounded-full ${i <= index ? 'bg-[#969423]' : 'bg-gray-200'}`}
+                            className={`h-1.5 w-8 rounded-full ${i <= index ? 'bg-[#4A90E2]' : 'bg-gray-200'}`}
                           />
                         ))}
                       </div>

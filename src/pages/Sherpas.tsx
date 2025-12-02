@@ -534,7 +534,7 @@ const Sherpas = () => {
               <p className="text-lg text-[#7C7C7C] leading-relaxed mb-8">
                 BizGuide Sherpa takes your BizHealth.ai assessment insights and converts them into 
                 targeted guidance when you ask, "How do we fix this?" or "What should we do next?". 
-                It is designed for 28–55-year-old SMB owners and executives who value speed, clarity, and ROI.
+                It is designed for business owners and executives who value speed, clarity, and ROI.
               </p>
 
               <div className="space-y-5 mb-8">

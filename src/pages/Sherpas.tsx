@@ -562,8 +562,8 @@ const Sherpas = () => {
 
               <div className="bg-white border-l-3 border-[#969423] rounded-r-lg p-6 mb-6">
                 <p className="text-[#212653] italic">
-                  "Ask BizGuide Sherpa anything about your business health—get a clear, 
-                  prioritized game plan in minutes."
+                  "Ask <span className="font-bold">BizGuide Sherpa</span> anything about your business health—get a clear, 
+                  prioritized game plan in seconds."
                 </p>
               </div>
 

@@ -158,8 +158,8 @@ const Sherpas = () => {
   const trustSignals = [
     {
       icon: TrendingUp,
-      stat: "20-25x",
-      label: "Return on Assessment Investment"
+      stat: "20x",
+      label: "Assessment ROI"
     },
     {
       icon: Users,

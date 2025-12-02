@@ -779,10 +779,10 @@ const Sherpas = () => {
           {/* Value Proposition Box */}
           <div className="bg-[#969423]/5 border-2 border-[#969423] rounded-xl p-8 mb-10">
             <p className="text-lg text-[#212653] leading-relaxed">
-              Right now, registered BizHealth.ai clients can access both sherpas for free, layered 
-              on top of high-ROI diagnostics that already deliver 20–25x value on modest assessment fees. 
-              As BizHealth.ai scales into a subscription model, ongoing access to BizGuide Sherpa and 
-              BizLeaDeR Sherpa will become part of paid monthly plans, turning one-time insights into 
+              As an introductory offer, registered <span className="font-bold">BizHealth.ai clients</span> can access both online <span className="font-bold">BizSherpas</span> for <span className="font-bold">FREE</span>, layered 
+              on top of our already high-ROI diagnostics that deliver 20x value on modest assessment fees. 
+              As BizHealth.ai scales, ongoing access to <span className="font-bold">BizGuide Sherpa</span> and 
+              <span className="font-bold">BizLeaDeR Sherpa</span> will become part of an optional monthly subscription plan, turning one-time insights into 
               a living, evolving system of business and leadership support.
             </p>
           </div>

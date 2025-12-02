@@ -242,7 +242,10 @@ const Sherpas = () => {
           {/* Dual Tool Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-8 animate-fade-in">
             {/* BizGuide Sherpa Card */}
-            <div className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg">
+            <Link 
+              to="/bizguides/bizguide-sherpa"
+              className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+            >
               <Compass className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
                 BizGuide Sherpa
@@ -250,10 +253,13 @@ const Sherpas = () => {
               <p className="text-white/85 leading-relaxed">
                 Your strategic and operational 'how-to' guide for the entire business.
               </p>
-            </div>
+            </Link>
 
             {/* BizLeaDeR Sherpa Card */}
-            <div className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg">
+            <Link 
+              to="/bizleader/leadership-development-bot"
+              className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+            >
               <Users className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
                 BizLeaDeR Sherpa
@@ -261,7 +267,7 @@ const Sherpas = () => {
               <p className="text-white/85 leading-relaxed">
                 Your leadership-development co-pilot to grow stronger, more scalable leaders.
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* Availability Note */}

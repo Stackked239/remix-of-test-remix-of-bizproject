@@ -797,7 +797,7 @@ const Sherpas = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-[#faf9f7] py-16 px-6">
+      <section className="bg-gradient-to-b from-[#f5f3ef] to-[#faf9f7] py-16 px-6">
         <div className="container max-w-3xl mx-auto">
           <h2 className="font-montserrat font-semibold text-[#212653] text-3xl text-center mb-10">
             Frequently Asked Questions
@@ -808,7 +808,7 @@ const Sherpas = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-white rounded-lg mb-3 px-5 border border-[#212653]/8"
+                className="bg-white rounded-lg mb-3 px-5 border border-[#212653]/8 shadow-sm"
               >
                 <AccordionTrigger className="font-semibold text-[#212653] hover:text-[#969423] text-left py-5">
                   {faq.question}

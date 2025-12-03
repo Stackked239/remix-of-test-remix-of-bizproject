@@ -209,6 +209,62 @@ const Search = () => {
         excerpt: "Having concerns about your BizHealth.ai experience? Our Client Success team is here to help. Share your concerns about refunds, guarantees, or any issues. We're committed to making things right. No refund policy, but personalized support for all client concerns and questions about money-back guarantees.",
         url: "/concerns",
         icon: HelpCircle
+      },
+      {
+        type: "Page",
+        title: "Blog - Business Insights & Resources",
+        excerpt: "Expert insights, strategies, and resources for small and mid-size businesses. Browse articles on business strategy, operations, financial management, leadership, technology, and risk management.",
+        url: "/blog",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Business Strategy Blog Articles",
+        excerpt: "Expert business strategy articles for SMBs. Learn about strategic planning, growth strategies, business health assessments, and building a strong business foundation for 2025 and beyond.",
+        url: "/blog?category=Business+Strategy",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Operations Blog Articles",
+        excerpt: "Operations management insights for small businesses. Discover tips on process optimization, operational efficiency, scaling operations, and daily operational fixes.",
+        url: "/blog?category=Operations",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Financial Management Blog Articles",
+        excerpt: "Financial management strategies for SMBs. Articles on cash flow management, financial health metrics, budgeting, and financial planning for small business success.",
+        url: "/blog?category=Financial+Management",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Business Leadership Blog Articles",
+        excerpt: "Leadership development articles for business owners. Explore topics on leadership blind spots, stress management, strategic decision-making, and team leadership.",
+        url: "/blog?category=Business+Leadership",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Technology Blog Articles",
+        excerpt: "Technology insights for small businesses. Learn about AI analytics, remote tools, digital transformation, and leveraging technology for business growth.",
+        url: "/blog?category=Technology",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Risk Management Blog Articles",
+        excerpt: "Risk management strategies for SMBs. Articles on identifying business warning signs, crisis management, and building resilient businesses.",
+        url: "/blog?category=Risk+Management",
+        icon: FileText
+      },
+      {
+        type: "Page",
+        title: "Business Intelligence Blog Articles",
+        excerpt: "Business intelligence insights for SMBs. Discover how data analytics, real-time BI, and business intelligence ROI can transform your decision-making.",
+        url: "/blog?category=Business+Intelligence",
+        icon: FileText
       }
     ],
     blogs: [

@@ -226,8 +226,8 @@ const Search = () => {
       },
       {
         type: "Page",
-        title: "Operations Blog Articles",
-        excerpt: "Operations management insights for small businesses. Discover tips on process optimization, operational efficiency, scaling operations, and daily operational fixes.",
+        title: "Operations Blog Articles - Business Operations Insights",
+        excerpt: "Operations and business operations management insights for small businesses. Discover tips on process optimization, operational efficiency, scaling operations, and daily operational fixes.",
         url: "/blog?category=Operations",
         icon: FileText
       },

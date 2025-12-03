@@ -221,49 +221,49 @@ const Search = () => {
         type: "Page",
         title: "Business Strategy Blog Articles",
         excerpt: "Expert business strategy articles for SMBs. Learn about strategic planning, growth strategies, business health assessments, and building a strong business foundation for 2025 and beyond.",
-        url: "/blog?category=Business+Strategy",
+        url: "/blog/business-strategy",
         icon: FileText
       },
       {
         type: "Page",
         title: "Business Operations - Operations Blog Articles",
         excerpt: "Business operations insights and operations management for small businesses. Discover tips on process optimization, operational efficiency, scaling operations, and daily operational fixes.",
-        url: "/blog?category=Operations",
+        url: "/blog/operations",
         icon: FileText
       },
       {
         type: "Page",
         title: "Financial Management Blog Articles",
         excerpt: "Financial management strategies for SMBs. Articles on cash flow management, financial health metrics, budgeting, and financial planning for small business success.",
-        url: "/blog?category=Financial+Management",
+        url: "/blog/financial-management",
         icon: FileText
       },
       {
         type: "Page",
         title: "Business Leadership Blog Articles",
         excerpt: "Leadership development articles for business owners. Explore topics on leadership blind spots, stress management, strategic decision-making, and team leadership.",
-        url: "/blog?category=Business+Leadership",
+        url: "/blog/business-leadership",
         icon: FileText
       },
       {
         type: "Page",
         title: "Technology Blog Articles",
         excerpt: "Technology insights for small businesses. Learn about AI analytics, remote tools, digital transformation, and leveraging technology for business growth.",
-        url: "/blog?category=Technology",
+        url: "/blog/technology",
         icon: FileText
       },
       {
         type: "Page",
         title: "Risk Management Blog Articles",
         excerpt: "Risk management strategies for SMBs. Articles on identifying business warning signs, crisis management, and building resilient businesses.",
-        url: "/blog?category=Risk+Management",
+        url: "/blog/risk-management",
         icon: FileText
       },
       {
         type: "Page",
         title: "Business Intelligence Blog Articles",
         excerpt: "Business intelligence insights for SMBs. Discover how data analytics, real-time BI, and business intelligence ROI can transform your decision-making.",
-        url: "/blog?category=Business+Intelligence",
+        url: "/blog/business-intelligence",
         icon: FileText
       }
     ],

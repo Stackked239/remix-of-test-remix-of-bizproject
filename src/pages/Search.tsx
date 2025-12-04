@@ -205,6 +205,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "Legal Hub - Privacy, Terms, Security & Disclaimer",
+        excerpt: "BizHealth.ai's legal hub: straightforward privacy policy, terms of service, security practices, and disclaimers. No legalese—just clear protection for your business. SOC 2 compliant, GDPR ready, CCPA compliant. Legal documents, data protection, transparency, trust.",
+        url: "/legal",
+        icon: FileText
+      },
+      {
+        type: "Page",
         title: "Client Support & Concerns - BizHealth.ai",
         excerpt: "Having concerns about your BizHealth.ai experience? Our Client Success team is here to help. Share your concerns about refunds, guarantees, or any issues. We're committed to making things right. No refund policy, but personalized support for all client concerns and questions about money-back guarantees.",
         url: "/concerns",

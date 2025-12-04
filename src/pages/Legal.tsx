@@ -246,7 +246,7 @@ const Legal = () => {
                 fontFamily: "'Open Sans', sans-serif"
               }}
             >
-              No surprises. No complex legalese. Just straightforward protection for your business.
+              No surprises. No complex legalese. Just straightforward protection for your business and ours.
             </p>
           </div>
         </section>

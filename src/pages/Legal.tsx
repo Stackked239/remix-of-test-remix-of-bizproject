@@ -441,10 +441,10 @@ const Legal = () => {
                 </p>
                 <Link 
                   to="/pricing"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#008080] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:bg-[#006666] hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#73B955] text-white rounded-xl font-semibold text-base transition-all duration-300 hover:bg-[#5da043] hover:-translate-y-0.5"
                   style={{ 
                     fontFamily: "'Montserrat', sans-serif",
-                    boxShadow: '0 4px 16px rgba(0, 128, 128, 0.4)'
+                    boxShadow: '0 4px 16px rgba(115, 185, 85, 0.4)'
                   }}
                 >
                   Start Your Assessment

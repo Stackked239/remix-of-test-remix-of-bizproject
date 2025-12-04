@@ -69,6 +69,7 @@ import FAQs from "./pages/FAQs";
 import GlossaryOfTerms from "./pages/GlossaryOfTerms";
 import Reports from "./pages/Reports";
 import Security from "./pages/Security";
+import Legal from "./pages/Legal";
 import CashFlowTracker from "./pages/tools/CashFlowTracker";
 import ProcessMappingTools from "./pages/tools/ProcessMappingTools";
 import ProcessMappingGuide from "./pages/tools/ProcessMappingGuide";
@@ -160,6 +161,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/legal" element={<Legal />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/concerns" element={<Concerns />} />
             <Route path="/glossary-of-terms" element={<GlossaryOfTerms />} />

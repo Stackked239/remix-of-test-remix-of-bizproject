@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -183,9 +184,10 @@ const Legal = () => {
         </script>
       </Helmet>
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen">
+      <main className="min-h-screen pt-36">
         {/* Hero Header Section */}
         <section 
           className="relative overflow-hidden"

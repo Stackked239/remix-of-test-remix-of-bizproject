@@ -273,14 +273,35 @@ const GlobalNavigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              <Link 
-                to="/about" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/about') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                About
-              </Link>
+              {/* About Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
+                    isActiveRoute('/about') || isActiveRoute('/legal') ? 'text-biz-green' : 'text-biz-navy'
+                  }`}>
+                    About
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/about"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">About Us</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/legal"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Legal Hub</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link 
                 to="/contact" 
                 className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
@@ -402,9 +423,17 @@ const GlobalNavigation = () => {
                   Business Terms Glossary
                 </Link>
               </div>
-              <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                About
-              </Link>
+              <div className="space-y-2">
+                <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  About
+                </Link>
+                <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  About Us
+                </Link>
+                <Link to="/legal" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Legal Hub
+                </Link>
+              </div>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                 Contact
               </Link>

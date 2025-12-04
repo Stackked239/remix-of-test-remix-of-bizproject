@@ -187,7 +187,7 @@ const Legal = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="min-h-screen pt-36">
+      <main className="min-h-screen pt-24">
         {/* Hero Header Section */}
         <section 
           className="relative overflow-hidden"

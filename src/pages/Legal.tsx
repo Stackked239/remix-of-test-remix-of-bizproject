@@ -207,15 +207,24 @@ const Legal = () => {
             {/* Pre-title Badge */}
             <div className="inline-flex items-center mb-6">
               <span 
-                className="text-[11px] font-semibold uppercase tracking-[2px] px-4 py-1.5 rounded-full"
+                className="text-[11px] font-semibold uppercase tracking-[2px] px-4 py-1.5 rounded-full text-white"
                 style={{
-                  background: 'rgba(255,255,255,0.1)',
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  color: 'rgba(255,255,255,0.9)'
+                  background: '#73B955',
+                  border: '1px solid rgba(115, 185, 85, 0.3)'
                 }}
               >
                 Transparency & Trust
               </span>
+            </div>
+            
+            {/* Header Icon */}
+            <div className="flex justify-center mb-5">
+              <div 
+                className="w-16 h-16 rounded-2xl flex items-center justify-center"
+                style={{ background: 'rgba(255,255,255,0.1)' }}
+              >
+                <ShieldCheck className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
             </div>
             
             {/* H1 Title */}

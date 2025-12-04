@@ -80,7 +80,7 @@ const legalCards = [
     title: "Privacy Policy",
     description: "How we collect, protect, and use your information. Your business data stays your business—here's exactly how we ensure that.",
     icon: Lock,
-    iconColor: "#059669",
+    iconColor: "#7C3AED",
     bracketColor: "#242553",
     readTime: "5-7 min read",
     updated: "Dec 2025",

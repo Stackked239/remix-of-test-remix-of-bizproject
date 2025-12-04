@@ -58,7 +58,8 @@ const legalCards = [
     title: "Disclaimer",
     description: "Understand the scope of our services, the nature of AI-generated insights, and the boundaries of our recommendations.",
     icon: AlertTriangle,
-    color: "#242553",
+    iconColor: "#DC2626",
+    bracketColor: "#242553",
     readTime: "3-4 min read",
     updated: "Dec 2025",
     link: "/disclaimer",
@@ -68,7 +69,8 @@ const legalCards = [
     title: "Terms of Service",
     description: "The complete agreement governing your use of BizHealth.ai—your rights, our responsibilities, and how we work together.",
     icon: FileText,
-    color: "#242553",
+    iconColor: "#2563EB",
+    bracketColor: "#242553",
     readTime: "5-7 min read",
     updated: "Dec 2025",
     link: "/terms",
@@ -78,7 +80,8 @@ const legalCards = [
     title: "Privacy Policy",
     description: "How we collect, protect, and use your information. Your business data stays your business—here's exactly how we ensure that.",
     icon: Lock,
-    color: "#242553",
+    iconColor: "#059669",
+    bracketColor: "#242553",
     readTime: "5-7 min read",
     updated: "Dec 2025",
     link: "/privacy",
@@ -88,7 +91,8 @@ const legalCards = [
     title: "Security & Compliance",
     description: "Enterprise-grade security for your business data. Learn about our encryption, certifications, and ongoing security practices.",
     icon: ShieldCheck,
-    color: "#242553",
+    iconColor: "#008080",
+    bracketColor: "#242553",
     readTime: "4-5 min read",
     updated: "Dec 2025",
     link: "/security",
@@ -316,14 +320,14 @@ const Legal = () => {
                     key={index}
                     to={card.link}
                     className="group bg-white rounded-2xl p-8 shadow-sm border-t-[5px] flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-                    style={{ borderTopColor: card.color }}
+                    style={{ borderTopColor: card.bracketColor }}
                   >
                     {/* Icon */}
                     <div className="mb-5">
                       <Icon 
                         className="w-10 h-10" 
                         strokeWidth={1.5}
-                        style={{ color: card.color }}
+                        style={{ color: card.iconColor }}
                       />
                     </div>
                     

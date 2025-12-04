@@ -297,7 +297,7 @@ const GlobalNavigation = () => {
                       to="/legal"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
-                      <span className="font-medium text-biz-navy">Legal Hub</span>
+                      <span className="font-medium text-biz-navy">Legal</span>
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -431,7 +431,7 @@ const GlobalNavigation = () => {
                   About Us
                 </Link>
                 <Link to="/legal" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  Legal Hub
+                  Legal
                 </Link>
               </div>
               <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">

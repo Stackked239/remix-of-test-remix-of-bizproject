@@ -294,6 +294,14 @@ const GlobalNavigation = () => {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link 
+                      to="/faqs"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">FAQs</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
                       to="/legal"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
@@ -429,6 +437,9 @@ const GlobalNavigation = () => {
                 </Link>
                 <Link to="/about" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   About Us
+                </Link>
+                <Link to="/faqs" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  FAQs
                 </Link>
                 <Link to="/legal" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Legal

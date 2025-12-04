@@ -289,7 +289,7 @@ const Legal = () => {
             {/* Introduction Card */}
             <div 
               className="bg-white rounded-2xl p-7 md:p-10 shadow-sm mb-12 border-l-[5px]"
-              style={{ borderLeftColor: '#008080' }}
+              style={{ borderLeftColor: '#969423' }}
             >
               <h2 
                 className="text-2xl font-bold text-biz-navy mb-5"

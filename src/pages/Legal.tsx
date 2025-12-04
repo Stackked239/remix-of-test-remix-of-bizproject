@@ -203,7 +203,7 @@ const Legal = () => {
             }}
           />
           
-          <div className="relative max-w-[1000px] mx-auto px-6 py-20 md:py-24 text-center">
+          <div className="relative max-w-[1000px] mx-auto px-6 pt-16 pb-12 md:pt-20 md:pb-14 text-center">
             {/* Pre-title Badge */}
             <div className="inline-flex items-center mb-6">
               <span 

@@ -349,10 +349,10 @@ const Legal = () => {
                     
                     {/* CTA Button */}
                     <div 
-                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#008080] text-white rounded-xl font-semibold text-[15px] w-fit transition-all duration-300 group-hover:bg-[#006666] group-hover:translate-x-1 group-hover:shadow-lg"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#969423] text-white rounded-xl font-semibold text-[15px] w-fit transition-all duration-300 group-hover:bg-[#7a7a1c] group-hover:translate-x-1 group-hover:shadow-lg"
                       style={{ 
                         fontFamily: "'Montserrat', sans-serif",
-                        boxShadow: '0 4px 14px rgba(0, 128, 128, 0.25)'
+                        boxShadow: '0 4px 14px rgba(150, 148, 35, 0.25)'
                       }}
                     >
                       {card.cta}

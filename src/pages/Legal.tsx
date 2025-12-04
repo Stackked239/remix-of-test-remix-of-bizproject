@@ -209,8 +209,8 @@ const Legal = () => {
               <span 
                 className="text-[11px] font-semibold uppercase tracking-[2px] px-4 py-1.5 rounded-full text-white"
                 style={{
-                  background: '#73B955',
-                  border: '1px solid rgba(115, 185, 85, 0.3)'
+                  background: '#969423',
+                  border: '1px solid rgba(150, 148, 35, 0.3)'
                 }}
               >
                 Transparency & Trust

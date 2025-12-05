@@ -705,7 +705,7 @@ const Sherpas = () => {
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs font-bold uppercase tracking-wider text-[#b8b344] mb-4">
-              DESIGNED FOR BUSY SMBs
+              DESIGNED FOR SMALL & MID-SIZE BUSINESS LEADERS
             </p>
             <h2 className="font-montserrat font-bold text-white mb-6"
                 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)' }}>

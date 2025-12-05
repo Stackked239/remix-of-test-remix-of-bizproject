@@ -251,7 +251,7 @@ const Sherpas = () => {
             {/* BizGuide Sherpa Card */}
             <Link 
               to="/bizguides/bizguide-sherpa"
-              className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-[#969423]/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-[#969423]/25 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
             >
               <Compass className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
@@ -265,7 +265,7 @@ const Sherpas = () => {
             {/* BizLeaDeR Sherpa Card */}
             <Link 
               to="/bizleader/leadership-development-bot"
-              className="bg-white/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-white/20 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-[#969423]/15 border border-[#969423]/30 rounded-xl p-6 backdrop-blur-sm hover:bg-[#969423]/25 hover:border-[#969423]/50 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
             >
               <Users className="w-8 h-8 text-[#b8b344] mb-4" />
               <h3 className="font-montserrat font-semibold text-white text-xl mb-2">

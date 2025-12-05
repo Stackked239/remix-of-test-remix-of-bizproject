@@ -317,11 +317,11 @@ const Sherpas = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: `url(${sherpaMountainBg})`,
-            opacity: 0.3
+            opacity: 0.7
           }}
         />
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#faf9f7]/70 to-[#f5f3ef]/70" />
+        {/* White overlay for readability */}
+        <div className="absolute inset-0 bg-white/30" />
         <div className="container max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <p className="text-xs font-bold uppercase tracking-wider text-[#969423] mb-4">

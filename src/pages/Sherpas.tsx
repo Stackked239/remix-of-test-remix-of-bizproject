@@ -6,6 +6,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Button } from '@/components/ui/button';
+import sherpaMountainBg from '@/assets/sherpa-mountain-background.jpg';
 import { 
   Compass, 
   Users, 
@@ -310,8 +311,18 @@ const Sherpas = () => {
       </section>
 
       {/* What is a Business Sherpa Section */}
-      <section className="bg-gradient-to-b from-[#faf9f7] to-[#f5f3ef] py-20 px-6">
-        <div className="container max-w-5xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background Image Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${sherpaMountainBg})`,
+            opacity: 0.3
+          }}
+        />
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#faf9f7]/70 to-[#f5f3ef]/70" />
+        <div className="container max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <p className="text-xs font-bold uppercase tracking-wider text-[#969423] mb-4">
               UNDERSTANDING THE CONCEPT

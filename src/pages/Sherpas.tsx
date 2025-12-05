@@ -714,15 +714,15 @@ const Sherpas = () => {
           </div>
 
           <div className="overflow-x-auto">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden min-w-[600px] shadow-xl">
+            <div className="bg-white border border-[#242553]/20 rounded-xl overflow-hidden min-w-[600px] shadow-xl">
               {/* Table Header */}
-              <div className="grid grid-cols-3 bg-white/15 border-b-2 border-[#969423]/30">
+              <div className="grid grid-cols-3 bg-[#242553] border-b-2 border-[#969423]">
                 <div className="p-4"></div>
                 <div className="p-4 text-center">
-                  <p className="font-bold text-[#b8b344] text-lg">BizGuide Sherpa</p>
+                  <p className="font-bold text-white text-lg">BizGuide Sherpa</p>
                 </div>
                 <div className="p-4 text-center">
-                  <p className="font-bold text-[#b8b344] text-lg">BizLeaDeR Sherpa</p>
+                  <p className="font-bold text-white text-lg">BizLeaDeR Sherpa</p>
                 </div>
               </div>
 
@@ -759,10 +759,10 @@ const Sherpas = () => {
                   bizLeader: 'Weekly 1:1s, leadership meetings, and personal growth sprints; ongoing in future subscription.'
                 }
               ].map((row, index) => (
-                <div key={index} className={`grid grid-cols-3 border-t border-white/15 ${index % 2 === 0 ? 'bg-white/5' : 'bg-white/[0.02]'}`}>
-                  <div className="p-4 text-white font-semibold">{row.dimension}</div>
-                  <div className="p-4 text-white/90 text-sm leading-relaxed">{row.bizGuide}</div>
-                  <div className="p-4 text-white/90 text-sm leading-relaxed">{row.bizLeader}</div>
+                <div key={index} className={`grid grid-cols-3 border-t border-[#242553]/10 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}`}>
+                  <div className="p-4 text-[#242553] font-semibold">{row.dimension}</div>
+                  <div className="p-4 text-[#242553] text-sm leading-relaxed">{row.bizGuide}</div>
+                  <div className="p-4 text-[#242553] text-sm leading-relaxed">{row.bizLeader}</div>
                 </div>
               ))}
             </div>

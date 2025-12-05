@@ -331,7 +331,7 @@ const Sherpas = () => {
                 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)' }}>
               What is a Business Sherpa?
             </h2>
-            <p className="text-lg text-[#7C7C7C] leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-[#242553] leading-relaxed max-w-3xl mx-auto">
               Just as mountain sherpas guide climbers through treacherous terrain to reach the summit, 
               a business sherpa guides entrepreneurs through the complex landscape of growing a company—
               helping you navigate challenges, avoid pitfalls, and reach your business goals with 

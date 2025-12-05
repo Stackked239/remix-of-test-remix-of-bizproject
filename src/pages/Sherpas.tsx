@@ -719,10 +719,10 @@ const Sherpas = () => {
               <div className="grid grid-cols-3 bg-[#242553]/40 border-b-2 border-[#969423]">
                 <div className="p-4"></div>
                 <div className="p-4 text-center">
-                  <p className="font-bold text-white text-lg">BizGuide Sherpa</p>
+                  <p className="font-bold text-[#242553] text-lg">BizGuide Sherpa</p>
                 </div>
                 <div className="p-4 text-center">
-                  <p className="font-bold text-white text-lg">BizLeaDeR Sherpa</p>
+                  <p className="font-bold text-[#242553] text-lg">BizLeaDeR Sherpa</p>
                 </div>
               </div>
 

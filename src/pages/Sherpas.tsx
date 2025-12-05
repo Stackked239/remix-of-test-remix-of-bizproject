@@ -251,13 +251,13 @@ const Sherpas = () => {
             {/* BizGuide Sherpa Card */}
             <Link 
               to="/bizguides/bizguide-sherpa"
-              className="bg-white/70 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white/80 hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-white/80 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
             >
               <Compass className="w-8 h-8 text-[#b8b344] mb-4" />
-              <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
+              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2">
                 BizGuide Sherpa
               </h3>
-              <p className="text-white/85 leading-relaxed">
+              <p className="text-[#242553]/85 leading-relaxed">
                 Your strategic and operational 'how-to' guide for the entire business.
               </p>
             </Link>
@@ -265,13 +265,13 @@ const Sherpas = () => {
             {/* BizLeaDeR Sherpa Card */}
             <Link 
               to="/bizleader/leadership-development-bot"
-              className="bg-white/70 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white/80 hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-white/80 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
             >
               <Users className="w-8 h-8 text-[#b8b344] mb-4" />
-              <h3 className="font-montserrat font-semibold text-white text-xl mb-2">
+              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2">
                 BizLeaDeR Sherpa
               </h3>
-              <p className="text-white/85 leading-relaxed">
+              <p className="text-[#242553]/85 leading-relaxed">
                 Your leadership-development co-pilot to grow stronger, more scalable leaders.
               </p>
             </Link>

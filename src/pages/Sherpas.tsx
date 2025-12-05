@@ -476,7 +476,7 @@ const Sherpas = () => {
             </p>
           </div>
 
-          <p className="text-center text-[#7C7C7C] italic mt-10">
+          <p className="text-center text-[#242553] italic mt-10">
             Now let's dive into why we built these specific tools...
           </p>
         </div>

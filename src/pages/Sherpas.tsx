@@ -252,10 +252,10 @@ const Sherpas = () => {
             {/* BizGuide Sherpa Card */}
             <Link 
               to="/bizguides/bizguide-sherpa"
-              className="bg-white/80 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-white border-2 border-[#b8b344]/50 rounded-xl p-6 hover:border-[#969423] hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 shadow-lg cursor-pointer group"
             >
-              <Compass className="w-8 h-8 text-[#b8b344] mb-4" />
-              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2">
+              <Compass className="w-8 h-8 text-[#b8b344] mb-4 group-hover:text-[#969423] group-hover:scale-110 transition-all duration-300" />
+              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2 group-hover:text-[#969423] transition-colors duration-300">
                 BizGuide Sherpa
               </h3>
               <p className="text-[#242553]/85 leading-relaxed">
@@ -266,10 +266,10 @@ const Sherpas = () => {
             {/* BizLeaDeR Sherpa Card */}
             <Link 
               to="/bizleader/leadership-development-bot"
-              className="bg-white/80 border border-[#b8b344]/50 rounded-xl p-6 backdrop-blur-sm hover:bg-white hover:border-[#b8b344]/70 transition-all duration-300 shadow-lg hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+              className="bg-white border-2 border-[#b8b344]/50 rounded-xl p-6 hover:border-[#969423] hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 shadow-lg cursor-pointer group"
             >
-              <Users className="w-8 h-8 text-[#b8b344] mb-4" />
-              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2">
+              <Users className="w-8 h-8 text-[#b8b344] mb-4 group-hover:text-[#969423] group-hover:scale-110 transition-all duration-300" />
+              <h3 className="font-montserrat font-semibold text-[#242553] text-xl mb-2 group-hover:text-[#969423] transition-colors duration-300">
                 BizLeaDeR Sherpa
               </h3>
               <p className="text-[#242553]/85 leading-relaxed">

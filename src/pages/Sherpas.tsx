@@ -244,7 +244,7 @@ const Sherpas = () => {
           {/* Subheadline */}
           <p className="text-xl text-white/85 text-center leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-in">
             Stop guessing. Start growing with two AI-powered sherpas that turn complex 
-            business and leadership challenges into clear next steps in minutes, not months.
+            business & leadership challenges into clear next steps.
           </p>
 
           {/* Dual Tool Cards */}

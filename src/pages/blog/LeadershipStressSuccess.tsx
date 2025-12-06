@@ -62,7 +62,7 @@ const LeadershipStressSuccess = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-muted">
+      <section className="pt-36 pb-12 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <Link 

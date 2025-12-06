@@ -34,7 +34,7 @@ const LeadershipStressSuccess = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress in 2025",
+            "headline": "Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress",
             "image": "https://bizhealth.ai/assets/business-leadership-stress-success.png",
             "author": {
               "@type": "Organization",
@@ -80,7 +80,7 @@ const LeadershipStressSuccess = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress in 2025
+              Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress
             </h1>
             
             <div className="flex items-center gap-6 text-muted-foreground mb-8">

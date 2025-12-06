@@ -243,7 +243,7 @@ const Sherpas = () => {
 
           {/* Subheadline */}
           <p className="text-xl text-white/85 text-center leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-in">
-            Stop guessing. Start growing with two AI-powered sherpas that turn complex 
+            <span className="font-bold">Stop guessing. <span className="text-[#242553]">Start Growing</span></span> with two AI-powered sherpas that turn complex 
             business & leadership challenges into clear next steps.
           </p>
 

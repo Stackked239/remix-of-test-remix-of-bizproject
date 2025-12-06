@@ -278,10 +278,9 @@ const Sherpas = () => {
             </Link>
           </div>
 
-          {/* Availability Note */}
           <p className="text-sm text-white/60 text-center mb-10">
-            Available now for free to registered BizHealth.ai users; future plans will bundle 
-            them into a subscription for continuous, compounding value.
+            <span className="font-bold">Available now for FREE</span> to registered BizHealth.ai users; future plans will bundle 
+            these into a subscription only feature.
           </p>
 
           {/* CTA Buttons */}

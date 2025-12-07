@@ -517,7 +517,7 @@ const Sherpas = () => {
               return (
                 <div 
                   key={index}
-                  className="bg-[#faf9f7] border border-transparent rounded-xl p-7 text-center hover:border-[#969423]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  className="bg-[#f0ede8] border border-transparent rounded-xl p-7 text-center hover:border-[#969423]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="w-14 h-14 bg-[#969423]/10 rounded-full flex items-center justify-center mx-auto mb-5">
                     <Icon className="w-7 h-7 text-[#969423]" />

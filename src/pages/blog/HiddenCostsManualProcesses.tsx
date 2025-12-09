@@ -547,14 +547,14 @@ const HiddenCostsManualProcesses = () => {
                   Ready to Eliminate Manual Process Costs?
                 </h3>
                 <p className="text-lg mb-6" style={{ color: 'hsl(var(--foreground) / 0.8)' }}>
-                  Take our free Business Health Assessment to identify operational inefficiencies and get personalized automation recommendations.
+                  Take our Business Health Assessment to identify operational inefficiencies and get personalized automation recommendations.
                 </p>
                 <Link 
                   to="/pricing" 
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-white transition-all hover:scale-105"
                   style={{ backgroundColor: 'hsl(var(--biz-green))' }}
                 >
-                  Start Your Free Assessment
+                  Start Your Assessment
                 </Link>
               </div>
 

@@ -38,6 +38,7 @@ import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixin
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
 import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
 import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.png";
+import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -56,6 +57,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
+      excerpt: "Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability and transform your team into owner-minded partners.",
+      author: "BizHealth.ai Research Team",
+      date: "December 9, 2025",
+      readTime: "14 min read",
+      category: "Financial Management, Business Leadership, Operations",
+      slug: "/blog/financial-stewardship-everyones-responsibility",
+      imageUrl: financialStewardshipImage,
+      altText: "Construction workers operating heavy machinery surrounded by cascading money - representing financial stewardship and team responsibility in small business cash flow management",
+      keywords: "financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, SMB finance tips, business financial health, financial awareness employees, cost management team"
+    },
     {
       title: "The Complete Guide to Business Health Assessment in 2025",
       excerpt: "As a business leader, you're no stranger to the whirlwind of running a company—juggling finances, operations, and team dynamics while keeping your eyes on the horizon for growth. But what if the cracks forming beneath the surface are quietly stalling your progress? That's where a Business Health Assessment comes in—a clear-eyed look at your company's vital signs to spot issues before they spiral into costly problems.",

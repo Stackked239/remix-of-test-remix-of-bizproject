@@ -1,19 +1,20 @@
 // Deployment trigger: Force SSG rebuild for sitemap update
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import Benefits from "@/components/Benefits";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
+import { lazy, Suspense } from "react";
 import GlobalNavigation from "@/components/GlobalNavigation";
-import GlobalFooter from "@/components/GlobalFooter";
-import EmailCapturePopup from "@/components/EmailCapturePopup";
 import StoryBrandHeader from "@/components/StoryBrandHeader";
+import Hero from "@/components/Hero";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 
+// Lazy load below-the-fold components to reduce initial JS bundle
+const Benefits = lazy(() => import("@/components/Benefits"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const GlobalFooter = lazy(() => import("@/components/GlobalFooter"));
+
 const Index = () => {
-  return (
+return (
     <div className="min-h-screen bg-background">
       <SEO 
         title="BizHealth.ai - Business Health Analysis for Strategic Growth"
@@ -25,12 +26,21 @@ const Index = () => {
       <GlobalNavigation />
       <StoryBrandHeader />
       <Hero />
-      <Benefits />
-      <HowItWorks />
-      <Testimonials />
-      <Pricing />
-      <GlobalFooter />
-      {/* <EmailCapturePopup /> */}
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <Benefits />
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <HowItWorks />
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <Testimonials />
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <Pricing />
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[100px]" />}>
+        <GlobalFooter />
+      </Suspense>
     </div>
   );
 };

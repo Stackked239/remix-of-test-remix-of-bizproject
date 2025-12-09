@@ -539,60 +539,14 @@ const BusinessIntelligence = () => {
                 </Link>
               </div>
 
-              {/* Right Column - Stats */}
-              <div 
-                className="p-6 rounded-xl"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}
-              >
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center">
-                    <div 
-                      className="font-bold text-white mb-1"
-                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      73%
-                    </div>
-                    <div 
-                      className="text-xs md:text-sm"
-                      style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
-                    >
-                      SMBs don't track metrics
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div 
-                      className="font-bold text-white mb-1"
-                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      4
-                    </div>
-                    <div 
-                      className="text-xs md:text-sm"
-                      style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
-                    >
-                      Pillars of health measured
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div 
-                      className="font-bold text-white mb-1"
-                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      ✓
-                    </div>
-                    <div 
-                      className="text-xs md:text-sm"
-                      style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
-                    >
-                      Benchmark vs. peers
-                    </div>
-                  </div>
-                </div>
+              {/* Right Column - Report Snippet */}
+              <div className="rounded-xl overflow-hidden">
+                <img 
+                  src="/assets/business-health-report-snippet.png"
+                  alt="BizHealth.ai Sample Report showing Key Takeaways, Owner Insights, and Critical Priorities"
+                  className="w-full h-auto rounded-xl"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

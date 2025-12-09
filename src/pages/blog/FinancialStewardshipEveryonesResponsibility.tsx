@@ -481,21 +481,6 @@ const FinancialStewardshipEveryonesResponsibility = () => {
                 The question isn't whether you can afford to build this culture. It's whether you can afford not to.
               </p>
 
-              {/* Author Bio */}
-              <div className="p-6 rounded-lg mt-12 flex flex-col md:flex-row items-start gap-6" style={{ backgroundColor: 'hsl(var(--muted))' }}>
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'hsl(var(--biz-navy))' }}>
-                    <Users className="w-10 h-10 text-white" />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
-                  <p className="font-medium mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>BizHealth.ai Research Team</p>
-                  <p className="text-sm" style={{ color: 'hsl(var(--foreground) / 0.7)' }}>
-                    The BizHealth.ai Research Team combines decades of experience in small business operations, financial management, and organizational development. Our mission is to provide actionable insights that help SMB leaders build healthier, more resilient businesses through data-driven strategies and proven best practices.
-                  </p>
-                </div>
-              </div>
 
               {/* CTA Section */}
               <div className="mt-12 p-8 rounded-xl text-center" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.1)' }}>

@@ -39,6 +39,7 @@ import scalingOperationsImage from "@/assets/scaling-operations-without-losing-c
 import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
 import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.png";
 import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -57,6 +58,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Hidden Costs of Manual Processes in Today's Smaller Businesses",
+      excerpt: "Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Learn how error rates up to 27% cost businesses $12,000+ annually and get actionable tech adoption strategies.",
+      author: "BizHealth.ai Research Team",
+      date: "December 9, 2025",
+      readTime: "10 min read",
+      category: "Technology, Business Intelligence, Operations, Business Strategy",
+      slug: "/blog/hidden-costs-manual-processes",
+      imageUrl: hiddenCostsManualProcessesImage,
+      altText: "Small business owner focused on manual paperwork and calculations representing hidden costs of manual processes in SMB operations",
+      keywords: "manual processes, business automation, SMB technology, operational efficiency, digital transformation, business processes, automation tools, tech adoption, small business efficiency, process improvement, 2025 technology"
+    },
     {
       title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
       excerpt: "Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability and transform your team into owner-minded partners.",

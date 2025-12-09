@@ -33,10 +33,6 @@ const HiddenCostsManualProcesses = () => {
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
-        publisher={{
-          name: "BizHealth.ai",
-          logo: "https://bizhealth.ai/logo-512.jpg"
-        }}
         url="https://bizhealth.ai/blog/hidden-costs-manual-processes"
       />
 

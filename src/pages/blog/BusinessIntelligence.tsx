@@ -547,49 +547,49 @@ const BusinessIntelligence = () => {
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
               >
-                <div className="flex flex-col md:flex-row justify-around gap-6">
+                <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
                     <div 
                       className="font-bold text-white mb-1"
-                      style={{ fontSize: '2.5rem', fontFamily: 'Montserrat, sans-serif' }}
+                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
                     >
                       73%
                     </div>
                     <div 
-                      className="text-sm"
+                      className="text-xs md:text-sm"
                       style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
                     >
-                      of SMBs don't track key metrics
+                      SMBs don't track metrics
                     </div>
                   </div>
 
                   <div className="text-center">
                     <div 
                       className="font-bold text-white mb-1"
-                      style={{ fontSize: '2.5rem', fontFamily: 'Montserrat, sans-serif' }}
+                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
                     >
-                      4 Pillars
+                      4
                     </div>
                     <div 
-                      className="text-sm"
+                      className="text-xs md:text-sm"
                       style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
                     >
-                      of business health measured
+                      Pillars of health measured
                     </div>
                   </div>
 
                   <div className="text-center">
                     <div 
                       className="font-bold text-white mb-1"
-                      style={{ fontSize: '2.5rem', fontFamily: 'Montserrat, sans-serif' }}
+                      style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'Montserrat, sans-serif' }}
                     >
-                      Benchmark
+                      ✓
                     </div>
                     <div 
-                      className="text-sm"
+                      className="text-xs md:text-sm"
                       style={{ color: 'rgba(255, 255, 255, 0.7)', fontFamily: 'Open Sans, sans-serif' }}
                     >
-                      against businesses like yours
+                      Benchmark vs. peers
                     </div>
                   </div>
                 </div>

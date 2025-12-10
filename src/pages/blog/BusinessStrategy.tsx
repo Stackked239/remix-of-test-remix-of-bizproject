@@ -310,7 +310,7 @@ const BusinessStrategy = () => {
       <section 
         className="py-20 px-6"
         style={{ 
-          background: 'linear-gradient(135deg, #212653 0%, #2d3268 50%, #3a4080 100%)'
+          background: 'linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 50%, #4a4a4a 100%)'
         }}
       >
         <div className="container mx-auto">

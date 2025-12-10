@@ -77,7 +77,8 @@ const BusinessIntelligenceROI = () => {
               <img 
                 src={biRoiImage} 
                 alt="Business intelligence ROI visualization with investment returns and analytics charts for small business success"
-                className="w-[85%] h-auto rounded-lg shadow-md object-cover"
+                className="w-[85%] h-auto rounded-lg shadow-md object-cover brightness-100"
+                style={{ filter: 'brightness(1)' }}
                 loading="lazy"
               />
             </div>

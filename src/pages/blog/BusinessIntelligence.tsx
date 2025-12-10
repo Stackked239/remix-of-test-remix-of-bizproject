@@ -19,6 +19,13 @@ import {
   Monitor
 } from "lucide-react";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
+import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -33,18 +40,95 @@ interface BlogPost {
   readTime: number;
 }
 
-// Mock blog posts data - replace with actual data fetching
+// Business Intelligence blog posts
 const blogPosts: BlogPost[] = [
   {
     id: '1',
+    slug: 'overcoming-bi-challenges-smb',
+    title: 'Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses',
+    excerpt: 'Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making.',
+    featuredImage: overcomingBIChallengesImage,
+    subcategory: 'Data Analytics',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 10, 2025',
+    readTime: 12
+  },
+  {
+    id: '2',
     slug: 'business-intelligence-roi',
     title: 'Business Intelligence ROI: Maximizing Returns from Your Data Investments',
     excerpt: 'Discover how to measure and maximize the return on investment from your business intelligence tools with proven strategies and real-world examples.',
     featuredImage: biRoiImage,
-    subcategory: 'Data Analytics',
+    subcategory: 'KPIs & Metrics',
     author: 'BizHealth Research Team',
     publishedAt: 'Sep 12, 2025',
     readTime: 9
+  },
+  {
+    id: '3',
+    slug: 'hidden-costs-manual-processes',
+    title: 'The Hidden Costs of Manual Processes in Today\'s Smaller Businesses',
+    excerpt: 'Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Learn how error rates up to 27% cost businesses $12,000+ annually.',
+    featuredImage: hiddenCostsManualProcessesImage,
+    subcategory: 'Data Analytics',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 9, 2025',
+    readTime: 10
+  },
+  {
+    id: '4',
+    slug: 'scaling-operations-without-losing-control',
+    title: 'How Small & Mid-Size Businesses Can Scale Operations Without Losing Control',
+    excerpt: 'Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework and avoid growth traps.',
+    featuredImage: scalingOperationsImage,
+    subcategory: 'Business Dashboards',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 23, 2025',
+    readTime: 12
+  },
+  {
+    id: '5',
+    slug: 'success-begins-with-2026-strategy',
+    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
+    excerpt: 'Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, and AI-driven growth analytics.',
+    featuredImage: businessStrategyPlanningImage,
+    subcategory: 'Data-Driven Decisions',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 20, 2025',
+    readTime: 12
+  },
+  {
+    id: '6',
+    slug: 'confirm-business-weaknesses-without-consultants',
+    title: 'How to Confirm Your Business Weaknesses Without Expensive Consultants',
+    excerpt: 'Learn how AI-powered business health assessments help SMB leaders identify operational weaknesses and hidden business gaps without consultant fees.',
+    featuredImage: confirmWeaknessesImage,
+    subcategory: 'Data Analytics',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 5, 2025',
+    readTime: 8
+  },
+  {
+    id: '7',
+    slug: 'small-business-blind-spots-2025',
+    title: 'The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can\'t See Them)',
+    excerpt: 'Discover the 5 dangerous business blind spots draining SMB profits in 2025. Learn how to identify financial, operational, and strategic gaps.',
+    featuredImage: blindSpotsImage,
+    subcategory: 'KPIs & Metrics',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 4, 2025',
+    readTime: 11
+  },
+  {
+    id: '8',
+    slug: 'real-time-analytics-smb',
+    title: 'Real-Time Analytics for SMB Agility in Volatile Markets',
+    excerpt: 'Learn how real-time analytics can help small and mid-size businesses stay agile and make faster, data-driven decisions in unpredictable market conditions.',
+    featuredImage: realTimeAnalyticsImage,
+    subcategory: 'Reporting',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Oct 15, 2025',
+    readTime: 10
   }
 ];
 

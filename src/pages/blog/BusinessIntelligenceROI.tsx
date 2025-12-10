@@ -30,6 +30,7 @@ const BusinessIntelligenceROI = () => {
         description="Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments."
         image="https://bizhealth.ai/assets/business-intelligence-roi-analytics.jpg"
         datePublished="2025-09-26"
+        dateModified="2025-12-10"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/business-intelligence-roi"
       />
@@ -96,7 +97,7 @@ const BusinessIntelligenceROI = () => {
               </p>
 
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                But is BI worth the investment for SMBs? Absolutely. Studies show BI adoption can yield a median ROI of 112% within 18 months, per a 2025 Nucleus Research report. For SMBs, where every dollar counts, BI isn't a luxury—it's a growth engine. At BizHealth.ai, we've guided countless SMBs to leverage BI for smarter decisions, from optimizing cash flow to outmaneuvering competitors.
+                But is BI worth the investment for SMBs? Absolutely. Studies show BI adoption can yield a median ROI of 112% within 18 months, per a <a href="https://nucleusresearch.com/research/single/analytics-pays-back-13-01-for-every-dollar-spent/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">2025 Nucleus Research report</a>. For SMBs, where every dollar counts, BI isn't a luxury—it's a growth engine. At BizHealth.ai, we've guided countless SMBs to leverage BI for smarter decisions, from <Link to="/blog/smb-cash-flow-hacks-2025" className="text-primary hover:underline">optimizing cash flow</Link> to outmaneuvering competitors.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Why BI Matters for SMBs</h2>
@@ -110,7 +111,7 @@ const BusinessIntelligenceROI = () => {
                 <li>• <strong>Stay Competitive:</strong> Match or outpace larger rivals' agility</li>
               </ul>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                A 2025 Deloitte study found that SMBs using BI saw 20% faster decision-making and 15% higher profit margins than non-users. The catch? ROI hinges on strategic implementation—choosing the right tools and metrics.
+                A <a href="https://www2.deloitte.com/us/en/insights/topics/analytics/data-driven-business-transformation.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">2025 Deloitte study</a> found that SMBs using BI saw 20% faster decision-making and 15% higher profit margins than non-users. The catch? ROI hinges on <Link to="/blog/business-strategy" className="text-primary hover:underline">strategic implementation</Link>—choosing the right tools and metrics.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Case Study 1: Retail Revival with Real-Time Sales Dashboards</h2>
@@ -230,7 +231,7 @@ const BusinessIntelligenceROI = () => {
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">2. Focus on High-Impact Areas</h3>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Target areas where small improvements yield significant financial returns—customer retention, inventory optimization, and operational efficiency often provide the highest ROI.
+                Target areas where small improvements yield significant financial returns—customer retention, inventory optimization, and <Link to="/blog/operations" className="text-primary hover:underline">operational efficiency</Link> often provide the highest ROI.
               </p>
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">3. Invest in Training and Adoption</h3>
@@ -240,7 +241,7 @@ const BusinessIntelligenceROI = () => {
 
               <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">4. Iterate and Improve</h3>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                Start small, measure results, and expand gradually. The most successful SMBs treat BI as an evolving capability rather than a one-time project.
+                Start small, measure results, and expand gradually. The most successful SMBs treat BI as an evolving capability rather than a one-time project. Learn more about <Link to="/blog/scaling-operations-without-losing-control" className="text-primary hover:underline">scaling operations sustainably</Link>.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Your BI ROI Roadmap</h2>
@@ -266,15 +267,61 @@ const BusinessIntelligenceROI = () => {
                 The question isn't whether your SMB can afford to invest in business intelligence—it's whether you can afford not to. Your competitors are already using data to gain advantages. The time to start is now.
               </p>
 
+              {/* ROI Comparison Table */}
+              <div className="overflow-x-auto mt-12 mb-8">
+                <h3 className="text-2xl font-bold mb-6 text-foreground">Case Study ROI Summary</h3>
+                <table className="w-full border-collapse border border-border rounded-lg">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Company</th>
+                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Industry</th>
+                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Investment</th>
+                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">ROI</th>
+                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Key Improvement</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">CityTrend Boutique</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">Retail</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">$10,000</td>
+                      <td className="border border-border px-4 py-3 text-primary font-semibold">650%</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">25% inventory reduction</td>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <td className="border border-border px-4 py-3 text-muted-foreground">TechFlow Solutions</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">IT Services</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">$15,000</td>
+                      <td className="border border-border px-4 py-3 text-primary font-semibold">1,233%</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">Churn reduced 8% → 3%</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">GreenGadgets Online</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">E-commerce</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">$8,000</td>
+                      <td className="border border-border px-4 py-3 text-primary font-semibold">2,150%</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">Conversion 1.2% → 2.1%</td>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <td className="border border-border px-4 py-3 text-muted-foreground">PrecisionParts Inc.</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">Manufacturing</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">$12,000</td>
+                      <td className="border border-border px-4 py-3 text-primary font-semibold">975%</td>
+                      <td className="border border-border px-4 py-3 text-muted-foreground">22% material waste reduction</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
               {/* Call to Action */}
               <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
                 <h3 className="text-2xl font-bold mb-4">Ready to Achieve Measurable ROI?</h3>
                 <p className="text-white/90 mb-6">
                   Discover how BizHealth.ai can deliver similar results for your SMB with our comprehensive business health assessment platform.
                 </p>
-                <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link to="/pricing" className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Access Your Potential ROI
-                </button>
+                </Link>
               </div>
             </div>
           </div>

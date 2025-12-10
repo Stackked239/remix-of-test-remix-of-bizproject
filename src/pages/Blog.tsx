@@ -411,7 +411,7 @@ const Blog = () => {
       title: "The ROI of Business Intelligence for SMBs",
       excerpt: "Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments.",
       author: "BizHealth Research Team",
-      date: "September 12, 2025",
+      date: "September 26, 2025",
       readTime: "9 min read",
       category: "Business Intelligence",
       slug: "/blog/business-intelligence-roi",

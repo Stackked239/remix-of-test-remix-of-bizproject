@@ -20,6 +20,10 @@ import {
 } from "lucide-react";
 import operationalResilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
+import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
+import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
+import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
 
 // Blog post data structure
 interface BlogPost {
@@ -34,7 +38,7 @@ interface BlogPost {
   readTime: number;
 }
 
-// Mock blog posts data - replace with actual data fetching
+// Risk Management blog posts
 const blogPosts: BlogPost[] = [
   {
     id: '1',
@@ -57,6 +61,50 @@ const blogPosts: BlogPost[] = [
     author: 'BizHealth Research Team',
     publishedAt: 'Nov 18, 2025',
     readTime: 10
+  },
+  {
+    id: '3',
+    slug: 'smb-scaling-paradox-2025',
+    title: 'The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business',
+    excerpt: 'Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks.',
+    featuredImage: smbScalingParadoxImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 4, 2025',
+    readTime: 10
+  },
+  {
+    id: '4',
+    slug: 'identifying-smb-leadership-blind-spots',
+    title: 'Identifying Small & Mid-Size Business Leadership Blind Spots',
+    excerpt: 'Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in their leaders.',
+    featuredImage: leadershipBlindSpotsImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 23, 2025',
+    readTime: 12
+  },
+  {
+    id: '5',
+    slug: 'small-business-survival-checklist-2025',
+    title: 'The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew',
+    excerpt: 'Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from failures.',
+    featuredImage: survivalChecklistImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Oct 24, 2025',
+    readTime: 11
+  },
+  {
+    id: '6',
+    slug: 'success-begins-with-2026-strategy',
+    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
+    excerpt: 'Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for risk mitigation and growth analytics.',
+    featuredImage: businessStrategyPlanningImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 20, 2025',
+    readTime: 12
   }
 ];
 

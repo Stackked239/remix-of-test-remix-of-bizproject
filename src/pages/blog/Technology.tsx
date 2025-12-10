@@ -411,8 +411,15 @@ const Technology = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedCategories.map((category) => {
+            {relatedCategories.map((category, index) => {
               const Icon = category.icon;
+              const iconColors = [
+                { gradient: 'linear-gradient(135deg, #969423 0%, #b8b344 100%)', shadow: 'rgba(150, 148, 35, 0.4)', hover: '#b8b344' },
+                { gradient: 'linear-gradient(135deg, #2a9d8f 0%, #40c9b8 100%)', shadow: 'rgba(42, 157, 143, 0.4)', hover: '#40c9b8' },
+                { gradient: 'linear-gradient(135deg, #e07a5f 0%, #eb9680 100%)', shadow: 'rgba(224, 122, 95, 0.4)', hover: '#eb9680' },
+                { gradient: 'linear-gradient(135deg, #4a7fb8 0%, #6a9fd8 100%)', shadow: 'rgba(74, 127, 184, 0.4)', hover: '#6a9fd8' },
+              ];
+              const colorSet = iconColors[index % iconColors.length];
               return (
                 <Link
                   key={category.name}
@@ -425,7 +432,7 @@ const Technology = () => {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
-                    e.currentTarget.style.borderColor = 'rgba(184, 179, 68, 0.5)';
+                    e.currentTarget.style.borderColor = `${colorSet.hover}80`;
                     e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
                   }}
                   onMouseLeave={(e) => {
@@ -439,21 +446,23 @@ const Technology = () => {
                     style={{
                       width: '52px',
                       height: '52px',
-                      background: 'linear-gradient(135deg, #969423 0%, #b8b344 100%)',
+                      background: colorSet.gradient,
                       flexShrink: 0,
-                      boxShadow: '0 4px 12px rgba(150, 148, 35, 0.4)'
+                      boxShadow: `0 4px 12px ${colorSet.shadow}`
                     }}
                   >
                     <Icon size={24} className="text-white" />
                   </div>
                   <div>
                     <h3 
-                      className="font-semibold mb-1 transition-colors duration-300 group-hover:text-[#b8b344]"
+                      className="font-semibold mb-1 transition-colors duration-300"
                       style={{ 
                         color: 'white',
                         fontSize: '1.05rem',
                         fontFamily: 'Montserrat, sans-serif'
                       }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = colorSet.hover}
+                      onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                     >
                       {category.name}
                     </h3>

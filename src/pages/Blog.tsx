@@ -40,6 +40,7 @@ import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind
 import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.png";
 import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
 import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,6 +59,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses",
+      excerpt: "Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making without enterprise-scale infrastructure.",
+      author: "BizHealth.ai Research Team",
+      date: "December 10, 2025",
+      readTime: "12 min read",
+      category: "Business Intelligence, Technology, Business Strategy",
+      slug: "/blog/overcoming-bi-challenges-smb",
+      imageUrl: overcomingBIChallengesImage,
+      altText: "Small business owner analyzing business intelligence dashboard with colorful charts and data visualizations for SMB analytics strategy 2025",
+      keywords: "business intelligence SMB, BI challenges small business, SMB data analytics, business intelligence adoption, BI for small business, data-driven decisions, affordable BI tools, AI business intelligence 2025"
+    },
     {
       title: "The Hidden Costs of Manual Processes in Today's Smaller Businesses",
       excerpt: "Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Learn how error rates up to 27% cost businesses $12,000+ annually and get actionable tech adoption strategies.",

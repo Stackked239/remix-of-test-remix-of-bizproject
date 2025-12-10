@@ -20,6 +20,10 @@ import {
 } from "lucide-react";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 import retailRemoteImage from "@/assets/retail-remote-tools-family-business.jpg";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
+import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -34,21 +38,65 @@ interface BlogPost {
   readTime: number;
 }
 
-// Mock blog posts data - replace with actual data fetching
+// Technology blog posts
 const blogPosts: BlogPost[] = [
   {
     id: '1',
+    slug: 'overcoming-bi-challenges-smb',
+    title: 'Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses',
+    excerpt: 'Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics.',
+    featuredImage: overcomingBIChallengesImage,
+    subcategory: 'AI & Machine Learning',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 10, 2025',
+    readTime: 12
+  },
+  {
+    id: '2',
+    slug: 'hidden-costs-manual-processes',
+    title: 'The Hidden Costs of Manual Processes in Today\'s Smaller Businesses',
+    excerpt: 'Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Learn how error rates cost businesses $12,000+ annually.',
+    featuredImage: hiddenCostsManualProcessesImage,
+    subcategory: 'Automation',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 9, 2025',
+    readTime: 10
+  },
+  {
+    id: '3',
+    slug: 'small-business-ai-adoption',
+    title: 'AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners',
+    excerpt: 'Skip the hype. Discover practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.',
+    featuredImage: aiAdoptionImage,
+    subcategory: 'AI & Machine Learning',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 4, 2025',
+    readTime: 12
+  },
+  {
+    id: '4',
+    slug: 'cash-flow-crisis-management',
+    title: 'Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025',
+    excerpt: 'Master cash flow management for small business in 2025. Learn crisis prevention strategies, cash flow planning tips, and how to avoid common pitfalls.',
+    featuredImage: cashFlowCrisisImage,
+    subcategory: 'Digital Tools',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 3, 2025',
+    readTime: 8
+  },
+  {
+    id: '5',
     slug: 'ai-business-analytics',
     title: 'How AI is Revolutionizing Small Business Analytics',
     excerpt: 'Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses.',
     featuredImage: aiAnalyticsImage,
     subcategory: 'AI & Machine Learning',
     author: 'BizHealth Research Team',
-    publishedAt: 'Dec 1, 2025',
+    publishedAt: 'Sep 12, 2025',
     readTime: 10
   },
   {
-    id: '2',
+    id: '6',
     slug: 'retail-remote-tools',
     title: 'Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures',
     excerpt: 'Discover how family-owned micro retailers can leverage remote tools to streamline operations while preserving their personal touch.',

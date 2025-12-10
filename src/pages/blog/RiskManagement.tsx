@@ -384,34 +384,88 @@ const RiskManagement = () => {
       </section>
 
       {/* Section 5: Related Categories */}
-      <section className="py-16 px-6 bg-white border-t border-[#212653]/8">
+      <section 
+        className="py-20 px-6"
+        style={{ 
+          background: 'linear-gradient(135deg, #212653 0%, #2d3268 50%, #3a4080 100%)'
+        }}
+      >
         <div className="container mx-auto max-w-5xl">
-          <h2 
-            className="text-center mb-8 text-[#212653]"
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontSize: '1.5rem',
-              fontWeight: 600
-            }}
-          >
-            Explore More Topics
-          </h2>
+          <div className="text-center mb-12">
+            <p 
+              className="text-[#b8b344] mb-3 uppercase tracking-widest"
+              style={{ fontSize: '0.8rem', letterSpacing: '2px', fontWeight: 600 }}
+            >
+              Continue Learning
+            </p>
+            <h2 
+              className="text-white"
+              style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
+                fontWeight: 700
+              }}
+            >
+              Explore More Topics
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedCategories.map((category) => {
               const Icon = category.icon;
               return (
                 <Link
                   key={category.name}
                   to={category.link}
-                  className="flex items-center gap-4 p-5 bg-[#faf9f7] border border-transparent rounded-lg hover:border-[#969423]/30 hover:bg-white hover:shadow-sm transition-all"
+                  className="group flex items-center gap-4 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    backdropFilter: 'blur(8px)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                    e.currentTarget.style.borderColor = 'rgba(184, 179, 68, 0.5)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 >
-                  <div className="w-11 h-11 flex items-center justify-center bg-[#969423]/12 rounded-lg flex-shrink-0">
-                    <Icon className="w-5 h-5 text-[#969423]" />
+                  <div 
+                    className="flex items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
+                    style={{
+                      width: '52px',
+                      height: '52px',
+                      background: 'linear-gradient(135deg, #969423 0%, #b8b344 100%)',
+                      flexShrink: 0,
+                      boxShadow: '0 4px 12px rgba(150, 148, 35, 0.4)'
+                    }}
+                  >
+                    <Icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#212653]">{category.name}</h3>
-                    <p className="text-sm text-[#7C7C7C]">{category.description}</p>
+                    <h3 
+                      className="font-semibold mb-1 transition-colors duration-300 group-hover:text-[#b8b344]"
+                      style={{ 
+                        color: 'white',
+                        fontSize: '1.05rem',
+                        fontFamily: 'Montserrat, sans-serif'
+                      }}
+                    >
+                      {category.name}
+                    </h3>
+                    <p 
+                      className="text-sm"
+                      style={{ 
+                        color: 'rgba(255, 255, 255, 0.7)',
+                        fontFamily: 'Open Sans, sans-serif'
+                      }}
+                    >
+                      {category.description}
+                    </p>
                   </div>
                 </Link>
               );

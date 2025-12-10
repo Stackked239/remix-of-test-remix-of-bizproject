@@ -307,12 +307,32 @@ const BusinessStrategy = () => {
       </section>
 
       {/* Related Categories Section */}
-      <section className="py-16 bg-muted/30 border-t border-border">
-        <div className="container mx-auto px-6">
+      <section 
+        className="py-20 px-6"
+        style={{ 
+          background: 'linear-gradient(135deg, #212653 0%, #2d3268 50%, #3a4080 100%)'
+        }}
+      >
+        <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-              Explore More Topics
-            </h2>
+            <div className="text-center mb-12">
+              <p 
+                className="text-[#b8b344] mb-3 uppercase tracking-widest"
+                style={{ fontSize: '0.8rem', letterSpacing: '2px', fontWeight: 600 }}
+              >
+                Continue Learning
+              </p>
+              <h2 
+                className="text-white"
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
+                  fontWeight: 700
+                }}
+              >
+                Explore More Topics
+              </h2>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedCategories.map((category, idx) => {
@@ -321,20 +341,52 @@ const BusinessStrategy = () => {
                   <a
                     key={idx}
                     href={`/blog/${category.slug}`}
-                    className="group bg-background/50 hover:bg-background border border-transparent hover:border-primary/20 rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+                    className="group flex flex-col items-center text-center gap-4 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      backdropFilter: 'blur(8px)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                      e.currentTarget.style.borderColor = 'rgba(184, 179, 68, 0.5)';
+                      e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
                   >
-                    <div className="flex flex-col items-center text-center gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <IconComponent className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                          {category.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {category.description}
-                        </p>
-                      </div>
+                    <div 
+                      className="flex items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
+                      style={{
+                        width: '52px',
+                        height: '52px',
+                        background: 'linear-gradient(135deg, #969423 0%, #b8b344 100%)',
+                        flexShrink: 0,
+                        boxShadow: '0 4px 12px rgba(150, 148, 35, 0.4)'
+                      }}
+                    >
+                      <IconComponent size={24} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 
+                        className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#b8b344]"
+                        style={{ 
+                          color: 'white',
+                          fontSize: '1.05rem',
+                          fontFamily: 'Montserrat, sans-serif'
+                        }}
+                      >
+                        {category.name}
+                      </h3>
+                      <p 
+                        className="text-sm"
+                        style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                      >
+                        {category.description}
+                      </p>
                     </div>
                   </a>
                 );

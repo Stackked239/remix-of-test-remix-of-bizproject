@@ -73,12 +73,14 @@ const BusinessIntelligenceROI = () => {
               </div>
             </div>
             
-            <img 
-              src={biRoiImage} 
-              alt="Business intelligence ROI visualization with investment returns and analytics charts for small business success"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              loading="lazy"
-            />
+            <div className="w-full flex justify-center">
+              <img 
+                src={biRoiImage} 
+                alt="Business intelligence ROI visualization with investment returns and analytics charts for small business success"
+                className="w-[85%] h-auto rounded-lg shadow-md object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

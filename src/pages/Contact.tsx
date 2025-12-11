@@ -543,7 +543,7 @@ const Contact = () => {
       <section className="py-20" style={{ backgroundColor: '#969423' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'hsl(var(--biz-blue))' }}>
               Ready to Assess Your Business Health?
             </h2>
             <p className="text-xl mb-8 opacity-90">

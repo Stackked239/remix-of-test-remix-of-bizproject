@@ -289,26 +289,26 @@ const BizGrowthLaunch = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card">
-                <DollarSign className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card hover:shadow-hub-citrine hover:border-biz-citrine/50 hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                <DollarSign className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <p className="font-open-sans text-foreground">
                   <strong className="text-biz-navy">Cash feels tight most months</strong> and you don't have a clear view of runway
                 </p>
               </div>
-              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card">
-                <BarChart3 className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card hover:shadow-hub-citrine hover:border-biz-citrine/50 hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                <BarChart3 className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <p className="font-open-sans text-foreground">
                   <strong className="text-biz-navy">Most decisions are based on instincts</strong> because there's no simple KPI dashboard
                 </p>
               </div>
-              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card">
-                <Target className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card hover:shadow-hub-citrine hover:border-biz-citrine/50 hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                <Target className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <p className="font-open-sans text-foreground">
                   <strong className="text-biz-navy">Sales and marketing are one-off efforts</strong>, not a repeatable process
                 </p>
               </div>
-              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card">
-                <Clock className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border/50 shadow-card hover:shadow-hub-citrine hover:border-biz-citrine/50 hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                <Clock className="w-5 h-5 text-biz-citrine flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <p className="font-open-sans text-foreground">
                   <strong className="text-biz-navy">You're doing everything</strong> and there's no basic operating rhythm
                 </p>

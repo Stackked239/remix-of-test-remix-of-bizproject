@@ -334,10 +334,10 @@ const BizGrowth = () => {
       {/* CTA Section */}
       <section className="py-16 text-white" style={{ backgroundColor: 'rgba(150, 148, 35, 0.35)' }}>
         <div className="container mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold mb-4 font-montserrat">
+          <h3 className="text-3xl font-bold mb-4 font-montserrat text-biz-navy">
             Your Growth Journey Starts Here
           </h3>
-          <p className="text-xl mb-8 font-open-sans opacity-90">
+          <p className="text-xl mb-8 font-open-sans text-biz-navy">
             Join thousands of entrepreneurs who are transforming their businesses through education
           </p>
           <Button 

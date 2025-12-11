@@ -236,7 +236,7 @@ const BizGrowthLaunch = () => {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <div className="mb-4">
               <Badge className="bg-biz-citrine/20 text-biz-citrine border-biz-citrine/30 font-open-sans text-xs">
                 Prescribed next step from your BizHealth report
@@ -255,7 +255,7 @@ const BizGrowthLaunch = () => {
               The Launch path transforms your BizHealth insights into a structured 90-day execution plan — so you stop firefighting and start building foundations.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
                 className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-lg px-8 py-6"

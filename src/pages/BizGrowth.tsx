@@ -113,24 +113,24 @@ const BizGrowth = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-biz-citrine text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy to-biz-navy/90 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-navy/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-biz-citrine/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-biz-green/10 rounded-full blur-3xl"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-white/20 rounded-full p-4">
-                <TrendingUp className="w-12 h-12 text-biz-navy" />
+              <div className="bg-biz-citrine/20 rounded-full p-4">
+                <TrendingUp className="w-12 h-12 text-biz-citrine" />
               </div>
             </div>
             
-            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-biz-navy">
+            <h1 className="font-montserrat font-bold text-5xl lg:text-6xl mb-6 text-white">
               BizGrowth Academy
             </h1>
-            <p className="font-montserrat font-semibold text-2xl mb-4 text-white/95">
+            <p className="font-montserrat font-semibold text-2xl mb-4 text-biz-citrine">
               Strategic Advancement Awaits
             </p>
             <p className="font-open-sans text-xl max-w-3xl mx-auto mb-8 text-white/85">
@@ -140,7 +140,7 @@ const BizGrowth = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-white text-biz-navy hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+                className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-lg px-8 py-4"
               >
                 Explore Courses
                 <BookOpen className="w-5 h-5 ml-2" />
@@ -148,7 +148,7 @@ const BizGrowth = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="bg-biz-navy border-biz-citrine text-biz-white hover:bg-biz-citrine hover:text-white font-open-sans font-semibold text-lg px-8 py-4"
+                className="border-white/50 text-white hover:bg-white/10 font-open-sans font-semibold text-lg px-8 py-4"
               >
                 Watch Demo
                 <Play className="w-5 h-5 ml-2" />
@@ -191,12 +191,12 @@ const BizGrowth = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-biz-citrine text-white">
+      <section className="py-16 bg-biz-navy text-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index}>
-                <div className="text-4xl font-bold mb-2 font-montserrat">{stat.number}</div>
+                <div className="text-4xl font-bold mb-2 font-montserrat text-biz-citrine">{stat.number}</div>
                 <div className="font-open-sans opacity-90">{stat.label}</div>
               </div>
             ))}
@@ -305,23 +305,23 @@ const BizGrowth = () => {
               </Button>
             </div>
             
-            <div className="bg-biz-citrine rounded-2xl p-8 text-white text-center">
-              <GraduationCap className="w-16 h-16 mx-auto mb-6" />
+            <div className="bg-gradient-to-br from-biz-navy to-biz-navy/90 rounded-2xl p-8 text-white text-center border border-biz-citrine/30">
+              <GraduationCap className="w-16 h-16 mx-auto mb-6 text-biz-citrine" />
               <h4 className="text-2xl font-bold mb-4 font-montserrat">
                 Special Launch Offer
               </h4>
-              <div className="text-5xl font-bold mb-2 font-montserrat">
+              <div className="text-5xl font-bold mb-2 font-montserrat text-biz-citrine">
                 $49
               </div>
               <div className="text-lg opacity-90 mb-6">
                 /month • First 3 months
               </div>
-              <div className="bg-white/20 rounded-lg p-4 mb-6">
+              <div className="bg-biz-citrine/15 rounded-lg p-4 mb-6 border border-biz-citrine/20">
                 <div className="text-sm opacity-90 mb-2">Then only $99/month</div>
                 <div className="text-sm opacity-75">Cancel anytime</div>
               </div>
               <Button 
-                className="bg-white text-biz-citrine hover:bg-white/90 font-montserrat font-semibold w-full"
+                className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold w-full"
                 size="lg"
               >
                 Start Learning Today
@@ -332,7 +332,7 @@ const BizGrowth = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-biz-citrine text-white">
+      <section className="py-16 bg-gradient-to-r from-biz-navy to-biz-navy/95 text-white">
         <div className="container mx-auto px-6 text-center">
           <h3 className="text-3xl font-bold mb-4 font-montserrat">
             Your Growth Journey Starts Here
@@ -342,7 +342,7 @@ const BizGrowth = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-white text-biz-citrine hover:bg-white/90 font-montserrat font-semibold text-lg px-8 py-4"
+            className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-lg px-8 py-4"
           >
             Explore All Courses
             <ArrowRight className="w-5 h-5 ml-2" />

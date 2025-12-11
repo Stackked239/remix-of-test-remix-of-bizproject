@@ -25,6 +25,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const BizGrowthLaunch = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -220,23 +221,12 @@ const BizGrowthLaunch = () => {
         url="https://bizhealth.ai/bizgrowth/launch"
       />
       
-      <GlobalNavigation />
+      <PromotionalBanner />
       
-      {/* Sticky Header CTA */}
-      <div className="sticky top-0 z-50 bg-biz-navy border-b border-biz-navy-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-biz-citrine" />
-            <span className="font-montserrat font-semibold text-white text-sm sm:text-base">BizGrowth Launch Path</span>
-          </div>
-          <Button 
-            className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm"
-          >
-            Start my Launch path
-            <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
-        </div>
-      </div>
+      {/* Add spacing for fixed banner */}
+      <div className="h-20" />
+      
+      <GlobalNavigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy to-biz-navy-deep text-white overflow-hidden">

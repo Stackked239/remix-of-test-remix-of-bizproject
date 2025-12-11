@@ -2,7 +2,7 @@ import { useState } from "react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight, ArrowRight, Lightbulb, DollarSign, BookOpen, CircleHelp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
 
@@ -431,59 +431,105 @@ const Contact = () => {
                 </div>
 
                 {/* Quick Links */}
-                <div className="rounded-xl p-8 border shadow-sm" style={{ 
-                  backgroundColor: 'hsl(var(--biz-green) / 0.08)',
-                  borderColor: 'hsl(var(--biz-green) / 0.2)'
+                <div className="rounded-xl p-8 border shadow-sm bg-background" style={{ 
+                  borderColor: 'hsl(var(--border))'
                 }}>
-                  <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Links</h3>
-                  <div className="space-y-3">
-                    <a href="/how-it-works" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold" 
-                       style={{ color: 'hsl(var(--biz-green))' }}
-                       onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
-                       }}
-                       onMouseLeave={(e) => {
-                         e.currentTarget.style.backgroundColor = 'transparent';
-                       }}
+                  <h3 className="text-xl font-semibold mb-6 text-foreground">Explore More</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <a 
+                      href="/how-it-works" 
+                      className="group relative p-5 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden"
+                      style={{ 
+                        borderColor: 'hsl(var(--biz-teal) / 0.3)',
+                        backgroundColor: 'hsl(var(--biz-teal) / 0.05)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-teal))';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-teal) / 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-teal) / 0.3)';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-teal) / 0.05)';
+                      }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
-                      How BizHealth.ai Works
+                      <div className="p-2.5 rounded-lg w-fit mb-3" style={{ backgroundColor: 'hsl(var(--biz-teal) / 0.15)' }}>
+                        <Lightbulb className="w-5 h-5" style={{ color: 'hsl(var(--biz-teal))' }} />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">How It Works</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">Our assessment process</p>
+                      <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-teal))' }} />
                     </a>
-                    <a href="/pricing" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
-                       style={{ color: 'hsl(var(--biz-green))' }}
-                       onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
-                       }}
-                       onMouseLeave={(e) => {
-                         e.currentTarget.style.backgroundColor = 'transparent';
-                       }}
+                    
+                    <a 
+                      href="/pricing" 
+                      className="group relative p-5 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden"
+                      style={{ 
+                        borderColor: 'hsl(var(--biz-copper) / 0.3)',
+                        backgroundColor: 'hsl(var(--biz-copper) / 0.05)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper))';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-copper) / 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-copper) / 0.3)';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-copper) / 0.05)';
+                      }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
-                      Pricing & Tier Plans
+                      <div className="p-2.5 rounded-lg w-fit mb-3" style={{ backgroundColor: 'hsl(var(--biz-copper) / 0.15)' }}>
+                        <DollarSign className="w-5 h-5" style={{ color: 'hsl(var(--biz-copper))' }} />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">Pricing Plans</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">Find your perfect tier</p>
+                      <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-copper))' }} />
                     </a>
-                    <a href="/blog" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
-                       style={{ color: 'hsl(var(--biz-green))' }}
-                       onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
-                       }}
-                       onMouseLeave={(e) => {
-                         e.currentTarget.style.backgroundColor = 'transparent';
-                       }}
+                    
+                    <a 
+                      href="/blog" 
+                      className="group relative p-5 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden"
+                      style={{ 
+                        borderColor: 'hsl(var(--biz-green) / 0.3)',
+                        backgroundColor: 'hsl(var(--biz-green) / 0.05)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green))';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-green) / 0.3)';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
+                      }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
-                      Business Insights & Strategies
+                      <div className="p-2.5 rounded-lg w-fit mb-3" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.15)' }}>
+                        <BookOpen className="w-5 h-5" style={{ color: 'hsl(var(--biz-green))' }} />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">Blog & Insights</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">Expert business strategies</p>
+                      <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-green))' }} />
                     </a>
-                    <a href="/faqs" className="flex items-center gap-3 transition-colors py-2 px-3 rounded-lg group font-bold"
-                       style={{ color: 'hsl(var(--biz-green))' }}
-                       onMouseEnter={(e) => {
-                         e.currentTarget.style.backgroundColor = 'hsl(var(--biz-green) / 0.05)';
-                       }}
-                       onMouseLeave={(e) => {
-                         e.currentTarget.style.backgroundColor = 'transparent';
-                       }}
+                    
+                    <a 
+                      href="/faqs" 
+                      className="group relative p-5 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden"
+                      style={{ 
+                        borderColor: 'hsl(var(--biz-blue) / 0.3)',
+                        backgroundColor: 'hsl(var(--biz-blue) / 0.05)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-blue))';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-blue) / 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-blue) / 0.3)';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-blue) / 0.05)';
+                      }}
                     >
-                      <ArrowRight className="w-4 h-4" style={{ color: 'hsl(var(--biz-navy))' }} />
-                      FAQs
+                      <div className="p-2.5 rounded-lg w-fit mb-3" style={{ backgroundColor: 'hsl(var(--biz-blue) / 0.15)' }}>
+                        <CircleHelp className="w-5 h-5" style={{ color: 'hsl(var(--biz-blue))' }} />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">FAQs</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">Common questions answered</p>
+                      <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-blue))' }} />
                     </a>
                   </div>
                 </div>

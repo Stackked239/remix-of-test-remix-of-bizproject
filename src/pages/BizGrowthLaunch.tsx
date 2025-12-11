@@ -425,7 +425,7 @@ const BizGrowthLaunch = () => {
           {/* Mobile/Tablet Cards */}
           <div className="space-y-6">
             {launchPath.map((item, index) => (
-              <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-sm">
+              <Card key={index} className="bg-white/15 border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-biz-citrine text-biz-navy rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">

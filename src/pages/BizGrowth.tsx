@@ -338,7 +338,7 @@ const BizGrowth = () => {
             Your Growth Journey Starts Here
           </h3>
           <p className="text-xl mb-8 font-open-sans text-biz-navy">
-            Join thousands of entrepreneurs who are transforming their businesses through education
+            Join thousands of entrepreneurs who are transforming their businesses through BizGrowth Academy
           </p>
           <Button 
             size="lg"

@@ -264,9 +264,9 @@ const BizGrowthLaunch = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
-                variant="ghost"
+                variant="outline"
                 size="lg"
-                className="text-white/90 hover:text-white hover:bg-white/10 font-open-sans text-lg"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-biz-navy font-open-sans text-lg"
               >
                 View Launch course list
               </Button>

@@ -39,7 +39,8 @@ const BizGrowthLaunch = () => {
       meta: "~90 minutes total, self-paced",
       tags: ["Strategy", "Foundations"],
       hasTemplates: true,
-      icon: Compass
+      icon: Compass,
+      downloadUrl: "/downloads/baseline-your-business-health-course.docx"
     },
     {
       step: 2,
@@ -454,10 +455,27 @@ const BizGrowthLaunch = () => {
                         <strong>Course:</strong> {item.course}
                       </p>
                       <p className="font-open-sans text-xs text-biz-citrine mb-4">{item.meta}</p>
-                      <Button className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm">
-                        Start this step
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Button>
+                      {item.downloadUrl ? (
+                        <Button 
+                          className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm"
+                          onClick={() => {
+                            const link = document.createElement('a');
+                            link.href = item.downloadUrl;
+                            link.download = '';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                          }}
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          Start this step
+                        </Button>
+                      ) : (
+                        <Button className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm">
+                          Start this step
+                          <ArrowRight className="w-4 h-4 ml-1" />
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </CardContent>

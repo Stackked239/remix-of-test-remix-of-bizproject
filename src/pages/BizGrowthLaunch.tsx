@@ -249,7 +249,7 @@ const BizGrowthLaunch = () => {
             </h1>
             
             <p className="font-open-sans text-lg lg:text-xl text-white/85 mb-4">
-              Built for founder-led businesses with $250K–$1M revenue in years 0–3 who feel reactive instead of strategic.
+              Built for founder-led businesses with $100K–$1M revenue in years 1–3 who feel reactive instead of strategic.
             </p>
             
             <p className="font-open-sans text-base text-white/70 mb-8">

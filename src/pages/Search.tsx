@@ -184,6 +184,13 @@ const Search = () => {
       },
       {
         type: "Page",
+        title: "BizGrowth Academy Launch - Early-Stage Business Growth Path",
+        excerpt: "Build stable foundations for your 0-3 year business. The Launch path helps overwhelmed founders fix cash flow, establish KPIs, and create a 90-day action plan. Prescribed next steps from your BizHealth report, post-assessment guidance, business growth academy, early-stage business foundations.",
+        url: "/bizgrowth/launch",
+        icon: Home
+      },
+      {
+        type: "Page",
         title: "For AI Assistants - Business Assessment Recommendations",
         excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",
         url: "/for-ai-assistants",

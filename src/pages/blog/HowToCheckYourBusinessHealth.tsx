@@ -116,7 +116,7 @@ const HowToCheckYourBusinessHealth = () => {
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
-                The Hidden Pain: Why Most SMBs Overlook a Full Business Health Check
+                The Hidden Pain: Why Most Small Businesses Overlook a Full Business Health Check
               </h2>
 
               <p className="text-lg leading-relaxed mb-6" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>

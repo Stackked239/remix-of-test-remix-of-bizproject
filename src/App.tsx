@@ -66,6 +66,7 @@ import CompleteGuideBusinessHealthAssessment2026 from "./pages/blog/CompleteGuid
 import FinancialStewardshipEveryonesResponsibility from "./pages/blog/FinancialStewardshipEveryonesResponsibility";
 import HiddenCostsManualProcesses from "./pages/blog/HiddenCostsManualProcesses";
 import OvercomingBIChallengesSMB from "./pages/blog/OvercomingBIChallengesSMB";
+import HowToCheckYourBusinessHealth from "./pages/blog/HowToCheckYourBusinessHealth";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -165,6 +166,7 @@ const App = () => (
             <Route path="/blog/financial-stewardship-everyones-responsibility" element={<FinancialStewardshipEveryonesResponsibility />} />
             <Route path="/blog/hidden-costs-manual-processes" element={<HiddenCostsManualProcesses />} />
             <Route path="/blog/overcoming-bi-challenges-smb" element={<OvercomingBIChallengesSMB />} />
+            <Route path="/blog/how-to-check-your-business-health" element={<HowToCheckYourBusinessHealth />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

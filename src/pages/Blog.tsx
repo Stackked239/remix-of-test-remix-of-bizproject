@@ -41,6 +41,7 @@ import businessHealthAssessment2026Image from "@/assets/business-health-assessme
 import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
 import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
 import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
+import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide.png";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -59,6 +60,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "How to Check Your Business Health: A Comprehensive Guide for Small Business Owners",
+      excerpt: "Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!",
+      author: "BizHealth Research & Analysis Team",
+      date: "December 14, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Risk Management, Business Leadership",
+      slug: "/blog/how-to-check-your-business-health",
+      imageUrl: howToCheckBusinessHealthImage,
+      altText: "Small business owner juggling multiple colorful spheres representing different aspects of business health including operations, finance, HR, marketing, and strategy",
+      keywords: "check my business health, how to check business health, business health check for SMBs, SMB business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
+    },
     {
       title: "Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses",
       excerpt: "Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making without enterprise-scale infrastructure.",

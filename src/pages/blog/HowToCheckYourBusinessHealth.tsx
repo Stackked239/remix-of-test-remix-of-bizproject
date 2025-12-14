@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield } from 'lucide-react';
+import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
 import heroImage from '@/assets/how-to-check-business-health-guide.png';
 
 const HowToCheckYourBusinessHealth = () => {
@@ -46,6 +46,15 @@ const HowToCheckYourBusinessHealth = () => {
           <div className="relative py-16" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
+                {/* Back Link */}
+                <Link 
+                  to="/blog" 
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
+                >
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  <span className="font-medium">Back to Blog</span>
+                </Link>
+
                 {/* Categories */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span 

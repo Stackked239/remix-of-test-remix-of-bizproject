@@ -43,7 +43,7 @@ const HowToCheckYourBusinessHealth = () => {
 
         <article className="pt-32 pb-16">
           {/* Hero Section */}
-          <div className="relative py-16" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
+          <div className="relative pt-16 pb-10" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 {/* Back Link */}
@@ -106,7 +106,7 @@ const HowToCheckYourBusinessHealth = () => {
                   style={{ opacity: 0.85 }}
                 />
 
-                <p className="text-xl leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
+                <p className="text-lg italic leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
                   Your complete roadmap to uncovering hidden business weaknesses and unlocking sustainable growth
                 </p>
               </div>

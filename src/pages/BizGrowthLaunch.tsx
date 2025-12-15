@@ -50,7 +50,8 @@ const BizGrowthLaunch = () => {
       meta: "3 short modules, each under 45 minutes",
       tags: ["Financials", "Foundations"],
       hasTemplates: true,
-      icon: DollarSign
+      icon: DollarSign,
+      courseUrl: "/bizgrowth/launch/step-2-fix-cash-squeeze"
     },
     {
       step: 3,
@@ -469,6 +470,16 @@ const BizGrowthLaunch = () => {
                         >
                           <Download className="w-4 h-4 mr-1" />
                           Start this step
+                        </Button>
+                      ) : item.courseUrl ? (
+                        <Button 
+                          asChild
+                          className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm"
+                        >
+                          <Link to={item.courseUrl}>
+                            Start this step
+                            <ArrowRight className="w-4 h-4 ml-1" />
+                          </Link>
                         </Button>
                       ) : (
                         <Button className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold text-sm">

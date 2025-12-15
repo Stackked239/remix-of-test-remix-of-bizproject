@@ -36,7 +36,8 @@ const BizGrowthLaunchStep2 = () => {
       duration: "30 min",
       description: "Stop guessing about cash. Track what comes in and what goes out every week. Know exactly when you'll run out—and when you won't.",
       outcome: "You'll build: A weekly cash tracker you can update in 15 minutes every Friday",
-      icon: TrendingUp
+      icon: TrendingUp,
+      downloadUrl: "/downloads/Step2-Module1-Know-Your-Money-BizHealth.pdf"
     },
     {
       number: 2,
@@ -44,7 +45,8 @@ const BizGrowthLaunchStep2 = () => {
       duration: "35 min",
       description: "Most owners underprice because they don't know their real profit per sale. One simple calculation changes everything.",
       outcome: "You'll build: A profit calculator that finds pricing gaps in minutes",
-      icon: Calculator
+      icon: Calculator,
+      downloadUrl: "/downloads/Step2-Module2-Make-Money-That-Sticks-BizHealth.pdf"
     },
     {
       number: 3,
@@ -52,7 +54,8 @@ const BizGrowthLaunchStep2 = () => {
       duration: "40 min",
       description: "If cash keeps dropping, how long until you're out? Build a simple planner to see what-if scenarios before they happen.",
       outcome: "You'll build: 90-day runway scenarios to stress-test your cash",
-      icon: LineChart
+      icon: LineChart,
+      downloadUrl: "/downloads/Step2-Module3-Plan-Your-Runway-BizHealth.pdf"
     }
   ];
 
@@ -300,9 +303,19 @@ const BizGrowthLaunchStep2 = () => {
                     </p>
 
                     {/* Outcome */}
-                    <p className="text-sm font-semibold text-biz-navy font-open-sans">
+                    <p className="text-sm font-semibold text-biz-navy font-open-sans mb-4">
                       {module.outcome}
                     </p>
+
+                    {/* Download Button */}
+                    <a
+                      href={module.downloadUrl}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-biz-navy border-2 border-biz-navy rounded-lg hover:bg-biz-navy hover:text-white transition-all duration-200 group-hover:border-biz-citrine"
+                    >
+                      <Download className="w-4 h-4" />
+                      Start Module {module.number}
+                    </a>
                   </article>
                 );
               })}
@@ -596,11 +609,14 @@ const BizGrowthLaunchStep2 = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <Button 
-                className="w-full sm:w-auto min-h-[56px] px-10 py-4 bg-biz-citrine text-biz-navy font-bold font-montserrat text-lg hover:bg-biz-citrine/90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+              <a
+                href="/downloads/Step2-Module1-Know-Your-Money-BizHealth.pdf"
+                download
+                className="w-full sm:w-auto min-h-[56px] px-10 py-4 bg-biz-citrine text-biz-navy font-bold font-montserrat text-lg hover:bg-biz-citrine/90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 rounded-md inline-flex items-center justify-center gap-2"
               >
+                <Download className="w-5 h-5" />
                 Start Module 1 Now
-              </Button>
+              </a>
               <Button 
                 variant="outline"
                 className="w-full sm:w-auto min-h-[56px] px-8 py-4 border-2 border-white text-white font-medium font-open-sans bg-transparent hover:bg-white/10 transition-all duration-200"

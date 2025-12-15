@@ -619,7 +619,7 @@ const BizGrowthLaunchStep2 = () => {
               </a>
               <Button 
                 variant="outline"
-                className="w-full sm:w-auto min-h-[56px] px-8 py-4 border-2 border-white text-white font-medium font-open-sans bg-transparent hover:bg-white/10 transition-all duration-200"
+                className="w-full sm:w-auto min-h-[56px] px-8 py-4 border-2 border-white text-white font-medium font-open-sans bg-transparent hover:bg-white hover:text-biz-navy transition-all duration-200"
               >
                 Explore the Toolkit First
               </Button>

@@ -9,8 +9,8 @@ import heroImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.j
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const SMBFinancialTrends2025 = () => {
-  const publishDate = new Date().toISOString();
-  const formattedDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  const publishDate = "2025-01-15T12:00:00.000Z";
+  const formattedDate = "January 15, 2025";
 
   // JSON-LD Schema Markup
   const articleSchema = {

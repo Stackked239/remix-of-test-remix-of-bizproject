@@ -62,35 +62,40 @@ const BizGrowthLaunchStep2 = () => {
       label: "THE SURVIVAL TOOL",
       format: "Excel / Google Sheets",
       description: "Track cash weekly. Know when you'll run out. Stop the guessing.",
-      icon: Grid3X3
+      icon: Grid3X3,
+      downloadUrl: "/downloads/13-Week-Cash-Flow-Tracker-BizHealth.xlsx"
     },
     {
       title: "Profit Per Sale Calculator",
       label: "THE PRICING FIXER",
-      format: "PDF Worksheet",
+      format: "Word Document",
       description: "Figure out your real profit per sale. Fix your prices. Make more money.",
-      icon: Calculator
+      icon: Calculator,
+      downloadUrl: "/downloads/Profit_Per_Sale_Calculator_-_BizHealthai.docx"
     },
     {
       title: "3-Account Setup Guide",
       label: "THE BANK SYSTEM",
       format: "PDF Guide",
       description: "Organize your money across 3 accounts so you always know what's available.",
-      icon: Landmark
+      icon: Landmark,
+      downloadUrl: "/downloads/3-Account-Setup-Guide-BizHealth.pdf"
     },
     {
       title: "Runway Scenario Planner",
       label: "THE FUTURE TELLER",
       format: "Excel / Google Sheets",
       description: "Model what-if scenarios. See when you need to raise cash or cut costs.",
-      icon: LineChart
+      icon: LineChart,
+      downloadUrl: "/downloads/Runway_Scenario_Planner_-_BizHealth.xlsx"
     },
     {
       title: "Emergency Brake Script Kit",
       label: "THE CRISIS SCRIPTS",
       format: "PDF Kit",
       description: "Word-for-word scripts for negotiating with vendors and clients when cash is tight.",
-      icon: MessageSquare
+      icon: MessageSquare,
+      downloadUrl: "/downloads/Emergency_Brake_Script_Kit_-_BizHealthai.pdf"
     }
   ];
 
@@ -360,10 +365,14 @@ const BizGrowthLaunchStep2 = () => {
                     </p>
 
                     {/* Download Button */}
-                    <button className="flex items-center gap-2 px-4 py-2 border-2 border-biz-navy text-biz-navy font-medium rounded hover:bg-biz-navy hover:text-white transition-all duration-200 min-h-[44px] group-hover:border-biz-citrine">
+                    <a 
+                      href={asset.downloadUrl}
+                      download
+                      className="flex items-center gap-2 px-4 py-2 border-2 border-biz-navy text-biz-navy font-medium rounded hover:bg-biz-navy hover:text-white transition-all duration-200 min-h-[44px] group-hover:border-biz-citrine"
+                    >
                       <Download className="w-4 h-4 group-hover:animate-bounce" />
                       Download
-                    </button>
+                    </a>
                   </article>
                 );
               })}

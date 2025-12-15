@@ -494,9 +494,9 @@ const BizGrowthLaunchStep2 = () => {
         >
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <p className="text-sm text-biz-grey font-open-sans">
+              <h3 className="text-xl md:text-2xl font-bold text-biz-navy font-montserrat">
                 Step 2 of 4 in BizGrowth Launch Track
-              </p>
+              </h3>
             </div>
 
             {/* Progress Stepper */}
@@ -507,7 +507,7 @@ const BizGrowthLaunchStep2 = () => {
                   <React.Fragment key={step.step}>
                     <div className="flex flex-col items-center relative">
                       {step.status === 'current' && (
-                        <span className="absolute -top-8 text-xs font-bold text-biz-citrine uppercase tracking-wider animate-pulse">
+                        <span className="absolute -top-8 text-xs font-bold text-biz-lime uppercase tracking-wider animate-pulse">
                           You Are Here
                         </span>
                       )}

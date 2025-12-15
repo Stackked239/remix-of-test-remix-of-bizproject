@@ -626,7 +626,7 @@ const BizGrowthLaunchStep2 = () => {
             </div>
 
             <p className="text-sm text-white/60 font-open-sans">
-              Self-paced. No live sessions. Cancel anytime.
+              Self-paced. No live sessions. Stop/Restart anytime.
             </p>
           </div>
         </section>

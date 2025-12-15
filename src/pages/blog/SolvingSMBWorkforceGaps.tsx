@@ -8,7 +8,7 @@ import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-202
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const SolvingSMBWorkforceGaps = () => {
-  const publishDate = "2025-01-20T12:00:00.000Z";
+  const publishDate = "2025-10-20T12:00:00.000Z";
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -112,7 +112,7 @@ const SolvingSMBWorkforceGaps = () => {
                 </TooltipProvider>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <time dateTime={publishDate}>January 20, 2025</time>
+                  <time dateTime={publishDate}>October 20, 2025</time>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />

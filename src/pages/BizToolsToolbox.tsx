@@ -385,6 +385,122 @@ const BizToolsToolbox = () => {
         </div>
       </section>
 
+      {/* Free Downloads Section - BizGrowth Launch Step 2 Toolkit */}
+      <section id="free-downloads" className="py-20 bg-biz-green/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-biz-citrine/20 text-biz-navy border-biz-citrine/30 font-montserrat">
+              FREE DOWNLOADS
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground font-montserrat">
+              Cash Flow Toolkit
+            </h2>
+            <p className="text-xl text-muted-foreground font-open-sans max-w-2xl mx-auto">
+              Essential financial tools from BizGrowth Academy's "Fix the Cash Squeeze" course. Pre-built and ready to use.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                title: "13-Week Cash Flow Tracker",
+                label: "THE SURVIVAL TOOL",
+                format: "Excel / Google Sheets",
+                description: "Track cash weekly. Know when you'll run out. Stop the guessing.",
+                downloadUrl: "/downloads/13-Week-Cash-Flow-Tracker-BizHealth.xlsx",
+                icon: DollarSign
+              },
+              {
+                title: "Profit Per Sale Calculator",
+                label: "THE PRICING FIXER",
+                format: "Word Document",
+                description: "Figure out your real profit per sale. Fix your prices. Make more money.",
+                downloadUrl: "/downloads/Profit_Per_Sale_Calculator_-_BizHealthai.docx",
+                icon: BarChart3
+              },
+              {
+                title: "3-Account Setup Guide",
+                label: "THE BANK SYSTEM",
+                format: "PDF Guide",
+                description: "Organize your money across 3 accounts so you always know what's available.",
+                downloadUrl: "/downloads/3-Account-Setup-Guide-BizHealth.pdf",
+                icon: Shield
+              },
+              {
+                title: "Runway Scenario Planner",
+                label: "THE FUTURE TELLER",
+                format: "Excel / Google Sheets",
+                description: "Model what-if scenarios. See when you need to raise cash or cut costs.",
+                downloadUrl: "/downloads/Runway_Scenario_Planner_-_BizHealth.xlsx",
+                icon: TrendingUp
+              },
+              {
+                title: "Emergency Brake Script Kit",
+                label: "THE CRISIS SCRIPTS",
+                format: "PDF Kit",
+                description: "Word-for-word scripts for negotiating with vendors and clients when cash is tight.",
+                downloadUrl: "/downloads/Emergency_Brake_Script_Kit_-_BizHealthai.pdf",
+                icon: Users
+              }
+            ].map((tool, index) => {
+              const IconComponent = tool.icon;
+              return (
+                <Card 
+                  key={index}
+                  className="border border-biz-grey/15 hover:border-biz-citrine transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
+                >
+                  <CardHeader className="pb-3">
+                    <Badge className="w-fit mb-2 bg-biz-citrine text-biz-navy text-xs font-montserrat font-bold">
+                      {tool.label}
+                    </Badge>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-biz-navy/10 p-2 rounded-lg">
+                        <IconComponent className="w-5 h-5 text-biz-navy" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg font-montserrat text-biz-navy leading-tight">
+                          {tool.title}
+                        </CardTitle>
+                        <span className="text-xs text-muted-foreground font-open-sans">
+                          {tool.format}
+                        </span>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <CardDescription className="font-open-sans mb-4 text-sm">
+                      {tool.description}
+                    </CardDescription>
+                    <Button 
+                      asChild
+                      variant="outline" 
+                      className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
+                    >
+                      <a href={tool.downloadUrl} download>
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Free
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+          
+          <div className="text-center mt-10">
+            <p className="text-muted-foreground font-open-sans mb-4">
+              Want to master these tools? Take the full course.
+            </p>
+            <Button asChild className="bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90 font-montserrat font-semibold">
+              <Link to="/bizgrowth/launch/step-2-fix-cash-squeeze">
+                Explore Fix the Cash Squeeze Course
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Transparency Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">

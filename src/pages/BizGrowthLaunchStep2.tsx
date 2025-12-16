@@ -149,7 +149,7 @@ const BizGrowthLaunchStep2 = () => {
       <SEO
         title="Fix the Cash Squeeze | BizGrowth Academy - Financial Foundations for Founders"
         description="Learn cash flow, profit, and runway planning in under 2 hours. Built for first-time business owners. Includes 5 free downloadable tools. No MBA required."
-        keywords="cash flow management, small business finance, profit calculator, runway planning, financial foundations, business owner course, SMB cash flow"
+        keywords="Launch, Cash Management, Step 2, BizGrowth, cash flow management, small business finance, profit calculator, runway planning, financial foundations, business owner course, SMB cash flow"
         canonical="https://bizhealth.ai/bizgrowth/launch/step-2-fix-cash-squeeze"
       />
       
@@ -190,8 +190,10 @@ const BizGrowthLaunchStep2 = () => {
 
       <main id="main-content">
         {/* SECTION 1: HERO */}
+        {/* Hidden keywords for internal search */}
+        <span className="sr-only" aria-hidden="true">Launch Cash Management Step 2 BizGrowth</span>
         <section 
-          className="relative min-h-[90vh] flex items-center justify-center px-4 py-16 md:py-24"
+          className="relative min-h-[70vh] flex items-center justify-center px-4 py-10 md:py-16"
           style={{ background: 'linear-gradient(180deg, #F8F8F5 0%, #F0F4E8 100%)' }}
           aria-labelledby="hero-heading"
         >
@@ -204,6 +206,11 @@ const BizGrowthLaunchStep2 = () => {
             {/* Course Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-biz-grey/15 rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-medium text-biz-navy font-open-sans">3 Modules · Under 2 Hours Total</span>
+            </div>
+
+            {/* Arrow Icon Above Title */}
+            <div className="flex justify-center mb-4">
+              <ArrowDown className="w-8 h-8 text-biz-citrine animate-bounce" aria-hidden="true" />
             </div>
 
             {/* H1 */}

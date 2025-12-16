@@ -232,7 +232,7 @@ const BizGrowthLaunchStep2 = () => {
 
             {/* Trust Signal */}
             <p className="text-sm text-biz-grey/80 font-open-sans mb-8">
-              Designed for founders without finance backgrounds
+              Designed for business owners without finance backgrounds
             </p>
 
             {/* CTAs */}

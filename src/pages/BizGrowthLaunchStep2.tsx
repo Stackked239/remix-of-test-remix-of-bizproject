@@ -214,7 +214,7 @@ const BizGrowthLaunchStep2 = () => {
 
             {/* TrendingUp Icon Above Title */}
             <div className="flex justify-center mb-4">
-              <TrendingUp className="w-10 h-10 text-biz-green" aria-hidden="true" />
+              <TrendingUp className="w-16 h-16 text-biz-green" aria-hidden="true" />
             </div>
 
             {/* H1 */}

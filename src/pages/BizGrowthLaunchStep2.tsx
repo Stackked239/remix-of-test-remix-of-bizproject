@@ -197,7 +197,7 @@ const BizGrowthLaunchStep2 = () => {
         {/* Hidden keywords for internal search */}
         <span className="sr-only" aria-hidden="true">Launch Cash Management Step 2 BizGrowth</span>
         <section 
-          className="relative min-h-[70vh] flex items-center justify-center px-4 py-10 md:py-16"
+          className="relative min-h-[70vh] flex items-center justify-center px-4 pt-28 md:pt-32 pb-10 md:pb-16"
           style={{ background: 'linear-gradient(180deg, #F8F8F5 0%, #F0F4E8 100%)' }}
           aria-labelledby="hero-heading"
         >
@@ -212,9 +212,9 @@ const BizGrowthLaunchStep2 = () => {
               <span className="text-sm font-medium text-biz-navy font-open-sans">3 Modules · Under 2 Hours Total</span>
             </div>
 
-            {/* Arrow Icon Above Title */}
+            {/* TrendingUp Icon Above Title */}
             <div className="flex justify-center mb-4">
-              <ArrowDown className="w-8 h-8 text-biz-citrine animate-bounce" aria-hidden="true" />
+              <TrendingUp className="w-10 h-10 text-biz-green" aria-hidden="true" />
             </div>
 
             {/* H1 */}
@@ -251,10 +251,6 @@ const BizGrowthLaunchStep2 = () => {
               </button>
             </div>
 
-            {/* Decorative element */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-20">
-              <TrendingUp className="w-24 h-24 text-biz-green" />
-            </div>
           </div>
         </section>
 

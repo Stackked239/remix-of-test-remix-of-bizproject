@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import SEO from '@/components/SEO';
+import GlobalNavigation from '@/components/GlobalNavigation';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Button } from '@/components/ui/button';
 import { 
   ArrowDown, 
@@ -146,6 +148,8 @@ const BizGrowthLaunchStep2 = () => {
 
   return (
     <>
+      <PromotionalBanner />
+      <GlobalNavigation />
       <SEO
         title="Fix the Cash Squeeze | BizGrowth Academy - Financial Foundations for Founders"
         description="Learn cash flow, profit, and runway planning in under 2 hours. Built for first-time business owners. Includes 5 free downloadable tools. No MBA required."

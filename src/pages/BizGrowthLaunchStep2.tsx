@@ -197,7 +197,7 @@ const BizGrowthLaunchStep2 = () => {
         {/* Hidden keywords for internal search */}
         <span className="sr-only" aria-hidden="true">Launch Cash Management Step 2 BizGrowth</span>
         <section 
-          className="relative min-h-[70vh] flex items-center justify-center px-4 pt-28 md:pt-32 pb-10 md:pb-16"
+          className="relative min-h-[70vh] flex items-center justify-center px-4 pt-32 md:pt-40 pb-10 md:pb-16"
           style={{ background: 'linear-gradient(180deg, #F8F8F5 0%, #F0F4E8 100%)' }}
           aria-labelledby="hero-heading"
         >

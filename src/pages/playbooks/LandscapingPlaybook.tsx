@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -108,10 +109,11 @@ const LandscapingPlaybook = () => {
       />
       
       <div className="min-h-screen bg-gradient-to-b from-biz-light-grey to-white">
+        <PromotionalBanner />
         <GlobalNavigation />
         
-        {/* Progress Indicator */}
-        <div className="fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm border-b border-border/50">
+        {/* Progress Indicator - positioned below banner (h-20) and nav */}
+        <div className="fixed top-36 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm border-b border-border/50">
           <div className="max-w-4xl mx-auto px-4 py-2">
             <div className="flex items-center gap-3">
               <span className="text-xs text-biz-grey font-open-sans">Progress</span>
@@ -121,7 +123,7 @@ const LandscapingPlaybook = () => {
           </div>
         </div>
 
-        <main className="pt-28 pb-16">
+        <main className="pt-48 pb-16">
           {/* Hero Section */}
           <section 
             className="py-16 md:py-24 px-4"

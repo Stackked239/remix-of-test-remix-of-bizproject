@@ -89,6 +89,7 @@ import Concerns from "./pages/Concerns";
 import BizLeaderBot from "./pages/BizLeaderBot";
 import BizGuideSherpa from "./pages/BizGuideSherpa";
 import Sherpas from "./pages/Sherpas";
+import LandscapingPlaybook from "./pages/playbooks/LandscapingPlaybook";
 
 
 const queryClient = new QueryClient();
@@ -185,6 +186,7 @@ const App = () => (
             <Route path="/biztools/toolbox/customer-journey-maps-tool" element={<CustomerJourneyMapsTool />} />
             <Route path="/search" element={<Search />} />
             <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
+            <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight, ArrowRight, Lightbulb, DollarSign, BookOpen, CircleHelp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/contact-hero-dashboard.webp";
@@ -95,6 +97,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Us | BizHealth.ai"
+        description="Get in touch with BizHealth.ai. Have questions about our business health assessments? Our expert team is here to support your business growth journey."
+        keywords="contact BizHealth, business assessment support, customer service, business health questions"
+        canonical="https://bizhealth.ai/contact"
+      />
       <GlobalNavigation />
       
       {/* Hero Section */}

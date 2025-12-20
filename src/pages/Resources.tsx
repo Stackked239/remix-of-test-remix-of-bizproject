@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import SEO from "@/components/SEO";
 import { BookOpen, Calculator, TrendingUp, FileText, ExternalLink, Users, DollarSign, Target } from "lucide-react";
 
 const Resources = () => {
@@ -186,6 +187,12 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Business Resources & Tools | BizHealth.ai"
+        description="Access free business calculators, strategic planning templates, financial management guides, and growth resources for SMB owners."
+        keywords="business resources, SMB tools, business calculators, strategic planning templates, financial management"
+        canonical="https://bizhealth.ai/resources"
+      />
       <GlobalNavigation />
       
       {/* Hero Section */}

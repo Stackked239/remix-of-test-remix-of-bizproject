@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -63,6 +64,11 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
+      <Helmet>
+        <title>Sign In | BizHealth.ai</title>
+        <meta name="description" content="Sign in to your BizHealth.ai account to access your business health assessment reports and client portal." />
+        <link rel="canonical" href="https://bizhealth.ai/login" />
+      </Helmet>
       <PromotionalBanner />
       <GlobalNavigation />
       

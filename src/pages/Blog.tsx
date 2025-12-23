@@ -43,6 +43,7 @@ import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-proces
 import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
 import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide.png";
 import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025.jpg";
+import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -61,6 +62,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
+      excerpt: "Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling.",
+      author: "BizHealth.ai Research Team",
+      date: "December 23, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Financials, Business Leadership",
+      slug: "/blog/growth-trap-broken-business-model",
+      imageUrl: growthTrapImage,
+      altText: "Stressed business owner in office with growth chart showing the growth trap dilemma - when more sales cannot save a broken business model",
+      keywords: "growth trap small business, broken business model, SMB scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
+    },
     {
       title: "The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'",
       excerpt: "Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth.",

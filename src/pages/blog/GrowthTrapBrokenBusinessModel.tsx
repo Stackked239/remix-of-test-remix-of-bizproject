@@ -736,8 +736,26 @@ const GrowthTrapBrokenBusinessModel = () => {
         </section>
 
         <RelatedArticles 
-          currentSlug="/blog/growth-trap-broken-business-model"
-          category="Business Strategy"
+          articles={[
+            {
+              title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
+              slug: "/blog/smb-scaling-paradox-2025",
+              category: "Business Strategy",
+              excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks."
+            },
+            {
+              title: "Cash Flow Crisis Management for Small Businesses",
+              slug: "/blog/cash-flow-crisis-management",
+              category: "Financial Management",
+              excerpt: "Navigate financial challenges with confidence using proven crisis management strategies."
+            },
+            {
+              title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
+              slug: "/blog/scaling-operations-without-losing-control",
+              category: "Operations",
+              excerpt: "Learn the SCALE framework for sustainable growth without operational chaos."
+            }
+          ]}
         />
 
         <PromotionalBanner />

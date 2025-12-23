@@ -1,5 +1,9 @@
 # Netlify Redirects for BizHealth.ai
 
+# Redirect HTTP to HTTPS (handled by Netlify, but explicit for clarity)
+http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
+http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+
 # Redirect www to non-www
 https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 

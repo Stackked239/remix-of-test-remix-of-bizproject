@@ -667,7 +667,7 @@ const GrowthTrapBrokenBusinessModel = () => {
           <div className="container mx-auto px-4 max-w-4xl relative z-10">
             <div className="bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-12 text-center shadow-2xl hover:shadow-primary/10 transition-shadow duration-500">
               {/* Accent Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl overflow-hidden mb-6 shadow-lg shadow-primary/25">
+              <div className="inline-flex items-center justify-center w-16 h-16 overflow-hidden mb-6 shadow-lg shadow-primary/25">
                 <img 
                   src={bizHealthIcon} 
                   alt="BizHealth.ai icon" 

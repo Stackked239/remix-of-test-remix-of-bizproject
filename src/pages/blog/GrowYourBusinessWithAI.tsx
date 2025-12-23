@@ -6,6 +6,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import growWithAIHero from '@/assets/grow-your-business-with-ai-smb-growth-2025.jpg';
+import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
 
 const GrowYourBusinessWithAI = () => {
   const publishDate = '2025-12-23';
@@ -519,10 +520,12 @@ const GrowYourBusinessWithAI = () => {
                   
                   <div className="text-center">
                     {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-cyan-500 text-white mb-6 shadow-lg shadow-primary/30">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                    <div className="inline-flex items-center justify-center w-16 h-16 overflow-hidden mb-6 shadow-lg shadow-primary/30">
+                      <img 
+                        src={bizHealthIcon} 
+                        alt="BizHealth.ai icon" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">

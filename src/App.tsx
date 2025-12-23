@@ -69,6 +69,7 @@ import HiddenCostsManualProcesses from "./pages/blog/HiddenCostsManualProcesses"
 import OvercomingBIChallengesSMB from "./pages/blog/OvercomingBIChallengesSMB";
 import HowToCheckYourBusinessHealth from "./pages/blog/HowToCheckYourBusinessHealth";
 import GrowYourBusinessWithAI from "./pages/blog/GrowYourBusinessWithAI";
+import GrowthTrapBrokenBusinessModel from "./pages/blog/GrowthTrapBrokenBusinessModel";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -172,6 +173,7 @@ const App = () => (
             <Route path="/blog/overcoming-bi-challenges-smb" element={<OvercomingBIChallengesSMB />} />
             <Route path="/blog/how-to-check-your-business-health" element={<HowToCheckYourBusinessHealth />} />
             <Route path="/blog/grow-your-business-with-ai" element={<GrowYourBusinessWithAI />} />
+            <Route path="/blog/growth-trap-broken-business-model" element={<GrowthTrapBrokenBusinessModel />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

@@ -530,8 +530,10 @@ const GrowthTrapBrokenBusinessModel = () => {
               <div className="space-y-6">
                 <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white font-bold shadow-lg">
-                      P1
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-lg">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 m-0">Phase 1: Diagnosis</h3>
@@ -545,8 +547,10 @@ const GrowthTrapBrokenBusinessModel = () => {
 
                 <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white font-bold shadow-lg">
-                      P2
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-lg">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 m-0">Phase 2: Stabilization</h3>
@@ -560,8 +564,10 @@ const GrowthTrapBrokenBusinessModel = () => {
 
                 <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-500/20 rounded-xl p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white font-bold shadow-lg">
-                      P3
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-lg">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 m-0">Phase 3: Optimization</h3>
@@ -575,8 +581,10 @@ const GrowthTrapBrokenBusinessModel = () => {
 
                 <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-xl p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white font-bold shadow-lg">
-                      P4
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-emerald-600 dark:text-emerald-400 m-0">Phase 4: Controlled Scaling</h3>
@@ -640,29 +648,6 @@ const GrowthTrapBrokenBusinessModel = () => {
               <p className="text-2xl font-bold text-foreground text-center my-12 bg-gradient-to-r from-primary via-emerald-500 to-cyan-500 bg-clip-text text-transparent">
                 Stop chasing the mirage of more. Start building the reality of better.
               </p>
-            </section>
-
-            {/* Internal Links */}
-            <section className="mt-16 pt-8 border-t border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">Related Reading</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link to="/blog/smb-scaling-paradox-2025" className="group block bg-muted/50 hover:bg-muted rounded-xl p-4 border border-border hover:border-primary/30 transition-all">
-                  <span className="text-primary font-medium group-hover:underline">The SMB Scaling Paradox</span>
-                  <p className="text-sm text-muted-foreground mt-1 mb-0">Why growing too fast is killing your business</p>
-                </Link>
-                <Link to="/blog/cash-flow-crisis-management" className="group block bg-muted/50 hover:bg-muted rounded-xl p-4 border border-border hover:border-primary/30 transition-all">
-                  <span className="text-primary font-medium group-hover:underline">Cash Flow Crisis Management</span>
-                  <p className="text-sm text-muted-foreground mt-1 mb-0">Navigate financial challenges with confidence</p>
-                </Link>
-                <Link to="/blog/scaling-operations-without-losing-control" className="group block bg-muted/50 hover:bg-muted rounded-xl p-4 border border-border hover:border-primary/30 transition-all">
-                  <span className="text-primary font-medium group-hover:underline">Scaling Operations Without Losing Control</span>
-                  <p className="text-sm text-muted-foreground mt-1 mb-0">The SCALE framework for sustainable growth</p>
-                </Link>
-                <Link to="/blog/financial-health-metrics" className="group block bg-muted/50 hover:bg-muted rounded-xl p-4 border border-border hover:border-primary/30 transition-all">
-                  <span className="text-primary font-medium group-hover:underline">Financial Health Metrics</span>
-                  <p className="text-sm text-muted-foreground mt-1 mb-0">Key KPIs every SMB leader should track</p>
-                </Link>
-              </div>
             </section>
 
             {/* External Authoritative Link */}

@@ -387,7 +387,7 @@ const GrowthTrapBrokenBusinessModel = () => {
               {/* Strategy 1 */}
               <div className="mt-10">
                 <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary font-bold">1</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-lg font-bold" style={{ backgroundColor: '#242553', color: '#ffffff' }}>1</span>
                   Diagnose Before You Scale
                 </h3>
                 <p>Before you invest in customer acquisition, you must have a clear-eyed assessment of your current business model. The questions to ask:</p>
@@ -417,7 +417,7 @@ const GrowthTrapBrokenBusinessModel = () => {
               {/* Strategy 2 */}
               <div className="mt-10">
                 <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary font-bold">2</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-lg font-bold" style={{ backgroundColor: '#242553', color: '#ffffff' }}>2</span>
                   Fix the Leak Before You Pour More Water
                 </h3>
                 <p>
@@ -450,7 +450,7 @@ const GrowthTrapBrokenBusinessModel = () => {
               {/* Strategy 3 */}
               <div className="mt-10">
                 <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary font-bold">3</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-lg font-bold" style={{ backgroundColor: '#242553', color: '#ffffff' }}>3</span>
                   Establish Operational Baselines
                 </h3>
                 <p>Before you scale, you need to know what "good" looks like. This means establishing KPIs for:</p>
@@ -488,7 +488,7 @@ const GrowthTrapBrokenBusinessModel = () => {
               {/* Strategy 4 */}
               <div className="mt-10">
                 <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary font-bold">4</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-lg font-bold" style={{ backgroundColor: '#242553', color: '#ffffff' }}>4</span>
                   Build for Leverage, Not Linear Growth
                 </h3>
                 <p>

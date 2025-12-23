@@ -650,12 +650,6 @@ const GrowthTrapBrokenBusinessModel = () => {
               </p>
             </section>
 
-            {/* External Authoritative Link */}
-            <section className="mt-8">
-              <p className="text-sm text-muted-foreground">
-                For additional insights on business scaling strategies, see the <a href="https://hbr.org/topic/subject/scaling" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review's research on scaling</a>.
-              </p>
-            </section>
           </div>
         </article>
 

@@ -41,7 +41,7 @@ const GrowYourBusinessWithAI = () => {
         <GlobalNavigation />
 
         {/* Hero Section with gradient overlay */}
-        <div className="relative pt-32 pb-20 overflow-hidden">
+        <div className="relative pt-32 pb-8 overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-cyan-500/5" />
           <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />

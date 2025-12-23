@@ -507,27 +507,70 @@ const GrowYourBusinessWithAI = () => {
               </section>
 
               {/* Call to Action */}
-              <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-xl p-8 mt-12 mb-12 border border-primary/20">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">
-                    Get Your Business Health Assessment Today
-                  </h3>
-                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Discover where AI can have the biggest impact on your business growth. Our AI-powered diagnostic identifies your primary bottlenecks and provides actionable recommendations.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link
-                      to="/pricing"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                    >
-                      Start Your Assessment
-                    </Link>
-                    <Link
-                      to="/how-it-works"
-                      className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
-                    >
-                      Learn How It Works
-                    </Link>
+              <div className="relative mt-16 mb-12 overflow-hidden">
+                {/* Decorative background elements */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-cyan-500/10 to-emerald-500/15 rounded-2xl" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+                
+                <div className="relative border border-primary/30 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+                  {/* Top accent line */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+                  
+                  <div className="text-center">
+                    {/* Icon */}
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-cyan-500 text-white mb-6 shadow-lg shadow-primary/30">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
+                      Get Your Business Health Assessment Today
+                    </h3>
+                    <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-lg">
+                      Discover where AI can have the biggest impact on your business growth. Our AI-powered diagnostic identifies your primary bottlenecks and provides actionable recommendations.
+                    </p>
+                    
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link
+                        to="/pricing"
+                        className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-cyan-600 text-white rounded-xl font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
+                      >
+                        Start Your Assessment
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </Link>
+                      <Link
+                        to="/how-it-works"
+                        className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/30 rounded-xl font-semibold hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+                      >
+                        Learn How It Works
+                      </Link>
+                    </div>
+                    
+                    {/* Trust indicators */}
+                    <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-6 border-t border-border/50">
+                      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        30-40 min questionnaire
+                      </span>
+                      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        AI-powered insights
+                      </span>
+                      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        20x ROI potential
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

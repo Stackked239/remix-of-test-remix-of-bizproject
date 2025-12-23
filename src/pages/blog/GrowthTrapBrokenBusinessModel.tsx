@@ -101,12 +101,10 @@ const GrowthTrapBrokenBusinessModel = () => {
 
               {/* Hero Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8 border border-border/50">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10" />
                 <img
                   src={growthTrapHero}
                   alt="Stressed business owner in office with growth chart showing the growth trap dilemma - when more sales cannot save a broken business model"
                   className="w-full h-auto object-cover"
-                  style={{ maxWidth: '85%', margin: '0 auto', display: 'block' }}
                   loading="eager"
                 />
               </div>

@@ -498,4 +498,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/grow-your-business-with-ai</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

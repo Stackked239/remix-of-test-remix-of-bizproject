@@ -42,6 +42,7 @@ import financialStewardshipImage from "@/assets/financial-stewardship-team-respo
 import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
 import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
 import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide.png";
+import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -60,6 +61,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'",
+      excerpt: "Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth.",
+      author: "BizHealth.ai Research Team",
+      date: "December 23, 2025",
+      readTime: "14 min read",
+      category: "Business Intelligence, Business Strategy, Technology",
+      slug: "/blog/grow-your-business-with-ai",
+      imageUrl: growWithAIImage,
+      altText: "Business leader analyzing AI-powered growth analytics dashboard with holographic data visualizations for strategic decision-making in 2025",
+      keywords: "AI business growth 2025, small business AI strategy, SMB AI implementation, AI-driven growth, business intelligence AI, predictive analytics SMB, AI operational efficiency, AI for small business, business health assessment, AI transformation framework"
+    },
     {
       title: "How to Check Your Business Health: A Comprehensive Guide for Small Business Owners",
       excerpt: "Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!",

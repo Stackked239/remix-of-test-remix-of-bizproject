@@ -8,6 +8,7 @@ import { Calendar, Clock, User, ArrowLeft, ArrowRight, Lightbulb, CheckCircle2, 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
+import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const ChaosToClarity = () => {
   const publishDate = "2025-12-24";
@@ -561,8 +562,8 @@ const ChaosToClarity = () => {
               {/* Author Bio */}
               <section className="border-t border-border pt-8 mb-12">
                 <div className="flex items-start gap-6 bg-muted/30 p-6 rounded-xl">
-                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <User className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                    <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>

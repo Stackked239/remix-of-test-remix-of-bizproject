@@ -765,7 +765,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
               {/* Author Bio */}
               <div className="mt-12 p-6 rounded-lg" style={{ backgroundColor: 'hsl(var(--muted))' }}>
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden">
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
                     <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
                   </div>
                   <div>

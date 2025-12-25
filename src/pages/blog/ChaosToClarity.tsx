@@ -197,10 +197,10 @@ const ChaosToClarity = () => {
                     { title: "Culture Transmission", desc: "A lightweight cadence becomes the mechanism through which culture perpetuates as you scale." },
                     { title: "Operator Development", desc: "When junior leaders sit in planning meetings and watch senior leaders make trade-offs, they learn leadership. The cadence becomes your hidden curriculum." }
                   ].map((item, idx) => (
-                    <div key={idx} className="bg-muted/50 p-5 rounded-xl border border-border hover:border-primary/50 hover:bg-muted/80 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
+                    <div key={idx} className="bg-muted/50 p-5 rounded-xl border border-border hover:border-biz-green/50 hover:bg-muted/80 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default group">
                       <div className="flex items-center gap-2 mb-2">
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
-                        <h4 className="font-semibold text-foreground">{item.title}</h4>
+                        <CheckCircle2 className="w-5 h-5 text-primary group-hover:text-biz-green transition-colors duration-300" />
+                        <h4 className="font-semibold text-foreground group-hover:text-biz-green transition-colors duration-300">{item.title}</h4>
                       </div>
                       <p className="text-muted-foreground text-sm">{item.desc}</p>
                     </div>

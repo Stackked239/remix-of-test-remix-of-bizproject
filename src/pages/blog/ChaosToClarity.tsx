@@ -597,8 +597,7 @@ const ChaosToClarity = () => {
                 </p>
                 <Button size="lg" className="text-lg px-8 py-6" asChild>
                   <Link to="/onboarding">
-                    Start Your Free Assessment
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    Stop Guessing, Start Growing Today →
                   </Link>
                 </Button>
               </section>

@@ -7,6 +7,7 @@ import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User, BarChart3, TrendingUp, DollarSign, FileText, AlertTriangle, CheckCircle2, Target, Lightbulb } from 'lucide-react';
 import heroImage from '@/assets/small-business-financials-know-your-numbers.jpg';
+import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const SmallBusinessFinancialsKnowYourNumbers = () => {
   const publishDate = "2025-12-24";
@@ -764,8 +765,8 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
               {/* Author Bio */}
               <div className="mt-12 p-6 rounded-lg" style={{ backgroundColor: 'hsl(var(--muted))' }}>
                 <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'hsl(var(--biz-navy))' }}>
-                    <User className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden">
+                    <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>

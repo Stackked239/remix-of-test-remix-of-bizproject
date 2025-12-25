@@ -24,6 +24,7 @@ import { useToast } from "@/hooks/use-toast";
 import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
 import blindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
@@ -49,6 +50,18 @@ const BusinessLeadership = () => {
   ];
 
   const blogPosts = [
+    {
+      id: "0",
+      slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
+      title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
+      excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
+      featuredImage: chaosToClarity,
+      category: "Business Leadership",
+      subcategory: "Change Management",
+      author: "BizHealth.ai Research Team",
+      publishedAt: "December 24, 2025",
+      readTime: 15
+    },
     {
       id: "1",
       slug: "leadership-stress-success",

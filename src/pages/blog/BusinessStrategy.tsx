@@ -11,9 +11,20 @@ import strategyPlanningImage from "@/assets/business-strategy-planning-2026-grow
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import infoOverloadImage from "@/assets/information-overload-business-leader.jpg";
 import comprehensiveHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
+import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 
 const BusinessStrategy = () => {
   const strategyPosts = [
+    {
+      title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
+      slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
+      excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
+      image: chaosToClarity,
+      author: "BizHealth.ai Research Team",
+      date: "December 24, 2025",
+      readTime: "15 min read",
+      featured: true
+    },
     {
       title: "The Complete Guide to Business Health Assessment in 2026",
       slug: "complete-guide-business-health-assessment-2026",

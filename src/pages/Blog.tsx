@@ -44,6 +44,7 @@ import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.j
 import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide.png";
 import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025.jpg";
 import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg";
+import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -62,6 +63,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Small Business Financials: Know Your Numbers, Know Your Business",
+      excerpt: "Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.",
+      author: "BizHealth.ai Strategic Insights",
+      date: "December 24, 2025",
+      readTime: "14 min read",
+      category: "Financials, Business Strategy, Business Leadership",
+      slug: "/blog/small-business-financials-know-your-numbers",
+      imageUrl: smallBusinessFinancialsImage,
+      altText: "Business owner analyzing financial data on multiple monitors showing charts and key performance indicators for small business financial management",
+      keywords: "small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business"
+    },
     {
       title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
       excerpt: "Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling.",

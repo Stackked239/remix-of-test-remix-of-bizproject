@@ -65,66 +65,78 @@ const ChaosToClarity = () => {
       <GlobalNavigation />
 
       {/* Hero Section */}
-      <article className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
+      <article className="pt-40 pb-20">
+        {/* Hero Background */}
+        <div className="bg-gradient-to-b from-primary/5 via-background to-background pb-12">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              {/* Breadcrumb */}
+              <nav className="mb-8">
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group bg-primary/10 px-4 py-2 rounded-full"
+                >
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  Back to Blog
+                </Link>
+              </nav>
+
+              {/* Categories */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <Link to="/blog/operations" className="px-4 py-1.5 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:bg-primary/90 transition-colors shadow-sm">
+                  Operations
+                </Link>
+                <Link to="/blog/business-leadership" className="px-4 py-1.5 bg-biz-green text-white text-sm font-medium rounded-full hover:bg-biz-green/90 transition-colors shadow-sm">
+                  Business Leadership
+                </Link>
+                <Link to="/blog/business-strategy" className="px-4 py-1.5 bg-biz-navy text-white text-sm font-medium rounded-full hover:bg-biz-navy/90 transition-colors shadow-sm">
+                  Business Strategy
+                </Link>
+              </div>
+
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight">
+                From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams
+              </h1>
+
+              {/* Meta */}
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                <div className="flex items-center gap-2 bg-muted px-3 py-1.5 rounded-full">
+                  <User className="w-4 h-4 text-primary" />
+                  <span className="text-foreground font-medium">{author}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-muted px-3 py-1.5 rounded-full">
+                  <Calendar className="w-4 h-4 text-primary" />
+                  <time dateTime={publishDate} className="text-foreground">December 24, 2025</time>
+                </div>
+                <div className="flex items-center gap-2 bg-muted px-3 py-1.5 rounded-full">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span className="text-foreground">{readTime}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Image - Full Width */}
+        <div className="container mx-auto px-6 -mt-4">
           <div className="max-w-4xl mx-auto">
-            {/* Breadcrumb */}
-            <nav className="mb-8">
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-              >
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                Back to Blog
-              </Link>
-            </nav>
-
-            {/* Categories */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              <Link to="/blog/operations" className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary/20 transition-colors">
-                Operations
-              </Link>
-              <Link to="/blog/business-leadership" className="px-3 py-1 bg-biz-green/10 text-biz-green text-sm font-medium rounded-full hover:bg-biz-green/20 transition-colors">
-                Business Leadership
-              </Link>
-              <Link to="/blog/business-strategy" className="px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full hover:bg-accent/20 transition-colors">
-                Business Strategy
-              </Link>
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight">
-              From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams
-            </h1>
-
-            {/* Meta */}
-            <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>{author}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <time dateTime={publishDate}>December 24, 2025</time>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>{readTime}</span>
-              </div>
-            </div>
-
-            {/* Hero Image */}
             <figure className="mb-12">
               <img
                 src={heroImage}
                 alt="Business leadership team meeting in modern manufacturing facility discussing operating rhythm and scaling strategies for SMB growth"
-                className="w-[90%] mx-auto h-auto rounded-2xl shadow-xl object-cover"
+                className="w-full h-auto rounded-2xl shadow-2xl object-cover border border-border"
                 loading="eager"
               />
-              <figcaption className="text-center text-sm text-muted-foreground mt-4">
+              <figcaption className="text-center text-sm text-muted-foreground mt-4 italic">
                 Establishing a lightweight operating rhythm creates clarity without bureaucracy
               </figcaption>
             </figure>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">

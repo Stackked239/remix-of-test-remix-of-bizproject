@@ -7,6 +7,7 @@ import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
 import heroImage from '@/assets/how-to-check-business-health-guide.png';
+import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const HowToCheckYourBusinessHealth = () => {
   const publishDate = "2025-12-14";
@@ -336,10 +337,17 @@ const HowToCheckYourBusinessHealth = () => {
 
               {/* Author Bio */}
               <div className="rounded-lg p-6 mt-12" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.05)', borderLeft: '4px solid hsl(var(--biz-green))' }}>
-                <h4 className="text-lg font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
-                <p style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                  <strong>BizHealth Research & Analysis Team</strong> combines decades of experience in small business consulting, operations management, and AI-powered analytics. Our team is dedicated to helping SMB owners identify blind spots and drive sustainable growth through data-driven insights.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                    <img src={authorIcon} alt="BizHealth Research & Analysis Team" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
+                    <p style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
+                      <strong>BizHealth Research & Analysis Team</strong> combines decades of experience in small business consulting, operations management, and AI-powered analytics. Our team is dedicated to helping SMB owners identify blind spots and drive sustainable growth through data-driven insights.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

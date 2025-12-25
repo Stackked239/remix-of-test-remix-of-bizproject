@@ -8,6 +8,7 @@ import blindSpotsHero from '@/assets/business-blind-spots-assessment.png';
 import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
 import frameworkImage from '@/assets/blindspot-analysis-framework.jpg';
 import johariWindow from '@/assets/johari-window-business-blind-spots.png';
+import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const BusinessBlindSpots2025 = () => {
   const publishDate = '2025-11-04';
@@ -433,6 +434,9 @@ const BusinessBlindSpots2025 = () => {
         {/* Author Bio */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex items-start gap-4">
+            <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+              <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
+            </div>
             <div className="flex-1">
               <h3 className="text-lg font-bold text-foreground mb-2">About the Author</h3>
               <p className="text-sm text-muted-foreground mb-2">

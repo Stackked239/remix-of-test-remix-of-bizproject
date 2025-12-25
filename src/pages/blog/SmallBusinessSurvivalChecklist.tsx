@@ -6,6 +6,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import survivalChecklistHero from '@/assets/small-business-survival-checklist-2025.jpg';
+import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const SmallBusinessSurvivalChecklist = () => {
   const articleUrl = 'https://bizhealth.ai/blog/small-business-survival-checklist-2025';
@@ -284,9 +285,17 @@ const SmallBusinessSurvivalChecklist = () => {
 
               {/* Author Bio */}
               <div className="border-t border-border pt-8 mt-12">
-                <p className="text-sm text-muted-foreground">
-                  <strong>About the Author:</strong> The BizHealth.ai Research Team consists of business analysts, data scientists, and industry experts dedicated to providing actionable insights for small and mid-sized business leaders. With expertise in AI-driven diagnostics, financial analysis, and operational optimization, our team helps businesses eliminate guesswork and achieve sustainable growth.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                    <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-foreground mb-2">About the Author</h4>
+                    <p className="text-sm text-muted-foreground">
+                      <strong>BizHealth.ai Research Team</strong> consists of business analysts, data scientists, and industry experts dedicated to providing actionable insights for small and mid-sized business leaders. With expertise in AI-driven diagnostics, financial analysis, and operational optimization, our team helps businesses eliminate guesswork and achieve sustainable growth.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

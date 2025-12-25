@@ -7,6 +7,7 @@ import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const TalentWarsHiring = () => {
   const publishDate = "2025-10-14";
@@ -387,10 +388,17 @@ const TalentWarsHiring = () => {
 
             {/* Author Bio */}
             <div className="mt-12 p-6 bg-muted rounded-lg">
-              <h3 className="text-lg font-bold text-foreground mb-2">About the Author</h3>
-              <p className="text-muted-foreground">
-                The <strong>BizHealth.ai Research Team</strong> brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
-              </p>
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                  <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">About the Author</h3>
+                  <p className="text-muted-foreground">
+                    The <strong>BizHealth.ai Research Team</strong> brings together five decades of business consulting expertise, combining proven frameworks from business strategists, CFOs, and Fortune 500 executives. Our proprietary AI technology platform delivers actionable insights to help SMB leaders make data-driven decisions and achieve sustainable growth.
+                  </p>
+                </div>
+              </div>
             </div>
             </div>
           </div>

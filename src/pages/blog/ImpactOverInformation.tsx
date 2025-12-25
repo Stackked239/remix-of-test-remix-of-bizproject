@@ -7,6 +7,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
 import heroImage from '@/assets/information-overload-business-leader.jpg';
+import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const ImpactOverInformation = () => {
   const publishDate = '2025-10-21';
@@ -84,9 +85,17 @@ const ImpactOverInformation = () => {
 
               {/* Author Expertise Note */}
               <div className="mb-8 p-4 bg-muted/50 rounded-lg border border-border">
-                <p className="text-sm text-muted-foreground">
-                  <strong>About the Authors:</strong> The BizHealth Research Team combines decades of expertise in business ownership, consulting, development, and strategic planning, specializing in SMB operational excellence and AI-driven business intelligence.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                    <img src={authorIcon} alt="BizHealth Research Team" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-foreground mb-1">About the Authors</h4>
+                    <p className="text-sm text-muted-foreground">
+                      The BizHealth Research Team combines decades of expertise in business ownership, consulting, development, and strategic planning, specializing in SMB operational excellence and AI-driven business intelligence.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Hero Image */}

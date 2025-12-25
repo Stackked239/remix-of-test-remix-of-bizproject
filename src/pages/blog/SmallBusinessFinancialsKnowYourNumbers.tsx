@@ -12,7 +12,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
   const publishDate = "2025-12-24";
   const modifiedDate = "2025-12-24";
   const readTime = "14 min read";
-  const author = "BizHealth.ai Strategic Insights";
+  const author = "BizHealth.ai Research Team";
 
   const relatedArticles = [
     {
@@ -771,7 +771,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
                     <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
                     <p className="font-semibold" style={{ color: 'hsl(var(--biz-navy) / 0.9)' }}>{author}</p>
                     <p className="text-sm mt-2" style={{ color: 'hsl(var(--foreground) / 0.7)' }}>
-                      The BizHealth.ai Strategic Insights team combines expertise in small business finance, strategic planning, and data-driven decision making. Our mission is to help business owners understand and optimize their financial health through actionable, accessible guidance.
+                      The BizHealth.ai Research Team combines expertise in small business finance, strategic planning, and data-driven decision making. Our mission is to help business owners understand and optimize their financial health through actionable, accessible guidance.
                     </p>
                   </div>
                 </div>

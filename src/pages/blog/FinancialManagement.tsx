@@ -51,7 +51,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.',
     featuredImage: smallBusinessFinancialsImage,
     subcategory: 'Financial Planning',
-    author: 'BizHealth.ai Strategic Insights',
+    author: 'BizHealth.ai Research Team',
     publishedAt: 'Dec 24, 2025',
     readTime: 14
   },

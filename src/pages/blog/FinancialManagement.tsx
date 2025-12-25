@@ -27,6 +27,7 @@ import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -43,6 +44,17 @@ interface BlogPost {
 
 // Financial Management blog posts
 const blogPosts: BlogPost[] = [
+  {
+    id: '0',
+    slug: 'small-business-financials-know-your-numbers',
+    title: 'Small Business Financials: Know Your Numbers, Know Your Business',
+    excerpt: 'Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.',
+    featuredImage: smallBusinessFinancialsImage,
+    subcategory: 'Financial Planning',
+    author: 'BizHealth.ai Strategic Insights',
+    publishedAt: 'Dec 24, 2025',
+    readTime: 14
+  },
   {
     id: '1',
     slug: 'financial-stewardship-everyones-responsibility',

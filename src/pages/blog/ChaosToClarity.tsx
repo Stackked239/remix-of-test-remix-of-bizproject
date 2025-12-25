@@ -322,20 +322,20 @@ const ChaosToClarity = () => {
                 </div>
 
                 {/* Layer 3: Quarterly Business Review */}
-                <div className="bg-gradient-to-r from-accent/5 to-accent/10 p-8 rounded-2xl border border-accent/20 mb-8">
+                <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 p-8 rounded-2xl border border-amber-500/30 mb-8">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Layer 3: The Quarterly Business Review (3-4 hours)</h3>
                   
                   <div className="grid md:grid-cols-3 gap-4 mb-6">
-                    <div className="bg-background/80 p-4 rounded-lg">
-                      <p className="font-semibold text-accent-foreground mb-1">Attendees</p>
+                    <div className="bg-background/90 p-4 rounded-lg border border-amber-500/20 shadow-sm">
+                      <p className="font-semibold text-amber-600 dark:text-amber-400 mb-1">Attendees</p>
                       <p className="text-sm text-muted-foreground">Entire company (Town Hall) or leadership strategy session if 50+ people.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
-                      <p className="font-semibold text-accent-foreground mb-1">Frequency</p>
+                    <div className="bg-background/90 p-4 rounded-lg border border-amber-500/20 shadow-sm">
+                      <p className="font-semibold text-amber-600 dark:text-amber-400 mb-1">Frequency</p>
                       <p className="text-sm text-muted-foreground">Within first two weeks of the new quarter.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
-                      <p className="font-semibold text-accent-foreground mb-1">Purpose</p>
+                    <div className="bg-background/90 p-4 rounded-lg border border-amber-500/20 shadow-sm">
+                      <p className="font-semibold text-amber-600 dark:text-amber-400 mb-1">Purpose</p>
                       <p className="text-sm text-muted-foreground">Assess quarterly goals. Celebrate wins. Learn from failures. Set next quarter goals.</p>
                     </div>
                   </div>
@@ -350,12 +350,18 @@ const ChaosToClarity = () => {
                       { time: "15 min", title: "Vision Reconnection", desc: "Why does the work matter? Who are we serving? What are we building?" },
                       { time: "30 min", title: "Social Time", desc: "End with food and informal time. People need to decompress and reconnect." }
                     ].map((item, idx) => (
-                      <div key={idx} className="bg-background/80 p-4 rounded-lg">
-                        <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">{item.time}</span>
+                      <div key={idx} className="bg-background/90 p-4 rounded-lg border border-amber-500/20 shadow-sm hover:shadow-md transition-shadow">
+                        <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-500/20 px-2 py-1 rounded">{item.time}</span>
                         <p className="font-semibold text-foreground mt-2">{item.title}</p>
                         <p className="text-muted-foreground text-sm">{item.desc}</p>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-6 p-4 bg-background/90 rounded-lg border-l-4 border-amber-500">
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-foreground">Why this works:</strong> The quarterly review creates a natural rhythm for reflecting, resetting, and reconnecting. It transforms strategy from a static document into a living practice that evolves with your business.
+                    </p>
                   </div>
                 </div>
               </section>

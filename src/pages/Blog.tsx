@@ -66,7 +66,7 @@ const Blog = () => {
     {
       title: "Small Business Financials: Know Your Numbers, Know Your Business",
       excerpt: "Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.",
-      author: "BizHealth.ai Strategic Insights",
+      author: "BizHealth.ai Research Team",
       date: "December 24, 2025",
       readTime: "14 min read",
       category: "Financials, Business Strategy, Business Leadership",

@@ -197,7 +197,7 @@ const ChaosToClarity = () => {
                     { title: "Culture Transmission", desc: "A lightweight cadence becomes the mechanism through which culture perpetuates as you scale." },
                     { title: "Operator Development", desc: "When junior leaders sit in planning meetings and watch senior leaders make trade-offs, they learn leadership. The cadence becomes your hidden curriculum." }
                   ].map((item, idx) => (
-                    <div key={idx} className="bg-muted/50 p-5 rounded-xl border border-border">
+                    <div key={idx} className="bg-muted/50 p-5 rounded-xl border border-border hover:border-primary/50 hover:bg-muted/80 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
                       <div className="flex items-center gap-2 mb-2">
                         <CheckCircle2 className="w-5 h-5 text-primary" />
                         <h4 className="font-semibold text-foreground">{item.title}</h4>
@@ -230,15 +230,15 @@ const ChaosToClarity = () => {
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Layer 1: The Weekly Leadership Huddle (30 minutes)</h3>
                   
                   <div className="grid md:grid-cols-3 gap-4 mb-6">
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-primary mb-1">Attendees</p>
                       <p className="text-sm text-muted-foreground">Leadership team only. C-level or department heads. No more than 8 people.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-primary mb-1">Frequency</p>
                       <p className="text-sm text-muted-foreground">Same time every week. Monday morning is ideal—sets the week's priorities.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-primary mb-1">Purpose</p>
                       <p className="text-sm text-muted-foreground">See what's happening now. Identify emerging issues. Make micro-corrections.</p>
                     </div>
@@ -246,21 +246,21 @@ const ChaosToClarity = () => {
 
                   <h4 className="font-bold text-lg mb-4 text-foreground">Structure:</h4>
                   <ol className="space-y-4">
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-background/60 transition-colors duration-200">
                       <span className="flex-shrink-0 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">1</span>
                       <div>
                         <p className="font-semibold text-foreground">Health Check (5 minutes)</p>
                         <p className="text-muted-foreground text-sm">Review 3-5 key leading indicators. Note: is this trending up, down, or stable? Is it where we expected?</p>
                       </div>
                     </li>
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-background/60 transition-colors duration-200">
                       <span className="flex-shrink-0 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">2</span>
                       <div>
                         <p className="font-semibold text-foreground">Blockers (10 minutes)</p>
                         <p className="text-muted-foreground text-sm">Each leader gets 90 seconds to name one blocker. CEO decides which to tackle immediately.</p>
                       </div>
                     </li>
-                    <li className="flex items-start gap-3">
+                    <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-background/60 transition-colors duration-200">
                       <span className="flex-shrink-0 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">3</span>
                       <div>
                         <p className="font-semibold text-foreground">This Week's Key Decision (10 minutes)</p>
@@ -281,15 +281,15 @@ const ChaosToClarity = () => {
                   <h3 className="text-2xl font-bold mb-4 text-foreground">Layer 2: The Monthly Business Review (90 minutes)</h3>
                   
                   <div className="grid md:grid-cols-3 gap-4 mb-6">
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-biz-green mb-1">Attendees</p>
                       <p className="text-sm text-muted-foreground">Leadership team + select high-performing ICs. 15-20 people max.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-biz-green mb-1">Frequency</p>
                       <p className="text-sm text-muted-foreground">Same day each month. Typically first or second Tuesday after month-end.</p>
                     </div>
-                    <div className="bg-background/80 p-4 rounded-lg">
+                    <div className="bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                       <p className="font-semibold text-biz-green mb-1">Purpose</p>
                       <p className="text-sm text-muted-foreground">Understand performance vs plan. Identify patterns. Make strategic adjustments.</p>
                     </div>
@@ -304,7 +304,7 @@ const ChaosToClarity = () => {
                       { time: "15 min", title: "Wins & Lessons", desc: "What did we get right? What did we try that didn't work?" },
                       { time: "10 min", title: "Initiatives & Adjustments", desc: "Based on discussion, what is changing? Pivot or double down?" }
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-4 bg-background/80 p-4 rounded-lg">
+                      <div key={idx} className="flex items-start gap-4 bg-background/80 p-4 rounded-lg hover:bg-background hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                         <span className="flex-shrink-0 text-xs font-bold text-biz-green bg-biz-green/10 px-2 py-1 rounded">{item.time}</span>
                         <div>
                           <p className="font-semibold text-foreground">{item.title}</p>
@@ -388,19 +388,19 @@ const ChaosToClarity = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="border-b border-border">
+                      <tr className="border-b border-border hover:bg-primary/5 transition-colors duration-200">
                         <td className="p-4 font-semibold text-foreground">Weekly</td>
                         <td className="p-4 text-muted-foreground">3-5 leading indicators</td>
                         <td className="p-4 text-muted-foreground">New leads, tasks completed, support tickets, cash balance, key customer health</td>
                         <td className="p-4 text-muted-foreground">Know if today differs from yesterday</td>
                       </tr>
-                      <tr className="border-b border-border bg-muted/30">
+                      <tr className="border-b border-border bg-muted/30 hover:bg-biz-green/10 transition-colors duration-200">
                         <td className="p-4 font-semibold text-foreground">Monthly</td>
                         <td className="p-4 text-muted-foreground">15-25 operational metrics</td>
                         <td className="p-4 text-muted-foreground">Revenue, gross margin, churn, NPS, payroll %, sales cycle, bug escape rate, turnover</td>
                         <td className="p-4 text-muted-foreground">Understand monthly performance and trends</td>
                       </tr>
-                      <tr>
+                      <tr className="hover:bg-amber-500/10 transition-colors duration-200">
                         <td className="p-4 font-semibold text-foreground">Quarterly</td>
                         <td className="p-4 text-muted-foreground">5-8 strategic metrics</td>
                         <td className="p-4 text-muted-foreground">Revenue vs plan, cash runway, market share, feature adoption, engagement, LTV</td>
@@ -435,8 +435,8 @@ const ChaosToClarity = () => {
                 </p>
 
                 <div className="space-y-6">
-                  <div className="bg-muted/50 p-6 rounded-xl border border-border">
-                    <h3 className="font-bold text-xl mb-4 text-foreground">Month 1: Pilot with leadership only</h3>
+                  <div className="bg-muted/50 p-6 rounded-xl border border-border hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <h3 className="font-bold text-xl mb-4 text-foreground group-hover:text-primary transition-colors">Month 1: Pilot with leadership only</h3>
                     <p className="text-muted-foreground mb-4">
                       Start with just the weekly huddle (30 minutes) and the monthly business review (90 minutes). Leadership and select directors only. Use this month to establish meeting structure and norms.
                     </p>
@@ -461,22 +461,22 @@ const ChaosToClarity = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-muted/50 p-6 rounded-xl border border-border">
-                    <h3 className="font-bold text-xl mb-4 text-foreground">Month 2: Expand monthly review; begin quarterly prep</h3>
+                  <div className="bg-muted/50 p-6 rounded-xl border border-border hover:border-biz-green/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <h3 className="font-bold text-xl mb-4 text-foreground group-hover:text-biz-green transition-colors">Month 2: Expand monthly review; begin quarterly prep</h3>
                     <p className="text-muted-foreground">
                       Expand the monthly business review to include high-performing individual contributors. This exposes them to decision-making and helps them understand why priorities shift. Begin quarterly planning for the next quarter.
                     </p>
                   </div>
 
-                  <div className="bg-muted/50 p-6 rounded-xl border border-border">
-                    <h3 className="font-bold text-xl mb-4 text-foreground">Month 3: Launch first quarterly review</h3>
+                  <div className="bg-muted/50 p-6 rounded-xl border border-border hover:border-amber-500/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <h3 className="font-bold text-xl mb-4 text-foreground group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Month 3: Launch first quarterly review</h3>
                     <p className="text-muted-foreground">
                       Hold your first all-hands quarterly review. This is your public commitment to how decisions are made and why the company is moving in the direction it is.
                     </p>
                   </div>
 
-                  <div className="bg-primary/10 p-6 rounded-xl border border-primary/20">
-                    <h3 className="font-bold text-xl mb-4 text-foreground">Ongoing: Review and adjust every quarter</h3>
+                  <div className="bg-primary/10 p-6 rounded-xl border border-primary/20 hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <h3 className="font-bold text-xl mb-4 text-foreground group-hover:text-primary transition-colors">Ongoing: Review and adjust every quarter</h3>
                     <p className="text-muted-foreground">
                       Every quarter, during the strategic session, ask: Are these meetings working? Do we have the right people in the room? Are we reviewing the right metrics? Are decisions actually getting made? <strong>Adjust ruthlessly.</strong>
                     </p>
@@ -496,19 +496,19 @@ const ChaosToClarity = () => {
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 cursor-default">
                     <h3 className="font-bold text-lg mb-3 text-foreground">People Stay</h3>
                     <p className="text-muted-foreground text-sm">
                       When employees understand how decisions are made, when they see their impact reflected in metrics, when they get to participate in strategy—they're less likely to leave. A company with clarity has dramatically lower turnover than a company with chaos.
                     </p>
                   </div>
-                  <div className="bg-gradient-to-br from-biz-green/10 to-biz-green/5 p-6 rounded-xl border border-biz-green/20">
+                  <div className="bg-gradient-to-br from-biz-green/10 to-biz-green/5 p-6 rounded-xl border border-biz-green/20 hover:border-biz-green/50 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 cursor-default">
                     <h3 className="font-bold text-lg mb-3 text-foreground">Leaders Develop Faster</h3>
                     <p className="text-muted-foreground text-sm">
                       Junior leaders who sit in these meetings every month learn how to think strategically, how to make trade-offs, how to communicate with data. This is the hidden curriculum that turns individual contributors into operators.
                     </p>
                   </div>
-                  <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-xl border border-accent/20">
+                  <div className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 p-6 rounded-xl border border-amber-500/20 hover:border-amber-500/50 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 cursor-default">
                     <h3 className="font-bold text-lg mb-3 text-foreground">Culture Gets Transmitted</h3>
                     <p className="text-muted-foreground text-sm">
                       In a growing company, you cannot rely on founder-to-team transmission. A structured cadence where values are referenced, transparency is practiced, and learning is celebrated becomes the culture carrier.
@@ -516,7 +516,7 @@ const ChaosToClarity = () => {
                   </div>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-xl border border-border mb-8">
+                <div className="bg-muted/50 p-6 rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 mb-8">
                   <h3 className="font-bold text-lg mb-3 text-foreground">The Investment</h3>
                   <p className="text-muted-foreground mb-4">
                     The weekly huddle is 30 minutes. The monthly review is 90 minutes. The quarterly is a half-day (3-4 hours). For a leadership team of 8 people, this totals about <strong>8 hours per month per person</strong>. That's one workday per month.

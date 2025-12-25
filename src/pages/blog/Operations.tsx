@@ -16,6 +16,16 @@ import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
 const Operations = () => {
   const operationsPosts = [
     {
+      title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
+      slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
+      excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
+      image: scalingImage,
+      author: "BizHealth.ai Research Team",
+      date: "December 24, 2025",
+      readTime: "15 min read",
+      featured: true
+    },
+    {
       title: "E-Commerce Scaling: 5 AI-Powered Strategies for 2025",
       slug: "e-commerce-scaling-smb-2025",
       excerpt: "How top-performing SMBs are using AI to cut fulfillment costs by 28% and double order velocity with smart automation.",

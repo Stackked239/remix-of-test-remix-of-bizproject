@@ -45,6 +45,7 @@ import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health
 import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025.jpg";
 import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg";
 import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
+import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -63,6 +64,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
+      excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
+      author: "BizHealth.ai Research Team",
+      date: "December 24, 2025",
+      readTime: "15 min read",
+      category: "Operations, Business Leadership, Business Strategy",
+      slug: "/blog/chaos-to-clarity-operating-rhythm-scaling-teams",
+      imageUrl: chaosToClarity,
+      altText: "Business leadership team meeting in modern manufacturing facility discussing operating rhythm and scaling strategies for SMB growth",
+      keywords: "operating rhythm SMB, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, SMB operations management"
+    },
     {
       title: "Small Business Financials: Know Your Numbers, Know Your Business",
       excerpt: "Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.",

@@ -735,7 +735,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/bizgrowth/launch">
                     <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all">
-                      Start Your Free Assessment
+                      Start Your BizHealth Assessment
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>

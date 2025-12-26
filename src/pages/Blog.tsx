@@ -46,6 +46,7 @@ import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025
 import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg";
 import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
+import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-guide.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -64,6 +65,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide",
+      excerpt: "Master solo entrepreneur prioritization with this survival guide. Learn the Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly.",
+      author: "BizHealth.ai Research Team",
+      date: "December 25, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Business Leadership, Operations",
+      slug: "/blog/how-to-prioritize-operator-survival-guide",
+      imageUrl: howToPrioritizeImage,
+      altText: "Solo entrepreneur working late at desk with laptop prioritizing business tasks - operator survival guide for small business productivity",
+      keywords: "solo entrepreneur prioritization, prioritization for solo operators, time management small business, delegation for solopreneurs, micro business productivity, entrepreneur survival guide, strategic work allocation, business time audit"
+    },
     {
       title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
       excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",

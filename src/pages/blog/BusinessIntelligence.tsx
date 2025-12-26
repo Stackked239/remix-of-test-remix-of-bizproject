@@ -638,7 +638,7 @@ const BusinessIntelligence = () => {
                     e.currentTarget.style.boxShadow = 'none';
                   }}
                 >
-                  Get Your Business Health Assessment
+                  Start Your BizHealth Assessment
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>

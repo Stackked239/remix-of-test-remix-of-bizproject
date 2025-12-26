@@ -338,7 +338,7 @@ const SuccessBeginsWith2026Strategy = () => {
                     color: 'white',
                   }}
                 >
-                  View Pricing & Get Started
+                  Start Your BizHealth Assessment
                 </Link>
               </div>
 

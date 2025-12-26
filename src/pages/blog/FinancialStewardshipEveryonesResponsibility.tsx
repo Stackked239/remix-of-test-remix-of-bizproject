@@ -501,7 +501,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
                     color: 'white'
                   }}
                 >
-                  Get Your Free Assessment
+                  Start Your BizHealth Assessment
                   <ArrowLeft className="w-4 h-4 rotate-180" />
                 </Link>
               </div>

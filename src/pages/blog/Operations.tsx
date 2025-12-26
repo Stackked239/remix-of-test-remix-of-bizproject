@@ -137,7 +137,7 @@ const Operations = () => {
               
               <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all" asChild>
                 <a href="/onboarding">
-                  Get Your Complete Business Health Assessment
+                  Start Your BizHealth Assessment
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
@@ -321,7 +321,7 @@ const Operations = () => {
             
             <Button size="lg" className="text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all" asChild>
               <a href="/onboarding">
-                Get Your Complete Business Health Assessment
+                Start Your BizHealth Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>

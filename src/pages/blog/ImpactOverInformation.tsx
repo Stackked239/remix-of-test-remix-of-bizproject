@@ -197,7 +197,7 @@ const ImpactOverInformation = () => {
                     to="/pricing"
                     className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
-                    Get Your Assessment
+                    Start Your BizHealth Assessment
                   </Link>
                 </div>
 

@@ -512,7 +512,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   }}
                 >
                   <ArrowRight className="h-5 w-5" />
-                  Start Your Assessment
+                  Start Your BizHealth Assessment
                 </Link>
               </div>
             </div>

@@ -385,7 +385,7 @@ const SmallBusinessStruggles = () => {
                   </p>
                   <Link to="/how-it-works">
                     <Button size="lg" className="group">
-                      Start Your Assessment
+                      Start Your BizHealth Assessment
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>

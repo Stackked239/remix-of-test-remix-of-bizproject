@@ -554,7 +554,7 @@ const HiddenCostsManualProcesses = () => {
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-white transition-all hover:scale-105"
                   style={{ backgroundColor: 'hsl(var(--biz-green))' }}
                 >
-                  Start Your Assessment
+                  Start Your BizHealth Assessment
                 </Link>
               </div>
 

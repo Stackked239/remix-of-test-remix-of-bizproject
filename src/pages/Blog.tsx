@@ -47,6 +47,7 @@ import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg
 import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-guide.jpg";
+import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -65,6 +66,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow",
+      excerpt: "Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Learn value-based pricing, demand elasticity testing, and a 90-day implementation plan.",
+      author: "BizHealth.ai Research Team",
+      date: "December 26, 2025",
+      readTime: "12 min read",
+      category: "Business Strategy, Financials, Operations",
+      slug: "/blog/stress-test-pricing-framework-margins-cash-flow",
+      imageUrl: stressTestPricingImage,
+      altText: "Small business owner analyzing pricing data and financial reports to optimize margins and cash flow with stress-test pricing framework",
+      keywords: "stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization"
+    },
     {
       title: "How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide",
       excerpt: "Master solo entrepreneur prioritization with this survival guide. Learn the Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly.",

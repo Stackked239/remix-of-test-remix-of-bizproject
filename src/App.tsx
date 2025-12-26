@@ -73,6 +73,7 @@ import GrowthTrapBrokenBusinessModel from "./pages/blog/GrowthTrapBrokenBusiness
 import SmallBusinessFinancialsKnowYourNumbers from "./pages/blog/SmallBusinessFinancialsKnowYourNumbers";
 import ChaosToClarity from "./pages/blog/ChaosToClarity";
 import HowToPrioritizeOperatorSurvivalGuide from "./pages/blog/HowToPrioritizeOperatorSurvivalGuide";
+import StressTestPricingFramework from "./pages/blog/StressTestPricingFramework";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -180,6 +181,7 @@ const App = () => (
             <Route path="/blog/small-business-financials-know-your-numbers" element={<SmallBusinessFinancialsKnowYourNumbers />} />
             <Route path="/blog/chaos-to-clarity-operating-rhythm-scaling-teams" element={<ChaosToClarity />} />
             <Route path="/blog/how-to-prioritize-operator-survival-guide" element={<HowToPrioritizeOperatorSurvivalGuide />} />
+            <Route path="/blog/stress-test-pricing-framework-margins-cash-flow" element={<StressTestPricingFramework />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

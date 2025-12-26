@@ -781,23 +781,23 @@ const StressTestPricingFramework = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="my-16 p-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10 rounded-2xl border border-primary/20">
+          <section className="my-16 p-8 rounded-2xl" style={{ backgroundColor: 'hsl(var(--biz-green))' }}>
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Optimize Your Business Pricing?
               </h3>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              <p className="text-white/90 mb-6 max-w-xl mx-auto">
                 Get a comprehensive analysis of your business health, including financial metrics, operational efficiency, and strategic opportunities for margin improvement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/bizgrowth/launch">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all">
+                  <Button size="lg" className="bg-white hover:bg-white/90 text-primary shadow-lg hover:shadow-xl transition-all" style={{ color: 'hsl(var(--biz-navy))' }}>
                     Start Your BizHealth Assessment
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
                 <Link to="/blog/cash-flow-crisis-management">
-                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                     Learn About Cash Flow Management
                   </Button>
                 </Link>

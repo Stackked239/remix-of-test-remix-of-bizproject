@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowRight, Tag, Share2, BookOpen, Target, TrendingUp, AlertTriangle, CheckCircle, DollarSign } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, ArrowLeft, Tag, Share2, BookOpen, Target, TrendingUp, AlertTriangle, CheckCircle, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -73,10 +73,16 @@ const StressTestPricingFramework = () => {
       <GlobalNavigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-10 overflow-hidden">
+      <section className="relative pt-40 pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Back to Blog */}
+            <Link to="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-6">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </Link>
+            
             {/* Categories */}
             <div className="flex flex-wrap gap-2 mb-6">
               {categories.map((category) => (

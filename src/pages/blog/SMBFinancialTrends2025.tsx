@@ -390,7 +390,7 @@ const SMBFinancialTrends2025 = () => {
                     to="/pricing" 
                     className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
-                    Get Your Assessment Now
+                    Start Your BizHealth Assessment
                   </Link>
                 </div>
               </div>

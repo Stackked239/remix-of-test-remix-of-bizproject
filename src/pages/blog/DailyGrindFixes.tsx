@@ -314,7 +314,7 @@ const DailyGrindFixes = () => {
                 href="/portal" 
                 className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
-                Start Your Assessment
+                Start Your BizHealth Assessment
                 <ArrowLeft className="w-4 h-4 rotate-180" />
               </a>
             </div>

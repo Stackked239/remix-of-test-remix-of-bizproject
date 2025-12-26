@@ -245,7 +245,7 @@ const AIBusinessAnalytics = () => {
                       to="/pricing" 
                       className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                     >
-                      Get Your Assessment
+                      Start Your BizHealth Assessment
                     </Link>
                     <Link 
                       to="/how-it-works" 

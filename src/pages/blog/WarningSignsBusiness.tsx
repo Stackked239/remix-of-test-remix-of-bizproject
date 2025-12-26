@@ -179,7 +179,7 @@ const WarningSignsBusiness = () => {
                   to="/how-it-works"
                   className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
                 >
-                  Start Your Assessment
+                  Start Your BizHealth Assessment
                 </Link>
               </div>
             </div>

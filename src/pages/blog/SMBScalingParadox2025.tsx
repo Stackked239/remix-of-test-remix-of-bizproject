@@ -433,7 +433,7 @@ const SMBScalingParadox2025 = () => {
                       to="/pricing"
                       className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg"
                     >
-                      View Pricing Plans
+                      Start Your BizHealth Assessment
                     </Link>
                     <Link 
                       to="/how-it-works"

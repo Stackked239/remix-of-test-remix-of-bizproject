@@ -325,7 +325,7 @@ const HowToCheckYourBusinessHealth = () => {
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all hover:opacity-90"
                   style={{ backgroundColor: 'hsl(var(--biz-green))', color: 'white' }}
                 >
-                  Start Your Assessment
+                  Start Your BizHealth Assessment
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </div>

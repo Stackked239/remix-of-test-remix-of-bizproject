@@ -626,7 +626,7 @@ const FinancialManagement = () => {
                   color: 'white'
                 }}
               >
-                Start Your Assessment
+                Start Your BizHealth Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

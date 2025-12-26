@@ -793,7 +793,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:gap-3"
                   style={{ backgroundColor: 'hsl(var(--biz-green))', color: 'white' }}
                 >
-                  Get Your Business Health Assessment
+                  Start Your BizHealth Assessment
                   <TrendingUp className="w-5 h-5" />
                 </Link>
               </div>

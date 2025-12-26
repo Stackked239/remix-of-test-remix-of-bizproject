@@ -267,7 +267,7 @@ const StrategicPlanning = () => {
                 </p>
                 <Link to="/pricing">
                   <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Start Your Strategic Assessment Now
+                    Start Your BizHealth Assessment
                   </button>
                 </Link>
               </div>

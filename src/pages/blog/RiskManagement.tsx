@@ -533,7 +533,7 @@ const RiskManagement = () => {
                 className="bg-[#969423] hover:bg-[#b8b344] text-white font-bold text-base px-8 py-6 rounded-md hover:-translate-y-0.5 transition-all shadow-lg"
               >
                 <Link to="/pricing" className="inline-flex items-center gap-2">
-                  Get Your Business Health Assessment
+                  Start Your BizHealth Assessment
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

@@ -284,8 +284,184 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "Customer Loyalty Starts With Reliability, Not Delight",
+        excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Customer service, customer retention, customer satisfaction, business growth, customer program, loyalty program strategies for SMBs.",
+        url: "/blog/customer-loyalty-starts-with-reliability",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
+        title: "How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow",
+        excerpt: "Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Value-based pricing, demand elasticity testing, profit optimization.",
+        url: "/blog/stress-test-pricing-framework-margins-cash-flow",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide",
+        excerpt: "Master solo entrepreneur prioritization with this survival guide. Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly.",
+        url: "/blog/how-to-prioritize-operator-survival-guide",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
+        excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Three-cadence framework for weekly, monthly, and quarterly business management.",
+        url: "/blog/chaos-to-clarity-operating-rhythm-scaling-teams",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
+        title: "Small Business Financials: Know Your Numbers, Know Your Business",
+        excerpt: "Master small business financial management. Income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.",
+        url: "/blog/small-business-financials-know-your-numbers",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
+        title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
+        excerpt: "Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling.",
+        url: "/blog/growth-trap-broken-business-model",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'",
+        excerpt: "Transform AI from a productivity hack into a strategic growth partner. 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth.",
+        url: "/blog/grow-your-business-with-ai",
+        icon: FileText,
+        category: "Business Intelligence"
+      },
+      {
+        type: "Blog Post",
+        title: "Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses",
+        excerpt: "Discover how SMBs can overcome BI challenges in 2025. Budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making.",
+        url: "/blog/overcoming-bi-challenges-smb",
+        icon: FileText,
+        category: "Business Intelligence"
+      },
+      {
+        type: "Blog Post",
+        title: "The Hidden Costs of Manual Processes in Today's Smaller Businesses",
+        excerpt: "53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Error rates up to 27% cost businesses $12,000+ annually. Actionable tech adoption strategies.",
+        url: "/blog/hidden-costs-manual-processes",
+        icon: FileText,
+        category: "Technology"
+      },
+      {
+        type: "Blog Post",
+        title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
+        excerpt: "Build a culture of financial stewardship where every employee contributes to cash flow health. 7 proven strategies for SMB financial accountability.",
+        url: "/blog/financial-stewardship-everyones-responsibility",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
+        title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
+        excerpt: "70% of SMBs face cash flow challenges and 60% stall after year three. AI-powered business health diagnostics uncover blind spots and drive sustainable growth.",
+        url: "/blog/small-business-struggles",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",
+        excerpt: "AI-powered business health assessments help SMB leaders identify operational weaknesses, hidden business gaps, and blind spots without consultant fees.",
+        url: "/blog/confirm-business-weaknesses-without-consultants",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "The Business Blind Spots Costing SMB Leaders $50K+ Annually",
+        excerpt: "5 dangerous business blind spots draining SMB profits in 2025. Identify financial, operational, and strategic gaps before they cost you $50K+ annually.",
+        url: "/blog/small-business-blind-spots-2025",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew",
+        excerpt: "Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from the 23.2% that fail within 12 months.",
+        url: "/blog/small-business-survival-checklist-2025",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners",
+        excerpt: "Practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.",
+        url: "/blog/small-business-ai-adoption",
+        icon: FileText,
+        category: "Technology"
+      },
+      {
+        type: "Blog Post",
+        title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
+        excerpt: "60% of SMBs stall post-year 3 due to rapid scaling. Profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges.",
+        url: "/blog/smb-scaling-paradox-2025",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
+        excerpt: "Master cash flow management for small business in 2025. Crisis prevention strategies, cash flow planning tips, and pitfalls affecting 60% of SMBs.",
+        url: "/blog/cash-flow-crisis-management",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
+        title: "The Pitfall of Information Overload: Why General Advice Falls Short",
+        excerpt: "Generic business advice fails SMBs. AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth.",
+        url: "/blog/impact-over-information",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
+        excerpt: "5 proven e-commerce scaling strategies for SMBs. AI personalization, omnichannel sales, mobile optimization & data-driven growth.",
+        url: "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025",
+        icon: FileText,
+        category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "2025 SMB Financial Trends: From Uncertainty to Predictable Growth",
+        excerpt: "SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics, cash flow strategies, and financial automation.",
+        url: "/blog/2025-smb-financial-trends",
+        icon: FileText,
+        category: "Financial Management"
+      },
+      {
+        type: "Blog Post",
+        title: "Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages",
+        excerpt: "Master SMB hiring strategies for 2025 talent shortages. Leadership strategies, retention tips, and AI-powered recruitment to win the talent wars.",
+        url: "/blog/talent-wars-smb-hiring-2025",
+        icon: FileText,
+        category: "Business Leadership"
+      },
+      {
+        type: "Blog Post",
+        title: "People-First Challenges: Solving SMB Workforce Gaps 2025",
+        excerpt: "Actionable SMB growth strategies to solve workforce challenges in 2025. AI business analytics, talent planning tools, and data-driven insights.",
+        url: "/blog/solving-smb-workforce-gaps-2025",
+        icon: FileText,
+        category: "Business Leadership"
+      },
+      {
+        type: "Blog Post",
         title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
-        excerpt: "Discover why proactive 2026 business planning and a clear growth plan are essential for SMBs. Learn practical business planning strategies, 2026 growth prep, and how to align your team around a focused roadmap.",
+        excerpt: "Proactive 2026 business planning and a clear growth plan are essential for SMBs. Business planning strategies, 2026 growth prep, team alignment.",
         url: "/blog/success-begins-with-2026-strategy",
         icon: FileText,
         category: "Business Strategy"
@@ -293,7 +469,7 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses",
-        excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings.",
+        excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Efficiency diagnostics strategies for 15-20% cost savings.",
         url: "/blog/Q4-Cost-Cuts-2025",
         icon: FileText,
         category: "Operations"
@@ -341,7 +517,7 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-        excerpt: "Discover the 7 critical leadership blind spots affecting SMB success. Learn practical strategies to build organizational self-awareness, improve leadership effectiveness, and close the perception gap.",
+        excerpt: "7 critical leadership blind spots affecting SMB success. Practical strategies to build organizational self-awareness and close the perception gap.",
         url: "/blog/identifying-smb-leadership-blind-spots",
         icon: FileText,
         category: "Business Leadership"
@@ -349,7 +525,7 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
-        excerpt: "Discover proven strategies for small businesses to scale operations sustainably. Learn the SCALE framework, avoid growth traps, build operational architecture for controlled expansion.",
+        excerpt: "Proven strategies for small businesses to scale operations sustainably. SCALE framework, avoid growth traps, build operational architecture.",
         url: "/blog/scaling-operations-without-losing-control",
         icon: FileText,
         category: "Operations"
@@ -421,18 +597,10 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "How to Check Your Business Health: A Comprehensive Guide for Small Business Owners",
-        excerpt: "Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy. Check my business health, business health check for SMBs, SMB business health assessment, small business diagnostics.",
+        excerpt: "Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy.",
         url: "/blog/how-to-check-your-business-health",
         icon: FileText,
         category: "Business Strategy"
-      },
-      {
-        type: "Blog Post",
-        title: "Customer Loyalty Starts With Reliability, Not Delight",
-        excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Learn customer service strategies for SMB customer retention, customer satisfaction, business growth, customer program development, and loyalty program best practices.",
-        url: "/blog/customer-loyalty-starts-with-reliability",
-        icon: FileText,
-        category: "Operations"
       }
     ],
     faqs: [

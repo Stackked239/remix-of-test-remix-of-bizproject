@@ -77,7 +77,7 @@ const Blog = () => {
       slug: "/blog/customer-loyalty-starts-with-reliability",
       imageUrl: customerLoyaltyImage,
       altText: "Small business owner providing reliable customer service interaction building customer loyalty and trust in retail environment",
-      keywords: "customer loyalty, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency"
+      keywords: "customer service, customer retention, customer satisfaction, business growth, customer program, customer loyalty, loyalty program, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency"
     },
     {
       title: "How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow",

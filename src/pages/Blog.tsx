@@ -48,6 +48,7 @@ import smallBusinessFinancialsImage from "@/assets/small-business-financials-kno
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-guide.jpg";
 import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
+import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -66,6 +67,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Customer Service: Loyalty Starts With Reliability, Not Delight",
+      excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Learn actionable strategies for SMB customer service excellence and retention.",
+      author: "BizHealth.ai Research Team",
+      date: "December 27, 2025",
+      readTime: "12 min read",
+      category: "Operations, Business Strategy, Business Leadership",
+      slug: "/blog/customer-loyalty-starts-with-reliability",
+      imageUrl: customerLoyaltyImage,
+      altText: "Small business owner providing reliable customer service interaction building customer loyalty and trust in retail environment",
+      keywords: "customer loyalty, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency"
+    },
     {
       title: "How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow",
       excerpt: "Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Learn value-based pricing, demand elasticity testing, and a 90-day implementation plan.",

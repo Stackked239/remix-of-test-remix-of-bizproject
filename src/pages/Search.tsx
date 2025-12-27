@@ -425,6 +425,14 @@ const Search = () => {
         url: "/blog/how-to-check-your-business-health",
         icon: FileText,
         category: "Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "Customer Loyalty Starts With Reliability, Not Delight",
+        excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Learn customer service strategies for SMB customer retention, customer satisfaction, business growth, customer program development, and loyalty program best practices.",
+        url: "/blog/customer-loyalty-starts-with-reliability",
+        icon: FileText,
+        category: "Operations"
       }
     ],
     faqs: [

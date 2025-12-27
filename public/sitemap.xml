@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Updated: 2025-12-27 -->
-<!-- New blog post: customer-loyalty-starts-with-reliability -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bizhealth.ai/</loc>
@@ -179,6 +177,12 @@
   <url>
     <loc>https://bizhealth.ai/blog/confirm-business-weaknesses-without-consultants</loc>
     <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability</loc>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

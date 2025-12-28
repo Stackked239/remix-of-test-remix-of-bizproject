@@ -57,9 +57,10 @@ const BusinessBlindSpotsOperationalIssues = () => {
           
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-4">
-            <Link to="/blog?category=Operations" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">Operations</Link>
+            <Link to="/blog?category=Operations" className="px-3 py-1 bg-biz-green/10 text-biz-green rounded-full text-sm hover:bg-biz-green/20 transition-colors font-medium">Operations</Link>
             <Link to="/blog?category=Business+Strategy" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">Business Strategy</Link>
             <Link to="/blog?category=Business+Leadership" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">Business Leadership</Link>
+            <Link to="/blog?category=Financials" className="px-3 py-1 bg-biz-green/10 text-biz-green rounded-full text-sm hover:bg-biz-green/20 transition-colors font-medium">Financials</Link>
           </div>
           
           {/* Title */}
@@ -152,7 +153,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
               </li>
             </ul>
             
-            <p className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary">
+            <p className="bg-biz-green/10 p-4 rounded-lg border-l-4 border-biz-green">
               This is not a personal failure. It is a structural problem that every growing business faces.
             </p>
             
@@ -384,28 +385,28 @@ const BusinessBlindSpotsOperationalIssues = () => {
             </p>
             
             <div className="space-y-6 my-8">
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h4 className="font-bold text-foreground mb-2">Step 1: Gather Data</h4>
+              <div className="bg-biz-green/5 p-6 rounded-lg border-l-4 border-biz-green">
+                <h4 className="font-bold text-foreground mb-2 flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">1</span> Gather Data</h4>
                 <p className="mb-0">Pull financial statements (P&L, balance sheet, cash flow), operational metrics (customer count, churn, order value, inventory levels), and team data (headcount, turnover, utilization rates).</p>
               </div>
               
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h4 className="font-bold text-foreground mb-2">Step 2: Identify Anomalies</h4>
+              <div className="bg-biz-green/5 p-6 rounded-lg border-l-4 border-biz-green">
+                <h4 className="font-bold text-foreground mb-2 flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">2</span> Identify Anomalies</h4>
                 <p className="mb-0">Look for metrics that seem off or different from what you expected. If churn is 5% per month but you thought it was 2%, that is an anomaly. If a customer segment has 60% gross margin while another has 35%, that is an anomaly.</p>
               </div>
               
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h4 className="font-bold text-foreground mb-2">Step 3: Ask Why</h4>
+              <div className="bg-biz-green/5 p-6 rounded-lg border-l-4 border-biz-green">
+                <h4 className="font-bold text-foreground mb-2 flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">3</span> Ask Why</h4>
                 <p className="mb-0">For each anomaly, dig into the root cause. Why is churn higher than expected? Why is that customer segment less profitable? Do not stop at surface-level answers. Ask "why" until you understand the underlying cause.</p>
               </div>
               
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h4 className="font-bold text-foreground mb-2">Step 4: Quantify the Impact</h4>
+              <div className="bg-biz-green/5 p-6 rounded-lg border-l-4 border-biz-green">
+                <h4 className="font-bold text-foreground mb-2 flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">4</span> Quantify the Impact</h4>
                 <p className="mb-0">Calculate the cost of the blind spot. If your cash conversion cycle is 60 days instead of 30, what is the working capital cost? If one process is manual instead of automated, how much time per week is spent on it, and at what cost?</p>
               </div>
               
-              <div className="bg-primary/5 p-6 rounded-lg">
-                <h4 className="font-bold text-foreground mb-2">Step 5: Prioritize for Impact</h4>
+              <div className="bg-biz-green/5 p-6 rounded-lg border-l-4 border-biz-green">
+                <h4 className="font-bold text-foreground mb-2 flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">5</span> Prioritize for Impact</h4>
                 <p className="mb-0">You cannot fix everything at once. Prioritize the blind spots that have the highest financial impact and are most feasible to fix.</p>
               </div>
             </div>
@@ -459,7 +460,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
               What matters is not whether you have blind spots—you do—but whether you have a systematic process for finding them and addressing them.
             </p>
             
-            <p className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary font-medium">
+            <p className="bg-biz-green/10 p-6 rounded-lg border-l-4 border-biz-green font-medium">
               The leaders who build thriving businesses are not the ones with perfect visibility. They are the ones who acknowledge that blind spots are inevitable and have designed systems to uncover them regularly.
             </p>
             
@@ -477,14 +478,14 @@ const BusinessBlindSpotsOperationalIssues = () => {
             </p>
             
             {/* CTA */}
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-xl my-12 text-center">
-              <h3 className="text-xl font-bold text-foreground mb-4">Ready to Uncover Your Business Blind Spots?</h3>
-              <p className="text-muted-foreground mb-6">
+            <div className="bg-gradient-to-r from-biz-navy to-biz-navy-light p-8 rounded-xl my-12 text-center">
+              <h3 className="text-xl font-bold text-white mb-4">Ready to Uncover Your Business Blind Spots?</h3>
+              <p className="text-white/80 mb-6">
                 Take our comprehensive Business Health Assessment to identify hidden inefficiencies and unlock your growth potential.
               </p>
               <Link 
                 to="/pricing" 
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-biz-green text-white px-6 py-3 rounded-lg font-medium hover:bg-biz-green-light transition-colors"
               >
                 Get Your Business Health Assessment
                 <ArrowLeft className="w-4 h-4 rotate-180" />

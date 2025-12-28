@@ -136,11 +136,11 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
               {steps.map((step, index) => (
                 <Card 
                   key={index}
-                  className="relative overflow-hidden bg-gradient-to-br from-white/10 to-white/5 border-white/10 hover:border-biz-teal/50 hover:from-white/15 hover:to-white/8 transition-all duration-300 group"
+                  className="relative overflow-hidden bg-biz-navy-deep/80 border-biz-teal/20 hover:border-biz-teal/50 transition-all duration-300 group shadow-xl"
                 >
                   {/* Step number badge */}
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-biz-teal/20 flex items-center justify-center">
-                    <span className="text-biz-teal font-montserrat font-bold text-sm">{index + 1}</span>
+                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-biz-teal/30 flex items-center justify-center">
+                    <span className="text-biz-lime font-montserrat font-bold text-sm">{index + 1}</span>
                   </div>
                   
                   <CardContent className="p-5">
@@ -158,7 +158,7 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
                             {step.time}
                           </span>
                         </div>
-                        <p className="font-open-sans text-white/70 text-sm leading-relaxed">
+                        <p className="font-open-sans text-white/80 text-sm leading-relaxed">
                           {step.description}
                         </p>
                       </div>

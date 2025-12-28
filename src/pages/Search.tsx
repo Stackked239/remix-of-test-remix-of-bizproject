@@ -141,6 +141,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "Innovation Strategy Builder - 60-Minute Guided Tool",
+        excerpt: "Build a complete innovation strategy in 60 minutes. Free guided tool with 6-step framework: Foundation, Vision, Opportunities, Portfolio (70-20-10 rule), Metrics, and 90-Day Roadmap. Export professional PDF to share with your leadership team. Innovation strategy, strategic planning, innovation framework, innovation tool, 70-20-10 portfolio, innovation roadmap, SMB innovation, business innovation.",
+        url: "/biztools/toolbox/innovation-strategy-tool",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "404 Error - Page Not Found",
         excerpt: "The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need.",

@@ -78,7 +78,7 @@ const Blog = () => {
       slug: "/blog/business-blind-spots-operational-issues-invisible-leadership",
       imageUrl: businessBlindSpotsOperationalImage,
       altText: "Business owner discovering hidden operational issues and inefficiencies in financial reports - uncovering business blind spots",
-      keywords: "business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025"
+      keywords: "blind spot, blind spots, operations, growth challenges, strategy, business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025"
     },
     {
       title: "Customer Service: Loyalty Starts With Reliability, Not Delight",

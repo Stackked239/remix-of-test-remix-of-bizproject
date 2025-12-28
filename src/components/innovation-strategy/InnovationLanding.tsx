@@ -52,7 +52,7 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
           <div className="mb-12">
             <h1 className="font-montserrat font-bold text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
               Build Your Innovation Strategy
-              <span className="block text-biz-green drop-shadow-[0_0_20px_rgba(134,188,66,0.5)]">in One Focused Hour</span>
+              <span className="block text-biz-green">in One Focused Hour</span>
             </h1>
             <p className="font-open-sans text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
               A guided framework. Proven prompts. A downloadable strategy your team can execute.
@@ -145,12 +145,8 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
                   
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
-                      <div className="relative flex-shrink-0">
-                        {/* Radiating glow effect */}
-                        <div className="absolute inset-0 bg-biz-green/40 rounded-xl blur-lg animate-pulse-soft" />
-                        <div className="relative bg-gradient-to-br from-biz-green/40 to-biz-teal/30 rounded-xl p-3 group-hover:from-biz-green/50 group-hover:to-biz-teal/40 transition-colors shadow-lg shadow-biz-green/20">
-                          <step.icon className="w-6 h-6 text-biz-green" />
-                        </div>
+                      <div className="flex-shrink-0 bg-gradient-to-br from-biz-green/30 to-biz-teal/20 rounded-xl p-3 group-hover:from-biz-green/40 group-hover:to-biz-teal/30 transition-colors">
+                        <step.icon className="w-6 h-6 text-biz-green" />
                       </div>
                       <div className="text-left flex-1">
                         <h3 className="font-montserrat font-bold text-white text-lg mb-1 group-hover:text-biz-lime transition-colors">

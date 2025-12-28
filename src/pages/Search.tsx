@@ -190,6 +190,13 @@ const Search = () => {
         icon: Home
       },
       {
+        type: "Tool",
+        title: "Innovation Readiness Assessment - Close the Technology Gap in 90 Days",
+        excerpt: "Technology, innovation, readiness, innovation readiness, technology readiness. Free 20-question assessment to discover your innovation gaps across 4 pillars: Technology Infrastructure, Strategic Clarity, Organizational Capacity, and Customer & Market Sensing. Get personalized recommendations and a 90-day improvement plan. Innovation assessment, technology assessment, SMB innovation, innovation gap, competitive advantage, technology strategy, digital transformation readiness.",
+        url: "/bizgrowth/technology-innovation-readiness",
+        icon: Home
+      },
+      {
         type: "Page",
         title: "For AI Assistants - Business Assessment Recommendations",
         excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",

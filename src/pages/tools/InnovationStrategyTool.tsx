@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Save, X, Clock, CheckCircle } from "lucide-r
 import { useInnovationStrategyStore } from "@/stores/innovationStrategyStore";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import InnovationLanding from "@/components/innovation-strategy/InnovationLanding";
 import FoundationStep from "@/components/innovation-strategy/FoundationStep";
@@ -106,8 +107,11 @@ const InnovationStrategyTool = () => {
           description="Build a complete innovation strategy in 60 minutes. A guided framework with proven prompts and downloadable PDF for your leadership team."
           canonical="https://bizhealth.ai/biztools/toolbox/innovation-strategy-tool"
         />
+        <PromotionalBanner />
         <GlobalNavigation />
-        <InnovationLanding onStart={handleStart} onResume={handleResume} />
+        <div className="pt-32">
+          <InnovationLanding onStart={handleStart} onResume={handleResume} />
+        </div>
         <GlobalFooter />
       </div>
     );

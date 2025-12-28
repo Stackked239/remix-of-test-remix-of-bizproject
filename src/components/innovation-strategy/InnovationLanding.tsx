@@ -34,9 +34,9 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy-deep">
+    <div className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy-deep">
       {/* Back to Toolbox Link */}
-      <div className="container mx-auto px-4 pt-6">
+      <div className="container mx-auto px-4 pt-4">
         <Link 
           to="/biztools/toolbox" 
           className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-open-sans text-sm"
@@ -46,7 +46,7 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
         </Link>
       </div>
       
-      <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Hero Section */}
           <div className="mb-12">

@@ -284,6 +284,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap",
+        excerpt: "Innovation gap, technology innovation, competitive advantage, SMB technology, business intelligence, risk management. Discover the 4 pillars of innovation competency and close the gap in 90 days with our proven framework.",
+        url: "/blog/technology-innovation-gap-competitive-advantage",
+        icon: FileText,
+        category: "Technology, Business Intelligence, Risk Management"
+      },
+      {
+        type: "Blog Post",
         title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
         excerpt: "Blind spot, blind spots, operations, growth challenges, strategy. Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually: cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks. SMB operational audit, business visibility problem, leadership visibility.",
         url: "/blog/business-blind-spots-operational-issues-invisible-leadership",

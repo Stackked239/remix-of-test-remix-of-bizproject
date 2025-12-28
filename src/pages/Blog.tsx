@@ -50,6 +50,7 @@ import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-g
 import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
 import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
 import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
+import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -68,6 +69,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap",
+      excerpt: "Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days.",
+      author: "BizHealth.ai Research Team",
+      date: "December 28, 2025",
+      readTime: "17 min read",
+      category: "Technology, Business Intelligence, Risk Management",
+      slug: "/blog/technology-innovation-gap-competitive-advantage",
+      imageUrl: technologyInnovationGapImage,
+      altText: "Small business team working with outdated technology infrastructure showing innovation gap challenges in 2025",
+      keywords: "innovation gap, technology innovation, competitive advantage, SMB technology, business intelligence, risk management, innovation strategy, technology infrastructure, small business innovation 2025"
+    },
     {
       title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
       excerpt: "Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually and the systematic approach to find them.",

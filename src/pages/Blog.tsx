@@ -71,10 +71,10 @@ const Blog = () => {
     {
       title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
       excerpt: "Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually and the systematic approach to find them.",
-      author: "BizHealth.ai Strategic Insights",
+      author: "BizHealth.ai Research Team",
       date: "December 28, 2025",
       readTime: "16 min read",
-      category: "Operations, Business Strategy, Business Leadership",
+      category: "Operations, Business Strategy, Business Leadership, Financials",
       slug: "/blog/business-blind-spots-operational-issues-invisible-leadership",
       imageUrl: businessBlindSpotsOperationalImage,
       altText: "Business owner discovering hidden operational issues and inefficiencies in financial reports - uncovering business blind spots",

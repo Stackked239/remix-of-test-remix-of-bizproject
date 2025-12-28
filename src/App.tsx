@@ -75,6 +75,7 @@ import ChaosToClarity from "./pages/blog/ChaosToClarity";
 import HowToPrioritizeOperatorSurvivalGuide from "./pages/blog/HowToPrioritizeOperatorSurvivalGuide";
 import StressTestPricingFramework from "./pages/blog/StressTestPricingFramework";
 import CustomerLoyaltyReliability from "./pages/blog/CustomerLoyaltyReliability";
+import BusinessBlindSpotsOperationalIssues from "./pages/blog/BusinessBlindSpotsOperationalIssues";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -184,6 +185,7 @@ const App = () => (
             <Route path="/blog/how-to-prioritize-operator-survival-guide" element={<HowToPrioritizeOperatorSurvivalGuide />} />
             <Route path="/blog/stress-test-pricing-framework-margins-cash-flow" element={<StressTestPricingFramework />} />
             <Route path="/blog/customer-loyalty-starts-with-reliability" element={<CustomerLoyaltyReliability />} />
+            <Route path="/blog/business-blind-spots-operational-issues-invisible-leadership" element={<BusinessBlindSpotsOperationalIssues />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

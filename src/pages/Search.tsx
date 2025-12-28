@@ -284,6 +284,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
+        excerpt: "Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually: cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks. SMB operational audit, business visibility problem, leadership visibility.",
+        url: "/blog/business-blind-spots-operational-issues-invisible-leadership",
+        icon: FileText,
+        category: "Operations"
+      },
+      {
+        type: "Blog Post",
         title: "Customer Loyalty Starts With Reliability, Not Delight",
         excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Customer service, customer retention, customer satisfaction, business growth, customer program, loyalty program strategies for SMBs.",
         url: "/blog/customer-loyalty-starts-with-reliability",

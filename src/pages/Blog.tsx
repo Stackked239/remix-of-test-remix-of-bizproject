@@ -49,6 +49,7 @@ import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams
 import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-guide.jpg";
 import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
 import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
+import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -67,6 +68,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
+      excerpt: "Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually and the systematic approach to find them.",
+      author: "BizHealth.ai Strategic Insights",
+      date: "December 28, 2025",
+      readTime: "16 min read",
+      category: "Operations, Business Strategy, Business Leadership",
+      slug: "/blog/business-blind-spots-operational-issues-invisible-leadership",
+      imageUrl: businessBlindSpotsOperationalImage,
+      altText: "Business owner discovering hidden operational issues and inefficiencies in financial reports - uncovering business blind spots",
+      keywords: "business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025"
+    },
     {
       title: "Customer Service: Loyalty Starts With Reliability, Not Delight",
       excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Learn actionable strategies for SMB customer service excellence and retention.",

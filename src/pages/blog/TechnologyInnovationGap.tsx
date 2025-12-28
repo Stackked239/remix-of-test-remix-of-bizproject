@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Calendar, User, Share2, Linkedin, Twitter, BarChart3, Target, Zap, Users, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Building2, LineChart } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
+import bizHealthLogo from "@/assets/bizhealth-logo-main.jpg";
 
 const TechnologyInnovationGap = () => {
   const handleShare = (platform: string) => {
@@ -44,6 +46,7 @@ const TechnologyInnovationGap = () => {
         url="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
       />
       
+      <PromotionalBanner />
       <GlobalNavigation />
       
       <main className="pt-32 pb-16">
@@ -520,7 +523,7 @@ const TechnologyInnovationGap = () => {
                   </Button>
                 </Link>
                 <Link to="/blog/technology">
-                  <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Button variant="outline" className="border-white/50 text-white bg-white/10 hover:bg-white/20">
                     More Technology Insights
                   </Button>
                 </Link>
@@ -530,9 +533,11 @@ const TechnologyInnovationGap = () => {
             {/* Author Bio */}
             <div className="mt-12 p-6 bg-muted/30 rounded-xl border border-border">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-biz-navy rounded-full flex items-center justify-center flex-shrink-0">
-                  <User className="w-8 h-8 text-white" />
-                </div>
+                <img 
+                  src={bizHealthLogo} 
+                  alt="BizHealth.ai logo" 
+                  className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                />
                 <div>
                   <h4 className="font-semibold text-biz-navy mb-1">BizHealth.ai Research Team</h4>
                   <p className="text-sm text-muted-foreground">

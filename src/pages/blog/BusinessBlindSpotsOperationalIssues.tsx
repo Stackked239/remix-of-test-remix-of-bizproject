@@ -499,7 +499,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
               <div>
                 <h4 className="font-bold text-foreground">BizHealth.ai Research Team</h4>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Our research team analyzes patterns across hundreds of SMBs to identify the operational challenges that impact business health. We combine data-driven insights with practical frameworks to help leaders make better decisions.
+                  Our research team analyzes patterns across hundreds of small & mid-size businesses to identify the operational challenges that impact business health. We combine data-driven insights with practical frameworks to help leaders make better decisions.
                 </p>
               </div>
             </div>

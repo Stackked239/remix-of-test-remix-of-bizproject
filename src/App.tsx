@@ -99,6 +99,7 @@ import BizLeaderBot from "./pages/BizLeaderBot";
 import BizGuideSherpa from "./pages/BizGuideSherpa";
 import Sherpas from "./pages/Sherpas";
 import LandscapingPlaybook from "./pages/playbooks/LandscapingPlaybook";
+import TechnologyInnovationReadiness from "./pages/bizgrowth/TechnologyInnovationReadiness";
 
 
 const queryClient = new QueryClient();
@@ -139,6 +140,7 @@ const App = () => (
             <Route path="/bizgrowth" element={<BizGrowth />} />
             <Route path="/bizgrowth/launch" element={<BizGrowthLaunch />} />
             <Route path="/bizgrowth/launch/step-2-fix-cash-squeeze" element={<BizGrowthLaunchStep2 />} />
+            <Route path="/bizgrowth/technology-innovation-readiness" element={<TechnologyInnovationReadiness />} />
             <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
             <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
             <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

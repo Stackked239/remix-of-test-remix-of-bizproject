@@ -288,7 +288,7 @@ const Search = () => {
         excerpt: "Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually: cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks. SMB operational audit, business visibility problem, leadership visibility.",
         url: "/blog/business-blind-spots-operational-issues-invisible-leadership",
         icon: FileText,
-        category: "Operations"
+        category: "Operations, Financials"
       },
       {
         type: "Blog Post",

@@ -24,14 +24,14 @@ const BusinessBlindSpotsOperationalIssues = () => {
         ogImage="https://bizhealth.ai/og-business-blind-spots.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
-        articleAuthor="BizHealth.ai Strategic Insights"
+        articleAuthor="BizHealth.ai Research Team"
       />
       
       <StructuredData
         type="article"
         headline="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
         description="Research reveals leaders have visibility into only 4% of operational issues. Learn the 6 blind spots costing SMBs $50K+ annually and systematic strategies to uncover hidden inefficiencies."
-        author="BizHealth.ai Strategic Insights"
+        author="BizHealth.ai Research Team"
         datePublished={publishDate}
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-business-blind-spots.jpg"
@@ -71,7 +71,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
           <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
             <div className="flex items-center gap-2">
               <img src={authorIcon} alt="BizHealth.ai author" className="w-8 h-8 rounded-full" loading="lazy" width="32" height="32" />
-              <span>BizHealth.ai Strategic Insights</span>
+              <span>BizHealth.ai Research Team</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -497,7 +497,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
             <div className="flex items-start gap-4">
               <img src={authorIcon} alt="BizHealth.ai Strategic Insights team" className="w-16 h-16 rounded-full" loading="lazy" width="64" height="64" />
               <div>
-                <h4 className="font-bold text-foreground">BizHealth.ai Strategic Insights</h4>
+                <h4 className="font-bold text-foreground">BizHealth.ai Research Team</h4>
                 <p className="text-sm text-muted-foreground mt-1">
                   Our research team analyzes patterns across hundreds of SMBs to identify the operational challenges that impact business health. We combine data-driven insights with practical frameworks to help leaders make better decisions.
                 </p>

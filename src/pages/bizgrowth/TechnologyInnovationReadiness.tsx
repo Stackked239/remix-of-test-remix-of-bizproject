@@ -143,11 +143,7 @@ const TechnologyInnovationReadiness = () => {
                 (And How to Close It in 90 Days)
               </p>
               
-              <p className="font-open-sans text-white/60 mb-8">
-                By BizHealth.ai Strategic Insights
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <Button 
                   onClick={scrollToAssessment}
                   className="bg-biz-citrine hover:bg-biz-citrine/90 text-biz-navy font-semibold text-lg px-8 py-6"

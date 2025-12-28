@@ -1,0 +1,182 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { 
+  Lightbulb, 
+  Target, 
+  TrendingUp, 
+  Clock, 
+  CheckCircle,
+  Play,
+  RotateCcw,
+  FileText
+} from "lucide-react";
+import { useInnovationStrategyStore } from "@/stores/innovationStrategyStore";
+import { formatDistanceToNow } from "date-fns";
+
+interface InnovationLandingProps {
+  onStart: () => void;
+  onResume: () => void;
+}
+
+const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
+  const { sessionId, lastSaved, currentStep, getCompletionPercentage, clearSession } = useInnovationStrategyStore();
+  const hasSavedSession = sessionId && currentStep > 0;
+
+  const steps = [
+    { icon: Target, title: "Foundation", time: "8-10 min", description: "Company context & primary challenges" },
+    { icon: Lightbulb, title: "Vision", time: "12-15 min", description: "Strategic intent & differentiation" },
+    { icon: TrendingUp, title: "Opportunities", time: "15-18 min", description: "Identify 3-5 innovation opportunities" },
+    { icon: FileText, title: "Portfolio", time: "10-12 min", description: "Prioritize using 70-20-10 framework" },
+    { icon: CheckCircle, title: "Metrics", time: "8-10 min", description: "Define success measurements" },
+    { icon: Clock, title: "Roadmap", time: "5-8 min", description: "Create 90-day action plan" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy-deep">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Hero Section */}
+          <div className="mb-12">
+            <h1 className="font-montserrat font-bold text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              Build Your Innovation Strategy
+              <span className="block text-biz-lime">in One Focused Hour</span>
+            </h1>
+            <p className="font-open-sans text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              A guided framework. Proven prompts. A downloadable strategy your team can execute.
+            </p>
+            
+            {/* Time indicator */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
+              <Clock className="w-5 h-5 text-biz-lime" />
+              <span className="text-white font-open-sans">Total time: ~60 minutes</span>
+            </div>
+          </div>
+
+          {/* Resume Card (if saved session exists) */}
+          {hasSavedSession && (
+            <Card className="mb-8 border-biz-lime/30 bg-white/10 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="text-left">
+                    <h3 className="font-montserrat font-semibold text-lg text-white mb-1">
+                      Resume Your Strategy
+                    </h3>
+                    <p className="font-open-sans text-white/70 text-sm">
+                      Last saved {lastSaved ? formatDistanceToNow(new Date(lastSaved), { addSuffix: true }) : 'recently'} • 
+                      {getCompletionPercentage()}% complete
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Button
+                      onClick={onResume}
+                      className="bg-biz-lime hover:bg-biz-lime/90 text-biz-navy font-montserrat font-semibold"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Resume
+                    </Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => {
+                        if (confirm('Are you sure you want to start over? This will clear your saved progress.')) {
+                          clearSession();
+                        }
+                      }}
+                      className="border-white/30 text-white hover:bg-white/10"
+                    >
+                      <RotateCcw className="w-4 h-4 mr-2" />
+                      Start Fresh
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* CTA Button */}
+          {!hasSavedSession && (
+            <Button
+              onClick={onStart}
+              size="lg"
+              className="bg-biz-lime hover:bg-biz-lime/90 text-biz-navy font-montserrat font-bold text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-12"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Start Building
+            </Button>
+          )}
+
+          {/* 6-Step Overview */}
+          <div className="mt-12">
+            <h2 className="font-montserrat font-semibold text-2xl text-white mb-8">
+              Your 6-Step Journey
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {steps.map((step, index) => (
+                <Card 
+                  key={index}
+                  className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 bg-biz-lime/20 rounded-lg p-2.5 group-hover:bg-biz-lime/30 transition-colors">
+                        <step.icon className="w-5 h-5 text-biz-lime" />
+                      </div>
+                      <div className="text-left">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-biz-lime font-montserrat font-bold text-sm">
+                            Step {index + 1}
+                          </span>
+                          <span className="text-white/50 text-xs font-open-sans">
+                            {step.time}
+                          </span>
+                        </div>
+                        <h3 className="font-montserrat font-semibold text-white mb-1">
+                          {step.title}
+                        </h3>
+                        <p className="font-open-sans text-white/60 text-sm">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Why Innovation Strategy Matters */}
+          <div className="mt-16">
+            <Card className="bg-white/5 border-white/10">
+              <CardContent className="p-8">
+                <h3 className="font-montserrat font-semibold text-xl text-white mb-4">
+                  Why Innovation Strategy Matters
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6 text-left">
+                  <div>
+                    <p className="text-biz-lime font-montserrat font-bold text-2xl mb-2">70%</p>
+                    <p className="font-open-sans text-white/70 text-sm">
+                      of SMBs without an innovation strategy fail to grow beyond their current revenue
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-biz-lime font-montserrat font-bold text-2xl mb-2">3.2x</p>
+                    <p className="font-open-sans text-white/70 text-sm">
+                      higher growth rate for companies with documented innovation strategies
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-biz-lime font-montserrat font-bold text-2xl mb-2">90 Days</p>
+                    <p className="font-open-sans text-white/70 text-sm">
+                      is all you need to see meaningful results from your innovation efforts
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InnovationLanding;

@@ -90,6 +90,7 @@ import ProcessMappingTools from "./pages/tools/ProcessMappingTools";
 import ProcessMappingGuide from "./pages/tools/ProcessMappingGuide";
 import SWOTAnalysisTool from "./pages/tools/SWOTAnalysisTool";
 import CustomerJourneyMapsTool from "./pages/tools/CustomerJourneyMapsTool";
+import InnovationStrategyTool from "./pages/tools/InnovationStrategyTool";
 
 import Search from "./pages/Search";
 import ForAIAssistants from "./pages/ForAIAssistants";
@@ -204,6 +205,7 @@ const App = () => (
             <Route path="/biztools/toolbox/process-mapping-tools/guide" element={<ProcessMappingGuide />} />
             <Route path="/biztools/toolbox/swot-analysis-tool" element={<SWOTAnalysisTool />} />
             <Route path="/biztools/toolbox/customer-journey-maps-tool" element={<CustomerJourneyMapsTool />} />
+            <Route path="/biztools/toolbox/innovation-strategy-tool" element={<InnovationStrategyTool />} />
             <Route path="/search" element={<Search />} />
             <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
             <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />

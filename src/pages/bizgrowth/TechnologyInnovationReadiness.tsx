@@ -107,16 +107,17 @@ const TechnologyInnovationReadiness = () => {
       
       <StructuredData 
         type="article"
-        data={{
-          headline: "The Innovation Gap That's Destroying Competitive Advantage",
-          description: "Comprehensive guide to understanding and closing the innovation gap in SMB businesses with interactive assessment tool",
-          image: "https://bizhealth.ai/og-innovation-readiness.jpg",
-          author: "BizHealth.ai Strategic Insights",
-          publisher: "BizHealth.ai",
-          datePublished: "2025-12-01",
-          dateModified: "2025-12-28"
-        }}
-        faqData={faqData}
+        headline="The Innovation Gap That's Destroying Competitive Advantage"
+        description="Comprehensive guide to understanding and closing the innovation gap in SMB businesses with interactive assessment tool"
+        image="https://bizhealth.ai/og-innovation-readiness.jpg"
+        author="BizHealth.ai Strategic Insights"
+        datePublished="2025-12-01"
+        dateModified="2025-12-28"
+        url="https://bizhealth.ai/bizgrowth/technology-innovation-readiness"
+      />
+      <StructuredData 
+        type="faq"
+        questions={faqData}
       />
 
       <PromotionalBanner />

@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
-import bizHealthLogo from "@/assets/bizhealth-logo-main.jpg";
+import bizHealthAuthorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const TechnologyInnovationGap = () => {
   const handleShare = (platform: string) => {
@@ -49,7 +49,7 @@ const TechnologyInnovationGap = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="pt-32 pb-16">
+      <main className="pt-40 pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -534,7 +534,7 @@ const TechnologyInnovationGap = () => {
             <div className="mt-12 p-6 bg-muted/30 rounded-xl border border-border">
               <div className="flex items-start gap-4">
                 <img 
-                  src={bizHealthLogo} 
+                  src={bizHealthAuthorIcon} 
                   alt="BizHealth.ai logo" 
                   className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
                 />

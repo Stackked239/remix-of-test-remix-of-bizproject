@@ -119,38 +119,54 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
 
           {/* 6-Step Overview */}
           <div className="mt-12">
-            <h2 className="font-montserrat font-semibold text-2xl text-white mb-8">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="h-1 w-12 bg-biz-lime rounded-full" />
+              <span className="text-biz-teal font-montserrat font-semibold text-sm uppercase tracking-wider">
+                The Framework
+              </span>
+              <div className="h-1 w-12 bg-biz-lime rounded-full" />
+            </div>
+            <h2 className="font-montserrat font-bold text-2xl md:text-3xl text-white mb-3">
               Your 6-Step Journey
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <p className="font-open-sans text-white/60 mb-8 max-w-xl mx-auto">
+              Follow our proven framework to build a comprehensive innovation strategy
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {steps.map((step, index) => (
                 <Card 
                   key={index}
-                  className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                  className="relative overflow-hidden bg-gradient-to-br from-white/10 to-white/5 border-white/10 hover:border-biz-teal/50 hover:from-white/15 hover:to-white/8 transition-all duration-300 group"
                 >
+                  {/* Step number badge */}
+                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-biz-teal/20 flex items-center justify-center">
+                    <span className="text-biz-teal font-montserrat font-bold text-sm">{index + 1}</span>
+                  </div>
+                  
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 bg-biz-lime/20 rounded-lg p-2.5 group-hover:bg-biz-lime/30 transition-colors">
-                        <step.icon className="w-5 h-5 text-biz-lime" />
+                      <div className="flex-shrink-0 bg-gradient-to-br from-biz-lime/30 to-biz-teal/20 rounded-xl p-3 group-hover:from-biz-lime/40 group-hover:to-biz-teal/30 transition-colors shadow-lg shadow-biz-lime/10">
+                        <step.icon className="w-6 h-6 text-biz-lime" />
                       </div>
-                      <div className="text-left">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-biz-lime font-montserrat font-bold text-sm">
-                            Step {index + 1}
-                          </span>
-                          <span className="text-white/50 text-xs font-open-sans">
+                      <div className="text-left flex-1">
+                        <h3 className="font-montserrat font-bold text-white text-lg mb-1 group-hover:text-biz-lime transition-colors">
+                          {step.title}
+                        </h3>
+                        <div className="inline-flex items-center gap-1.5 mb-2">
+                          <Clock className="w-3 h-3 text-biz-teal" />
+                          <span className="text-biz-teal font-open-sans text-xs font-medium">
                             {step.time}
                           </span>
                         </div>
-                        <h3 className="font-montserrat font-semibold text-white mb-1">
-                          {step.title}
-                        </h3>
-                        <p className="font-open-sans text-white/60 text-sm">
+                        <p className="font-open-sans text-white/70 text-sm leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                     </div>
                   </CardContent>
+                  
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-biz-lime via-biz-teal to-biz-lime opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Card>
               ))}
             </div>

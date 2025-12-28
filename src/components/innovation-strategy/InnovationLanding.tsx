@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -8,7 +9,8 @@ import {
   CheckCircle,
   Play,
   RotateCcw,
-  FileText
+  FileText,
+  ArrowLeft
 } from "lucide-react";
 import { useInnovationStrategyStore } from "@/stores/innovationStrategyStore";
 import { formatDistanceToNow } from "date-fns";
@@ -33,7 +35,18 @@ const InnovationLanding = ({ onStart, onResume }: InnovationLandingProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy-deep">
-      <div className="container mx-auto px-4 py-12 md:py-20">
+      {/* Back to Toolbox Link */}
+      <div className="container mx-auto px-4 pt-6">
+        <Link 
+          to="/biztools/toolbox" 
+          className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-open-sans text-sm"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to BizTools Toolbox
+        </Link>
+      </div>
+      
+      <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Hero Section */}
           <div className="mb-12">

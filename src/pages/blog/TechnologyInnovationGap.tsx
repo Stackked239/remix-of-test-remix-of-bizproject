@@ -46,7 +46,7 @@ const TechnologyInnovationGap = () => {
       
       <GlobalNavigation />
       
-      <main className="pt-24 pb-16">
+      <main className="pt-32 pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">

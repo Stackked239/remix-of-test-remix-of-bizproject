@@ -290,7 +290,7 @@ export const FinancialHealthAssessment = () => {
               <Button 
                 variant="outline"
                 onClick={handleRestart}
-                className="border-white/30 text-white hover:bg-white/10"
+                className="border-biz-citrine/50 text-biz-citrine hover:bg-biz-citrine/10 hover:border-biz-citrine"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 Retake Assessment

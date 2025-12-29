@@ -539,13 +539,22 @@ const FinancialHealthCheck = () => {
         </section>
 
         {/* SECTION 4: Interactive Assessment */}
-        <section id="assessment" className="py-16 lg:py-24 bg-gradient-to-b from-biz-blue-faint/60 to-background">
-          <div className="container mx-auto px-4">
+        <section id="assessment" className="py-16 lg:py-24 bg-gradient-to-b from-biz-navy via-biz-navy/95 to-biz-navy/90 relative overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-10 left-10 w-64 h-64 bg-biz-citrine/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-biz-green/10 rounded-full blur-3xl" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
+              <span className="inline-block bg-biz-citrine/20 text-biz-citrine font-montserrat font-semibold text-sm px-4 py-2 rounded-full mb-4">
+                FREE ASSESSMENT
+              </span>
+              <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-white mb-4">
                 Your Free Financial Health Check
               </h2>
-              <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="font-open-sans text-lg text-white/80 max-w-2xl mx-auto">
                 Answer 5 quick questions about your business finances. Takes about 5 minutes, delivers instant insights.
               </p>
             </div>
@@ -555,17 +564,17 @@ const FinancialHealthCheck = () => {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm font-open-sans text-muted-foreground">
-              <span className="flex items-center gap-2">
+            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm font-open-sans">
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/90">
                 <Shield className="w-4 h-4 text-biz-green" />
                 Your answers are private and never shared
               </span>
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/90">
                 <Zap className="w-4 h-4 text-biz-citrine" />
                 Instant results—no waiting
               </span>
-              <span className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-biz-navy" />
+              <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/90">
+                <Mail className="w-4 h-4 text-biz-citrine" />
                 Optional: Get a deeper breakdown via email
               </span>
             </div>

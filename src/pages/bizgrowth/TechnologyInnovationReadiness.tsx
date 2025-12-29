@@ -123,7 +123,7 @@ const TechnologyInnovationReadiness = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-32 pb-16">
+      <main className="pt-20 pb-16">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy-deep to-biz-navy overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-10 bg-cover bg-center" />

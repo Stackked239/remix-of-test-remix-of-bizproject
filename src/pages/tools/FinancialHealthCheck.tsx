@@ -321,7 +321,7 @@ const FinancialHealthCheck = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="min-h-screen pt-16">
+      <main className="min-h-screen pt-24">
         {/* SECTION 1: Hero Section */}
         <section className="relative bg-gradient-to-b from-background via-background to-biz-blue-faint min-h-[90vh] flex items-center">
           <div className="container mx-auto px-4 py-12 lg:py-20">
@@ -449,7 +449,7 @@ const FinancialHealthCheck = () => {
         </section>
 
         {/* SECTION 2: Pain Points */}
-        <section className="py-16 lg:py-24 bg-biz-warm">
+        <section className="py-16 lg:py-24 bg-biz-warm/80">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
@@ -529,8 +529,7 @@ const FinancialHealthCheck = () => {
               </p>
               <Button 
                 onClick={scrollToAssessment}
-                variant="outline"
-                className="border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white font-montserrat font-semibold"
+                className="bg-biz-citrine hover:bg-biz-citrine/90 text-biz-navy font-montserrat font-semibold shadow-hub-citrine"
               >
                 Start the FREE Assessment
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -540,7 +539,7 @@ const FinancialHealthCheck = () => {
         </section>
 
         {/* SECTION 4: Interactive Assessment */}
-        <section id="assessment" className="py-16 lg:py-24 bg-gradient-to-b from-biz-blue-faint to-background">
+        <section id="assessment" className="py-16 lg:py-24 bg-gradient-to-b from-biz-blue-faint/60 to-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
@@ -630,8 +629,8 @@ const FinancialHealthCheck = () => {
                 <Card className="bg-biz-navy text-white shadow-elegant overflow-hidden">
                   <CardContent className="p-8">
                     <div className="text-center space-y-6">
-                      <div className="w-20 h-20 rounded-full bg-biz-green/20 flex items-center justify-center mx-auto">
-                        <TrendingUp className="w-10 h-10 text-biz-green" />
+                      <div className="w-20 h-20 rounded-full bg-biz-citrine flex items-center justify-center mx-auto">
+                        <TrendingUp className="w-10 h-10 text-biz-navy" />
                       </div>
                       <div>
                         <p className="font-montserrat font-bold text-4xl text-biz-citrine">$40K</p>

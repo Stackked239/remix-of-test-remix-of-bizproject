@@ -154,7 +154,7 @@ const TechnologyInnovationReadiness = () => {
                 <Button 
                   variant="outline"
                   onClick={scrollToArticle}
-                  className="border-white/50 text-white bg-white/10 hover:bg-white/20 text-lg px-8 py-6"
+                  className="border-white/50 text-white bg-white/10 hover:bg-biz-navy hover:text-white hover:border-biz-citrine text-lg px-8 py-6"
                 >
                   Read the Full Analysis
                 </Button>

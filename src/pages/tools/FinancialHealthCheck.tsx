@@ -321,7 +321,7 @@ const FinancialHealthCheck = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="min-h-screen">
+      <main className="min-h-screen pt-16">
         {/* SECTION 1: Hero Section */}
         <section className="relative bg-gradient-to-b from-background via-background to-biz-blue-faint min-h-[90vh] flex items-center">
           <div className="container mx-auto px-4 py-12 lg:py-20">
@@ -379,7 +379,7 @@ const FinancialHealthCheck = () => {
                     onClick={scrollToAssessment}
                     className="bg-biz-citrine hover:bg-biz-citrine/90 text-biz-navy font-montserrat font-bold text-lg px-8 py-6 h-auto shadow-hub-citrine"
                   >
-                    Check My Financial Health
+                    Check My Business Financial Health
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                   
@@ -459,15 +459,15 @@ const FinancialHealthCheck = () => {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {painPoints.map((point, index) => (
-                <Card key={index} className="bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border/50">
+                <Card key={index} className="bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-biz-citrine/50 group cursor-pointer">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-full bg-biz-citrine/10 flex items-center justify-center mb-4">
-                      <point.icon className="w-6 h-6 text-biz-citrine" />
+                    <div className="w-12 h-12 rounded-full bg-biz-citrine/10 group-hover:bg-biz-citrine/20 group-hover:scale-110 flex items-center justify-center mb-4 transition-all duration-300">
+                      <point.icon className="w-6 h-6 text-biz-citrine group-hover:text-biz-navy transition-colors duration-300" />
                     </div>
-                    <h3 className="font-montserrat font-semibold text-lg text-foreground mb-2">
+                    <h3 className="font-montserrat font-semibold text-lg text-foreground mb-2 group-hover:text-biz-navy transition-colors duration-300">
                       {point.title}
                     </h3>
-                    <p className="font-open-sans text-sm text-muted-foreground">
+                    <p className="font-open-sans text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       {point.description}
                     </p>
                   </CardContent>
@@ -532,7 +532,7 @@ const FinancialHealthCheck = () => {
                 variant="outline"
                 className="border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white font-montserrat font-semibold"
               >
-                Start the Assessment
+                Start the FREE Assessment
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -619,7 +619,7 @@ const FinancialHealthCheck = () => {
 
                 <Button asChild variant="outline" className="border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white font-montserrat font-semibold">
                   <Link to="/pricing">
-                    Explore the Full Assessment
+                    Explore the Full Business Assessment
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>

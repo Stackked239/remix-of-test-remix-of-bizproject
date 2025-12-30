@@ -924,9 +924,26 @@ const BusinessHealthScoresByStage = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <RelatedArticles
-              currentSlug="/blog/business-health-scores-by-stage"
-              category="Business Strategy"
-              tags={["business health", "growth stages", "business assessment", "SMB strategy"]}
+              articles={[
+                {
+                  title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have",
+                  slug: "/blog/fractional-cfo-toolkit",
+                  category: "Financial Management",
+                  excerpt: "Build CFO-level visibility with 7 essential financial dashboards for cash flow, P&L, and strategic metrics tracking."
+                },
+                {
+                  title: "The Complete Guide to Business Health Assessment for 2026",
+                  slug: "/blog/complete-guide-business-health-assessment-2026",
+                  category: "Strategy",
+                  excerpt: "Discover how to conduct a comprehensive business health assessment for 2026 to maximize growth."
+                },
+                {
+                  title: "Small Business Financials: Know Your Numbers, Know Your Business",
+                  slug: "/blog/small-business-financials-know-your-numbers",
+                  category: "Financial Management",
+                  excerpt: "Master small business financial management with this comprehensive guide to key metrics."
+                }
+              ]}
             />
           </div>
         </div>

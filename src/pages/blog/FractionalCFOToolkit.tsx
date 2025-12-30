@@ -540,8 +540,26 @@ const FractionalCFOToolkit = () => {
 
       {/* Related Articles */}
       <RelatedArticles 
-        currentSlug="/blog/fractional-cfo-toolkit"
-        category="Financials"
+        articles={[
+          {
+            title: "Financial Health Metrics Every Business Owner Should Track",
+            slug: "financial-health-metrics",
+            category: "Financial Management",
+            excerpt: "Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking."
+          },
+          {
+            title: "SMB Cash Flow Hacks: 10 Strategies to Boost Liquidity in 2025",
+            slug: "smb-cash-flow-hacks-2025",
+            category: "Financial Management",
+            excerpt: "Discover 10 proven cash flow strategies to boost liquidity and financial resilience for your small business."
+          },
+          {
+            title: "Small Business Financials: Know Your Numbers, Know Your Business",
+            slug: "small-business-financials-know-your-numbers",
+            category: "Financial Management",
+            excerpt: "Master small business financial management with this comprehensive guide to income statements, balance sheets, and key metrics."
+          }
+        ]}
       />
 
       <PromotionalBanner />

@@ -77,6 +77,7 @@ import StressTestPricingFramework from "./pages/blog/StressTestPricingFramework"
 import CustomerLoyaltyReliability from "./pages/blog/CustomerLoyaltyReliability";
 import BusinessBlindSpotsOperationalIssues from "./pages/blog/BusinessBlindSpotsOperationalIssues";
 import TechnologyInnovationGap from "./pages/blog/TechnologyInnovationGap";
+import FractionalCFOToolkit from "./pages/blog/FractionalCFOToolkit";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -192,6 +193,7 @@ const App = () => (
             <Route path="/blog/customer-loyalty-starts-with-reliability" element={<CustomerLoyaltyReliability />} />
             <Route path="/blog/business-blind-spots-operational-issues-invisible-leadership" element={<BusinessBlindSpotsOperationalIssues />} />
             <Route path="/blog/technology-innovation-gap-competitive-advantage" element={<TechnologyInnovationGap />} />
+            <Route path="/blog/fractional-cfo-toolkit" element={<FractionalCFOToolkit />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

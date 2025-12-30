@@ -256,7 +256,7 @@ const BusinessHealthScoresByStage = () => {
       
       <GlobalNavigation />
       
-      <article className="pt-32 pb-16">
+      <article className="pt-40 pb-16">
         {/* Back to Blog Link */}
         <div className="container mx-auto px-4 mb-6">
           <Link 

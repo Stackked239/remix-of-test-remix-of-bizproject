@@ -78,6 +78,7 @@ import CustomerLoyaltyReliability from "./pages/blog/CustomerLoyaltyReliability"
 import BusinessBlindSpotsOperationalIssues from "./pages/blog/BusinessBlindSpotsOperationalIssues";
 import TechnologyInnovationGap from "./pages/blog/TechnologyInnovationGap";
 import FractionalCFOToolkit from "./pages/blog/FractionalCFOToolkit";
+import BusinessHealthScoresByStage from "./pages/blog/BusinessHealthScoresByStage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
@@ -194,6 +195,7 @@ const App = () => (
             <Route path="/blog/business-blind-spots-operational-issues-invisible-leadership" element={<BusinessBlindSpotsOperationalIssues />} />
             <Route path="/blog/technology-innovation-gap-competitive-advantage" element={<TechnologyInnovationGap />} />
             <Route path="/blog/fractional-cfo-toolkit" element={<FractionalCFOToolkit />} />
+            <Route path="/blog/business-health-scores-by-stage" element={<BusinessHealthScoresByStage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

@@ -52,6 +52,7 @@ import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025
 import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
+import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -70,6 +71,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
+      excerpt: "Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!",
+      author: "BizHealth.ai Research Team",
+      date: "December 29, 2025",
+      readTime: "15 min read",
+      category: "Business Intelligence, Financials, Business Strategy",
+      slug: "/blog/business-health-scores-by-stage",
+      imageUrl: businessHealthScoresStagesImage,
+      altText: "Business leader presenting the four stages of business health: Survival, Stability, Scale, and Exit progression framework",
+      keywords: "business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model"
+    },
     {
       title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have",
       excerpt: "Discover the 7 essential financial dashboards every business owner needs. Build CFO-level visibility with cash flow, P&L, and strategic metrics tracking.",

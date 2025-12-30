@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -255,7 +256,17 @@ const BusinessHealthScoresByStage = () => {
       
       <GlobalNavigation />
       
-      <article className="pt-24 pb-16">
+      <article className="pt-32 pb-16">
+        {/* Back to Blog Link */}
+        <div className="container mx-auto px-4 mb-6">
+          <Link 
+            to="/blog" 
+            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+          >
+            ← Back to Blog
+          </Link>
+        </div>
+        
         {/* Hero Section */}
         <header className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-emerald-500/10" />
@@ -271,10 +282,7 @@ const BusinessHealthScoresByStage = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                What Your Business Health Score Should Look Like at{" "}
-                <span className="bg-gradient-to-r from-red-500 via-amber-500 via-emerald-500 to-blue-500 bg-clip-text text-transparent">
-                  Each Stage
-                </span>
+                What Your Business Health Score Should Look Like at Each Stage
               </h1>
               
               <p className="text-xl text-muted-foreground mb-8">
@@ -950,6 +958,7 @@ const BusinessHealthScoresByStage = () => {
       </article>
       
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

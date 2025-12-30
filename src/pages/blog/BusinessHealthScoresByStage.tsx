@@ -310,7 +310,7 @@ const BusinessHealthScoresByStage = () => {
                 <img
                   src={heroImage}
                   alt="Business leader presenting the four stages of business health: Survival, Stability, Scale, and Exit progression framework"
-                  className="w-[90%] mx-auto h-auto object-cover"
+                  className="w-full h-auto object-cover"
                   loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />

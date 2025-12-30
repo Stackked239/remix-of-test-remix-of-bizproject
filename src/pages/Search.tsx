@@ -298,6 +298,22 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
+        excerpt: "Business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model. Learn what healthy business scores look like at each growth stage.",
+        url: "/blog/business-health-scores-by-stage",
+        icon: FileText,
+        category: "Business Intelligence, Financials, Business Strategy"
+      },
+      {
+        type: "Blog Post",
+        title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have",
+        excerpt: "Fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics.",
+        url: "/blog/fractional-cfo-toolkit",
+        icon: FileText,
+        category: "Financials, Business Leadership, Business Strategy"
+      },
+      {
+        type: "Blog Post",
         title: "Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap",
         excerpt: "Innovation gap, technology innovation, competitive advantage, SMB technology, business intelligence, risk management. Discover the 4 pillars of innovation competency and close the gap in 90 days with our proven framework.",
         url: "/blog/technology-innovation-gap-competitive-advantage",

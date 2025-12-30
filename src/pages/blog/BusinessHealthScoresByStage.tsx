@@ -257,20 +257,20 @@ const BusinessHealthScoresByStage = () => {
       <GlobalNavigation />
       
       <article className="pt-40 pb-16">
-        {/* Back to Blog Link */}
-        <div className="container mx-auto px-4 mb-6">
-          <Link 
-            to="/blog" 
-            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium"
-          >
-            ← Back to Blog
-          </Link>
-        </div>
-        
         {/* Hero Section */}
         <header className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-emerald-500/10" />
-          <div className="container mx-auto px-4 py-12 relative">
+          <div className="container mx-auto px-4 pt-4 pb-12 relative">
+            {/* Back to Blog Link */}
+            <div className="mb-6">
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+              >
+                ← Back to Blog
+              </Link>
+            </div>
+            
             <div className="max-w-4xl mx-auto">
               {/* Category badges */}
               <div className="flex flex-wrap gap-2 mb-6">

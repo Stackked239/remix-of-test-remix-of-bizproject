@@ -51,6 +51,7 @@ import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margi
 import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
 import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
+import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -69,6 +70,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have",
+      excerpt: "Discover the 7 essential financial dashboards every business owner needs. Build CFO-level visibility with cash flow, P&L, and strategic metrics tracking.",
+      author: "BizHealth.ai Research Team",
+      date: "December 29, 2025",
+      readTime: "12 min read",
+      category: "Financials, Business Leadership, Business Strategy",
+      slug: "/blog/fractional-cfo-toolkit",
+      imageUrl: fractionalCFOToolkitImage,
+      altText: "Business owner viewing financial dashboard with declining cash flow velocity and operational stress metrics - fractional CFO toolkit visualization",
+      keywords: "fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics"
+    },
     {
       title: "Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap",
       excerpt: "Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days.",

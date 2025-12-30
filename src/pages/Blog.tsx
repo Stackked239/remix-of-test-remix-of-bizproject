@@ -53,6 +53,7 @@ import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-op
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
 import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
+import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -71,6 +72,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership",
+      excerpt: "Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay.",
+      author: "BizHealth.ai Research Team",
+      date: "December 30, 2025",
+      readTime: "10 min read",
+      category: "Human Resources, Operations, Business Leadership",
+      slug: "/blog/employee-retention-company-culture-leadership",
+      imageUrl: employeeRetentionLeadershipImage,
+      altText: "Business leader engaging in day-to-day leadership conversation with employee in manufacturing facility demonstrating employee retention through company culture",
+      keywords: "employee retention strategies, company culture leadership, day-to-day leadership, employee engagement SMB, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies"
+    },
     {
       title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
       excerpt: "Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!",

@@ -294,7 +294,6 @@ const EmployeeRetentionLeadership = () => {
                   className="w-[90%] h-auto object-cover mx-auto"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
           </div>

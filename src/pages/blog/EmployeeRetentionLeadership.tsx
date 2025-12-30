@@ -291,7 +291,7 @@ const EmployeeRetentionLeadership = () => {
                 <img
                   src={heroImage}
                   alt="Business leader engaging in day-to-day leadership conversation with employee in manufacturing facility demonstrating employee retention through company culture"
-                  className="w-[90%] h-auto object-cover mx-auto"
+                  className="w-full h-auto object-cover"
                   loading="eager"
                 />
               </div>

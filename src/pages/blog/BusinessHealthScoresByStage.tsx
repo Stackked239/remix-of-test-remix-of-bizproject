@@ -256,7 +256,7 @@ const BusinessHealthScoresByStage = () => {
       
       <GlobalNavigation />
       
-      <article className="pt-40 pb-16">
+      <article className="pt-32 pb-16">
         {/* Hero Section */}
         <header className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-emerald-500/10" />

@@ -383,7 +383,7 @@ const OvercomingMarketingChallenges = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-primary/5 to-background pt-16 md:pt-20 pb-12 md:pb-16">
+        <section className="relative bg-gradient-to-b from-primary/5 to-background pt-16 md:pt-20 pb-6 md:pb-8">
           <div className="container mx-auto px-4 max-w-5xl">
             {/* Breadcrumb */}
             <nav className="mb-6 text-sm" aria-label="Breadcrumb">

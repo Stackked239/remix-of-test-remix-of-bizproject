@@ -35,36 +35,7 @@ export default defineConfig(({ mode }) => ({
     // Split chunks for better caching and reduced initial bundle
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          // Vendor chunk - group major dependencies together to avoid circular issues
-          if (id.includes('node_modules')) {
-            // Core React must stay together with react-dom
-            if (id.includes('node_modules/react-dom') || 
-                id.includes('node_modules/react/') ||
-                id.includes('node_modules/scheduler')) {
-              return 'vendor-react';
-            }
-            // Router
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            // UI components library
-            if (id.includes('@radix-ui')) {
-              return 'vendor-radix';
-            }
-            // Supabase
-            if (id.includes('@supabase')) {
-              return 'vendor-supabase';
-            }
-            // Large optional libraries - lazy loaded
-            if (id.includes('recharts') || id.includes('chart.js') || id.includes('react-chartjs')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('jspdf') || id.includes('html2canvas') || id.includes('docx')) {
-              return 'vendor-documents';
-            }
-          }
-        },
+        manualChunks: undefined, // Let Vite handle chunking automatically to avoid React loading order issues
       },
     },
     // Optimize chunk size

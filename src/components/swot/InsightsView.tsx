@@ -4,11 +4,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { useSWOTStore } from "@/stores/swotStore";
-import { Download, FileText, FileSpreadsheet, ArrowLeft, CheckCircle } from "lucide-react";
+import { Download, FileText, FileSpreadsheet, ArrowLeft, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { Document, Packer, Paragraph, TextRun, Table, TableCell, TableRow, WidthType, BorderStyle, AlignmentType } from "docx";
 import { saveAs } from "file-saver";
-import * as XLSX from "xlsx";
 
 interface InsightsViewProps {
   onBack: () => void;
@@ -18,6 +16,8 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
   const navigate = useNavigate();
   const { currentAnalysis } = useSWOTStore();
   const [showCompleteDialog, setShowCompleteDialog] = useState(false);
+  const [isExportingWord, setIsExportingWord] = useState(false);
+  const [isExportingExcel, setIsExportingExcel] = useState(false);
 
   const handleBack = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,8 +35,12 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
 
   const exportToWord = async () => {
     if (!currentAnalysis) return;
+    setIsExportingWord(true);
 
     try {
+      // Dynamically import docx only when needed
+      const { Document, Packer, Paragraph, TextRun, Table, TableCell, TableRow, WidthType, AlignmentType } = await import('docx');
+      
       const doc = new Document({
         sections: [{
           properties: {},
@@ -134,13 +138,19 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
     } catch (error) {
       console.error("Export error:", error);
       toast.error("Failed to export Word document");
+    } finally {
+      setIsExportingWord(false);
     }
   };
 
-  const exportToExcel = () => {
+  const exportToExcel = async () => {
     if (!currentAnalysis) return;
+    setIsExportingExcel(true);
 
     try {
+      // Dynamically import xlsx only when needed
+      const XLSX = await import('xlsx');
+      
       const wb = XLSX.utils.book_new();
 
       // SWOT Matrix Sheet
@@ -184,6 +194,8 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
     } catch (error) {
       console.error("Export error:", error);
       toast.error("Failed to export Excel spreadsheet");
+    } finally {
+      setIsExportingExcel(false);
     }
   };
 
@@ -283,12 +295,13 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Button
             onClick={exportToWord}
+            disabled={isExportingWord}
             className="h-auto py-4 flex-col items-start text-left"
             variant="outline"
           >
             <div className="flex items-center gap-2 mb-2">
-              <FileText className="h-5 w-5" />
-              <span className="font-semibold">Word Document (.docx)</span>
+              {isExportingWord ? <Loader2 className="h-5 w-5 animate-spin" /> : <FileText className="h-5 w-5" />}
+              <span className="font-semibold">{isExportingWord ? 'Preparing...' : 'Word Document (.docx)'}</span>
             </div>
             <p className="text-xs text-muted-foreground">
               Professional strategic report with detailed analysis
@@ -296,12 +309,13 @@ export const InsightsView = ({ onBack }: InsightsViewProps) => {
           </Button>
           <Button
             onClick={exportToExcel}
+            disabled={isExportingExcel}
             className="h-auto py-4 flex-col items-start text-left"
             variant="outline"
           >
             <div className="flex items-center gap-2 mb-2">
-              <FileSpreadsheet className="h-5 w-5" />
-              <span className="font-semibold">Excel Spreadsheet (.xlsx)</span>
+              {isExportingExcel ? <Loader2 className="h-5 w-5 animate-spin" /> : <FileSpreadsheet className="h-5 w-5" />}
+              <span className="font-semibold">{isExportingExcel ? 'Preparing...' : 'Excel Spreadsheet (.xlsx)'}</span>
             </div>
             <p className="text-xs text-muted-foreground">
               Workbook for tracking and ongoing analysis

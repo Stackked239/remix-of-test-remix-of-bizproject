@@ -1,8 +1,11 @@
-import jsPDF from 'jspdf';
 import { InnovationStrategyData } from '@/stores/innovationStrategyStore';
 import { format } from 'date-fns';
 
 export const generateInnovationStrategyPDF = async (data: InnovationStrategyData): Promise<void> => {
+  // Dynamically import jspdf only when needed
+  const jsPDFModule = await import('jspdf');
+  const jsPDF = jsPDFModule.default;
+  
   const pdf = new jsPDF('p', 'mm', 'a4');
   const pageWidth = pdf.internal.pageSize.getWidth();
   const margin = 20;

@@ -7,6 +7,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, DollarSign, Users, Zap, BarChart3, Mail, Phone, Globe, Megaphone, ArrowRight, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
+import authorImage from "@/assets/bizhealth-author-icon.jpg";
 
 const MistakeCard = ({ 
   number, 
@@ -382,7 +383,7 @@ const OvercomingMarketingChallenges = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-primary/5 to-background py-12 md:py-16">
+        <section className="relative bg-gradient-to-b from-primary/5 to-background pt-16 md:pt-20 pb-12 md:pb-16">
           <div className="container mx-auto px-4 max-w-5xl">
             {/* Breadcrumb */}
             <nav className="mb-6 text-sm" aria-label="Breadcrumb">
@@ -429,7 +430,7 @@ const OvercomingMarketingChallenges = () => {
               <img
                 src={heroImage}
                 alt="Small business owner analyzing marketing strategy options for strategic growth and customer acquisition"
-                className="w-[95%] h-auto object-cover mx-auto"
+                className="w-full h-auto object-cover"
                 loading="eager"
               />
             </div>
@@ -437,7 +438,7 @@ const OvercomingMarketingChallenges = () => {
         </section>
 
         {/* Article Content */}
-        <article className="py-12 md:py-16">
+        <article className="py-8 md:py-10">
           <div className="container mx-auto px-4 max-w-4xl">
             
             {/* Introduction */}
@@ -719,8 +720,12 @@ const OvercomingMarketingChallenges = () => {
             {/* Author Bio */}
             <div className="mt-12 p-6 rounded-xl bg-muted/30 border border-border">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <User className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img 
+                    src={authorImage} 
+                    alt="BizHealth.ai Research Team" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground mb-1">BizHealth.ai Research Team</h4>

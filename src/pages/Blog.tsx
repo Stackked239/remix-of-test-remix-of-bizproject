@@ -6,6 +6,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import { blogPosts as blogPostsData, featuredPost as featuredPostData, searchBlogPosts } from "@/data/blogData";
 import businessHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -56,21 +57,71 @@ import businessHealthScoresStagesImage from "@/assets/business-health-scores-sta
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
 
+// Image mapping for blog posts
+const imageMap: Record<string, string> = {
+  "/blog/overcoming-marketing-challenges-small-business": overcomingMarketingChallengesImage,
+  "/blog/employee-retention-company-culture-leadership": employeeRetentionLeadershipImage,
+  "/blog/business-health-scores-by-stage": businessHealthScoresStagesImage,
+  "/blog/fractional-cfo-toolkit": fractionalCFOToolkitImage,
+  "/blog/technology-innovation-gap-competitive-advantage": technologyInnovationGapImage,
+  "/blog/business-blind-spots-operational-issues-invisible-leadership": businessBlindSpotsOperationalImage,
+  "/blog/customer-loyalty-starts-with-reliability": customerLoyaltyImage,
+  "/blog/stress-test-pricing-framework-margins-cash-flow": stressTestPricingImage,
+  "/blog/how-to-prioritize-operator-survival-guide": howToPrioritizeImage,
+  "/blog/chaos-to-clarity-operating-rhythm-scaling-teams": chaosToClarity,
+  "/blog/small-business-financials-know-your-numbers": smallBusinessFinancialsImage,
+  "/blog/growth-trap-broken-business-model": growthTrapImage,
+  "/blog/grow-your-business-with-ai": growWithAIImage,
+  "/blog/how-to-check-your-business-health": howToCheckBusinessHealthImage,
+  "/blog/overcoming-bi-challenges-smb": overcomingBIChallengesImage,
+  "/blog/hidden-costs-manual-processes": hiddenCostsManualProcessesImage,
+  "/blog/financial-stewardship-everyones-responsibility": financialStewardshipImage,
+  "/blog/business-health-assessment-2025": businessHealthImage,
+  "/blog/identifying-smb-leadership-blind-spots": leadershipBlindSpotsImage,
+  "/blog/scaling-operations-without-losing-control": scalingOperationsImage,
+  "/blog/success-begins-with-2026-strategy": businessStrategyPlanningImage,
+  "/blog/small-business-struggles": smallBusinessStrugglesImage,
+  "/blog/confirm-business-weaknesses-without-consultants": confirmWeaknessesImage,
+  "/blog/small-business-blind-spots-2025": blindSpotsImage,
+  "/blog/small-business-survival-checklist-2025": survivalChecklistImage,
+  "/blog/small-business-ai-adoption": aiAdoptionImage,
+  "/blog/smb-scaling-paradox-2025": smbScalingParadoxImage,
+  "/blog/cash-flow-crisis-management": cashFlowCrisisImage,
+  "/blog/Q4-Cost-Cuts-2025": q4CostCutsImage,
+  "/blog/impact-over-information": informationOverloadImage,
+  "/blog/smb-cash-flow-hacks-2025": cashFlowHacksImage,
+  "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025": ecommerceScalingImage,
+  "/blog/2025-smb-financial-trends": smbFinancialTrendsImage,
+  "/blog/talent-wars-smb-hiring-2025": talentWarsImage,
+  "/blog/solving-smb-workforce-gaps-2025": workforceGapsImage,
+  "/blog/real-time-analytics-smb-agility": realTimeAnalyticsImage,
+  "/blog/daily-grind-fixes": dailyGrindImage,
+  "/blog/leadership-stress-success": leadershipStressImage,
+  "/blog/retail-remote-tools": retailToolsImage,
+  "/blog/warning-signs-business": warningSignsImage,
+  "/blog/ai-business-analytics": aiAnalyticsImage,
+  "/blog/financial-health-metrics": financialMetricsImage,
+  "/blog/operational-resilience": resilienceImage,
+  "/blog/business-intelligence-roi": biRoiImage,
+  "/blog/strategic-planning-post-pandemic": strategicPlanningImage,
+  "/blog/when-to-pivot": pivotImage,
+  "/blog/complete-guide-business-health-assessment-2026": businessHealthAssessment2026Image
+};
+
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const resultsRef = useRef<HTMLElement>(null);
   
+  // Use centralized data with image mapping
   const featuredPost = {
-    title: "The Complete Guide to Business Health Assessment for 2026",
-    excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth.",
-    author: "BizHealth.ai Research Team",
-    date: "November 24, 2025",
-    readTime: "15 min read",
-    category: "Business Strategy",
-    featured: true,
-    imageUrl: businessHealthAssessment2026Image,
-    altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
+    ...featuredPostData,
+    imageUrl: businessHealthAssessment2026Image
   };
+
+  const blogPosts = blogPostsData.map(post => ({
+    ...post,
+    imageUrl: imageMap[post.slug] || businessAnalystImage
+  }));
 
   const blogPosts = [
     {

@@ -54,6 +54,7 @@ import technologyInnovationGapImage from "@/assets/technology-innovation-gap-sma
 import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
 import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
+import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -72,6 +73,18 @@ const Blog = () => {
   };
 
   const blogPosts = [
+    {
+      title: "Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth",
+      excerpt: "Learn how to overcome small business marketing challenges with strategic focus. Discover the 3 marketing mistakes SMBs make and a proven 90-day plan for growth.",
+      author: "BizHealth.ai Research Team",
+      date: "December 30, 2025",
+      readTime: "10 min read",
+      category: "Operations, Business Leadership, Business Strategy, Sales & Marketing",
+      slug: "/blog/overcoming-marketing-challenges-small-business",
+      imageUrl: overcomingMarketingChallengesImage,
+      altText: "Small business owner analyzing marketing strategy options for strategic growth and customer acquisition",
+      keywords: "small business marketing challenges, SMB marketing strategy, marketing for small businesses, customer acquisition, marketing mistakes, lead generation, marketing rhythm, positioning strategy, content marketing SMB, 90-day marketing plan"
+    },
     {
       title: "Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership",
       excerpt: "Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay.",

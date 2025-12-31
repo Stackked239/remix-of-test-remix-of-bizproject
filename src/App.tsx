@@ -104,6 +104,7 @@ const TechnologyInnovationGap = lazy(() => import("./pages/blog/TechnologyInnova
 const FractionalCFOToolkit = lazy(() => import("./pages/blog/FractionalCFOToolkit"));
 const BusinessHealthScoresByStage = lazy(() => import("./pages/blog/BusinessHealthScoresByStage"));
 const EmployeeRetentionLeadership = lazy(() => import("./pages/blog/EmployeeRetentionLeadership"));
+const OvercomingMarketingChallenges = lazy(() => import("./pages/blog/OvercomingMarketingChallenges"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -220,6 +221,7 @@ const App = () => (
               <Route path="/blog/fractional-cfo-toolkit" element={<FractionalCFOToolkit />} />
               <Route path="/blog/business-health-scores-by-stage" element={<BusinessHealthScoresByStage />} />
               <Route path="/blog/employee-retention-company-culture-leadership" element={<EmployeeRetentionLeadership />} />
+              <Route path="/blog/overcoming-marketing-challenges-small-business" element={<OvercomingMarketingChallenges />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

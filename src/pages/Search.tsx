@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search as SearchIcon, FileText, HelpCircle, Home, DollarSign, Mail, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/data/blogData";
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -295,20 +296,16 @@ const Search = () => {
         icon: FileText
       }
     ],
-    blogs: [
-      {
-        type: "Blog Post",
-        title: "Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth",
-        excerpt: "Small business marketing challenges, SMB marketing strategy, marketing for small businesses, customer acquisition, marketing mistakes, lead generation, marketing rhythm, positioning strategy, content marketing SMB, 90-day marketing plan, scattered marketing tactics, strategic marketing, marketing focus, marketing priorities, marketing ROI, brand positioning, customer targeting, marketing funnel, inbound marketing, outbound marketing, marketing consistency, marketing framework, sales and marketing alignment.",
-        url: "/blog/overcoming-marketing-challenges-small-business",
-        icon: FileText,
-        category: "Operations, Business Leadership, Business Strategy, Sales & Marketing"
-      },
-      {
-        type: "Blog Post",
-        title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
-        excerpt: "Business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model. Learn what healthy business scores look like at each growth stage.",
-        url: "/blog/business-health-scores-by-stage",
+    // Use centralized blog data with comprehensive keywords for better searchability
+    blogs: blogPosts.map(post => ({
+      type: "Blog Post" as const,
+      title: post.title,
+      excerpt: `${post.excerpt} ${post.keywords}`, // Include keywords in searchable excerpt
+      url: post.slug,
+      icon: FileText,
+      category: post.category
+    })),
+    faqs: [
         icon: FileText,
         category: "Business Intelligence, Financials, Business Strategy"
       },

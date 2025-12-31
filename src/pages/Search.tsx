@@ -306,8 +306,16 @@ const Search = () => {
       },
       {
         type: "Blog Post",
+        title: "Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership",
+        excerpt: "Employee retention strategies, company culture leadership, day-to-day leadership, employee engagement SMB, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies, employee turnover, building culture, team building, hiring retention, company culture building, leadership development, employee satisfaction, workplace culture.",
+        url: "/blog/employee-retention-company-culture-leadership",
+        icon: FileText,
+        category: "Human Resources, Operations, Business Leadership"
+      },
+      {
+        type: "Blog Post",
         title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
-        excerpt: "Business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model. Learn what healthy business scores look like at each growth stage.",
+        excerpt: "Business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model, business lifecycle, growth stage, company stages, business maturity, scaling metrics, exit strategy, business exit planning.",
         url: "/blog/business-health-scores-by-stage",
         icon: FileText,
         category: "Business Intelligence, Financials, Business Strategy"
@@ -315,7 +323,7 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have",
-        excerpt: "Fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics.",
+        excerpt: "Fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics, fractional CFO, part-time CFO, financial management, CFO services, financial reporting, business financials, profit and loss.",
         url: "/blog/fractional-cfo-toolkit",
         icon: FileText,
         category: "Financials, Business Leadership, Business Strategy"
@@ -323,7 +331,7 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap",
-        excerpt: "Innovation gap, technology innovation, competitive advantage, SMB technology, business intelligence, risk management. Discover the 4 pillars of innovation competency and close the gap in 90 days with our proven framework.",
+        excerpt: "Innovation gap, technology innovation, competitive advantage, SMB technology, business intelligence, risk management, innovation strategy, technology infrastructure, small business innovation 2025, digital transformation, technology adoption, innovation competency, technology gap, competitive edge, business innovation.",
         url: "/blog/technology-innovation-gap-competitive-advantage",
         icon: FileText,
         category: "Technology, Business Intelligence, Risk Management"
@@ -331,151 +339,151 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership",
-        excerpt: "Blind spot, blind spots, operations, growth challenges, strategy. Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually: cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks. SMB operational audit, business visibility problem, leadership visibility.",
+        excerpt: "Blind spot, blind spots, operations, growth challenges, strategy, business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025, hidden costs, operational waste.",
         url: "/blog/business-blind-spots-operational-issues-invisible-leadership",
         icon: FileText,
         category: "Operations, Financials"
       },
       {
         type: "Blog Post",
-        title: "Customer Loyalty Starts With Reliability, Not Delight",
-        excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures. Customer service, customer retention, customer satisfaction, business growth, customer program, loyalty program strategies for SMBs.",
+        title: "Customer Service: Loyalty Starts With Reliability, Not Delight",
+        excerpt: "Customer service, customer retention, customer satisfaction, business growth, customer program, customer loyalty, loyalty program, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency, customer relationship, client retention, customer success.",
         url: "/blog/customer-loyalty-starts-with-reliability",
         icon: FileText,
-        category: "Operations"
+        category: "Operations, Business Strategy, Business Leadership"
       },
       {
         type: "Blog Post",
         title: "How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow",
-        excerpt: "Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Value-based pricing, demand elasticity testing, profit optimization.",
+        excerpt: "Stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization, pricing analysis, margin improvement, competitive pricing, pricing power, price testing, revenue optimization, demand elasticity, pricing for profit.",
         url: "/blog/stress-test-pricing-framework-margins-cash-flow",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Financials, Operations"
       },
       {
         type: "Blog Post",
         title: "How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide",
-        excerpt: "Master solo entrepreneur prioritization with this survival guide. Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly.",
+        excerpt: "Solo entrepreneur prioritization, prioritization for solo operators, time management small business, delegation for solopreneurs, micro business productivity, entrepreneur survival guide, strategic work allocation, business time audit, solopreneur productivity, one-person business, time blocking, priority matrix, task management, solo business owner, founder productivity.",
         url: "/blog/how-to-prioritize-operator-survival-guide",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Business Leadership, Operations"
       },
       {
         type: "Blog Post",
         title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
-        excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Three-cadence framework for weekly, monthly, and quarterly business management.",
+        excerpt: "Operating rhythm SMB, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, SMB operations management, meeting cadence, team meetings, leadership rhythm, business operating system, EOS, scaling teams, team communication, management rhythm, leadership cadence.",
         url: "/blog/chaos-to-clarity-operating-rhythm-scaling-teams",
         icon: FileText,
-        category: "Operations"
+        category: "Operations, Business Leadership, Business Strategy"
       },
       {
         type: "Blog Post",
         title: "Small Business Financials: Know Your Numbers, Know Your Business",
-        excerpt: "Master small business financial management. Income statements, balance sheets, cash flow, and key metrics that drive strategic decisions.",
+        excerpt: "Small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, financial literacy, accounting basics, business accounting, financial statements, P&L, profit and loss, bookkeeping.",
         url: "/blog/small-business-financials-know-your-numbers",
         icon: FileText,
-        category: "Financial Management"
+        category: "Financial Management, Financials, Business Strategy"
       },
       {
         type: "Blog Post",
         title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
-        excerpt: "Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling.",
+        excerpt: "Growth trap small business, broken business model, SMB scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025, scaling mistakes, growth problems, revenue chasing, sales growth trap, profitable growth.",
         url: "/blog/growth-trap-broken-business-model",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Financials, Business Leadership"
       },
       {
         type: "Blog Post",
         title: "The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'",
-        excerpt: "Transform AI from a productivity hack into a strategic growth partner. 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth.",
+        excerpt: "AI business growth 2025, small business AI strategy, SMB AI implementation, AI-driven growth, business intelligence AI, predictive analytics SMB, AI operational efficiency, AI for small business, business health assessment, AI transformation framework, artificial intelligence business, grow with AI, AI tools, AI adoption, machine learning business.",
         url: "/blog/grow-your-business-with-ai",
         icon: FileText,
-        category: "Business Intelligence"
+        category: "Business Intelligence, Business Strategy, Technology"
       },
       {
         type: "Blog Post",
         title: "Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses",
-        excerpt: "Discover how SMBs can overcome BI challenges in 2025. Budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making.",
+        excerpt: "Business intelligence SMB, BI challenges small business, SMB data analytics, business intelligence adoption, BI for small business, data-driven decisions, affordable BI tools, AI business intelligence 2025, analytics challenges, data strategy, BI implementation, business analytics, data visualization, BI software.",
         url: "/blog/overcoming-bi-challenges-smb",
         icon: FileText,
-        category: "Business Intelligence"
+        category: "Business Intelligence, Technology, Business Strategy"
       },
       {
         type: "Blog Post",
         title: "The Hidden Costs of Manual Processes in Today's Smaller Businesses",
-        excerpt: "53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Error rates up to 27% cost businesses $12,000+ annually. Actionable tech adoption strategies.",
+        excerpt: "Manual processes, business automation, SMB technology, operational efficiency, digital transformation, business processes, automation tools, tech adoption, small business efficiency, process improvement, 2025 technology, process automation, workflow automation, efficiency gains, hidden costs, operational waste.",
         url: "/blog/hidden-costs-manual-processes",
         icon: FileText,
-        category: "Technology"
+        category: "Technology, Business Intelligence, Operations"
       },
       {
         type: "Blog Post",
         title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
-        excerpt: "Build a culture of financial stewardship where every employee contributes to cash flow health. 7 proven strategies for SMB financial accountability.",
+        excerpt: "Financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, SMB finance tips, business financial health, financial awareness employees, cost management team, financial accountability, money management, budget ownership, team finance, financial literacy.",
         url: "/blog/financial-stewardship-everyones-responsibility",
         icon: FileText,
-        category: "Financial Management"
+        category: "Financial Management, Business Leadership, Operations"
       },
       {
         type: "Blog Post",
         title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
-        excerpt: "70% of SMBs face cash flow challenges and 60% stall after year three. AI-powered business health diagnostics uncover blind spots and drive sustainable growth.",
+        excerpt: "Small business struggles, fixing wrong problems, SMB challenges, cash flow challenges, business growth strategies, blind spots, operational issues, business assessment, diagnostic tools, AI analytics, small business problems, business pain points, common mistakes, business challenges 2025, problem identification.",
         url: "/blog/small-business-struggles",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Business Leadership"
       },
       {
         type: "Blog Post",
         title: "How to Confirm Your Business Weaknesses Without Expensive Consultants",
-        excerpt: "AI-powered business health assessments help SMB leaders identify operational weaknesses, hidden business gaps, and blind spots without consultant fees.",
+        excerpt: "Business weaknesses, operational gaps, diagnostic tools, consultant alternatives, business assessment, affordability, AI analytics, hidden gaps, business intelligence, SMB diagnostics, self-assessment, business audit, weakness identification, affordable diagnostics, DIY assessment, business health check.",
         url: "/blog/confirm-business-weaknesses-without-consultants",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Business Intelligence, Operations"
       },
       {
         type: "Blog Post",
         title: "The Business Blind Spots Costing SMB Leaders $50K+ Annually",
-        excerpt: "5 dangerous business blind spots draining SMB profits in 2025. Identify financial, operational, and strategic gaps before they cost you $50K+ annually.",
+        excerpt: "Business blind spots, financial losses, hidden costs, strategic gaps, profit drains, visibility issues, business intelligence, operational blind spots, financial blind spots, risk assessment, SMB blind spots, hidden problems, profit leakage, cost drains, invisible problems, blind spot assessment.",
         url: "/blog/small-business-blind-spots-2025",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Financial Management, Business Intelligence"
       },
       {
         type: "Blog Post",
         title: "The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew",
-        excerpt: "Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from the 23.2% that fail within 12 months.",
+        excerpt: "Survival checklist, first year business, startup metrics, KPIs, business failure, founder insights, Reddit founders, startup survival, year one challenges, success metrics, new business checklist, startup KPIs, business milestones, founder lessons, first year survival.",
         url: "/blog/small-business-survival-checklist-2025",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Risk Management, Business Leadership"
       },
       {
         type: "Blog Post",
         title: "AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners",
-        excerpt: "Practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.",
+        excerpt: "AI adoption, artificial intelligence, automation tools, business efficiency, technology implementation, skeptical owners, practical AI, small business technology, AI tools, business automation, AI for beginners, AI skeptics, getting started with AI, simple AI tools, AI basics.",
         url: "/blog/small-business-ai-adoption",
         icon: FileText,
-        category: "Technology"
+        category: "Technology, Business Strategy"
       },
       {
         type: "Blog Post",
         title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
-        excerpt: "60% of SMBs stall post-year 3 due to rapid scaling. Profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges.",
+        excerpt: "Business scaling, growth challenges, scaling paradox, rapid growth, sustainable scaling, scaling strategies, business expansion, SMB growth, scaling frameworks, growth management, growing too fast, scaling problems, controlled growth, growth pacing, scaling risks.",
         url: "/blog/smb-scaling-paradox-2025",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Risk Management, Business Leadership"
       },
       {
         type: "Blog Post",
         title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
-        excerpt: "Master cash flow management for small business in 2025. Crisis prevention strategies, cash flow planning tips, and pitfalls affecting 60% of SMBs.",
+        excerpt: "Cash flow crisis, cash management, financial planning, working capital, liquidity management, crisis prevention, cash flow forecasting, financial health, cash flow strategies, SMB finance, cash crunch, cash flow problems, money management, financial crisis, cash shortage.",
         url: "/blog/cash-flow-crisis-management",
         icon: FileText,
-        category: "Financial Management"
+        category: "Financial Management, Business Strategy, Technology"
       },
       {
         type: "Blog Post",
         title: "The Pitfall of Information Overload: Why General Advice Falls Short",
-        excerpt: "Generic business advice fails SMBs. AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth.",
+        excerpt: "Information overload, generic advice, business diagnostics, actionable insights, specific solutions, targeted strategies, business intelligence, data-driven decisions, customized advice, practical solutions, too much information, advice fatigue, tailored guidance, personalized insights.",
         url: "/blog/impact-over-information",
         icon: FileText,
         category: "Business Strategy"
@@ -483,18 +491,18 @@ const Search = () => {
       {
         type: "Blog Post",
         title: "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
-        excerpt: "5 proven e-commerce scaling strategies for SMBs. AI personalization, omnichannel sales, mobile optimization & data-driven growth.",
+        excerpt: "E-commerce scaling, online business, digital commerce, AI personalization, omnichannel sales, mobile optimization, data-driven growth, e-commerce strategies, SMB e-commerce, online retail, online store growth, e-commerce tips, selling online, digital sales, online revenue.",
         url: "/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025",
         icon: FileText,
-        category: "Business Strategy"
+        category: "Business Strategy, Technology"
       },
       {
         type: "Blog Post",
         title: "2025 SMB Financial Trends: From Uncertainty to Predictable Growth",
-        excerpt: "SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics, cash flow strategies, and financial automation.",
+        excerpt: "Financial trends 2025, SMB finance, predictable growth, financial automation, AI analytics, data-driven decisions, business forecasting, financial planning, revenue trends, growth strategies, 2025 trends, financial outlook, economic trends, business finance 2025.",
         url: "/blog/2025-smb-financial-trends",
         icon: FileText,
-        category: "Financial Management"
+        category: "Financial Management, Business Strategy"
       },
       {
         type: "Blog Post",

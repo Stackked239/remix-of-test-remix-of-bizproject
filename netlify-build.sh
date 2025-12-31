@@ -1,17 +1,21 @@
 #!/bin/bash
 
 # Netlify-specific build script for SSG pre-rendering
-# Uses Puppeteer's bundled Chromium instead of system Chromium
+# Uses Puppeteer's bundled Chromium
 
 echo "🏗️  Starting Netlify SSG build..."
 echo ""
 
-# Ensure Puppeteer downloads its bundled Chromium
-# (Don't skip Chromium download - we need it for prerendering)
-unset PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
-unset PUPPETEER_EXECUTABLE_PATH
+# Install Puppeteer's bundled Chrome browser
+echo "📦 Installing Puppeteer Chrome browser..."
+npx puppeteer browsers install chrome
 
-echo "📦 Puppeteer will use its bundled Chromium..."
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install Puppeteer Chrome!"
+  exit 1
+fi
+
+echo "✅ Puppeteer Chrome installed"
 echo ""
 
 # Run the standard SSG build

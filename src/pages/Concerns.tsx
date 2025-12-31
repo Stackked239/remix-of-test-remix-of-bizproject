@@ -79,13 +79,13 @@ const Concerns = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      // Store in database
-      const { error } = await supabase.from('email_subscribers').insert({
-        email: data.email,
-        source: 'client_concerns',
-        metadata: {
+      // Use edge function for secure database insert
+      const response = await supabase.functions.invoke('send-notification', {
+        body: {
+          type: 'client_concern',
+          email: data.email,
           fullName: data.fullName,
-          companyName: data.companyName,
+          company: data.companyName,
           accountEmail: data.accountEmail,
           concernType: data.concernType,
           description: data.description,
@@ -96,7 +96,13 @@ const Concerns = () => {
         },
       });
 
-      if (error) throw error;
+      if (response.error) {
+        throw new Error(response.error.message || 'Failed to submit concern');
+      }
+
+      if (!response.data?.success) {
+        throw new Error(response.data?.error || 'Failed to submit concern');
+      }
 
       setIsSuccess(true);
       form.reset();
@@ -106,13 +112,23 @@ const Concerns = () => {
         title: 'Concern Submitted Successfully',
         description: 'Our Client Success team will reach out within 1-2 business days.',
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting concern:', error);
-      toast({
-        title: 'Submission Error',
-        description: 'There was an issue submitting your concern. Please try again or email us directly.',
-        variant: 'destructive',
-      });
+      
+      // Handle rate limiting
+      if (error.message?.includes('Too many requests')) {
+        toast({
+          title: 'Please wait',
+          description: 'You have submitted too many requests. Please try again in an hour.',
+          variant: 'destructive',
+        });
+      } else {
+        toast({
+          title: 'Submission Error',
+          description: 'There was an issue submitting your concern. Please try again or email us directly.',
+          variant: 'destructive',
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }

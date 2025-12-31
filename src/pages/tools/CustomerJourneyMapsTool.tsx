@@ -16,8 +16,6 @@ import { JourneyCanvas } from "@/components/journey-map/JourneyCanvas";
 import { TouchpointDetails } from "@/components/journey-map/TouchpointDetails";
 import { X, Save, Download, HelpCircle } from "lucide-react";
 import { toast } from "sonner";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import StructuredData from "@/components/StructuredData";
 
 const CustomerJourneyMapsTool = () => {
@@ -83,6 +81,14 @@ const CustomerJourneyMapsTool = () => {
     toast.loading("Generating PDF...");
     
     try {
+      // Dynamically import html2canvas and jspdf only when needed
+      const [html2canvasModule, jsPDFModule] = await Promise.all([
+        import('html2canvas'),
+        import('jspdf')
+      ]);
+      const html2canvas = html2canvasModule.default;
+      const jsPDF = jsPDFModule.default;
+      
       const imgData = await html2canvas(canvas, { scale: 2 });
       const pdf = new jsPDF('l', 'mm', 'a4');
       const imgWidth = 297;
@@ -90,8 +96,10 @@ const CustomerJourneyMapsTool = () => {
       
       pdf.addImage(imgData.toDataURL('image/png'), 'PNG', 0, 0, imgWidth, imgHeight);
       pdf.save(`${currentMap?.name || 'journey-map'}.pdf`);
+      toast.dismiss();
       toast.success("PDF exported successfully");
     } catch (error) {
+      toast.dismiss();
       toast.error("Failed to export PDF");
     }
   };
@@ -103,13 +111,19 @@ const CustomerJourneyMapsTool = () => {
     toast.loading("Generating PNG...");
     
     try {
+      // Dynamically import html2canvas only when needed
+      const html2canvasModule = await import('html2canvas');
+      const html2canvas = html2canvasModule.default;
+      
       const imgData = await html2canvas(canvas, { scale: 2 });
       const link = document.createElement('a');
       link.download = `${currentMap?.name || 'journey-map'}.png`;
       link.href = imgData.toDataURL();
       link.click();
+      toast.dismiss();
       toast.success("PNG exported successfully");
     } catch (error) {
+      toast.dismiss();
       toast.error("Failed to export PNG");
     }
   };

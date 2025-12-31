@@ -1,11 +1,10 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useCashFlow } from '@/contexts/CashFlowContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Download, TrendingUp, TrendingDown, DollarSign, Activity } from 'lucide-react';
+import { Download, TrendingUp, TrendingDown, DollarSign, Activity, Loader2 } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import * as XLSX from 'xlsx';
-
+import { toast } from 'sonner';
 const CashFlowDashboard = () => {
   const { transactions, startingBalance } = useCashFlow();
 
@@ -112,36 +111,50 @@ const CashFlowDashboard = () => {
 
   const COLORS = ['hsl(var(--biz-green))', 'hsl(var(--biz-copper))', 'hsl(var(--biz-lime))', 'hsl(var(--biz-navy))', 'hsl(var(--biz-citrine))'];
 
-  const exportToExcel = () => {
-    const wb = XLSX.utils.book_new();
+  const [isExporting, setIsExporting] = useState(false);
 
-    // Summary sheet
-    const summaryData = [
-      ['Cash Flow Summary', ''],
-      ['Current Balance', metrics.currentBalance],
-      ['Total Income', metrics.totalIncome],
-      ['Total Expenses', metrics.totalExpenses],
-      ['Net Cash Flow', metrics.netCashFlow],
-      ['30-Day Forecast', metrics.forecast30Day],
-      ['Burn Rate', metrics.burnRate],
-    ];
-    const summarySheet = XLSX.utils.aoa_to_sheet(summaryData);
-    XLSX.utils.book_append_sheet(wb, summarySheet, 'Summary');
+  const exportToExcel = async () => {
+    setIsExporting(true);
+    try {
+      // Dynamically import xlsx only when needed
+      const XLSX = await import('xlsx');
+      
+      const wb = XLSX.utils.book_new();
 
-    // Transactions sheet
-    const txnData = transactions.map(t => ({
-      Date: t.date,
-      Type: t.type,
-      Amount: t.amount,
-      Category: t.category,
-      Description: t.description,
-      Status: t.status || '',
-      Vendor: t.vendor || '',
-    }));
-    const txnSheet = XLSX.utils.json_to_sheet(txnData);
-    XLSX.utils.book_append_sheet(wb, txnSheet, 'Transactions');
+      // Summary sheet
+      const summaryData = [
+        ['Cash Flow Summary', ''],
+        ['Current Balance', metrics.currentBalance],
+        ['Total Income', metrics.totalIncome],
+        ['Total Expenses', metrics.totalExpenses],
+        ['Net Cash Flow', metrics.netCashFlow],
+        ['30-Day Forecast', metrics.forecast30Day],
+        ['Burn Rate', metrics.burnRate],
+      ];
+      const summarySheet = XLSX.utils.aoa_to_sheet(summaryData);
+      XLSX.utils.book_append_sheet(wb, summarySheet, 'Summary');
 
-    XLSX.writeFile(wb, `CashFlow_${new Date().toISOString().split('T')[0]}.xlsx`);
+      // Transactions sheet
+      const txnData = transactions.map(t => ({
+        Date: t.date,
+        Type: t.type,
+        Amount: t.amount,
+        Category: t.category,
+        Description: t.description,
+        Status: t.status || '',
+        Vendor: t.vendor || '',
+      }));
+      const txnSheet = XLSX.utils.json_to_sheet(txnData);
+      XLSX.utils.book_append_sheet(wb, txnSheet, 'Transactions');
+
+      XLSX.writeFile(wb, `CashFlow_${new Date().toISOString().split('T')[0]}.xlsx`);
+      toast.success('Excel workbook downloaded successfully');
+    } catch (error) {
+      console.error('Export error:', error);
+      toast.error('Failed to export Excel workbook');
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   return (
@@ -223,9 +236,9 @@ const CashFlowDashboard = () => {
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-3">
-            <Button onClick={exportToExcel} className="bg-biz-green hover:bg-biz-green/90">
-              <Download className="w-4 h-4 mr-2" />
-              Download Excel Workbook
+            <Button onClick={exportToExcel} disabled={isExporting} className="bg-biz-green hover:bg-biz-green/90">
+              {isExporting ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Download className="w-4 h-4 mr-2" />}
+              {isExporting ? 'Preparing...' : 'Download Excel Workbook'}
             </Button>
           </div>
         </CardContent>

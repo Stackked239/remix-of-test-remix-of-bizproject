@@ -298,6 +298,14 @@ const Search = () => {
     blogs: [
       {
         type: "Blog Post",
+        title: "Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth",
+        excerpt: "Small business marketing challenges, SMB marketing strategy, marketing for small businesses, customer acquisition, marketing mistakes, lead generation, marketing rhythm, positioning strategy, content marketing SMB, 90-day marketing plan, scattered marketing tactics, strategic marketing, marketing focus, marketing priorities, marketing ROI, brand positioning, customer targeting, marketing funnel, inbound marketing, outbound marketing, marketing consistency, marketing framework, sales and marketing alignment.",
+        url: "/blog/overcoming-marketing-challenges-small-business",
+        icon: FileText,
+        category: "Operations, Business Leadership, Business Strategy, Sales & Marketing"
+      },
+      {
+        type: "Blog Post",
         title: "What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit",
         excerpt: "Business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model. Learn what healthy business scores look like at each growth stage.",
         url: "/blog/business-health-scores-by-stage",

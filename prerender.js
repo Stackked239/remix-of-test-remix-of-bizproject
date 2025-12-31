@@ -60,7 +60,8 @@ async function prerender() {
   app.use(express.static(distPath));
   
   // Handle SPA routing - serve index.html for all routes
-  app.get('*', (req, res) => {
+  // Express 5 requires named wildcard parameters
+  app.get('/{*splat}', (req, res) => {
     res.sendFile(path.join(distPath, 'index.html'));
   });
   

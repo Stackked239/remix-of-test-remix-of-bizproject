@@ -79,13 +79,13 @@ const Concerns = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      // Use edge function for secure database insert
-      const response = await supabase.functions.invoke('send-notification', {
-        body: {
-          type: 'client_concern',
-          email: data.email,
+      // Store in database
+      const { error } = await supabase.from('email_subscribers').insert({
+        email: data.email,
+        source: 'client_concerns',
+        metadata: {
           fullName: data.fullName,
-          company: data.companyName,
+          companyName: data.companyName,
           accountEmail: data.accountEmail,
           concernType: data.concernType,
           description: data.description,
@@ -96,13 +96,7 @@ const Concerns = () => {
         },
       });
 
-      if (response.error) {
-        throw new Error(response.error.message || 'Failed to submit concern');
-      }
-
-      if (!response.data?.success) {
-        throw new Error(response.data?.error || 'Failed to submit concern');
-      }
+      if (error) throw error;
 
       setIsSuccess(true);
       form.reset();
@@ -112,23 +106,13 @@ const Concerns = () => {
         title: 'Concern Submitted Successfully',
         description: 'Our Client Success team will reach out within 1-2 business days.',
       });
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error submitting concern:', error);
-      
-      // Handle rate limiting
-      if (error.message?.includes('Too many requests')) {
-        toast({
-          title: 'Please wait',
-          description: 'You have submitted too many requests. Please try again in an hour.',
-          variant: 'destructive',
-        });
-      } else {
-        toast({
-          title: 'Submission Error',
-          description: 'There was an issue submitting your concern. Please try again or email us directly.',
-          variant: 'destructive',
-        });
-      }
+      toast({
+        title: 'Submission Error',
+        description: 'There was an issue submitting your concern. Please try again or email us directly.',
+        variant: 'destructive',
+      });
     } finally {
       setIsSubmitting(false);
     }

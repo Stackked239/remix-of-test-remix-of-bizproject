@@ -50,6 +50,32 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 
 ## ✅ Post-Deployment Verification
 
+### Automated Verification Script
+
+Run the deployment verification script to automatically check if the site renders properly:
+
+```bash
+# Test production site
+node verify-deployment.js
+
+# Test staging
+node verify-deployment.js https://staging.bizhealth.ai
+
+# Test local dev
+node verify-deployment.js http://localhost:8080
+```
+
+The script checks:
+- ✅ HTTP status (200 OK)
+- ✅ Critical DOM elements (#root, nav, h1, etc.)
+- ✅ Page content is not blank (NO_FCP prevention)
+- ✅ Expected content patterns (BizHealth, business, etc.)
+- ✅ JavaScript errors
+- ✅ First Contentful Paint timing
+- 📸 Saves a screenshot for debugging
+
+### Manual Verification
+
 ### 1. Check Pre-rendered Pages
 
 Visit these URLs and check "View Page Source" (Ctrl+U):

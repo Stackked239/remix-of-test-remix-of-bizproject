@@ -36,37 +36,33 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries - loaded immediately
-          if (id.includes('react-dom') || id.includes('react/')) {
-            return 'react-core';
-          }
-          // Router - needed for navigation
-          if (id.includes('react-router')) {
-            return 'router';
-          }
-          // UI components library - split out for caching
-          if (id.includes('@radix-ui')) {
-            return 'ui-radix';
-          }
-          // Query library
-          if (id.includes('@tanstack/react-query')) {
-            return 'query';
-          }
-          // Charting libraries - only loaded when needed
-          if (id.includes('recharts') || id.includes('chart.js') || id.includes('react-chartjs')) {
-            return 'charts';
-          }
-          // PDF/document generation - only loaded when needed
-          if (id.includes('jspdf') || id.includes('html2canvas') || id.includes('docx')) {
-            return 'documents';
-          }
-          // Drag and drop - only loaded for specific tools
-          if (id.includes('@dnd-kit')) {
-            return 'dnd';
-          }
-          // Supabase
-          if (id.includes('@supabase')) {
-            return 'supabase';
+          // Vendor chunk - group major dependencies together to avoid circular issues
+          if (id.includes('node_modules')) {
+            // Core React must stay together with react-dom
+            if (id.includes('node_modules/react-dom') || 
+                id.includes('node_modules/react/') ||
+                id.includes('node_modules/scheduler')) {
+              return 'vendor-react';
+            }
+            // Router
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            // UI components library
+            if (id.includes('@radix-ui')) {
+              return 'vendor-radix';
+            }
+            // Supabase
+            if (id.includes('@supabase')) {
+              return 'vendor-supabase';
+            }
+            // Large optional libraries - lazy loaded
+            if (id.includes('recharts') || id.includes('chart.js') || id.includes('react-chartjs')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('jspdf') || id.includes('html2canvas') || id.includes('docx')) {
+              return 'vendor-documents';
+            }
           }
         },
       },

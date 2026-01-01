@@ -81,25 +81,25 @@ const Reports = () => {
       alaCarte: 'Included'
     },
     {
-      report: 'Executive Report',
+      report: 'Executive Dashboard (client portal)',
       essentials: false,
       growth: 'optional',
-      enterprise: 'optional',
-      alaCarte: '$299'
+      enterprise: true,
+      alaCarte: '$99'
     },
     {
-      report: 'Managers\' Report',
+      report: 'Managers Reports (5)',
       essentials: 'optional',
       growth: 'optional',
       enterprise: true,
-      alaCarte: '$199 each'
+      alaCarte: '$199'
     },
     {
       report: 'Employees\' Report',
       essentials: 'optional',
       growth: 'optional',
       enterprise: true,
-      alaCarte: '$149'
+      alaCarte: '$29'
     }
   ];
 

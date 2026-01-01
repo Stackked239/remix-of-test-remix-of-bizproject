@@ -110,7 +110,7 @@ const About = () => {
                   Rooted in Transformation, not Transactions
                 </h1>
                 <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
-                  Empowering SMB leaders with the insights and tools to unlock their business's full potential
+                  Empowering business leaders with the insights and tools to unlock their business's full potential
                 </p>
               </div>
             </div>

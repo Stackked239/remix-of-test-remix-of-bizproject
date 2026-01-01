@@ -56,9 +56,11 @@ import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboard
 import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
+import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/happy-new-year-2026-year-of-growth": happyNewYear2026Image,
   "/blog/overcoming-marketing-challenges-small-business": overcomingMarketingChallengesImage,
   "/blog/employee-retention-company-culture-leadership": employeeRetentionLeadershipImage,
   "/blog/business-health-scores-by-stage": businessHealthScoresStagesImage,

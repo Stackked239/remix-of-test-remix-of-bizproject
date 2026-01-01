@@ -89,7 +89,7 @@ const Reports = () => {
     },
     {
       report: 'Managers Reports (5)',
-      essentials: 'optional',
+      essentials: false,
       growth: 'optional',
       enterprise: true,
       alaCarte: '$199'

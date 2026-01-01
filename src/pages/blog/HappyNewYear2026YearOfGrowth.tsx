@@ -146,11 +146,11 @@ const HappyNewYear2026YearOfGrowth = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="min-h-screen bg-background pt-8 md:pt-12">
+      <main className="min-h-screen bg-background pt-28 md:pt-32">
         {/* Hero Section */}
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6 animate-fade-in">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
             <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
@@ -159,55 +159,86 @@ const HappyNewYear2026YearOfGrowth = () => {
           </nav>
 
           {/* Categories */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            <Link to="/blog/business-strategy" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
+          <div className="flex flex-wrap gap-3 mb-6 animate-fade-in">
+            <Link 
+              to="/blog?category=Business+Strategy" 
+              className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-all hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.85) 100%)',
+                color: 'white'
+              }}
+            >
               Business Strategy
             </Link>
-            <Link to="/blog/business-leadership" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
+            <Link 
+              to="/blog?category=Business+Leadership" 
+              className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-all hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, hsl(var(--biz-green) / 0.85) 100%)',
+                color: 'white'
+              }}
+            >
               Business Leadership
             </Link>
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+          <h1 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight animate-fade-in"
+            style={{ 
+              color: 'hsl(var(--biz-navy))',
+              textShadow: '0 2px 4px rgba(0,0,0,0.05)'
+            }}
+          >
             Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow
           </h1>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-8">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-10 animate-fade-in">
             <div className="flex items-center gap-2">
               <img 
                 src={authorImage} 
                 alt="BizHealth.ai Research Team - business strategy and growth experts" 
-                className="w-8 h-8 rounded-full object-cover"
+                className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20"
                 loading="lazy"
               />
               <span>By <strong className="text-foreground">BizHealth.ai Research Team</strong></span>
             </div>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               <span>January 1, 2026</span>
             </div>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
             <div className="flex items-center gap-1">
               <Clock className="w-4 h-4" />
               <span>10 min read</span>
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative rounded-2xl overflow-hidden mb-10">
-            <img 
-              src={heroImage} 
-              alt="Diverse business team celebrating New Year 2026 with champagne glasses, holding Happy New Year banner in warehouse office - small business growth celebration"
-              className="w-full h-auto object-cover"
-              loading="eager"
+          {/* Hero Image - No overlay, with glow effect */}
+          <div className="relative group mb-12">
+            <div 
+              className="absolute -inset-2 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+              style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))' }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="flex items-center gap-2 text-white">
-                <Sparkles className="w-5 h-5 text-yellow-400" />
-                <span className="font-medium">Here's to 2026 – Your Year of Intentional Growth</span>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={heroImage} 
+                alt="Diverse business team celebrating New Year 2026 with champagne glasses, holding Happy New Year banner in warehouse office - small business growth celebration"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="eager"
+              />
+            </div>
+            <div 
+              className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-3 rounded-full shadow-lg flex items-center gap-2"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))',
+                color: 'white'
+              }}
+            >
+              <Sparkles className="w-5 h-5 text-yellow-300" />
+              <span className="font-semibold text-sm">2026 – Your Year of Intentional Growth</span>
             </div>
           </div>
 

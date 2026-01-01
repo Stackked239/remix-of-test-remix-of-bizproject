@@ -31,6 +31,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow",
+    excerpt: "Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable SMB success and build momentum now.",
+    author: "BizHealth.ai Research Team",
+    date: "January 1, 2026",
+    readTime: "10 min read",
+    category: "Business Strategy, Business Leadership",
+    slug: "/blog/happy-new-year-2026-year-of-growth",
+    imageUrl: "/assets/happy-new-year-2026-business-growth.jpg",
+    altText: "Diverse business team celebrating New Year 2026 with champagne glasses holding Happy New Year banner in warehouse office - small business growth celebration",
+    keywords: "small business growth 2026, new year business strategy, 2026 business planning, SMB growth strategies, business lessons 2025, sustainable growth, intentional growth, business momentum, business resilience, year of growth, business leadership, strategic planning, new year goals, business reflection, growth mindset, entrepreneurship 2026"
+  },
+  {
     title: "Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth",
     excerpt: "Learn how to overcome small business marketing challenges with strategic focus. Discover the 3 marketing mistakes SMBs make and a proven 90-day plan for growth.",
     author: "BizHealth.ai Research Team",

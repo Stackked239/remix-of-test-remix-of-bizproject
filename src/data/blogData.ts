@@ -24,6 +24,7 @@ export const featuredPost = {
   category: "Business Strategy",
   featured: true,
   slug: "/blog/complete-guide-business-health-assessment-2026",
+  imageUrl: "/assets/business-health-assessment-guide-2026.png",
   altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning",
   keywords: "business health assessment, 2026 business planning, financial health, operational efficiency, team culture, strategic alignment, business growth, SMB assessment, company analysis, business evaluation, health check, diagnostic, comprehensive assessment, business wellness, organizational health, performance evaluation"
 };

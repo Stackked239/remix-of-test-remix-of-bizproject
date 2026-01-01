@@ -248,18 +248,18 @@ const GlobalNavigation = () => {
                 <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
                   <DropdownMenuItem asChild>
                     <Link 
-                      to="/biztools"
-                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
-                    >
-                      <span className="font-medium text-biz-navy">BizTools - Tools & Resources</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link 
                       to="/blog"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
                       <span className="font-medium text-biz-navy">Business Insights & Strategies</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/biztools"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">BizTools - Tools & Resources</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -421,11 +421,11 @@ const GlobalNavigation = () => {
                 <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                   Tools
                 </Link>
-                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  BizTools - Tools & Resources
-                </Link>
                 <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Business Insights & Strategies
+                </Link>
+                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  BizTools - Tools & Resources
                 </Link>
                 <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Business Terms Glossary

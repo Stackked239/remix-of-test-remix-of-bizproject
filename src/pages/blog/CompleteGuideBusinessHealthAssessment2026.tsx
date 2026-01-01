@@ -41,63 +41,101 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-40 pb-16">
+        <article className="pt-24 pb-16">
           {/* Hero Section */}
-          <div className="relative py-16" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
-            <div className="container mx-auto px-4">
+          <div className="relative py-20 overflow-hidden">
+            {/* Background gradient */}
+            <div 
+              className="absolute inset-0"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(var(--biz-navy) / 0.08) 0%, hsl(var(--biz-green) / 0.05) 50%, hsl(var(--biz-navy) / 0.03) 100%)'
+              }}
+            />
+            {/* Decorative elements */}
+            <div 
+              className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20"
+              style={{ background: 'hsl(var(--biz-green))' }}
+            />
+            <div 
+              className="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-3xl opacity-10"
+              style={{ background: 'hsl(var(--biz-navy))' }}
+            />
+            
+            <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto">
                 {/* Categories */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mb-8 animate-fade-in">
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.85) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Strategy
                   </span>
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, hsl(var(--biz-green) / 0.85) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Intelligence
                   </span>
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-navy) / 0.9) 0%, hsl(var(--biz-green) / 0.8) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Leadership
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <h1 
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in"
+                  style={{ 
+                    color: 'hsl(var(--biz-navy))',
+                    textShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                  }}
+                >
                   The Complete Guide to Business Health Assessment for 2026
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
-                  <span>By {author}</span>
-                  <span>•</span>
+                <div 
+                  className="flex flex-wrap items-center gap-4 text-sm mb-10 animate-fade-in"
+                  style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}
+                >
+                  <span className="font-medium">By {author}</span>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <time dateTime={publishDate}>November 24, 2025</time>
-                  <span>•</span>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <span>15 min read</span>
                 </div>
 
-                <img
-                  src={heroImage}
-                  alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
-                  className="w-full rounded-lg shadow-xl mb-8"
-                  loading="eager"
-                  style={{ opacity: 0.85 }}
-                />
+                <div className="relative group">
+                  <div 
+                    className="absolute -inset-1 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500"
+                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))' }}
+                  />
+                  <img
+                    src={heroImage}
+                    alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
+                    className="relative w-full rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
+                    loading="eager"
+                  />
+                </div>
 
-                <p className="text-xl leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
+                <p 
+                  className="text-xl md:text-2xl leading-relaxed font-medium animate-fade-in"
+                  style={{ 
+                    color: 'hsl(var(--biz-navy))',
+                    borderLeft: '4px solid hsl(var(--biz-green))',
+                    paddingLeft: '1rem'
+                  }}
+                >
                   Your Strategic Roadmap for the Year Ahead
                 </p>
               </div>

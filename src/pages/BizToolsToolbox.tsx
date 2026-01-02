@@ -15,7 +15,8 @@ import {
   DollarSign,
   Users,
   BarChart3,
-  Settings
+  Settings,
+  Calculator
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
@@ -50,7 +51,7 @@ const BizToolsToolbox = () => {
   const toolCategories = [
     {
       title: "Financial Management",
-      tools: ["Cash Flow Tracker", "Budget Planning Template", "Free ROI Calculator", "Financial Dashboard"],
+      tools: ["Cash Flow Tracker", "Budget Planning Template", "ROI Calculator", "Financial Dashboard"],
       icon: DollarSign,
       color: "text-biz-copper",
       bgColor: "bg-biz-copper/10",
@@ -273,7 +274,7 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "Free ROI Calculator";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
@@ -284,7 +285,7 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/customer-journey-maps-tool"
                           : tool === "Innovation Strategy Builder"
                           ? "/biztools/toolbox/innovation-strategy-tool"
-                          : tool === "Free ROI Calculator"
+                          : tool === "ROI Calculator"
                           ? "/biztools/toolbox/free-roi-calculator"
                           : "#";
                         const content = (
@@ -445,6 +446,15 @@ const BizToolsToolbox = () => {
                 description: "Word-for-word scripts for negotiating with vendors and clients when cash is tight.",
                 downloadUrl: "/downloads/Emergency_Brake_Script_Kit_-_BizHealthai.pdf",
                 icon: Users
+              },
+              {
+                title: "ROI Calculator",
+                label: "FREE ONLINE TOOL",
+                format: "Interactive Web Tool",
+                description: "Calculate ROI for equipment, new hires, or marketing campaigns in plain English.",
+                linkUrl: "/biztools/toolbox/free-roi-calculator",
+                icon: Calculator,
+                isLink: true
               }
             ].map((tool, index) => {
               const IconComponent = tool.icon;
@@ -475,16 +485,29 @@ const BizToolsToolbox = () => {
                     <CardDescription className="font-open-sans mb-4 text-sm">
                       {tool.description}
                     </CardDescription>
-                    <Button 
-                      asChild
-                      variant="outline" 
-                      className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
-                    >
-                      <a href={tool.downloadUrl} download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Download Free
-                      </a>
-                    </Button>
+                    {'isLink' in tool && tool.isLink ? (
+                      <Button 
+                        asChild
+                        variant="outline" 
+                        className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
+                      >
+                        <Link to={tool.linkUrl}>
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          Use Free Tool
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button 
+                        asChild
+                        variant="outline" 
+                        className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
+                      >
+                        <a href={'downloadUrl' in tool ? tool.downloadUrl : '#'} download>
+                          <Download className="w-4 h-4 mr-2" />
+                          Download Free
+                        </a>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               );

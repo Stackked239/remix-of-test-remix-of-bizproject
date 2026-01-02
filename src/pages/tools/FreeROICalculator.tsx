@@ -4,6 +4,7 @@ import { RotateCcw } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import ScenarioSelector from '@/components/roi-calculator/ScenarioSelector';
 import EquipmentForm from '@/components/roi-calculator/EquipmentForm';
 import HireForm from '@/components/roi-calculator/HireForm';
@@ -92,26 +93,23 @@ const FreeROICalculator = () => {
         <link rel="canonical" href="https://bizhealth.ai/biztools/toolbox/free-roi-calculator" />
       </Helmet>
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
       <main className="min-h-screen bg-biz-cream">
         {/* Header */}
-        <section className="bg-biz-navy text-white py-12 md:py-16">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <span className="inline-block px-3 py-1 bg-biz-citrine text-biz-navy text-sm font-semibold rounded-full mb-4">
-                  Part of BizTools
-                </span>
-                <h1 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
-                  ROI Calculator
-                </h1>
-                <p className="font-montserrat text-xl md:text-2xl text-biz-citrine">
-                  Stop Guessing, Start Growing.
-                </p>
-              </div>
-            </div>
-            <p className="mt-6 font-open-sans text-lg md:text-xl text-white/90 max-w-2xl">
+        <section className="bg-biz-navy text-white pt-40 pb-12 md:pb-16" style={{ paddingTop: '180px' }}>
+          <div className="container max-w-6xl mx-auto px-4 text-center">
+            <span className="inline-block px-3 py-1 bg-biz-citrine text-biz-navy text-sm font-semibold rounded-full mb-4">
+              Part of BizTools
+            </span>
+            <h1 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+              ROI Calculator
+            </h1>
+            <p className="font-montserrat text-xl md:text-2xl text-biz-citrine mb-6">
+              Stop Guessing, Start Growing.
+            </p>
+            <p className="font-open-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
               Figure out if a new investment makes sense — in plain English, in 5 minutes.
             </p>
           </div>

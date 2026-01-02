@@ -108,12 +108,7 @@ export default defineConfig(({ mode }) => ({
     // Split chunks for better caching and reduced initial bundle
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Vendor chunks - separate heavy dependencies
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-tooltip', '@radix-ui/react-popover', '@radix-ui/react-dropdown-menu'],
-          'vendor-charts': ['recharts', 'chart.js', 'react-chartjs-2'],
-        },
+        manualChunks: undefined, // Let Vite handle chunking automatically
       },
     },
     // Optimize chunk size

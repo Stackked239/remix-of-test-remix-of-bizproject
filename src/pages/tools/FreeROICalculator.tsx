@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
@@ -144,10 +144,16 @@ const FreeROICalculator = () => {
                   <CampaignForm inputs={campaignInputs} onChange={setCampaignInputs} />
                 )}
 
-                <div className="mt-6 pt-6 border-t border-border">
-                  <Button variant="ghost" onClick={handleReset} className="text-muted-foreground hover:text-biz-navy">
+                <div className="mt-6 pt-6 border-t border-border flex flex-wrap items-center gap-4">
+                  <Button variant="ghost" onClick={handleReset} className="text-destructive hover:text-destructive hover:bg-destructive/10">
                     <RotateCcw className="w-4 h-4 mr-2" />
                     Start Over
+                  </Button>
+                  <Button variant="ghost" asChild className="text-muted-foreground hover:text-biz-navy">
+                    <Link to="/biztools/toolbox">
+                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      Exit, Return to BizTools
+                    </Link>
                   </Button>
                 </div>
               </div>

@@ -8,8 +8,8 @@ interface PDFExportOptions {
   inputs: EquipmentInputs | HireInputs | CampaignInputs;
 }
 
-// Helper to load image as base64
-const loadImageAsBase64 = (url: string): Promise<string> => {
+// Helper to load image as base64 with dimensions
+const loadImageAsBase64 = (url: string): Promise<{ base64: string; width: number; height: number }> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.crossOrigin = 'anonymous';
@@ -20,7 +20,11 @@ const loadImageAsBase64 = (url: string): Promise<string> => {
       const ctx = canvas.getContext('2d');
       if (ctx) {
         ctx.drawImage(img, 0, 0);
-        resolve(canvas.toDataURL('image/jpeg'));
+        resolve({
+          base64: canvas.toDataURL('image/jpeg'),
+          width: img.width,
+          height: img.height
+        });
       } else {
         reject(new Error('Could not get canvas context'));
       }
@@ -52,11 +56,12 @@ export async function generateROIPdf(options: PDFExportOptions): Promise<void> {
   
   // Try to load and add logo image
   try {
-    const logoBase64 = await loadImageAsBase64('/assets/bizhealth-logo-pdf.jpg');
-    // Original logo aspect ratio (maintain proportions) - logo is wide, ~5:1 ratio approximately
-    const logoHeight = 10;
-    const logoWidth = 45; // Approximate width based on logo aspect ratio
-    doc.addImage(logoBase64, 'JPEG', 20, 8, logoWidth, logoHeight);
+    const logoData = await loadImageAsBase64('/assets/bizhealth-logo-pdf.jpg');
+    // Calculate width based on actual aspect ratio to prevent distortion
+    const targetHeight = 10;
+    const aspectRatio = logoData.width / logoData.height;
+    const targetWidth = targetHeight * aspectRatio;
+    doc.addImage(logoData.base64, 'JPEG', 20, 8, targetWidth, targetHeight);
   } catch (error) {
     // Fallback to text if image fails to load
     doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);

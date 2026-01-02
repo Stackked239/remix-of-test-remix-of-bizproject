@@ -101,7 +101,7 @@ const NextSteps: React.FC<NextStepsProps> = ({ scenario, onDownloadPDF }) => {
               to="/bizguides"
               className="text-biz-navy hover:text-biz-teal underline-offset-4 hover:underline font-open-sans"
             >
-              → Book a free 15-minute call with BizGuides
+              → Book a 30-minute call with BizGuides
             </Link>
           </div>
         </div>

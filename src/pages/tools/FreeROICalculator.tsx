@@ -30,6 +30,7 @@ const FreeROICalculator = () => {
   const [equipmentInputs, setEquipmentInputs] = useState<EquipmentInputs>({
     equipmentCost: 0,
     annualSavings: 0,
+    annualRevenue: 0,
     usefulYears: 5,
   });
 
@@ -62,7 +63,7 @@ const FreeROICalculator = () => {
 
   const handleReset = () => {
     if (confirm('Are you sure you want to start over? This will clear all your inputs.')) {
-      setEquipmentInputs({ equipmentCost: 0, annualSavings: 0, usefulYears: 5 });
+      setEquipmentInputs({ equipmentCost: 0, annualSavings: 0, annualRevenue: 0, usefulYears: 5 });
       setHireInputs({ annualSalary: 0, expectedRevenue: 0, profitMargin: 30, onboardingCost: 0, payrollBenefits: 25, rampUpMonths: 3 });
       setCampaignInputs({ campaignCost: 0, expectedRevenue: 0, profitMargin: 35, repeatRevenue: 0 });
       setScenario('equipment');

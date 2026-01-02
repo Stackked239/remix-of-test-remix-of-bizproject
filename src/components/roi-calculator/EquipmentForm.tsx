@@ -46,15 +46,15 @@ const EquipmentForm: React.FC<EquipmentFormProps> = ({ inputs, onChange }) => {
             How much will this save you each year?
           </label>
           <InfoBubble title="What Counts as 'Savings'?">
-            <p className="mb-2">Think about what this equipment will do for you:</p>
+            <p className="mb-2">Think about costs this equipment will reduce:</p>
             <ul className="list-disc list-inside space-y-1 text-sm">
               <li>Labor costs you won't pay anymore (hours × hourly rate)</li>
-              <li>Time saved that you can use to make more money</li>
               <li>Materials you won't waste</li>
-              <li>New products you can make and sell</li>
+              <li>Outsourcing fees you'll eliminate</li>
+              <li>Maintenance/repair costs of old equipment</li>
             </ul>
-            <p className="mt-2 text-biz-citrine">Example: If a machine saves 10 hours per week and you charge $50/hour for that work, that's $26,000 per year in savings.</p>
-            <p className="mt-2 italic">Not Sure? Start with your best guess. You can adjust it.</p>
+            <p className="mt-2 text-biz-citrine">Example: If a machine saves 10 hours per week at $25/hour labor, that's $13,000 per year in savings.</p>
+            <p className="mt-2 italic">Not Sure? Start with $0 and focus on the revenue field instead.</p>
           </InfoBubble>
         </div>
         <CurrencyInput
@@ -62,7 +62,34 @@ const EquipmentForm: React.FC<EquipmentFormProps> = ({ inputs, onChange }) => {
           label="Annual Savings"
           value={inputs.annualSavings}
           onChange={(value) => onChange({ ...inputs, annualSavings: value })}
-          placeholder="15,000"
+          placeholder="10,000"
+        />
+      </div>
+
+      {/* Annual Revenue */}
+      <div>
+        <div className="flex items-center gap-2 mb-2">
+          <label htmlFor="annualRevenue" className="font-montserrat font-semibold text-biz-navy">
+            How much NEW revenue will this generate each year?
+          </label>
+          <InfoBubble title="What Counts as 'New Revenue'?">
+            <p className="mb-2">Think about money this equipment will bring in:</p>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              <li>New services you can offer</li>
+              <li>More products you can produce and sell</li>
+              <li>Jobs you'll win because you now have this capability</li>
+              <li>Higher prices you can charge (faster delivery, better quality)</li>
+            </ul>
+            <p className="mt-2 text-biz-citrine">Example: A new pizza oven lets you bake 20 more pizzas/day × $15 profit × 300 days = $90,000/year in new revenue.</p>
+            <p className="mt-2 italic">Not Sure? Start with $0 and focus on savings instead.</p>
+          </InfoBubble>
+        </div>
+        <CurrencyInput
+          id="annualRevenue"
+          label="Annual Revenue"
+          value={inputs.annualRevenue}
+          onChange={(value) => onChange({ ...inputs, annualRevenue: value })}
+          placeholder="20,000"
         />
       </div>
 

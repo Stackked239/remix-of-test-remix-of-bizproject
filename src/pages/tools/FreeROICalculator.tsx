@@ -149,11 +149,19 @@ const FreeROICalculator = () => {
                 )}
 
                 <div className="mt-6 pt-6 border-t border-border flex flex-wrap items-center gap-4">
-                  <Button variant="ghost" onClick={handleReset} className="text-destructive hover:text-destructive hover:bg-destructive/10">
+                  <Button 
+                    variant="ghost" 
+                    onClick={handleReset} 
+                    className="text-destructive bg-destructive/10 hover:bg-destructive hover:text-white transition-colors"
+                  >
                     <RotateCcw className="w-4 h-4 mr-2" />
                     Start Over
                   </Button>
-                  <Button variant="ghost" asChild className="text-muted-foreground hover:text-biz-navy">
+                  <Button 
+                    variant="ghost" 
+                    asChild 
+                    className="text-biz-navy bg-biz-navy/5 hover:bg-biz-navy hover:text-white transition-colors"
+                  >
                     <Link to="/biztools/toolbox">
                       <ArrowLeft className="w-4 h-4 mr-2" />
                       Exit, Return to BizTools

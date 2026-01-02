@@ -5,6 +5,7 @@ export type ScenarioType = 'equipment' | 'hire' | 'campaign';
 export interface EquipmentInputs {
   equipmentCost: number;
   annualSavings: number;
+  annualRevenue: number;
   usefulYears: number;
 }
 
@@ -41,21 +42,23 @@ export interface CalculationResult {
 
 // Equipment Investment Calculations
 export function calculateEquipmentROI(inputs: EquipmentInputs): CalculationResult {
-  const { equipmentCost, annualSavings, usefulYears } = inputs;
+  const { equipmentCost, annualSavings, annualRevenue, usefulYears } = inputs;
   
-  if (equipmentCost <= 0 || annualSavings <= 0 || usefulYears <= 0) {
+  const annualBenefit = annualSavings + annualRevenue;
+  
+  if (equipmentCost <= 0 || annualBenefit <= 0 || usefulYears <= 0) {
     return getEmptyResult();
   }
 
-  const totalSavings = annualSavings * usefulYears;
-  const netGain = totalSavings - equipmentCost;
-  const roi = ((totalSavings - equipmentCost) / equipmentCost) * 100;
+  const totalBenefit = annualBenefit * usefulYears;
+  const netGain = totalBenefit - equipmentCost;
+  const roi = ((totalBenefit - equipmentCost) / equipmentCost) * 100;
   const annualROI = roi / usefulYears;
-  const breakeven = equipmentCost / annualSavings;
+  const breakeven = equipmentCost / annualBenefit;
   
-  const year1Impact = annualSavings - equipmentCost;
-  const year2Total = (annualSavings * 2) - equipmentCost;
-  const fiveYearTotal = usefulYears >= 5 ? (annualSavings * 5) - equipmentCost : undefined;
+  const year1Impact = annualBenefit - equipmentCost;
+  const year2Total = (annualBenefit * 2) - equipmentCost;
+  const fiveYearTotal = usefulYears >= 5 ? (annualBenefit * 5) - equipmentCost : undefined;
 
   const isGood = annualROI > 20;
   const isNeutral = annualROI >= 0 && annualROI <= 20;

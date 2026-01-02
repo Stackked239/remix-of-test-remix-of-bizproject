@@ -61,16 +61,16 @@ export function generateROIPdf(options: PDFExportOptions): void {
   
   yPos += 20;
 
-  // Main Result - wrap long recommendation text
+  // Main Result - wrap long recommendation text (use ASCII-safe icons)
   doc.setTextColor(textDark[0], textDark[1], textDark[2]);
   doc.setFontSize(12);
   doc.setFont('helvetica', 'bold');
   
-  const resultIcon = result.isGood ? '✓' : result.isNeutral ? '⚠' : '✗';
+  const resultIcon = result.isGood ? '[YES]' : result.isNeutral ? '[MAYBE]' : '[NO]';
   const recommendationText = `${resultIcon} ${result.recommendation}`;
   const recommendationLines = doc.splitTextToSize(recommendationText, pageWidth - 40);
   doc.text(recommendationLines, 20, yPos);
-  yPos += recommendationLines.length * 5 + 6;
+  yPos += recommendationLines.length * 5 + 4;
   
   // ROI Value
   const roiColor = result.isGood ? bizGreen : result.isNeutral ? bizYellow : dangerRed;
@@ -102,7 +102,7 @@ export function generateROIPdf(options: PDFExportOptions): void {
   doc.setFont('helvetica', 'normal');
   const explanationLines = doc.splitTextToSize(result.explanation, pageWidth - 40);
   doc.text(explanationLines, 20, yPos);
-  yPos += explanationLines.length * 6 + 10;
+  yPos += explanationLines.length * 5 + 6;
 
   // The Details
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
@@ -132,7 +132,7 @@ export function generateROIPdf(options: PDFExportOptions): void {
     yPos += 7;
   });
 
-  yPos += 10;
+  yPos += 6;
 
   // Input Summary
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
@@ -179,7 +179,7 @@ export function generateROIPdf(options: PDFExportOptions): void {
     yPos += 7;
   });
 
-  yPos += 15;
+  yPos += 8;
 
   // Things to Think About
   if (result.considerations.length > 0) {

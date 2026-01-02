@@ -143,6 +143,13 @@ const Search = () => {
       },
       {
         type: "Tool",
+        title: "Free ROI Calculator - Investment Return Analysis Tool",
+        excerpt: "Free ROI calculator for business investments. Calculate return on investment for new hires, marketing campaigns, and equipment purchases. Compare scenarios, get payback period analysis, and export professional PDF reports. ROI calculator, return on investment, investment calculator, payback period, marketing ROI, hiring ROI, equipment ROI, business investment tool, cost-benefit analysis.",
+        url: "/biztools/toolbox/roi-calculator",
+        icon: Home
+      },
+      {
+        type: "Tool",
         title: "Innovation Strategy Builder - 60-Minute Guided Tool",
         excerpt: "Build a complete innovation strategy in 60 minutes. Free guided tool with 6-step framework: Foundation, Vision, Opportunities, Portfolio (70-20-10 rule), Metrics, and 90-Day Roadmap. Export professional PDF to share with your leadership team. Innovation strategy, strategic planning, innovation framework, innovation tool, 70-20-10 portfolio, innovation roadmap, SMB innovation, business innovation.",
         url: "/biztools/toolbox/innovation-strategy-tool",

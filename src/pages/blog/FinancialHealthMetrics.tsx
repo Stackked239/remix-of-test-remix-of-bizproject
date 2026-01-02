@@ -23,13 +23,14 @@ const FinancialHealthMetrics = () => {
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Financial Health Metrics Every Business Owner Should Track"
         description="A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance."
         image="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg"
         datePublished="2025-09-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/financial-health-metrics"
+        keywords={["financial health metrics", "business KPIs", "profit margins", "cash flow management", "financial ratios"]}
       />
       <GlobalNavigation />
       

@@ -48,7 +48,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Identifying Small & Mid-Size Business Leadership Blind Spots"
         description="A comprehensive guide to understanding and addressing the seven critical leadership blind spots that affect SMB success, with practical strategies for building organizational self-awareness."
         image={`https://bizhealth.ai${heroImage}`}
@@ -56,6 +56,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
+        keywords={["leadership blind spots", "SMB leadership", "business leadership development", "self-awareness business", "management blind spots"]}
       />
 
       <div className="min-h-screen bg-background">

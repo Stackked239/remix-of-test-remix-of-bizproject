@@ -28,7 +28,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Complete Guide to Business Health Assessment for 2026"
         description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth."
         image={`https://bizhealth.ai${heroImage}`}
@@ -36,6 +36,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
+        keywords={["business health assessment 2026", "business health check", "SMB business assessment", "operational efficiency", "financial health metrics"]}
       />
 
       <div className="min-h-screen bg-background">

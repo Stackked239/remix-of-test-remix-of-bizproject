@@ -29,7 +29,7 @@ const ImpactOverInformation = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Pitfall of Information Overload: Why General Advice Falls Short"
         description="In today's data-saturated world, SMB leaders are bombarded with generic guidance that lacks specificity. Learn how AI-powered business health diagnostics can transform your business with actionable insights."
         image={heroImage}
@@ -37,6 +37,7 @@ const ImpactOverInformation = () => {
         dateModified={modifiedDate}
         author="BizHealth Research Team"
         url={articleUrl}
+        keywords={["business health diagnostics", "SMB business assessment", "operational assessment", "AI business analysis", "SMB growth strategies"]}
       />
 
       <div className="min-h-screen bg-background">

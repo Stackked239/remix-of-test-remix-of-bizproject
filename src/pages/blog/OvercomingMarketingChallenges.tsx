@@ -368,7 +368,7 @@ const OvercomingMarketingChallenges = () => {
       />
       
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth"
         description="Learn how to overcome small business marketing challenges with strategic focus. Discover the 3 marketing mistakes SMBs make and a proven 90-day plan for growth."
         image="https://bizhealth.ai/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg"
@@ -376,6 +376,7 @@ const OvercomingMarketingChallenges = () => {
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business"
+        keywords={["small business marketing challenges", "SMB marketing strategy", "marketing for small businesses", "customer acquisition", "90-day marketing plan"]}
       />
 
       <PromotionalBanner />

@@ -30,7 +30,7 @@ const SMBScalingParadox2025 = () => {
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
         description="Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
         image="https://bizhealth.ai/assets/smb-scaling-paradox-2025.jpg"
@@ -38,6 +38,7 @@ const SMBScalingParadox2025 = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/smb-scaling-paradox-2025"
+        keywords={["scaling small business", "SMB growth strategy 2025", "business scaling challenges", "profitable scaling", "sustainable business growth"]}
       />
 
       <div className="min-h-screen bg-background">

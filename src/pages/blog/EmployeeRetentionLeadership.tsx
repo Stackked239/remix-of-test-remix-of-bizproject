@@ -225,7 +225,7 @@ const EmployeeRetentionLeadership = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership"
         description="Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay."
         image="https://bizhealth.ai/assets/employee-retention-day-to-day-leadership-culture.jpg"
@@ -233,6 +233,7 @@ const EmployeeRetentionLeadership = () => {
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/employee-retention-company-culture-leadership"
+        keywords={["employee retention", "company culture", "day-to-day leadership", "team retention", "leadership culture"]}
       />
       
       <GlobalNavigation />

@@ -27,7 +27,7 @@ const HiddenCostsManualProcesses = () => {
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Hidden Costs of Manual Processes in Today's Smaller Businesses"
         description="Discover the hidden costs of manual processes draining SMB profits. Learn how 27% error rates cost $12K+ annually and get actionable tech adoption strategies for 2025."
         image="https://bizhealth.ai/og-hidden-costs-manual-processes.jpg"
@@ -35,6 +35,7 @@ const HiddenCostsManualProcesses = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/hidden-costs-manual-processes"
+        keywords={["manual processes", "business automation", "SMB technology", "operational efficiency", "digital transformation"]}
       />
 
       <PromotionalBanner />

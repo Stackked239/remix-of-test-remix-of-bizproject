@@ -28,7 +28,7 @@ const GrowYourBusinessWithAI = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
         description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth in 2025."
         image={growWithAIHero}
@@ -36,6 +36,7 @@ const GrowYourBusinessWithAI = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
+        keywords={["AI business growth", "small business AI strategy", "SMB AI implementation", "AI-driven growth", "business intelligence AI"]}
       />
 
       <div className="min-h-screen bg-background">

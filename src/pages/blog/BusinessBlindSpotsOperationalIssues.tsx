@@ -28,7 +28,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
         description="Research reveals leaders have visibility into only 4% of operational issues. Learn the 6 blind spots costing SMBs $50K+ annually and systematic strategies to uncover hidden inefficiencies."
         author="BizHealth.ai Research Team"
@@ -36,6 +36,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-business-blind-spots.jpg"
         url="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
+        keywords={["business blind spots", "operational issues leadership", "hidden business inefficiencies", "cash flow timing", "SMB operational audit"]}
       />
       
       <PromotionalBanner />

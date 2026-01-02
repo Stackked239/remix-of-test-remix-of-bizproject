@@ -32,7 +32,7 @@ const BusinessBlindSpots2025 = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)"
         description="Discover the 5 dangerous business blind spots draining SMB profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
         image={blindSpotsHero}
@@ -40,6 +40,7 @@ const BusinessBlindSpots2025 = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={canonicalUrl}
+        keywords={["small business blind spots", "business health assessment", "SMB growth challenges", "operational inefficiencies", "financial management"]}
       />
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">

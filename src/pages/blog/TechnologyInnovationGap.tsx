@@ -36,7 +36,7 @@ const TechnologyInnovationGap = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap That's Destroying Competitive Advantage"
         description="Research reveals the widening innovation gap between SMBs. Learn the 4 pillars of innovation competency and a 90-day framework to close the gap before competitors leave you behind."
         datePublished="2025-12-28"
@@ -44,6 +44,7 @@ const TechnologyInnovationGap = () => {
         author="BizHealth.ai Research Team"
         image="https://bizhealth.ai/assets/technology-innovation-gap-small-business-2025.jpg"
         url="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
+        keywords={["innovation gap small business", "SMB technology innovation", "competitive advantage strategy", "business innovation framework", "innovation readiness assessment"]}
       />
       
       <PromotionalBanner />

@@ -27,7 +27,7 @@ const SmallBusinessStruggles = () => {
         articleAuthor="BizHealth.ai Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
         description="Stop guessing, start growing: discover why fixing the wrong problems holds your business back and how AI-powered diagnostics uncover the real issues."
         image={heroImage}
@@ -35,6 +35,7 @@ const SmallBusinessStruggles = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Team"
         url="https://bizhealth.ai/blog/small-business-struggles"
+        keywords={["business health analysis", "small business diagnostics", "small business pain points", "SMB blind spots", "AI business analytics"]}
       />
       
       <div className="min-h-screen bg-background">

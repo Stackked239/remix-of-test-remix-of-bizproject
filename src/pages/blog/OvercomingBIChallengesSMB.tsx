@@ -27,7 +27,7 @@ const OvercomingBIChallengesSMB = () => {
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses"
         description="Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making."
         image="https://bizhealth.ai/og-overcoming-bi-challenges-smb.jpg"
@@ -35,6 +35,7 @@ const OvercomingBIChallengesSMB = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/overcoming-bi-challenges-smb"
+        keywords={["business intelligence SMB", "BI challenges small business", "SMB data analytics", "data-driven decisions", "AI business intelligence"]}
       />
 
       <PromotionalBanner />

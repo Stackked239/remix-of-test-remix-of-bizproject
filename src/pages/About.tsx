@@ -274,6 +274,9 @@ const About = () => {
                   <img 
                     src={growthPartnerLogo} 
                     alt="BizHealth.ai Growth Partner Logo" 
+                    width={128}
+                    height={128}
+                    loading="lazy"
                     className="w-32 h-32 mx-auto mb-6 object-contain"
                   />
                   <h3 className="font-montserrat font-bold text-2xl text-biz-navy text-center mb-4">

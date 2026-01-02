@@ -175,6 +175,9 @@ const HowItWorks = () => {
                       <img 
                         src={questionnaireImage} 
                         alt="BizHealth.ai business assessment questionnaire interface showing rating scale questions"
+                        width={288}
+                        height={400}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>
@@ -184,6 +187,9 @@ const HowItWorks = () => {
                       <img 
                         src={aiAnalysisImage} 
                         alt="BizHealth.ai AI analytics dashboard showing business metrics, financial health, and performance benchmarking"
+                        width={450}
+                        height={300}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>
@@ -193,6 +199,9 @@ const HowItWorks = () => {
                       <img 
                         src={reportSampleImage} 
                         alt="BizHealth.ai comprehensive business health assessment report showing key performance indicators and SWOT analysis"
+                        width={357}
+                        height={500}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>

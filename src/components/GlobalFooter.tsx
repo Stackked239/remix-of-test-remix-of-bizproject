@@ -175,7 +175,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="LinkedIn Social Icon - Connect with BizHealth.ai"
                   >
-                    <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
+                    <img src={linkedinLogo} alt="LinkedIn" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://www.facebook.com/profile.php?id=61582021647636&sk=about" 
@@ -184,7 +184,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="Facebook Social Icon - Follow BizHealth.ai on Facebook"
                   >
-                    <img src={facebookLogo} alt="Facebook" className="w-6 h-6" />
+                    <img src={facebookLogo} alt="Facebook" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://x.com/AscentSherpa" 
@@ -193,7 +193,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="X Social Icon - Follow AscentSherpa on X"
                   >
-                    <img src={xLogo} alt="X (formerly Twitter)" className="w-6 h-6" />
+                    <img src={xLogo} alt="X (formerly Twitter)" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                 </div>
 

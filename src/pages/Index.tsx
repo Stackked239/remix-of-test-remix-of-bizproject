@@ -5,13 +5,13 @@ import StoryBrandHeader from "@/components/StoryBrandHeader";
 import Hero from "@/components/Hero";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import GlobalFooter from "@/components/GlobalFooter";
 
 // Lazy load below-the-fold components to reduce initial JS bundle
 const Benefits = lazy(() => import("@/components/Benefits"));
 const HowItWorks = lazy(() => import("@/components/HowItWorks"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const Pricing = lazy(() => import("@/components/Pricing"));
-const GlobalFooter = lazy(() => import("@/components/GlobalFooter"));
 
 const Index = () => {
 return (
@@ -38,9 +38,7 @@ return (
       <Suspense fallback={<div className="min-h-[200px]" />}>
         <Pricing />
       </Suspense>
-      <Suspense fallback={<div className="min-h-[100px]" />}>
-        <GlobalFooter />
-      </Suspense>
+      <GlobalFooter />
     </div>
   );
 };

@@ -43,9 +43,14 @@ export default {
 				'biz-warm': 'hsl(var(--biz-warm))',
 				'biz-blue-faint': 'hsl(var(--biz-blue-faint))',
 				
-				/* Hub Colors */
-				'biz-teal': 'hsl(var(--biz-teal))',
-				'biz-copper': 'hsl(var(--biz-copper))',
+				/* Hub Colors (Framework v2) */
+				'biz-teal': 'hsl(var(--biz-teal))',           /* GuideTeal - BizGuides */
+				'biz-copper': 'hsl(var(--biz-copper))',       /* ToolsCopper - BizTools */
+				'biz-magenta': 'hsl(var(--biz-magenta))',     /* LeaderMagenta - BizLeaDeR */
+				'biz-gold': 'hsl(var(--biz-gold))',           /* GrowthGold - BizGrowth */
+				'biz-blue': 'hsl(var(--biz-blue))',           /* BizBlue - Primary */
+				
+				/* Legacy Hub Colors */
 				'biz-lime': 'hsl(var(--biz-lime))',
 				'biz-citrine': 'hsl(var(--biz-citrine))',
 				
@@ -119,7 +124,9 @@ export default {
 				'hub-teal': 'var(--shadow-hub-teal)',
 				'hub-copper': 'var(--shadow-hub-copper)',
 				'hub-lime': 'var(--shadow-hub-lime)',
-				'hub-citrine': 'var(--shadow-hub-citrine)'
+				'hub-citrine': 'var(--shadow-hub-citrine)',
+				'hub-gold': 'var(--shadow-hub-gold)',
+				'hub-magenta': 'var(--shadow-hub-magenta)'
 			},
 			keyframes: {
 				'accordion-down': {

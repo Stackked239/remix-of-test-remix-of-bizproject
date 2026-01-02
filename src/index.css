@@ -20,11 +20,18 @@
     --biz-warm: 40 25% 95%; /* #f5f3ef */
     --biz-blue-faint: 233 20% 98%; /* Very light blue tint based on BizNavy */
     
-    /* Hub Accent Colors */
-    --biz-teal: 212 73% 59%;     /* #4A90E2 - BizGuides */
-    --biz-copper: 25 75% 47%;    /* #D2691E - BizTools */
-    --biz-lime: 81 61% 47%;      /* #8CBF2F - BizLeaDeR */
-    --biz-citrine: 48 100% 45%;  /* #E6B800 - BizGrowth */
+    /* Hub Accent Colors (Framework v2) */
+    --biz-teal: 180 100% 25%;    /* #008080 - GuideTeal - BizGuides */
+    --biz-copper: 25 75% 47%;    /* #D2691E - ToolsCopper - BizTools */
+    --biz-magenta: 330 40% 47%;  /* #A64D79 - LeaderMagenta - BizLeaDeR */
+    --biz-gold: 51 100% 50%;     /* #FFD700 - GrowthGold - BizGrowth */
+    
+    /* Legacy Hub Colors (keeping for backwards compatibility) */
+    --biz-lime: 81 61% 47%;      /* #8CBF2F - Legacy BizLeaDeR */
+    --biz-citrine: 48 100% 45%;  /* #E6B800 - Legacy BizGrowth */
+    
+    /* BizBlue (Framework v2 Primary) */
+    --biz-blue: 237 40% 24%;     /* #242553 - Primary brand color */
 
     /* Base Theme Colors */
     --background: var(--biz-white);
@@ -85,6 +92,8 @@
     --shadow-hub-copper: 0 8px 25px -5px hsl(var(--biz-copper) / 0.15);
     --shadow-hub-lime: 0 8px 25px -5px hsl(var(--biz-lime) / 0.15);
     --shadow-hub-citrine: 0 8px 25px -5px hsl(var(--biz-citrine) / 0.15);
+    --shadow-hub-gold: 0 8px 25px -5px hsl(var(--biz-gold) / 0.15);
+    --shadow-hub-magenta: 0 8px 25px -5px hsl(var(--biz-magenta) / 0.15);
 
     /* Animation timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

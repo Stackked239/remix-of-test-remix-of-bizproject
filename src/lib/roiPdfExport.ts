@@ -12,6 +12,7 @@ export function generateROIPdf(options: PDFExportOptions): void {
   const { scenario, result, inputs } = options;
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
   
   // Colors as tuples for TypeScript
   const bizNavy: [number, number, number] = [33, 38, 83];
@@ -25,18 +26,24 @@ export function generateROIPdf(options: PDFExportOptions): void {
 
   // Header
   doc.setFillColor(bizNavy[0], bizNavy[1], bizNavy[2]);
-  doc.rect(0, 0, pageWidth, 45, 'F');
+  doc.rect(0, 0, pageWidth, 50, 'F');
+  
+  // Logo text (BizHealth.ai branding)
+  doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
+  doc.setFontSize(18);
+  doc.setFont('helvetica', 'bold');
+  doc.text('BizHealth.ai', 20, 18);
   
   doc.setTextColor(255, 255, 255);
-  doc.setFontSize(24);
+  doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
-  doc.text('ROI Calculator Results', 20, 25);
+  doc.text('ROI Calculator Results', 20, 32);
   
-  doc.setFontSize(12);
+  doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  doc.text('BizHealth.ai - Stop Guessing, Start Growing.', 20, 35);
+  doc.text('Stop Guessing, Start Growing.', 20, 42);
 
-  yPos = 55;
+  yPos = 60;
 
   // Scenario Badge
   const scenarioLabels: Record<ScenarioType, string> = {
@@ -54,28 +61,29 @@ export function generateROIPdf(options: PDFExportOptions): void {
   
   yPos += 20;
 
-  // Main Result
+  // Main Result - wrap long recommendation text
   doc.setTextColor(textDark[0], textDark[1], textDark[2]);
-  doc.setFontSize(18);
+  doc.setFontSize(12);
   doc.setFont('helvetica', 'bold');
   
   const resultIcon = result.isGood ? '✓' : result.isNeutral ? '⚠' : '✗';
-  doc.text(`${resultIcon} ${result.recommendation}`, 20, yPos);
-  
-  yPos += 12;
+  const recommendationText = `${resultIcon} ${result.recommendation}`;
+  const recommendationLines = doc.splitTextToSize(recommendationText, pageWidth - 40);
+  doc.text(recommendationLines, 20, yPos);
+  yPos += recommendationLines.length * 5 + 6;
   
   // ROI Value
   const roiColor = result.isGood ? bizGreen : result.isNeutral ? bizYellow : dangerRed;
   doc.setTextColor(roiColor[0], roiColor[1], roiColor[2]);
-  doc.setFontSize(32);
+  doc.setFontSize(24);
   doc.text(formatPercent(result.roi), 20, yPos);
   
   doc.setTextColor(textLight[0], textLight[1], textLight[2]);
-  doc.setFontSize(12);
+  doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  doc.text(scenario === 'equipment' ? `over ${(inputs as EquipmentInputs).usefulYears || 5} years` : 'Year 1 ROI', 85, yPos - 3);
+  doc.text(scenario === 'equipment' ? `over ${(inputs as EquipmentInputs).usefulYears || 5} years` : 'Year 1 ROI', 65, yPos - 2);
   
-  yPos += 20;
+  yPos += 14;
 
   // Divider
   doc.setDrawColor(200, 200, 200);
@@ -192,20 +200,26 @@ export function generateROIPdf(options: PDFExportOptions): void {
     });
   }
 
+  // Check if content exceeds footer area, add new page if needed
+  const footerY = pageHeight - 20;
+  if (yPos > footerY - 30) {
+    doc.addPage();
+    yPos = 20;
+  }
+
   // Footer
-  const footerY = doc.internal.pageSize.getHeight() - 25;
   doc.setDrawColor(200, 200, 200);
-  doc.line(20, footerY - 5, pageWidth - 20, footerY - 5);
+  doc.line(20, footerY - 10, pageWidth - 20, footerY - 10);
   
   doc.setTextColor(textLight[0], textLight[1], textLight[2]);
-  doc.setFontSize(8);
+  doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text('This calculator provides simplified estimates for planning purposes. Actual results may vary.', 20, footerY);
-  doc.text('For major financial decisions, consult with a financial advisor.', 20, footerY + 5);
+  doc.text('This calculator provides simplified estimates for planning purposes. Actual results may vary.', 20, footerY - 4);
+  doc.text('For major financial decisions, consult with a financial advisor.', 20, footerY + 1);
   
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.setFont('helvetica', 'bold');
-  doc.text(`Generated: ${new Date().toLocaleDateString()} | bizhealth.ai`, 20, footerY + 12);
+  doc.text(`Generated: ${new Date().toLocaleDateString()} | bizhealth.ai`, 20, footerY + 7);
 
   // Save
   const filename = `ROI-Calculator-${scenarioLabels[scenario].replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`;

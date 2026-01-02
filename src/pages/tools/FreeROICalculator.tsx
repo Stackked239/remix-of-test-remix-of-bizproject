@@ -156,6 +156,31 @@ const FreeROICalculator = () => {
                     </Link>
                   </Button>
                 </div>
+
+                {/* Helpful Tips Section */}
+                <div className="mt-6 pt-6 border-t border-border">
+                  <h3 className="font-montserrat font-semibold text-biz-navy text-sm mb-3">
+                    💡 Quick Tips for Better ROI Analysis
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground font-open-sans">
+                    <li className="flex items-start gap-2">
+                      <span className="text-biz-citrine font-bold">•</span>
+                      <span><strong>Be conservative:</strong> Underestimate revenue and overestimate costs for realistic projections.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-biz-citrine font-bold">•</span>
+                      <span><strong>Consider hidden costs:</strong> Training, maintenance, and opportunity costs add up.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-biz-citrine font-bold">•</span>
+                      <span><strong>Think long-term:</strong> Some investments pay off slowly but compound over time.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-biz-citrine font-bold">•</span>
+                      <span><strong>Compare scenarios:</strong> Run multiple calculations to find your best option.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Results Column */}

@@ -126,13 +126,14 @@ const FractionalCFOToolkit = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have Before They Sleep at Night"
         description="Learn how to build seven essential financial dashboards that provide CFO-level visibility into your business. Comprehensive guide to cash flow, profitability, and strategic financial metrics."
         image="https://bizhealth.ai/assets/fractional-cfo-toolkit-dashboards-2025.jpg"
         datePublished="2025-12-29"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/fractional-cfo-toolkit"
+        keywords={["fractional CFO toolkit", "financial dashboards", "cash flow dashboard", "P&L dashboard", "SMB financial visibility"]}
       />
       <GlobalNavigation />
       

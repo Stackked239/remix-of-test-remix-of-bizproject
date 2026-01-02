@@ -244,7 +244,7 @@ const BusinessHealthScoresByStage = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="What Your Business Health Score(s) Should Look Like at Each Stage: Survival, Stability, Scale, and Exit"
         description="Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!"
         image="https://bizhealth.ai/assets/business-health-scores-stages-survival-stability-scale-exit.jpg"
@@ -252,6 +252,7 @@ const BusinessHealthScoresByStage = () => {
         dateModified="2025-12-29"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/business-health-scores-by-stage"
+        keywords={["business health score", "business growth stages", "survival stage business", "stability stage metrics", "exit readiness"]}
       />
       
       <GlobalNavigation />

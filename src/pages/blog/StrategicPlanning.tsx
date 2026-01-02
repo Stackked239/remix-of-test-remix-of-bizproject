@@ -27,13 +27,14 @@ const StrategicPlanning = () => {
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Strategic Planning for the Post-Pandemic Business Landscape"
         description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
         image="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
         datePublished="2025-10-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
+        keywords={["strategic planning", "post-pandemic business", "business strategy", "remote work", "supply chain"]}
       />
       <GlobalNavigation />
       

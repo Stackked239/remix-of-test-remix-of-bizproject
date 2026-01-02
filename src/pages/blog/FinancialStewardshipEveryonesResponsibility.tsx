@@ -29,7 +29,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Financial Stewardship: Everyone's Responsibility in Your Small Business"
         description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability in 2025."
         author={author}
@@ -37,6 +37,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-financial-stewardship.jpg"
         url="https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility"
+        keywords={["financial stewardship", "small business finance", "employee financial responsibility", "cash flow management", "team accountability"]}
       />
 
       <GlobalNavigation />

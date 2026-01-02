@@ -28,7 +28,7 @@ const GrowthTrapBrokenBusinessModel = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
         description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling."
         image={growthTrapHero}
@@ -36,6 +36,7 @@ const GrowthTrapBrokenBusinessModel = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
+        keywords={["growth trap small business", "broken business model", "SMB scaling problems", "business health vs growth", "unit economics"]}
       />
 
       <div className="min-h-screen bg-background">

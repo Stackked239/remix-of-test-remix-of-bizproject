@@ -47,7 +47,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Confirm Your Business Weaknesses Without Expensive Consultants"
         description="A comprehensive guide to identifying small business blind spots and operational weaknesses using AI-powered assessment tools instead of costly traditional consultants."
         image={heroImage}
@@ -55,6 +55,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={canonicalUrl}
+        keywords={["small business blind spots", "operational weaknesses", "hidden business gaps", "AI business analysis", "cost-effective consulting"]}
       />
       
       <div className="min-h-screen bg-background">

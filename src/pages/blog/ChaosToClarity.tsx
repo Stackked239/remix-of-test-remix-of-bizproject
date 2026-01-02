@@ -52,7 +52,7 @@ const ChaosToClarity = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams"
         description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management."
         author={author}
@@ -60,6 +60,7 @@ const ChaosToClarity = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-chaos-to-clarity.jpg"
         url="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
+        keywords={["operating rhythm SMB", "scaling business teams", "weekly leadership huddle", "monthly business review", "quarterly planning"]}
       />
 
       <GlobalNavigation />

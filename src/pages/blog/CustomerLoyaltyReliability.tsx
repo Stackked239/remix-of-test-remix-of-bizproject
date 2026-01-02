@@ -54,7 +54,7 @@ const CustomerLoyaltyReliability = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Customer Service: Loyalty Starts With Reliability, Not Delight"
         description="Customer service is not a department; it is a promise. Learn how SMBs can build lasting customer loyalty through consistent reliability, operational empathy, and strategic customer experience design."
         author="BizHealth.ai Research Team"
@@ -62,6 +62,7 @@ const CustomerLoyaltyReliability = () => {
         dateModified="2025-12-27"
         image="https://bizhealth.ai/og-customer-loyalty-reliability.jpg"
         url="https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability"
+        keywords={["customer loyalty", "customer service SMB", "customer retention strategies", "reliability in business", "customer experience"]}
       />
       
       <PromotionalBanner />

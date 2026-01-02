@@ -59,7 +59,7 @@ const StressTestPricingFramework = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow"
         description="Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Learn value-based pricing, demand elasticity testing, and a 90-day implementation plan."
         author="BizHealth.ai Research Team"
@@ -67,6 +67,7 @@ const StressTestPricingFramework = () => {
         dateModified="2025-12-26"
         image="https://bizhealth.ai/og-stress-test-pricing.jpg"
         url="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
+        keywords={["stress test pricing", "pricing strategy small business", "optimize margins", "cash flow optimization", "value-based pricing"]}
       />
       
       <PromotionalBanner />

@@ -51,7 +51,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Small Business Financials: Know Your Numbers, Know Your Business"
         description="Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions."
         author={author}
@@ -59,6 +59,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/assets/small-business-financials-know-your-numbers.jpg"
         url="https://bizhealth.ai/blog/small-business-financials-know-your-numbers"
+        keywords={["small business financials", "know your numbers", "business financial management", "income statement", "cash flow statement"]}
       />
 
       <GlobalNavigation />

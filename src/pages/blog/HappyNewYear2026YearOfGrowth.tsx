@@ -134,7 +134,7 @@ const HappyNewYear2026YearOfGrowth = () => {
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow"
         description="Reflect on 2025's business lessons and embrace 2026 as your year of intentional growth. Discover the three strategic moves for sustainable small business success."
         image="https://bizhealth.ai/happy-new-year-2026-business-growth.jpg"
@@ -142,6 +142,7 @@ const HappyNewYear2026YearOfGrowth = () => {
         dateModified="2026-01-01"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth"
+        keywords={["small business growth 2026", "new year business strategy", "2026 business planning", "SMB growth strategies", "sustainable growth"]}
       />
       <PromotionalBanner />
       <GlobalNavigation />

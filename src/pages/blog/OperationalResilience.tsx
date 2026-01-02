@@ -23,13 +23,14 @@ const OperationalResilience = () => {
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Building Operational Resilience in Uncertain Times"
         description="Strategies for creating business systems that can withstand market volatility and unexpected challenges."
         image="https://bizhealth.ai/assets/operational-resilience-strategy.jpg"
         datePublished="2025-09-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/operational-resilience"
+        keywords={["operational resilience", "business continuity", "crisis management", "risk mitigation", "SMB resilience"]}
       />
       <GlobalNavigation />
       

@@ -25,7 +25,7 @@ const BusinessIntelligenceROI = () => {
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="The ROI of Business Intelligence for SMBs"
         description="Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments."
         image="https://bizhealth.ai/assets/business-intelligence-roi-analytics.jpg"
@@ -33,6 +33,7 @@ const BusinessIntelligenceROI = () => {
         dateModified="2025-12-10"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/business-intelligence-roi"
+        keywords={["business intelligence ROI", "BI ROI", "SMB business intelligence", "small business analytics", "BI implementation cost"]}
       />
       
       <GlobalNavigation />

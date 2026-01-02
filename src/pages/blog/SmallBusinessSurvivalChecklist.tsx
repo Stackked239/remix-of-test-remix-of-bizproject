@@ -26,13 +26,14 @@ const SmallBusinessSurvivalChecklist = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One"
         description="Learn from 500+ founders about the critical first-year challenges, metrics, and systems that separate successful businesses from the 23.2% that fail within 12 months."
         image={survivalChecklistHero}
         datePublished={publishDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
+        keywords={["small business survival guide", "new business owner tips", "first year business challenges", "startup metrics", "cash flow management"]}
       />
 
       <div className="min-h-screen bg-background">

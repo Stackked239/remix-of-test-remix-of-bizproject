@@ -27,7 +27,7 @@ const SmallBusinessAIAdoption = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners"
         description="Turn skepticism into strategic AI adoption. Learn genuine AI implementation for SMBs, avoid spam tools, and achieve 20x ROI with proven strategies for 2025."
         image={aiAdoptionHero}
@@ -35,6 +35,7 @@ const SmallBusinessAIAdoption = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
+        keywords={["small business AI adoption", "AI for small business", "SMB AI adoption", "business automation tools", "AI implementation guide"]}
       />
 
       <div className="min-h-screen bg-background">

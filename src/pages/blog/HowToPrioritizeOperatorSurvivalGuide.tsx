@@ -55,7 +55,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide"
         description="Master solo entrepreneur prioritization with this survival guide. Learn the Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly."
         author={author}
@@ -63,6 +63,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/assets/how-to-prioritize-operator-survival-guide.jpg"
         url="https://bizhealth.ai/blog/how-to-prioritize-operator-survival-guide"
+        keywords={["solo entrepreneur prioritization", "prioritization for solo operators", "time management small business", "micro business productivity", "entrepreneur survival guide"]}
       />
 
       <GlobalNavigation />

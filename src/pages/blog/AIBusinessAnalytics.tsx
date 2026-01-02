@@ -27,7 +27,7 @@ const AIBusinessAnalytics = () => {
         articleAuthor="Jennifer Walsh"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="How AI is Revolutionizing Small Business Analytics"
         description="Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses."
         image={aiAnalyticsImage}
@@ -35,6 +35,7 @@ const AIBusinessAnalytics = () => {
         dateModified={modifiedDate}
         author="Jennifer Walsh"
         url={articleUrl}
+        keywords={["AI business analytics", "small business intelligence", "AI for SMBs", "business analytics tools", "machine learning"]}
       />
 
       <div className="min-h-screen bg-background">

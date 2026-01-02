@@ -29,7 +29,7 @@ const HowToCheckYourBusinessHealth = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
         description="Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
         image={`https://bizhealth.ai${heroImage}`}
@@ -37,6 +37,7 @@ const HowToCheckYourBusinessHealth = () => {
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/how-to-check-your-business-health"
+        keywords={["check my business health", "how to check business health", "business health check for SMBs", "SMB business health assessment", "small business diagnostics"]}
       />
 
       <div className="min-h-screen bg-background">

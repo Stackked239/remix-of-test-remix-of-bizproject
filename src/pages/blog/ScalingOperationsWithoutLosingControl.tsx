@@ -29,7 +29,7 @@ const ScalingOperationsWithoutLosingControl = () => {
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How Small & Mid-Size Businesses Can Scale Operations Without Losing Control"
         description="Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture for controlled expansion."
         author={author}
@@ -37,6 +37,7 @@ const ScalingOperationsWithoutLosingControl = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-scaling-operations.jpg"
         url="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
+        keywords={["business scaling", "operations management", "SMB growth strategies", "operational excellence", "scaling framework"]}
       />
 
       <GlobalNavigation />

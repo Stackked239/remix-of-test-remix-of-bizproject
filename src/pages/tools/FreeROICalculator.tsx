@@ -111,7 +111,7 @@ const FreeROICalculator = () => {
               ROI Calculator
             </h1>
             <p className="font-montserrat text-xl md:text-2xl text-biz-citrine mb-6">
-              Stop Guessing, Start Growing.
+              Know Your Numbers. Make Better Decisions.
             </p>
             <p className="font-open-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
               Figure out if a new investment makes sense — in plain English, in 5 minutes.

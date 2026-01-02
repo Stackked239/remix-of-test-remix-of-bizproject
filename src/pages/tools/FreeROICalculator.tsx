@@ -1,0 +1,168 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { RotateCcw } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import GlobalNavigation from '@/components/GlobalNavigation';
+import GlobalFooter from '@/components/GlobalFooter';
+import ScenarioSelector from '@/components/roi-calculator/ScenarioSelector';
+import EquipmentForm from '@/components/roi-calculator/EquipmentForm';
+import HireForm from '@/components/roi-calculator/HireForm';
+import CampaignForm from '@/components/roi-calculator/CampaignForm';
+import ResultsDisplay from '@/components/roi-calculator/ResultsDisplay';
+import NextSteps from '@/components/roi-calculator/NextSteps';
+import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
+import {
+  type ScenarioType,
+  type EquipmentInputs,
+  type HireInputs,
+  type CampaignInputs,
+  calculateEquipmentROI,
+  calculateHireROI,
+  calculateCampaignROI,
+} from '@/lib/roiCalculations';
+
+const FreeROICalculator = () => {
+  const [scenario, setScenario] = useState<ScenarioType>('equipment');
+  
+  const [equipmentInputs, setEquipmentInputs] = useState<EquipmentInputs>({
+    equipmentCost: 0,
+    annualSavings: 0,
+    usefulYears: 5,
+  });
+
+  const [hireInputs, setHireInputs] = useState<HireInputs>({
+    annualSalary: 0,
+    expectedRevenue: 0,
+    profitMargin: 30,
+    onboardingCost: 0,
+    payrollBenefits: 25,
+    rampUpMonths: 3,
+  });
+
+  const [campaignInputs, setCampaignInputs] = useState<CampaignInputs>({
+    campaignCost: 0,
+    expectedRevenue: 0,
+    profitMargin: 35,
+    repeatRevenue: 0,
+  });
+
+  const result = useMemo(() => {
+    switch (scenario) {
+      case 'equipment':
+        return calculateEquipmentROI(equipmentInputs);
+      case 'hire':
+        return calculateHireROI(hireInputs);
+      case 'campaign':
+        return calculateCampaignROI(campaignInputs);
+    }
+  }, [scenario, equipmentInputs, hireInputs, campaignInputs]);
+
+  const handleReset = () => {
+    if (confirm('Are you sure you want to start over? This will clear all your inputs.')) {
+      setEquipmentInputs({ equipmentCost: 0, annualSavings: 0, usefulYears: 5 });
+      setHireInputs({ annualSalary: 0, expectedRevenue: 0, profitMargin: 30, onboardingCost: 0, payrollBenefits: 25, rampUpMonths: 3 });
+      setCampaignInputs({ campaignCost: 0, expectedRevenue: 0, profitMargin: 35, repeatRevenue: 0 });
+      setScenario('equipment');
+      toast.success('Calculator reset');
+    }
+  };
+
+  const handleDownloadPDF = () => {
+    toast.info('PDF download coming soon! For now, you can print this page.');
+    window.print();
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Free ROI Calculator | BizHealth.ai</title>
+        <meta name="description" content="Figure out if a new investment makes sense — in plain English, in 5 minutes. Calculate ROI for equipment, new hires, or marketing campaigns." />
+        <link rel="canonical" href="https://bizhealth.ai/biztools/toolbox/free-roi-calculator" />
+      </Helmet>
+
+      <GlobalNavigation />
+
+      <main className="min-h-screen bg-biz-cream">
+        {/* Header */}
+        <section className="bg-biz-navy text-white py-12 md:py-16">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <span className="inline-block px-3 py-1 bg-biz-citrine text-biz-navy text-sm font-semibold rounded-full mb-4">
+                  Part of BizTools
+                </span>
+                <h1 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+                  ROI Calculator
+                </h1>
+                <p className="font-montserrat text-xl md:text-2xl text-biz-citrine">
+                  Stop Guessing, Start Growing.
+                </p>
+              </div>
+            </div>
+            <p className="mt-6 font-open-sans text-lg md:text-xl text-white/90 max-w-2xl">
+              Figure out if a new investment makes sense — in plain English, in 5 minutes.
+            </p>
+          </div>
+        </section>
+
+        {/* Calculator */}
+        <section className="py-8 md:py-12">
+          <div className="container max-w-6xl mx-auto px-4">
+            {/* Scenario Selector */}
+            <div className="mb-8">
+              <h2 className="font-montserrat font-semibold text-biz-navy text-lg mb-4">
+                What are you considering?
+              </h2>
+              <ScenarioSelector selectedScenario={scenario} onSelectScenario={setScenario} />
+            </div>
+
+            {/* Main Grid */}
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Input Column */}
+              <div className="bg-white rounded-xl shadow-card border border-border p-6 md:p-8">
+                <h2 className="font-montserrat font-bold text-biz-navy text-xl mb-6">
+                  Enter Your Numbers
+                </h2>
+                
+                {scenario === 'equipment' && (
+                  <EquipmentForm inputs={equipmentInputs} onChange={setEquipmentInputs} />
+                )}
+                {scenario === 'hire' && (
+                  <HireForm inputs={hireInputs} onChange={setHireInputs} />
+                )}
+                {scenario === 'campaign' && (
+                  <CampaignForm inputs={campaignInputs} onChange={setCampaignInputs} />
+                )}
+
+                <div className="mt-6 pt-6 border-t border-border">
+                  <Button variant="ghost" onClick={handleReset} className="text-muted-foreground hover:text-biz-navy">
+                    <RotateCcw className="w-4 h-4 mr-2" />
+                    Start Over
+                  </Button>
+                </div>
+              </div>
+
+              {/* Results Column */}
+              <div className="space-y-6">
+                <ResultsDisplay result={result} scenario={scenario} usefulYears={equipmentInputs.usefulYears} />
+                {result.recommendation !== "Enter your numbers to see results" && (
+                  <NextSteps scenario={scenario} onDownloadPDF={handleDownloadPDF} />
+                )}
+              </div>
+            </div>
+
+            {/* Disclaimer */}
+            <p className="mt-12 text-center text-sm text-muted-foreground font-open-sans max-w-3xl mx-auto">
+              This calculator provides simplified estimates for planning purposes. Actual results may vary based on your specific situation. For major financial decisions, consult with a financial advisor or accountant. BizHealth.ai is not responsible for business decisions made based on this calculator.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <GlobalFooter />
+    </>
+  );
+};
+
+export default FreeROICalculator;

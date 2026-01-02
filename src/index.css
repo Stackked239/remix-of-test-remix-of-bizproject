@@ -8,17 +8,17 @@
 
 @layer base {
   :root {
-    /* Core BizHealth.ai Brand Colors */
-    --biz-navy: 233 43% 23%;  /* #212653 */
-    --biz-navy-deep: 230 48% 17%; /* #181b3d */
-    --biz-navy-light: 230 41% 29%; /* #2d3268 */
+    /* Core BizHealth.ai Brand Colors - Framework v2 Aligned */
+    --biz-navy: 237 40% 24%;  /* #242553 - BizBlue (Framework v2 Primary) */
+    --biz-navy-deep: 237 45% 18%; /* Darker variant */
+    --biz-navy-light: 237 38% 32%; /* Lighter variant */
     --biz-green: 59 62% 36%;  /* #969423 */
     --biz-green-light: 55 50% 50%; /* #b8b344 */
     --biz-grey: 0 0% 49%;     /* #7C7C7C */
     --biz-white: 0 0% 100%;   /* #FFFFFF */
     --biz-cream: 40 33% 97%; /* #faf9f7 */
     --biz-warm: 40 25% 95%; /* #f5f3ef */
-    --biz-blue-faint: 233 20% 98%; /* Very light blue tint based on BizNavy */
+    --biz-blue-faint: 237 20% 98%; /* Very light blue tint based on BizBlue */
     
     /* Hub Accent Colors (Framework v2) */
     --biz-teal: 180 100% 25%;    /* #008080 - GuideTeal - BizGuides */
@@ -30,8 +30,8 @@
     --biz-lime: 81 61% 47%;      /* #8CBF2F - Legacy BizLeaDeR */
     --biz-citrine: 48 100% 45%;  /* #E6B800 - Legacy BizGrowth */
     
-    /* BizBlue (Framework v2 Primary) */
-    --biz-blue: 237 40% 24%;     /* #242553 - Primary brand color */
+    /* BizBlue alias (same as --biz-navy for Framework v2 consistency) */
+    --biz-blue: var(--biz-navy);
 
     /* Base Theme Colors */
     --background: var(--biz-white);
@@ -43,10 +43,10 @@
     --popover: var(--biz-white);
     --popover-foreground: var(--biz-navy);
 
-    /* Primary brand - BizNavy */
+    /* Primary brand - BizBlue (Framework v2) */
     --primary: var(--biz-navy);
     --primary-foreground: var(--biz-white);
-    --primary-hover: 233 43% 18%;
+    --primary-hover: 237 40% 19%;
 
     /* Growth accent - BizGreen */
     --growth: var(--biz-green);

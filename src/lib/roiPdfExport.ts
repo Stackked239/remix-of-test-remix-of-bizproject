@@ -182,6 +182,7 @@ export async function generateROIPdf(options: PDFExportOptions): Promise<void> {
     inputDetails = [
       ['Equipment Cost:', formatCurrency(eq.equipmentCost)],
       ['Annual Savings:', formatCurrency(eq.annualSavings)],
+      ['Annual Revenue:', formatCurrency(eq.annualRevenue)],
       ['Useful Years:', `${eq.usefulYears} years`],
     ];
   } else if (scenario === 'hire') {

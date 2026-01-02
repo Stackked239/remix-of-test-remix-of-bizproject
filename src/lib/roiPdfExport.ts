@@ -8,7 +8,29 @@ interface PDFExportOptions {
   inputs: EquipmentInputs | HireInputs | CampaignInputs;
 }
 
-export function generateROIPdf(options: PDFExportOptions): void {
+// Helper to load image as base64
+const loadImageAsBase64 = (url: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0);
+        resolve(canvas.toDataURL('image/jpeg'));
+      } else {
+        reject(new Error('Could not get canvas context'));
+      }
+    };
+    img.onerror = () => reject(new Error('Failed to load image'));
+    img.src = url;
+  });
+};
+
+export async function generateROIPdf(options: PDFExportOptions): Promise<void> {
   const { scenario, result, inputs } = options;
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -28,22 +50,31 @@ export function generateROIPdf(options: PDFExportOptions): void {
   doc.setFillColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.rect(0, 0, pageWidth, 50, 'F');
   
-  // Logo text (BizHealth.ai branding)
-  doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
-  doc.setFontSize(18);
-  doc.setFont('helvetica', 'bold');
-  doc.text('BizHealth.ai', 20, 18);
+  // Try to load and add logo image
+  try {
+    const logoBase64 = await loadImageAsBase64('/assets/bizhealth-logo-pdf.jpg');
+    // Original logo aspect ratio (maintain proportions) - logo is wide, ~5:1 ratio approximately
+    const logoHeight = 10;
+    const logoWidth = 45; // Approximate width based on logo aspect ratio
+    doc.addImage(logoBase64, 'JPEG', 20, 8, logoWidth, logoHeight);
+  } catch (error) {
+    // Fallback to text if image fails to load
+    doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
+    doc.setFontSize(18);
+    doc.setFont('helvetica', 'bold');
+    doc.text('BizHealth.ai', 20, 18);
+  }
   
   doc.setTextColor(255, 255, 255);
-  doc.setFontSize(16);
+  doc.setFontSize(14);
   doc.setFont('helvetica', 'bold');
-  doc.text('ROI Calculator Results', 20, 32);
+  doc.text('ROI Calculator Results', 20, 30);
   
-  doc.setFontSize(10);
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  doc.text('Stop Guessing, Start Growing.', 20, 42);
+  doc.text('Stop Guessing, Start Growing.', 20, 40);
 
-  yPos = 60;
+  yPos = 58;
 
   // Scenario Badge
   const scenarioLabels: Record<ScenarioType, string> = {

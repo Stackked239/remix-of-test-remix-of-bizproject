@@ -70,19 +70,23 @@ const FreeROICalculator = () => {
     }
   };
 
-  const handleDownloadPDF = () => {
+  const handleDownloadPDF = async () => {
     const currentInputs = scenario === 'equipment' 
       ? equipmentInputs 
       : scenario === 'hire' 
         ? hireInputs 
         : campaignInputs;
     
-    generateROIPdf({
-      scenario,
-      result,
-      inputs: currentInputs,
-    });
-    toast.success('PDF downloaded successfully!');
+    try {
+      await generateROIPdf({
+        scenario,
+        result,
+        inputs: currentInputs,
+      });
+      toast.success('PDF downloaded successfully!');
+    } catch (error) {
+      toast.error('Failed to generate PDF. Please try again.');
+    }
   };
 
   return (

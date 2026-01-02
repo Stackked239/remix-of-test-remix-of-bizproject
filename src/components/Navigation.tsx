@@ -83,12 +83,9 @@ const Navigation = () => {
             {SHOW_HUBS && (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                <button 
-                  className="flex items-center gap-1 text-foreground hover:text-primary transition-colors"
-                  aria-haspopup="menu"
-                >
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
                     Hubs
-                    <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                    <ChevronDown className="w-4 h-4" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-64 bg-background border border-border shadow-lg z-50">
@@ -143,12 +140,9 @@ const Navigation = () => {
             {/* Pricing Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button 
-                  className="flex items-center gap-1 text-foreground hover:text-primary transition-colors"
-                  aria-haspopup="menu"
-                >
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
                   Pricing
-                  <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                  <ChevronDown className="w-4 h-4" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-48 bg-background border border-border shadow-lg z-50">
@@ -190,12 +184,9 @@ const Navigation = () => {
             {/* Blog Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button 
-                  className="flex items-center gap-1 text-foreground hover:text-primary transition-colors"
-                  aria-haspopup="menu"
-                >
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
                   Blog
-                  <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                  <ChevronDown className="w-4 h-4" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-48 bg-background border border-border shadow-lg z-50">
@@ -244,17 +235,15 @@ const Navigation = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2"
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-navigation"
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div id="mobile-navigation" role="navigation" aria-label="Mobile navigation" className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col gap-4 pt-4">
               <a 
                 href="/"

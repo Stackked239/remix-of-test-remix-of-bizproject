@@ -50,7 +50,7 @@ const BizToolsToolbox = () => {
   const toolCategories = [
     {
       title: "Financial Management",
-      tools: ["Cash Flow Tracker", "Budget Planning Template", "ROI Calculator", "Financial Dashboard"],
+      tools: ["Cash Flow Tracker", "Budget Planning Template", "Free ROI Calculator", "Financial Dashboard"],
       icon: DollarSign,
       color: "text-biz-copper",
       bgColor: "bg-biz-copper/10",
@@ -273,7 +273,7 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "Free ROI Calculator";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
@@ -284,6 +284,8 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/customer-journey-maps-tool"
                           : tool === "Innovation Strategy Builder"
                           ? "/biztools/toolbox/innovation-strategy-tool"
+                          : tool === "Free ROI Calculator"
+                          ? "/biztools/toolbox/free-roi-calculator"
                           : "#";
                         const content = (
                             <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">

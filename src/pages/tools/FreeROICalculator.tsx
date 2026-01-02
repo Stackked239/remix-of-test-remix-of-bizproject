@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { RotateCcw } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -21,6 +21,7 @@ import {
   calculateHireROI,
   calculateCampaignROI,
 } from '@/lib/roiCalculations';
+import { generateROIPdf } from '@/lib/roiPdfExport';
 
 const FreeROICalculator = () => {
   const [scenario, setScenario] = useState<ScenarioType>('equipment');
@@ -69,8 +70,18 @@ const FreeROICalculator = () => {
   };
 
   const handleDownloadPDF = () => {
-    toast.info('PDF download coming soon! For now, you can print this page.');
-    window.print();
+    const currentInputs = scenario === 'equipment' 
+      ? equipmentInputs 
+      : scenario === 'hire' 
+        ? hireInputs 
+        : campaignInputs;
+    
+    generateROIPdf({
+      scenario,
+      result,
+      inputs: currentInputs,
+    });
+    toast.success('PDF downloaded successfully!');
   };
 
   return (

@@ -73,23 +73,13 @@
     
     <meta name="theme-color" content="#0066CC" />
     
-    <!-- Google tag (gtag.js) - Deferred loading for better performance -->
+    <!-- Google tag (gtag.js) - Updated GA4 Property -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDCM29Z181"></script>
     <script>
-      // Defer Google Analytics until after page load
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          var gtagScript = document.createElement('script');
-          gtagScript.async = true;
-          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LX79L9X0PY';
-          document.head.appendChild(gtagScript);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-LX79L9X0PY');
-        }, 2000); // Delay 2 seconds after load
-      });
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HDCM29Z181');
     </script>
     
   

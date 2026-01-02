@@ -114,7 +114,7 @@ const FreeROICalculator = () => {
               Know Your Numbers. Make Better Decisions.
             </p>
             <p className="font-open-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Figure out if a new investment makes sense — in plain English, in 5 minutes.
+              Stop Guessing. Know if it's worth it in minutes, not hours.
             </p>
           </div>
         </section>

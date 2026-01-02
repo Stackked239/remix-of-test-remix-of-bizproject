@@ -59,36 +59,34 @@ export function generateROIPdf(options: PDFExportOptions): void {
   doc.setFont('helvetica', 'bold');
   doc.text(scenarioLabels[scenario], 25, yPos + 5.5);
   
-  yPos += 20;
+  yPos += 15;
 
-  // Main Result - wrap long recommendation text (use ASCII-safe icons)
+  // Main Result - just show the recommendation text (no prefix to avoid duplication)
   doc.setTextColor(textDark[0], textDark[1], textDark[2]);
-  doc.setFontSize(12);
+  doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   
-  const resultIcon = result.isGood ? '[YES]' : result.isNeutral ? '[MAYBE]' : '[NO]';
-  const recommendationText = `${resultIcon} ${result.recommendation}`;
-  const recommendationLines = doc.splitTextToSize(recommendationText, pageWidth - 40);
+  const recommendationLines = doc.splitTextToSize(result.recommendation, pageWidth - 40);
   doc.text(recommendationLines, 20, yPos);
-  yPos += recommendationLines.length * 5 + 4;
+  yPos += recommendationLines.length * 4 + 3;
   
   // ROI Value
   const roiColor = result.isGood ? bizGreen : result.isNeutral ? bizYellow : dangerRed;
   doc.setTextColor(roiColor[0], roiColor[1], roiColor[2]);
-  doc.setFontSize(24);
+  doc.setFontSize(20);
   doc.text(formatPercent(result.roi), 20, yPos);
   
   doc.setTextColor(textLight[0], textLight[1], textLight[2]);
-  doc.setFontSize(10);
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  doc.text(scenario === 'equipment' ? `over ${(inputs as EquipmentInputs).usefulYears || 5} years` : 'Year 1 ROI', 65, yPos - 2);
+  doc.text(scenario === 'equipment' ? `over ${(inputs as EquipmentInputs).usefulYears || 5} years` : 'Year 1 ROI', 55, yPos - 2);
   
-  yPos += 14;
+  yPos += 10;
 
   // Divider
   doc.setDrawColor(200, 200, 200);
   doc.line(20, yPos, pageWidth - 20, yPos);
-  yPos += 10;
+  yPos += 6;
 
   // What This Means
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);

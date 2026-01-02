@@ -27,24 +27,28 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-background/80">
-              <li><a href="#" className="hover:text-background transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Sample Report</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">FAQ</a></li>
-            </ul>
+            <nav aria-label="Quick links">
+              <ul className="space-y-2 text-background/80">
+                <li><a href="/how-it-works" className="hover:text-background transition-colors">How It Works</a></li>
+                <li><a href="/reports" className="hover:text-background transition-colors">Sample Report</a></li>
+                <li><a href="/pricing" className="hover:text-background transition-colors">Pricing</a></li>
+                <li><a href="/faqs" className="hover:text-background transition-colors">FAQ</a></li>
+              </ul>
+            </nav>
           </div>
           
           {/* Legal & Support */}
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-background/80">
-              <li><a href="/privacy" className="hover:text-background transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-background transition-colors">Terms of Service</a></li>
-              <li><a href="/disclaimer" className="hover:text-background transition-colors">Disclaimer & Warranty</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Refund Policy</a></li>
-              <li><a href="/contact" className="hover:text-background transition-colors">Contact Us</a></li>
-            </ul>
+            <nav aria-label="Support links">
+              <ul className="space-y-2 text-background/80">
+                <li><a href="/privacy" className="hover:text-background transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-background transition-colors">Terms of Service</a></li>
+                <li><a href="/disclaimer" className="hover:text-background transition-colors">Disclaimer & Warranty</a></li>
+                <li><a href="/legal" className="hover:text-background transition-colors">Refund Policy</a></li>
+                <li><a href="/contact" className="hover:text-background transition-colors">Contact Us</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
         
@@ -54,14 +58,16 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Get in Touch</h4>
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5" />
-                  <span className="text-background/80">support@bizhealth.ai</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5" />
-                  <span className="text-background/80">1-855-476-8322</span>
-                </div>
+                <address className="not-italic">
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5" aria-hidden="true" />
+                    <a href="mailto:support@bizhealth.ai" className="text-background/80 hover:text-background transition-colors">support@bizhealth.ai</a>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3">
+                    <Phone className="w-5 h-5" aria-hidden="true" />
+                    <a href="tel:+18554768322" className="text-background/80 hover:text-background transition-colors">1-855-476-8322</a>
+                  </div>
+                </address>
               </div>
             </div>
             <div>

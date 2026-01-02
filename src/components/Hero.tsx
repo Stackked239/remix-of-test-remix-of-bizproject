@@ -130,7 +130,8 @@ const Hero = () => {
           width={1605}
           height={277}
           loading="eager"
-          fetchPriority="high"
+          // @ts-expect-error - fetchpriority is valid HTML but React prefers camelCase
+          fetchpriority="high"
           className="object-contain"
           style={{ maxWidth: '90%', maxHeight: '60px', width: 'auto', height: 'auto' }}
         />
@@ -228,7 +229,7 @@ const Hero = () => {
               <div className="space-y-4 sm:space-y-6 px-1">
                 {/* Annual Revenue */}
                 <div className="space-y-2 sm:space-y-3">
-                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
+                  <label id="revenue-label" className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
                     Annual Revenue: {revenue[0] === 100 ? '$7M+' : `$${revenueAmount.toLocaleString()}`}
                   </label>
                   <div className="px-1">
@@ -239,6 +240,8 @@ const Hero = () => {
                       min={0}
                       step={1}
                       className="w-full"
+                      aria-labelledby="revenue-label"
+                      aria-valuetext={revenue[0] === 100 ? '$7M+' : `$${revenueAmount.toLocaleString()}`}
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
@@ -249,7 +252,7 @@ const Hero = () => {
 
                 {/* Employee Count */}
                 <div className="space-y-2 sm:space-y-3">
-                  <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
+                  <label id="employees-label" className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white block break-words">
                     Employees: {employees[0] === 100 ? '150+' : employeeCount}
                   </label>
                   <div className="px-1">
@@ -260,6 +263,8 @@ const Hero = () => {
                       min={0}
                       step={1}
                       className="w-full"
+                      aria-labelledby="employees-label"
+                      aria-valuetext={employees[0] === 100 ? '150+' : `${employeeCount} employees`}
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">
@@ -271,7 +276,7 @@ const Hero = () => {
                 {/* Business Challenges */}
                 <div className="space-y-2 sm:space-y-3">
                   <div className="flex items-center gap-2">
-                    <label className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white break-words">
+                    <label id="challenges-label" className="font-open-sans font-semibold text-xs sm:text-sm text-biz-white break-words">
                       Challenges: {challengeData[challenges[0]].descriptor}
                     </label>
                     <TooltipProvider>
@@ -293,6 +298,8 @@ const Hero = () => {
                       min={0}
                       step={1}
                       className="w-full"
+                      aria-labelledby="challenges-label"
+                      aria-valuetext={challengeData[challenges[0]].descriptor}
                     />
                   </div>
                   <div className="flex justify-between text-[10px] sm:text-xs font-open-sans text-biz-white/70 px-1">

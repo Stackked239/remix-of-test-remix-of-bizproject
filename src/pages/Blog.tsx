@@ -203,8 +203,11 @@ const Blog = () => {
         <img 
           src={smbTeamHeroImage} 
           alt="Team discussing business growth strategies"
+          width={1200}
+          height={500}
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         

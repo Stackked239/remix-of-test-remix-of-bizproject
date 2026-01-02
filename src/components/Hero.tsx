@@ -126,9 +126,13 @@ const Hero = () => {
       >
         <img 
           src={bannerLogo} 
-          alt="BizHealth.ai" 
+          alt="BizHealth.ai - Business Health Analysis Platform"
+          width={1605}
+          height={277}
+          loading="eager"
+          fetchPriority="high"
           className="object-contain"
-          style={{ width: '1605px', height: '277px', maxWidth: '90%', maxHeight: '60px' }}
+          style={{ maxWidth: '90%', maxHeight: '60px', width: 'auto', height: 'auto' }}
         />
       </div>
 

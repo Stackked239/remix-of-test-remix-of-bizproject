@@ -114,7 +114,7 @@ const FreeROICalculator = () => {
               Know Your Numbers. Make Better Decisions.
             </p>
             <p className="font-open-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Stop Guessing. Know if it's worth it in minutes, not hours.
+              Stop guessing. Calculate your ROI in minutes, not hours.
             </p>
           </div>
         </section>

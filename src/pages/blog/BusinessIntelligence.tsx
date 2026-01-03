@@ -19,11 +19,11 @@ import {
   Monitor
 } from "lucide-react";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
-import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
-import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
-import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
-import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
-import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
+import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 

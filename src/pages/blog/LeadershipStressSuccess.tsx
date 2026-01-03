@@ -5,7 +5,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
+import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const LeadershipStressSuccess = () => {

@@ -6,7 +6,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import heroImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
+import heroImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
 
 const IdentifyingSMBLeadershipBlindSpots = () => {
   const publishDate = "2025-11-23T00:00:00Z";

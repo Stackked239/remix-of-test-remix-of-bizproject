@@ -18,7 +18,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
+import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
 import bizHealthAuthor from "@/assets/bizhealth-author-icon.jpg";
 
 const StressTestPricingFramework = () => {

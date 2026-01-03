@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 import retailRemoteImage from "@/assets/retail-remote-tools-family-business.jpg";
-import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
-import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 

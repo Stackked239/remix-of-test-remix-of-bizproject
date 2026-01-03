@@ -5,7 +5,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
+import heroImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 
 const ConfirmBusinessWeaknessesWithoutConsultants = () => {
   const publishDate = "2025-11-05T08:00:00-05:00";

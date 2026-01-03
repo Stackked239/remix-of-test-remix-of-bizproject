@@ -21,9 +21,9 @@ import {
 import operationalResilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
-import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
+import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
-import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 
 // Blog post data structure
 interface BlogPost {

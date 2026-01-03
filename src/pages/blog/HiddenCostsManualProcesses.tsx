@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, BookOpen, AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import heroImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 
 const HiddenCostsManualProcesses = () => {
   const publishDate = "2025-12-09";

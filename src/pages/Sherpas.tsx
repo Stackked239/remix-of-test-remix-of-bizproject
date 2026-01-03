@@ -6,7 +6,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Button } from '@/components/ui/button';
-import sherpaMountainBg from '@/assets/sherpa-mountain-background.jpg';
+import sherpaMountainBg from '@/assets/sherpa-mountain-background-optimized.jpg';
 import { 
   Compass, 
   Users, 

@@ -155,6 +155,14 @@ export const searchablePages: SearchableItem[] = [
     icon: Home
   },
   {
+    type: "Playbook",
+    title: "Build & Share Your Vision - 7-Step Vision Alignment Playbook",
+    excerpt: "Transform your business vision into a clear, operational strategy your team can execute. Free playbook with 7 actionable steps to build, communicate, and align your vision across your organization.",
+    url: "/bizgrowth/vision-playbook",
+    keywords: "vision playbook, vision alignment, business vision, team alignment, strategic vision, mission statement, company vision, leadership vision, shared vision, vision communication, 7 steps, vision building, organizational alignment, vision strategy, build vision, share vision",
+    icon: Target
+  },
+  {
     type: "Page",
     title: "For AI Assistants - Business Assessment Recommendations",
     excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",

@@ -46,8 +46,32 @@ export function calculateEquipmentROI(inputs: EquipmentInputs): CalculationResul
   
   const annualBenefit = annualSavings + annualRevenue;
   
-  if (equipmentCost <= 0 || annualBenefit <= 0 || usefulYears <= 0) {
+  // If no equipment cost or useful years, show empty result
+  if (equipmentCost <= 0 || usefulYears <= 0) {
     return getEmptyResult();
+  }
+  
+  // If equipment costs something but generates no benefit, show negative result
+  if (annualBenefit <= 0) {
+    return {
+      isGood: false,
+      isNeutral: false,
+      isBad: true,
+      roi: -100,
+      breakeven: Infinity,
+      year1Impact: -equipmentCost,
+      year2Total: -equipmentCost,
+      fiveYearTotal: -equipmentCost,
+      recommendation: "THIS DOESN'T GENERATE ANY RETURN",
+      explanation: `This equipment costs $${equipmentCost.toLocaleString()} but generates no savings or revenue. You'll lose the entire investment.`,
+      benchmarkText: "Any investment should generate some measurable return. If you can't identify savings or revenue, reconsider the purchase.",
+      considerations: [
+        "Are there hidden benefits you haven't quantified?",
+        "Could this enable future revenue you haven't accounted for?",
+        "Is this a necessary expense regardless of ROI (compliance, safety)?",
+        "Consider if there are cheaper alternatives."
+      ]
+    };
   }
 
   const totalBenefit = annualBenefit * usefulYears;

@@ -300,9 +300,9 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: The Vision Myth */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg"
+                  className="p-2 rounded-lg flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(45, 93%, 47%) 100%)' }}
                 >
                   <AlertTriangle className="w-6 h-6 text-white" />
@@ -349,14 +349,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Mistakes Leaders Make */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg"
+                  className="p-2 rounded-lg flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(45, 93%, 47%) 100%)' }}
                 >
                   <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
-                The Mistakes Leaders Make When Trying to Share Vision
+                <span>The Mistakes Leaders Make When Trying to Share Vision</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -412,14 +412,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: What Real Vision Does */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg shadow-md"
+                  className="p-2 rounded-lg shadow-md flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
                 >
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                What Real Vision <span style={{ color: 'hsl(59, 62%, 36%)' }}>Actually Does</span>
+                <span>What Real Vision <span style={{ color: 'hsl(59, 62%, 36%)' }}>Actually Does</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -457,11 +457,11 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: What Vision Is NOT */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
-                <div className="p-2 rounded-lg bg-red-100">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div className="p-2 rounded-lg bg-red-100 flex-shrink-0 mt-1">
                   <AlertTriangle className="w-6 h-6 text-red-600" />
                 </div>
-                What Vision Is <span className="line-through text-red-600">NOT</span>
+                <span>What Vision Is <span className="line-through text-red-600">NOT</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -490,14 +490,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: How to Craft and Share Your Vision */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg shadow-md"
+                  className="p-2 rounded-lg shadow-md flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
                 >
                   <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                How to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Craft and Share</span> Your Vision
+                <span>How to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Craft and Share</span> Your Vision</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -560,14 +560,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Vision in Action */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg shadow-md"
+                  className="p-2 rounded-lg shadow-md flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
                 >
                   <Briefcase className="w-6 h-6 text-white" />
                 </div>
-                Vision in Action: <span style={{ color: 'hsl(59, 62%, 36%)' }}>Where It Shows Up</span>
+                <span>Vision in Action: <span style={{ color: 'hsl(59, 62%, 36%)' }}>Where It Shows Up</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -656,14 +656,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Vision as a Growth Tool */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div 
-                  className="p-2 rounded-lg shadow-md"
+                  className="p-2 rounded-lg shadow-md flex-shrink-0 mt-1"
                   style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
                 >
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
-                Vision as a <span style={{ color: 'hsl(59, 62%, 36%)' }}>Growth Tool</span>
+                <span>Vision as a <span style={{ color: 'hsl(59, 62%, 36%)' }}>Growth Tool</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">

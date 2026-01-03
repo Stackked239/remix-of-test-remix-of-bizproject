@@ -57,9 +57,11 @@ import businessHealthScoresStagesImage from "@/assets/business-health-scores-sta
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
 import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.jpg";
+import visionSharingImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/vision-sharing-business-owner": visionSharingImage,
   "/blog/happy-new-year-2026-year-of-growth": happyNewYear2026Image,
   "/blog/overcoming-marketing-challenges-small-business": overcomingMarketingChallengesImage,
   "/blog/employee-retention-company-culture-leadership": employeeRetentionLeadershipImage,

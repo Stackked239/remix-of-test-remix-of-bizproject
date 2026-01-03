@@ -5,16 +5,18 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
- * AUTOMATED SITEMAP GENERATOR
+ * AUTOMATED SITEMAP GENERATOR WITH OG IMAGE SUPPORT
  * 
- * This script automatically generates sitemap.xml from all discovered routes.
+ * This script automatically generates sitemap.xml from all discovered routes,
+ * including image:image tags for OG images (helps with SEO & image indexing).
  * 
  * HOW IT WORKS:
  * 1. Reads routes from routes.json (extracted from App.tsx)
  * 2. Auto-categorizes routes (homepage, blog, tools, pages, legal)
  * 3. Determines file modification dates for accurate lastmod
  * 4. Assigns priorities and changefreq based on route patterns
- * 5. Generates valid XML sitemap
+ * 5. Detects OG images from page source files
+ * 6. Generates valid XML sitemap with image extensions
  * 
  * TO ADD NEW CONTENT TYPES:
  * - Just add routes to App.tsx - they'll be auto-detected
@@ -26,6 +28,25 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
  * - During build: ./build-ssg.sh or build-ssg.bat
  * - Manual: node generate-sitemap.js
  */
+
+// OG Image mapping for routes (extracted from page files)
+const ogImageMap = {
+  '/': '/og-images/og-homepage.jpg',
+  '/about': '/og-images/og-about.jpg',
+  '/pricing': '/og-images/og-pricing.jpg',
+  '/contact': '/og-images/og-contact.jpg',
+  '/blog': '/og-images/og-blog.jpg',
+  '/biztools': '/og-images/og-biztools.jpg',
+  '/bizguides': '/og-images/og-bizguides.jpg',
+  '/bizleader': '/og-images/og-bizleader.jpg',
+  '/bizgrowth': '/og-images/og-bizgrowth.jpg',
+  '/sherpas': '/og-images/og-sherpas.jpg',
+  '/how-it-works': '/og-images/og-how-it-works.jpg',
+  '/faqs': '/og-images/og-faqs.jpg',
+  '/resources': '/og-images/og-resources.jpg',
+  '/security': '/og-images/og-security.jpg',
+  '/glossary-of-terms': '/og-images/og-glossary.jpg',
+};
 
 /**
  * Get the last modification date of a file
@@ -48,6 +69,52 @@ function getFileLastModified(routePath) {
   
   // Fallback to current date
   return new Date().toISOString().split('T')[0];
+}
+
+/**
+ * Extract OG image from a page source file
+ */
+function extractOgImageFromFile(routePath) {
+  // Check static mapping first
+  if (ogImageMap[routePath]) {
+    return ogImageMap[routePath];
+  }
+  
+  // Try to read from source file
+  const possiblePaths = [
+    path.join(__dirname, 'src', 'pages', `${routePath.slice(1) || 'Index'}.tsx`),
+    path.join(__dirname, 'src', 'pages', 'blog', `${routePath.split('/').pop()}.tsx`),
+    path.join(__dirname, 'src', 'pages', 'tools', `${routePath.split('/').pop()}.tsx`),
+  ];
+  
+  // Convert route to Pascal case for file matching
+  const routeName = routePath.split('/').pop() || '';
+  const pascalCase = routeName.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
+  possiblePaths.push(path.join(__dirname, 'src', 'pages', 'blog', `${pascalCase}.tsx`));
+  possiblePaths.push(path.join(__dirname, 'src', 'pages', 'tools', `${pascalCase}.tsx`));
+  
+  for (const filePath of possiblePaths) {
+    if (fs.existsSync(filePath)) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        
+        // Look for ogImage prop
+        const seoMatch = content.match(/ogImage\s*=\s*["']([^"']+)["']/);
+        if (seoMatch) {
+          let imgPath = seoMatch[1];
+          // Normalize path
+          if (imgPath.startsWith('https://bizhealth.ai')) {
+            imgPath = imgPath.replace('https://bizhealth.ai', '');
+          }
+          return imgPath;
+        }
+      } catch {
+        // Ignore read errors
+      }
+    }
+  }
+  
+  return null;
 }
 
 /**
@@ -120,7 +187,7 @@ function getRouteConfig(route) {
  * Generate sitemap.xml from routes.json
  */
 function generateSitemap() {
-  console.log('🗺️  Generating automated sitemap.xml...\n');
+  console.log('🗺️  Generating automated sitemap.xml with OG images...\n');
   
   // Load routes
   const routesPath = path.join(__dirname, 'routes.json');
@@ -132,11 +199,13 @@ function generateSitemap() {
   const routes = JSON.parse(fs.readFileSync(routesPath, 'utf-8'));
   const baseUrl = 'https://bizhealth.ai';
   
-  // Build XML sitemap (no BOM, no leading whitespace)
+  // Build XML sitemap with image namespace
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
+  xml += '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
   
   let urlCount = 0;
+  let imageCount = 0;
   const categorizedRoutes = {
     homepage: [],
     mainPages: [],
@@ -156,6 +225,7 @@ function generateSitemap() {
     // Get automated config
     const config = getRouteConfig(route);
     const lastMod = getFileLastModified(route);
+    const ogImage = extractOgImageFromFile(route);
     
     // Categorize for reporting
     if (route === '/') categorizedRoutes.homepage.push(route);
@@ -170,6 +240,16 @@ function generateSitemap() {
     xml += `    <lastmod>${lastMod}</lastmod>\n`;
     xml += `    <changefreq>${config.changefreq}</changefreq>\n`;
     xml += `    <priority>${config.priority}</priority>\n`;
+    
+    // Add image tag if OG image exists
+    if (ogImage) {
+      const imageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
+      xml += '    <image:image>\n';
+      xml += `      <image:loc>${imageUrl}</image:loc>\n`;
+      xml += '    </image:image>\n';
+      imageCount++;
+    }
+    
     xml += '  </url>\n';
     
     urlCount++;
@@ -190,6 +270,7 @@ function generateSitemap() {
   console.log(`✅ Sitemap generated successfully!\n`);
   console.log(`📊 STATISTICS:`);
   console.log(`   Total URLs: ${urlCount}`);
+  console.log(`   With OG Images: ${imageCount}`);
   console.log(`   Homepage: ${categorizedRoutes.homepage.length}`);
   console.log(`   Main Pages: ${categorizedRoutes.mainPages.length}`);
   console.log(`   Blog Posts: ${categorizedRoutes.blog.length}`);

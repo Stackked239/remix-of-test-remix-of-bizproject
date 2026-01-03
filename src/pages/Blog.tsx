@@ -193,6 +193,7 @@ const Blog = () => {
         description="Expert insights, practical strategies, and data-driven analysis for SMB leaders. Learn from business intelligence experts about operations, finance, leadership, and growth."
         keywords="business blog, SMB insights, business strategy, operational excellence, financial management, leadership development, business intelligence, growth strategies"
         canonical="https://bizhealth.ai/blog"
+        ogImage="/og-images/og-blog.jpg"
       />
       <StructuredData 
         type="organization"

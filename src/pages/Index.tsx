@@ -21,6 +21,7 @@ return (
         description="Transform your SMB with BizHealth.ai's comprehensive business health assessment. Get actionable insights, expert recommendations, and data-driven strategies in minutes."
         keywords="BizHealth, business health assessment, strategic business diagnostics, executive business analysis, small business advisor, business growth strategy"
         canonical="https://bizhealth.ai/"
+        ogImage="/og-images/og-homepage.jpg"
       />
       <StructuredData type="organization" />
       <GlobalNavigation />

@@ -608,17 +608,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Common Objection */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div 
-                    className="p-2 rounded-lg"
-                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-grey)) 100%)' }}
-                  >
-                    <Quote className="w-6 h-6 text-white" />
-                  </div>
-                  <span>The Most Common Objection:</span>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-start gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg flex-shrink-0 mt-1"
+                  style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-grey)) 100%)' }}
+                >
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
-                <span className="italic block" style={{ color: 'hsl(59, 62%, 36%)' }}>"But I Don't Have a Vision Yet"</span>
+                <span>The Most Common Objection: <span className="italic" style={{ color: 'hsl(59, 62%, 36%)' }}>"But I Don't Have a Vision Yet"</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { RotateCcw, ArrowLeft, Printer, Share2 } from 'lucide-react';
+import { RotateCcw, ArrowLeft, Printer, Share2, Download } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
@@ -11,6 +11,7 @@ import PricingResults from '@/components/pricing-calculator/PricingResults';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { calculatePricingResults, PricingInputs } from '@/lib/pricingCalculations';
+import { generatePricingPdf } from '@/lib/pricingPdfExport';
 
 // Tooltip content as per specification
 const tooltips = {
@@ -162,6 +163,24 @@ const FreePricingNetProfitCalculator = () => {
       // Copy link to clipboard
       await navigator.clipboard.writeText(window.location.href);
       toast.success('Link copied to clipboard!');
+    }
+  };
+
+  const handleDownloadPdf = async () => {
+    if (!results) {
+      toast.error('Please complete the calculator first');
+      return;
+    }
+    
+    try {
+      toast.loading('Generating PDF...');
+      await generatePricingPdf({ inputs, results });
+      toast.dismiss();
+      toast.success('PDF downloaded successfully!');
+    } catch (error) {
+      toast.dismiss();
+      toast.error('Failed to generate PDF. Please try again.');
+      console.error('PDF generation error:', error);
     }
   };
 
@@ -325,7 +344,15 @@ const FreePricingNetProfitCalculator = () => {
                       className="flex-1"
                     >
                       <Printer className="w-4 h-4 mr-2" />
-                      Print Results
+                      Print
+                    </Button>
+                    <Button
+                      variant="outline"
+                      onClick={handleDownloadPdf}
+                      className="flex-1"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download PDF
                     </Button>
                     <Button
                       variant="default"
@@ -333,7 +360,7 @@ const FreePricingNetProfitCalculator = () => {
                       className="flex-1 bg-biz-citrine text-biz-navy hover:bg-biz-citrine/90"
                     >
                       <Share2 className="w-4 h-4 mr-2" />
-                      Save/Share
+                      Share
                     </Button>
                   </div>
                 )}

@@ -23,7 +23,7 @@ const SMBScalingParadox2025 = () => {
         keywords="scaling small business, SMB growth strategy 2025, business scaling challenges, profitable scaling, small business health assessment, scaling SMB operations, sustainable business growth, decision-making frameworks, scaling paradox"
         canonical="https://bizhealth.ai/blog/smb-scaling-paradox-2025"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/smb-scaling-paradox-2025.jpg"
+        ogImage="/og-images/og-scaling-paradox.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
@@ -33,7 +33,7 @@ const SMBScalingParadox2025 = () => {
         type="blogPosting"
         headline="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
         description="Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
-        image="https://bizhealth.ai/assets/smb-scaling-paradox-2025.jpg"
+        image="/og-images/og-scaling-paradox.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"

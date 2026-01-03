@@ -152,7 +152,7 @@ const VisionSharingBusinessOwner = () => {
       <PromotionalBanner />
       <GlobalNavigation />
       
-      <main className="min-h-screen bg-background pt-28 md:pt-32">
+      <main className="min-h-screen bg-background pt-32 md:pt-36">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6 animate-fade-in">

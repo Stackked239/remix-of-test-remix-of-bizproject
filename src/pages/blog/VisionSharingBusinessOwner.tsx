@@ -766,7 +766,7 @@ const VisionSharingBusinessOwner = () => {
               Ready to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Align Your Team</span> Around Your Vision?
             </h3>
             <p className="text-muted-foreground text-center mb-6">
-              Take our free Business Health Assessment to discover how well your vision is being communicated and lived across your organization.
+              Take our Business Health Assessment to discover how well your vision is being communicated and lived across your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

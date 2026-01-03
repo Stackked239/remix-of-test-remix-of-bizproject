@@ -41,7 +41,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
         keywords="leadership blind spots, SMB leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies"
         canonical="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-leadership-blind-spots.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

@@ -16,7 +16,7 @@ const DailyGrindFixes = () => {
         keywords="food business operations, early-stage food business, restaurant operations, food startup tips, inventory management food, supply chain food business, food business scaling, SBA food business benchmarks"
         canonical="https://bizhealth.ai/blog/daily-grind-fixes"
         ogType="article"
-        ogImage={`https://bizhealth.ai${dailyGrindImage}`}
+        ogImage="/og-images/og-daily-grind-fixes.jpg"
         articlePublishedTime="2025-09-25"
         articleAuthor="BizHealth Research Team"
       />

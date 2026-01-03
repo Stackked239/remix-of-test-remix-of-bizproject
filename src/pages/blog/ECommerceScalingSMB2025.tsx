@@ -22,7 +22,7 @@ const ECommerceScalingSMB2025 = () => {
         keywords="SMB e-commerce strategy 2025, online scaling small business, growth hacks mid-sized, SBA e-com trends, market entry tips, e-commerce growth strategies, small business digital transformation"
         canonical="https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-ecommerce-scaling.jpg"
         articlePublishedTime={publishDate}
         articleAuthor={author}
       />

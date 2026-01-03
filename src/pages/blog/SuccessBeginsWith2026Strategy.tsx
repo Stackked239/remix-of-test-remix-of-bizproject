@@ -22,7 +22,7 @@ const SuccessBeginsWith2026Strategy = () => {
         keywords="2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment"
         canonical="https://bizhealth.ai/blog/success-begins-with-2026-strategy"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-success-2026-strategy.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

@@ -21,7 +21,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
         keywords="business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
         canonical="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-complete-guide-2026.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

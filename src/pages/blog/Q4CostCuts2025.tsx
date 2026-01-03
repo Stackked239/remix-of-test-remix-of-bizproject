@@ -94,7 +94,7 @@ const Q4CostCuts2025 = () => {
           keywords="operational cost fixes 2025, small business cash crunch, efficiency diagnostics, inflation ops impact, Q4 cost management, cash-strapped businesses, operational efficiency, cost reduction strategies"
           canonical="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
           ogType="article"
-          ogImage={`https://bizhealth.ai${heroImage}`}
+          ogImage="/og-images/og-q4-cost-cuts.jpg"
           articlePublishedTime={publishDate}
           articleAuthor="BizHealth.ai Research Team"
         />

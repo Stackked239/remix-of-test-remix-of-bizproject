@@ -92,7 +92,7 @@ const Operations = () => {
         keywords="business operations SMB, operational efficiency 2025, streamline business processes, AI business operations, SMB operations strategies, operational resilience, process optimization AI, lean operations small business, business process automation 2025"
         canonical="https://bizhealth.ai/blog/operations"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-operations.jpg"
+        ogImage="/og-images/og-operations.jpg"
       />
       
       <StructuredData

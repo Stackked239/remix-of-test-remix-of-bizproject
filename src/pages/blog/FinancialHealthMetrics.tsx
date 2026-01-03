@@ -18,7 +18,7 @@ const FinancialHealthMetrics = () => {
         keywords="financial health metrics, business KPIs, profit margins, cash flow management, financial ratios, SMB metrics, business performance indicators"
         canonical="https://bizhealth.ai/blog/financial-health-metrics"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/financial-health-metrics-dashboard.jpg"
+        ogImage="/og-images/og-financial-health-metrics.jpg"
         articlePublishedTime="2025-09-12"
         articleAuthor="BizHealth Research Team"
       />

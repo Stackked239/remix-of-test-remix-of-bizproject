@@ -364,7 +364,7 @@ const OvercomingMarketingChallenges = () => {
         keywords="small business marketing challenges, SMB marketing strategy, marketing for small businesses, customer acquisition, marketing mistakes, lead generation, marketing rhythm, positioning strategy, content marketing SMB, 90-day marketing plan"
         canonical="https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business"
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-marketing-challenges.jpg"
       />
       
       <StructuredData 

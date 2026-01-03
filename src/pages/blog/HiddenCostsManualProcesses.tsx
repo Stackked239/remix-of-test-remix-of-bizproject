@@ -20,7 +20,7 @@ const HiddenCostsManualProcesses = () => {
         keywords="manual processes, business automation, SMB technology, operational efficiency, digital transformation, business processes, automation tools, tech adoption, small business efficiency, process improvement, 2025 technology"
         canonical="https://bizhealth.ai/blog/hidden-costs-manual-processes"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-hidden-costs-manual-processes.jpg"
+        ogImage="/og-images/og-hidden-costs-manual.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

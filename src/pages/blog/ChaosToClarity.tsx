@@ -48,7 +48,7 @@ const ChaosToClarity = () => {
         keywords="operating rhythm SMB, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, SMB operations management, leadership meetings 2025, business scaling framework"
         canonical="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-chaos-to-clarity.jpg"
       />
 
       <StructuredData

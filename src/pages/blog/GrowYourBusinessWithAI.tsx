@@ -21,7 +21,7 @@ const GrowYourBusinessWithAI = () => {
         keywords="AI business growth 2025, small business AI strategy, SMB AI implementation, AI-driven growth, business intelligence AI, predictive analytics SMB, AI operational efficiency, AI for small business, business health assessment, AI transformation framework"
         canonical={articleUrl}
         ogType="article"
-        ogImage={growWithAIHero}
+        ogImage="/og-images/og-grow-with-ai.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

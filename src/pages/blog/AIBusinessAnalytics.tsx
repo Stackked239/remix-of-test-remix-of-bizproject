@@ -21,7 +21,7 @@ const AIBusinessAnalytics = () => {
         keywords="AI business analytics, small business intelligence, AI for SMBs, business analytics tools, machine learning, data-driven decisions, automated insights, predictive analytics, business intelligence AI, SMB analytics 2025"
         canonical={articleUrl}
         ogType="article"
-        ogImage={aiAnalyticsImage}
+        ogImage="/og-images/og-ai-business-analytics.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="Jennifer Walsh"

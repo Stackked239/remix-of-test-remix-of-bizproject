@@ -17,7 +17,7 @@ const WhenToPivot = () => {
         keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, SMB strategy"
         canonical="https://bizhealth.ai/blog/when-to-pivot"
         ogType="article"
-        ogImage={`https://bizhealth.ai${pivotImage}`}
+        ogImage="/og-images/og-when-to-pivot.jpg"
         articlePublishedTime="2025-09-12"
         articleAuthor="BizHealth Research Team"
       />

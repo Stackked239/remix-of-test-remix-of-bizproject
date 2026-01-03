@@ -164,6 +164,8 @@ const RiskManagement = () => {
         description="Practical risk management guidance for small and mid-sized business owners. Learn about business continuity, insurance, compliance, crisis management, and protecting your business."
         keywords="business risk management, SMB risk, business continuity planning, small business insurance, compliance management, crisis management, business resilience, cybersecurity risk"
         canonical="https://bizhealth.ai/blog/risk-management"
+        ogType="website"
+        ogImage="/og-images/og-risk-management.jpg"
       />
       
       <StructuredData

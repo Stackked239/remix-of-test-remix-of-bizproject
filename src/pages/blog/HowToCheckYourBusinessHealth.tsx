@@ -22,7 +22,7 @@ const HowToCheckYourBusinessHealth = () => {
         keywords="check my business health, how to check business health, business health check for SMBs, SMB business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
         canonical="https://bizhealth.ai/blog/how-to-check-your-business-health"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-check-business-health.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

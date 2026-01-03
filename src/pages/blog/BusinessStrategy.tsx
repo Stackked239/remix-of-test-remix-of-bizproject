@@ -110,7 +110,7 @@ const BusinessStrategy = () => {
         keywords="business strategy, SMB strategy, strategic planning, competitive analysis, business growth strategy, market positioning, business decision making, strategic frameworks 2025"
         canonical="https://bizhealth.ai/blog/business-strategy"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-business-strategy.jpg"
+        ogImage="/og-images/og-business-strategy.jpg"
       />
       
       <StructuredData

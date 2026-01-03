@@ -48,7 +48,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
         keywords="solo entrepreneur prioritization, prioritization for solo operators, time management small business, delegation for solopreneurs, micro business productivity, entrepreneur survival guide, strategic work allocation, business time audit, automation for entrepreneurs 2025"
         canonical="https://bizhealth.ai/blog/how-to-prioritize-operator-survival-guide"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/how-to-prioritize-operator-survival-guide.jpg"
+        ogImage="/og-images/og-prioritize-survival.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

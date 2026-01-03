@@ -21,7 +21,7 @@ const SmallBusinessStruggles = () => {
         keywords="business health analysis, small business diagnostics, small business pain points, small business growth, why small businesses fail, SMB blind spots, AI business analytics, operational resilience"
         canonical="https://bizhealth.ai/blog/small-business-struggles"
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-small-business-struggles.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Team"

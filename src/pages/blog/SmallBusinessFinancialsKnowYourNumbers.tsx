@@ -44,7 +44,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
         keywords="small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, cash conversion cycle, financial literacy business owners, SMB finance"
         canonical="https://bizhealth.ai/blog/small-business-financials-know-your-numbers"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/small-business-financials-know-your-numbers.jpg"
+        ogImage="/og-images/og-know-your-numbers.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

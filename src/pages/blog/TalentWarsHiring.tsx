@@ -70,7 +70,7 @@ const TalentWarsHiring = () => {
         keywords="SMB hiring 2025, talent shortages small business, leadership strategies, retention tips, skills-based hiring, AI recruitment, employer branding, workforce retention, talent acquisition"
         canonical="https://bizhealth.ai/blog/talent-wars-hiring"
         ogType="article"
-        ogImage={`https://bizhealth.ai${talentWarsImage}`}
+        ogImage="/og-images/og-talent-wars.jpg"
         articlePublishedTime={publishDate}
         articleAuthor={author}
       />

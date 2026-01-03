@@ -21,12 +21,12 @@ import {
   DollarSign
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
-import blindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
-import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";
+import blindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
-import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
-import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
+import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";

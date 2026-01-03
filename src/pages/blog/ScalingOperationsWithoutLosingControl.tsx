@@ -6,7 +6,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import heroImage from '@/assets/scaling-operations-without-losing-control.jpg';
+import heroImage from '@/assets/scaling-operations-without-losing-control-optimized.jpg';
 
 const ScalingOperationsWithoutLosingControl = () => {
   const publishDate = "2025-11-23";

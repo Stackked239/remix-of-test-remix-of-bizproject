@@ -7,7 +7,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
+import heroImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
 
 const SmallBusinessStruggles = () => {
   const publishDate = "2025-11-13";

@@ -19,26 +19,38 @@ const CurrencyInput: React.FC<CurrencyInputProps> = ({
   className
 }) => {
   const [displayValue, setDisplayValue] = useState('');
+  const [hasUserInput, setHasUserInput] = useState(false);
 
   useEffect(() => {
-    if (value > 0) {
-      setDisplayValue(value.toLocaleString('en-US'));
-    } else {
-      setDisplayValue('');
+    if (!hasUserInput) {
+      if (value > 0) {
+        setDisplayValue(value.toLocaleString('en-US'));
+      } else if (value === 0) {
+        setDisplayValue('');
+      }
     }
-  }, [value]);
+  }, [value, hasUserInput]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawValue = e.target.value.replace(/[^0-9]/g, '');
-    const numericValue = parseInt(rawValue, 10) || 0;
+    setHasUserInput(true);
     
-    setDisplayValue(numericValue > 0 ? numericValue.toLocaleString('en-US') : '');
-    onChange(numericValue);
+    if (rawValue === '' || rawValue === '0') {
+      setDisplayValue(rawValue === '0' ? '0' : '');
+      onChange(0);
+    } else {
+      const numericValue = parseInt(rawValue, 10) || 0;
+      setDisplayValue(numericValue.toLocaleString('en-US'));
+      onChange(numericValue);
+    }
   };
 
   const handleBlur = () => {
+    setHasUserInput(false);
     if (value > 0) {
       setDisplayValue(value.toLocaleString('en-US'));
+    } else {
+      setDisplayValue('0');
     }
   };
 

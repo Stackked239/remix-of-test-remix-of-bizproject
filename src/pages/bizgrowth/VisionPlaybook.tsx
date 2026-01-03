@@ -103,7 +103,7 @@ const VisionPlaybook = () => {
 
       {/* Sticky Page Header - positioned below banner and nav */}
       <header 
-        className={`fixed top-[136px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E8E8E5] py-4 transition-shadow duration-300 ${headerShadow ? 'shadow-lg shadow-[#242553]/10' : ''}`}
+        className={`fixed top-[136px] left-0 right-0 z-40 bg-[#969423]/15 backdrop-blur-md border-b border-[#E8E8E5] py-4 transition-shadow duration-300 ${headerShadow ? 'shadow-lg shadow-[#242553]/10' : ''}`}
       >
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex justify-between items-center">

@@ -727,57 +727,57 @@ const VisionSharingBusinessOwner = () => {
               </div>
             </section>
 
-            {/* CTA Section */}
+            {/* Vision Playbook CTA */}
             <section className="mb-12">
-              <div 
-                className="p-8 rounded-2xl border-2 shadow-xl"
-                style={{ 
-                  background: 'linear-gradient(135deg, hsl(var(--biz-navy), 0.05) 0%, hsl(59, 62%, 36%, 0.1) 50%, hsl(var(--background)) 100%)',
-                  borderColor: 'hsl(59, 62%, 36%, 0.3)'
-                }}
-              >
-                <h3 className="text-2xl font-bold mb-4 text-center" style={{ color: 'hsl(var(--biz-navy))' }}>
-                  Ready to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Align Your Team</span> Around Your Vision?
+              <div className="p-8 rounded-2xl border-2 shadow-lg text-center" style={{ 
+                background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 100%)',
+                borderColor: 'hsl(59, 62%, 36%)'
+              }}>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                  Ready to Build & Share Your Vision?
                 </h3>
-                <p className="text-muted-foreground text-center mb-6">
-                  Take our free Business Health Assessment to discover how well your vision is being communicated and lived across your organization.
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  Get our free 7-step playbook with templates, frameworks, and exercises to craft a vision your team will rally behind.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/pricing"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
-                  >
-                    Get Your Business Health Assessment
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
+                <Link 
+                  to="/bizgrowth/vision-playbook"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)',
+                    color: 'white'
+                  }}
+                >
+                  Get the Free Vision Playbook
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
               </div>
             </section>
           </div>
 
-          {/* Vision Playbook CTA */}
-          <div className="mt-12 p-8 rounded-2xl border-2 shadow-lg text-center" style={{ 
-            background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 100%)',
-            borderColor: 'hsl(59, 62%, 36%)'
-          }}>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Ready to Build & Share Your Vision?
+          {/* CTA Section */}
+          <div 
+            className="mt-12 p-8 rounded-2xl border-2 shadow-xl"
+            style={{ 
+              background: 'linear-gradient(135deg, hsl(var(--biz-navy), 0.05) 0%, hsl(59, 62%, 36%, 0.1) 50%, hsl(var(--background)) 100%)',
+              borderColor: 'hsl(59, 62%, 36%, 0.3)'
+            }}
+          >
+            <h3 className="text-2xl font-bold mb-4 text-center" style={{ color: 'hsl(var(--biz-navy))' }}>
+              Ready to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Align Your Team</span> Around Your Vision?
             </h3>
-            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              Get our free 7-step playbook with templates, frameworks, and exercises to craft a vision your team will rally behind.
+            <p className="text-muted-foreground text-center mb-6">
+              Take our free Business Health Assessment to discover how well your vision is being communicated and lived across your organization.
             </p>
-            <Link 
-              to="/bizgrowth/vision-playbook"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
-              style={{ 
-                background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)',
-                color: 'white'
-              }}
-            >
-              Get the Free Vision Playbook
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/pricing"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
+              >
+                Get Your Business Health Assessment
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
 
           {/* Author Bio */}

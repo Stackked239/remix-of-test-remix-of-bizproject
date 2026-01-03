@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { RotateCcw, ArrowLeft, Share2, Download } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
@@ -202,27 +202,15 @@ const FreePricingNetProfitCalculator = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Free Pricing Net Profit Calculator | BizHealth.ai</title>
-        <meta name="description" content="Find out if your prices actually make you money. Free calculator for small business owners to check profit margins and stop losing money on every sale." />
-        <meta name="keywords" content="pricing calculator, profit margin calculator, small business pricing, net profit calculator, pricing strategy tool" />
-        <link rel="canonical" href="https://bizhealth.ai/biztools/toolbox/free-pricing-net-profit-calculator" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Free Pricing Net Profit Calculator | BizHealth.ai" />
-        <meta property="og:description" content="Find out if your prices actually make you money. Takes 2 minutes." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bizhealth.ai/biztools/toolbox/free-pricing-net-profit-calculator" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Pricing Net Profit Calculator" />
-        <meta name="twitter:description" content="Find out if your prices actually make you money." />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Free Pricing Net Profit Calculator | BizHealth.ai"
+        description="Find out if your prices actually make you money. Free calculator for small business owners to check profit margins and stop losing money on every sale."
+        keywords="pricing calculator, profit margin calculator, small business pricing, net profit calculator, pricing strategy tool"
+        canonical="https://bizhealth.ai/biztools/toolbox/free-pricing-net-profit-calculator"
+        ogImage="https://bizhealth.ai/og-images/og-pricing-calculator.jpg"
+      />
+      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       <PromotionalBanner />
       <GlobalNavigation />

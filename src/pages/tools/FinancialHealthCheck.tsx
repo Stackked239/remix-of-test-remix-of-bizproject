@@ -311,7 +311,7 @@ const FinancialHealthCheck = () => {
         keywords="small business financial health, cash flow assessment, SMB growth assessment, business health check, profitability calculator, financial forecasting, business runway"
         canonical="https://bizhealth.ai/biztools/financials/health-check"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-financial-health-check.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-financial-health-check.jpg"
       />
       
       {/* Structured Data */}

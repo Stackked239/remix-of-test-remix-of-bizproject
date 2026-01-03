@@ -126,7 +126,7 @@ const GlossaryOfTerms = () => {
         keywords="business glossary, SMB terms, business metrics, financial ratios, customer metrics, small business education, business terminology, KPI definitions"
         canonical="https://bizhealth.ai/glossary-of-terms"
         ogType="website"
-        ogImage="https://bizhealth.ai/bizhealth-logo-main.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-glossary.jpg"
       />
 
       <div className="min-h-screen bg-background">

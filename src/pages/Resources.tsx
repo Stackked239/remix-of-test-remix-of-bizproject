@@ -192,6 +192,7 @@ const Resources = () => {
         description="Access free business calculators, strategic planning templates, financial management guides, and growth resources for SMB owners."
         keywords="business resources, SMB tools, business calculators, strategic planning templates, financial management"
         canonical="https://bizhealth.ai/resources"
+        ogImage="https://bizhealth.ai/og-images/og-resources.jpg"
       />
       <GlobalNavigation />
       

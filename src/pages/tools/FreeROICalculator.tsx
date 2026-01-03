@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { RotateCcw, ArrowLeft } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
@@ -92,11 +92,13 @@ const FreeROICalculator = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Free ROI Calculator | BizHealth.ai</title>
-        <meta name="description" content="Figure out if a new investment makes sense — in plain English, in 5 minutes. Calculate ROI for equipment, new hires, or marketing campaigns." />
-        <link rel="canonical" href="https://bizhealth.ai/biztools/toolbox/free-roi-calculator" />
-      </Helmet>
+      <SEO 
+        title="Free ROI Calculator | BizHealth.ai"
+        description="Figure out if a new investment makes sense — in plain English, in 5 minutes. Calculate ROI for equipment, new hires, or marketing campaigns."
+        keywords="ROI calculator, return on investment, business investment calculator, equipment ROI, hiring ROI, marketing ROI"
+        canonical="https://bizhealth.ai/biztools/toolbox/free-roi-calculator"
+        ogImage="https://bizhealth.ai/og-images/og-roi-calculator.jpg"
+      />
 
       <PromotionalBanner />
       <GlobalNavigation />

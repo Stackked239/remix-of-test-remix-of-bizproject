@@ -77,6 +77,7 @@ const SWOTAnalysisTool = () => {
         description="Conduct comprehensive SWOT analysis for your small business. Identify strengths, weaknesses, opportunities, and threats with our interactive strategic planning tool."
         keywords="SWOT analysis, business strategy, strategic planning, competitive analysis, business assessment, small business tools"
         canonical="https://bizhealth.ai/biztools/toolbox/swot-analysis-tool"
+        ogImage="https://bizhealth.ai/og-images/og-swot-tool.jpg"
       />
 
       <div className="min-h-screen flex flex-col bg-background">

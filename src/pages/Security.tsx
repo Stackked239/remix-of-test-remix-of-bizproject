@@ -19,6 +19,7 @@ const Security = () => {
         description="Learn how BizHealth.ai protects your sensitive business data with bank-level encryption, enterprise partners like Google Cloud and Stripe, and transparent security practices built for SMBs."
         keywords="security, data protection, risk, secure, data security, security protection, business data security, SaaS security, SMB data protection, secure business intelligence, data encryption, compliance"
         canonical="https://bizhealth.ai/security"
+        ogImage="https://bizhealth.ai/og-images/og-security.jpg"
       />
 
       <StructuredData type="organization" />

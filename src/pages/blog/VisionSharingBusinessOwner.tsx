@@ -458,10 +458,10 @@ const VisionSharingBusinessOwner = () => {
             {/* Section: What Vision Is NOT */}
             <section className="mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
-                <div className="p-2 rounded-lg bg-muted">
-                  <AlertTriangle className="w-6 h-6 text-muted-foreground" />
+                <div className="p-2 rounded-lg bg-red-100">
+                  <AlertTriangle className="w-6 h-6 text-red-600" />
                 </div>
-                What Vision Is <span className="line-through opacity-60">NOT</span>
+                What Vision Is <span className="line-through text-red-600">NOT</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -754,6 +754,30 @@ const VisionSharingBusinessOwner = () => {
                 </div>
               </div>
             </section>
+          </div>
+
+          {/* Vision Playbook CTA */}
+          <div className="mt-12 p-8 rounded-2xl border-2 shadow-lg text-center" style={{ 
+            background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 100%)',
+            borderColor: 'hsl(59, 62%, 36%)'
+          }}>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Ready to Build & Share Your Vision?
+            </h3>
+            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              Get our free 7-step playbook with templates, frameworks, and exercises to craft a vision your team will rally behind.
+            </p>
+            <Link 
+              to="/bizgrowth/vision-playbook"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)',
+                color: 'white'
+              }}
+            >
+              Get the Free Vision Playbook
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
           {/* Author Bio */}

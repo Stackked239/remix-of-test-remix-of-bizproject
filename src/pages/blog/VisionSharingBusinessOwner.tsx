@@ -18,13 +18,16 @@ const MistakeCard = ({
   title: string; 
   description: React.ReactNode;
 }) => (
-  <div className="p-6 rounded-xl border-2 border-destructive/20 bg-gradient-to-br from-destructive/5 to-background">
+  <div className="p-6 rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-amber-50 to-background shadow-md hover:shadow-lg transition-shadow duration-300">
     <div className="flex items-start gap-4">
-      <div className="p-3 rounded-xl bg-destructive/10 flex-shrink-0">
-        <AlertTriangle className="w-6 h-6 text-destructive" />
+      <div 
+        className="p-3 rounded-xl flex-shrink-0"
+        style={{ background: 'linear-gradient(135deg, hsl(45, 93%, 47%) 0%, hsl(38, 92%, 50%) 100%)' }}
+      >
+        <AlertTriangle className="w-6 h-6 text-white" />
       </div>
       <div>
-        <span className="text-sm font-bold uppercase tracking-wide text-destructive">
+        <span className="text-sm font-bold uppercase tracking-wide" style={{ color: 'hsl(38, 92%, 40%)' }}>
           Mistake #{number}
         </span>
         <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
@@ -43,13 +46,16 @@ const BenefitCard = ({
   description: string;
   icon: React.ElementType;
 }) => (
-  <div className="p-5 rounded-xl border border-border bg-gradient-to-br from-card to-primary/5 hover:shadow-lg transition-all duration-300">
+  <div className="p-5 rounded-xl border-2 border-transparent hover:border-[hsl(59,62%,36%)]/30 bg-gradient-to-br from-card via-[hsl(59,62%,36%)]/5 to-card hover:shadow-lg transition-all duration-300 group">
     <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-primary/10 flex-shrink-0">
-        <Icon className="w-5 h-5 text-primary" />
+      <div 
+        className="p-2 rounded-lg flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+        style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
+      >
+        <Icon className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h4 className="font-bold text-foreground mb-2">{title}</h4>
+        <h4 className="font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>{title}</h4>
         <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
       </div>
     </div>
@@ -67,16 +73,19 @@ const StepCard = ({
   children: React.ReactNode;
   icon: React.ElementType;
 }) => (
-  <div className="rounded-2xl border-2 border-primary/20 p-6 bg-gradient-to-br from-background to-primary/5">
+  <div className="rounded-2xl border-l-4 p-6 bg-gradient-to-br from-background via-[hsl(59,62%,36%)]/5 to-background shadow-md hover:shadow-lg transition-shadow duration-300" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
     <div className="flex items-center gap-3 mb-4">
-      <div className="p-3 rounded-xl bg-primary/10">
-        <Icon className="w-6 h-6 text-primary" />
+      <div 
+        className="p-3 rounded-xl shadow-md"
+        style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
+      >
+        <Icon className="w-6 h-6 text-white" />
       </div>
       <div>
-        <span className="text-sm font-bold uppercase tracking-wide text-primary">
+        <span className="text-sm font-bold uppercase tracking-wide" style={{ color: 'hsl(59, 62%, 36%)' }}>
           Step {number}
         </span>
-        <h3 className="text-xl font-bold text-foreground">{title}</h3>
+        <h3 className="text-xl font-bold" style={{ color: 'hsl(var(--biz-navy))' }}>{title}</h3>
       </div>
     </div>
     <div className="text-muted-foreground leading-relaxed">{children}</div>
@@ -90,13 +99,16 @@ const ActionCard = ({
   context: string; 
   action: string;
 }) => (
-  <div className="p-5 rounded-xl border border-border bg-card">
+  <div className="p-5 rounded-xl border border-[hsl(59,62%,36%)]/20 bg-gradient-to-br from-card to-[hsl(59,62%,36%)]/5 hover:border-[hsl(59,62%,36%)]/40 transition-colors duration-300">
     <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-emerald-500/10 flex-shrink-0">
-        <CheckCircle className="w-5 h-5 text-emerald-500" />
+      <div 
+        className="p-2 rounded-lg flex-shrink-0"
+        style={{ background: 'hsl(59, 62%, 36%)' }}
+      >
+        <CheckCircle className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h4 className="font-bold text-foreground mb-1">{context}</h4>
+        <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>{context}</h4>
         <p className="text-muted-foreground text-sm">{action}</p>
       </div>
     </div>
@@ -274,19 +286,28 @@ const VisionSharingBusinessOwner = () => {
               The tragedy is that this misalignment is usually not because your team is incompetent or disloyal. <strong className="text-foreground">It is because you have not actually shared your vision with them in a way that clarifies what you are trying to build and why.</strong>
             </p>
             
-            <div className="p-6 rounded-xl bg-primary/5 border border-primary/20 mb-10">
+            <div 
+              className="p-6 rounded-xl border-2 mb-10 shadow-md"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(59, 62%, 36%, 0.1) 0%, hsl(var(--background)) 100%)',
+                borderColor: 'hsl(59, 62%, 36%, 0.4)'
+              }}
+            >
               <p className="text-foreground font-medium text-center text-lg">
-                This is one of the highest-leverage problems a business owner can solve. <span className="text-primary">And it is almost entirely within your control.</span>
+                This is one of the highest-leverage problems a business owner can solve. <span style={{ color: 'hsl(59, 62%, 36%)', fontWeight: 'bold' }}>And it is almost entirely within your control.</span>
               </p>
             </div>
 
             {/* Section: The Vision Myth */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-destructive/10">
-                  <AlertTriangle className="w-6 h-6 text-destructive" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg"
+                  style={{ background: 'linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(45, 93%, 47%) 100%)' }}
+                >
+                  <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
-                The Vision Myth: "They Should Already Know"
+                <span>The Vision Myth: <span style={{ color: 'hsl(59, 62%, 36%)' }}>"They Should Already Know"</span></span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -305,8 +326,8 @@ const VisionSharingBusinessOwner = () => {
                 So it feels obvious to you. So obvious that you assume your team gets it.
               </p>
               
-              <div className="p-6 rounded-xl bg-destructive/5 border border-destructive/20 mb-6">
-                <p className="text-foreground font-bold text-xl mb-3">They do not.</p>
+              <div className="p-6 rounded-xl bg-amber-50 border-2 border-amber-400/40 mb-6">
+                <p className="font-bold text-xl mb-3" style={{ color: 'hsl(38, 92%, 35%)' }}>They do not.</p>
                 <p className="text-muted-foreground">
                   Your team sees what you do today. They see the customers you serve today. They see the products you sell today. They see the daily work in front of them. What they do not see is the internal vision you have been marinating in for months.
                 </p>
@@ -316,18 +337,24 @@ const VisionSharingBusinessOwner = () => {
                 Without you explicitly sharing that vision, they have no way to know it.
               </p>
               
-              <div className="p-5 rounded-xl border-l-4 border-primary bg-muted/30">
+              <div 
+                className="p-5 rounded-xl border-l-4 bg-gradient-to-r from-[hsl(59,62%,36%)]/10 to-background"
+                style={{ borderColor: 'hsl(59, 62%, 36%)' }}
+              >
                 <p className="text-foreground font-medium">
-                  The myth says: "They should already know." The reality is: <span className="text-primary">they will never know until you tell them clearly and repeatedly.</span>
+                  The myth says: "They should already know." The reality is: <span style={{ color: 'hsl(59, 62%, 36%)', fontWeight: 'bold' }}>they will never know until you tell them clearly and repeatedly.</span>
                 </p>
               </div>
             </section>
 
             {/* Section: Mistakes Leaders Make */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-destructive/10">
-                  <AlertTriangle className="w-6 h-6 text-destructive" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg"
+                  style={{ background: 'linear-gradient(135deg, hsl(38, 92%, 50%) 0%, hsl(45, 93%, 47%) 100%)' }}
+                >
+                  <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
                 The Mistakes Leaders Make When Trying to Share Vision
               </h2>
@@ -385,11 +412,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: What Real Vision Does */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Zap className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg shadow-md"
+                  style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
+                >
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                What Real Vision Actually Does
+                What Real Vision <span style={{ color: 'hsl(59, 62%, 36%)' }}>Actually Does</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -427,11 +457,11 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: What Vision Is NOT */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
                 <div className="p-2 rounded-lg bg-muted">
                   <AlertTriangle className="w-6 h-6 text-muted-foreground" />
                 </div>
-                What Vision Is NOT
+                What Vision Is <span className="line-through opacity-60">NOT</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -439,20 +469,20 @@ const VisionSharingBusinessOwner = () => {
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <p className="text-foreground font-bold mb-2">Vision is not a motivational poster or a slogan.</p>
+                <div className="p-5 rounded-xl border-l-4 bg-card shadow-sm" style={{ borderColor: 'hsl(var(--biz-grey))' }}>
+                  <p className="font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>Vision is not a motivational poster or a slogan.</p>
                   <p className="text-sm text-muted-foreground">"Be Awesome" or "Think Big" are not visions. They are aspirational words.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <p className="text-foreground font-bold mb-2">Vision is not a financial target.</p>
+                <div className="p-5 rounded-xl border-l-4 bg-card shadow-sm" style={{ borderColor: 'hsl(var(--biz-grey))' }}>
+                  <p className="font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>Vision is not a financial target.</p>
                   <p className="text-sm text-muted-foreground">"Reach $10 million in revenue" is a goal, not a vision. A vision explains why you want that revenue and what you will do with it.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <p className="text-foreground font-bold mb-2">Vision is not the business plan.</p>
+                <div className="p-5 rounded-xl border-l-4 bg-card shadow-sm" style={{ borderColor: 'hsl(var(--biz-grey))' }}>
+                  <p className="font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>Vision is not the business plan.</p>
                   <p className="text-sm text-muted-foreground">A business plan is how you will execute. A vision is what you are building and why.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <p className="text-foreground font-bold mb-2">Vision is not about you, the founder.</p>
+                <div className="p-5 rounded-xl border-l-4 bg-card shadow-sm" style={{ borderColor: 'hsl(var(--biz-grey))' }}>
+                  <p className="font-bold mb-2" style={{ color: 'hsl(var(--biz-navy))' }}>Vision is not about you, the founder.</p>
                   <p className="text-sm text-muted-foreground">It is about what you are building and why it matters to customers and employees.</p>
                 </div>
               </div>
@@ -460,11 +490,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: How to Craft and Share Your Vision */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Lightbulb className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg shadow-md"
+                  style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
+                >
+                  <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                How to Craft and Share Your Vision
+                How to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Craft and Share</span> Your Vision
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -476,23 +509,23 @@ const VisionSharingBusinessOwner = () => {
                   <p className="mb-4">You cannot share clearly what you have not made clear in your own mind. Spend time getting clear. Ask yourself:</p>
                   <ul className="space-y-2 mb-4">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                       <span>What are we actually building? Not "a software company" or "a service business," but what specifically are we building?</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                       <span>Who are we building it for? What specific customer problem are we solving?</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                       <span>Why does this matter? What is the world missing that we are providing?</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                       <span>What will be different in the world if we succeed?</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                       <span>What does success look like in 3–5 years? Not financially necessarily, but operationally and culturally.</span>
                     </li>
                   </ul>
@@ -501,12 +534,12 @@ const VisionSharingBusinessOwner = () => {
                 
                 <StepCard number="2" title="Share It Clearly with Your Team" icon={MessageSquare}>
                   <p className="mb-4">Once you have clarity, share it. In a meeting, in writing, in conversation. Be explicit. Use a structure like this:</p>
-                  <div className="space-y-3 pl-4 border-l-2 border-primary/30">
-                    <p><strong>Here is what we are building:</strong> [Specific description of the product/service and who it is for]</p>
-                    <p><strong>Here is why it matters:</strong> [The problem we are solving and why it is important]</p>
-                    <p><strong>Here is how we will win:</strong> [What makes our approach different or better]</p>
-                    <p><strong>Here is what success looks like:</strong> [What the business will look like if we execute this well]</p>
-                    <p><strong>Here is how each of your contributions matter:</strong> [How their role connects to the vision]</p>
+                  <div className="space-y-3 pl-4 border-l-2" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
+                    <p><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Here is what we are building:</strong> [Specific description of the product/service and who it is for]</p>
+                    <p><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Here is why it matters:</strong> [The problem we are solving and why it is important]</p>
+                    <p><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Here is how we will win:</strong> [What makes our approach different or better]</p>
+                    <p><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Here is what success looks like:</strong> [What the business will look like if we execute this well]</p>
+                    <p><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Here is how each of your contributions matter:</strong> [How their role connects to the vision]</p>
                   </div>
                 </StepCard>
                 
@@ -527,11 +560,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Vision in Action */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Briefcase className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg shadow-md"
+                  style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
+                >
+                  <Briefcase className="w-6 h-6 text-white" />
                 </div>
-                Vision in Action: Where It Shows Up
+                Vision in Action: <span style={{ color: 'hsl(59, 62%, 36%)' }}>Where It Shows Up</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -572,11 +608,14 @@ const VisionSharingBusinessOwner = () => {
 
             {/* Section: Common Objection */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-muted">
-                  <Quote className="w-6 h-6 text-muted-foreground" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg"
+                  style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-grey)) 100%)' }}
+                >
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
-                The Most Common Objection: "But I Don't Have a Vision Yet"
+                The Most Common Objection: <span className="italic" style={{ color: 'hsl(59, 62%, 36%)' }}>"But I Don't Have a Vision Yet"</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -588,38 +627,47 @@ const VisionSharingBusinessOwner = () => {
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="p-4 rounded-lg bg-muted/30 border border-border">
-                  <p className="text-foreground"><strong>Look at the customers you are proudest to serve.</strong> What do they have in common? What problem do you solve better for them than anyone else?</p>
+                <div className="p-4 rounded-lg border-l-4 bg-[hsl(59,62%,36%)]/5" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
+                  <p className="text-foreground"><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Look at the customers you are proudest to serve.</strong> What do they have in common? What problem do you solve better for them than anyone else?</p>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/30 border border-border">
-                  <p className="text-foreground"><strong>Look at the work that energizes you.</strong> What aspects of the business do you love most? What would you want to build even if it did not make money?</p>
+                <div className="p-4 rounded-lg border-l-4 bg-[hsl(59,62%,36%)]/5" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
+                  <p className="text-foreground"><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Look at the work that energizes you.</strong> What aspects of the business do you love most? What would you want to build even if it did not make money?</p>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/30 border border-border">
-                  <p className="text-foreground"><strong>Look at the decisions you have made over time.</strong> What pattern do they reveal about what you actually value?</p>
+                <div className="p-4 rounded-lg border-l-4 bg-[hsl(59,62%,36%)]/5" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
+                  <p className="text-foreground"><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Look at the decisions you have made over time.</strong> What pattern do they reveal about what you actually value?</p>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/30 border border-border">
-                  <p className="text-foreground"><strong>Look at the team you have assembled.</strong> What kind of people do you attract and retain? What does that say about your culture and values?</p>
+                <div className="p-4 rounded-lg border-l-4 bg-[hsl(59,62%,36%)]/5" style={{ borderColor: 'hsl(59, 62%, 36%)' }}>
+                  <p className="text-foreground"><strong style={{ color: 'hsl(59, 62%, 36%)' }}>Look at the team you have assembled.</strong> What kind of people do you attract and retain? What does that say about your culture and values?</p>
                 </div>
               </div>
               
-              <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
+              <div 
+                className="p-6 rounded-xl border-2"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(59, 62%, 36%, 0.08) 0%, hsl(var(--background)) 100%)',
+                  borderColor: 'hsl(59, 62%, 36%, 0.3)'
+                }}
+              >
                 <p className="text-foreground font-medium text-center">
-                  Your vision is already there. You just need to excavate it and articulate it clearly. <span className="text-primary">Once you do, everything changes.</span>
+                  Your vision is already there. You just need to excavate it and articulate it clearly. <span style={{ color: 'hsl(59, 62%, 36%)', fontWeight: 'bold' }}>Once you do, everything changes.</span>
                 </p>
               </div>
             </section>
 
             {/* Section: Vision as a Growth Tool */}
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <BarChart3 className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <div 
+                  className="p-2 rounded-lg shadow-md"
+                  style={{ background: 'linear-gradient(135deg, hsl(59, 62%, 36%) 0%, hsl(55, 50%, 50%) 100%)' }}
+                >
+                  <BarChart3 className="w-6 h-6 text-white" />
                 </div>
-                Vision as a Growth Tool
+                Vision as a <span style={{ color: 'hsl(59, 62%, 36%)' }}>Growth Tool</span>
               </h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Here is the final point about vision: it is not just nice to have. <strong className="text-foreground">It is a growth tool.</strong>
+                Here is the final point about vision: it is not just nice to have. <strong style={{ color: 'hsl(59, 62%, 36%)' }}>It is a growth tool.</strong>
               </p>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -628,23 +676,23 @@ const VisionSharingBusinessOwner = () => {
 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                   <span className="text-foreground"><strong>Decision-making accelerates</strong> (people do not need constant direction)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                   <span className="text-foreground"><strong>Execution improves</strong> (everyone is rowing in the same direction)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                   <span className="text-foreground"><strong>Retention improves</strong> (people want to work toward something meaningful)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                   <span className="text-foreground"><strong>Culture strengthens</strong> (shared purpose creates cohesion)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(59, 62%, 36%)' }} />
                   <span className="text-foreground"><strong>Hiring improves</strong> (you attract people who believe in what you are building)</span>
                 </li>
               </ul>
@@ -653,9 +701,15 @@ const VisionSharingBusinessOwner = () => {
                 All of these compound over time.
               </p>
 
-              <div className="p-6 rounded-xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-background mb-8">
+              <div 
+                className="p-6 rounded-xl border-2 mb-8"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(var(--biz-navy), 0.05) 0%, hsl(59, 62%, 36%, 0.08) 100%)',
+                  borderColor: 'hsl(59, 62%, 36%, 0.3)'
+                }}
+              >
                 <p className="text-foreground leading-relaxed">
-                  Tools like <Link to="/" className="text-primary hover:underline font-semibold">BizHealth.ai</Link> can be instrumental in helping you assess whether your vision is actually being understood and lived by your team. By measuring engagement, retention, and team alignment against your stated vision, these platforms can surface gaps between "what you said the vision is" and "what your team actually experiences." They help you see whether the vision work is translating into behavioral change and organizational alignment.
+                  Tools like <Link to="/" className="font-semibold hover:underline" style={{ color: 'hsl(59, 62%, 36%)' }}>BizHealth.ai</Link> can be instrumental in helping you assess whether your vision is actually being understood and lived by your team. By measuring engagement, retention, and team alignment against your stated vision, these platforms can surface gaps between "what you said the vision is" and "what your team actually experiences." They help you see whether the vision work is translating into behavioral change and organizational alignment.
                 </p>
               </div>
               
@@ -663,8 +717,11 @@ const VisionSharingBusinessOwner = () => {
                 But the vision itself—the clarity on what you are building and why—<strong className="text-foreground">that is your responsibility as a leader.</strong>
               </p>
               
-              <div className="p-6 rounded-xl bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/20">
-                <p className="text-xl text-foreground font-bold text-center">
+              <div 
+                className="p-6 rounded-xl shadow-lg"
+                style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
+              >
+                <p className="text-xl text-white font-bold text-center">
                   You have built something worth building. Now let your team know what that something is.
                 </p>
               </div>
@@ -672,8 +729,16 @@ const VisionSharingBusinessOwner = () => {
 
             {/* CTA Section */}
             <section className="mb-12">
-              <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-background to-emerald-500/10 border border-primary/20">
-                <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Ready to Align Your Team Around Your Vision?</h3>
+              <div 
+                className="p-8 rounded-2xl border-2 shadow-xl"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(var(--biz-navy), 0.05) 0%, hsl(59, 62%, 36%, 0.1) 50%, hsl(var(--background)) 100%)',
+                  borderColor: 'hsl(59, 62%, 36%, 0.3)'
+                }}
+              >
+                <h3 className="text-2xl font-bold mb-4 text-center" style={{ color: 'hsl(var(--biz-navy))' }}>
+                  Ready to <span style={{ color: 'hsl(59, 62%, 36%)' }}>Align Your Team</span> Around Your Vision?
+                </h3>
                 <p className="text-muted-foreground text-center mb-6">
                   Take our free Business Health Assessment to discover how well your vision is being communicated and lived across your organization.
                 </p>
@@ -681,7 +746,7 @@ const VisionSharingBusinessOwner = () => {
                   <Link 
                     to="/pricing"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))' }}
+                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(59, 62%, 36%) 100%)' }}
                   >
                     Get Your Business Health Assessment
                     <ArrowRight className="w-5 h-5" />
@@ -692,17 +757,24 @@ const VisionSharingBusinessOwner = () => {
           </div>
 
           {/* Author Bio */}
-          <div className="mt-12 p-6 rounded-2xl bg-muted/30 border border-border">
+          <div 
+            className="mt-12 p-6 rounded-2xl border-l-4 shadow-md"
+            style={{ 
+              background: 'linear-gradient(135deg, hsl(59, 62%, 36%, 0.05) 0%, hsl(var(--background)) 100%)',
+              borderColor: 'hsl(59, 62%, 36%)'
+            }}
+          >
             <div className="flex items-start gap-4">
               <img 
                 src={authorImage} 
                 alt="BizHealth.ai Research Team" 
-                className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/20"
+                className="w-16 h-16 rounded-full object-cover ring-2"
+                style={{ '--tw-ring-color': 'hsl(59, 62%, 36%, 0.4)' } as React.CSSProperties}
                 loading="lazy"
               />
               <div>
-                <h4 className="font-bold text-foreground mb-1">BizHealth.ai Research Team</h4>
-                <p className="text-sm text-muted-foreground mb-2">Business Leadership & Strategy Experts</p>
+                <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>BizHealth.ai Research Team</h4>
+                <p className="text-sm mb-2" style={{ color: 'hsl(59, 62%, 36%)' }}>Business Leadership & Strategy Experts</p>
                 <p className="text-sm text-muted-foreground">
                   The BizHealth.ai Research Team combines decades of experience in business leadership, organizational development, and strategic planning to help small business owners build healthy, sustainable companies. Our insights are grounded in real-world experience and evidence-based best practices.
                 </p>

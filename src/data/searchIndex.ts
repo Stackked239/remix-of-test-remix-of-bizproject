@@ -315,6 +315,14 @@ export const searchableTools: SearchableItem[] = [
   },
   {
     type: "Tool",
+    title: "Free Pricing Net Profit Calculator - Know Your True Profit Per Sale",
+    excerpt: "Free pricing calculator for small business owners. Find out if your prices actually make you money. Calculate profit per sale, net margin, break-even point, and get actionable pricing recommendations. Export professional PDF reports.",
+    url: "/biztools/toolbox/free-pricing-net-profit-calculator",
+    keywords: "pricing calculator, net profit calculator, profit per sale, profit margin, pricing strategy, break even, overhead cost, cost calculator, margin calculator, pricing tool, profitability, price setting, small business pricing, product pricing, service pricing",
+    icon: Wrench
+  },
+  {
+    type: "Tool",
     title: "Innovation Strategy Builder - 60-Minute Guided Tool",
     excerpt: "Build a complete innovation strategy in 60 minutes. Free guided tool with 6-step framework: Foundation, Vision, Opportunities, Portfolio (70-20-10 rule), Metrics, and 90-Day Roadmap. Export professional PDF to share with your leadership team.",
     url: "/biztools/toolbox/innovation-strategy-tool",

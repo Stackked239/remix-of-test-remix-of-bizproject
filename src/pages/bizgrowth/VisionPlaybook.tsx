@@ -252,7 +252,7 @@ const VisionPlaybook = () => {
         </section>
 
         {/* Why Vision Matters Section */}
-        <section className="bg-[#FAFAF7] py-24">
+        <section className="bg-[#FAFAF7] pt-12 pb-24">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center max-w-[720px] mx-auto mb-16">
               <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#242553] mb-4">
@@ -287,7 +287,7 @@ const VisionPlaybook = () => {
 
               {/* Visual Stats Card */}
               <div className="bg-gradient-to-br from-[#242553] to-[#1a1a3e] rounded-2xl p-10 text-white text-center">
-                <h3 className="font-['Montserrat'] font-semibold text-xl mb-8">
+                <h3 className="font-['Montserrat'] font-semibold text-2xl mb-8">
                   When Vision Becomes Operational
                 </h3>
                 <div className="space-y-6">
@@ -310,7 +310,7 @@ const VisionPlaybook = () => {
         </section>
 
         {/* 7 Steps Section */}
-        <section id="steps" className="bg-white py-24">
+        <section id="steps" className="bg-white pt-12 pb-24">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center max-w-[720px] mx-auto mb-16">
               <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#242553] mb-4">
@@ -404,7 +404,7 @@ const VisionPlaybook = () => {
         </section>
 
         {/* CTA Section */}
-        <section id="download" className="relative bg-gradient-to-br from-[#242553] via-[#1a1a3e] to-[#2a2a5a] text-white py-24 overflow-hidden">
+        <section id="download" className="relative bg-gradient-to-br from-[#242553] via-[#1a1a3e] to-[#2a2a5a] text-white py-16 overflow-hidden">
           <div 
             className="absolute inset-0 pointer-events-none"
             style={{

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Download, Check, Clock, TrendingUp, Target, MessageSquare, Users, RefreshCw, Scale, Building2, Search, BookOpen, ClipboardList, Megaphone, Settings, BarChart3, ChevronRight, AlertTriangle, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,8 @@ import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalFooter from '@/components/GlobalFooter';
+import GlobalNavigation from '@/components/GlobalNavigation';
+import PromotionalBanner from '@/components/PromotionalBanner';
 
 const VisionPlaybook = () => {
   const [headerShadow, setHeaderShadow] = useState(false);
@@ -92,17 +93,25 @@ const VisionPlaybook = () => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
       </Helmet>
 
-      {/* Sticky Header */}
+      {/* Promotional Banner */}
+      <PromotionalBanner />
+
+      {/* Global Navigation */}
+      <div className="pt-20">
+        <GlobalNavigation />
+      </div>
+
+      {/* Sticky Page Header - positioned below banner and nav */}
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E8E8E5] py-4 transition-shadow duration-300 ${headerShadow ? 'shadow-lg shadow-[#242553]/10' : ''}`}
+        className={`fixed top-[136px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E8E8E5] py-4 transition-shadow duration-300 ${headerShadow ? 'shadow-lg shadow-[#242553]/10' : ''}`}
       >
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-2">
-              <span className="font-['Montserrat'] font-extrabold text-xl text-[#242553]">
-                Biz<span className="text-[#969423]">Health</span>.ai
-              </span>
-            </Link>
+            {/* BizGrowth Academy Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#E6B800]/15 border border-[#E6B800] text-[#E6B800] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+              <span>📚</span>
+              <span>BizGrowth Academy</span>
+            </div>
             <nav className="hidden md:flex gap-8 items-center">
               <button onClick={() => scrollToSection('myth')} className="text-sm font-semibold text-[#242553] hover:text-[#969423] transition-colors">
                 The Problem
@@ -124,7 +133,7 @@ const VisionPlaybook = () => {
         </div>
       </header>
 
-      <main>
+      <main className="pt-[56px]">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-[#242553] via-[#1a1a3e] to-[#2a2a5a] text-white pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
           <div 
@@ -134,12 +143,6 @@ const VisionPlaybook = () => {
             }}
           />
           <div className="relative z-10 max-w-[800px] mx-auto px-6 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#E6B800]/15 border border-[#E6B800] text-[#E6B800] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-8">
-              <span>📚</span>
-              <span>BizGrowth Academy</span>
-            </div>
-
             {/* Headline */}
             <h1 className="font-['Montserrat'] font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-6">
               Build <span className="text-[#969423]">& Share</span> Your Vision

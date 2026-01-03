@@ -1,7 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
@@ -63,36 +64,26 @@ const TalentWarsHiring = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Talent Wars: SMB Hiring Strategies 2025 | BizHealth.ai</title>
-        <meta name="description" content="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!" />
-        <meta name="keywords" content="SMB hiring 2025, talent shortages small business, leadership strategies, Techaisle issues, retention tips, skills-based hiring, AI recruitment, employer branding, workforce retention, talent acquisition" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025" />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="Talent Wars: SMB Hiring Strategies 2025 | BizHealth.ai" />
-        <meta property="og:description" content="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/talent-wars-smb-hiring-2025.jpg" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025" />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={publishDate} />
-        <meta property="article:author" content={author} />
-        <meta property="article:section" content="Business Leadership" />
-        <meta property="article:tag" content="SMB hiring 2025" />
-        <meta property="article:tag" content="talent shortages" />
-        <meta property="article:tag" content="leadership strategies" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Talent Wars: SMB Hiring Strategies 2025 | BizHealth.ai" />
-        <meta name="twitter:description" content="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!" />
-        <meta name="twitter:image" content="https://bizhealth.ai/assets/talent-wars-smb-hiring-2025.jpg" />
-        
-        {/* JSON-LD Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      </Helmet>
+      <SEO
+        title="Talent Wars: SMB Hiring Strategies 2025 | BizHealth.ai"
+        description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!"
+        keywords="SMB hiring 2025, talent shortages small business, leadership strategies, retention tips, skills-based hiring, AI recruitment, employer branding, workforce retention, talent acquisition"
+        canonical="https://bizhealth.ai/blog/talent-wars-hiring"
+        ogType="article"
+        ogImage={`https://bizhealth.ai${talentWarsImage}`}
+        articlePublishedTime={publishDate}
+        articleAuthor={author}
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
+        description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars."
+        image={`https://bizhealth.ai${talentWarsImage}`}
+        datePublished={publishDate}
+        author={author}
+        url="https://bizhealth.ai/blog/talent-wars-hiring"
+        keywords={["SMB hiring 2025", "talent shortages", "leadership strategies", "AI recruitment", "workforce retention"]}
+      />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />

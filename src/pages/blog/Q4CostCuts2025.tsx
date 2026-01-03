@@ -1,7 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import SEO from '@/components/SEO';
+import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { Calendar, Clock, User, Info } from 'lucide-react';
 import {
@@ -87,34 +88,26 @@ const Q4CostCuts2025 = () => {
   return (
     <TooltipProvider>
       <div className="min-h-screen bg-background">
-        <Helmet>
-          <title>Q4 Cost Crunches: Operational Cost Fixes 2025 | BizHealth.ai</title>
-          <meta name="description" content="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings." />
-          <meta name="keywords" content="operational cost fixes 2025, small business cash crunch, efficiency diagnostics, inflation ops impact, Q4 cost management, cash-strapped businesses, operational efficiency, cost reduction strategies" />
-          <link rel="canonical" href="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025" />
-          
-          {/* Open Graph tags */}
-          <meta property="og:title" content="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses | BizHealth.ai" />
-          <meta property="og:description" content="Navigate Q4 2025 cash crunches with proven operational cost fixes. Learn efficiency diagnostics strategies to achieve 15-20% cost savings." />
-          <meta property="og:image" content="https://bizhealth.ai/assets/q4-cost-cuts-operational-fixes-2025.jpg" />
-          <meta property="og:url" content="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025" />
-          <meta property="og:type" content="article" />
-          <meta property="article:published_time" content={publishDate} />
-          <meta property="article:author" content="BizHealth.ai Research Team" />
-          <meta property="article:section" content="Operations" />
-          <meta property="article:tag" content="Operational Efficiency" />
-          
-          {/* Twitter Card tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Q4 Cost Crunches: Operational Cost Fixes 2025" />
-          <meta name="twitter:description" content="Navigate Q4 cash crunches with proven operational cost fixes and efficiency diagnostics for small businesses." />
-          <meta name="twitter:image" content="https://bizhealth.ai/assets/q4-cost-cuts-operational-fixes-2025.jpg" />
-          
-          {/* JSON-LD Schema */}
-          <script type="application/ld+json">
-            {JSON.stringify(schemaMarkup)}
-          </script>
-        </Helmet>
+        <SEO
+          title="Q4 Cost Crunches: Operational Cost Fixes 2025 | BizHealth.ai"
+          description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings."
+          keywords="operational cost fixes 2025, small business cash crunch, efficiency diagnostics, inflation ops impact, Q4 cost management, cash-strapped businesses, operational efficiency, cost reduction strategies"
+          canonical="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
+          ogType="article"
+          ogImage={`https://bizhealth.ai${heroImage}`}
+          articlePublishedTime={publishDate}
+          articleAuthor="BizHealth.ai Research Team"
+        />
+        <StructuredData
+          type="blogPosting"
+          headline="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses"
+          description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to achieve 15-20% cost savings."
+          image={`https://bizhealth.ai${heroImage}`}
+          datePublished={publishDate}
+          author="BizHealth.ai Research Team"
+          url="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
+          keywords={["operational cost fixes", "small business cash crunch", "efficiency diagnostics", "Q4 cost management", "operational efficiency"]}
+        />
 
         <GlobalNavigation />
 

@@ -25,7 +25,7 @@ const BusinessBlindSpots2025 = () => {
         keywords="small business blind spots, business health assessment, SMB growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
         canonical={canonicalUrl}
         ogType="article"
-        ogImage="https://bizhealth.ai/og-business-blind-spots.jpg"
+        ogImage={`https://bizhealth.ai${blindSpotsHero}`}
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

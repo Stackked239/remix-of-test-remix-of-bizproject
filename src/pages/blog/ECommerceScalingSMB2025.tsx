@@ -1,7 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Clock, Calendar, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -15,69 +16,26 @@ const ECommerceScalingSMB2025 = () => {
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>E-Commerce Scaling Strategies 2025 | SMB Growth Guide | BizHealth.ai</title>
-        <meta 
-          name="description" 
-          content="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!" 
-        />
-        <meta 
-          name="keywords" 
-          content="SMB e-commerce strategy 2025, online scaling small business, growth hacks mid-sized, SBA e-com trends, market entry tips, e-commerce growth strategies, small business digital transformation, AI business tools, omnichannel marketing, mobile commerce optimization" 
-        />
-        
-        {/* Open Graph Tags */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025" />
-        <meta property="og:description" content="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!" />
-        <meta property="og:image" content={heroImage} />
-        <meta property="og:url" content="https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025" />
-        <meta property="article:published_time" content={publishDate} />
-        <meta property="article:author" content={author} />
-        <meta property="article:section" content="Business Strategy" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025" />
-        <meta name="twitter:description" content="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!" />
-        <meta name="twitter:image" content={heroImage} />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025" />
-
-        {/* JSON-LD Schema Markup */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025",
-            "description": "Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!",
-            "image": heroImage,
-            "author": {
-              "@type": "Organization",
-              "name": author,
-              "description": "Expert business analysts and researchers specializing in SMB growth strategies and digital transformation"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo.png"
-              }
-            },
-            "datePublished": publishDate,
-            "dateModified": publishDate,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025"
-            },
-            "articleSection": "Business Strategy",
-            "keywords": "SMB e-commerce strategy 2025, online scaling small business, growth hacks mid-sized, SBA e-com trends, market entry tips"
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="E-Commerce Scaling Strategies 2025 | SMB Growth Guide | BizHealth.ai"
+        description="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth—read now!"
+        keywords="SMB e-commerce strategy 2025, online scaling small business, growth hacks mid-sized, SBA e-com trends, market entry tips, e-commerce growth strategies, small business digital transformation"
+        canonical="https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025"
+        ogType="article"
+        ogImage={`https://bizhealth.ai${heroImage}`}
+        articlePublishedTime={publishDate}
+        articleAuthor={author}
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025"
+        description="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025. AI personalization, omnichannel sales, mobile optimization & data-driven growth."
+        image={`https://bizhealth.ai${heroImage}`}
+        datePublished={publishDate}
+        author={author}
+        url="https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025"
+        keywords={["SMB e-commerce strategy 2025", "online scaling small business", "AI personalization", "omnichannel sales", "mobile commerce optimization"]}
+      />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />

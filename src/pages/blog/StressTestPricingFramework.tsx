@@ -53,7 +53,7 @@ const StressTestPricingFramework = () => {
         keywords="stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization, pricing psychology, customer segmentation pricing, small business pricing 2025"
         canonical="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-stress-test-pricing.jpg"
+        ogImage={`https://bizhealth.ai${stressTestPricingImage}`}
         articlePublishedTime="2025-12-26"
         articleModifiedTime="2025-12-26"
         articleAuthor="BizHealth.ai Research Team"
@@ -65,7 +65,7 @@ const StressTestPricingFramework = () => {
         author="BizHealth.ai Research Team"
         datePublished="2025-12-26"
         dateModified="2025-12-26"
-        image="https://bizhealth.ai/og-stress-test-pricing.jpg"
+        image={`https://bizhealth.ai${stressTestPricingImage}`}
         url="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
         keywords={["stress test pricing", "pricing strategy small business", "optimize margins", "cash flow optimization", "value-based pricing"]}
       />

@@ -395,7 +395,7 @@ const PrivacyPolicy = () => {
 
                 <Card className="p-6 bg-muted/50 border-growth/20">
                   <p className="text-muted-foreground leading-relaxed">
-                    At BizHealth.ai, your trusted Business Health Advisor, we empower micro-, small-, and mid-sized businesses with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact{" "}
+                    At BizHealth.ai, your trusted Business Health Analyst, we empower micro-, small-, and mid-sized businesses with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact{" "}
                     <a
                       href="mailto:support@bizhealth.ai"
                       className="text-growth hover:underline transition-colors font-semibold"

@@ -65,14 +65,14 @@ const About = () => {
         <meta property="og:url" content="https://bizhealth.ai/about" />
         <meta property="og:title" content="About BizHealth.ai - Rooted in Transformation" />
         <meta property="og:description" content="Empowering SMB leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
-        <meta property="og:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://bizhealth.ai/about" />
         <meta property="twitter:title" content="About BizHealth.ai - Stop Guessing, Start Growing" />
         <meta property="twitter:description" content="Discover how BizHealth.ai empowers SMB leaders with comprehensive business diagnostics and strategic growth tools." />
-        <meta property="twitter:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="twitter:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

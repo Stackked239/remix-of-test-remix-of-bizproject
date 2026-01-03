@@ -6,6 +6,8 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const BizGuides = () => {
   const [countdown, setCountdown] = useState("");
@@ -66,6 +68,21 @@ const BizGuides = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="BizGuides - Personalized Business Coaching & Guidance"
+        description="Get personalized business coaching powered by AI insights. Transform your business health assessment into actionable strategies with dedicated coaching support and expert guidance."
+        keywords="business coaching, personalized guidance, SMB consulting, business health coach, strategic coaching, growth acceleration"
+        canonical="https://bizhealth.ai/bizguides"
+        ogImage="https://bizhealth.ai/og-images/og-bizguides.jpg"
+      />
+      <StructuredData 
+        type="service"
+        name="BizGuides - Business Coaching"
+        description="Personalized business coaching and strategic guidance for SMB leaders"
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/bizguides"
+      />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

@@ -6,6 +6,8 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const BizGrowth = () => {
   const [countdown, setCountdown] = useState("");
@@ -98,6 +100,21 @@ const BizGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="BizGrowth Academy - Strategic Business Education"
+        description="Master strategic business advancement with comprehensive educational programs. Learn from industry veterans and earn certifications that demonstrate your expertise in sustainable business growth."
+        keywords="business education, strategic growth, business courses, leadership training, SMB academy, business certification"
+        canonical="https://bizhealth.ai/bizgrowth"
+        ogImage="https://bizhealth.ai/og-images/og-bizgrowth.jpg"
+      />
+      <StructuredData 
+        type="service"
+        name="BizGrowth Academy"
+        description="Strategic business education and advancement programs for SMB leaders"
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/bizgrowth"
+      />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}

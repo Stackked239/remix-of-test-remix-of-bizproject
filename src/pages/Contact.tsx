@@ -102,6 +102,7 @@ const Contact = () => {
         description="Get in touch with BizHealth.ai. Have questions about our business health assessments? Our expert team is here to support your business growth journey."
         keywords="contact BizHealth, business assessment support, customer service, business health questions"
         canonical="https://bizhealth.ai/contact"
+        ogImage="https://bizhealth.ai/og-images/og-contact.jpg"
       />
       <GlobalNavigation />
       

@@ -22,7 +22,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
         keywords="financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, SMB finance tips, business financial health, financial awareness employees, cost management team, budget responsibility, financial literacy workplace"
         canonical="https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-financial-stewardship.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}

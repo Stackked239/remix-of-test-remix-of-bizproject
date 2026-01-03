@@ -196,7 +196,7 @@ const BusinessIntelligence = () => {
         keywords="business intelligence, SMB analytics, KPIs for small business, business metrics, data-driven decisions, business reporting, business dashboards, performance tracking"
         canonical="https://bizhealth.ai/blog/business-intelligence"
         ogType="website"
-        ogImage="https://bizhealth.ai/images/og-business-intelligence.jpg"
+        ogImage="/og-images/og-business-intelligence.jpg"
       />
       
       <StructuredData type="organization" />

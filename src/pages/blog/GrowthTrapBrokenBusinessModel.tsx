@@ -21,7 +21,7 @@ const GrowthTrapBrokenBusinessModel = () => {
         keywords="growth trap small business, broken business model, SMB scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
         canonical={articleUrl}
         ogType="article"
-        ogImage={growthTrapHero}
+        ogImage="/og-images/og-growth-trap.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

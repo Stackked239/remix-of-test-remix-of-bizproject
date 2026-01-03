@@ -211,7 +211,7 @@ const FinancialManagement = () => {
         keywords="financial management, SMB finance, cash flow management, business budgeting, financial planning, financial metrics, small business finance, financial health, business KPIs"
         canonical="https://bizhealth.ai/blog/financial-management"
         ogType="website"
-        ogImage="https://bizhealth.ai/images/og-financial-management.jpg"
+        ogImage="/og-images/og-financial-management.jpg"
       />
       
       <StructuredData type="organization" />

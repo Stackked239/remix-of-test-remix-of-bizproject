@@ -18,7 +18,7 @@ const OperationalResilience = () => {
         keywords="operational resilience, business continuity, crisis management, risk mitigation, SMB resilience, business systems, market volatility"
         canonical="https://bizhealth.ai/blog/operational-resilience"
         ogType="article"
-        ogImage={`https://bizhealth.ai${resilienceImage}`}
+        ogImage="/og-images/og-operational-resilience.jpg"
         articlePublishedTime="2025-09-12"
         articleAuthor="BizHealth Research Team"
       />

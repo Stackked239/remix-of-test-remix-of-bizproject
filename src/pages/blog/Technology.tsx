@@ -164,6 +164,8 @@ const Technology = () => {
         description="Practical technology guidance for small and mid-sized business owners. Learn about digital tools, automation, AI, cybersecurity, and smart software selection for your business."
         keywords="business technology, SMB tech tools, business automation, AI for small business, digital transformation, cybersecurity for business, software selection, business efficiency tools"
         canonical="https://bizhealth.ai/blog/technology"
+        ogType="website"
+        ogImage="/og-images/og-technology.jpg"
       />
       
       <StructuredData

@@ -41,7 +41,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         keywords="small business blind spots, operational weaknesses small business, hidden business gaps assessment, identifying business weaknesses 2025, SMB operational efficiency gaps, business assessment tools, AI business analysis, cost-effective business consulting"
         canonical={canonicalUrl}
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-confirm-weaknesses.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

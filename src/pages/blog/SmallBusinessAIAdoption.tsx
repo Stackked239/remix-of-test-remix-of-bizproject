@@ -20,7 +20,7 @@ const SmallBusinessAIAdoption = () => {
         keywords="small business AI adoption 2025, AI for small business, SMB AI adoption, business automation tools, AI implementation guide, small business technology, business intelligence AI, AI ROI for SMBs, AI strategy 2025"
         canonical={articleUrl}
         ogType="article"
-        ogImage={aiAdoptionHero}
+        ogImage="/og-images/og-ai-adoption.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

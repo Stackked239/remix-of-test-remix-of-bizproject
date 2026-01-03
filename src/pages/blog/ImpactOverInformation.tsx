@@ -22,7 +22,7 @@ const ImpactOverInformation = () => {
         keywords="business health diagnostics, SMB business assessment, operational assessment, AI business analysis, SMB growth strategies, business evaluation tools, data-driven insights, business intelligence for SMBs"
         canonical={articleUrl}
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-impact-over-information.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth Research Team"

@@ -17,7 +17,7 @@ const RealTimeAnalyticsSMB = () => {
         keywords="real-time BI for SMBs 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, SMB analytics"
         canonical="https://bizhealth.ai/blog/real-time-analytics-smb-agility"
         ogType="article"
-        ogImage={`https://bizhealth.ai${realTimeAnalyticsImage}`}
+        ogImage="/og-images/og-realtime-analytics.jpg"
         articlePublishedTime="2025-09-26"
         articleAuthor="BizHealth Research Team"
       />

@@ -258,7 +258,7 @@ const BusinessLeadership = () => {
         keywords="business leadership, SMB leadership, leadership development, team management, business communication, leadership skills, emotional intelligence, change management, decision making"
         canonical="https://bizhealth.ai/blog/business-leadership"
         ogType="website"
-        ogImage="https://bizhealth.ai/images/og-business-leadership.jpg"
+        ogImage="/og-images/og-business-leadership.jpg"
       />
 
       <StructuredData

@@ -18,7 +18,7 @@ const LeadershipStressSuccess = () => {
         keywords="leadership stress management, executive stress, business owner burnout, entrepreneurial stress, decision-making anxiety, leader resilience, stress reduction techniques, small business leadership"
         canonical="https://bizhealth.ai/blog/leadership-stress-success"
         ogType="article"
-        ogImage={`https://bizhealth.ai${leadershipStressImage}`}
+        ogImage="/og-images/og-leadership-stress-success.jpg"
         articlePublishedTime="2025-10-12"
         articleModifiedTime="2025-12-06"
         articleAuthor="BizHealth.ai Research Team"

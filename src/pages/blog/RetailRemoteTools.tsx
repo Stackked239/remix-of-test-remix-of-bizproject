@@ -17,7 +17,7 @@ const RetailRemoteTools = () => {
         keywords="retail remote tools, family business technology, micro business tech, remote retail management, family-owned business tools, retail collaboration 2025"
         canonical="https://bizhealth.ai/blog/retail-remote-tools"
         ogType="article"
-        ogImage={`https://bizhealth.ai${retailImage}`}
+        ogImage="/og-images/og-retail-remote-tools.jpg"
         articlePublishedTime="2025-09-24"
         articleAuthor="BizHealth Research Team"
       />

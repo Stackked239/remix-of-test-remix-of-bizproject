@@ -22,7 +22,7 @@ const StrategicPlanning = () => {
         keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, SMB planning, business adaptation"
         canonical="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
         ogType="article"
-        ogImage={`https://bizhealth.ai${strategicPlanningImage}`}
+        ogImage="/og-images/og-strategic-planning.jpg"
         articlePublishedTime="2025-10-12"
         articleAuthor="BizHealth Research Team"
       />

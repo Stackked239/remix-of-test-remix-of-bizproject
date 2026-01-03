@@ -46,7 +46,7 @@ const SolvingSMBWorkforceGaps = () => {
         keywords="SMB workforce challenges 2025, talent gaps, employee retention, AI business analytics, SMB growth strategies, workforce planning, communication strategies"
         canonical="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025"
         ogType="article"
-        ogImage={`https://bizhealth.ai${workforceGapsImage}`}
+        ogImage="/og-images/og-workforce-gaps.jpg"
         articlePublishedTime={publishDate}
         articleAuthor="BizHealth.ai Research Team"
       />

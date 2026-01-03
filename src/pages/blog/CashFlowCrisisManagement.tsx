@@ -45,7 +45,7 @@ const CashFlowCrisisManagement = () => {
         keywords="cash flow management small business, business cash flow 2025, SMB financial challenges, cash flow crisis, small business cash management, cash flow strategies, business financial health, working capital management, cash flow forecasting, SMB cash flow solutions"
         canonical="https://bizhealth.ai/blog/cash-flow-crisis-management"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-cash-flow-crisis.jpg"
       />
       
       <StructuredData 

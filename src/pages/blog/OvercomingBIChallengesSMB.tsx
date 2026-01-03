@@ -20,7 +20,7 @@ const OvercomingBIChallengesSMB = () => {
         keywords="business intelligence SMB, BI challenges small business, SMB data analytics, business intelligence adoption, BI for small business, data-driven decisions, affordable BI tools, AI business intelligence 2025, SMB analytics strategy, business intelligence implementation"
         canonical="https://bizhealth.ai/blog/overcoming-bi-challenges-smb"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-overcoming-bi-challenges.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"

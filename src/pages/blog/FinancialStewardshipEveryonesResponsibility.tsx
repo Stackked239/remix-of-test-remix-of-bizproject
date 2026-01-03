@@ -6,7 +6,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User, DollarSign, Users, TrendingUp, Shield, AlertTriangle, CheckCircle2 } from 'lucide-react';
-import heroImage from '@/assets/financial-stewardship-team-responsibility-smb.png';
+import heroImage from '@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg';
 
 const FinancialStewardshipEveryonesResponsibility = () => {
   const publishDate = "2025-12-09";

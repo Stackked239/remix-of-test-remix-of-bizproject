@@ -33,7 +33,7 @@ import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
-import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
+import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg";
 
 const BusinessLeadership = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");

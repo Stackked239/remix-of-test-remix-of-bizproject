@@ -174,7 +174,7 @@ const App = () => (
               <Route path="/bizgrowth/launch" element={<BizGrowthLaunch />} />
               <Route path="/bizgrowth/launch/step-2-fix-cash-squeeze" element={<BizGrowthLaunchStep2 />} />
               <Route path="/bizgrowth/technology-innovation-readiness" element={<TechnologyInnovationReadiness />} />
-              <Route path="/bizgrowth-academy/vision-playbook" element={<VisionPlaybook />} />
+              <Route path="/bizgrowth/vision-playbook" element={<VisionPlaybook />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

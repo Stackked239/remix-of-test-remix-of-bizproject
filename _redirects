@@ -15,6 +15,7 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /security /privacy 301!
 
 # Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
+/bizgrowth-academy/vision-playbook /bizgrowth/vision-playbook 301!
 /biz-tools /biztools 301!
 /biz-leader /bizleader 301!
 /biz-growth /bizgrowth 301!

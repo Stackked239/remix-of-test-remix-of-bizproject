@@ -219,7 +219,7 @@ const EmployeeRetentionLeadership = () => {
         keywords="employee retention strategies, company culture leadership, day-to-day leadership, employee engagement SMB, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies, employee loyalty, workforce development, talent management small business"
         canonical="https://bizhealth.ai/blog/employee-retention-company-culture-leadership"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="https://bizhealth.ai/og-images/og-employee-retention-leadership.jpg"
         articlePublishedTime="2025-12-30T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
@@ -228,7 +228,7 @@ const EmployeeRetentionLeadership = () => {
         type="blogPosting"
         headline="Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership"
         description="Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay."
-        image={`https://bizhealth.ai${heroImage}`}
+        image="https://bizhealth.ai/og-images/og-employee-retention-leadership.jpg"
         datePublished="2025-12-30"
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"

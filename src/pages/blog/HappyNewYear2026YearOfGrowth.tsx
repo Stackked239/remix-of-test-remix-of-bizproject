@@ -126,7 +126,7 @@ const HappyNewYear2026YearOfGrowth = () => {
         title="Happy New Year 2026: Year of Growth | Small Business Growth Strategies | BizHealth.ai"
         description="Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable SMB success—start building momentum now!"
         keywords="small business growth 2026, new year business strategy, 2026 business planning, SMB growth strategies, business lessons 2025, sustainable growth, intentional growth, business momentum, business resilience, year of growth, business leadership, strategic planning"
-        ogImage={heroImage}
+        ogImage="https://bizhealth.ai/og-images/og-happy-new-year-2026.jpg"
         canonical="https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth"
         ogType="article"
         articlePublishedTime="2026-01-01"
@@ -137,7 +137,7 @@ const HappyNewYear2026YearOfGrowth = () => {
         type="blogPosting"
         headline="Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow"
         description="Reflect on 2025's business lessons and embrace 2026 as your year of intentional growth. Discover the three strategic moves for sustainable small business success."
-        image="https://bizhealth.ai/happy-new-year-2026-business-growth.jpg"
+        image="https://bizhealth.ai/og-images/og-happy-new-year-2026.jpg"
         datePublished="2026-01-01"
         dateModified="2026-01-01"
         author="BizHealth.ai Research Team"

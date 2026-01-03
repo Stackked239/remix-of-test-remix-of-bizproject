@@ -48,7 +48,7 @@ const CustomerLoyaltyReliability = () => {
         keywords="customer loyalty, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency, customer feedback loop, empathy in customer service, frontline empowerment, customer churn prevention"
         canonical="https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability"
         ogType="article"
-        ogImage={`https://bizhealth.ai${customerLoyaltyImage}`}
+        ogImage="https://bizhealth.ai/og-images/og-customer-loyalty-reliability.jpg"
         articlePublishedTime="2025-12-27"
         articleModifiedTime="2025-12-27"
         articleAuthor="BizHealth.ai Research Team"
@@ -57,7 +57,7 @@ const CustomerLoyaltyReliability = () => {
         type="blogPosting"
         headline="Customer Service: Loyalty Starts With Reliability, Not Delight"
         description="Customer service is not a department; it is a promise. Learn how SMBs can build lasting customer loyalty through consistent reliability, operational empathy, and strategic customer experience design."
-        image={`https://bizhealth.ai${customerLoyaltyImage}`}
+        image="https://bizhealth.ai/og-images/og-customer-loyalty-reliability.jpg"
         author="BizHealth.ai Research Team"
         datePublished="2025-12-27"
         dateModified="2025-12-27"

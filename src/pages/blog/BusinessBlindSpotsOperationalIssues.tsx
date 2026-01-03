@@ -21,7 +21,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
         keywords="business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025"
         canonical="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="https://bizhealth.ai/og-images/og-business-blind-spots-operational.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
@@ -34,7 +34,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
         author="BizHealth.ai Research Team"
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image={`https://bizhealth.ai${heroImage}`}
+        image="https://bizhealth.ai/og-images/og-business-blind-spots-operational.jpg"
         url="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
         keywords={["business blind spots", "operational issues leadership", "hidden business inefficiencies", "cash flow timing", "SMB operational audit"]}
       />

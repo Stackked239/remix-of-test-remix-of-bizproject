@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner",
+    excerpt: "Discover why 'they should already know' is the vision myth destroying team alignment. Learn the 5 mistakes leaders make when sharing vision and a proven 5-step framework to unite your team.",
+    author: "BizHealth.ai Research Team",
+    date: "January 3, 2026",
+    readTime: "11 min read",
+    category: "Business Leadership, Business Strategy, Operations",
+    slug: "/blog/vision-sharing-business-owner",
+    imageUrl: "/assets/vision-sharing-business-owner-team-celebration.jpg",
+    altText: "Diverse small business team celebrating record sales month with high-fives in warehouse office - vision sharing creates team unity and business growth",
+    keywords: "business vision sharing, sharing vision as a business owner, team alignment vision, leadership vision clarity, business owner vision communication, vision statement SMB, team unity through vision, leadership communication strategy, business growth vision, vision alignment team, business owner leadership, company vision sharing, clear business vision, vision sharing mistakes, vision myth business, team alignment, vision clarity, employee engagement, organizational alignment, leadership skills, business culture"
+  },
+  {
     title: "Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow",
     excerpt: "Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable SMB success and build momentum now.",
     author: "BizHealth.ai Research Team",

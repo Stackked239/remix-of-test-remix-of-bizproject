@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, Target, Zap, BarChart3, Database, Lightbulb, TrendingUp, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/overcoming-bi-challenges-smb.jpg";
+import heroImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
 
 const OvercomingBIChallengesSMB = () => {
   const publishDate = "2025-12-10";

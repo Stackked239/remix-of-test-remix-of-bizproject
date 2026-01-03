@@ -6,7 +6,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import heroImage from '@/assets/business-strategy-planning-2026-growth.png';
+import heroImage from '@/assets/business-strategy-planning-2026-growth-optimized.jpg';
 
 const SuccessBeginsWith2026Strategy = () => {
   const publishDate = "2025-11-20";

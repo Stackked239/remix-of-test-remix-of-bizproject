@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
-import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
+import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";

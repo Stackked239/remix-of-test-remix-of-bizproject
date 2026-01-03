@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, Users, Zap } from "luc
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import ecommerceImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import foodBusinessImage from "@/assets/daily-grind-food-business-operations.jpg";
-import scalingImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import scalingImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import workforceImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
 

@@ -59,7 +59,7 @@ export async function generatePricingPdf(options: PDFExportOptions): Promise<voi
 
   // Compact Header
   doc.setFillColor(bizNavy[0], bizNavy[1], bizNavy[2]);
-  doc.rect(0, 0, pageWidth, 38, 'F');
+  doc.rect(0, 0, pageWidth, 32, 'F');
   
   // Try to load and add logo image
   try {
@@ -67,165 +67,201 @@ export async function generatePricingPdf(options: PDFExportOptions): Promise<voi
     const targetHeight = 8;
     const aspectRatio = logoData.width / logoData.height;
     const targetWidth = targetHeight * aspectRatio;
-    doc.addImage(logoData.base64, 'JPEG', 15, 6, targetWidth, targetHeight);
+    doc.addImage(logoData.base64, 'JPEG', 15, 5, targetWidth, targetHeight);
   } catch (error) {
     doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
-    doc.setFontSize(14);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
-    doc.text('BizHealth.ai', 15, 12);
+    doc.text('BizHealth.ai', 15, 10);
   }
   
   doc.setTextColor(255, 255, 255);
-  doc.setFontSize(12);
+  doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
-  doc.text('Pricing Net Profit Calculator Results', 15, 22);
+  doc.text('Pricing Net Profit Calculator Results', 15, 20);
   
-  doc.setFontSize(8);
+  doc.setFontSize(7);
   doc.setFont('helvetica', 'normal');
-  doc.text('Find out if your prices actually make you money.', 15, 30);
+  doc.text('Find out if your prices actually make you money.', 15, 26);
 
-  yPos = 45;
+  yPos = 38;
 
-  // Status Badge - inline with primary result
+  // Status Badge
   const statusColor = results.marginHealth === 'healthy' ? bizGreen : 
                       results.marginHealth === 'caution' ? cautionOrange : dangerRed;
-  const statusText = results.marginHealth === 'healthy' ? 'HEALTHY' :
-                     results.marginHealth === 'caution' ? 'CAUTION' : 'LOSING $';
+  const statusText = results.marginHealth === 'healthy' ? 'Healthy Margins' :
+                     results.marginHealth === 'caution' ? 'Thin Margins' : 'Losing Money';
   
   doc.setFillColor(statusColor[0], statusColor[1], statusColor[2]);
-  doc.roundedRect(15, yPos - 5, 28, 7, 1.5, 1.5, 'F');
+  doc.roundedRect(15, yPos, 40, 6, 1.5, 1.5, 'F');
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(8);
   doc.setFont('helvetica', 'bold');
-  doc.text(statusText, 18, yPos);
+  doc.text(statusText, 18, yPos + 4);
   
-  // Primary Result: Profit Per Sale - same line
+  yPos += 12;
+
+  // Primary Result: Profit Per Sale
+  doc.setTextColor(textDark[0], textDark[1], textDark[2]);
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'bold');
+  doc.text('YOUR PROFIT PER SALE', 15, yPos);
+  yPos += 6;
+  
   const profitColor = results.netProfitPerUnit >= 0 ? bizGreen : dangerRed;
   doc.setTextColor(profitColor[0], profitColor[1], profitColor[2]);
-  doc.setFontSize(18);
+  doc.setFontSize(20);
   const profitSign = results.netProfitPerUnit >= 0 ? '' : '-';
-  doc.text(`${profitSign}${formatCurrency(Math.abs(results.netProfitPerUnit))} per sale`, 50, yPos);
+  doc.text(`${profitSign}${formatCurrency(Math.abs(results.netProfitPerUnit))}`, 15, yPos);
   
   doc.setTextColor(textLight[0], textLight[1], textLight[2]);
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
-  doc.text(`Net Margin: ${formatPercent(results.netMargin)}`, 130, yPos);
+  doc.text('What you actually keep after all costs', 60, yPos - 2);
   
-  yPos += 10;
+  yPos += 6;
+
+  // Profit Margin
+  doc.setTextColor(textDark[0], textDark[1], textDark[2]);
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'bold');
+  doc.text(`Your Profit Margin: ${formatPercent(results.netMargin)}`, 15, yPos);
+  
+  yPos += 5;
 
   // Divider
   doc.setDrawColor(200, 200, 200);
   doc.line(15, yPos, pageWidth - 15, yPos);
-  yPos += 6;
+  yPos += 5;
 
-  // Two-column layout for compact display
-  const leftCol = 15;
-  const rightCol = pageWidth / 2 + 5;
-  const colWidth = (pageWidth / 2) - 20;
-
-  // LEFT COLUMN: Inputs + Monthly Snapshot
+  // What This Means
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('YOUR INPUTS', leftCol, yPos);
+  doc.text('WHAT THIS MEANS', 15, yPos);
+  yPos += 5;
   
-  let leftY = yPos + 6;
-  const inputDetails: [string, string][] = [
-    ['Selling Price:', formatCurrency(inputs.sellingPrice)],
-    ['Direct Cost:', formatCurrency(inputs.directCost)],
-    ['Overhead/Sale:', formatCurrency(inputs.overheadPerSale)],
-    ['Monthly Volume:', `${inputs.monthlyUnits} units`],
-  ];
-
+  const cleanInterpretation = results.interpretation.replace(/[⚠️🟡✅🎉]/g, '').trim();
+  doc.setTextColor(textDark[0], textDark[1], textDark[2]);
   doc.setFontSize(8);
-  inputDetails.forEach(([label, value]) => {
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(textLight[0], textLight[1], textLight[2]);
-    doc.text(label, leftCol, leftY);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(textDark[0], textDark[1], textDark[2]);
-    doc.text(value, leftCol + 35, leftY);
-    leftY += 5;
-  });
+  doc.setFont('helvetica', 'normal');
+  const interpretationLines = doc.splitTextToSize(cleanInterpretation, pageWidth - 30);
+  doc.text(interpretationLines, 15, yPos);
+  yPos += interpretationLines.length * 4 + 4;
 
-  leftY += 4;
+  // Monthly Snapshot
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('MONTHLY SNAPSHOT', leftCol, leftY);
-  leftY += 6;
+  doc.text('MONTHLY SNAPSHOT', 15, yPos);
+  yPos += 5;
 
   const monthlyDetails: [string, string][] = [
-    ['Revenue:', formatCurrency(results.monthlyRevenue)],
-    ['Direct Costs:', formatCurrency(results.monthlyDirectCosts)],
-    ['Overhead:', formatCurrency(results.monthlyOverhead)],
-    ['Net Profit:', formatCurrency(results.monthlyNetProfit)],
+    ['Monthly Revenue:', formatCurrency(results.monthlyRevenue)],
+    ['Monthly Direct Costs:', formatCurrency(results.monthlyDirectCosts)],
+    ['Monthly Overhead:', formatCurrency(results.monthlyOverhead)],
+    ['Monthly Net Profit:', formatCurrency(results.monthlyNetProfit)],
   ];
 
   if (results.breakEvenUnits !== null && results.breakEvenUnits > 0) {
-    monthlyDetails.push(['Break-Even:', `${results.breakEvenUnits} sales`]);
+    monthlyDetails.push(['Break-Even Point:', `${results.breakEvenUnits} sales`]);
   }
 
   doc.setFontSize(8);
   monthlyDetails.forEach(([label, value]) => {
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(textLight[0], textLight[1], textLight[2]);
-    doc.text(label, leftCol, leftY);
+    doc.text(label, 15, yPos);
     doc.setFont('helvetica', 'bold');
-    const valueColor = label === 'Net Profit:' 
-      ? (results.monthlyNetProfit >= 0 ? bizGreen : dangerRed)
-      : textDark;
-    doc.setTextColor(valueColor[0], valueColor[1], valueColor[2]);
-    doc.text(value, leftCol + 35, leftY);
-    leftY += 5;
+    doc.setTextColor(textDark[0], textDark[1], textDark[2]);
+    doc.text(value, 60, yPos);
+    yPos += 4;
   });
 
-  // RIGHT COLUMN: What This Means + Next Steps
+  yPos += 3;
+
+  // Your Inputs
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('WHAT THIS MEANS', rightCol, yPos);
-  
-  let rightY = yPos + 6;
-  const cleanInterpretation = results.interpretation.replace(/[⚠️🟡✅🎉]/g, '').trim();
-  doc.setTextColor(textDark[0], textDark[1], textDark[2]);
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  const interpretationLines = doc.splitTextToSize(cleanInterpretation, colWidth);
-  doc.text(interpretationLines, rightCol, rightY);
-  rightY += interpretationLines.length * 4 + 6;
+  doc.text('YOUR INPUTS', 15, yPos);
+  yPos += 5;
 
+  const inputDetails: [string, string][] = [
+    ['Selling Price:', formatCurrency(inputs.sellingPrice)],
+    ['Direct Cost:', formatCurrency(inputs.directCost)],
+    ['Overhead Per Sale:', formatCurrency(inputs.overheadPerSale)],
+    ['Monthly Sales Volume:', `${inputs.monthlyUnits} units`],
+  ];
+
+  doc.setFontSize(8);
+  inputDetails.forEach(([label, value]) => {
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(textLight[0], textLight[1], textLight[2]);
+    doc.text(label, 15, yPos);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(textDark[0], textDark[1], textDark[2]);
+    doc.text(value, 55, yPos);
+    yPos += 4;
+  });
+
+  yPos += 3;
+
+  // Suggested Next Steps
   doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('NEXT STEPS', rightCol, rightY);
-  rightY += 6;
+  doc.text('SUGGESTED NEXT STEPS', 15, yPos);
+  yPos += 5;
 
   doc.setTextColor(textDark[0], textDark[1], textDark[2]);
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   
-  results.actions.slice(0, 4).forEach((action) => {
-    const lines = doc.splitTextToSize(`• ${action}`, colWidth);
-    doc.text(lines, rightCol, rightY);
-    rightY += lines.length * 4 + 1;
+  results.actions.forEach((action) => {
+    const lines = doc.splitTextToSize(`• ${action}`, pageWidth - 30);
+    doc.text(lines, 15, yPos);
+    yPos += lines.length * 4 + 1;
   });
 
-  // Footer - positioned at bottom
-  const footerY = pageHeight - 12;
-  doc.setDrawColor(200, 200, 200);
-  doc.line(15, footerY - 6, pageWidth - 15, footerY - 6);
+  // Professional Branded Footer
+  const footerY = pageHeight - 28;
   
-  doc.setTextColor(textLight[0], textLight[1], textLight[2]);
+  // Footer background
+  doc.setFillColor(bizNavy[0], bizNavy[1], bizNavy[2]);
+  doc.rect(0, footerY - 4, pageWidth, 32, 'F');
+  
+  // Disclaimer text
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(6);
   doc.setFont('helvetica', 'normal');
-  doc.text('This calculator provides estimates for educational purposes. Consult a financial advisor for specific guidance.', 15, footerY - 1);
+  doc.text('This calculator provides estimates for educational purposes only. Results should not be considered financial advice.', 15, footerY + 2);
+  doc.text('Consult with a qualified accountant or financial advisor for specific guidance on your business finances.', 15, footerY + 6);
   
-  doc.setTextColor(bizNavy[0], bizNavy[1], bizNavy[2]);
+  // Divider line in footer
+  doc.setDrawColor(255, 255, 255);
+  doc.setLineWidth(0.2);
+  doc.line(15, footerY + 10, pageWidth - 15, footerY + 10);
+  
+  // Brand info
+  doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
-  doc.text(`Generated: ${new Date().toLocaleDateString()} | bizhealth.ai`, 15, footerY + 4);
+  doc.text('BizHealth.ai', 15, footerY + 17);
+  
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(7);
+  doc.setFont('helvetica', 'normal');
+  doc.text('Your Trusted Business Health Advisor', 15, footerY + 22);
+  
+  // Right side: date and URL
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(7);
+  doc.text(`Generated: ${new Date().toLocaleDateString()}`, pageWidth - 55, footerY + 17);
+  doc.setTextColor(bizYellow[0], bizYellow[1], bizYellow[2]);
+  doc.text('bizhealth.ai', pageWidth - 55, footerY + 22);
 
   // Save
-  const filename = `Pricing-Analysis-${new Date().toISOString().split('T')[0]}.pdf`;
+  const filename = `Pricing-Net-Profit-Analysis-${new Date().toISOString().split('T')[0]}.pdf`;
   doc.save(filename);
 }

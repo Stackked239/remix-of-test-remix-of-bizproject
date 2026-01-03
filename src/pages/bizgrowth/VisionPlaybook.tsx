@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
+import GlobalFooter from '@/components/GlobalFooter';
 
 const VisionPlaybook = () => {
   const [headerShadow, setHeaderShadow] = useState(false);
@@ -125,7 +126,7 @@ const VisionPlaybook = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-[#242553] via-[#1a1a3e] to-[#2a2a5a] text-white pt-32 pb-24 md:pt-40 md:pb-28 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-[#242553] via-[#1a1a3e] to-[#2a2a5a] text-white pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
           <div 
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -136,7 +137,7 @@ const VisionPlaybook = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-[#E6B800]/15 border border-[#E6B800] text-[#E6B800] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-8">
               <span>📚</span>
-              <span>BizGrowth Academy — Free Playbook</span>
+              <span>BizGrowth Academy</span>
             </div>
 
             {/* Headline */}
@@ -161,7 +162,7 @@ const VisionPlaybook = () => {
               <Button 
                 onClick={() => scrollToSection('steps')}
                 variant="outline"
-                className="bg-transparent text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 font-['Montserrat'] font-semibold text-base px-8 py-4 h-auto rounded-lg transition-all"
+                className="bg-transparent text-white border-2 border-white/30 hover:bg-white hover:text-[#242553] hover:border-white font-['Montserrat'] font-semibold text-base px-8 py-4 h-auto rounded-lg transition-all"
               >
                 See the 7 Steps
               </Button>
@@ -219,7 +220,7 @@ const VisionPlaybook = () => {
         </section>
 
         {/* What You'll Build Section */}
-        <section id="build" className="bg-white py-24">
+        <section id="build" className="bg-white pt-12 pb-24">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center max-w-[720px] mx-auto mb-16">
               <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl text-[#242553] mb-4">
@@ -441,25 +442,9 @@ const VisionPlaybook = () => {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-[#1a1a3e] text-white py-16">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="text-center md:text-left">
-                <div className="font-['Montserrat'] font-extrabold text-xl mb-2">
-                  Biz<span className="text-[#969423]">Health</span>.ai
-                </div>
-                <div className="text-sm opacity-70 italic">
-                  Stop Guessing, Start Growing.
-                </div>
-              </div>
-              <div className="bg-[#E6B800]/15 border border-[#E6B800]/30 px-5 py-3 rounded-lg text-sm text-center md:text-left">
-                Part of <strong className="text-[#E6B800]">BizGrowth Academy</strong> — Learning designed for real business leaders building real businesses.
-              </div>
-            </div>
-          </div>
-        </footer>
       </main>
+
+      <GlobalFooter />
     </>
   );
 };

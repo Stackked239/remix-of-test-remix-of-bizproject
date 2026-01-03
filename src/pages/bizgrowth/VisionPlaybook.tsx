@@ -108,7 +108,7 @@ const VisionPlaybook = () => {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex justify-between items-center">
             {/* BizGrowth Academy Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#E6B800]/15 border border-[#E6B800] text-[#E6B800] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-[#242553] border border-[#242553] text-[#E6B800] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
               <span>📚</span>
               <span>BizGrowth Academy</span>
             </div>

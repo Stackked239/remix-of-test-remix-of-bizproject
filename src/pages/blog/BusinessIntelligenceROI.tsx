@@ -20,7 +20,7 @@ const BusinessIntelligenceROI = () => {
         keywords="business intelligence ROI, BI ROI, SMB business intelligence, small business analytics, business intelligence for small business, BI implementation cost, business intelligence case studies"
         canonical="https://bizhealth.ai/blog/business-intelligence-roi"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-intelligence-roi-analytics.jpg"
+        ogImage="/og-images/og-business-intelligence-roi.jpg"
         articlePublishedTime="2025-09-26"
         articleAuthor="BizHealth Research Team"
       />
@@ -28,7 +28,7 @@ const BusinessIntelligenceROI = () => {
         type="blogPosting"
         headline="The ROI of Business Intelligence for SMBs"
         description="Real-world case studies showing how small and medium businesses achieve measurable returns from business intelligence investments."
-        image="https://bizhealth.ai/assets/business-intelligence-roi-analytics.jpg"
+        image="/og-images/og-business-intelligence-roi.jpg"
         datePublished="2025-09-26"
         dateModified="2025-12-10"
         author="BizHealth Research Team"

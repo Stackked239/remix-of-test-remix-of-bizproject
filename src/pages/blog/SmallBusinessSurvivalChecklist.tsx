@@ -20,7 +20,7 @@ const SmallBusinessSurvivalChecklist = () => {
         keywords="small business survival guide, new business owner tips, first year business challenges, small business health assessment, business survival checklist 2025, startup metrics, cash flow management, customer acquisition cost"
         canonical={articleUrl}
         ogType="article"
-        ogImage={survivalChecklistHero}
+        ogImage="/og-images/og-survival-checklist.jpg"
         articlePublishedTime={publishDate}
         articleAuthor="BizHealth.ai Research Team"
       />
@@ -29,7 +29,7 @@ const SmallBusinessSurvivalChecklist = () => {
         type="blogPosting"
         headline="The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One"
         description="Learn from 500+ founders about the critical first-year challenges, metrics, and systems that separate successful businesses from the 23.2% that fail within 12 months."
-        image={survivalChecklistHero}
+        image="/og-images/og-survival-checklist.jpg"
         datePublished={publishDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}

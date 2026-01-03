@@ -25,7 +25,7 @@ const BusinessBlindSpots2025 = () => {
         keywords="small business blind spots, business health assessment, SMB growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
         canonical={canonicalUrl}
         ogType="article"
-        ogImage={`https://bizhealth.ai${blindSpotsHero}`}
+        ogImage="/og-images/og-business-blind-spots-2025.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
@@ -35,7 +35,7 @@ const BusinessBlindSpots2025 = () => {
         type="blogPosting"
         headline="The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)"
         description="Discover the 5 dangerous business blind spots draining SMB profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
-        image={blindSpotsHero}
+        image="/og-images/og-business-blind-spots-2025.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"

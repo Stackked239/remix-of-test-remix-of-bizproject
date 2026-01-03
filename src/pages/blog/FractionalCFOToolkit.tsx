@@ -120,7 +120,7 @@ const FractionalCFOToolkit = () => {
         keywords="fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics, debt capital dashboard, strategic metrics SMB"
         canonical="https://bizhealth.ai/blog/fractional-cfo-toolkit"
         ogType="article"
-        ogImage={`https://bizhealth.ai${fractionalCFOImage}`}
+        ogImage="https://bizhealth.ai/og-images/og-fractional-cfo-toolkit.jpg"
         articlePublishedTime="2025-12-29"
         articleModifiedTime="2025-12-29"
         articleAuthor="BizHealth.ai Research Team"
@@ -129,7 +129,7 @@ const FractionalCFOToolkit = () => {
         type="blogPosting"
         headline="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have Before They Sleep at Night"
         description="Learn how to build seven essential financial dashboards that provide CFO-level visibility into your business. Comprehensive guide to cash flow, profitability, and strategic financial metrics."
-        image={`https://bizhealth.ai${fractionalCFOImage}`}
+        image="https://bizhealth.ai/og-images/og-fractional-cfo-toolkit.jpg"
         datePublished="2025-12-29"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/fractional-cfo-toolkit"

@@ -144,7 +144,7 @@ const WarningSignsBusiness = () => {
         keywords="business warning signs, SMB challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
         canonical="https://bizhealth.ai/blog/warning-signs-business"
         ogType="article"
-        ogImage={`https://bizhealth.ai${warningSignsImage}`}
+        ogImage="https://bizhealth.ai/og-images/og-warning-signs-business.jpg"
         articlePublishedTime="2025-09-12T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
@@ -153,7 +153,7 @@ const WarningSignsBusiness = () => {
         type="blogPosting"
         headline="5 Warning Signs Your Business Needs Immediate Attention"
         description="Are you losing sleep over stagnant growth or cash flow hiccups? You're not alone—70% of small and mid-sized businesses face critical challenges that, if ignored, can derail success."
-        image={`https://bizhealth.ai${warningSignsImage}`}
+        image="https://bizhealth.ai/og-images/og-warning-signs-business.jpg"
         datePublished="2025-09-12"
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"

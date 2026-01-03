@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { RotateCcw, ArrowLeft, Printer, Share2, Download } from 'lucide-react';
+import { RotateCcw, ArrowLeft, Share2, Download } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
@@ -142,10 +142,6 @@ const FreePricingNetProfitCalculator = () => {
       setErrors({});
       toast.success('Calculator reset');
     }
-  };
-
-  const handlePrint = () => {
-    window.print();
   };
 
   const handleShare = async () => {
@@ -338,14 +334,6 @@ const FreePricingNetProfitCalculator = () => {
                 {/* Secondary Actions */}
                 {results && (
                   <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-gray-200 print:hidden">
-                    <Button
-                      variant="outline"
-                      onClick={handlePrint}
-                      className="flex-1"
-                    >
-                      <Printer className="w-4 h-4 mr-2" />
-                      Print
-                    </Button>
                     <Button
                       variant="outline"
                       onClick={handleDownloadPdf}

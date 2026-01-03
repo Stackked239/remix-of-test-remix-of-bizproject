@@ -96,6 +96,7 @@ const BizLeader = () => {
         description="Transform your leadership capabilities with comprehensive development programs. Executive coaching, strategic leadership training, and certification programs for business owners and executives."
         keywords="leadership development, executive coaching, business leadership training, strategic leadership, management training, leadership certification"
         canonical="https://bizhealth.ai/bizleader"
+        ogImage="https://bizhealth.ai/og-images/og-bizleader.jpg"
       />
       <StructuredData 
         type="service"

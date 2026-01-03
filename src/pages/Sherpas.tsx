@@ -205,6 +205,7 @@ const Sherpas = () => {
         keywords="business advisor AI, leadership development AI, SMB coaching, business strategy guide, leadership sherpa, business intelligence tool, SMB leadership"
         canonical="https://bizhealth.ai/sherpas"
         ogType="website"
+        ogImage="https://bizhealth.ai/og-images/og-sherpas.jpg"
       />
       
       <StructuredData

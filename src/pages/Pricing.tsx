@@ -184,6 +184,7 @@ const Pricing = () => {
         description="Affordable business diagnostics and tiered solutions that help you identify gaps, confirm strengths, and fuel sustainable success. Transparent pricing for small business analysis and strategic planning."
         keywords="business diagnostics, small business pricing, tiered solutions, transparent pricing, affordable AI business health, SMB solutions, business health assessment pricing"
         canonical="https://bizhealth.ai/pricing"
+        ogImage="https://bizhealth.ai/og-images/og-pricing.jpg"
       />
       <GlobalNavigation />
       

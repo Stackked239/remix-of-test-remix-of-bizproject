@@ -66,6 +66,9 @@ const Navigation = () => {
             <img 
               src={bizHealthLogo} 
               alt="BizHealth.ai Logo" 
+              width={120}
+              height={32}
+              loading="eager"
               className="h-8 w-auto"
             />
           </a>
@@ -98,6 +101,9 @@ const Navigation = () => {
                       <img 
                         src={bizHealthIcon} 
                         alt="BizHealth.ai" 
+                        width={20}
+                        height={20}
+                        loading="lazy"
                         className="w-5 h-5 mt-0.5 rounded object-cover"
                       />
                       <div className="flex flex-col">
@@ -267,6 +273,9 @@ const Navigation = () => {
                       <img 
                         src={bizHealthIcon} 
                         alt="BizHealth.ai" 
+                        width={20}
+                        height={20}
+                        loading="lazy"
                         className="w-5 h-5 mt-0.5 rounded object-cover"
                       />
                       <div className="flex flex-col">

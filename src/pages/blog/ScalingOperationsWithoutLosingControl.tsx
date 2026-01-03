@@ -22,7 +22,7 @@ const ScalingOperationsWithoutLosingControl = () => {
         keywords="business scaling, operations management, SMB growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
         canonical="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-scaling-operations.jpg"
+        ogImage={`https://bizhealth.ai${heroImage}`}
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
@@ -35,7 +35,7 @@ const ScalingOperationsWithoutLosingControl = () => {
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-scaling-operations.jpg"
+        image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
         keywords={["business scaling", "operations management", "SMB growth strategies", "operational excellence", "scaling framework"]}
       />

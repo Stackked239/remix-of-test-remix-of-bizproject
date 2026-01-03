@@ -17,7 +17,7 @@ const WhenToPivot = () => {
         keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, SMB strategy"
         canonical="https://bizhealth.ai/blog/when-to-pivot"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        ogImage={`https://bizhealth.ai${pivotImage}`}
         articlePublishedTime="2025-09-12"
         articleAuthor="BizHealth Research Team"
       />
@@ -25,7 +25,7 @@ const WhenToPivot = () => {
         type="blogPosting"
         headline="When to Pivot: Data-Driven Signals That It's Time to Change Course"
         description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot."
-        image="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        image={`https://bizhealth.ai${pivotImage}`}
         datePublished="2025-09-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/when-to-pivot"

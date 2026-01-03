@@ -2,91 +2,38 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const LeadershipStressSuccess = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Leadership Stress Management: Overcome Entrepreneurial Burnout | BizHealth.ai</title>
-        <meta name="description" content="Master leadership stress management with proven strategies. Reduce executive burnout, overcome decision anxiety, and build resilience as a business owner. Expert tips inside." />
-        <meta name="keywords" content="leadership stress management, executive stress, business owner burnout, entrepreneurial stress, decision-making anxiety, leader resilience, stress reduction techniques, small business leadership" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/leadership-stress-success" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="BizHealth.ai Research Team" />
-        
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Leadership Stress Management: Overcome Entrepreneurial Burnout" />
-        <meta property="og:description" content="Master leadership stress management with proven strategies. Reduce executive burnout, overcome decision anxiety, and build resilience as a business owner." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/leadership-stress-success" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/business-leadership-stress-success.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="BizHealth.ai" />
-        <meta property="article:published_time" content="2025-10-12" />
-        <meta property="article:modified_time" content="2025-12-06" />
-        <meta property="article:author" content="BizHealth.ai Research Team" />
-        <meta property="article:section" content="Business Leadership" />
-        <meta property="article:tag" content="Leadership Stress" />
-        <meta property="article:tag" content="Executive Burnout" />
-        <meta property="article:tag" content="Business Owner Mental Health" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@bizhealthai" />
-        <meta name="twitter:title" content="Leadership Stress Management: Overcome Entrepreneurial Burnout" />
-        <meta name="twitter:description" content="Master leadership stress management with proven strategies. Reduce executive burnout and build resilience." />
-        <meta name="twitter:image" content="https://bizhealth.ai/assets/business-leadership-stress-success.png" />
-        <meta name="twitter:image:alt" content="Business leader managing executive stress with data-driven strategies" />
-        
-        {/* JSON-LD Article Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress",
-            "image": {
-              "@type": "ImageObject",
-              "url": "https://bizhealth.ai/assets/business-leadership-stress-success.png",
-              "width": 1200,
-              "height": 630
-            },
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth.ai Research Team",
-              "url": "https://bizhealth.ai/about",
-              "description": "Business psychology and leadership strategy experts specializing in stress reduction for small and medium-sized business leaders"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "url": "https://bizhealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo.png",
-                "width": 512,
-                "height": 512
-              }
-            },
-            "datePublished": "2025-10-12",
-            "dateModified": "2025-12-06",
-            "description": "Master leadership stress management with proven strategies. Reduce executive burnout, overcome decision anxiety, and build resilience as a business owner.",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://bizhealth.ai/blog/leadership-stress-success"
-            },
-            "keywords": "leadership stress management, executive stress, business owner burnout, entrepreneurial stress, decision-making anxiety, leader resilience",
-            "articleSection": "Business Leadership",
-            "wordCount": 1500,
-            "inLanguage": "en-US"
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="Leadership Stress Management: Overcome Entrepreneurial Burnout | BizHealth.ai"
+        description="Master leadership stress management with proven strategies. Reduce executive burnout, overcome decision anxiety, and build resilience as a business owner. Expert tips inside."
+        keywords="leadership stress management, executive stress, business owner burnout, entrepreneurial stress, decision-making anxiety, leader resilience, stress reduction techniques, small business leadership"
+        canonical="https://bizhealth.ai/blog/leadership-stress-success"
+        ogType="article"
+        ogImage={`https://bizhealth.ai${leadershipStressImage}`}
+        articlePublishedTime="2025-10-12"
+        articleModifiedTime="2025-12-06"
+        articleAuthor="BizHealth.ai Research Team"
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress"
+        description="Master leadership stress management with proven strategies. Reduce executive burnout, overcome decision anxiety, and build resilience as a business owner."
+        image={`https://bizhealth.ai${leadershipStressImage}`}
+        datePublished="2025-10-12"
+        dateModified="2025-12-06"
+        author="BizHealth.ai Research Team"
+        url="https://bizhealth.ai/blog/leadership-stress-success"
+        keywords={["leadership stress management", "executive stress", "business owner burnout", "entrepreneurial stress", "leader resilience"]}
+      />
       <GlobalNavigation />
       
       {/* Hero Section */}

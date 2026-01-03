@@ -22,7 +22,7 @@ const StrategicPlanning = () => {
         keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, SMB planning, business adaptation"
         canonical="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        ogImage={`https://bizhealth.ai${strategicPlanningImage}`}
         articlePublishedTime="2025-10-12"
         articleAuthor="BizHealth Research Team"
       />
@@ -30,7 +30,7 @@ const StrategicPlanning = () => {
         type="blogPosting"
         headline="Strategic Planning for the Post-Pandemic Business Landscape"
         description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
-        image="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        image={`https://bizhealth.ai${strategicPlanningImage}`}
         datePublished="2025-10-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/strategic-planning-post-pandemic"

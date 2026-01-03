@@ -1,6 +1,8 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,60 +11,26 @@ import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-vol
 const RealTimeAnalyticsSMB = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Real-Time Analytics: Powering SMB Agility in Volatile Markets",
-            "description": "Discover how real-time BI transforms SMBs in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for volatile markets.",
-            "image": realTimeAnalyticsImage,
-            "author": {
-              "@type": "Organization",
-              "name": "BizHealth Research Team",
-              "url": "https://bizhealth.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bizhealth.ai/logo"
-              }
-            },
-            "datePublished": "2025-09-26",
-            "dateModified": "2025-09-26",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://bizhealth.ai/blog/real-time-analytics-smb-agility"
-            },
-            "articleSection": "Business Intelligence",
-            "keywords": "real-time BI for SMBs 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, SMB analytics",
-            "wordCount": "1200"
-          })
-        }}
+      <SEO
+        title="Real-Time Analytics Guide 2025 | SMB Business Intelligence | BizHealth.ai"
+        description="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking—unlock competitive advantage now!"
+        keywords="real-time BI for SMBs 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, SMB analytics"
+        canonical="https://bizhealth.ai/blog/real-time-analytics-smb-agility"
+        ogType="article"
+        ogImage={`https://bizhealth.ai${realTimeAnalyticsImage}`}
+        articlePublishedTime="2025-09-26"
+        articleAuthor="BizHealth Research Team"
       />
-
-      {/* Meta Tags */}
-      <title>Real-Time Analytics Guide 2025 | SMB Business Intelligence | BizHealth</title>
-      <meta name="description" content="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking—unlock competitive advantage now!" />
-      <meta name="keywords" content="real-time BI for SMBs 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, SMB analytics" />
-      <link rel="canonical" href="https://bizhealth.ai/blog/real-time-analytics-smb-agility" />
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content="Real-Time Analytics: Powering SMB Agility in Volatile Markets" />
-      <meta property="og:description" content="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking." />
-      <meta property="og:image" content={realTimeAnalyticsImage} />
-      <meta property="og:url" content="https://bizhealth.ai/blog/real-time-analytics-smb-agility" />
-      <meta property="og:type" content="article" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Real-Time Analytics: Powering SMB Agility in Volatile Markets" />
-      <meta name="twitter:description" content="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking." />
-      <meta name="twitter:image" content={realTimeAnalyticsImage} />
+      <StructuredData
+        type="blogPosting"
+        headline="Real-Time Analytics: Powering SMB Agility in Volatile Markets"
+        description="Discover how real-time BI transforms SMBs in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for volatile markets."
+        image={`https://bizhealth.ai${realTimeAnalyticsImage}`}
+        datePublished="2025-09-26"
+        author="BizHealth Research Team"
+        url="https://bizhealth.ai/blog/real-time-analytics-smb-agility"
+        keywords={["real-time BI for SMBs", "analytics agility", "data-driven decisions", "performance tracking", "business intelligence"]}
+      />
 
       <GlobalNavigation />
       

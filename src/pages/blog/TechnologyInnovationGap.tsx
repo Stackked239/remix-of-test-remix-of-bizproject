@@ -30,7 +30,7 @@ const TechnologyInnovationGap = () => {
         keywords="innovation gap small business, SMB technology innovation 2025, competitive advantage strategy, small business innovation management, technology infrastructure SMB, business innovation framework, closing innovation gap, SMB growth strategies, innovation readiness assessment, business intelligence technology"
         canonical="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/technology-innovation-gap-small-business-2025.jpg"
+        ogImage={`https://bizhealth.ai${technologyInnovationGapImage}`}
         articlePublishedTime="2025-12-28"
         articleModifiedTime="2025-12-28"
         articleAuthor="BizHealth.ai Research Team"
@@ -42,7 +42,7 @@ const TechnologyInnovationGap = () => {
         datePublished="2025-12-28"
         dateModified="2025-12-28"
         author="BizHealth.ai Research Team"
-        image="https://bizhealth.ai/assets/technology-innovation-gap-small-business-2025.jpg"
+        image={`https://bizhealth.ai${technologyInnovationGapImage}`}
         url="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
         keywords={["innovation gap small business", "SMB technology innovation", "competitive advantage strategy", "business innovation framework", "innovation readiness assessment"]}
       />

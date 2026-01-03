@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bizhealth.ai/bizgrowth/vision-playbook</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/bizguides</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>

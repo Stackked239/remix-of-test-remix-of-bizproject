@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
@@ -86,6 +87,14 @@ const AIBusinessAnalytics = () => {
                   10 minute read
                 </span>
               </div>
+              
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="How AI is Revolutionizing Small Business Analytics"
+                description="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs."
+                url={articleUrl}
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <figure className="mb-10 mx-auto" style={{ width: '85%' }}>

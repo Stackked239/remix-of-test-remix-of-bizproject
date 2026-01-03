@@ -116,6 +116,7 @@ const CustomerJourneyMapsTool = lazy(() => import("./pages/tools/CustomerJourney
 const InnovationStrategyTool = lazy(() => import("./pages/tools/InnovationStrategyTool"));
 const FinancialHealthCheck = lazy(() => import("./pages/tools/FinancialHealthCheck"));
 const FreeROICalculator = lazy(() => import("./pages/tools/FreeROICalculator"));
+const FreePricingNetProfitCalculator = lazy(() => import("./pages/tools/FreePricingNetProfitCalculator"));
 
 // Playbooks and other pages
 const LandscapingPlaybook = lazy(() => import("./pages/playbooks/LandscapingPlaybook"));
@@ -242,6 +243,7 @@ const App = () => (
               <Route path="/biztools/toolbox/innovation-strategy-tool" element={<InnovationStrategyTool />} />
               <Route path="/biztools/financials/health-check" element={<FinancialHealthCheck />} />
               <Route path="/biztools/toolbox/free-roi-calculator" element={<FreeROICalculator />} />
+              <Route path="/biztools/toolbox/free-pricing-net-profit-calculator" element={<FreePricingNetProfitCalculator />} />
               <Route path="/search" element={<Search />} />
               <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
               <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />

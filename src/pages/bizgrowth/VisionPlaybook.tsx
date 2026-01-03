@@ -109,7 +109,7 @@ const VisionPlaybook = () => {
           <div className="flex justify-between items-center">
             {/* BizGrowth Academy Badge */}
             <div className="inline-flex items-center gap-2 bg-[#242553] border border-[#242553] text-[#E6B800] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-              <span>📚</span>
+              <TrendingUp className="w-4 h-4" />
               <span>BizGrowth Academy</span>
             </div>
             <nav className="hidden md:flex gap-8 items-center">

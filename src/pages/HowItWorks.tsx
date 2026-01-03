@@ -1,6 +1,7 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
 import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield, Settings } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
@@ -64,6 +65,13 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="How BizHealth.ai Works - 4-Step Assessment Process"
+        description="Learn how BizHealth.ai transforms your business insights into actionable growth strategies. Our proven 4-step process: assessment, AI analysis, insights, and action planning."
+        keywords="business health assessment, how it works, AI business analysis, business diagnostic process, SMB assessment"
+        canonical="https://bizhealth.ai/how-it-works"
+        ogImage="https://bizhealth.ai/og-images/og-how-it-works.jpg"
+      />
       <GlobalNavigation />
       
       {/* Hero Section */}

@@ -37,7 +37,7 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "Home - BizHealth.ai",
-    excerpt: "Your Trusted Business Health Advisor – AI-Powered Diagnostics for SMBs. Stop Guessing, Start Growing with business health assessments.",
+    excerpt: "Your Trusted Business Health Analyst – AI-Powered Diagnostics for SMBs. Stop Guessing, Start Growing with business health assessments.",
     url: "/",
     keywords: "home, bizhealth, business health, SMB diagnostics, AI powered, small business, assessment",
     icon: Home

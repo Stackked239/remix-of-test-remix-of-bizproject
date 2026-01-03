@@ -109,9 +109,9 @@ const BizToolsHowItWorks = () => {
       name: "Maria, 34",
       title: "Logistics Business Owner",
       businessDetails: "3 employees, $250K annual revenue",
-      quote: "I needed financial visibility without hiring a CFO. BizTools' free cash flow calculator saved me hours every week.",
+      quote: "I needed financial visibility without hiring a CFO. BizTools' cash flow calculator saved me hours every week.",
       toolsUsed: [
-        "Free business health assessment",
+        "Business health assessment",
         "Cash flow calculator",
         "Pricing strategy templates"
       ],

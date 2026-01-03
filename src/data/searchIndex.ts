@@ -85,7 +85,7 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "How It Works - BizTools",
-    excerpt: "Learn how BizTools works: Take a business health assessment, get custom recommendations, access free tools, and upgrade when ready.",
+    excerpt: "Learn how BizTools works: Take a business health assessment, get custom recommendations, access tools, and upgrade when ready.",
     url: "/biztools/how-it-works",
     keywords: "biztools how it works, tools process, free tools, business tools methodology",
     icon: HelpCircle

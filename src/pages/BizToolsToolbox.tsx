@@ -143,7 +143,7 @@ const BizToolsToolbox = () => {
         title="BizTools Toolbox - Business Templates & Resources | BizHealth.ai"
         description="Transform your business with our comprehensive toolbox of templates, frameworks, and resources. Battle-tested tools for financial management, operations, marketing, and strategic planning."
         canonical="https://bizhealth.ai/biztools/toolbox"
-        ogImage="https://bizhealth.ai/og-biztools-toolbox.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-biztools-toolbox.jpg"
       />
       
       <PromotionalBanner />

@@ -84,6 +84,7 @@ const NotFound = () => {
         title="404 - Page Not Found | BizHealth.ai"
         description="The page you're looking for doesn't exist. Return to homepage or browse our resources to find what you need."
         canonical="https://bizhealth.ai/404"
+        ogImage="https://bizhealth.ai/og-images/og-homepage.jpg"
       />
       
       <PromotionalBanner />

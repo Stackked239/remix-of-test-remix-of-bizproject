@@ -2,12 +2,10 @@ import { ReactNode } from 'react';
 import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
-
 interface RelatedArticle {
   title: string;
   slug: string;
@@ -156,13 +154,6 @@ const BlogPostTemplate = ({
                   <span>{readTime}</span>
                 </div>
               </div>
-
-              {/* Share buttons */}
-              <SocialShareButtons
-                title={title}
-                description={description}
-                variant="inline"
-              />
             </div>
           </div>
         </section>
@@ -188,15 +179,8 @@ const BlogPostTemplate = ({
               {children}
             </div>
 
-            {/* Bottom share buttons */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4">Found this article helpful? Share it with your network:</p>
-              <SocialShareButtons
-                title={title}
-                description={description}
-                variant="inline"
-              />
-            </div>
+            {/* Divider */}
+            <div className="mt-12 pt-8 border-t border-border"></div>
 
             {/* Back to blog */}
             <div className="mt-8">

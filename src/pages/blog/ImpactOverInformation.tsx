@@ -6,7 +6,6 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import heroImage from '@/assets/information-overload-business-leader.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
@@ -84,14 +83,6 @@ const ImpactOverInformation = () => {
                   <span className="text-sm">9 min read</span>
                 </div>
               </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="The Pitfall of Information Overload: Why General Advice Falls Short"
-                description="Discover why generic business advice fails SMBs and how AI-powered diagnostics deliver actionable insights."
-                variant="inline"
-                className="mb-8"
-              />
 
               {/* Author Expertise Note */}
               <div className="mb-8 p-4 bg-muted/50 rounded-lg border border-border">

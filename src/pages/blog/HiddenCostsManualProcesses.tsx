@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, BookOpen, AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
@@ -98,13 +97,6 @@ const HiddenCostsManualProcesses = () => {
                   <span>10 min read</span>
                 </div>
               </div>
-              
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="The Hidden Costs of Manual Processes in Today's Smaller Businesses"
-                description="Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes."
-                className="mt-4"
-              />
             </div>
           </div>
         </section>

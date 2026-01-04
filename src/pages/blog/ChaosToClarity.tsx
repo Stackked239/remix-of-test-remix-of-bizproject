@@ -4,7 +4,6 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Lightbulb, CheckCircle2, TrendingUp, AlertCircle, Target, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -116,13 +115,6 @@ const ChaosToClarity = () => {
                   <span className="text-foreground">{readTime}</span>
                 </div>
               </div>
-              
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams"
-                description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees."
-                className="mt-4"
-              />
             </div>
           </div>
         </div>

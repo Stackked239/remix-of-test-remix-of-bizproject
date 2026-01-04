@@ -5,7 +5,6 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
 import heroImage from '@/assets/how-to-check-business-health-guide-optimized.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
@@ -100,14 +99,6 @@ const HowToCheckYourBusinessHealth = () => {
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
-
-                {/* Social Share Buttons */}
-                <SocialShareButtons 
-                  title="How to Check Your Business Health: A Comprehensive Guide"
-                  description="Your complete roadmap to uncovering hidden business weaknesses."
-                  variant="inline"
-                  className="mb-8"
-                />
 
                 <img
                   src={heroImage}

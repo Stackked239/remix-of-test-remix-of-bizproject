@@ -4,7 +4,6 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Lightbulb, CheckCircle2, TrendingUp, AlertCircle, Target, Users, Zap, Timer, BarChart3, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -121,13 +120,6 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
                   <span>{readTime}</span>
                 </div>
               </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide"
-                description="Master solo entrepreneur prioritization with this survival guide."
-                className="mb-8"
-              />
 
               {/* Hero Image */}
               <div className="rounded-2xl overflow-hidden shadow-2xl mb-12 border border-border/50">

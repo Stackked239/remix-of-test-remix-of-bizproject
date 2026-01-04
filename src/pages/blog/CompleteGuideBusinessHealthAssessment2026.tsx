@@ -5,7 +5,6 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
 import heroImage from '@/assets/business-health-assessment-guide-2026.png';
 
@@ -116,14 +115,6 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <span>15 min read</span>
                 </div>
-
-                {/* Social Share Buttons */}
-                <SocialShareButtons 
-                  title="The Complete Guide to Business Health Assessment for 2026"
-                  description="Discover how to conduct a comprehensive business health assessment for 2026."
-                  variant="inline"
-                  className="mb-8"
-                />
 
                 <div className="relative group">
                   <div 

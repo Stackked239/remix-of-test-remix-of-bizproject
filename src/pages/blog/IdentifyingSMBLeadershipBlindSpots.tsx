@@ -6,7 +6,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import heroImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
 
 const IdentifyingSMBLeadershipBlindSpots = () => {
@@ -120,14 +119,6 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               </span>
               <span>By BizHealth.ai Research Team</span>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Identifying Small & Mid-Size Business Leadership Blind Spots"
-              description="Discover the 7 critical leadership blind spots affecting SMB success."
-              variant="inline"
-              className="mb-8"
-            />
           </header>
 
           {/* Featured Image */}

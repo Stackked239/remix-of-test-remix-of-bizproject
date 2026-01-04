@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
@@ -75,14 +74,6 @@ const BusinessIntelligenceROI = () => {
                 <span>9 min read</span>
               </div>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="The ROI of Business Intelligence for SMBs"
-              description="Real-world case studies showing how SMBs achieve measurable returns from BI investments."
-              variant="inline"
-              className="mb-8"
-            />
             
             <div className="w-full flex justify-center">
               <img 

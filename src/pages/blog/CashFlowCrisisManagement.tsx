@@ -4,6 +4,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -97,6 +98,13 @@ const CashFlowCrisisManagement = () => {
                 <span>•</span>
                 <span>9 min read</span>
               </div>
+              
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025"
+                description="Discover how to fix your cash flow management before it's too late."
+                className="mt-4"
+              />
             </div>
 
             {/* Hero Image */}

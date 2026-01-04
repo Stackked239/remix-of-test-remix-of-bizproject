@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
@@ -83,7 +84,14 @@ const OperationalResilience = () => {
               </div>
             </div>
             
-            <img 
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Building Operational Resilience Strategies for SMBs in Uncertain Times 2025"
+              description="Learn 5 proven operational resilience strategies for SMBs in 2025."
+              className="mb-8"
+            />
+            
+            <img
               src={resilienceImage} 
               alt="SMB operational resilience framework showing business continuity planning, crisis management strategies, and adaptive business systems for 2025"
               className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"

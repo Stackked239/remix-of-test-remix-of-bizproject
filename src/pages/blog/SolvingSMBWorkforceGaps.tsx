@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -116,7 +117,14 @@ const SolvingSMBWorkforceGaps = () => {
                 </div>
               </div>
 
-              <img 
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="People-First Challenges: Solving SMB Workforce Gaps 2025"
+                description="Discover actionable SMB growth strategies to solve workforce challenges in 2025."
+                className="mb-8"
+              />
+
+              <img
                 src={workforceGapsImage}
                 alt="Business leaders analyzing SMB workforce talent gaps and retention metrics on digital analytics dashboard displaying performance data charts in modern office 2025"
                 className="w-full rounded-xl shadow-elegant mb-12"

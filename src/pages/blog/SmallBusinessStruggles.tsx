@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -78,6 +79,13 @@ const SmallBusinessStruggles = () => {
                 "You can't fix what you don't understand." – A reality most small business owners confront far too late.
               </p>
             </header>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
+              description="Discover why 70% of SMBs face cash flow challenges and how AI-powered diagnostics can help."
+              className="mb-8"
+            />
 
             {/* Hero Image */}
             <figure className="mb-12 rounded-xl overflow-hidden shadow-2xl">

@@ -3,6 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -155,6 +156,13 @@ const SMBFinancialTrends2025 = () => {
                   <strong className="text-foreground">Expert Insights:</strong> This analysis is compiled by the BizHealth.ai Research Team, drawing from decades of business consulting experience and proprietary data from analyzing over 200 business health indicators across thousands of SMBs.
                 </p>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="2025 SMB Financial Trends: From Uncertainty to Predictable Growth"
+                description="Discover how SMBs can shift from reactive guessing to data-driven, predictable growth."
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <div className="mb-12">

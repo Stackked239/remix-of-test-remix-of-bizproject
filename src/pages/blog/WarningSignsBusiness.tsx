@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info, AlertTriangle, DollarSign, Users, Settings, Target, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
@@ -227,6 +228,13 @@ const WarningSignsBusiness = () => {
                   8 min read
                 </span>
               </div>
+              
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="5 Warning Signs Your Business Needs Immediate Attention"
+                description="Learn to spot critical challenges before they derail your business success."
+                className="mb-8"
+              />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">

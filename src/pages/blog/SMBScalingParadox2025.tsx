@@ -91,6 +91,14 @@ const SMBScalingParadox2025 = () => {
                   <span>10 min read</span>
                 </div>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business"
+                description="Discover why 60% of SMBs stall post-year 3 due to rapid scaling."
+                variant="inline"
+                className="mb-8"
+              />
               
               {/* Hero Image */}
               <figure className="mb-12">

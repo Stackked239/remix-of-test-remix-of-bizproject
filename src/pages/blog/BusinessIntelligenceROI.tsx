@@ -75,6 +75,14 @@ const BusinessIntelligenceROI = () => {
                 <span>9 min read</span>
               </div>
             </div>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="The ROI of Business Intelligence for SMBs"
+              description="Real-world case studies showing how SMBs achieve measurable returns from BI investments."
+              variant="inline"
+              className="mb-8"
+            />
             
             <div className="w-full flex justify-center">
               <img 

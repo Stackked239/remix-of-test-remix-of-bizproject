@@ -83,6 +83,14 @@ const FinancialHealthMetrics = () => {
                 <span>15 min read</span>
               </div>
             </div>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Financial Health Metrics Every Business Owner Should Track in 2025"
+              description="Master 8 critical financial health metrics for SMBs."
+              variant="inline"
+              className="mb-8"
+            />
             
             <img 
               src={financialMetricsImage} 

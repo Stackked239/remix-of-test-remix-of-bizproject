@@ -93,13 +93,21 @@ const HowToCheckYourBusinessHealth = () => {
                   How to Check Your Business Health: A Comprehensive Guide for Small Business Owners
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
+                <div className="flex items-center gap-4 text-sm mb-4" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
                   <span>By {author}</span>
                   <span>•</span>
                   <time dateTime={publishDate}>December 14, 2025</time>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
+
+                {/* Social Share Buttons */}
+                <SocialShareButtons 
+                  title="How to Check Your Business Health: A Comprehensive Guide"
+                  description="Your complete roadmap to uncovering hidden business weaknesses."
+                  variant="inline"
+                  className="mb-8"
+                />
 
                 <img
                   src={heroImage}

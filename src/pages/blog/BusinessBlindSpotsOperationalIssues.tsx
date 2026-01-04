@@ -85,6 +85,14 @@ const BusinessBlindSpotsOperationalIssues = () => {
               <span>16 min read</span>
             </div>
           </div>
+
+          {/* Social Share Buttons */}
+          <SocialShareButtons 
+            title="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
+            description="Discover why leaders see only 4% of operational issues and how to find them."
+            variant="inline"
+            className="mb-8"
+          />
           
           {/* Hero Image */}
           <figure className="mb-12">

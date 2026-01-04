@@ -70,6 +70,14 @@ const RetailRemoteTools = () => {
                 <span>12 min read</span>
               </div>
             </div>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures"
+              description="Discover essential retail remote tools for family-owned businesses in 2025."
+              variant="inline"
+              className="mb-8"
+            />
             
             <img 
               src={retailImage} 

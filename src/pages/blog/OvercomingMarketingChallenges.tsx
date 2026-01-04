@@ -427,6 +427,14 @@ const OvercomingMarketingChallenges = () => {
               </div>
             </div>
 
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Overcoming Marketing Challenges as a Small Business"
+              description="From scattered tactics to strategic growth - a proven marketing strategy guide."
+              variant="inline"
+              className="mb-8"
+            />
+
             {/* Hero Image */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img

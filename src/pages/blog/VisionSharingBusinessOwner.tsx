@@ -244,6 +244,14 @@ const VisionSharingBusinessOwner = () => {
             </div>
           </div>
 
+          {/* Social Share Buttons */}
+          <SocialShareButtons 
+            title="The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner"
+            description="How clarity unites teams and unlocks growth."
+            variant="inline"
+            className="mb-8"
+          />
+
           {/* Hero Image */}
           <div className="relative group mb-12">
             <div 

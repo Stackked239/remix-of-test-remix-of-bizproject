@@ -5,6 +5,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import { ArrowLeft, Calendar, Clock, User, BarChart3, TrendingUp, DollarSign, FileText, AlertTriangle, CheckCircle2, Target, Lightbulb } from 'lucide-react';
 import heroImage from '@/assets/small-business-financials-know-your-numbers.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';

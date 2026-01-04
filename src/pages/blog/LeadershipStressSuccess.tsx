@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";

@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { 
   Calendar, Clock, User, ArrowLeft, Info, CheckCircle, 
   DollarSign, TrendingUp, Users, LineChart, Gauge, Building2, Target,

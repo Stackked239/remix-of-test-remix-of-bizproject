@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowRight, ArrowLeft, Tag, Share2, BookOpen, Target, TrendingUp, AlertTriangle, CheckCircle, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";

@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/smb-scaling-paradox-2025.jpg";

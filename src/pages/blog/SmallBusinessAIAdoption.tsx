@@ -5,6 +5,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import aiAdoptionHero from '@/assets/ai-adoption-skeptical-business-owners-2025.jpg';
 
 const SmallBusinessAIAdoption = () => {

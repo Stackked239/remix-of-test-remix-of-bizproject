@@ -58,9 +58,11 @@ import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
 import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.jpg";
 import visionSharingImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
+import feastFamineCycleImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/feast-or-famine-cycle-small-business": feastFamineCycleImage,
   "/blog/vision-sharing-business-owner": visionSharingImage,
   "/blog/happy-new-year-2026-year-of-growth": happyNewYear2026Image,
   "/blog/overcoming-marketing-challenges-small-business": overcomingMarketingChallengesImage,

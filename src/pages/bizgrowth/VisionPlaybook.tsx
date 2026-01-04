@@ -73,7 +73,7 @@ const VisionPlaybook = () => {
         keywords="business vision, vision statement, team alignment, small business leadership, business playbook, free business resources, BizHealth, BizGrowth Academy, SMB tools, business strategy"
         canonical="https://bizhealth.ai/bizgrowth-academy/vision-playbook"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-image.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-vision-playbook.jpg"
       />
 
       <StructuredData

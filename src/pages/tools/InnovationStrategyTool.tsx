@@ -106,6 +106,7 @@ const InnovationStrategyTool = () => {
           title="Innovation Strategy Builder - 60-Minute Guided Tool | BizHealth.ai"
           description="Build a complete innovation strategy in 60 minutes. A guided framework with proven prompts and downloadable PDF for your leadership team."
           canonical="https://bizhealth.ai/biztools/toolbox/innovation-strategy-tool"
+          ogImage="https://bizhealth.ai/og-images/og-innovation-strategy.jpg"
         />
         <PromotionalBanner />
         <GlobalNavigation />

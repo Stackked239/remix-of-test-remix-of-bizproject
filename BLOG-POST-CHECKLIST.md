@@ -219,10 +219,18 @@ These tools help verify OG tags are being read correctly.
 
 ## Common Issues
 
+### LinkedIn/Facebook/X showing "Cannot display preview"
+- **Root cause:** Social media crawlers don't execute JavaScript
+- **Solution:** Pages MUST be pre-rendered with SSG so OG tags are in the static HTML
+- Run the full SSG build: `npm run build` (or `./build-ssg.sh`)
+- The prerender script uses Puppeteer to generate static HTML with OG tags embedded
+- After deploying, use the debug tools to clear cached previews
+
 ### LinkedIn not showing image/title
 - LinkedIn only reads OG meta tags from the URL
-- Ensure `ogImage` is an absolute URL
+- Ensure `ogImage` is an absolute URL (e.g., `https://bizhealth.ai/og-images/og-slug.jpg`)
 - Use LinkedIn Post Inspector to refresh cache
+- If still failing, the page may not have SSG-generated HTML deployed
 
 ### Share buttons not appearing
 - Verify SocialShareButtons import is present
@@ -233,3 +241,23 @@ These tools help verify OG tags are being read correctly.
 - Check all imports are correct
 - Verify image paths exist
 - Run `npm run build` locally to catch errors
+
+## Critical: SSG Requirement for Social Sharing
+
+**Social media platforms (LinkedIn, Facebook, Twitter/X) do NOT execute JavaScript.** They only read the raw HTML response from your URL.
+
+For social sharing to work:
+1. OG meta tags must be present in the **static HTML** returned by the server
+2. This requires running the SSG pre-render build before deploying
+3. The `prerender.js` script uses Puppeteer to:
+   - Load each page in a headless browser
+   - Wait for React and react-helmet-async to inject OG tags
+   - Save the complete HTML including the `<head>` section
+4. After deploying, always test with the debug tools to verify
+
+**SSG Build Process:**
+```bash
+npm run build  # Full SSG build including prerender
+```
+
+This generates static HTML files in `dist/` with OG tags embedded for each route.

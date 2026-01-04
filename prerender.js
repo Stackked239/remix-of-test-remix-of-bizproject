@@ -120,11 +120,29 @@ async function prerender() {
           new Promise((resolve) => setTimeout(resolve, 5000))
         ]);
         
-        // Additional wait for dynamic content
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Additional wait for dynamic content and react-helmet to update head
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
-        // Get the rendered HTML
-        const html = await page.content();
+        // Wait specifically for react-helmet-async to inject OG tags
+        await page.waitForFunction(() => {
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          return ogTitle && ogDesc;
+        }, { timeout: 5000 }).catch(() => {
+          console.warn(`  ⚠️  OG tags not found for ${route}, using default`);
+        });
+        
+        // Get the rendered HTML - ensure we get the complete document
+        const html = await page.evaluate(() => {
+          // Get the full HTML including doctype
+          return '<!DOCTYPE html>' + document.documentElement.outerHTML;
+        });
+        
+        // Verify OG tags are present in the HTML
+        const hasOgTags = html.includes('og:title') && html.includes('og:description');
+        if (!hasOgTags) {
+          console.warn(`  ⚠️  Warning: OG tags missing in rendered HTML for ${route}`);
+        }
         
         // Ensure directory exists for this route
         await ensureDirectoryForRoute(route);

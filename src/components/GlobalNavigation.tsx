@@ -345,15 +345,18 @@ const GlobalNavigation = () => {
                   <ChevronDown className="w-3 h-3" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuContent align="end" className="w-64 bg-biz-white border border-border shadow-lg z-50">
                 {countries.map((country) => (
                   <DropdownMenuItem 
                     key={country.code}
-                    onClick={() => setSelectedCountry(country.code)}
-                    className="flex items-center space-x-3"
+                    onClick={() => country.code === 'US' && setSelectedCountry(country.code)}
+                    className={`flex items-center space-x-3 ${country.code !== 'US' ? 'opacity-60 cursor-not-allowed' : ''}`}
+                    disabled={country.code !== 'US'}
                   >
                     <span className="text-lg">{country.flag}</span>
-                    <span className="font-open-sans">{country.name}</span>
+                    <span className="font-open-sans">
+                      {country.name}{country.code !== 'US' && ' - Coming Soon'}
+                    </span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>

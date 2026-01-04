@@ -5,7 +5,6 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import { ArrowLeft, Calendar, Clock, User, DollarSign, Users, TrendingUp, Shield, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import heroImage from '@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg';
 
@@ -119,13 +118,6 @@ const FinancialStewardshipEveryonesResponsibility = () => {
                 <span className="text-sm">{readTime}</span>
               </div>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Financial Stewardship: Everyone's Responsibility in Your Small Business"
-              description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health."
-              className="mb-8"
-            />
 
             {/* Featured Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden mb-8">

@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, DollarSign, Users, Zap, BarChart3, Mail, Phone, Globe, Megaphone, ArrowRight, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";

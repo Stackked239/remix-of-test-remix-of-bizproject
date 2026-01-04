@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, Shield, ArrowRight, BarChart3, DollarSign, Users, Settings, Database, Lightbulb, Rocket, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
@@ -306,14 +305,6 @@ const BusinessHealthScoresByStage = () => {
                   15 min read
                 </span>
               </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="Business Health Scores by Stage: Survival, Stability, Scale, Exit"
-                description="Learn what healthy business scores look like at each growth stage."
-                variant="inline"
-                className="mb-8"
-              />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">

@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { 
   Calendar, Clock, User, ArrowLeft, Info, CheckCircle, 
   DollarSign, TrendingUp, Users, LineChart, Gauge, Building2, Target,
@@ -198,15 +197,6 @@ const FractionalCFOToolkit = () => {
                 <span>12 min read</span>
               </div>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have"
-              description="Discover the 7 essential financial dashboards every business owner needs."
-              variant="inline"
-              className="mb-8"
-            />
-            
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
               <img 
                 src={fractionalCFOImage} 

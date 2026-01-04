@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
@@ -83,14 +82,6 @@ const FinancialHealthMetrics = () => {
                 <span>15 min read</span>
               </div>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Financial Health Metrics Every Business Owner Should Track in 2025"
-              description="Master 8 critical financial health metrics for SMBs."
-              variant="inline"
-              className="mb-8"
-            />
             
             <img 
               src={financialMetricsImage} 

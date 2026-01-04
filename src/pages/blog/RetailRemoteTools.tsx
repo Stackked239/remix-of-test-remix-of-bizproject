@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, User, CheckCircle } from "lucide-react";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";

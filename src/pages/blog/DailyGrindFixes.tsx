@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 
@@ -71,13 +70,6 @@ const DailyGrindFixes = () => {
                 </div>
               </div>
             </header>
-            
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Daily Grind Fixes: Ops Tips for Early-Stage Food Businesses"
-              description="Transform your early-stage food business with smart operational strategies."
-              className="mb-8"
-            />
             
             <figure className="mb-12">
               <img 

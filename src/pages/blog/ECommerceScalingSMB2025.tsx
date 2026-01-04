@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft, Clock, Calendar, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
@@ -91,13 +90,6 @@ const ECommerceScalingSMB2025 = () => {
                   </div>
                 </div>
               </header>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025"
-                description="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025."
-                className="mb-8"
-              />
 
               <figure className="mb-12 rounded-xl overflow-hidden shadow-lg">
                 <img 

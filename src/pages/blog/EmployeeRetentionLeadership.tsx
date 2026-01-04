@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Users, Target, AlertTriangle, CheckCircle, Heart, MessageSquare, Eye, Lightbulb, TrendingUp, DollarSign, FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
@@ -287,14 +286,6 @@ const EmployeeRetentionLeadership = () => {
                   10 min read
                 </span>
               </div>
-              
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership"
-                description="Learn why employee retention is a leadership problem, not an HR problem."
-                variant="inline"
-                className="mb-8"
-              />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">

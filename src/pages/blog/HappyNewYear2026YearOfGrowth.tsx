@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Target, CheckCircle, TrendingUp, Sparkles, RefreshCw, BarChart3, Heart, Zap, Lightbulb, ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/happy-new-year-2026-business-growth.jpg";
@@ -215,6 +216,13 @@ const HappyNewYear2026YearOfGrowth = () => {
               <Clock className="w-4 h-4" />
               <span>10 min read</span>
             </div>
+            
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow"
+              description="Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable SMB success."
+              className="mt-4"
+            />
           </div>
 
           {/* Hero Image - No overlay, with glow effect */}

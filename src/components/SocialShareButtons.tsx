@@ -33,12 +33,29 @@ const SocialShareButtons = ({
 }: SocialShareButtonsProps) => {
   const [copied, setCopied] = useState(false);
   
-  // Get current URL if not provided
-  const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
+  // Get current URL if not provided - prefer production URL for better OG tag scraping
+  const getShareUrl = () => {
+    if (url) return url;
+    if (typeof window === 'undefined') return '';
+    
+    // If on preview/staging, construct production URL for better sharing
+    const currentUrl = window.location.href;
+    if (currentUrl.includes('lovable.app') || currentUrl.includes('localhost')) {
+      // Extract pathname and construct bizhealth.ai URL
+      const pathname = window.location.pathname;
+      return `https://bizhealth.ai${pathname}`;
+    }
+    return currentUrl;
+  };
+  
+  const shareUrl = getShareUrl();
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
   
+  // LinkedIn only reads OG tags from the URL - title/description params are deprecated
+  // Twitter/X supports text parameter
+  // Facebook only uses URL and reads OG tags
   const shareLinks = {
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,

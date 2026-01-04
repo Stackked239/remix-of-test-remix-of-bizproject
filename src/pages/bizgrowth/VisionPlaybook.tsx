@@ -22,7 +22,8 @@ const VisionPlaybook = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/downloads/Build-Share-Your-Vision-Playbook-BizHealth.pdf';
+    // Cache-busting version parameter to ensure latest file is downloaded
+    link.href = '/downloads/Build-Share-Your-Vision-Playbook-BizHealth.pdf?v=2';
     link.download = 'Build-Share-Your-Vision-Playbook-BizHealth.pdf';
     document.body.appendChild(link);
     link.click();

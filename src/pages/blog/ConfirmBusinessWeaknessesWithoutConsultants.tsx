@@ -4,6 +4,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 
@@ -93,6 +94,13 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
                 <span>•</span>
                 <span>11 min read</span>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="How to Confirm Your Business Weaknesses Without Expensive Consultants"
+                description="Discover how to identify small business blind spots and operational weaknesses in 30 minutes using AI-powered tools."
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden w-4/5 mx-auto">

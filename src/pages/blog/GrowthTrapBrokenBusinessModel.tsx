@@ -5,6 +5,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import growthTrapHero from '@/assets/growth-trap-broken-business-model-2025.jpg';
 import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
 
@@ -99,6 +100,13 @@ const GrowthTrapBrokenBusinessModel = () => {
                   12 minute read
                 </span>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
+                description="Discover why chasing revenue growth destroys SMBs."
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8 border border-border/50">

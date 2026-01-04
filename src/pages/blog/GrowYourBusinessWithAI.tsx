@@ -5,6 +5,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import growWithAIHero from '@/assets/grow-your-business-with-ai-smb-growth-2025.jpg';
 import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
 
@@ -99,6 +100,13 @@ const GrowYourBusinessWithAI = () => {
                   14 minute read
                 </span>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
+                description="Transform AI from a productivity hack into a strategic growth partner."
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <figure className="mb-10 mx-auto relative group" style={{ width: '85%' }}>

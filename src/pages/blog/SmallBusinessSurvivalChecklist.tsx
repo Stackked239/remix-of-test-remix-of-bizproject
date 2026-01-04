@@ -5,6 +5,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import survivalChecklistHero from '@/assets/small-business-survival-checklist-2025.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
@@ -78,6 +79,13 @@ const SmallBusinessSurvivalChecklist = () => {
                 <span>11 min read</span>
               </div>
             </header>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew"
+              description="Learn from 500+ founders about first-year challenges and essential metrics."
+              className="mb-8"
+            />
 
             {/* Hero Image */}
             <div className="mb-12 rounded-lg overflow-hidden shadow-xl">

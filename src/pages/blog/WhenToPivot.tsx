@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
@@ -70,7 +71,14 @@ const WhenToPivot = () => {
               </div>
             </div>
             
-            <img 
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="When to Pivot: Data-Driven Signals That It's Time to Change Course"
+              description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot."
+              className="mb-8"
+            />
+            
+            <img
               src={pivotImage} 
               alt="Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
               className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"

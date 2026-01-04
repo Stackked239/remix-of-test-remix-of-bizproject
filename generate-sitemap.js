@@ -55,6 +55,7 @@ const ogImageMap = {
   '/concerns': '/og-images/og-concerns.jpg',
   '/logo': '/og-images/og-logo.jpg',
   '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
+  '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
 };
 
 /**

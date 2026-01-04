@@ -306,6 +306,14 @@ const BusinessHealthScoresByStage = () => {
                   15 min read
                 </span>
               </div>
+
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="Business Health Scores by Stage: Survival, Stability, Scale, Exit"
+                description="Learn what healthy business scores look like at each growth stage."
+                variant="inline"
+                className="mb-8"
+              />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">

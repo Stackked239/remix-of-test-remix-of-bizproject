@@ -117,6 +117,14 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   <span>15 min read</span>
                 </div>
 
+                {/* Social Share Buttons */}
+                <SocialShareButtons 
+                  title="The Complete Guide to Business Health Assessment for 2026"
+                  description="Discover how to conduct a comprehensive business health assessment for 2026."
+                  variant="inline"
+                  className="mb-8"
+                />
+
                 <div className="relative group">
                   <div 
                     className="absolute -inset-1 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500"

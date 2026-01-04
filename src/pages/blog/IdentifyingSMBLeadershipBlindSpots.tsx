@@ -112,7 +112,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
               Identifying Small & Mid-Size Business Leadership Blind Spots
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
               <time dateTime={publishDate}>November 23, 2025</time>
               <span className="flex items-center gap-1">
                 <BookOpen className="h-4 w-4" />
@@ -120,6 +120,14 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               </span>
               <span>By BizHealth.ai Research Team</span>
             </div>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Identifying Small & Mid-Size Business Leadership Blind Spots"
+              description="Discover the 7 critical leadership blind spots affecting SMB success."
+              variant="inline"
+              className="mb-8"
+            />
           </header>
 
           {/* Featured Image */}

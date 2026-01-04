@@ -86,6 +86,14 @@ const LeadershipStressSuccess = () => {
               </div>
             </div>
             
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Leadership Stress Management: Why Success Feels Like a Mirage"
+              description="Master leadership stress management with proven strategies. Reduce executive burnout and build resilience as a business owner."
+              variant="inline"
+              className="mb-8"
+            />
+            
             <img 
               src={leadershipStressImage} 
               alt="Executive stress management strategies showing business leader with financial analytics, decision-making stress, and leadership anxiety in SMB environment 2025"

@@ -198,6 +198,14 @@ const FractionalCFOToolkit = () => {
                 <span>12 min read</span>
               </div>
             </div>
+
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have"
+              description="Discover the 7 essential financial dashboards every business owner needs."
+              variant="inline"
+              className="mb-8"
+            />
             
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
               <img 

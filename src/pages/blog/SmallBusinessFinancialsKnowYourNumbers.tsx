@@ -142,6 +142,14 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
               </div>
             </div>
 
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Small Business Financials: Know Your Numbers, Know Your Business"
+              description="Master small business financial management with this comprehensive guide."
+              variant="inline"
+              className="mb-8"
+            />
+
             {/* Featured Image */}
             <div className="relative w-[90%] mx-auto h-[400px] md:h-[500px] rounded-lg overflow-hidden mb-8">
               <img 

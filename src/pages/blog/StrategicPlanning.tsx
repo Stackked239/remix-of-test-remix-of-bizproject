@@ -88,6 +88,14 @@ const StrategicPlanning = () => {
               </div>
             </div>
             
+            {/* Social Share Buttons */}
+            <SocialShareButtons 
+              title="Strategic Planning Post-Pandemic 2025"
+              description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
+              variant="inline"
+              className="mb-8"
+            />
+            
             <img 
               src={strategicPlanningImage} 
               alt="Strategic planning post-pandemic infographic showing SMB business strategy framework with remote work hybrid model supply chain resilience and customer-centric transformation for 2025"

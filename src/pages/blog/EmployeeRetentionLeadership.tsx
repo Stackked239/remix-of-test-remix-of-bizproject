@@ -288,6 +288,14 @@ const EmployeeRetentionLeadership = () => {
                 </span>
               </div>
               
+              {/* Social Share Buttons */}
+              <SocialShareButtons 
+                title="Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership"
+                description="Learn why employee retention is a leadership problem, not an HR problem."
+                variant="inline"
+                className="mb-8"
+              />
+              
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img

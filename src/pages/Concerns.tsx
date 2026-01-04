@@ -166,6 +166,7 @@ const Concerns = () => {
         description="Having an issue with BizHealth.ai? Our Client Success team is here to help. Share your concerns and let's work together toward a solution."
         keywords="concerns, refund, guarantee, BizHealth.ai support, client concerns, business health analysis help, customer service, technical support, refund policy, money back guarantee"
         canonical="https://bizhealth.ai/concerns"
+        ogImage="/og-images/og-concerns.jpg"
       />
       <PromotionalBanner />
       <GlobalNavigation />

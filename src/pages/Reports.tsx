@@ -111,7 +111,7 @@ const Reports = () => {
         keywords="business health reports, SMB diagnostics, comprehensive business analysis, executive reports, management reports, employee engagement reports"
         canonical="https://bizhealth.ai/reports"
         ogType="website"
-        ogImage="https://bizhealth.ai/assets/bizhealth-logo-main.jpg"
+        ogImage="/og-images/og-reports.jpg"
       />
 
       <StructuredData

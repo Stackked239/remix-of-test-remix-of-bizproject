@@ -92,6 +92,7 @@ const BizLeaderBot = () => {
         keywords="leadership development, business leadership mentor, AI leadership coach, SMB leadership, leadership skills, team management, leadership advice, small business leadership"
         canonical="https://bizhealth.ai/bizleader/leadership-development-bot"
         ogType="website"
+        ogImage="/og-images/og-bizleader-bot.jpg"
       />
       
       <StructuredData

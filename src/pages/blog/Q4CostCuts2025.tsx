@@ -166,13 +166,6 @@ const Q4CostCuts2025 = () => {
                 </div>
               </div>
 
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses"
-                description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses."
-                className="mb-8"
-              />
-
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
                 <img 

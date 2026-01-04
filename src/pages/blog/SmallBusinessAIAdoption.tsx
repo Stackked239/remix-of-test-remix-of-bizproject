@@ -5,7 +5,6 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import aiAdoptionHero from '@/assets/ai-adoption-skeptical-business-owners-2025.jpg';
 
 const SmallBusinessAIAdoption = () => {
@@ -93,14 +92,6 @@ const SmallBusinessAIAdoption = () => {
                 9 minute read
               </span>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="AI Adoption for Skeptical Owners—A No-BS Guide"
-              description="Turn skepticism into strategic AI adoption with proven strategies for 2025."
-              variant="inline"
-              className="mb-8"
-            />
 
             {/* Hero Image */}
             <figure className="mb-10 mx-auto" style={{ width: '85%' }}>

@@ -71,14 +71,6 @@ const RealTimeAnalyticsSMB = () => {
               </div>
             </div>
 
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Real-Time Analytics: Powering SMB Agility in Volatile Markets"
-              description="Transform your SMB with real-time analytics in 2025."
-              variant="inline"
-              className="mb-8"
-            />
-
             {/* Hero Image */}
             <div className="rounded-xl overflow-hidden shadow-elegant">
               <img 

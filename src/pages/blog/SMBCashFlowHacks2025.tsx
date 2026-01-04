@@ -3,7 +3,6 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import { Calendar, Clock, User, Info } from 'lucide-react';
 import {
   Tooltip,
@@ -170,13 +169,6 @@ const SMBCashFlowHacks2025 = () => {
                   <span>{readTime} read</span>
                 </div>
               </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025"
-                description="Master micro-business cash flow management with 5 proven strategies for 2025."
-                variant="inline"
-              />
 
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden shadow-lg">

@@ -111,7 +111,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
               Identifying Small & Mid-Size Business Leadership Blind Spots
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <time dateTime={publishDate}>November 23, 2025</time>
               <span className="flex items-center gap-1">
                 <BookOpen className="h-4 w-4" />

@@ -92,7 +92,7 @@ const HowToCheckYourBusinessHealth = () => {
                   How to Check Your Business Health: A Comprehensive Guide for Small Business Owners
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm mb-4" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
+                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
                   <span>By {author}</span>
                   <span>•</span>
                   <time dateTime={publishDate}>December 14, 2025</time>

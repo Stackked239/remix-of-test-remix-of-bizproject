@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
@@ -87,14 +86,6 @@ const StrategicPlanning = () => {
                 <span>13 min read</span>
               </div>
             </div>
-            
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Strategic Planning Post-Pandemic 2025"
-              description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
-              variant="inline"
-              className="mb-8"
-            />
             
             <img 
               src={strategicPlanningImage} 

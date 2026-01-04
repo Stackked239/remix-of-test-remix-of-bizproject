@@ -197,6 +197,7 @@ const FractionalCFOToolkit = () => {
                 <span>12 min read</span>
               </div>
             </div>
+            
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
               <img 
                 src={fractionalCFOImage} 

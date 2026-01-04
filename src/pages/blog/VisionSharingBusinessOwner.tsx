@@ -4,7 +4,6 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Target, CheckCircle, TrendingUp, Sparkles, AlertTriangle, Eye, Users, Zap, ArrowRight, Quote, Lightbulb, RefreshCw, Briefcase, Award, MessageSquare, BarChart3, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
@@ -243,14 +242,6 @@ const VisionSharingBusinessOwner = () => {
               <span>11 min read</span>
             </div>
           </div>
-
-          {/* Social Share Buttons */}
-          <SocialShareButtons 
-            title="The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner"
-            description="How clarity unites teams and unlocks growth."
-            variant="inline"
-            className="mb-8"
-          />
 
           {/* Hero Image */}
           <div className="relative group mb-12">

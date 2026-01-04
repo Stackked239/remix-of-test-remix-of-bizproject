@@ -83,14 +83,7 @@ const OperationalResilience = () => {
               </div>
             </div>
             
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Building Operational Resilience Strategies for SMBs in Uncertain Times 2025"
-              description="Learn 5 proven operational resilience strategies for SMBs in 2025."
-              className="mb-8"
-            />
-            
-            <img
+            <img 
               src={resilienceImage} 
               alt="SMB operational resilience framework showing business continuity planning, crisis management strategies, and adaptive business systems for 2025"
               className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"

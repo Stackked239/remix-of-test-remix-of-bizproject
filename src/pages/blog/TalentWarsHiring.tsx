@@ -3,7 +3,6 @@ import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import SocialShareButtons from "@/components/SocialShareButtons";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
@@ -136,13 +135,6 @@ const TalentWarsHiring = () => {
                 <span>•</span>
                 <span>7 min read</span>
               </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
-                description="Master SMB hiring strategies for 2025 talent shortages."
-                className="mb-8"
-              />
 
               <figure className="mb-8">
                 <img 

@@ -5,7 +5,6 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
-import SocialShareButtons from '@/components/SocialShareButtons';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import heroImage from '@/assets/business-strategy-planning-2026-growth-optimized.jpg';
 
@@ -125,13 +124,6 @@ const SuccessBeginsWith2026Strategy = () => {
                 <span className="text-sm">{readTime}</span>
               </div>
             </div>
-
-            {/* Social Share Buttons */}
-            <SocialShareButtons 
-              title="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
-              description="Discover why proactive 2026 business planning is essential for SMBs."
-              className="mb-8"
-            />
 
             {/* Hero Image */}
             <div className="mb-8 mx-auto" style={{ maxWidth: '85%' }}>

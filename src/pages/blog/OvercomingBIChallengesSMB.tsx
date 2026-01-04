@@ -94,13 +94,6 @@ const OvercomingBIChallengesSMB = () => {
                   <span>12 min read</span>
                 </div>
               </div>
-              
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses"
-                description="Discover how SMBs can overcome BI challenges in 2025 with budget-friendly strategies."
-                className="mt-4"
-              />
             </div>
           </div>
         </section>

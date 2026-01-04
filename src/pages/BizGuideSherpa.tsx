@@ -92,6 +92,7 @@ const BizGuideSherpa = () => {
         keywords="business growth, business consulting, SMB growth strategy, scaling business, business advisor, small business help, business mentor, cash flow, business questions, how to grow business"
         canonical="https://bizhealth.ai/bizguides/bizguide-sherpa"
         ogType="website"
+        ogImage="/og-images/og-bizguide-sherpa.jpg"
       />
       
       <StructuredData

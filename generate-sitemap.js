@@ -37,8 +37,13 @@ const ogImageMap = {
   '/contact': '/og-images/og-contact.jpg',
   '/blog': '/og-images/og-blog.jpg',
   '/biztools': '/og-images/og-biztools.jpg',
+  '/biztools/how-it-works': '/og-images/og-biztools-how-it-works.jpg',
+  '/biztools/toolbox': '/og-images/og-biztools-toolbox.jpg',
+  '/biztools/toolbox/process-mapping-tools/guide': '/og-images/og-process-mapping-guide.jpg',
   '/bizguides': '/og-images/og-bizguides.jpg',
+  '/bizguides/bizguide-sherpa': '/og-images/og-bizguide-sherpa.jpg',
   '/bizleader': '/og-images/og-bizleader.jpg',
+  '/bizleader/leadership-development-bot': '/og-images/og-bizleader-bot.jpg',
   '/bizgrowth': '/og-images/og-bizgrowth.jpg',
   '/sherpas': '/og-images/og-sherpas.jpg',
   '/how-it-works': '/og-images/og-how-it-works.jpg',
@@ -46,6 +51,10 @@ const ogImageMap = {
   '/resources': '/og-images/og-resources.jpg',
   '/security': '/og-images/og-security.jpg',
   '/glossary-of-terms': '/og-images/og-glossary.jpg',
+  '/reports': '/og-images/og-reports.jpg',
+  '/concerns': '/og-images/og-concerns.jpg',
+  '/logo': '/og-images/og-logo.jpg',
+  '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
 };
 
 /**

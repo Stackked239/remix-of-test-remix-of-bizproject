@@ -15,6 +15,7 @@ const OurLogo = () => {
         description="This is our company logo. Discover the meaning behind the BizHealth.ai logo - more than just design, it represents comprehensive business health assessment and your journey to growth and success."
         keywords="our logo, company logo, BizHealth.ai logo, BizHealth logo, brand story, business health symbol, company values, brand meaning, logo design"
         canonical="https://bizhealth.ai/logo"
+        ogImage="/og-images/og-logo.jpg"
       />
       <StructuredData 
         type="organization"

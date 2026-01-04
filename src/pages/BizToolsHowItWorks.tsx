@@ -166,6 +166,7 @@ const BizToolsHowItWorks = () => {
         keywords="how it works, business tools how it works, free business resources for small business, business health assessment tools, SMB business analytics platform, business planning tools for entrepreneurs, business financial planning tools, small business operational tools"
         canonical="https://bizhealth.ai/biztools/how-it-works"
         ogType="website"
+        ogImage="/og-images/og-biztools-how-it-works.jpg"
       />
 
       <StructuredData

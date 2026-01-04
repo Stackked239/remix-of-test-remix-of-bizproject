@@ -6,6 +6,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import heroImage from '@/assets/information-overload-business-leader.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 

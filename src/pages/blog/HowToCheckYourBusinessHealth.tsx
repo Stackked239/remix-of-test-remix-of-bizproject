@@ -5,6 +5,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
 import heroImage from '@/assets/how-to-check-business-health-guide-optimized.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';

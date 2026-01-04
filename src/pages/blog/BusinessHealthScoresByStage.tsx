@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, Shield, ArrowRight, BarChart3, DollarSign, Users, Settings, Database, Lightbulb, Rocket, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";

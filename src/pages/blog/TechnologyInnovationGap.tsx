@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 import bizHealthAuthorIcon from "@/assets/bizhealth-author-icon.jpg";
 

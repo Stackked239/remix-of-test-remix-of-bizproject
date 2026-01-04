@@ -4,6 +4,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";

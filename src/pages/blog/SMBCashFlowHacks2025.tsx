@@ -3,6 +3,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from '@/components/SocialShareButtons';
 import { Calendar, Clock, User, Info } from 'lucide-react';
 import {
   Tooltip,

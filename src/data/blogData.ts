@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Overcoming the Peaks and Valleys: Breaking the Feast-or-Famine Cycle That Destroys Small Businesses",
+    excerpt: "Learn how to break the destructive feast-or-famine revenue cycle. Discover 7 proven strategies for stable, predictable growth and escape the revenue rollercoaster.",
+    author: "BizHealth.ai Research Team",
+    date: "January 4, 2026",
+    readTime: "14 min read",
+    category: "Financials, Business Strategy, Operations",
+    slug: "/blog/feast-or-famine-cycle-small-business",
+    imageUrl: "/assets/feast-famine-cycle-small-business-rollercoaster.jpg",
+    altText: "Business professionals on rollercoaster representing the feast-or-famine revenue cycle that destroys small business stability and cash flow predictability",
+    keywords: "feast or famine cycle, small business revenue stability, cash flow management SMB, breaking revenue cycles, predictable business income, business cash flow strategies, revenue volatility solutions, sustainable business growth, business financial planning, SMB revenue management, cyclical revenue problems, business stability strategies, small business cash reserves, revenue forecasting, sales pipeline management, recurring revenue, client diversification, financial forecasting, cash flow forecast, revenue predictability, business growth cycle, seasonal business planning, pipeline coverage"
+  },
+  {
     title: "The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner",
     excerpt: "Discover why 'they should already know' is the vision myth destroying team alignment. Learn the 5 mistakes leaders make when sharing vision and a proven 5-step framework to unite your team.",
     author: "BizHealth.ai Research Team",

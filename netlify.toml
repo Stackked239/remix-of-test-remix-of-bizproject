@@ -47,11 +47,7 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/security"
-  to = "/privacy"
-  status = 301
-  force = true
+# Note: /security is a valid page - no redirect needed
 
 # Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
 [[redirects]]
@@ -105,6 +101,12 @@
 [[redirects]]
   from = "/biz-guides"
   to = "/bizguides"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bizgrowth-academy/vision-playbook"
+  to = "/bizgrowth/vision-playbook"
   status = 301
   force = true
 

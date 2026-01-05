@@ -24,7 +24,7 @@ import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-proces
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
-import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 
 // Blog post data structure

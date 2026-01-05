@@ -4,7 +4,7 @@ import {
   GraduationCap, Download, Clock, Calendar, Shield, Star, Users, 
   AlertTriangle, DollarSign, Search, BarChart3, TrendingUp, Bell,
   Smile, HelpCircle, FileText, Calculator, BookOpen, X, Lock, Mail,
-  ArrowRight, Check, ChevronDown, Target, Radar, Heart, Flag
+  ArrowRight, Check, ChevronDown, Target, Radar, Heart, Flag, ArrowUpRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/select';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import { toast } from 'sonner';
@@ -169,13 +170,14 @@ const BreakingPeaksValleysCycle = () => {
         Skip to main content
       </a>
 
+      <PromotionalBanner />
       <GlobalNavigation />
       
       <main id="main-content">
         {/* SECTION 1: HERO */}
         <section 
           ref={heroRef}
-          className="relative overflow-hidden py-16 md:py-24 lg:py-32"
+          className="relative overflow-hidden pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 lg:pb-16"
           style={{ background: `linear-gradient(135deg, ${colors.bizBlue} 0%, ${colors.bizBlueDark} 100%)` }}
           aria-labelledby="hero-heading"
         >
@@ -206,13 +208,13 @@ const BreakingPeaksValleysCycle = () => {
               <div 
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-6"
                 style={{ 
-                  borderColor: colors.bizYellow,
-                  backgroundColor: `${colors.bizYellow}20`,
-                  color: colors.bizYellow
+                  borderColor: '#32CD32',
+                  backgroundColor: 'rgba(50, 205, 50, 0.2)',
+                  color: '#32CD32'
                 }}
               >
-                <GraduationCap className="w-4 h-4" aria-hidden="true" />
-                <span className="text-sm font-medium font-['Open_Sans']">BizGrowth Academy — Free Playbook</span>
+                <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                <span className="text-sm font-medium font-['Open_Sans']">BizGrowth Academy</span>
               </div>
 
               {/* Headline */}
@@ -255,7 +257,12 @@ const BreakingPeaksValleysCycle = () => {
                 <Button
                   variant="outline"
                   onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-white border-white hover:bg-white/10 px-6 py-5"
+                  className="px-6 py-5 font-semibold"
+                  style={{
+                    backgroundColor: 'transparent',
+                    borderColor: colors.bizYellow,
+                    color: colors.bizYellow
+                  }}
                 >
                   See the 7 Steps
                 </Button>

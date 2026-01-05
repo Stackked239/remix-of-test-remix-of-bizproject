@@ -233,7 +233,7 @@ const BreakingPeaksValleysCycle = () => {
                 className="text-white/90 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 font-['Open_Sans']"
                 style={{ lineHeight: 1.7 }}
               >
-                Get the free 7-step framework that 1,000+ business owners use to break the feast-or-famine cycle and build stable, predictable cash flow.
+                Get the free 7-step framework that thousands of business owners have used to break the feast-or-famine cycle and build stable, predictable cash flow.
               </p>
 
               {/* CTA Buttons */}

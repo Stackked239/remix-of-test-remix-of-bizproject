@@ -47,11 +47,11 @@ const Sherpas = () => {
       icon: Network,
       stat: "12+",
       label: "Critical Business Areas",
-      description: "Running an SMB means juggling strategy, finances, operations, HR, sales, marketing, technology, and more—simultaneously. No human can be an expert in everything."
+      description: "Running a business means juggling strategy, finances, operations, HR, sales, marketing, technology, and more—simultaneously. No human can be an expert in everything."
     },
     {
       icon: BookOpen,
-      stat: "1000s",
+      stat: "1,000+",
       label: "Hours of Research",
       description: "Business advice is everywhere, but most of it is generic, conflicting, or irrelevant to your specific situation. Finding what actually applies to you takes valuable time you don't have."
     },
@@ -59,7 +59,7 @@ const Sherpas = () => {
       icon: Users,
       stat: "78%",
       label: "Feel Alone",
-      description: "Most SMB owners report feeling isolated in their decision-making. You can't always ask your team, your board is limited, and traditional consultants cost $10K+."
+      description: "Most business owners report feeling isolated in their decision-making. You can't always ask your team, your board is limited, and traditional consultants cost $10K+."
     }
   ];
 

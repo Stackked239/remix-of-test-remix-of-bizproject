@@ -86,6 +86,8 @@ const SmallBusinessStruggles = () => {
                 alt="Small business owner facing operational challenges and pain points in 2025"
                 className="w-full h-auto object-cover"
                 loading="eager"
+                width={1200}
+                height={675}
               />
             </figure>
 

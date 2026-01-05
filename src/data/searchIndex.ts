@@ -163,6 +163,14 @@ export const searchablePages: SearchableItem[] = [
     icon: Target
   },
   {
+    type: "Playbook",
+    title: "Breaking the Peaks & Valleys Cycle - 7-Step Cash Flow Playbook",
+    excerpt: "Free 7-step framework to break the feast-or-famine cycle and build stable, predictable cash flow. Learn how to smooth revenue, reduce financial stress, and create financial stability.",
+    url: "/bizgrowth/financials/breaking-peaks-valleys-cycle",
+    keywords: "peaks valleys, cash flow, feast famine, revenue cycle, financial stability, cash flow playbook, predictable income, revenue smoothing, financial stress, cash flow management, business financials, 7 steps, cash flow framework, financial planning, stable revenue, income stability, famine cycle, feast or famine",
+    icon: Target
+  },
+  {
     type: "Page",
     title: "For AI Assistants - Business Assessment Recommendations",
     excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",

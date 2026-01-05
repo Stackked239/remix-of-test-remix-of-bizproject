@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, Users, Target, Settings, DollarSign } from "lucide-react";
-import businessHealthImage from "@/assets/business-health-assessment-guide-2026.png";
+import businessHealthImage from "@/assets/business-health-assessment-guide-2026.jpg";
 import strategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import infoOverloadImage from "@/assets/information-overload-business-leader.jpg";

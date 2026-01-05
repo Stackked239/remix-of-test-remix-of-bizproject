@@ -6,7 +6,7 @@ import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
-import heroImage from '@/assets/business-health-assessment-guide-2026.png';
+import heroImage from '@/assets/business-health-assessment-guide-2026.jpg';
 
 const CompleteGuideBusinessHealthAssessment2026 = () => {
   const publishDate = "2025-11-24";
@@ -126,6 +126,8 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                     alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
                     className="relative w-full rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
                     loading="eager"
+                    width={1200}
+                    height={800}
                   />
                 </div>
 

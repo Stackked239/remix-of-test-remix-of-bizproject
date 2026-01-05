@@ -111,6 +111,8 @@ const HiddenCostsManualProcesses = () => {
                   alt="Small business owner focused on manual paperwork and calculations representing hidden costs of manual processes in SMB operations"
                   className="w-full h-auto object-cover"
                   loading="eager"
+                  width={1200}
+                  height={675}
                   style={{ filter: 'brightness(0.85)' }}
                 />
               </div>

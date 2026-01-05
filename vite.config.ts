@@ -108,7 +108,22 @@ export default defineConfig(({ mode }) => ({
     // Split chunks for better caching and reduced initial bundle
     rollupOptions: {
       output: {
-        manualChunks: undefined, // Let Vite handle chunking automatically
+        manualChunks: {
+          // Split vendor chunks for better caching
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          'vendor-motion': ['framer-motion'],
+        },
+        // Optimize asset file naming for better caching
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || [];
+          const ext = info[info.length - 1];
+          // Put images in a dedicated folder
+          if (/\.(png|jpe?g|gif|svg|webp|avif)$/i.test(assetInfo.name || '')) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
       },
     },
     // Optimize chunk size
@@ -117,5 +132,7 @@ export default defineConfig(({ mode }) => ({
     sourcemap: false,
     // CSS code splitting
     cssCodeSplit: true,
+    // Improve asset inlining threshold (default 4kb, reduce to 2kb for images)
+    assetsInlineLimit: 2048,
   },
 }));

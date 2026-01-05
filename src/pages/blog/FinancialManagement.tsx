@@ -26,7 +26,7 @@ import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import cashFlowHacksImage from "@/assets/smb-cash-flow-hacks-2025.jpg";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
-import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
 import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 
 // Blog post data structure

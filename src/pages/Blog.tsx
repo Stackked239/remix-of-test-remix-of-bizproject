@@ -33,7 +33,7 @@ import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
-import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";

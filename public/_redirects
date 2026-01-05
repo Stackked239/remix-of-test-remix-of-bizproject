@@ -1,11 +1,23 @@
 # Netlify Redirects for BizHealth.ai
 
-# Redirect HTTP to HTTPS (handled by Netlify, but explicit for clarity)
-http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
-http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
-
-# Redirect www to non-www
-https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+# Remove trailing slashes (normalize URLs for SEO)
+# This fixes "Alternate page with proper canonical tag" issues
+/faqs/ /faqs 301!
+/contact/ /contact 301!
+/resources/ /resources 301!
+/login/ /login 301!
+/pricing/ /pricing 301!
+/blog/ /blog 301!
+/about/ /about 301!
+/security/ /security 301!
+/privacy/ /privacy 301!
+/terms/ /terms 301!
+/concerns/ /concerns 301!
+/biztools/ /biztools 301!
+/bizleader/ /bizleader 301!
+/bizgrowth/ /bizgrowth 301!
+/bizguides/ /bizguides 301!
+/sherpas/ /sherpas 301!
 
 # Fix soft 404s reported in Google Search Console
 /faq /faqs 301!

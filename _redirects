@@ -12,7 +12,7 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/e-commerce-scaling-smb-2025 /blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025 301!
 /forgot-password /login 301!
 /refund /concerns 301!
-/security /privacy 301!
+# /security is a valid page - no redirect needed
 
 # Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
 /bizgrowth-academy/vision-playbook /bizgrowth/vision-playbook 301!

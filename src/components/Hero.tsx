@@ -130,6 +130,9 @@ const Hero = () => {
           width={1605}
           height={277}
           loading="eager"
+          decoding="sync"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
           className="object-contain"
           style={{ maxWidth: '90%', maxHeight: '60px', width: 'auto', height: 'auto' }}
         />

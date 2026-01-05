@@ -318,7 +318,11 @@ const Blog = () => {
                   <img 
                     src={featuredPost.imageUrl}
                     alt={featuredPost.altText}
+                    width={600}
+                    height={320}
                     className="w-full h-80 object-cover rounded-xl shadow-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -411,9 +415,12 @@ const Blog = () => {
                         <img 
                           src={post.imageUrl} 
                           alt={`Thumbnail: ${post.altText}`}
+                          width={400}
+                          height={225}
                           className="w-full h-48 md:h-42 object-cover transition-transform duration-300 group-hover:scale-105"
                           style={{ aspectRatio: '16/9' }}
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       

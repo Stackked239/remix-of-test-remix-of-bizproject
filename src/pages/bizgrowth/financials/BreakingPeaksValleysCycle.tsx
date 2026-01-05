@@ -142,7 +142,7 @@ const BreakingPeaksValleysCycle = () => {
         description="Download the free 7-step playbook to break the revenue rollercoaster destroying your small business. Proven framework for stable, predictable cash flow. Join 2,500+ business owners."
         keywords="feast or famine cycle, revenue stability, small business growth, cash flow management, peaks and valleys business, revenue rollercoaster, business growth strategies, business health assessment"
         canonical="https://bizhealth.ai/bizgrowth/financials/breaking-peaks-valleys-cycle"
-        ogImage="https://bizhealth.ai/images/peaks-valleys-playbook-og.jpg"
+        ogImage="https://bizhealth.ai/og-images/peaks-valleys-playbook-og.jpg"
       />
       
       <StructuredData
@@ -812,8 +812,8 @@ const BreakingPeaksValleysCycle = () => {
                 <p className="text-[15px] mb-4" style={{ color: colors.bizGrey }}>
                   The playbook's self-assessment is a great start. If you want comprehensive insights across all 12 dimensions of business health—Strategy, Financials, Sales, Marketing, Operations, HR, Leadership, Risk, Technology, Customer Experience, Growth Readiness, and Sustainability—the BizHealth Assessment provides a personalized diagnostic with actionable recommendations.
                 </p>
-                <div className="flex justify-center md:justify-start">
-                  <Button asChild style={{ backgroundColor: colors.bizBlue }} className="text-white">
+                <div className="flex justify-center">
+                  <Button asChild style={{ backgroundColor: `${colors.bizGreen}B3`, color: colors.bizBlue }} className="font-semibold">
                     <a href="/how-it-works">
                       Take the full Business Health Assessment
                       <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />

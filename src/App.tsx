@@ -123,6 +123,7 @@ const FreePricingNetProfitCalculator = lazy(() => import("./pages/tools/FreePric
 // Playbooks and other pages
 const LandscapingPlaybook = lazy(() => import("./pages/playbooks/LandscapingPlaybook"));
 const TechnologyInnovationReadiness = lazy(() => import("./pages/bizgrowth/TechnologyInnovationReadiness"));
+const BreakingPeaksValleysCycle = lazy(() => import("./pages/bizgrowth/financials/BreakingPeaksValleysCycle"));
 const VisionPlaybook = lazy(() => import("./pages/bizgrowth/VisionPlaybook"));
 
 // Loading fallback component
@@ -175,6 +176,7 @@ const App = () => (
               <Route path="/bizgrowth/launch" element={<BizGrowthLaunch />} />
               <Route path="/bizgrowth/launch/step-2-fix-cash-squeeze" element={<BizGrowthLaunchStep2 />} />
               <Route path="/bizgrowth/technology-innovation-readiness" element={<TechnologyInnovationReadiness />} />
+              <Route path="/bizgrowth/financials/breaking-peaks-valleys-cycle" element={<BreakingPeaksValleysCycle />} />
               <Route path="/bizgrowth/vision-playbook" element={<VisionPlaybook />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />

@@ -31,6 +31,7 @@ const colors = {
   bizYellow: '#E6B800',
   bizYellowHover: '#F5C800',
   bizTeal: '#008080',
+  bizGreen: '#969423',
   successGreen: '#22C55E',
   errorRed: '#EF4444',
   lightSection: '#F8F9FC',
@@ -206,10 +207,10 @@ const BreakingPeaksValleysCycle = () => {
             >
               {/* Badge */}
               <div 
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 text-xs font-bold uppercase tracking-wider"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 mb-6 text-xs font-bold uppercase tracking-wider"
                 style={{ 
                   backgroundColor: colors.bizBlue,
-                  borderColor: colors.bizBlue,
+                  borderColor: colors.bizYellow,
                   color: colors.bizYellow
                 }}
               >
@@ -386,7 +387,7 @@ const BreakingPeaksValleysCycle = () => {
                     "You're willing to invest 2-5 hours per week for 6-8 weeks"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-[15px]" style={{ color: colors.bizGrey }}>
-                      <Check className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.bizYellow }} aria-hidden="true" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.successGreen }} aria-hidden="true" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -743,7 +744,7 @@ const BreakingPeaksValleysCycle = () => {
                 Get My Free Playbook
               </Button>
               <p className="text-white/70 text-sm max-w-md mx-auto">
-                Join 2,500+ business owners. Instant download. We'll send occasional growth tips—unsubscribe anytime.
+                Instant download. We'll send occasional growth tips—unsubscribe anytime.
               </p>
             </motion.div>
           </div>
@@ -772,7 +773,7 @@ const BreakingPeaksValleysCycle = () => {
                   style={{ borderColor: `${colors.bizGrey}20` }}
                 >
                   <div className="flex items-start gap-3 mb-2">
-                    <HelpCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: colors.bizYellow }} aria-hidden="true" />
+                    <HelpCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: colors.bizGreen }} aria-hidden="true" />
                     <h3 className="text-lg font-semibold font-['Montserrat']" style={{ color: colors.bizBlue }}>
                       {faq.question}
                     </h3>
@@ -798,7 +799,7 @@ const BreakingPeaksValleysCycle = () => {
                 className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: `linear-gradient(135deg, ${colors.bizBlue} 0%, ${colors.bizBlueDark} 100%)` }}
               >
-                <FileText className="w-10 h-10" style={{ color: colors.bizYellow }} aria-hidden="true" />
+                <img src="/favicon.ico" alt="BizHealth.ai" className="w-10 h-10" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h2 
@@ -811,12 +812,14 @@ const BreakingPeaksValleysCycle = () => {
                 <p className="text-[15px] mb-4" style={{ color: colors.bizGrey }}>
                   The playbook's self-assessment is a great start. If you want comprehensive insights across all 12 dimensions of business health—Strategy, Financials, Sales, Marketing, Operations, HR, Leadership, Risk, Technology, Customer Experience, Growth Readiness, and Sustainability—the BizHealth Assessment provides a personalized diagnostic with actionable recommendations.
                 </p>
-                <Button asChild style={{ backgroundColor: colors.bizBlue }} className="text-white">
-                  <a href="/how-it-works">
-                    Take the BizHealth Assessment
-                    <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                  </a>
-                </Button>
+                <div className="flex justify-center md:justify-start">
+                  <Button asChild style={{ backgroundColor: colors.bizBlue }} className="text-white">
+                    <a href="/how-it-works">
+                      Take the full Business Health Assessment
+                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -861,9 +864,9 @@ const BreakingPeaksValleysCycle = () => {
                 >
                   <div 
                     className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: `${colors.bizYellow}15` }}
+                    style={{ backgroundColor: `${colors.bizGreen}15` }}
                   >
-                    <resource.icon className="w-6 h-6" style={{ color: colors.bizYellow }} aria-hidden="true" />
+                    <resource.icon className="w-6 h-6" style={{ color: colors.bizGreen }} aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="text-base font-semibold mb-1 font-['Montserrat']" style={{ color: colors.bizBlue }}>

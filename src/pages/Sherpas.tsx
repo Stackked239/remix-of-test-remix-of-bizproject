@@ -6,7 +6,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import { Button } from '@/components/ui/button';
-import sherpaMountainBg from '@/assets/sherpa-mountain-background-optimized.jpg';
+import sherpaMountainBg from '@/assets/business-sherpas-mt-everest-bizhealth.jpg';
 import { 
   Compass, 
   Users, 
@@ -320,7 +320,7 @@ const Sherpas = () => {
             opacity: 0.7
           }}
           role="img"
-          aria-label="Mountain peak with compass representing strategic business guidance and leadership navigation"
+          aria-label="Mount Everest peak symbolizing BizHealth AI business growth sherpa guiding SMB owners to success through strategic leadership and expert navigation"
         />
         {/* White overlay for readability */}
         <div className="absolute inset-0 bg-white/30" />

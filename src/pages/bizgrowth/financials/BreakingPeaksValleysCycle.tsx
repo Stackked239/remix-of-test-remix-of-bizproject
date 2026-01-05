@@ -799,7 +799,7 @@ const BreakingPeaksValleysCycle = () => {
                 className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: `linear-gradient(135deg, ${colors.bizBlue} 0%, ${colors.bizBlueDark} 100%)` }}
               >
-                <img src="/favicon.ico" alt="BizHealth.ai" className="w-10 h-10" />
+                <img src="/favicon-bizhealth.ico" alt="BizHealth.ai" className="w-10 h-10" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h2 

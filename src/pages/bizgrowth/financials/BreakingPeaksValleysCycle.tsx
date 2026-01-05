@@ -177,7 +177,7 @@ const BreakingPeaksValleysCycle = () => {
         {/* SECTION 1: HERO */}
         <section 
           ref={heroRef}
-          className="relative overflow-hidden pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 lg:pb-16"
+          className="relative overflow-hidden pt-36 md:pt-40 lg:pt-44 pb-10 md:pb-14 lg:pb-16"
           style={{ background: `linear-gradient(135deg, ${colors.bizBlue} 0%, ${colors.bizBlueDark} 100%)` }}
           aria-labelledby="hero-heading"
         >
@@ -206,23 +206,25 @@ const BreakingPeaksValleysCycle = () => {
             >
               {/* Badge */}
               <div 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 text-xs font-bold uppercase tracking-wider"
                 style={{ 
-                  borderColor: '#32CD32',
-                  backgroundColor: 'rgba(50, 205, 50, 0.2)',
-                  color: '#32CD32'
+                  backgroundColor: colors.bizBlue,
+                  borderColor: colors.bizBlue,
+                  color: colors.bizYellow
                 }}
               >
-                <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-                <span className="text-sm font-medium font-['Open_Sans']">BizGrowth Academy</span>
+                <TrendingUp className="w-4 h-4" style={{ color: '#8CBF2F' }} aria-hidden="true" />
+                <span>BizGrowth Academy</span>
               </div>
 
               {/* Headline */}
               <h1 
                 id="hero-heading"
-                className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold leading-tight mb-6 font-['Montserrat']"
+                className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold leading-tight mb-6 font-['Montserrat']"
+                style={{ color: '#FFFFFF' }}
               >
-                Stop the <span style={{ color: colors.bizYellow }}>Revenue Rollercoaster</span> That's Destroying Your Business
+                Stop the <span style={{ color: '#FFFFFF' }}>Revenue Rollercoaster</span>{' '}
+                <span style={{ color: '#969423' }}>That's Destroying Your Business</span>
               </h1>
 
               {/* Subtitle */}
@@ -230,7 +232,7 @@ const BreakingPeaksValleysCycle = () => {
                 className="text-white/90 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 font-['Open_Sans']"
                 style={{ lineHeight: 1.7 }}
               >
-                Get the free 7-step framework that 2,500+ business owners use to break the feast-or-famine cycle and build stable, predictable cash flow.
+                Get the free 7-step framework that 1,000+ business owners use to break the feast-or-famine cycle and build stable, predictable cash flow.
               </p>
 
               {/* CTA Buttons */}
@@ -257,7 +259,7 @@ const BreakingPeaksValleysCycle = () => {
                 <Button
                   variant="outline"
                   onClick={() => document.getElementById('framework')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="px-6 py-5 font-semibold"
+                  className="px-6 py-5 font-semibold transition-all duration-300 hover:bg-white hover:text-[#242553] hover:border-white"
                   style={{
                     backgroundColor: 'transparent',
                     borderColor: colors.bizYellow,
@@ -312,7 +314,7 @@ const BreakingPeaksValleysCycle = () => {
                 <div className="flex items-center gap-2">
                   <Download className="w-5 h-5" style={{ color: colors.bizYellow }} aria-hidden="true" />
                   <span style={{ color: colors.bizGrey }}>
-                    <strong style={{ color: colors.bizBlue }}>2,500+</strong> downloads
+                    <strong style={{ color: colors.bizBlue }}>1,000+</strong> downloads
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -405,9 +407,9 @@ const BreakingPeaksValleysCycle = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <div 
                     className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: `${colors.bizGrey}20` }}
+                    style={{ backgroundColor: `${colors.errorRed}20` }}
                   >
-                    <X className="w-5 h-5" style={{ color: colors.bizGrey }} aria-hidden="true" />
+                    <X className="w-5 h-5" style={{ color: colors.errorRed }} aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold font-['Montserrat']" style={{ color: colors.bizBlue }}>
                     This is NOT for you if...
@@ -423,9 +425,9 @@ const BreakingPeaksValleysCycle = () => {
                     <li key={i} className="flex items-start gap-3 text-[15px]" style={{ color: colors.bizGrey }}>
                       <div 
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{ backgroundColor: `${colors.bizGrey}30` }}
+                        style={{ backgroundColor: `${colors.errorRed}30` }}
                       >
-                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: colors.bizGrey }} />
+                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: colors.errorRed }} />
                       </div>
                       <span>{item}</span>
                     </li>
@@ -809,18 +811,12 @@ const BreakingPeaksValleysCycle = () => {
                 <p className="text-[15px] mb-4" style={{ color: colors.bizGrey }}>
                   The playbook's self-assessment is a great start. If you want comprehensive insights across all 12 dimensions of business health—Strategy, Financials, Sales, Marketing, Operations, HR, Leadership, Risk, Technology, Customer Experience, Growth Readiness, and Sustainability—the BizHealth Assessment provides a personalized diagnostic with actionable recommendations.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <Button asChild style={{ backgroundColor: colors.bizBlue }} className="text-white">
-                    <a href="/how-it-works">
-                      Take the BizHealth Assessment
-                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                    </a>
-                  </Button>
-                  <span className="flex items-center gap-2 text-sm" style={{ color: colors.bizGrey }}>
-                    <Clock className="w-4 h-4" aria-hidden="true" />
-                    About 15 minutes
-                  </span>
-                </div>
+                <Button asChild style={{ backgroundColor: colors.bizBlue }} className="text-white">
+                  <a href="/how-it-works">
+                    Take the BizHealth Assessment
+                    <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -978,7 +974,7 @@ const BreakingPeaksValleysCycle = () => {
               >
                 <Check className="w-5 h-5" style={{ color: colors.successGreen }} aria-hidden="true" />
                 <span className="text-sm" style={{ color: colors.bizBlue }}>
-                  Join <strong>2,500+</strong> business owners who've downloaded this playbook
+                  Join <strong>1,000+</strong> business owners who've downloaded this playbook
                 </span>
               </div>
 

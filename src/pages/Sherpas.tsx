@@ -319,6 +319,8 @@ const Sherpas = () => {
             backgroundImage: `url(${sherpaMountainBg})`,
             opacity: 0.7
           }}
+          role="img"
+          aria-label="Mountain peak with compass representing strategic business guidance and leadership navigation"
         />
         {/* White overlay for readability */}
         <div className="absolute inset-0 bg-white/30" />

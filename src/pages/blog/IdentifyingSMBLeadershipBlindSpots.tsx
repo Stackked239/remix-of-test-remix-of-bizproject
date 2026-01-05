@@ -128,6 +128,8 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               alt="Business leader in office reflecting on leadership blind spots and team dynamics"
               className="w-full h-auto object-cover"
               loading="eager"
+              width={1200}
+              height={675}
             />
           </figure>
 

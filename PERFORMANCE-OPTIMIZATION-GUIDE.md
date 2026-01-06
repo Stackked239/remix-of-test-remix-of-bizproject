@@ -4,7 +4,20 @@
 
 ### Lazy Loading Components
 
-1. **OptimizedImage Component** (`src/components/OptimizedImage.tsx`)
+1. **BlogHeroImage Component** (`src/components/BlogHeroImage.tsx`) ⭐ NEW
+   - **Use for: Blog post hero images (above-the-fold)**
+   - Eager loading with `fetchpriority="high"` for optimal LCP
+   - Fixed 16:9 aspect ratio to prevent CLS
+   - Automatic preload link injection
+   - Fade-in animation on load
+
+2. **LazyBlogImage Component** (`src/components/LazyBlogImage.tsx`) ⭐ NEW
+   - **Use for: Images within blog content (below-the-fold)**
+   - Lazy loading with `fetchpriority="low"`
+   - Configurable aspect ratio and width percentage
+   - Prevents CLS with fixed dimensions
+
+3. **OptimizedImage Component** (`src/components/OptimizedImage.tsx`)
    - Automatic lazy loading with `loading="lazy"` attribute
    - `fetchpriority` attribute for LCP optimization
    - Automatic preload link injection for priority images
@@ -12,15 +25,37 @@
    - Error state handling
    - Required width/height to prevent CLS
 
-2. **ImagePreloader Component** (`src/components/ImagePreloader.tsx`)
+4. **ImagePreloader Component** (`src/components/ImagePreloader.tsx`)
    - Preloads critical images for better LCP
    - Use at the top of pages with important hero images
 
-3. **useImagePreload Hook** (`src/hooks/useImagePreload.ts`)
+5. **useImagePreload Hook** (`src/hooks/useImagePreload.ts`)
    - Hook to preload images and track loading state
    - `useImagesPreload` for batch preloading
 
 ### Usage Examples
+
+#### Blog Post Hero Image (LCP Critical):
+```tsx
+import BlogHeroImage from '@/components/BlogHeroImage';
+
+<BlogHeroImage 
+  src={heroImage} 
+  alt="Description of the hero image"
+/>
+```
+
+#### Blog Content Image (Below the fold):
+```tsx
+import LazyBlogImage from '@/components/LazyBlogImage';
+
+<LazyBlogImage 
+  src={contentImage} 
+  alt="Description"
+  widthPercent={85}
+  aspectRatio="16/9"
+/>
+```
 
 #### Above-the-fold (priority) images:
 ```tsx

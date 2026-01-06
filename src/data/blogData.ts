@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Embracing an HR Program as an Asset & Multiplier to Your Small Business",
+    excerpt: "Discover why an HR program is not a cost but an asset and multiplier. Learn the 9 components of effective SMB HR and stop losing $30K-50K per bad hire.",
+    author: "BizHealth.ai Research Team",
+    date: "January 6, 2026",
+    readTime: "11 min read",
+    category: "Operations, Business Leadership, Business Strategy",
+    slug: "/blog/hr-program-asset-multiplier-small-business",
+    imageUrl: "/assets/hr-program-small-business-asset-multiplier.jpg",
+    altText: "Small business owner experiencing employee turnover stress as worker leaves with toolbox - HR program prevents costly talent loss",
+    keywords: "HR program small business, small business HR strategy, employee retention SMB, hiring process small business, HR as asset multiplier, HR for SMB, human resources small business, talent management, employee development, performance management, onboarding process, job descriptions, one-on-ones, employee turnover cost, retention strategies, culture building, HR systems, people management, workforce development, employee engagement, turnover reduction, hiring mistakes, bad hire cost, HR best practices, small business people operations"
+  },
+  {
     title: "Overcoming the Peaks and Valleys: Breaking the Feast-or-Famine Cycle That Destroys Small Businesses",
     excerpt: "Learn how to break the destructive feast-or-famine revenue cycle. Discover 7 proven strategies for stable, predictable growth and escape the revenue rollercoaster.",
     author: "BizHealth.ai Research Team",

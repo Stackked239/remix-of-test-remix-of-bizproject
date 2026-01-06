@@ -40,14 +40,11 @@ const Search = () => {
     }
   };
 
-  // Combine all searchable content from centralized index
-  // Pages includes: pages, tools, curriculum, playbooks (all non-blog, non-FAQ content)
-  const allPagesAndTools = useMemo(() => [
-    ...searchablePages,
-    ...searchableTools,
-    ...searchableCurriculum,
-    ...searchablePlaybooks
-  ], []);
+  // Separate searchable content by type for granular filtering
+  const allPages = useMemo(() => searchablePages, []);
+  const allTools = useMemo(() => searchableTools, []);
+  const allCurriculum = useMemo(() => searchableCurriculum, []);
+  const allPlaybooks = useMemo(() => searchablePlaybooks, []);
 
   // Blog posts from centralized blogData with comprehensive keywords
   const allBlogs = useMemo(() => 
@@ -184,20 +181,27 @@ const Search = () => {
   // Filter and search logic with relevance scoring
   const filteredResults = useMemo(() => {
     if (!searchTerm.trim()) {
-      return { pages: [], blogs: [], faqs: [], total: 0 };
+      return { pages: [], tools: [], curriculum: [], playbooks: [], blogs: [], faqs: [], total: 0 };
     }
 
     const term = searchTerm.toLowerCase();
     
-    // Search and score pages, tools, curriculum, playbooks
-    const pages = allPagesAndTools
-      .filter(item =>
-        item.title.toLowerCase().includes(term) ||
-        item.excerpt.toLowerCase().includes(term) ||
-        item.keywords.toLowerCase().includes(term)
-      )
-      .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
-      .sort((a, b) => b.relevanceScore - a.relevanceScore);
+    const filterAndScore = <T extends { title: string; excerpt: string; keywords: string }>(items: T[]) =>
+      items
+        .filter(item =>
+          item.title.toLowerCase().includes(term) ||
+          item.excerpt.toLowerCase().includes(term) ||
+          item.keywords.toLowerCase().includes(term)
+        )
+        .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
+        .sort((a, b) => b.relevanceScore - a.relevanceScore);
+
+    // Search and score each content type separately
+    const pages = filterAndScore(allPages);
+    const tools = filterAndScore(allTools);
+    const curriculum = filterAndScore(allCurriculum);
+    const playbooks = filterAndScore(allPlaybooks);
+    const faqs = filterAndScore(allFAQs);
     
     // Search and score blog posts (including keywords)
     const blogs = allBlogs
@@ -209,33 +213,39 @@ const Search = () => {
       )
       .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
       .sort((a, b) => b.relevanceScore - a.relevanceScore);
-    
-    // Search and score FAQs
-    const faqs = allFAQs
-      .filter(item =>
-        item.title.toLowerCase().includes(term) ||
-        item.excerpt.toLowerCase().includes(term) ||
-        item.keywords.toLowerCase().includes(term)
-      )
-      .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
-      .sort((a, b) => b.relevanceScore - a.relevanceScore);
 
     return {
       pages,
+      tools,
+      curriculum,
+      playbooks,
       blogs,
       faqs,
-      total: pages.length + blogs.length + faqs.length
+      total: pages.length + tools.length + curriculum.length + playbooks.length + blogs.length + faqs.length
     };
-  }, [searchTerm, allPagesAndTools, allBlogs, allFAQs]);
+  }, [searchTerm, allPages, allTools, allCurriculum, allPlaybooks, allBlogs, allFAQs]);
 
   // Apply filter and sort combined results by relevance
   const displayResults = useMemo(() => {
-    let results: Array<typeof filteredResults.pages[0] | typeof filteredResults.blogs[0] | typeof filteredResults.faqs[0]> = [];
+    let results: Array<any> = [];
     
     if (selectedFilter === "All") {
-      results = [...filteredResults.pages, ...filteredResults.blogs, ...filteredResults.faqs];
+      results = [
+        ...filteredResults.pages,
+        ...filteredResults.tools,
+        ...filteredResults.curriculum,
+        ...filteredResults.playbooks,
+        ...filteredResults.blogs,
+        ...filteredResults.faqs
+      ];
     } else if (selectedFilter === "Pages") {
       results = filteredResults.pages;
+    } else if (selectedFilter === "Tools") {
+      results = filteredResults.tools;
+    } else if (selectedFilter === "Curriculum") {
+      results = filteredResults.curriculum;
+    } else if (selectedFilter === "Playbooks") {
+      results = filteredResults.playbooks;
     } else if (selectedFilter === "Blog Posts") {
       results = filteredResults.blogs;
     } else if (selectedFilter === "FAQs") {
@@ -309,6 +319,48 @@ const Search = () => {
                   variant="outline"
                 >
                   Pages ({filteredResults.pages.length})
+                </Button>
+                
+                {/* Tools filter - emerald */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("Tools")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "Tools"
+                      ? "bg-emerald-500 text-white hover:bg-emerald-600 border-emerald-500"
+                      : "border-emerald-300 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 dark:border-emerald-700 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  Tools ({filteredResults.tools.length})
+                </Button>
+                
+                {/* Curriculum filter - cyan */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("Curriculum")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "Curriculum"
+                      ? "bg-cyan-500 text-white hover:bg-cyan-600 border-cyan-500"
+                      : "border-cyan-300 text-cyan-600 hover:bg-cyan-50 hover:border-cyan-400 dark:border-cyan-700 dark:text-cyan-400 dark:hover:bg-cyan-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  Curriculum ({filteredResults.curriculum.length})
+                </Button>
+                
+                {/* Playbooks filter - orange */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("Playbooks")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "Playbooks"
+                      ? "bg-orange-500 text-white hover:bg-orange-600 border-orange-500"
+                      : "border-orange-300 text-orange-600 hover:bg-orange-50 hover:border-orange-400 dark:border-orange-700 dark:text-orange-400 dark:hover:bg-orange-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  Playbooks ({filteredResults.playbooks.length})
                 </Button>
                 
                 {/* Blog Posts filter - amber */}

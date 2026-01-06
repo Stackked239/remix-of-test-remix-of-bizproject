@@ -422,7 +422,6 @@ const Search = () => {
                   <Link key={`${result.url}-${index}`} to={result.url}>
                     <Card 
                       className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group bg-card/50 backdrop-blur-sm`}
-                      style={{ borderLeftWidth: '3px', borderLeftColor: colors.borderColor }}
                     >
                       <div className="flex items-start gap-4">
                         <div className={`p-2 rounded-lg ${colors.iconBg} ${colors.iconText} transition-colors`}>

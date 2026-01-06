@@ -9,9 +9,9 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import cashFlowDefinition from "@/assets/cash-flow-definition-infographic.jpg";
-import businessChallenges from "@/assets/small-business-challenges-2025.png";
+import businessChallenges from "@/assets/small-business-challenges-2025.webp";
 import cashFlowKillers from "@/assets/cash-flow-killers-smb.jpg";
-import financialTips from "@/assets/financial-management-tips-smb.png";
+import financialTips from "@/assets/financial-management-tips-smb.webp";
 
 const CashFlowCrisisManagement = () => {
   const navigate = useNavigate();

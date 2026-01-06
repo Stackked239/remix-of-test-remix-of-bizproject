@@ -5,9 +5,9 @@ import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
 import blindSpotsHero from '@/assets/business-blind-spots-assessment.jpg';
-import marketReportChart from '@/assets/blind-spot-market-report-chart.webp';
+import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
 import frameworkImage from '@/assets/blindspot-analysis-framework.jpg';
-import johariWindow from '@/assets/johari-window-business-blind-spots.webp';
+import johariWindow from '@/assets/johari-window-business-blind-spots.png';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const BusinessBlindSpots2025 = () => {

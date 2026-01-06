@@ -284,24 +284,60 @@ const Search = () => {
               </CardContent>
             </Card>
 
-            {/* Filters */}
+            {/* Filters - Color-coded to match content type semantic colors */}
             {searchTerm && (
               <div className="flex flex-wrap gap-2 mb-4">
-                {filters.map((filter) => (
-                  <Button
-                    key={filter}
-                    variant={selectedFilter === filter ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedFilter(filter)}
-                    className="font-open-sans shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    {filter}
-                    {filter === "All" && ` (${filteredResults.total})`}
-                    {filter === "Pages" && ` (${filteredResults.pages.length})`}
-                    {filter === "Blog Posts" && ` (${filteredResults.blogs.length})`}
-                    {filter === "FAQs" && ` (${filteredResults.faqs.length})`}
-                  </Button>
-                ))}
+                {/* All filter - neutral */}
+                <Button
+                  variant={selectedFilter === "All" ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedFilter("All")}
+                  className="font-open-sans shadow-sm hover:shadow-md transition-shadow"
+                >
+                  All ({filteredResults.total})
+                </Button>
+                
+                {/* Pages filter - blue */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("Pages")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "Pages"
+                      ? "bg-blue-500 text-white hover:bg-blue-600 border-blue-500"
+                      : "border-blue-300 text-blue-600 hover:bg-blue-50 hover:border-blue-400 dark:border-blue-700 dark:text-blue-400 dark:hover:bg-blue-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  Pages ({filteredResults.pages.length})
+                </Button>
+                
+                {/* Blog Posts filter - amber */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("Blog Posts")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "Blog Posts"
+                      ? "bg-amber-500 text-white hover:bg-amber-600 border-amber-500"
+                      : "border-amber-300 text-amber-600 hover:bg-amber-50 hover:border-amber-400 dark:border-amber-700 dark:text-amber-400 dark:hover:bg-amber-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  Blog Posts ({filteredResults.blogs.length})
+                </Button>
+                
+                {/* FAQs filter - purple */}
+                <Button
+                  size="sm"
+                  onClick={() => setSelectedFilter("FAQs")}
+                  className={`font-open-sans shadow-sm hover:shadow-md transition-all ${
+                    selectedFilter === "FAQs"
+                      ? "bg-purple-500 text-white hover:bg-purple-600 border-purple-500"
+                      : "border-purple-300 text-purple-600 hover:bg-purple-50 hover:border-purple-400 dark:border-purple-700 dark:text-purple-400 dark:hover:bg-purple-900/20"
+                  }`}
+                  variant="outline"
+                >
+                  FAQs ({filteredResults.faqs.length})
+                </Button>
               </div>
             )}
           </div>

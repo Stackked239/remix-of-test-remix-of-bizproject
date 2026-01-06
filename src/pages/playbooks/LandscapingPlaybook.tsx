@@ -117,7 +117,7 @@ const LandscapingPlaybook = () => {
         keywords="landscaping business profitability, lawn care business margins, landscaping pricing strategy, seasonal cash flow management, landscaping business growth, lawn mowing business tips, landscaping profit optimization, small business diagnostics"
         canonical="https://bizhealth.ai/playbooks/landscaping"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-landscaping-playbook.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-landscaping-playbook.jpg"
         articlePublishedTime="2024-12-01T00:00:00Z"
         articleModifiedTime="2024-12-20T00:00:00Z"
         articleAuthor="BizHealth.ai"

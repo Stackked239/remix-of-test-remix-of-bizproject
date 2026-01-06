@@ -8,8 +8,8 @@ import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import scalingStrategiesImage from "@/assets/smb-scaling-strategies-uzio.jpg";
-import businessScalingFramework from "@/assets/business-scaling-framework.png";
-import revenueModelFramework from "@/assets/revenue-model-framework.png";
+import businessScalingFramework from "@/assets/business-scaling-framework.webp";
+import revenueModelFramework from "@/assets/revenue-model-framework.webp";
 
 const SMBScalingParadox2025 = () => {
   const publishDate = "2025-11-04T09:00:00-08:00";

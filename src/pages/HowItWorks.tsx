@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield, Settings } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
-import reportSampleImage from "@/assets/business-health-report-sample.png";
+import reportSampleImage from "@/assets/business-health-report-sample.webp";
 
 const HowItWorks = () => {
   const steps = [

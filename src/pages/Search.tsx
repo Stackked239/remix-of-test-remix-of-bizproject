@@ -294,6 +294,13 @@ const Search = () => {
               </CardContent>
             </Card>
 
+            {/* Results Count Summary */}
+            {searchTerm && (
+              <p className="text-muted-foreground font-open-sans mb-4">
+                Showing <span className="font-semibold text-foreground">{displayResults.length}</span> result{displayResults.length !== 1 ? 's' : ''} for "<span className="font-semibold text-primary">{searchTerm}</span>"
+              </p>
+            )}
+
             {/* Filters - Color-coded to match content type semantic colors */}
             {searchTerm && (
               <div className="flex flex-wrap gap-2 mb-4">

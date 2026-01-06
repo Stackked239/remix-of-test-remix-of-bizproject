@@ -57,14 +57,16 @@ const CostItem = ({
   amount: string;
   description: string;
 }) => (
-  <div className="flex items-start gap-3 p-4 rounded-lg bg-red-500/5 border border-red-500/20">
-    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-    <div>
-      <div className="flex items-center gap-2 flex-wrap">
-        <span className="font-semibold text-foreground">{label}</span>
-        <span className="text-sm font-bold text-red-500">{amount}</span>
+  <div className="flex items-start gap-4 p-5 rounded-xl bg-red-500/5 border border-red-500/20 hover:border-red-500/40 transition-colors">
+    <div className="p-2 rounded-lg bg-red-500/10 flex-shrink-0">
+      <AlertTriangle className="w-5 h-5 text-red-500" />
+    </div>
+    <div className="flex-1">
+      <div className="flex items-center gap-2 flex-wrap mb-1">
+        <span className="font-bold text-foreground text-base">{label}:</span>
+        <span className="text-lg font-bold text-red-500">{amount}</span>
       </div>
-      <p className="text-sm text-muted-foreground mt-1">{description}</p>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   </div>
 );

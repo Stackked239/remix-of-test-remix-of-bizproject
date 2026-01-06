@@ -65,6 +65,84 @@ const Search = () => {
   // FAQs from centralized index
   const allFAQs = useMemo(() => searchableFAQs, []);
 
+  // World-class semantic color system for content types
+  const getTypeColors = (type: string): { border: string; iconBg: string; iconText: string; badge: string; badgeText: string; hoverBorder: string } => {
+    switch (type) {
+      case "Page":
+        return {
+          border: "border-l-blue-500",
+          iconBg: "bg-blue-100 dark:bg-blue-900/30",
+          iconText: "text-blue-600 dark:text-blue-400",
+          badge: "bg-blue-100 dark:bg-blue-900/40",
+          badgeText: "text-blue-700 dark:text-blue-300",
+          hoverBorder: "hover:border-blue-400"
+        };
+      case "Blog Post":
+        return {
+          border: "border-l-amber-500",
+          iconBg: "bg-amber-100 dark:bg-amber-900/30",
+          iconText: "text-amber-600 dark:text-amber-400",
+          badge: "bg-amber-100 dark:bg-amber-900/40",
+          badgeText: "text-amber-700 dark:text-amber-300",
+          hoverBorder: "hover:border-amber-400"
+        };
+      case "Tool":
+        return {
+          border: "border-l-emerald-500",
+          iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
+          iconText: "text-emerald-600 dark:text-emerald-400",
+          badge: "bg-emerald-100 dark:bg-emerald-900/40",
+          badgeText: "text-emerald-700 dark:text-emerald-300",
+          hoverBorder: "hover:border-emerald-400"
+        };
+      case "FAQ":
+        return {
+          border: "border-l-purple-500",
+          iconBg: "bg-purple-100 dark:bg-purple-900/30",
+          iconText: "text-purple-600 dark:text-purple-400",
+          badge: "bg-purple-100 dark:bg-purple-900/40",
+          badgeText: "text-purple-700 dark:text-purple-300",
+          hoverBorder: "hover:border-purple-400"
+        };
+      case "Curriculum":
+        return {
+          border: "border-l-cyan-500",
+          iconBg: "bg-cyan-100 dark:bg-cyan-900/30",
+          iconText: "text-cyan-600 dark:text-cyan-400",
+          badge: "bg-cyan-100 dark:bg-cyan-900/40",
+          badgeText: "text-cyan-700 dark:text-cyan-300",
+          hoverBorder: "hover:border-cyan-400"
+        };
+      case "Playbook":
+        return {
+          border: "border-l-orange-500",
+          iconBg: "bg-orange-100 dark:bg-orange-900/30",
+          iconText: "text-orange-600 dark:text-orange-400",
+          badge: "bg-orange-100 dark:bg-orange-900/40",
+          badgeText: "text-orange-700 dark:text-orange-300",
+          hoverBorder: "hover:border-orange-400"
+        };
+      case "Resource":
+        return {
+          border: "border-l-slate-500",
+          iconBg: "bg-slate-100 dark:bg-slate-800/50",
+          iconText: "text-slate-600 dark:text-slate-400",
+          badge: "bg-slate-100 dark:bg-slate-800/50",
+          badgeText: "text-slate-700 dark:text-slate-300",
+          hoverBorder: "hover:border-slate-400"
+        };
+      default:
+        return {
+          border: "border-l-gray-500",
+          iconBg: "bg-gray-100 dark:bg-gray-800/50",
+          iconText: "text-gray-600 dark:text-gray-400",
+          badge: "bg-gray-100 dark:bg-gray-800/50",
+          badgeText: "text-gray-700 dark:text-gray-300",
+          hoverBorder: "hover:border-gray-400"
+        };
+    }
+  };
+
   // Relevance scoring function - world-class weighted search
   const calculateRelevanceScore = (item: { title: string; excerpt: string; keywords?: string; category?: string; date?: string }, term: string): number => {
     const termLower = term.toLowerCase();
@@ -250,42 +328,45 @@ const Search = () => {
                 </p>
               </Card>
             ) : (
-              displayResults.map((result, index) => (
-                <Link key={`${result.url}-${index}`} to={result.url}>
-                  <Card className="p-4 hover:shadow-lg transition-all duration-300 border border-muted hover:border-primary/30 group bg-card/50 backdrop-blur-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        {result.type === "Blog Post" ? (
-                          <FileText className="w-5 h-5" />
-                        ) : result.type === "FAQ" ? (
-                          <HelpCircle className="w-5 h-5" />
-                        ) : (
-                          <result.icon className="w-5 h-5" />
-                        )}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded bg-muted text-muted-foreground">
-                            {result.type}
-                          </span>
-                          {'category' in result && result.category && (
-                            <span className="text-xs text-muted-foreground">
-                              {result.category}
-                            </span>
+              displayResults.map((result, index) => {
+                const colors = getTypeColors(result.type);
+                return (
+                  <Link key={`${result.url}-${index}`} to={result.url}>
+                    <Card className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group bg-card/50 backdrop-blur-sm border-l-[3px] ${colors.border}`}>
+                      <div className="flex items-start gap-4">
+                        <div className={`p-2 rounded-lg ${colors.iconBg} ${colors.iconText} transition-colors`}>
+                          {result.type === "Blog Post" ? (
+                            <FileText className="w-5 h-5" />
+                          ) : result.type === "FAQ" ? (
+                            <HelpCircle className="w-5 h-5" />
+                          ) : (
+                            <result.icon className="w-5 h-5" />
                           )}
                         </div>
-                        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors font-montserrat line-clamp-1">
-                          {result.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground line-clamp-2 font-open-sans mt-1">
-                          {result.excerpt.split(' ').slice(0, 30).join(' ')}...
-                        </p>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className={`text-xs font-semibold px-2 py-0.5 rounded ${colors.badge} ${colors.badgeText}`}>
+                              {result.type}
+                            </span>
+                            {'category' in result && result.category && (
+                              <span className="text-xs text-muted-foreground">
+                                {result.category}
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors font-montserrat line-clamp-1">
+                            {result.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground line-clamp-2 font-open-sans mt-1">
+                            {result.excerpt.split(' ').slice(0, 30).join(' ')}...
+                          </p>
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
                       </div>
-                      <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
-                    </div>
-                  </Card>
-                </Link>
-              ))
+                    </Card>
+                  </Link>
+                );
+              })
             )}
           </div>
 

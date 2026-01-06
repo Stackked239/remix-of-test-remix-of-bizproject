@@ -7,7 +7,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search as SearchIcon, FileText, HelpCircle, Home, ArrowRight } from "lucide-react";
+import { Search as SearchIcon, FileText, HelpCircle, Home, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { blogPosts } from "@/data/blogData";
 import { 
   searchablePages, 
@@ -21,6 +21,8 @@ const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const resultsPerPage = 10;
 
   // Get search term from URL
   useEffect(() => {
@@ -33,12 +35,18 @@ const Search = () => {
   // Update URL when search changes
   const handleSearch = (term: string) => {
     setSearchTerm(term);
+    setCurrentPage(1); // Reset to first page on new search
     if (term) {
       setSearchParams({ q: term });
     } else {
       setSearchParams({});
     }
   };
+
+  // Reset page when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedFilter]);
 
   // Separate searchable content by type for granular filtering
   const allPages = useMemo(() => searchablePages, []);
@@ -256,6 +264,12 @@ const Search = () => {
     return results.sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
   }, [filteredResults, selectedFilter]);
 
+  // Pagination calculations
+  const totalPages = Math.ceil(displayResults.length / resultsPerPage);
+  const startIndex = (currentPage - 1) * resultsPerPage;
+  const endIndex = startIndex + resultsPerPage;
+  const paginatedResults = displayResults.slice(startIndex, endIndex);
+
   const filters = ["All", "Pages", "Blog Posts", "FAQs"];
 
   return (
@@ -297,7 +311,7 @@ const Search = () => {
             {/* Results Count Summary */}
             {searchTerm && (
               <p className="text-muted-foreground font-open-sans mb-4">
-                Showing <span className="font-semibold text-foreground">{displayResults.length}</span> result{displayResults.length !== 1 ? 's' : ''} for "<span className="font-semibold text-primary">{searchTerm}</span>"
+                Showing <span className="font-semibold text-foreground">{startIndex + 1}-{Math.min(endIndex, displayResults.length)}</span> of <span className="font-semibold text-foreground">{displayResults.length}</span> result{displayResults.length !== 1 ? 's' : ''} for "<span className="font-semibold text-primary">{searchTerm}</span>"
               </p>
             )}
 
@@ -423,47 +437,101 @@ const Search = () => {
                 </p>
               </Card>
             ) : (
-              displayResults.map((result, index) => {
-                const colors = getTypeColors(result.type);
-                return (
-                  <Link key={`${result.url}-${index}`} to={result.url}>
-                    <Card 
-                      className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group backdrop-blur-sm ${index % 2 === 0 ? 'bg-card/50' : 'bg-muted/30'}`}
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className={`p-2 rounded-lg ${colors.iconBg} ${colors.iconText} transition-colors`}>
-                          {result.type === "Blog Post" ? (
-                            <FileText className="w-5 h-5" />
-                          ) : result.type === "FAQ" ? (
-                            <HelpCircle className="w-5 h-5" />
-                          ) : (
-                            <result.icon className="w-5 h-5" />
-                          )}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className={`text-xs font-semibold px-2 py-0.5 rounded ${colors.badge} ${colors.badgeText}`}>
-                              {result.type}
-                            </span>
-                            {'category' in result && result.category && (
-                              <span className="text-xs text-muted-foreground">
-                                {result.category}
-                              </span>
+              <>
+                {paginatedResults.map((result, index) => {
+                  const colors = getTypeColors(result.type);
+                  return (
+                    <Link key={`${result.url}-${index}`} to={result.url}>
+                      <Card 
+                        className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group backdrop-blur-sm ${index % 2 === 0 ? 'bg-card/50' : 'bg-muted/30'}`}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className={`p-2 rounded-lg ${colors.iconBg} ${colors.iconText} transition-colors`}>
+                            {result.type === "Blog Post" ? (
+                              <FileText className="w-5 h-5" />
+                            ) : result.type === "FAQ" ? (
+                              <HelpCircle className="w-5 h-5" />
+                            ) : (
+                              <result.icon className="w-5 h-5" />
                             )}
                           </div>
-                          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors font-montserrat line-clamp-1">
-                            {result.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground line-clamp-2 font-open-sans mt-1">
-                            {result.excerpt.split(' ').slice(0, 30).join(' ')}...
-                          </p>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className={`text-xs font-semibold px-2 py-0.5 rounded ${colors.badge} ${colors.badgeText}`}>
+                                {result.type}
+                              </span>
+                              {'category' in result && result.category && (
+                                <span className="text-xs text-muted-foreground">
+                                  {result.category}
+                                </span>
+                              )}
+                            </div>
+                            <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors font-montserrat line-clamp-1">
+                              {result.title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground line-clamp-2 font-open-sans mt-1">
+                              {result.excerpt.split(' ').slice(0, 30).join(' ')}...
+                            </p>
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
-                        <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
-                      </div>
-                    </Card>
-                  </Link>
-                );
-              })
+                      </Card>
+                    </Link>
+                  );
+                })}
+
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                  <div className="flex items-center justify-center gap-2 mt-6 pt-4 border-t border-muted">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                      disabled={currentPage === 1}
+                      className="font-open-sans"
+                    >
+                      <ChevronLeft className="w-4 h-4 mr-1" />
+                      Previous
+                    </Button>
+                    
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: totalPages }, (_, i) => i + 1)
+                        .filter(page => {
+                          // Show first, last, current, and adjacent pages
+                          return page === 1 || 
+                                 page === totalPages || 
+                                 Math.abs(page - currentPage) <= 1;
+                        })
+                        .map((page, idx, arr) => (
+                          <span key={page} className="flex items-center">
+                            {idx > 0 && arr[idx - 1] !== page - 1 && (
+                              <span className="px-2 text-muted-foreground">...</span>
+                            )}
+                            <Button
+                              variant={currentPage === page ? "default" : "outline"}
+                              size="sm"
+                              onClick={() => setCurrentPage(page)}
+                              className="w-8 h-8 p-0 font-open-sans"
+                            >
+                              {page}
+                            </Button>
+                          </span>
+                        ))}
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                      disabled={currentPage === totalPages}
+                      className="font-open-sans"
+                    >
+                      Next
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </div>
+                )}
+              </>
             )}
           </div>
 

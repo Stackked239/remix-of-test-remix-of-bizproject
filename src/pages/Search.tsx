@@ -66,11 +66,11 @@ const Search = () => {
   const allFAQs = useMemo(() => searchableFAQs, []);
 
   // World-class semantic color system for content types
-  const getTypeColors = (type: string): { border: string; iconBg: string; iconText: string; badge: string; badgeText: string; hoverBorder: string } => {
+  const getTypeColors = (type: string): { borderColor: string; iconBg: string; iconText: string; badge: string; badgeText: string; hoverBorder: string } => {
     switch (type) {
       case "Page":
         return {
-          border: "border-l-blue-500",
+          borderColor: "#3b82f6", // blue-500
           iconBg: "bg-blue-100 dark:bg-blue-900/30",
           iconText: "text-blue-600 dark:text-blue-400",
           badge: "bg-blue-100 dark:bg-blue-900/40",
@@ -79,7 +79,7 @@ const Search = () => {
         };
       case "Blog Post":
         return {
-          border: "border-l-amber-500",
+          borderColor: "#f59e0b", // amber-500
           iconBg: "bg-amber-100 dark:bg-amber-900/30",
           iconText: "text-amber-600 dark:text-amber-400",
           badge: "bg-amber-100 dark:bg-amber-900/40",
@@ -88,7 +88,7 @@ const Search = () => {
         };
       case "Tool":
         return {
-          border: "border-l-emerald-500",
+          borderColor: "#10b981", // emerald-500
           iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
           iconText: "text-emerald-600 dark:text-emerald-400",
           badge: "bg-emerald-100 dark:bg-emerald-900/40",
@@ -97,7 +97,7 @@ const Search = () => {
         };
       case "FAQ":
         return {
-          border: "border-l-purple-500",
+          borderColor: "#a855f7", // purple-500
           iconBg: "bg-purple-100 dark:bg-purple-900/30",
           iconText: "text-purple-600 dark:text-purple-400",
           badge: "bg-purple-100 dark:bg-purple-900/40",
@@ -106,7 +106,7 @@ const Search = () => {
         };
       case "Curriculum":
         return {
-          border: "border-l-cyan-500",
+          borderColor: "#06b6d4", // cyan-500
           iconBg: "bg-cyan-100 dark:bg-cyan-900/30",
           iconText: "text-cyan-600 dark:text-cyan-400",
           badge: "bg-cyan-100 dark:bg-cyan-900/40",
@@ -115,7 +115,7 @@ const Search = () => {
         };
       case "Playbook":
         return {
-          border: "border-l-orange-500",
+          borderColor: "#f97316", // orange-500
           iconBg: "bg-orange-100 dark:bg-orange-900/30",
           iconText: "text-orange-600 dark:text-orange-400",
           badge: "bg-orange-100 dark:bg-orange-900/40",
@@ -124,7 +124,7 @@ const Search = () => {
         };
       case "Resource":
         return {
-          border: "border-l-slate-500",
+          borderColor: "#64748b", // slate-500
           iconBg: "bg-slate-100 dark:bg-slate-800/50",
           iconText: "text-slate-600 dark:text-slate-400",
           badge: "bg-slate-100 dark:bg-slate-800/50",
@@ -133,7 +133,7 @@ const Search = () => {
         };
       default:
         return {
-          border: "border-l-gray-500",
+          borderColor: "#6b7280", // gray-500
           iconBg: "bg-gray-100 dark:bg-gray-800/50",
           iconText: "text-gray-600 dark:text-gray-400",
           badge: "bg-gray-100 dark:bg-gray-800/50",
@@ -332,7 +332,10 @@ const Search = () => {
                 const colors = getTypeColors(result.type);
                 return (
                   <Link key={`${result.url}-${index}`} to={result.url}>
-                    <Card className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group bg-card/50 backdrop-blur-sm border-l-[3px] ${colors.border}`}>
+                    <Card 
+                      className={`p-4 hover:shadow-lg transition-all duration-300 border border-muted ${colors.hoverBorder} group bg-card/50 backdrop-blur-sm`}
+                      style={{ borderLeftWidth: '3px', borderLeftColor: colors.borderColor }}
+                    >
                       <div className="flex items-start gap-4">
                         <div className={`p-2 rounded-lg ${colors.iconBg} ${colors.iconText} transition-colors`}>
                           {result.type === "Blog Post" ? (

@@ -337,25 +337,53 @@ const HRProgramAssetMultiplier = () => {
               </p>
             </div>
 
-            <p className="text-xl font-semibold text-foreground">
-              This is the cost of not having an HR program.
-            </p>
-
-            <p>
-              Most small business owners avoid HR. They see it as bureaucratic, expensive, and unnecessary. They think: "We are small. We do not need HR stuff. Let's just focus on the business."
-            </p>
-
-            <p>
-              But this thinking costs them. It costs them in people leaving. It costs them in reduced morale. It costs them in legal exposure. It costs them in poor hiring decisions that haunt them for years. It costs them in culture that slowly erodes.
-            </p>
-
-            <p className="text-lg font-semibold text-primary">
-              And the tragedy is that the business owners who need HR the most—the ones who find managing people difficult—are usually the ones who avoid it the most.
-            </p>
-
-            <p>
-              This article is about why that is backward thinking. <strong>An HR program is not a cost. It is an asset and a multiplier.</strong> When done right, it transforms how your business operates, how your team performs, and how much money you actually make.
-            </p>
+            {/* Cost of No HR Program - Enhanced Section */}
+            <div className="not-prose bg-gradient-to-br from-red-500/10 via-background to-amber-500/5 rounded-2xl p-8 border-2 border-red-500/20 my-12">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                <AlertTriangle className="w-7 h-7 text-red-500" />
+                This is the cost of not having an HR program.
+              </h2>
+              
+              <p className="text-lg text-muted-foreground mb-6">
+                Most small business owners avoid HR. They see it as bureaucratic, expensive, and unnecessary. They think: <span className="italic text-foreground">"We are small. We do not need HR stuff. Let's just focus on the business."</span>
+              </p>
+              
+              <div className="bg-red-500/5 rounded-xl p-6 border border-red-500/20 mb-6">
+                <p className="font-semibold text-foreground mb-4">But this thinking costs them:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">People leaving unexpectedly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Reduced morale across the team</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Legal exposure and liability</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Poor hiring decisions that haunt them for years</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Culture that slowly erodes</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <p className="text-lg font-semibold text-primary mb-4">
+                And the tragedy is that the business owners who need HR the most—the ones who find managing people difficult—are usually the ones who avoid it the most.
+              </p>
+              
+              <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/30">
+                <p className="text-foreground">
+                  This article is about why that is backward thinking. <strong className="text-primary">An HR program is not a cost. It is an asset and a multiplier.</strong> When done right, it transforms how your business operates, how your team performs, and how much money you actually make.
+                </p>
+              </div>
+            </div>
 
             {/* The Real Cost Section */}
             <h2 className="text-3xl font-bold text-foreground mt-16 mb-6 flex items-center gap-3">
@@ -369,90 +397,193 @@ const HRProgramAssetMultiplier = () => {
               ))}
             </div>
 
-            {/* The Hiring Problem */}
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Hiring Problem</h3>
+            {/* The Four Problems - Enhanced Grid */}
+            <div className="not-prose grid md:grid-cols-2 gap-6 my-12">
+              {/* The Hiring Problem */}
+              <div className="rounded-2xl border-2 border-purple-500/30 p-6 bg-gradient-to-br from-background to-purple-500/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-purple-500/10">
+                    <Users className="w-6 h-6 text-purple-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">The Hiring Problem</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Without an HR process, hiring becomes reactive. Someone leaves. You panic. You hire the first person who seems okay.
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                    <span>No careful reference checks</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                    <span>No cultural fit assessment</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                    <span>No clear understanding of role needs</span>
+                  </li>
+                </ul>
+                <div className="bg-red-500/10 rounded-lg p-3 border border-red-500/20">
+                  <p className="text-sm font-semibold text-red-600 dark:text-red-400">
+                    Result: Wrong hire 30-40% of the time → 6 months lost productivity
+                  </p>
+                </div>
+              </div>
 
-            <p>
-              Without an HR process, hiring becomes reactive. Someone leaves. You panic. You hire the first person who seems okay. You are so focused on getting someone in the role that you do not check references carefully. You do not assess cultural fit. You do not really understand what you need.
-            </p>
+              {/* The Retention Problem */}
+              <div className="rounded-2xl border-2 border-amber-500/30 p-6 bg-gradient-to-br from-background to-amber-500/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-amber-500/10">
+                    <TrendingUp className="w-6 h-6 text-amber-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">The Retention Problem</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Without an HR program, you have no retention strategy. People leave when frustrated or disengaged. What you don't hear:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2 text-sm text-foreground italic">
+                    <MessageSquare className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                    <span>"I did not feel heard."</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground italic">
+                    <MessageSquare className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                    <span>"My manager never gave me feedback."</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground italic">
+                    <MessageSquare className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                    <span>"I felt like I was just a number."</span>
+                  </li>
+                </ul>
+                <div className="bg-red-500/10 rounded-lg p-3 border border-red-500/20">
+                  <p className="text-sm font-semibold text-red-600 dark:text-red-400">
+                    Result: Constant recruiting, training, rebuilding → Never gaining momentum
+                  </p>
+                </div>
+              </div>
 
-            <p>
-              <strong>The result: You hire the wrong person 30-40% of the time.</strong> They do not fit the role. They do not align with your values. Or they have skills gaps you did not catch.
-            </p>
+              {/* The Culture Problem */}
+              <div className="rounded-2xl border-2 border-blue-500/30 p-6 bg-gradient-to-br from-background to-blue-500/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-blue-500/10">
+                    <Target className="w-6 h-6 text-blue-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">The Culture Problem</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Without an HR program, culture happens by accident, not design. And culture by accident is usually not good.
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span>Weak performers get lazier (no accountability)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span>Strong performers get frustrated (no recognition)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span>People don't feel safe speaking up</span>
+                  </li>
+                </ul>
+                <div className="bg-red-500/10 rounded-lg p-3 border border-red-500/20">
+                  <p className="text-sm font-semibold text-red-600 dark:text-red-400">
+                    Result: Culture drifts → Mistakes increase → Quality declines
+                  </p>
+                </div>
+              </div>
 
-            <p>
-              By the time you finally decide to let them go, you have lost six months of productivity. You have damaged morale. And you still have to hire someone else.
-            </p>
+              {/* The Legal Problem */}
+              <div className="rounded-2xl border-2 border-red-500/30 p-6 bg-gradient-to-br from-background to-red-500/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-red-500/10">
+                    <Shield className="w-6 h-6 text-red-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">The Legal Problem</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Without an HR program, you have no documentation. When you need to let someone go or face an unfair treatment claim:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>No clear expectations documented</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>No performance records</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-foreground">
+                    <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>No proper onboarding/offboarding trail</span>
+                  </li>
+                </ul>
+                <div className="bg-red-500/10 rounded-lg p-3 border border-red-500/20">
+                  <p className="text-sm font-semibold text-red-600 dark:text-red-400">
+                    Result: Defending a lawsuit = $10K+ in fees. Losing = $100K+
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            {/* The Retention Problem */}
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Retention Problem</h3>
+            {/* What a Small Business HR Program Actually Is - Enhanced */}
+            <div className="not-prose bg-gradient-to-br from-primary/5 via-background to-emerald-500/5 rounded-2xl p-8 border-2 border-primary/20 my-12">
+              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                <Briefcase className="w-8 h-8 text-primary" />
+                What a Small Business HR Program Actually Is
+              </h2>
 
-            <p>
-              Without an HR program, you have no retention strategy. People leave when they are frustrated, disengaged, or feel undervalued. But you never really know why because you do not ask.
-            </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                When people think "HR," they often think of a large corporate HR department with lots of bureaucracy and policies. <strong className="text-foreground">That is not what a small business needs.</strong>
+              </p>
 
-            <p>
-              What you do not hear is the real reason: <strong>"I did not feel heard." "I never knew where I stood." "My manager never gave me feedback." "I was not growing." "I felt like I was just a number."</strong>
-            </p>
+              <p className="text-foreground mb-6">
+                A small business HR program is simpler. It is a set of systems and practices that help you:
+              </p>
 
-            <p>
-              Without a retention program, you are constantly replacing people. Constantly recruiting. Constantly training new people. Constantly rebuilding relationships with customers. The business never gains momentum because you are always in onboarding mode.
-            </p>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Hire the right people</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Set clear expectations</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Give regular feedback</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Develop people</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Recognize & reward performance</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Manage culture intentionally</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Handle problems fairly</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-background border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="font-medium text-foreground">Protect yourself legally</span>
+                </div>
+              </div>
 
-            {/* The Culture Problem */}
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Culture Problem</h3>
-
-            <p>
-              Without an HR program, culture happens by accident, not design. And culture by accident is usually not good.
-            </p>
-
-            <p>
-              You have strong performers and weak performers. Weak performers see that no one is holding them accountable, so they get lazier. Strong performers see that effort is not recognized or rewarded, so they get frustrated. People do not know what is expected. People do not know how they are evaluated. People do not feel safe speaking up.
-            </p>
-
-            <p>
-              Over time, your culture drifts. The energy changes. People stop wanting to work hard. Mistakes increase. Customer complaints increase. Quality declines.
-            </p>
-
-            {/* The Legal Problem */}
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Legal Problem</h3>
-
-            <p>
-              Without an HR program, you have no documentation. You do not have clear expectations. You do not have performance records. You do not have proper onboarding or offboarding.
-            </p>
-
-            <p>
-              Then you have a situation where you need to let someone go, or someone claims you treated them unfairly. Without documentation, you are vulnerable. <strong>Even defending a lawsuit costs tens of thousands in legal fees. Losing one can cost hundreds of thousands.</strong>
-            </p>
-
-            {/* What a Small Business HR Program Actually Is */}
-            <h2 className="text-3xl font-bold text-foreground mt-16 mb-6 flex items-center gap-3">
-              <Briefcase className="w-8 h-8 text-primary" />
-              What a Small Business HR Program Actually Is
-            </h2>
-
-            <p>
-              When people think "HR," they often think of a large corporate HR department with lots of bureaucracy and policies. That is not what a small business needs.
-            </p>
-
-            <p>
-              A small business HR program is simpler. It is a set of systems and practices that help you:
-            </p>
-
-            <ul>
-              <li>Hire the right people</li>
-              <li>Set clear expectations</li>
-              <li>Give regular feedback</li>
-              <li>Develop people</li>
-              <li>Recognize and reward performance</li>
-              <li>Manage culture</li>
-              <li>Handle problems fairly</li>
-              <li>Protect yourself legally</li>
-            </ul>
-
-            <p className="text-lg font-semibold text-foreground">
-              This does not require hiring an HR person. It does not require lots of policies. It requires intentionality.
-            </p>
+              <div className="bg-primary/10 rounded-xl p-4 border border-primary/30">
+                <p className="text-lg font-semibold text-foreground text-center">
+                  This does not require hiring an HR person. It does not require lots of policies. <span className="text-primary">It requires intentionality.</span>
+                </p>
+              </div>
+            </div>
 
             {/* The Components Grid */}
             <h2 className="text-3xl font-bold text-foreground mt-16 mb-8 flex items-center gap-3">
@@ -599,26 +730,50 @@ const HRProgramAssetMultiplier = () => {
               Systems do not eliminate the discomfort of managing people. But they reduce it. They give you a framework. And a framework makes the hard stuff easier.
             </p>
 
-            {/* The Role of Visibility and Assessment */}
-            <h2 className="text-3xl font-bold text-foreground mt-16 mb-6 flex items-center gap-3">
-              <Target className="w-8 h-8 text-blue-500" />
-              The Role of Visibility and Assessment
-            </h2>
+            {/* The Role of Visibility and Assessment - Enhanced */}
+            <div className="not-prose bg-gradient-to-br from-blue-500/5 via-background to-cyan-500/5 rounded-2xl p-8 border-2 border-blue-500/20 my-12">
+              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                <Target className="w-8 h-8 text-blue-500" />
+                The Role of Visibility and Assessment
+              </h2>
 
-            <p>As you build your HR program, you need to know if it is working. Track:</p>
+              <p className="text-lg text-muted-foreground mb-6">
+                As you build your HR program, you need to know if it is working. Track these key metrics:
+              </p>
 
-            <ul>
-              <li><strong>Turnover rate:</strong> Are people staying longer?</li>
-              <li><strong>Time to productivity:</strong> Are new hires getting productive faster?</li>
-              <li><strong>Employee engagement:</strong> Do people feel engaged? (You can ask them)</li>
-              <li><strong>Performance:</strong> Are people delivering better results?</li>
-              <li><strong>Quality:</strong> Are mistakes declining?</li>
-              <li><strong>Customer satisfaction:</strong> Is service quality improving?</li>
-            </ul>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Turnover Rate</h4>
+                  <p className="text-sm text-muted-foreground">Are people staying longer?</p>
+                </div>
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Time to Productivity</h4>
+                  <p className="text-sm text-muted-foreground">Are new hires getting productive faster?</p>
+                </div>
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Employee Engagement</h4>
+                  <p className="text-sm text-muted-foreground">Do people feel engaged? (You can ask them)</p>
+                </div>
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Performance</h4>
+                  <p className="text-sm text-muted-foreground">Are people delivering better results?</p>
+                </div>
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Quality</h4>
+                  <p className="text-sm text-muted-foreground">Are mistakes declining?</p>
+                </div>
+                <div className="p-4 rounded-xl bg-background border border-blue-500/20">
+                  <h4 className="font-bold text-foreground mb-2">Customer Satisfaction</h4>
+                  <p className="text-sm text-muted-foreground">Is service quality improving?</p>
+                </div>
+              </div>
 
-            <p>
-              Tools like <Link to="/how-it-works" className="text-primary hover:underline">BizHealth.ai</Link> can help you assess whether your HR and people management practices are working. By evaluating engagement, retention, leadership depth, and team alignment, these assessments show you clearly whether your HR investments are paying off. Rather than guessing, you get data.
-            </p>
+              <div className="bg-primary/10 rounded-xl p-6 border border-primary/30">
+                <p className="text-foreground">
+                  Tools like <Link to="/how-it-works" className="text-primary hover:underline font-semibold">BizHealth.ai</Link> can help you assess whether your HR and people management practices are working. By evaluating engagement, retention, leadership depth, and team alignment, these assessments show you clearly whether your HR investments are paying off. <strong>Rather than guessing, you get data.</strong>
+                </p>
+              </div>
+            </div>
 
             {/* The Bottom Line */}
             <h2 className="text-3xl font-bold text-foreground mt-16 mb-6">The Bottom Line</h2>
@@ -674,8 +829,8 @@ const HRProgramAssetMultiplier = () => {
           </div>
         </div>
         
-        {/* Related Articles */}
-        <div className="container mx-auto px-4 py-12">
+        {/* Related Articles - Reduced spacing */}
+        <div className="container mx-auto px-4 pb-8">
           <div className="max-w-6xl mx-auto">
             <RelatedArticles 
               articles={[

@@ -212,10 +212,10 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
-    title: "Blog - Business Insights & Resources",
+    title: "Business Insights & Strategies",
     excerpt: "Expert insights, strategies, and resources for small and mid-size businesses. Browse articles on business strategy, operations, financial management, leadership, technology, and risk management.",
     url: "/blog",
-    keywords: "blog, articles, insights, resources, news, updates, content",
+    keywords: "articles, insights, resources, news, updates, content, strategies, business",
     icon: FileText
   },
   {

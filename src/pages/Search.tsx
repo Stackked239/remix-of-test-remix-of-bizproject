@@ -65,7 +65,45 @@ const Search = () => {
   // FAQs from centralized index
   const allFAQs = useMemo(() => searchableFAQs, []);
 
-  // Filter and search logic
+  // Relevance scoring function - world-class weighted search
+  const calculateRelevanceScore = (item: { title: string; excerpt: string; keywords?: string; category?: string; date?: string }, term: string): number => {
+    const termLower = term.toLowerCase();
+    let score = 0;
+    
+    // Title match - highest weight (100 points base)
+    const titleLower = item.title.toLowerCase();
+    if (titleLower === termLower) {
+      score += 150; // Exact title match
+    } else if (titleLower.startsWith(termLower)) {
+      score += 120; // Title starts with search term
+    } else if (titleLower.includes(termLower)) {
+      score += 100; // Title contains search term
+    }
+    
+    // Excerpt match - medium weight (50 points base)
+    const excerptLower = item.excerpt.toLowerCase();
+    if (excerptLower.includes(termLower)) {
+      // Boost for multiple occurrences
+      const occurrences = (excerptLower.match(new RegExp(termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
+      score += 50 + Math.min(occurrences * 5, 25); // Up to 75 points for excerpt
+    }
+    
+    // Category match - medium-low weight (30 points)
+    if (item.category && item.category.toLowerCase().includes(termLower)) {
+      score += 30;
+    }
+    
+    // Keywords match - lower weight (20 points base)
+    if (item.keywords && item.keywords.toLowerCase().includes(termLower)) {
+      const keywordsLower = item.keywords.toLowerCase();
+      const occurrences = (keywordsLower.match(new RegExp(termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
+      score += 20 + Math.min(occurrences * 2, 10); // Up to 30 points for keywords
+    }
+    
+    return score;
+  };
+
+  // Filter and search logic with relevance scoring
   const filteredResults = useMemo(() => {
     if (!searchTerm.trim()) {
       return { pages: [], blogs: [], faqs: [], total: 0 };
@@ -73,27 +111,36 @@ const Search = () => {
 
     const term = searchTerm.toLowerCase();
     
-    // Search pages, tools, curriculum, playbooks
-    const pages = allPagesAndTools.filter(item =>
-      item.title.toLowerCase().includes(term) ||
-      item.excerpt.toLowerCase().includes(term) ||
-      item.keywords.toLowerCase().includes(term)
-    );
+    // Search and score pages, tools, curriculum, playbooks
+    const pages = allPagesAndTools
+      .filter(item =>
+        item.title.toLowerCase().includes(term) ||
+        item.excerpt.toLowerCase().includes(term) ||
+        item.keywords.toLowerCase().includes(term)
+      )
+      .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
+      .sort((a, b) => b.relevanceScore - a.relevanceScore);
     
-    // Search blog posts (including keywords)
-    const blogs = allBlogs.filter(item =>
-      item.title.toLowerCase().includes(term) ||
-      item.excerpt.toLowerCase().includes(term) ||
-      item.category.toLowerCase().includes(term) ||
-      (item.keywords && item.keywords.toLowerCase().includes(term))
-    );
+    // Search and score blog posts (including keywords)
+    const blogs = allBlogs
+      .filter(item =>
+        item.title.toLowerCase().includes(term) ||
+        item.excerpt.toLowerCase().includes(term) ||
+        item.category.toLowerCase().includes(term) ||
+        (item.keywords && item.keywords.toLowerCase().includes(term))
+      )
+      .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
+      .sort((a, b) => b.relevanceScore - a.relevanceScore);
     
-    // Search FAQs
-    const faqs = allFAQs.filter(item =>
-      item.title.toLowerCase().includes(term) ||
-      item.excerpt.toLowerCase().includes(term) ||
-      item.keywords.toLowerCase().includes(term)
-    );
+    // Search and score FAQs
+    const faqs = allFAQs
+      .filter(item =>
+        item.title.toLowerCase().includes(term) ||
+        item.excerpt.toLowerCase().includes(term) ||
+        item.keywords.toLowerCase().includes(term)
+      )
+      .map(item => ({ ...item, relevanceScore: calculateRelevanceScore(item, term) }))
+      .sort((a, b) => b.relevanceScore - a.relevanceScore);
 
     return {
       pages,
@@ -103,18 +150,22 @@ const Search = () => {
     };
   }, [searchTerm, allPagesAndTools, allBlogs, allFAQs]);
 
-  // Apply filter
+  // Apply filter and sort combined results by relevance
   const displayResults = useMemo(() => {
+    let results: Array<typeof filteredResults.pages[0] | typeof filteredResults.blogs[0] | typeof filteredResults.faqs[0]> = [];
+    
     if (selectedFilter === "All") {
-      return [...filteredResults.pages, ...filteredResults.blogs, ...filteredResults.faqs];
+      results = [...filteredResults.pages, ...filteredResults.blogs, ...filteredResults.faqs];
     } else if (selectedFilter === "Pages") {
-      return filteredResults.pages;
+      results = filteredResults.pages;
     } else if (selectedFilter === "Blog Posts") {
-      return filteredResults.blogs;
+      results = filteredResults.blogs;
     } else if (selectedFilter === "FAQs") {
-      return filteredResults.faqs;
+      results = filteredResults.faqs;
     }
-    return [];
+    
+    // Sort all combined results by relevance score (highest first)
+    return results.sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
   }, [filteredResults, selectedFilter]);
 
   const filters = ["All", "Pages", "Blog Posts", "FAQs"];

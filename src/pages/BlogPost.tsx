@@ -17,7 +17,7 @@ const BlogPost = () => {
         keywords="business health assessment, SMB diagnostics, business evaluation, performance metrics, operational assessment, financial health check, strategic assessment"
         canonical="https://bizhealth.ai/blog/business-health-assessment-2025"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-health-assessment-comprehensive.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-business-health-assessment.jpg"
         articlePublishedTime="2025-07-27"
         articleAuthor="Dennis Hough"
       />
@@ -25,7 +25,7 @@ const BlogPost = () => {
         type="article"
         headline="The Complete Guide to Business Health Assessment in 2025"
         description="A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
-        image="https://bizhealth.ai/assets/business-health-assessment-comprehensive.jpg"
+        image="https://bizhealth.ai/og-images/og-business-health-assessment.jpg"
         datePublished="2025-07-27"
         author="Dennis Hough"
         url="https://bizhealth.ai/blog/business-health-assessment-2025"

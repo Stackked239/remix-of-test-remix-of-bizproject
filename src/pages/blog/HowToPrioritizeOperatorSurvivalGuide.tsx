@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import BlogHeroImage from "@/components/BlogHeroImage";
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Lightbulb, CheckCircle2, TrendingUp, AlertCircle, Target, Users, Zap, Timer, BarChart3, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -107,7 +108,14 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
               <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
-                    <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
+                    <img 
+                      src={authorIcon} 
+                      alt="BizHealth.ai Research Team" 
+                      width={40}
+                      height={40}
+                      loading="eager"
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                   <span className="font-medium text-foreground">{author}</span>
                 </div>
@@ -121,13 +129,11 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
                 </div>
               </div>
 
-              {/* Hero Image */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl mb-12 border border-border/50">
-                <img
+              {/* Hero Image - Optimized for LCP */}
+              <div className="mb-12">
+                <BlogHeroImage
                   src={heroImage}
                   alt="Solo entrepreneur working late at desk with laptop and notebook, prioritizing business tasks - operator survival guide for small business productivity"
-                  className="w-[90%] mx-auto h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
             </div>

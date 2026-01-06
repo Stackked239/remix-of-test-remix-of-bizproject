@@ -340,7 +340,7 @@ const HRProgramAssetMultiplier = () => {
             </div>
 
             {/* Cost of No HR Program - Enhanced Section */}
-            <div className="not-prose bg-gradient-to-br from-red-500/10 via-background to-amber-500/5 rounded-2xl p-8 border-2 border-red-500/20 my-12">
+            <div className="not-prose bg-background rounded-2xl p-8 border-2 border-red-500/20 my-12 shadow-sm">
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
                 <AlertTriangle className="w-7 h-7 text-red-500" />
                 This is the cost of not having an HR program.

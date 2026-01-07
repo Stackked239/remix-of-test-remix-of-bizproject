@@ -3,6 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, XCircle, AlertTriangle, Target, Users, DollarSign, TrendingUp, Settings } from "lucide-react";
 import heroImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
@@ -10,6 +11,7 @@ import heroImage from "@/assets/images/crm-reality-check-small-business-decision
 const CRMRealityCheck = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <SEO 
         title="CRM Reality Check: Making the Right Decision for Your Business"
         description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for SMBs."

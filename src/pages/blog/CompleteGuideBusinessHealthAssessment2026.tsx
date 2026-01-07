@@ -6,7 +6,7 @@ import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
-import heroImage from '@/assets/business-health-assessment-guide-2026.jpg';
+import heroImage from '@/assets/images/business-health-assessment-2026-guide.jpg';
 import SocialShareButtons from "@/components/SocialShareButtons";
 
 const CompleteGuideBusinessHealthAssessment2026 = () => {
@@ -22,7 +22,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
         keywords="business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
         canonical="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
         ogType="article"
-        ogImage="/og-images/og-complete-guide-2026.jpg"
+        ogImage={heroImage}
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
@@ -132,11 +132,11 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   />
                   <img
                     src={heroImage}
-                    alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
+                    alt="Business owner holding a Business Health Assessment report showing operations, finances, and strategy charts in a manufacturing facility - complete guide for 2026 SMB business health evaluation"
                     className="relative w-full max-h-[400px] object-cover rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
                     loading="eager"
-                    width={900}
-                    height={400}
+                    width={1456}
+                    height={816}
                   />
                 </div>
               </div>
@@ -147,7 +147,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
           <div className="container mx-auto px-4 mt-12">
             <div className="max-w-4xl mx-auto prose prose-lg">
               <p className="text-lg leading-relaxed mb-6" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                As 2026 approaches, small and mid-size business leaders find themselves at a pivotal moment. According to the latest Bank of America Business Owner Report, 74% of SMB owners expect revenue increases in the coming year, and 60% plan to expand their businesses. That optimism is well-founded—but it's also conditional. The businesses that thrive in 2026 won't be those with the best intentions; they'll be those with the clearest understanding of where they actually stand.
+                In 2026, small and mid-size business leaders find themselves at a pivotal moment. According to the latest Bank of America Business Owner Report, 74% of SMB owners expect revenue increases in the coming year, and 60% plan to expand their businesses. That optimism is well-founded—but it's also conditional. The businesses that thrive in 2026 won't be those with the best intentions; they'll be those with the clearest understanding of where they actually stand.
               </p>
 
               <p className="text-lg leading-relaxed mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>

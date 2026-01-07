@@ -109,6 +109,7 @@ const HappyNewYear2026YearOfGrowth = lazy(() => import("./pages/blog/HappyNewYea
 const VisionSharingBusinessOwner = lazy(() => import("./pages/blog/VisionSharingBusinessOwner"));
 const FeastOrFamineCycle = lazy(() => import("./pages/blog/FeastOrFamineCycle"));
 const HRProgramAssetMultiplier = lazy(() => import("./pages/blog/HRProgramAssetMultiplier"));
+const TechnologyStrategicAllyROI = lazy(() => import("./pages/blog/TechnologyStrategicAllyROI"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -236,6 +237,7 @@ const App = () => (
               <Route path="/blog/vision-sharing-business-owner" element={<VisionSharingBusinessOwner />} />
               <Route path="/blog/feast-or-famine-cycle-small-business" element={<FeastOrFamineCycle />} />
               <Route path="/blog/hr-program-asset-multiplier-small-business" element={<HRProgramAssetMultiplier />} />
+              <Route path="/blog/technology-strategic-ally-roi-decisions" element={<TechnologyStrategicAllyROI />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

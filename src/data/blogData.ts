@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth",
+    excerpt: "Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI, hidden cost blind spots, and a proven evaluation framework.",
+    author: "BizHealth.ai Research Team",
+    date: "January 7, 2026",
+    readTime: "10 min read",
+    category: "Technology, Operations, Business Strategy",
+    slug: "/blog/technology-strategic-ally-roi-decisions",
+    imageUrl: "/assets/images/technology-strategic-ally-roi-decisions-growth.jpg",
+    altText: "Small business owner reviewing software automation ROI spreadsheets and analytics reports in manufacturing facility office",
+    keywords: "technology ROI small business, SMB technology decisions, ROI-first technology, AI ROI measurement, technology investment framework, small business automation, tech blind spots, SaaS audit, business technology strategy 2025, measuring technology impact, total cost of ownership, TCO calculation, technology adoption, digital transformation, software investment, automation ROI, tech stack audit, technology evaluation, IT investment, small business tech, technology decisions, AI adoption, technology strategy, tech spending, software ROI"
+  },
+  {
     title: "Embracing an HR Program as an Asset & Multiplier to Your Small Business",
     excerpt: "Discover why an HR program is not a cost but an asset and multiplier. Learn the 9 components of effective SMB HR and stop losing $30K-50K per bad hire.",
     author: "BizHealth.ai Research Team",

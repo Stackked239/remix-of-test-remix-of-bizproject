@@ -336,7 +336,7 @@ const Blog = () => {
       </section>
 
       {/* Search & Categories Section */}
-      <section className="py-10 bg-biz-green/5">
+      <section className="py-10 bg-gradient-to-b from-biz-green/10 to-biz-green/5 border-y border-biz-green/20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Desktop: Side by Side | Mobile: Stacked */}
@@ -348,20 +348,20 @@ const Blog = () => {
                   Search Articles
                 </label>
                 <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary/60 w-5 h-5" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-biz-green w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search articles by title, topic..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
-                    className="w-full pl-12 pr-4 py-3.5 border-2 border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary shadow-sm hover:shadow-md transition-all"
+                    className="w-full pl-12 pr-4 py-3.5 border-2 border-biz-green/30 rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-biz-green/40 focus:border-biz-green shadow-sm hover:shadow-md hover:border-biz-green/50 transition-all"
                   />
                 </div>
               </div>
 
               {/* Divider - Desktop Only */}
-              <div className="hidden lg:block w-px h-10 bg-border"></div>
+              <div className="hidden lg:block w-px h-10 bg-biz-green/30"></div>
 
               {/* Categories Filter */}
               <div className="flex-1 w-full">
@@ -375,8 +375,8 @@ const Blog = () => {
                       }}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selectedCategory === category 
-                          ? 'bg-primary text-white shadow-md scale-105' 
-                          : 'bg-background border-2 border-border text-foreground hover:border-primary/50 hover:bg-primary/5 hover:scale-105'
+                          ? 'bg-biz-green text-white shadow-md scale-105' 
+                          : 'bg-background border-2 border-biz-green/30 text-foreground hover:border-biz-green hover:bg-biz-green/10 hover:scale-105'
                       }`}
                     >
                       {category}
@@ -390,7 +390,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section ref={resultsRef} className="pt-8 pb-20 bg-biz-grey/10">
+      <section ref={resultsRef} className="pt-8 pb-20 bg-gradient-to-b from-biz-grey/5 to-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             {/* Results Count */}
@@ -413,7 +413,10 @@ const Blog = () => {
                     to={post.slug}
                     className="group"
                   >
-                    <article className="border border-border rounded-lg overflow-hidden bg-background transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 animate-fade-in cursor-pointer h-full flex flex-col">
+                    <article className="border border-border rounded-xl overflow-hidden bg-background transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-biz-green/40 animate-fade-in cursor-pointer h-full flex flex-col relative">
+                      {/* Accent bar at top */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-biz-green to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
                       {/* Thumbnail Image */}
                       <div className="relative overflow-hidden">
                         <img 
@@ -426,16 +429,18 @@ const Blog = () => {
                           loading="lazy"
                           decoding="async"
                         />
+                        {/* Image overlay on hover */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       
                       <div className="p-6 flex-1 flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
-                          <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">
+                          <span className="bg-biz-green/15 text-biz-green border border-biz-green/30 text-xs px-3 py-1.5 rounded-full font-medium">
                             {post.category}
                           </span>
                         </div>
                         
-                        <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight group-hover:text-primary transition-colors">
+                        <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight group-hover:text-biz-green transition-colors">
                           {post.title}
                         </h3>
                         
@@ -443,24 +448,24 @@ const Blog = () => {
                           {post.excerpt}
                         </p>
                         
-                        <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground border-t border-border/50 pt-4">
                           <div className="flex items-center gap-1">
-                            <User className="w-3 h-3" />
+                            <User className="w-3 h-3 text-biz-green/70" />
                             <span>{post.author}</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
+                            <Calendar className="w-3 h-3 text-biz-green/70" />
                             <span>{post.date}</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
+                            <Clock className="w-3 h-3 text-biz-green/70" />
                             <span>{post.readTime}</span>
                           </div>
                         </div>
                         
-                        <div className="inline-flex items-center gap-2 text-primary group-hover:text-primary/80 transition-colors font-medium text-sm">
+                        <div className="inline-flex items-center gap-2 text-biz-green group-hover:text-biz-green-light transition-colors font-semibold text-sm">
                           Read Article
-                          <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
                         </div>
                       </div>
                     </article>
@@ -486,13 +491,17 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-br from-primary via-primary to-biz-green/80 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-biz-green/20 rounded-full -mr-32 -mt-32 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-biz-green/30 rounded-full -ml-24 -mb-24 blur-2xl" />
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Stay Ahead of the Curve
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Get our latest insights, tools, and strategies delivered straight to your inbox. 
               Join over 2,500 business owners who trust our expertise.
             </p>
@@ -500,13 +509,13 @@ const Blog = () => {
               <input 
                 type="email" 
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="flex-1 px-4 py-3 border-2 border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-biz-green focus:border-biz-green"
               />
-              <button className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-300">
+              <button className="px-6 py-3 bg-biz-green text-white font-semibold rounded-lg hover:bg-biz-green-light transition-all duration-300 shadow-lg hover:shadow-xl">
                 Subscribe
               </button>
             </div>
-            <p className="text-xs text-muted-foreground mt-4">
+            <p className="text-xs text-white/70 mt-4">
               No spam, unsubscribe at any time. Read our privacy policy.
             </p>
           </div>

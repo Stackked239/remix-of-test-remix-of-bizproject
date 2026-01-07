@@ -7,6 +7,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, ArrowLeft, TrendingUp, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const RealTimeAnalyticsSMB = () => {
   return (
@@ -70,6 +71,11 @@ const RealTimeAnalyticsSMB = () => {
                 <span>10 min read</span>
               </div>
             </div>
+
+            <SocialShareButtons 
+              title="Real-Time Analytics: Powering SMB Agility in Volatile Markets"
+              description="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking."
+            />
 
             {/* Hero Image */}
             <div className="rounded-xl overflow-hidden shadow-elegant">

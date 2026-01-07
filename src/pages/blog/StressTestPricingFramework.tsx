@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/table";
 import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
 import bizHealthAuthor from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const StressTestPricingFramework = () => {
   const categories = ["Business Strategy", "Financials", "Operations"];
@@ -126,6 +127,12 @@ const StressTestPricingFramework = () => {
                 <span className="text-sm">12 min read</span>
               </div>
             </div>
+
+            <SocialShareButtons 
+              title="How Small Business Owners Can Stress-Test Pricing: A Framework to Optimize Margins and Cash Flow"
+              description="Optimize your small business pricing with a proven stress-test framework."
+              className="mb-8"
+            />
 
             {/* Hero Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8" style={{ maxWidth: '85%', margin: '0 auto' }}>

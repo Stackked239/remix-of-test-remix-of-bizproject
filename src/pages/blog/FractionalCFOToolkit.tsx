@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import fractionalCFOImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 // Dashboard card component for visual consistency
 const DashboardCard = ({ 
@@ -197,6 +198,12 @@ const FractionalCFOToolkit = () => {
                 <span>12 min read</span>
               </div>
             </div>
+            
+            <SocialShareButtons 
+              title="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have"
+              description="Discover the 7 essential financial dashboards every business owner needs for CFO-level visibility."
+              className="mb-8"
+            />
             
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
               <img 

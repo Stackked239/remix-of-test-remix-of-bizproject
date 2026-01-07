@@ -9,6 +9,7 @@ import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const TalentWarsHiring = () => {
   const publishDate = "2025-10-14";
@@ -135,6 +136,12 @@ const TalentWarsHiring = () => {
                 <span>•</span>
                 <span>7 min read</span>
               </div>
+
+              <SocialShareButtons 
+                title="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
+                description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies and retention tips."
+                className="mb-8"
+              />
 
               <figure className="mb-8">
                 <img 

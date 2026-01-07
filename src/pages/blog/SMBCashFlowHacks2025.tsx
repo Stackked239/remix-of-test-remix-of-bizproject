@@ -11,6 +11,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/smb-cash-flow-hacks-2025.jpg';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const SMBCashFlowHacks2025 = () => {
   const publishDate = "2025-10-14";
@@ -169,6 +170,11 @@ const SMBCashFlowHacks2025 = () => {
                   <span>{readTime} read</span>
                 </div>
               </div>
+
+              <SocialShareButtons 
+                title="5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025"
+                description="Master micro-business cash flow management with 5 proven strategies for 2025."
+              />
 
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden shadow-lg">

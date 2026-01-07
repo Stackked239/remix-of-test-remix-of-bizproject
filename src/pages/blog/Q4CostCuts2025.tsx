@@ -15,6 +15,7 @@ import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
 import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
 import businessIndexImage from '@/assets/q4-cost-cuts-small-business-index-white.png';
 import costReductionImage from '@/assets/q4-cost-cuts-cost-reduction-strategies.png';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const Q4CostCuts2025 = () => {
   const publishDate = "2025-11-03";
@@ -165,6 +166,11 @@ const Q4CostCuts2025 = () => {
                   <span>{readTime} read</span>
                 </div>
               </div>
+
+              <SocialShareButtons 
+                title="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses"
+                description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses."
+              />
 
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden shadow-lg">

@@ -9,6 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 import bizHealthAuthorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const TechnologyInnovationGap = () => {
   const handleShare = (platform: string) => {
@@ -87,16 +88,10 @@ const TechnologyInnovationGap = () => {
               </div>
             </div>
 
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={() => handleShare('linkedin')} className="gap-2">
-                <Linkedin className="w-4 h-4" />
-                Share
-              </Button>
-              <Button variant="outline" size="sm" onClick={() => handleShare('twitter')} className="gap-2">
-                <Twitter className="w-4 h-4" />
-                Post
-              </Button>
-            </div>
+            <SocialShareButtons 
+              title="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap"
+              description="Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency."
+            />
           </header>
 
           {/* Hero Image */}

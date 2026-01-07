@@ -58,13 +58,13 @@ const AIBusinessAnalytics = () => {
             {/* Article Header */}
             <header className="mb-12">
               <div className="flex flex-wrap gap-3 mb-6">
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                <span className="inline-block px-4 py-1.5 bg-[#969423]/15 text-[#969423] rounded-full text-sm font-semibold border border-[#969423]/30">
                   Technology
                 </span>
-                <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium">
+                <span className="inline-block px-4 py-1.5 bg-[hsl(var(--biz-navy))]/10 text-[hsl(var(--biz-navy))] rounded-full text-sm font-semibold border border-[hsl(var(--biz-navy))]/30">
                   Business Intelligence
                 </span>
-                <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary-foreground rounded-full text-sm font-medium">
+                <span className="inline-block px-4 py-1.5 bg-[#969423]/15 text-[#969423] rounded-full text-sm font-semibold border border-[#969423]/30">
                   Analytics
                 </span>
               </div>
@@ -124,12 +124,12 @@ const AIBusinessAnalytics = () => {
                 Frameworks like the McKinsey 7S Model highlight how aligning AI with strategy, structure, and systems can enhance efficiency by up to 25%. The stakes are high: ignoring AI-driven analytics risks falling behind, as competitors use predictive tools to forecast trends and optimize operations. Yet, with AI's clarity-first approach, even non-tech-savvy owners can demystify data, turning potential pitfalls into opportunities for sustainable growth.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Practical Applications of AI in SMB Analytics</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[#969423] pl-4">Practical Applications of AI in SMB Analytics</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 AI isn't about overhauling your entire operation overnight—it's about targeted improvements that deliver measurable results. Here are five key ways AI is revolutionizing small business analytics, grounded in industry standards like Lean principles and key performance indicators such as customer acquisition cost (CAC) and lifetime value (LTV).
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">1. Democratizing Data Access with Automated Insights</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3"><span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#969423] text-white text-sm font-bold">1</span>Democratizing Data Access with Automated Insights</h3>
               <p className="mb-4 text-muted-foreground leading-relaxed">
                 <strong>What it looks like:</strong> Instead of manual data crunching, AI tools automatically generate reports on sales trends, customer behavior, and operational efficiencies.
               </p>
@@ -140,7 +140,7 @@ const AIBusinessAnalytics = () => {
                 <strong>What to do:</strong> Start with plug-and-play platforms that integrate with your existing systems. For instance, use AI to benchmark your financial KPIs against industry standards from sources like IBISWorld. A boutique retailer we advised at BizHealth.ai used our AI diagnostics to spot seasonal trends, reducing inventory waste by 15% and boosting margins.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">2. Predictive Analytics for Proactive Decision-Making</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3"><span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#969423] text-white text-sm font-bold">2</span>Predictive Analytics for Proactive Decision-Making</h3>
               <p className="mb-4 text-muted-foreground leading-relaxed">
                 <strong>What it looks like:</strong> AI analyzes historical data to predict future trends, from sales forecasts to equipment maintenance needs.
               </p>
@@ -151,7 +151,7 @@ const AIBusinessAnalytics = () => {
                 <strong>What to do:</strong> Implement forecasting tools for cash flow, inventory, and customer demand. Track leading indicators like website traffic patterns or seasonal buying trends. A consulting firm used BizHealth.ai to predict client churn risk, implementing retention strategies that saved 30% of at-risk accounts.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">3. Personalized Customer Intelligence</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3"><span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#969423] text-white text-sm font-bold">3</span>Personalized Customer Intelligence</h3>
               <p className="mb-4 text-muted-foreground leading-relaxed">
                 <strong>What it looks like:</strong> AI segments customers and tailors recommendations or marketing campaigns based on behavior patterns.
               </p>
@@ -162,7 +162,7 @@ const AIBusinessAnalytics = () => {
                 <strong>What to do:</strong> Use marketing KPIs like conversion rates to refine strategies. Integrate AI chatbots or analytics to understand preferences. A restaurant client with BizHealth.ai revamped their loyalty program using AI insights, increasing repeat visits by 15%.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">4. Operational Efficiency Through Real-Time Monitoring</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3"><span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#969423] text-white text-sm font-bold">4</span>Operational Efficiency Through Real-Time Monitoring</h3>
               <p className="mb-4 text-muted-foreground leading-relaxed">
                 <strong>What it looks like:</strong> Dashboards that flag inefficiencies in real-time, from supply chain hiccups to HR gaps.
               </p>
@@ -173,7 +173,7 @@ const AIBusinessAnalytics = () => {
                 <strong>What to do:</strong> Employ Lean/Six Sigma principles with AI to streamline workflows. Monitor KPIs like pipeline velocity. BizHealth.ai helped a tech startup identify disengagement early, resulting in a 25% uplift in productivity after targeted interventions.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">5. Risk Mitigation and Compliance</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3"><span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#969423] text-white text-sm font-bold">5</span>Risk Mitigation and Compliance</h3>
               <p className="mb-4 text-muted-foreground leading-relaxed">
                 <strong>What it looks like:</strong> AI scans for anomalies in finance or compliance data, flagging potential issues before they escalate.
               </p>
@@ -184,55 +184,76 @@ const AIBusinessAnalytics = () => {
                 <strong>What to do:</strong> Set up automated alerts for unusual spending patterns or compliance gaps. Use AI to monitor regulatory changes affecting your industry. A manufacturing client used our platform to detect supplier payment anomalies, preventing $50,000 in fraudulent charges.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Overcoming Common AI Adoption Barriers</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[#969423] pl-4">Overcoming Common AI Adoption Barriers</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Despite AI's potential, many SMBs hesitate to adopt it. Let's address the most common concerns:
               </p>
 
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h4 className="font-semibold text-foreground mb-3">Concern: "It's Too Expensive"</h4>
+              <div className="bg-[#969423]/5 border-l-4 border-[#969423] rounded-lg p-6 mb-6">
+                <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                  <span className="text-[#969423]">💰</span> Concern: "It's Too Expensive"
+                </h4>
                 <p className="text-muted-foreground mb-2">
-                  <strong>Reality:</strong> Many AI tools now offer affordable, pay-as-you-go pricing. The ROI often justifies the cost within months.
+                  <strong className="text-[#969423]">Reality:</strong> Many AI tools now offer affordable, pay-as-you-go pricing. The ROI often justifies the cost within months.
                 </p>
                 <p className="text-muted-foreground">
-                  <strong>Solution:</strong> Start with one specific use case, measure results, then expand gradually.
+                  <strong className="text-[hsl(var(--biz-navy))]">Solution:</strong> Start with one specific use case, measure results, then expand gradually.
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h4 className="font-semibold text-foreground mb-3">Concern: "We Don't Have the Technical Expertise"</h4>
+              <div className="bg-[hsl(var(--biz-navy))]/5 border-l-4 border-[hsl(var(--biz-navy))] rounded-lg p-6 mb-6">
+                <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                  <span className="text-[hsl(var(--biz-navy))]">🔧</span> Concern: "We Don't Have the Technical Expertise"
+                </h4>
                 <p className="text-muted-foreground mb-2">
-                  <strong>Reality:</strong> Modern AI tools are designed for non-technical users with intuitive interfaces.
+                  <strong className="text-[#969423]">Reality:</strong> Modern AI tools are designed for non-technical users with intuitive interfaces.
                 </p>
                 <p className="text-muted-foreground">
-                  <strong>Solution:</strong> Choose platforms with strong customer support and training resources.
+                  <strong className="text-[hsl(var(--biz-navy))]">Solution:</strong> Choose platforms with strong customer support and training resources.
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h4 className="font-semibold text-foreground mb-3">Concern: "Our Data Isn't Ready"</h4>
+              <div className="bg-[#969423]/5 border-l-4 border-[#969423] rounded-lg p-6 mb-6">
+                <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                  <span className="text-[#969423]">📊</span> Concern: "Our Data Isn't Ready"
+                </h4>
                 <p className="text-muted-foreground mb-2">
-                  <strong>Reality:</strong> You don't need perfect data to get started. AI can work with existing data and improve over time.
+                  <strong className="text-[#969423]">Reality:</strong> You don't need perfect data to get started. AI can work with existing data and improve over time.
                 </p>
                 <p className="text-muted-foreground">
-                  <strong>Solution:</strong> Begin with the data you have, then gradually improve data quality as you see results.
+                  <strong className="text-[hsl(var(--biz-navy))]">Solution:</strong> Begin with the data you have, then gradually improve data quality as you see results.
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Your AI Analytics Roadmap</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[#969423] pl-4">Your AI Analytics Roadmap</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Ready to harness AI for your business analytics? Here's a practical roadmap:
               </p>
 
-              <ol className="mb-6 text-muted-foreground leading-relaxed space-y-3">
-                <li><strong>1. Assess your current state:</strong> Identify your biggest data pain points and manual processes</li>
-                <li><strong>2. Start small:</strong> Choose one area (e.g., sales forecasting or customer segmentation) for your first AI project</li>
-                <li><strong>3. Select the right tools:</strong> Look for platforms that integrate with your existing systems and offer good support</li>
-                <li><strong>4. Measure and iterate:</strong> Track ROI and adjust your approach based on results</li>
-                <li><strong>5. Scale gradually:</strong> Expand AI usage as you become more comfortable and see positive results</li>
+              <ol className="mb-6 text-muted-foreground leading-relaxed space-y-4 list-none pl-0">
+                <li className="flex items-start gap-3 bg-[#969423]/5 p-4 rounded-lg border-l-4 border-[#969423]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#969423] text-white text-xs font-bold shrink-0 mt-0.5">1</span>
+                  <span><strong className="text-foreground">Assess your current state:</strong> Identify your biggest data pain points and manual processes</span>
+                </li>
+                <li className="flex items-start gap-3 bg-[hsl(var(--biz-navy))]/5 p-4 rounded-lg border-l-4 border-[hsl(var(--biz-navy))]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[hsl(var(--biz-navy))] text-white text-xs font-bold shrink-0 mt-0.5">2</span>
+                  <span><strong className="text-foreground">Start small:</strong> Choose one area (e.g., sales forecasting or customer segmentation) for your first AI project</span>
+                </li>
+                <li className="flex items-start gap-3 bg-[#969423]/5 p-4 rounded-lg border-l-4 border-[#969423]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#969423] text-white text-xs font-bold shrink-0 mt-0.5">3</span>
+                  <span><strong className="text-foreground">Select the right tools:</strong> Look for platforms that integrate with your existing systems and offer good support</span>
+                </li>
+                <li className="flex items-start gap-3 bg-[hsl(var(--biz-navy))]/5 p-4 rounded-lg border-l-4 border-[hsl(var(--biz-navy))]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[hsl(var(--biz-navy))] text-white text-xs font-bold shrink-0 mt-0.5">4</span>
+                  <span><strong className="text-foreground">Measure and iterate:</strong> Track ROI and adjust your approach based on results</span>
+                </li>
+                <li className="flex items-start gap-3 bg-[#969423]/5 p-4 rounded-lg border-l-4 border-[#969423]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#969423] text-white text-xs font-bold shrink-0 mt-0.5">5</span>
+                  <span><strong className="text-foreground">Scale gradually:</strong> Expand AI usage as you become more comfortable and see positive results</span>
+                </li>
               </ol>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Future is Now</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[hsl(var(--biz-navy))] pl-4">The Future is Now</h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 AI isn't coming to small business analytics—it's already here. The question isn't whether you should adopt AI, but how quickly you can start benefiting from it. The businesses that embrace AI-powered analytics today will have a significant competitive advantage tomorrow.
               </p>
@@ -242,9 +263,9 @@ const AIBusinessAnalytics = () => {
               </p>
 
               {/* Call to Action */}
-              <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-xl p-8 mt-12 mb-12 border border-primary/20">
+              <div className="bg-gradient-to-br from-[#969423]/20 via-[hsl(var(--biz-navy))]/10 to-[#969423]/15 rounded-xl p-8 mt-12 mb-12 border-2 border-[#969423]/30 shadow-lg">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--biz-navy))]">
                     Ready to Revolutionize Your Business Analytics?
                   </h3>
                   <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
@@ -253,13 +274,13 @@ const AIBusinessAnalytics = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link 
                       to="/pricing" 
-                      className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                      className="inline-flex items-center justify-center bg-[#969423] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#969423]/90 transition-colors shadow-md"
                     >
-                      Start Your BizHealth Assessment
+                      Start Your Business Health Assessment
                     </Link>
                     <Link 
                       to="/how-it-works" 
-                      className="inline-flex items-center justify-center bg-background border border-border px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
+                      className="inline-flex items-center justify-center bg-white border-2 border-[hsl(var(--biz-navy))] text-[hsl(var(--biz-navy))] px-8 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--biz-navy))]/5 transition-colors"
                     >
                       Learn More
                     </Link>

@@ -125,7 +125,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   className="mb-8"
                 />
 
-                <div className="relative group">
+                <div className="relative group max-w-3xl mx-auto">
                   <div 
                     className="absolute -inset-1 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500"
                     style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))' }}
@@ -133,10 +133,10 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   <img
                     src={heroImage}
                     alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
-                    className="relative w-full rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
+                    className="relative w-full max-h-[400px] object-cover rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
                     loading="eager"
-                    width={1200}
-                    height={800}
+                    width={900}
+                    height={400}
                   />
                 </div>
 

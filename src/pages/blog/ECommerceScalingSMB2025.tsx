@@ -8,6 +8,7 @@ import { ArrowLeft, Clock, Calendar, User, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const ECommerceScalingSMB2025 = () => {
   const publishDate = "2025-10-13";
@@ -89,6 +90,12 @@ const ECommerceScalingSMB2025 = () => {
                     <span className="text-sm">{readTime}</span>
                   </div>
                 </div>
+                
+                <SocialShareButtons 
+                  title="E-Commerce Scaling: 5 Strategies for SMBs Thriving in 2025"
+                  description="Unlock 5 proven e-commerce scaling strategies for SMBs in 2025."
+                  className="mb-8"
+                />
               </header>
 
               <figure className="mb-12 rounded-xl overflow-hidden shadow-lg">

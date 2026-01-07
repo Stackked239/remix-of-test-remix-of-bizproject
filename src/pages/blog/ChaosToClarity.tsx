@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const ChaosToClarity = () => {
   const publishDate = "2025-12-24";
@@ -115,6 +116,12 @@ const ChaosToClarity = () => {
                   <span className="text-foreground">{readTime}</span>
                 </div>
               </div>
+              
+              <SocialShareButtons 
+                title="From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams"
+                description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees."
+                className="mt-6"
+              />
             </div>
           </div>
         </div>

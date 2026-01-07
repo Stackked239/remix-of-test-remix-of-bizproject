@@ -7,6 +7,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, Shield, ArrowRight, BarChart3, DollarSign, Users, Settings, Database, Lightbulb, Rocket, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const StageCard = ({ 
   stage, 
@@ -300,11 +301,17 @@ const BusinessHealthScoresByStage = () => {
                   <Calendar className="w-4 h-4" />
                   December 29, 2025
                 </span>
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  15 min read
-                </span>
-              </div>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                15 min read
+              </span>
+            </div>
+            
+            <SocialShareButtons 
+              title="What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit"
+              description="Learn what healthy business scores look like at each growth stage."
+              className="mb-8"
+            />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">

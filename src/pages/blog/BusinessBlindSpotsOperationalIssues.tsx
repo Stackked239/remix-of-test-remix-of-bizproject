@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, CheckSquare, AlertTriangle, DollarSign, Users, Cog, Tag, Database } from "lucide-react";
 import heroImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const BusinessBlindSpotsOperationalIssues = () => {
   const publishDate = "2025-12-28";
@@ -84,6 +85,12 @@ const BusinessBlindSpotsOperationalIssues = () => {
               <span>16 min read</span>
             </div>
           </div>
+          
+          <SocialShareButtons 
+            title="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
+            description="Discover why leaders see only 4% of operational issues and learn systematic strategies to find them."
+            className="mb-8"
+          />
           
           {/* Hero Image */}
           <figure className="mb-12">

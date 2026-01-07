@@ -7,6 +7,7 @@ import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import growthTrapHero from '@/assets/growth-trap-broken-business-model-2025.jpg';
 import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const GrowthTrapBrokenBusinessModel = () => {
   const publishDate = '2025-12-23';
@@ -99,6 +100,12 @@ const GrowthTrapBrokenBusinessModel = () => {
                   12 minute read
                 </span>
               </div>
+
+              <SocialShareButtons 
+                title="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
+                description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework."
+                className="mb-8"
+              />
 
               {/* Hero Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8 border border-border/50">

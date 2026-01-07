@@ -8,6 +8,7 @@ import { Calendar, Clock, User, Target, CheckCircle, TrendingUp, Sparkles, Alert
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
 import authorImage from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const MistakeCard = ({ 
   number, 
@@ -242,6 +243,12 @@ const VisionSharingBusinessOwner = () => {
               <span>11 min read</span>
             </div>
           </div>
+
+          <SocialShareButtons 
+            title="The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner"
+            description="Discover why 'they should already know' is the vision myth destroying team alignment."
+            className="mb-8"
+          />
 
           {/* Hero Image */}
           <div className="relative group mb-12">

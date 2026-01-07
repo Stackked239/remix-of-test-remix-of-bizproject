@@ -12,6 +12,7 @@ import cashFlowDefinition from "@/assets/cash-flow-definition-infographic.jpg";
 import businessChallenges from "@/assets/small-business-challenges-2025.png";
 import cashFlowKillers from "@/assets/cash-flow-killers-smb.jpg";
 import financialTips from "@/assets/financial-management-tips-smb.png";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const CashFlowCrisisManagement = () => {
   const navigate = useNavigate();
@@ -97,6 +98,12 @@ const CashFlowCrisisManagement = () => {
                 <span>•</span>
                 <span>9 min read</span>
               </div>
+
+              <SocialShareButtons 
+                title="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025"
+                description="Discover how to fix your cash flow management before it's too late."
+                className="mt-4"
+              />
             </div>
 
             {/* Hero Image */}

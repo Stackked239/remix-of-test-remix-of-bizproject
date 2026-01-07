@@ -537,25 +537,20 @@ const CRMRealityCheck = () => {
             </section>
             
             {/* CTA */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(var(--biz-green))] via-[hsl(var(--biz-green))]/90 to-primary rounded-2xl p-10 text-center shadow-2xl">
+            <section className="relative overflow-hidden bg-[hsl(var(--biz-green))] rounded-2xl p-10 text-center shadow-2xl">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
               
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white/90 text-sm font-medium mb-6">
-                  <CheckCircle className="w-4 h-4" />
-                  Free Business Health Assessment
-                </div>
-                
-                <h3 className="text-3xl font-bold mb-4 text-white">Ready to Assess Your Business Before CRM?</h3>
+                <h3 className="text-3xl font-bold mb-4 text-[#242553]">Ready to Assess Your Business Before CRM?</h3>
                 <p className="text-white/90 mb-8 max-w-xl mx-auto text-lg">
                   Identify your real operational bottlenecks before investing in technology. Get a comprehensive business health assessment—it's free and takes just 10 minutes.
                 </p>
                 
                 <Link
                   to="/bizgrowth"
-                  className="inline-flex items-center gap-3 bg-white text-[hsl(var(--biz-green))] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all hover:scale-105 hover:shadow-xl"
+                  className="inline-flex items-center gap-3 bg-white text-[#242553] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all hover:scale-105 hover:shadow-xl"
                 >
                   Start Your Business Health Assessment
                   <ArrowRight className="w-5 h-5" />

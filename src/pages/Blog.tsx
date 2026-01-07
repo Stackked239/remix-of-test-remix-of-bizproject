@@ -38,7 +38,7 @@ import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without
 import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
 import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
-import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.jpg";
+import businessHealthAssessment2026Image from "@/assets/images/business-health-assessment-2026-guide.jpg";
 import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg";
 import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";

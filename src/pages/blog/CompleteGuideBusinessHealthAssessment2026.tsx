@@ -45,7 +45,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
 
         <article className="pt-24 pb-16">
           {/* Hero Section */}
-          <div className="relative py-20 overflow-hidden">
+          <div className="relative pt-16 pb-8 overflow-hidden">
             {/* Background gradient */}
             <div 
               className="absolute inset-0"

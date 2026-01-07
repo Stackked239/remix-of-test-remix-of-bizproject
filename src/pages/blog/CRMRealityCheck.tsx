@@ -312,63 +312,119 @@ const CRMRealityCheck = () => {
             
             {/* What Determines Success */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">What Actually Determines CRM Success (Spoiler: It's Not the Software)</h2>
-              
-              <p className="text-muted-foreground mb-8">
-                If 55% of CRMs fail for people reasons—not technology reasons—then success depends on fixing the people side.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Clear Goals Before Tool Selection</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Don't start with "Which CRM should we buy?" Start with <strong>"What's not working in our sales process today?"</strong> Is it lead tracking? Follow-up consistency? Forecasting accuracy? Customer retention?
-                  </p>
-                  <p className="text-muted-foreground">
-                    If your actual problem is "Our sales team doesn't follow a consistent process," a CRM won't fix that—discipline and process will. A CRM will amplify consistent discipline. But if you have no discipline to begin with, CRM becomes a way to codify chaos.
-                  </p>
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-green))]/10 via-background to-primary/5 rounded-2xl p-8 border border-[hsl(var(--biz-green))]/20">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-[hsl(var(--biz-green))] p-3 rounded-xl">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-foreground">What Actually Determines CRM Success (Spoiler: It's Not the Software)</h2>
                 </div>
                 
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Choosing the Right Tool for Your Size</h3>
-                  <p className="text-muted-foreground">
-                    Small businesses don't need enterprise CRM features. <strong>Don't buy a $500/month system designed for a 500-person sales org.</strong> Buy a $50-100/month system designed for teams under 50 people. It will be easier to learn, easier to implement, and more likely to be adopted.
-                  </p>
-                </div>
+                <p className="text-muted-foreground mb-8 text-lg">
+                  If 55% of CRMs fail for people reasons—not technology reasons—then success depends on fixing the people side.
+                </p>
                 
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Data Quality Before Implementation</h3>
-                  <p className="text-muted-foreground">
-                    Before moving to a CRM, clean your existing customer data. Merge duplicates. Fill in gaps. Standardize fields. If you migrate messy data into a CRM, users will immediately distrust the data and adoption stalls.
-                  </p>
-                </div>
-                
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Investment in Proper Training</h3>
-                  <p className="text-muted-foreground">
-                    Generic CRM training doesn't work. Your sales team doesn't care about CRM features—they care about <strong>how to use the CRM to close deals faster</strong>. Training must be job-specific and hands-on, not a generic feature walkthrough.
-                  </p>
-                </div>
-                
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">User Involvement From the Start</h3>
-                  <p className="text-muted-foreground">
-                    The employees who will actually use the CRM should be involved in selecting it, not just told what they're getting. Let them test options. If employees feel heard and see the CRM as a solution to their problems, adoption improves dramatically.
-                  </p>
-                </div>
-                
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Leadership Using the System Visibly</h3>
-                  <p className="text-muted-foreground">
-                    If your CEO, sales VP, and department heads use the CRM and make decisions based on it, others follow. If leaders talk about CRM metrics in meetings and reward teams for data quality, adoption accelerates.
-                  </p>
-                </div>
-                
-                <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground">Integration With Existing Tools</h3>
-                  <p className="text-muted-foreground">
-                    CRM doesn't exist in isolation. It needs to connect to your accounting system, email, calendar, and support system. If the CRM forces you to re-enter data in multiple systems, the friction kills adoption.
-                  </p>
+                <div className="grid gap-4">
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">01</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Clear Goals Before Tool Selection</h3>
+                        <p className="text-muted-foreground mb-2">
+                          Don't start with "Which CRM should we buy?" Start with <strong>"What's not working in our sales process today?"</strong> Is it lead tracking? Follow-up consistency? Forecasting accuracy? Customer retention?
+                        </p>
+                        <p className="text-muted-foreground">
+                          If your actual problem is "Our sales team doesn't follow a consistent process," a CRM won't fix that—discipline and process will.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">02</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Choosing the Right Tool for Your Size</h3>
+                        <p className="text-muted-foreground">
+                          Small businesses don't need enterprise CRM features. <strong>Don't buy a $500/month system designed for a 500-person sales org.</strong> Buy a $50-100/month system designed for teams under 50 people.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">03</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Data Quality Before Implementation</h3>
+                        <p className="text-muted-foreground">
+                          Before moving to a CRM, clean your existing customer data. Merge duplicates. Fill in gaps. Standardize fields. If you migrate messy data, users will immediately distrust it and adoption stalls.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">04</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Investment in Proper Training</h3>
+                        <p className="text-muted-foreground">
+                          Generic CRM training doesn't work. Your sales team cares about <strong>how to use the CRM to close deals faster</strong>. Training must be job-specific and hands-on, not a generic feature walkthrough.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">05</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">User Involvement From the Start</h3>
+                        <p className="text-muted-foreground">
+                          The employees who will actually use the CRM should be involved in selecting it. Let them test options. If employees feel heard and see CRM as a solution to their problems, adoption improves dramatically.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">06</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Leadership Using the System Visibly</h3>
+                        <p className="text-muted-foreground">
+                          If your CEO, sales VP, and department heads use the CRM and make decisions based on it, others follow. If leaders talk about CRM metrics in meetings and reward teams for data quality, adoption accelerates.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:shadow-lg hover:border-[hsl(var(--biz-green))]/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                        <span className="text-[hsl(var(--biz-green))] font-bold text-lg">07</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-foreground">Integration With Existing Tools</h3>
+                        <p className="text-muted-foreground">
+                          CRM doesn't exist in isolation. It needs to connect to your accounting system, email, calendar, and support system. If the CRM forces you to re-enter data in multiple systems, the friction kills adoption.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -388,57 +444,67 @@ const CRMRealityCheck = () => {
             
             {/* 5-Step Checklist */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Your 5-Step CRM Success Checklist</h2>
-              
-              <div className="space-y-6">
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
-                    <h3 className="text-xl font-bold text-foreground">Diagnose the Real Problem (Not the Symptom)</h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    List your top 3 operational challenges: Sales process breakdowns? Customer service failures? Lost revenue due to poor follow-up? Pick one real problem CRM will solve.
-                  </p>
+              <div className="bg-gradient-to-r from-primary/5 via-[hsl(var(--biz-green))]/10 to-primary/5 rounded-2xl p-8 border-2 border-dashed border-[hsl(var(--biz-green))]/30">
+                <div className="text-center mb-8">
+                  <span className="inline-block bg-[hsl(var(--biz-green))] text-white text-sm font-bold px-4 py-1 rounded-full mb-4">ACTION PLAN</span>
+                  <h2 className="text-3xl font-bold text-foreground">Your 5-Step CRM Success Checklist</h2>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
-                    <h3 className="text-xl font-bold text-foreground">Define Success Metrics</h3>
+                <div className="relative">
+                  {/* Vertical line connector */}
+                  <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-[hsl(var(--biz-green))] via-primary to-[hsl(var(--biz-green))] hidden md:block" />
+                  
+                  <div className="space-y-6">
+                    <div className="relative flex items-start gap-6">
+                      <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 shadow-lg z-10">1</div>
+                      <div className="bg-card border border-border rounded-xl p-6 flex-1 hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-foreground mb-2">Diagnose the Real Problem (Not the Symptom)</h3>
+                        <p className="text-muted-foreground">
+                          List your top 3 operational challenges: Sales process breakdowns? Customer service failures? Lost revenue due to poor follow-up? <strong className="text-[hsl(var(--biz-green))]">Pick one real problem CRM will solve.</strong>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-start gap-6">
+                      <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 shadow-lg z-10">2</div>
+                      <div className="bg-card border border-border rounded-xl p-6 flex-1 hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-foreground mb-2">Define Success Metrics</h3>
+                        <p className="text-muted-foreground">
+                          What will success look like? Lower customer churn by X%? Reduce sales cycle by X days? <strong className="text-[hsl(var(--biz-green))]">Pick 2-3 metrics, establish baseline numbers, and commit to reviewing monthly.</strong>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-start gap-6">
+                      <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 shadow-lg z-10">3</div>
+                      <div className="bg-card border border-border rounded-xl p-6 flex-1 hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-foreground mb-2">Choose for Your Size and Culture</h3>
+                        <p className="text-muted-foreground">
+                          Don't buy an enterprise system. Find a CRM designed for teams 10-50. <strong className="text-[hsl(var(--biz-green))]">Prioritize ease of use and integration over features you might never use.</strong>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-start gap-6">
+                      <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 shadow-lg z-10">4</div>
+                      <div className="bg-card border border-border rounded-xl p-6 flex-1 hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-foreground mb-2">Plan for People, Not Just Technology</h3>
+                        <p className="text-muted-foreground">
+                          Build a detailed implementation plan that includes data migration, configuration, training, and user adoption. <strong className="text-[hsl(var(--biz-green))]">Designate a CRM champion and get leadership to commit.</strong>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-start gap-6">
+                      <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 shadow-lg z-10">5</div>
+                      <div className="bg-card border border-border rounded-xl p-6 flex-1 hover:shadow-md transition-shadow">
+                        <h3 className="text-xl font-bold text-foreground mb-2">Pilot, Measure, Refine</h3>
+                        <p className="text-muted-foreground">
+                          Don't roll out to the whole company on day one. <strong className="text-[hsl(var(--biz-green))]">Start with one team for 60-90 days.</strong> Measure progress, gather feedback, adjust, then expand.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-muted-foreground">
-                    What will success look like? Lower customer churn by X%? Reduce sales cycle by X days? Improve forecast accuracy? Pick 2-3 metrics, establish baseline numbers, and commit to reviewing monthly.
-                  </p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold">3</span>
-                    <h3 className="text-xl font-bold text-foreground">Choose for Your Size and Culture</h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Don't buy an enterprise system. Find a CRM designed for teams 10-50. Prioritize ease of use and integration with your existing tools over features you might never use. Start simple—you can add complexity later.
-                  </p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold">4</span>
-                    <h3 className="text-xl font-bold text-foreground">Plan for People, Not Just Technology</h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Build a detailed implementation plan that includes data migration, configuration, training, and user adoption activities. Designate a CRM champion. Provide role-specific training. Get leadership to commit to using it.
-                  </p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold">5</span>
-                    <h3 className="text-xl font-bold text-foreground">Pilot, Measure, Refine</h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Don't roll out to the whole company on day one. Start with one team or department. Let them use it for 60-90 days. Measure progress against your success metrics. Gather feedback. Adjust, then expand.
-                  </p>
                 </div>
               </div>
             </section>
@@ -471,18 +537,30 @@ const CRMRealityCheck = () => {
             </section>
             
             {/* CTA */}
-            <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Assess Your Business Before CRM?</h3>
-              <p className="text-muted-foreground mb-6">
-                Identify your real operational bottlenecks before investing in technology. Get a comprehensive business health assessment.
-              </p>
-              <Link
-                to="/bizgrowth"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-              >
-                Start Your Assessment
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(var(--biz-green))] via-[hsl(var(--biz-green))]/90 to-primary rounded-2xl p-10 text-center shadow-2xl">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+              
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white/90 text-sm font-medium mb-6">
+                  <CheckCircle className="w-4 h-4" />
+                  Free Business Health Assessment
+                </div>
+                
+                <h3 className="text-3xl font-bold mb-4 text-white">Ready to Assess Your Business Before CRM?</h3>
+                <p className="text-white/90 mb-8 max-w-xl mx-auto text-lg">
+                  Identify your real operational bottlenecks before investing in technology. Get a comprehensive business health assessment—it's free and takes just 10 minutes.
+                </p>
+                
+                <Link
+                  to="/bizgrowth"
+                  className="inline-flex items-center gap-3 bg-white text-[hsl(var(--biz-green))] px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all hover:scale-105 hover:shadow-xl"
+                >
+                  Start Your Business Health Assessment
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </section>
           </div>
         </div>

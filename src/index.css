@@ -180,6 +180,16 @@
   .animate-fade-in {
     animation: fade-in 0.5s ease-out;
   }
+  
+  /* Expand bar animation for progress bars */
+  @keyframes expand-bar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--bar-width, 100%);
+    }
+  }
 }
 
 /* Force-remove external builder badges (Lovable) */

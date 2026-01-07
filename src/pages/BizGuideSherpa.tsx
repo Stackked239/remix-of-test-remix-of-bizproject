@@ -385,11 +385,11 @@ const BizGuideSherpa = () => {
                   </Link>
                 </div>
 
-                {/* Right: Visual Card */}
-                <div className="bg-gradient-to-br from-[#faf9f7] to-white rounded-[20px] p-9 shadow-[0_4px_20px_rgba(33,38,83,0.1)] border border-[rgba(33,38,83,0.08)]">
+                {/* Right: Visual Card with Animation */}
+                <div className="bg-gradient-to-br from-[#faf9f7] to-white rounded-[20px] p-9 shadow-[0_4px_20px_rgba(33,38,83,0.1)] border border-[rgba(33,38,83,0.08)] animate-fade-in">
                   {/* Card Header */}
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-200">
-                    <div className="w-[52px] h-[52px] rounded-lg bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center p-2">
+                    <div className="w-[52px] h-[52px] rounded-lg bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center p-2 animate-[pulse_3s_ease-in-out_infinite]">
                       <img src="/favicon-96x96.png" alt="BizHealth.ai" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -398,18 +398,21 @@ const BizGuideSherpa = () => {
                     </div>
                   </div>
 
-                  {/* Metric Bars */}
+                  {/* Metric Bars with staggered animation */}
                   <div className="space-y-4">
                     {metrics.map((metric, index) => (
-                      <div key={index}>
+                      <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'both' }}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-[#7C7C7C] text-[0.9rem]" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>{metric.label}</span>
                           <span className="text-[#212653] font-bold text-[0.9rem]" style={{ fontFamily: 'Source Sans Pro, sans-serif' }}>{metric.value}%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                           <div 
-                            className={`h-full ${metric.color} rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${metric.value}%` }}
+                            className={`h-full ${metric.color} rounded-full animate-[expand-bar_1.2s_ease-out_forwards]`}
+                            style={{ 
+                              '--bar-width': `${metric.value}%`,
+                              animationDelay: `${index * 150 + 300}ms`
+                            } as React.CSSProperties}
                           />
                         </div>
                       </div>

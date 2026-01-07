@@ -4,6 +4,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
+import SocialShareButtons from "@/components/SocialShareButtons";
 import blindSpotsHero from '@/assets/business-blind-spots-assessment.jpg';
 import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
 import frameworkImage from '@/assets/blindspot-analysis-framework.jpg';
@@ -79,6 +80,14 @@ const BusinessBlindSpots2025 = () => {
             <span>•</span>
             <span>11 min read</span>
           </div>
+
+          {/* Social Share Buttons */}
+          <SocialShareButtons 
+            title="The Business Blind Spots Costing SMB Leaders $50K+ Annually"
+            description="Discover the 5 dangerous business blind spots draining SMB profits. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually."
+            url={canonicalUrl}
+            className="mb-6"
+          />
         </header>
 
         {/* Article Content */}

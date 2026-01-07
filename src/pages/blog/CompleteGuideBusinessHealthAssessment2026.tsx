@@ -7,6 +7,7 @@ import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
 import heroImage from '@/assets/business-health-assessment-guide-2026.jpg';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const CompleteGuideBusinessHealthAssessment2026 = () => {
   const publishDate = "2025-11-24";
@@ -115,6 +116,14 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <span>15 min read</span>
                 </div>
+
+                {/* Social Share Buttons */}
+                <SocialShareButtons 
+                  title="The Complete Guide to Business Health Assessment for 2026"
+                  description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, and strategic alignment."
+                  url="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
+                  className="mb-8"
+                />
 
                 <div className="relative group">
                   <div 

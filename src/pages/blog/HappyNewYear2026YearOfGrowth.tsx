@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, Target, CheckCircle, TrendingUp, Sparkles, RefreshCw, BarChart3, Heart, Zap, Lightbulb, ArrowRight, Quote } from "lucide-react";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/happy-new-year-2026-business-growth.jpg";
 import authorImage from "@/assets/bizhealth-author-icon.jpg";
@@ -216,6 +217,14 @@ const HappyNewYear2026YearOfGrowth = () => {
               <span>10 min read</span>
             </div>
           </div>
+
+          {/* Social Share Buttons */}
+          <SocialShareButtons 
+            title="Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow"
+            description="Reflect on 2025's business lessons and embrace 2026 as your year of intentional growth. Discover the three strategic moves for sustainable small business success."
+            url="https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth"
+            className="mb-8"
+          />
 
           {/* Hero Image - No overlay, with glow effect */}
           <div className="relative group mb-12">

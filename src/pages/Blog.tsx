@@ -61,9 +61,11 @@ import visionSharingImage from "@/assets/vision-sharing-business-owner-team-cele
 import feastFamineCycleImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
 import hrProgramAssetImage from "@/assets/hr-program-small-business-asset-multiplier.jpg";
 import technologyStrategicAllyImage from "@/assets/images/technology-strategic-ally-roi-decisions-growth.jpg";
+import crmRealityCheckImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/crm-reality-check-small-business-decision": crmRealityCheckImage,
   "/blog/technology-strategic-ally-roi-decisions": technologyStrategicAllyImage,
   "/blog/hr-program-asset-multiplier-small-business": hrProgramAssetImage,
   "/blog/feast-or-famine-cycle-small-business": feastFamineCycleImage,

@@ -139,17 +139,6 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                     height={400}
                   />
                 </div>
-
-                <p 
-                  className="text-xl md:text-2xl leading-relaxed font-medium animate-fade-in"
-                  style={{ 
-                    color: 'hsl(var(--biz-navy))',
-                    borderLeft: '4px solid hsl(var(--biz-green))',
-                    paddingLeft: '1rem'
-                  }}
-                >
-                  Your Strategic Roadmap for the Year Ahead
-                </p>
               </div>
             </div>
           </div>

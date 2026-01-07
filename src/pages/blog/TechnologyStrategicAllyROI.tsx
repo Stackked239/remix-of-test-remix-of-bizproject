@@ -46,13 +46,13 @@ const TechnologyStrategicAllyROI = () => {
             </Link>
             
             <div className="mb-6 flex flex-wrap gap-2">
-              <Link to="/blog/technology" className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full hover:bg-primary/20 transition-colors">
+              <Link to="/blog/technology" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
                 Technology
               </Link>
-              <Link to="/blog/operations" className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full hover:bg-primary/20 transition-colors">
+              <Link to="/blog/operations" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
                 Operations
               </Link>
-              <Link to="/blog/business-strategy" className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full hover:bg-primary/20 transition-colors">
+              <Link to="/blog/business-strategy" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
                 Business Strategy
               </Link>
             </div>
@@ -118,10 +118,13 @@ const TechnologyStrategicAllyROI = () => {
                 Let's look at a concrete example. Green Thumb Landscaping, a 15-person operation, took a different approach. Before implementing any AI solutions, they established what success would look like: reduced scheduling errors, faster response times to client inquiries, and time freed up from administrative overhead. Then, after one year, they ran the numbers.
               </p>
               
-              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg my-8">
-                <p className="text-foreground font-semibold mb-2">Real-World ROI Example:</p>
-                <p className="text-muted-foreground">
-                  For every <strong>$1,800 invested</strong>, Green Thumb Landscaping received <strong>$4,020 in measurable return</strong>—a <strong>123% ROI</strong> backed by concrete data. They knew exactly which processes improved, how much time was actually freed, and what that time was worth in dollars.
+              <div className="bg-[hsl(var(--biz-green))]/10 border-l-4 border-[hsl(var(--biz-green))] p-6 rounded-r-lg my-8">
+                <p className="text-[hsl(var(--biz-green))] font-bold mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>
+                  Real-World ROI Example:
+                </p>
+                <p className="text-foreground">
+                  For every <strong className="text-[hsl(var(--biz-green))]">$1,800 invested</strong>, Green Thumb Landscaping received <strong className="text-[hsl(var(--biz-green))]">$4,020 in measurable return</strong>—a <strong className="text-[hsl(var(--biz-green))]">123% ROI</strong> backed by concrete data. They knew exactly which processes improved, how much time was actually freed, and what that time was worth in dollars.
                 </p>
               </div>
               
@@ -133,28 +136,46 @@ const TechnologyStrategicAllyROI = () => {
                 This is why Forbes research found that <strong>60% of businesses that adopted technology in 2024 are now at a crossroads</strong>: Can they justify renewing subscriptions? Can they demonstrate that tools provided value? Most cannot. And here's the dangerous part—many will continue renewing subscriptions they can't quantify, slowly bleeding cash in the name of staying "modern."
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Five Dimensions of Technology ROI</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[hsl(var(--biz-green))] pl-4">The Five Dimensions of Technology ROI</h2>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 If measurement is the problem, then a systematic framework is the solution. Before purchasing any technology, establish success metrics across these five dimensions:
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">1. Cost Savings (Direct Financial Impact)</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-green))]/20 text-[hsl(var(--biz-green))] text-sm font-bold">1</span>
+                Cost Savings (Direct Financial Impact)
+              </h3>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 This is the easiest to measure and often where technology delivers fastest returns. Time savings translate directly to dollars. If a process currently requires one employee to spend 10 hours per week at a fully-loaded cost of $50/hour, that's $26,000 annually. If automation reduces it to 2 hours per week, your annual savings is approximately $20,800—before you even factor in the compounding benefits of what your employee can now do with that freed time.
               </p>
               
-              <div className="bg-muted rounded-lg p-6 my-8">
-                <p className="text-foreground font-semibold mb-2">Accounts Payable Automation Results:</p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• <strong>81% cost reduction</strong> in processing expenses</li>
-                  <li>• <strong>73% faster</strong> processing cycle times</li>
-                  <li>• Payback period: <strong>4-9 months</strong></li>
+              <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-muted rounded-lg p-6 my-8 border border-[hsl(var(--biz-green))]/20">
+                <p className="text-foreground font-bold mb-3 flex items-center gap-2">
+                  <span className="w-3 h-3 bg-[hsl(var(--biz-green))] rounded-full"></span>
+                  Accounts Payable Automation Results:
+                </p>
+                <ul className="space-y-2 text-foreground">
+                  <li className="flex items-center gap-2">
+                    <span className="text-[hsl(var(--biz-green))]">✓</span>
+                    <strong className="text-[hsl(var(--biz-green))]">81% cost reduction</strong> in processing expenses
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[hsl(var(--biz-green))]">✓</span>
+                    <strong className="text-[hsl(var(--biz-green))]">73% faster</strong> processing cycle times
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[hsl(var(--biz-green))]">✓</span>
+                    Payback period: <strong className="text-[hsl(var(--biz-green))]">4-9 months</strong>
+                  </li>
                 </ul>
               </div>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">2. Attribution (Revenue Impact)</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-green))]/20 text-[hsl(var(--biz-green))] text-sm font-bold">2</span>
+                Attribution (Revenue Impact)
+              </h3>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 This is harder to measure than cost savings because causation isn't always obvious. But it's critical. A salon owner implements scheduling AI, reducing no-shows by 30%. Do you know how much additional revenue that generated? Most don't track it. They just notice they're busier.
@@ -168,7 +189,10 @@ const TechnologyStrategicAllyROI = () => {
                 <strong>To measure attribution:</strong> establish baseline metrics before implementation (no-show rate, proposal turnaround time, close rate). Then track the same metrics after implementation. If your close rate moves from 25% to 31% after implementing a CRM with AI-powered lead scoring, you can now quantify the revenue impact.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">3. Operational Improvements (Quality & Efficiency)</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-green))]/20 text-[hsl(var(--biz-green))] text-sm font-bold">3</span>
+                Operational Improvements (Quality & Efficiency)
+              </h3>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Beyond time and revenue, track error reduction, quality metrics, and scalability improvements. A manufacturing business implementing IoT sensors reduces defects by 12%—which saves rework costs, improves customer satisfaction, and reduces warranty claims. An e-commerce business implementing inventory forecasting AI reduces overstock by 20%, freeing up working capital and reducing waste.
@@ -178,7 +202,10 @@ const TechnologyStrategicAllyROI = () => {
                 The question to ask: Does this tool help us do more with the same resources, or help us maintain quality while growing?
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">4. Customer Satisfaction & Retention</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-green))]/20 text-[hsl(var(--biz-green))] text-sm font-bold">4</span>
+                Customer Satisfaction & Retention
+              </h3>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Technology often delivers softer benefits that compound over time. Faster response times, better personalization, reduced errors—these build loyalty. A coffee chain in Singapore implemented AI-driven customer preference systems and inventory optimization, resulting in a <strong>47% increase in revenue</strong> attributed directly to AI-enhanced customer experiences.
@@ -188,23 +215,34 @@ const TechnologyStrategicAllyROI = () => {
                 Track Net Promoter Score (NPS), customer churn rate, and repeat purchase frequency before and after implementation.
               </p>
 
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">5. Decision-Making Speed & Quality</h3>
+              <h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-green))]/20 text-[hsl(var(--biz-green))] text-sm font-bold">5</span>
+                Decision-Making Speed & Quality
+              </h3>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Some technology doesn't save time or reduce costs directly—it just makes your decisions better. Business intelligence tools, for instance, might take the same amount of time to implement and maintain as your current reporting, but they replace gut-feel decisions with data-driven ones.
               </p>
               
-              <div className="bg-muted rounded-lg p-6 my-8">
-                <p className="text-foreground font-semibold mb-2">Before vs. After Data-Driven Decisions:</p>
-                <p className="text-muted-foreground mb-2"><strong>Before:</strong> "I think we should reduce prices in Q3."</p>
-                <p className="text-muted-foreground"><strong>After:</strong> "Data shows demand elasticity of 1.2, suggesting a 10% price reduction in Q3 will increase revenue by 8%."</p>
+              <div className="bg-gradient-to-r from-muted to-[hsl(var(--biz-green))]/10 rounded-lg p-6 my-8 border border-[hsl(var(--biz-green))]/20">
+                <p className="text-foreground font-bold mb-4">Before vs. After Data-Driven Decisions:</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-background/50 p-4 rounded-lg border-l-4 border-muted-foreground/30">
+                    <p className="text-sm text-muted-foreground font-medium mb-1">BEFORE</p>
+                    <p className="text-foreground italic">"I think we should reduce prices in Q3."</p>
+                  </div>
+                  <div className="bg-background/50 p-4 rounded-lg border-l-4 border-[hsl(var(--biz-green))]">
+                    <p className="text-sm text-[hsl(var(--biz-green))] font-medium mb-1">AFTER</p>
+                    <p className="text-foreground">"Data shows demand elasticity of 1.2, suggesting a 10% price reduction in Q3 will increase revenue by 8%."</p>
+                  </div>
+                </div>
               </div>
               
               <p className="mb-8 text-muted-foreground leading-relaxed">
                 This dimension is hardest to quantify but often the most valuable for growing businesses.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Hidden Costs: Technology Blind Spots Draining $50K+ Annually</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-destructive pl-4">The Hidden Costs: Technology Blind Spots Draining $50K+ Annually</h2>
               
               <p className="mb-8 text-muted-foreground leading-relaxed">
                 Before you invest in new technology, audit what you already have. Most small businesses are hemorrhaging money through undetected inefficiencies that technology could solve—but first, you need to see them.
@@ -250,51 +288,51 @@ const TechnologyStrategicAllyROI = () => {
                 <p className="text-destructive font-semibold">Real cost: Turnover costs (25% of an employee's annual salary) plus the operational chaos during replacement.</p>
               </div>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Decision Framework: How to Evaluate Technology Before Buying</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[hsl(var(--biz-green))] pl-4">The Decision Framework: How to Evaluate Technology Before Buying</h2>
               
               <p className="mb-8 text-muted-foreground leading-relaxed">
                 Here's a practical framework for assessing any technology investment:
               </p>
 
-              <div className="bg-muted rounded-lg p-6 mb-8">
+              <div className="bg-gradient-to-br from-muted to-[hsl(var(--biz-green))]/5 rounded-lg p-6 mb-8 border border-[hsl(var(--biz-green))]/10">
                 <ul className="space-y-6">
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">1</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">1</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Define the Problem (Not the Solution)</h4>
                       <p className="text-muted-foreground">Don't start with "Should we get AI?" Start with "What specifically is broken?" Is it that customer inquiries take too long to respond to? Invoicing takes 20 touches? Data is scattered across spreadsheets? Be specific. "We need to be more modern" is not a problem. "We're losing 10% of leads because follow-up is inconsistent" is a problem.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">2</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">2</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Establish Baseline Metrics</h4>
                       <p className="text-muted-foreground">Before you implement anything, measure the current state. How many hours does the process currently take? How many errors occur? What's the current cost? What does customer satisfaction look like? Green Thumb Landscaping did this—they knew exactly what success looked like before buying a tool.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">3</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">3</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Calculate the Total Cost of Ownership (TCO)</h4>
                       <p className="text-muted-foreground">Most small businesses calculate only the annual software cost. Real TCO includes: software licensing, implementation/setup costs, training time (hours × hourly rate), ongoing support/maintenance, integration costs, and potential productivity loss during transition.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">4</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">4</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Set Success Metrics and Review Frequency</h4>
                       <p className="text-muted-foreground">Decide how you'll measure ROI. Will it be time savings? Cost reduction? Revenue impact? Customer satisfaction? Pick the metrics that matter, then agree on a review cadence—monthly for the first quarter, then quarterly. Example: "Implementation is successful if customer response time decreases from 24 hours to 4 hours AND we save 8 hours per week in administrative work."</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">5</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">5</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Pilot, Don't Boil the Ocean</h4>
                       <p className="text-muted-foreground">Start with one use case, one team, or one process. Test for 90 days, measure the results, then decide whether to expand or pivot. This dramatically reduces your risk and gives you real data instead of vendor promises.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">6</div>
+                    <div className="bg-[hsl(var(--biz-green))] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">6</div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Build in an Exit Clause</h4>
                       <p className="text-muted-foreground">If after 90 days the ROI isn't there, have permission to stop. Many small business owners continue paying for tools they've mentally abandoned because the stopping decision feels like failure. It's not—it's good judgment.</p>
@@ -303,11 +341,13 @@ const TechnologyStrategicAllyROI = () => {
                 </ul>
               </div>
 
-              {/* TCO Example Callout */}
-              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg my-8">
-                <p className="text-foreground font-semibold mb-2">True Cost Example:</p>
-                <p className="text-muted-foreground">
-                  For a $100/month tool that requires 40 hours of implementation at $50/hour and 4 hours of monthly training, your true first-year cost is approximately <strong>$3,600</strong>, not $1,200.
+              <div className="bg-[hsl(var(--biz-green))]/10 border-l-4 border-[hsl(var(--biz-green))] p-6 rounded-r-lg my-8">
+                <p className="text-[hsl(var(--biz-green))] font-bold mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>
+                  True Cost Example:
+                </p>
+                <p className="text-foreground">
+                  For a $100/month tool that requires 40 hours of implementation at $50/hour and 4 hours of monthly training, your true first-year cost is approximately <strong className="text-[hsl(var(--biz-green))]">$3,600</strong>, not $1,200.
                 </p>
               </div>
 
@@ -341,7 +381,7 @@ const TechnologyStrategicAllyROI = () => {
                 76% of employees say they lack confidence using new technology, not because it's complex, but because training feels generic or irrelevant to their job. <strong>Solution:</strong> Provide job-specific training tailored to how your business uses the tool, not how the vendor designed it. Have power users work alongside other employees for the first two weeks.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Why ROI Matters More Than "The Wow Factor"</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[hsl(var(--biz-green))] pl-4">Why ROI Matters More Than "The Wow Factor"</h2>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Tech vendors excel at impressive demos. Features that wow in a conference room often gather dust after implementation. What matters is whether it moves the needle on your business—whether it frees up time that allows you to take on more revenue, reduces errors that were costing money, or helps you make better decisions.
@@ -355,7 +395,7 @@ const TechnologyStrategicAllyROI = () => {
                 Tools like <Link to="/how-it-works" className="text-primary hover:underline">BizHealth.ai</Link> can be instrumental in helping you identify where technology investments will have the most impact. By conducting a <Link to="/blog/complete-guide-business-health-assessment-2026" className="text-primary hover:underline">comprehensive business health assessment</Link> across operations, financials, and strategy, you uncover the blind spots and inefficiencies where technology will actually move the needle. Rather than scattering investments across trendy tools, you identify the specific areas where your business is leaking money or capability—and then deploy technology strategically against those identified gaps.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Bottom Line</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground border-l-4 border-[hsl(var(--biz-green))] pl-4">The Bottom Line</h2>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Technology isn't your enemy, and it's not a panacea. It's a tool. The owners and businesses thriving in 2025 aren't those frantically adopting every new platform—they're the ones asking hard questions: Is this solving a real problem? Can I measure the ROI? Will my team actually use it?
@@ -365,15 +405,14 @@ const TechnologyStrategicAllyROI = () => {
                 <strong>Stop asking "Should we invest in this technology?"</strong> Start asking "What's the problem, what's the measurable impact of solving it, and does this tool deliver that impact cost-effectively?" Then measure ruthlessly. The gap between adoption and results isn't a technology problem—it's a measurement problem. Solve measurement first, and technology becomes an ally instead of an expense.
               </p>
 
-              {/* Call to Action */}
-              <div className="bg-primary rounded-2xl p-8 text-white text-center mt-12">
+              <div className="bg-gradient-to-r from-[hsl(var(--biz-navy))] to-[hsl(var(--biz-green))] rounded-2xl p-8 text-white text-center mt-12 shadow-lg">
                 <h3 className="text-2xl font-bold mb-4">Identify Your Technology Blind Spots</h3>
                 <p className="text-white/90 mb-6">
                   Discover where technology investments will have the most impact on your business with a comprehensive health assessment.
                 </p>
                 <Link 
                   to="/how-it-works"
-                  className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white text-[hsl(var(--biz-navy))] px-8 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--biz-green))]/20 hover:text-white transition-colors border-2 border-white"
                 >
                   Start Your Assessment
                 </Link>

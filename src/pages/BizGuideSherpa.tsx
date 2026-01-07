@@ -389,7 +389,7 @@ const BizGuideSherpa = () => {
                 <div className="bg-gradient-to-br from-[#faf9f7] to-white rounded-[20px] p-9 shadow-[0_4px_20px_rgba(33,38,83,0.1)] border border-[rgba(33,38,83,0.08)] animate-fade-in">
                   {/* Card Header */}
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-200">
-                    <div className="w-[52px] h-[52px] rounded-lg bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center p-2 animate-[pulse_3s_ease-in-out_infinite]">
+                    <div className="w-[52px] h-[52px] rounded-lg bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center p-2">
                       <img src="/favicon-96x96.png" alt="BizHealth.ai" className="w-full h-full object-contain" />
                     </div>
                     <div>

@@ -107,7 +107,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
                 </h1>
 
                 <div 
-                  className="flex flex-wrap items-center gap-4 text-sm mb-10 animate-fade-in"
+                  className="flex flex-wrap items-center gap-4 text-sm mb-4 animate-fade-in"
                   style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}
                 >
                   <span className="font-medium">By {author}</span>

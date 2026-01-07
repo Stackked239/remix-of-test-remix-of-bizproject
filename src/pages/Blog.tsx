@@ -60,9 +60,11 @@ import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.
 import visionSharingImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
 import feastFamineCycleImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
 import hrProgramAssetImage from "@/assets/hr-program-small-business-asset-multiplier.jpg";
+import technologyStrategicAllyImage from "@/assets/images/technology-strategic-ally-roi-decisions-growth.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/technology-strategic-ally-roi-decisions": technologyStrategicAllyImage,
   "/blog/hr-program-asset-multiplier-small-business": hrProgramAssetImage,
   "/blog/feast-or-famine-cycle-small-business": feastFamineCycleImage,
   "/blog/vision-sharing-business-owner": visionSharingImage,

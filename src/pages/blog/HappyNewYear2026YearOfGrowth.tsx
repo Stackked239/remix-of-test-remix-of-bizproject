@@ -17,10 +17,10 @@ const LessonCard = ({
   title: string; 
   description: string;
 }) => (
-  <div className="p-5 rounded-xl border border-border bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">
+  <div className="p-5 rounded-xl border-l-4 bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300" style={{ borderLeftColor: 'hsl(var(--biz-green))' }}>
     <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-primary/10 flex-shrink-0">
-        <Lightbulb className="w-5 h-5 text-primary" />
+      <div className="p-2 rounded-lg flex-shrink-0" style={{ background: 'hsl(var(--biz-green) / 0.15)' }}>
+        <Lightbulb className="w-5 h-5" style={{ color: 'hsl(var(--biz-green))' }} />
       </div>
       <div>
         <h4 className="font-bold text-foreground mb-2">{title}</h4>
@@ -43,13 +43,13 @@ const MoveCard = ({
   items?: string[];
   icon: React.ElementType;
 }) => (
-  <div className="rounded-2xl border-2 border-primary/20 p-6 bg-gradient-to-br from-background to-primary/5">
+  <div className="rounded-2xl border-2 p-6 bg-gradient-to-br from-background" style={{ borderColor: 'hsl(var(--biz-green) / 0.3)', backgroundImage: 'linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--biz-green) / 0.08))' }}>
     <div className="flex items-center gap-3 mb-4">
-      <div className="p-3 rounded-xl bg-primary/10">
-        <Icon className="w-6 h-6 text-primary" />
+      <div className="p-3 rounded-xl" style={{ background: 'hsl(var(--biz-green) / 0.15)' }}>
+        <Icon className="w-6 h-6" style={{ color: 'hsl(var(--biz-green))' }} />
       </div>
       <div>
-        <span className="text-sm font-bold uppercase tracking-wide text-primary">
+        <span className="text-sm font-bold uppercase tracking-wide" style={{ color: 'hsl(var(--biz-green))' }}>
           Move #{number}
         </span>
         <h3 className="text-xl font-bold text-foreground">{title}</h3>
@@ -60,7 +60,7 @@ const MoveCard = ({
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2 text-foreground text-sm">
-            <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'hsl(var(--biz-green))' }} />
             {item}
           </li>
         ))}
@@ -78,14 +78,14 @@ const RhythmCard = ({
   duration: string;
   description: string;
 }) => (
-  <div className="p-5 rounded-xl border border-border bg-card">
+  <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(var(--biz-green))' }}>
     <div className="flex items-center gap-3 mb-3">
-      <div className="p-2 rounded-lg bg-primary/10">
-        <RefreshCw className="w-5 h-5 text-primary" />
+      <div className="p-2 rounded-lg" style={{ background: 'hsl(var(--biz-green) / 0.15)' }}>
+        <RefreshCw className="w-5 h-5" style={{ color: 'hsl(var(--biz-green))' }} />
       </div>
       <div>
         <h4 className="font-bold text-foreground">{frequency}</h4>
-        <span className="text-xs text-muted-foreground">{duration}</span>
+        <span className="text-xs" style={{ color: 'hsl(var(--biz-green))' }}>{duration}</span>
       </div>
     </div>
     <p className="text-muted-foreground text-sm">{description}</p>
@@ -315,9 +315,9 @@ const HappyNewYear2026YearOfGrowth = () => {
                 />
               </div>
 
-              <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
+              <div className="p-6 rounded-xl border" style={{ background: 'hsl(var(--biz-green) / 0.08)', borderColor: 'hsl(var(--biz-green) / 0.25)' }}>
                 <p className="text-foreground font-medium text-center">
-                  Whatever you learned in 2025—and you learned something—carry that forward. That knowledge is your competitive advantage in 2026. <span className="text-primary">The lessons earned through struggle are the ones that stick.</span>
+                  Whatever you learned in 2025—and you learned something—carry that forward. That knowledge is your competitive advantage in 2026. <span style={{ color: 'hsl(var(--biz-green))' }} className="font-semibold">The lessons earned through struggle are the ones that stick.</span>
                 </p>
               </div>
             </section>
@@ -340,33 +340,33 @@ const HappyNewYear2026YearOfGrowth = () => {
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you got clearer on who you serve</p>
                   <p className="text-sm text-muted-foreground">That is progress. It might not show up as revenue yet. But you are now pointing in the right direction.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you invested in a team member's development</p>
                   <p className="text-sm text-muted-foreground">That is progress. It might not show up in quarterly results yet. But you are building capability that will compound over years.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you improved a process or documented a workflow</p>
                   <p className="text-sm text-muted-foreground">That is progress. It might feel like overhead. But you are building a foundation for scale.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you had a difficult conversation or set a boundary</p>
                   <p className="text-sm text-muted-foreground">That is progress. It might have been uncomfortable. But you are building a business aligned with who you are.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you learned something new about your business</p>
                   <p className="text-sm text-muted-foreground">That is progress. Facing reality is harder than avoiding it. But you are no longer operating blind.</p>
                 </div>
-                <div className="p-5 rounded-xl border border-border bg-card">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mb-3" />
+                <div className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
+                  <CheckCircle className="w-6 h-6 mb-3" style={{ color: 'hsl(var(--biz-green))' }} />
                   <p className="text-foreground font-medium mb-2">If you survived a setback or navigated a crisis</p>
                   <p className="text-sm text-muted-foreground">That is progress. Resilience is what separates businesses that thrive from those that fail.</p>
                 </div>
@@ -616,8 +616,8 @@ const HappyNewYear2026YearOfGrowth = () => {
                 2026 is waiting for you. Not as a promise, but as an opportunity. Not as something that will be easy, but as something that can be meaningful and filled with growth.
               </p>
               
-              <p className="text-2xl font-bold text-primary text-center mb-8">
-                Go build it.
+              <p className="text-2xl font-bold text-center mb-8" style={{ color: 'hsl(var(--biz-green))' }}>
+                🚀 Go build it.
               </p>
             </section>
 

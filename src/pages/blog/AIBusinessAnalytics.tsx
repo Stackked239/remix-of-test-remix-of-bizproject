@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 
 const AIBusinessAnalytics = () => {
-  const publishDate = '2024-12-15';
-  const modifiedDate = '2024-12-15';
+  const publishDate = '2025-08-10';
+  const modifiedDate = '2025-08-10';
   const articleUrl = 'https://bizhealth.ai/blog/ai-business-analytics';
 
   return (
@@ -25,7 +25,7 @@ const AIBusinessAnalytics = () => {
         ogImage="/og-images/og-ai-business-analytics.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
-        articleAuthor="Jennifer Walsh"
+        articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
         type="blogPosting"
@@ -34,7 +34,7 @@ const AIBusinessAnalytics = () => {
         image={aiAnalyticsImage}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        author="Jennifer Walsh"
+        author="BizHealth.ai Research Team"
         url={articleUrl}
         keywords={["AI business analytics", "small business intelligence", "AI for SMBs", "business analytics tools", "machine learning"]}
       />
@@ -76,11 +76,11 @@ const AIBusinessAnalytics = () => {
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-8">
                 <span className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  By Jennifer Walsh
+                  By BizHealth.ai Research Team
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  December 15, 2024
+                  August 10, 2025
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />

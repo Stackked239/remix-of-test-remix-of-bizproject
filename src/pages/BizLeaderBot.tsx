@@ -387,8 +387,8 @@ const BizLeaderBot = () => {
                 <div className="bg-gradient-to-br from-biz-cream to-biz-warm rounded-2xl p-8 shadow-xl">
                   {/* Card Header */}
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-biz-green/20 flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-biz-green" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#969423] to-[#b8b344] flex items-center justify-center p-2">
+                      <img src="/favicon-96x96.png" alt="BizHealth.ai" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <div className="text-base font-bold text-biz-blue uppercase tracking-wider">Business Health Score</div>

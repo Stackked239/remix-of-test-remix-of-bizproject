@@ -414,7 +414,7 @@ const TechnologyStrategicAllyROI = () => {
                   to="/how-it-works"
                   className="inline-block bg-white text-[hsl(var(--biz-navy))] px-8 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--biz-green))]/20 hover:text-white transition-colors border-2 border-white"
                 >
-                  Start Your Assessment
+                  Start Your Business Health Assessment
                 </Link>
               </div>
             </div>

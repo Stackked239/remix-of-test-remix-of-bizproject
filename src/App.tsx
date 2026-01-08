@@ -129,6 +129,7 @@ const TechnologyInnovationReadiness = lazy(() => import("./pages/bizgrowth/Techn
 const BreakingPeaksValleysCycle = lazy(() => import("./pages/bizgrowth/financials/BreakingPeaksValleysCycle"));
 const VisionPlaybook = lazy(() => import("./pages/bizgrowth/VisionPlaybook"));
 const BusinessGrowthStrategies = lazy(() => import("./pages/bizgrowth/BusinessGrowthStrategies"));
+const HumanResourcesPrograms = lazy(() => import("./pages/bizgrowth/HumanResourcesPrograms"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -183,6 +184,7 @@ const App = () => (
               <Route path="/bizgrowth/financials/breaking-peaks-valleys-cycle" element={<BreakingPeaksValleysCycle />} />
               <Route path="/bizgrowth/vision-playbook" element={<VisionPlaybook />} />
               <Route path="/bizgrowth/business-growth-strategies" element={<BusinessGrowthStrategies />} />
+              <Route path="/bizgrowth/human-resources-programs" element={<HumanResourcesPrograms />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

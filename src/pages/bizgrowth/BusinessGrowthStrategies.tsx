@@ -345,7 +345,7 @@ const BusinessGrowthStrategies = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
           >
-            <GraduationCap className="w-4 h-4 text-[#FFD700]" />
+            <TrendingUp className="w-4 h-4 text-[#C8E600]" />
             <span className="text-white text-sm font-medium">
               BizGrowth Academy — Coming Q1 2026
             </span>

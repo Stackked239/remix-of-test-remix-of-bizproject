@@ -148,6 +148,14 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
+    title: "Business Growth Strategies - BizGrowth Academy",
+    excerpt: "The complete business growth module for SMB owners. Learn the 5-pillar growth framework: Decide, Assess, Prepare, Execute, Sustain. Strategic growth planning, team alignment, and sustainable scaling strategies.",
+    url: "/bizgrowth/business-growth-strategies",
+    keywords: "business growth, growth strategy, growth plan, how to grow, grow my business, small business growth, scaling strategy, growth framework, strategic growth, business scaling, 5 pillars, growth module, sustainable growth, prepared growth, growth readiness, scaling your business, expansion strategy, growth planning, revenue growth, company growth",
+    icon: Target
+  },
+  {
+    type: "Page",
     title: "BizGrowth Academy Launch - Early-Stage Business Growth Path",
     excerpt: "Build stable foundations for your 0-3 year business. The Launch path helps overwhelmed founders fix cash flow, establish KPIs, and create a 90-day action plan. Prescribed next steps from your BizHealth report, post-assessment guidance, business growth academy, early-stage business foundations.",
     url: "/bizgrowth/launch",

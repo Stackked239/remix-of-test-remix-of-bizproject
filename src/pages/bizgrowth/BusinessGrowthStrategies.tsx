@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -321,6 +322,7 @@ const BusinessGrowthStrategies = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <PromotionalBanner />
       <GlobalNavigation />
 
       {/* SECTION 1: HERO */}
@@ -356,7 +358,7 @@ const BusinessGrowthStrategies = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-montserrat"
           >
-            Growth Without Preparation Isn't Opportunity—It's Risk
+            Growth Without Preparation Isn't Opportunity—<span className="text-[#969423]">It's Risk</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -386,7 +388,7 @@ const BusinessGrowthStrategies = () => {
             </Button>
             <button
               onClick={() => scrollToSection('five-pillars')}
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-lg"
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-lg border-2 border-white rounded-md px-6 py-3 hover:bg-white/10"
             >
               See What's Inside <ArrowDown className="w-4 h-4" />
             </button>
@@ -399,7 +401,7 @@ const BusinessGrowthStrategies = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-white/70 text-sm"
           >
-            Trusted by 2,500+ business owners across 25+ industries | Built on 50+ years of
+            Trusted by 2,500+ business owners across 30+ industries | Built on 50+ years of
             real-world expertise
           </motion.div>
         </div>
@@ -427,7 +429,7 @@ const BusinessGrowthStrategies = () => {
               viewport={{ once: true }}
               className="lg:col-span-3"
             >
-              <span className="text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 block">
+              <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
                 THE UNCOMFORTABLE TRUTH
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-6 font-montserrat">
@@ -519,7 +521,7 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="mt-16 bg-[#242553] rounded-xl p-8 text-white flex items-start gap-6"
           >
-            <Lightbulb className="w-10 h-10 text-[#319795] flex-shrink-0" />
+            <Lightbulb className="w-10 h-10 text-[#969423] flex-shrink-0" />
             <div>
               <p className="text-xl font-semibold mb-2">
                 The Good News: Growth is not the enemy. Unprepared growth is the enemy.
@@ -543,7 +545,7 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 block">
+            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
               THE FRAMEWORK
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
@@ -621,7 +623,7 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 block">
+            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
               INSIDE THE MODULE
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
@@ -814,8 +816,8 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="w-16 h-16 bg-[#38a169]/20 rounded-full flex items-center justify-center mb-6">
-              <CheckCircle className="w-8 h-8 text-[#38a169]" />
+            <div className="w-16 h-16 bg-[#969423]/20 rounded-full flex items-center justify-center mb-6">
+              <CheckCircle className="w-8 h-8 text-[#969423]" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-montserrat">
               Here's Something Other Growth Programs Won't Tell You:
@@ -846,7 +848,7 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 block">
+            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
               THE TRANSFORMATION
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] font-montserrat">
@@ -972,7 +974,7 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 block">
+            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
               TAILORED TO YOU
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
@@ -1071,7 +1073,7 @@ const BusinessGrowthStrategies = () => {
           >
             <div className="grid grid-cols-3 gap-8">
               <StatCounter value="2,500+" label="Business owners in our community" />
-              <StatCounter value="25+" label="Industries represented" />
+              <StatCounter value="30+" label="Industries represented" />
               <StatCounter value="50+" label="Years combined expertise" />
             </div>
           </motion.div>

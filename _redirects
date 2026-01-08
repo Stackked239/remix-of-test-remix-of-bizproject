@@ -1,0 +1,29 @@
+# Netlify Redirects for BizHealth.ai
+
+# Redirect HTTP to HTTPS (handled by Netlify, but explicit for clarity)
+http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
+http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+
+# Redirect www to non-www
+https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+
+# Fix soft 404s reported in Google Search Console
+/faq /faqs 301!
+/blog/e-commerce-scaling-smb-2025 /blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025 301!
+/forgot-password /login 301!
+/refund /concerns 301!
+/security /privacy 301!
+
+# Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
+/biz-tools /biztools 301!
+/biz-leader /bizleader 301!
+/biz-growth /bizgrowth 301!
+/biz-guides /bizguides 301!
+/blog/smb-financial-trends-2025 /blog/2025-smb-financial-trends 301!
+/blog/strategic-planning /blog/strategic-planning-post-pandemic 301!
+/blog/talent-wars-hiring /blog/talent-wars-smb-hiring-2025 301!
+/blog/solving-smb-workforce-gaps /blog/solving-smb-workforce-gaps-2025 301!
+/blog/real-time-analytics-smb /blog/real-time-analytics-smb-agility 301!
+
+# SPA fallback - serve pre-rendered HTML or fallback to index.html
+/* /index.html 200

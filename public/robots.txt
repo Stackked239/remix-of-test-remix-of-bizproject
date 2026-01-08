@@ -1,0 +1,32 @@
+# BizHealth.ai Robots.txt
+# Updated: 2025-10-19
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow private/protected pages
+Disallow: /portal
+Disallow: /checkout
+Disallow: /onboarding
+Disallow: /admin/
+Disallow: /api/
+
+# Disallow search result pages (avoid duplicate content)
+Disallow: /search?*
+
+# Allow specific crawlers (Google, Bing, etc.)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://bizhealth.ai/sitemap.xml
+
+# Crawl rate
+Crawl-delay: 1

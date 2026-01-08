@@ -1,0 +1,180 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import GlobalNavigation from '@/components/GlobalNavigation';
+import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
+import { useProcessMapStore } from '@/stores/processMapStore';
+import ProcessDashboard from '@/components/process-mapping/ProcessDashboard';
+import ProcessSetupStep from '@/components/process-mapping/ProcessSetupStep';
+import ProcessMappingStep from '@/components/process-mapping/ProcessMappingStep';
+import TaskDetailsStep from '@/components/process-mapping/TaskDetailsStep';
+import ReviewExportStep from '@/components/process-mapping/ReviewExportStep';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+
+const ProcessMappingTools = () => {
+  const navigate = useNavigate();
+  const { currentProcess, currentStep, setCurrentStep, setCurrentProcess } = useProcessMapStore();
+  const [showWizard, setShowWizard] = useState(false);
+
+  const handleCreateNew = () => {
+    setShowWizard(true);
+    setCurrentStep(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToDashboard = () => {
+    setShowWizard(false);
+    setCurrentStep(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleExitProcess = () => {
+    setShowWizard(false);
+    setCurrentProcess(null);
+    setCurrentStep(1);
+    navigate('/biztools/toolbox#business-toolkit');
+  };
+
+  return (
+    <>
+      <SEO
+        title="Process Mapping & SOP Builder Tools"
+        description="Create professional process maps and standard operating procedures. Visual drag-and-drop process builder with AI-assisted suggestions and export to Word, Excel, and PDF."
+        keywords="process mapping, SOP builder, standard operating procedures, workflow automation, business process management, process documentation"
+        canonical="https://bizhealth.ai/biztools/toolbox/process-mapping-tools"
+      />
+
+      <div className="min-h-screen flex flex-col bg-background">
+        <PromotionalBanner />
+        <GlobalNavigation />
+
+        <main className="flex-1 pt-40">
+          {!showWizard && !currentProcess ? (
+            <ProcessDashboard onCreateNew={handleCreateNew} />
+          ) : (
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+              {/* Progress Indicator */}
+              <div className="mb-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold text-foreground text-center">
+                    {currentProcess?.name || 'New Process Map'}
+                  </h2>
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm text-muted-foreground">Step {currentStep} of 4</span>
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="outline" size="sm" className="gap-2">
+                          <X className="w-4 h-4" />
+                          Exit
+                        </Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Exit Process Mapping?</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            Are you sure you want to exit? The current process map will be deleted (unsaved) and not recoverable. All your progress will be lost.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction onClick={handleExitProcess}>
+                            Agree - Please Exit
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </div>
+                </div>
+
+                <div className="flex gap-2">
+                  {[1, 2, 3, 4].map((step) => (
+                    <div
+                      key={step}
+                      className={`flex-1 h-2 rounded-full transition-colors ${
+                        step <= currentStep ? 'bg-primary' : 'bg-muted'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+                  <span>Define</span>
+                  <span>Map</span>
+                  <span>Details</span>
+                  <span>Export</span>
+                </div>
+              </div>
+
+              {/* Step Content */}
+              <div className="bg-card rounded-lg border shadow-sm p-8">
+                {currentStep === 1 && (
+                  <ProcessSetupStep 
+                    onNext={() => {
+                      setCurrentStep(2);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onBack={handleBackToDashboard}
+                    onExit={handleExitProcess}
+                  />
+                )}
+                {currentStep === 2 && (
+                  <ProcessMappingStep
+                    onBack={() => {
+                      setCurrentStep(1);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onNext={() => {
+                      setCurrentStep(3);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onExit={handleExitProcess}
+                  />
+                )}
+                {currentStep === 3 && (
+                  <TaskDetailsStep
+                    onBack={() => {
+                      setCurrentStep(2);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onNext={() => {
+                      setCurrentStep(4);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onExit={handleExitProcess}
+                  />
+                )}
+                {currentStep === 4 && (
+                  <ReviewExportStep
+                    onBack={() => {
+                      setCurrentStep(3);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    onComplete={handleBackToDashboard}
+                    onExit={handleExitProcess}
+                  />
+                )}
+              </div>
+            </div>
+          )}
+        </main>
+
+        <GlobalFooter />
+      </div>
+    </>
+  );
+};
+
+export default ProcessMappingTools;

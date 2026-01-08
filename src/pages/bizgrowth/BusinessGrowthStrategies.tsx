@@ -97,6 +97,7 @@ const StatCounter = ({ value, label }: { value: string; label: string }) => {
 };
 
 // Pillar Card Component
+// Pillar Card Component - Enhanced UX
 const PillarCard = ({
   number,
   title,
@@ -111,32 +112,70 @@ const PillarCard = ({
   hint: string;
   icon: React.ElementType;
   delay: number;
-}) => (
-  <motion.div
-    variants={fadeUpVariant}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    transition={{ delay }}
-    className="group bg-white border border-gray-200 rounded-lg p-6 hover:border-l-4 hover:border-l-[#319795] hover:shadow-lg transition-all duration-300"
-  >
-    <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 bg-[#242553] rounded-full flex items-center justify-center text-white font-bold">
-        {number}
-      </div>
-      <div className="flex-1">
-        <div className="flex items-center gap-3 mb-3">
-          <Icon className="w-6 h-6 text-[#319795]" />
-          <h3 className="text-xl font-semibold text-[#2d3748]">{title}</h3>
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  return (
+    <motion.div
+      variants={fadeUpVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ delay }}
+      onClick={() => setIsExpanded(!isExpanded)}
+      className="group relative bg-gradient-to-br from-white to-[#f7fafc] border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-l-4 hover:border-l-[#319795] hover:shadow-xl transition-all duration-300 overflow-hidden"
+    >
+      {/* Subtle gradient overlay on hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#319795]/0 to-[#319795]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      <div className="relative flex items-start gap-5">
+        {/* Number badge with glow effect */}
+        <div className="flex-shrink-0 relative">
+          <div className="absolute inset-0 bg-[#242553] rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity" />
+          <div className="relative w-14 h-14 bg-gradient-to-br from-[#242553] to-[#1a1b3d] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+            {number}
+          </div>
         </div>
-        <p className="text-[#4a5568] mb-4 leading-relaxed">{description}</p>
-        <p className="text-sm text-[#319795] font-medium">→ {hint}</p>
+        
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-2 bg-[#319795]/10 rounded-lg group-hover:bg-[#319795]/20 transition-colors">
+              <Icon className="w-5 h-5 text-[#319795]" />
+            </div>
+            <h3 className="text-xl font-semibold text-[#2d3748] group-hover:text-[#242553] transition-colors">{title}</h3>
+          </div>
+          
+          <p className="text-[#4a5568] mb-4 leading-relaxed">{description}</p>
+          
+          {/* Expandable hint section */}
+          <motion.div
+            initial={false}
+            animate={{ height: isExpanded ? 'auto' : 0, opacity: isExpanded ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="pt-4 border-t border-gray-100">
+              <p className="text-sm text-[#319795] font-medium flex items-start gap-2">
+                <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                {hint}
+              </p>
+            </div>
+          </motion.div>
+          
+          {/* Click indicator */}
+          <div className="flex items-center gap-2 mt-3 text-sm text-[#319795] font-medium opacity-70 group-hover:opacity-100 transition-opacity">
+            <span>{isExpanded ? 'Click to collapse' : 'Click to learn more'}</span>
+            <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
+              <ChevronDown className="w-4 h-4" />
+            </motion.div>
+          </div>
+        </div>
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
-// Tool Card Component
+// Tool Card Component - Enhanced UX
 const ToolCard = ({
   title,
   description,
@@ -150,18 +189,35 @@ const ToolCard = ({
 }) => (
   <motion.div
     variants={fadeUpVariant}
-    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-[#319795] transition-all duration-300"
+    whileHover={{ y: -8, scale: 1.02 }}
+    transition={{ duration: 0.3 }}
+    className="group relative bg-white border border-gray-200 rounded-xl p-6 hover:shadow-2xl hover:border-[#319795] transition-all duration-300 overflow-hidden"
   >
-    <div className="flex items-center gap-2 mb-4">
-      <span className="text-xs font-semibold bg-[#f7fafc] text-[#319795] px-3 py-1 rounded-full">
-        {tag}
-      </span>
+    {/* Decorative corner accent */}
+    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#319795]/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    
+    <div className="relative">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-xs font-semibold bg-gradient-to-r from-[#319795]/10 to-[#319795]/5 text-[#319795] px-3 py-1.5 rounded-full border border-[#319795]/20">
+          {tag}
+        </span>
+      </div>
+      
+      <div className="flex items-center gap-3 mb-3">
+        <div className="p-2.5 bg-[#242553]/5 rounded-lg group-hover:bg-[#242553]/10 group-hover:scale-110 transition-all duration-300">
+          <Icon className="w-5 h-5 text-[#242553]" />
+        </div>
+        <h3 className="font-semibold text-[#2d3748] group-hover:text-[#242553] transition-colors">{title}</h3>
+      </div>
+      
+      <p className="text-[#4a5568] text-sm leading-relaxed mb-4">{description}</p>
+      
+      {/* Hover reveal CTA */}
+      <div className="flex items-center gap-2 text-sm font-medium text-[#319795] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+        <span>Included in module</span>
+        <CheckCircle className="w-4 h-4" />
+      </div>
     </div>
-    <div className="flex items-center gap-3 mb-3">
-      <Icon className="w-5 h-5 text-[#242553]" />
-      <h3 className="font-semibold text-[#2d3748]">{title}</h3>
-    </div>
-    <p className="text-[#4a5568] text-sm">{description}</p>
   </motion.div>
 );
 
@@ -537,28 +593,50 @@ const BusinessGrowthStrategies = () => {
       </section>
 
       {/* SECTION 3: THE FIVE PILLARS FRAMEWORK */}
-      <section id="five-pillars" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section id="five-pillars" className="py-24 bg-gradient-to-b from-white via-[#f7fafc] to-white relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#319795]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#969423]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <motion.div
             variants={fadeUpVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 bg-[#969423]/10 px-4 py-2 rounded-full">
+              <Zap className="w-3.5 h-3.5" />
               THE FRAMEWORK
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
-              Five Pillars of Strategic Business Growth
+            <h2 className="text-3xl md:text-5xl font-bold text-[#2d3748] mb-6 font-montserrat">
+              Five Pillars of Strategic <span className="text-[#319795]">Business Growth</span>
             </h2>
-            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto">
+            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto mb-8">
               A complete methodology that takes you from "Should we grow?" to "We're growing—and
               it's working."
             </p>
+            
+            {/* Visual pillar indicator */}
+            <div className="flex justify-center gap-2 md:gap-4">
+              {[1, 2, 3, 4, 5].map((num) => (
+                <div
+                  key={num}
+                  className="flex flex-col items-center"
+                >
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#242553] to-[#319795] rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg">
+                    {num}
+                  </div>
+                  {num < 5 && (
+                    <div className="hidden md:block w-12 h-0.5 bg-gradient-to-r from-[#319795] to-[#242553] absolute translate-x-12 translate-y-5" />
+                  )}
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             <PillarCard
               number="01"
               title="Growth Reality Check & Decision Framework"
@@ -601,39 +679,71 @@ const BusinessGrowthStrategies = () => {
             />
           </div>
 
-          {/* Connecting Tagline */}
-          <motion.p
-            variants={fadeUpVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center text-[#4a5568] mt-10 text-lg"
-          >
-            Each pillar builds on the last. Together, they transform growth from risky to strategic.
-          </motion.p>
-        </div>
-      </section>
-
-      {/* SECTION 4: WHAT YOU'LL GET (Tools & Resources) */}
-      <section id="tools" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Connecting Tagline - Enhanced */}
           <motion.div
             variants={fadeUpVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="mt-12 text-center"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#969423] uppercase mb-4 block">
+            <div className="inline-flex items-center gap-3 bg-[#242553] text-white px-6 py-3 rounded-full shadow-lg">
+              <TrendingUp className="w-5 h-5 text-[#C8E600]" />
+              <p className="text-sm md:text-base font-medium">
+                Each pillar builds on the last. Together, they transform growth from risky to strategic.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION 4: WHAT YOU'LL GET (Tools & Resources) */}
+      <section id="tools" className="py-24 bg-gradient-to-br from-[#242553] via-[#2d2d6a] to-[#1a1b3d] relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+        
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <motion.div
+            variants={fadeUpVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C8E600] uppercase mb-4 bg-[#C8E600]/10 px-4 py-2 rounded-full border border-[#C8E600]/20">
+              <Target className="w-3.5 h-3.5" />
               INSIDE THE MODULE
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
-              Practical Tools, Not Theory
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-montserrat">
+              Practical Tools, <span className="text-[#2DD4BF]">Not Theory</span>
             </h2>
-            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Every concept comes with a worksheet, template, or tool you can use immediately in
               your business.
             </p>
+            
+            {/* Tool count badge */}
+            <div className="mt-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3">
+              <div className="flex items-center gap-1">
+                <CheckCircle className="w-5 h-5 text-[#2DD4BF]" />
+                <span className="text-white font-semibold">15+ Tools</span>
+              </div>
+              <div className="w-px h-5 bg-white/20" />
+              <div className="flex items-center gap-1">
+                <FileText className="w-5 h-5 text-[#C8E600]" />
+                <span className="text-white font-semibold">Templates Included</span>
+              </div>
+              <div className="w-px h-5 bg-white/20" />
+              <div className="flex items-center gap-1">
+                <Zap className="w-5 h-5 text-[#969423]" />
+                <span className="text-white font-semibold">Instant Access</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -681,26 +791,29 @@ const BusinessGrowthStrategies = () => {
             />
           </motion.div>
 
-          {/* More Tools Teaser */}
+          {/* More Tools Teaser - Enhanced */}
           <motion.div
             variants={fadeUpVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mt-10 text-center"
+            className="mt-12"
           >
-            <p className="text-[#4a5568] mb-6">
-              <strong>Plus:</strong> Team Alignment Workshop Guide • Stakeholder Communication Plan
-              • Weekly/Monthly/Quarterly Operating Rhythm Agendas • Growth Troubleshooting Playbook
-              • And more...
-            </p>
-            <Button
-              onClick={() => scrollToSection('signup-form')}
-              variant="outline"
-              className="border-[#242553] text-[#242553] hover:bg-[#242553] hover:text-white"
-            >
-              Get Early Access to All Tools →
-            </Button>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+              <p className="text-white/80 mb-6 text-lg">
+                <strong className="text-white">Plus:</strong> Team Alignment Workshop Guide • Stakeholder Communication Plan
+                • Weekly/Monthly/Quarterly Operating Rhythm Agendas • Growth Troubleshooting Playbook
+                • And more...
+              </p>
+              <Button
+                onClick={() => scrollToSection('signup-form')}
+                size="lg"
+                className="bg-[#C8E600] hover:bg-[#a8c200] text-[#242553] font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
+              >
+                Get Early Access to All Tools
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -1257,98 +1370,184 @@ const BusinessGrowthStrategies = () => {
         </div>
       </section>
 
-      {/* SECTION 11: FAQ */}
-      <section id="faq" className="py-20 bg-[#f7fafc]">
-        <div className="container mx-auto px-4 max-w-3xl">
+      {/* SECTION 11: FAQ - Enhanced */}
+      <section id="faq" className="py-24 bg-gradient-to-b from-[#f7fafc] to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#319795]/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/2 right-0 w-72 h-72 bg-[#969423]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <motion.div
             variants={fadeUpVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] font-montserrat">
-              Questions? We've Got Answers.
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-[#319795] uppercase mb-4 bg-[#319795]/10 px-4 py-2 rounded-full">
+              <MessageSquare className="w-3.5 h-3.5" />
+              FAQ
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#2d3748] font-montserrat mb-4">
+              Questions? <span className="text-[#319795]">We've Got Answers.</span>
             </h2>
+            <p className="text-[#4a5568] text-lg max-w-xl mx-auto">
+              Everything you need to know about the Business Growth module
+            </p>
           </motion.div>
 
           <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq1" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5 [&[data-state=open]>svg]:text-[#319795]">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#319795]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-4 h-4 text-[#319795]" />
+                      </div>
+                      Is this another "quick growth hack" course?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    No—this is the opposite. It's designed to help you avoid destructive growth. If
+                    you're looking for magic formulas or "10X in 10 days" promises, this isn't for
+                    you. If you want sustainable, profitable growth backed by strategy and systems,
+                    you're in the right place.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq2" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#969423]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Calendar className="w-4 h-4 text-[#969423]" />
+                      </div>
+                      How much time does this take?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    You can move through it at your pace. Most owners complete the core framework in
+                    4-6 weeks (30-60 minutes per week). Each tool takes 20-30 minutes. It's designed
+                    to fit a busy owner's schedule.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq3" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#38a169]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-[#38a169]" />
+                      </div>
+                      What if I discover I shouldn't grow right now?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    That's a win. Knowing you're "not yet" ready is better than failing at growth.
+                    The module shows you exactly what to improve before you revisit scaling—and
+                    you'll avoid a costly mistake.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq4" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#242553]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Building2 className="w-4 h-4 text-[#242553]" />
+                      </div>
+                      Is this tailored to my industry?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    The framework is universal, but examples span multiple industries (services,
+                    e-commerce, manufacturing, trades, healthcare, and more). You'll see stories from
+                    businesses like yours.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq5" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#319795]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Users className="w-4 h-4 text-[#319795]" />
+                      </div>
+                      I'm a solo business owner. Is this relevant for me?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    Yes. We've designed pathways for different stages, including Launch
+                    (solo/early-stage). The principles of prepared growth apply whether you're hiring
+                    your first employee or your fiftieth.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq6" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#c05621]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Rocket className="w-4 h-4 text-[#c05621]" />
+                      </div>
+                      What happens after I finish the module?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    You'll have ongoing access to all tools, templates, and resources. We're
+                    exploring community features, office hours, and follow-up modules for 2026. Join
+                    early access to be notified.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <AccordionItem value="faq7" className="bg-white rounded-xl border-2 border-gray-100 px-6 shadow-sm hover:shadow-md hover:border-[#319795]/30 transition-all duration-300">
+                  <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-[#969423]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <GraduationCap className="w-4 h-4 text-[#969423]" />
+                      </div>
+                      When does it launch?
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#4a5568] pb-5 pl-11">
+                    Q1 2026. Early access members get first notification and priority access.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+            </Accordion>
+          </motion.div>
+          
+          {/* CTA after FAQ */}
+          <motion.div
             variants={fadeUpVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="mt-12 text-center"
           >
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="faq1" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  Is this another "quick growth hack" course?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  No—this is the opposite. It's designed to help you avoid destructive growth. If
-                  you're looking for magic formulas or "10X in 10 days" promises, this isn't for
-                  you. If you want sustainable, profitable growth backed by strategy and systems,
-                  you're in the right place.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq2" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  How much time does this take?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  You can move through it at your pace. Most owners complete the core framework in
-                  4-6 weeks (30-60 minutes per week). Each tool takes 20-30 minutes. It's designed
-                  to fit a busy owner's schedule.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq3" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  What if I discover I shouldn't grow right now?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  That's a win. Knowing you're "not yet" ready is better than failing at growth.
-                  The module shows you exactly what to improve before you revisit scaling—and
-                  you'll avoid a costly mistake.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq4" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  Is this tailored to my industry?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  The framework is universal, but examples span multiple industries (services,
-                  e-commerce, manufacturing, trades, healthcare, and more). You'll see stories from
-                  businesses like yours.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq5" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  I'm a solo business owner. Is this relevant for me?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  Yes. We've designed pathways for different stages, including Launch
-                  (solo/early-stage). The principles of prepared growth apply whether you're hiring
-                  your first employee or your fiftieth.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq6" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  What happens after I finish the module?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  You'll have ongoing access to all tools, templates, and resources. We're
-                  exploring community features, office hours, and follow-up modules for 2026. Join
-                  early access to be notified.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="faq7" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  When does it launch?
-                </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
-                  Q1 2026. Early access members get first notification and priority access.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            <p className="text-[#4a5568] mb-4">Still have questions?</p>
+            <Button
+              onClick={() => scrollToSection('signup-form')}
+              variant="outline"
+              className="border-2 border-[#319795] text-[#319795] hover:bg-[#319795] hover:text-white font-semibold px-8"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
           </motion.div>
         </div>
       </section>

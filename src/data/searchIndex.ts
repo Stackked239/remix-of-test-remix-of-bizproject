@@ -390,6 +390,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/launch/step-2-fix-cash-squeeze",
     keywords: "cash squeeze, cash flow fix, financial stability, cash flow course, money management course, financial fundamentals, cash flow training",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Human Resources Programs - HR Module for Small Business",
+    excerpt: "Master the 10 pillars of HR for growing businesses. From hiring and onboarding to performance management, compliance, and retention. Build an HR system that scales with your business.",
+    url: "/bizgrowth/human-resources-programs",
+    keywords: "hr, human resources, employee program, hr program, hiring, recruiting, onboarding, talent acquisition, performance management, employee engagement, retention, HR compliance, employee handbook, payroll, compensation, benefits, workforce planning, hr training, hr course, people management, hr module, employee management, staff management, HR systems, personnel",
+    icon: GraduationCap
   }
 ];
 

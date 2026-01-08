@@ -5,6 +5,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
+import hrHeroImage from '@/assets/images/hr-human-resources-programs-hero.jpg';
 
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -374,6 +375,20 @@ const HumanResourcesPrograms = () => {
                   higher retention with structured onboarding (SHRM)
                 </p>
               </motion.div>
+            </motion.div>
+
+            {/* Hero Image */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUpVariant}
+              className="mt-12 max-w-5xl mx-auto"
+            >
+              <img
+                src={hrHeroImage}
+                alt="HR team collaboration with organizational charts and HR technology systems"
+                className="w-full rounded-2xl shadow-2xl border border-white/10"
+              />
             </motion.div>
           </div>
         </section>

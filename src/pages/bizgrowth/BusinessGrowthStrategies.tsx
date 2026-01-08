@@ -4,7 +4,6 @@ import { motion, useInView } from 'framer-motion';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import SEO from '@/components/SEO';
-import StructuredData from '@/components/StructuredData';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -51,7 +50,7 @@ import {
 // Animation variants
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] as const } },
 };
 
 const staggerContainer = {
@@ -311,8 +310,16 @@ const BusinessGrowthStrategies = () => {
         ogType="website"
         ogImage="/og-images/og-business-growth-strategies.jpg"
       />
-      <StructuredData data={courseSchema} />
-      <StructuredData data={faqSchema} />
+      {/* Course Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <GlobalNavigation />
 
@@ -576,8 +583,8 @@ const BusinessGrowthStrategies = () => {
             <PillarCard
               number="04"
               title="Communication & Change Management"
-              description="Growth changes everything—for your team, customers, and suppliers. This pillar ensures everyone understands the \"why,\" feels heard, and knows exactly what's expected of them."
-              hint="From kickoff workshops to weekly rituals—tools to align your team and manage the human side of change."
+              description='Growth changes everything - for your team, customers, and suppliers. This pillar ensures everyone understands the "why," feels heard, and knows exactly what is expected of them.'
+              hint="From kickoff workshops to weekly rituals - tools to align your team and manage the human side of change."
               icon={MessageSquare}
               delay={0.3}
             />

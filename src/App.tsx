@@ -128,6 +128,7 @@ const LandscapingPlaybook = lazy(() => import("./pages/playbooks/LandscapingPlay
 const TechnologyInnovationReadiness = lazy(() => import("./pages/bizgrowth/TechnologyInnovationReadiness"));
 const BreakingPeaksValleysCycle = lazy(() => import("./pages/bizgrowth/financials/BreakingPeaksValleysCycle"));
 const VisionPlaybook = lazy(() => import("./pages/bizgrowth/VisionPlaybook"));
+const BusinessGrowthStrategies = lazy(() => import("./pages/bizgrowth/BusinessGrowthStrategies"));
 
 // Loading fallback component
 const PageLoader = () => (

@@ -994,14 +994,14 @@ const BusinessGrowthStrategies = () => {
             className="grid md:grid-cols-3 gap-6"
           >
             <StageCard
-              badge="0-3 Years • $250K-$1M"
+              badge="0-3 Years • $100K-$500K"
               title="Launch Stage"
               description="You're figuring out what works. Before you scale, get honest: should you pursue growth at all right now? This path focuses on Pillars 1 & 2—deciding and assessing."
               tools="Growth Consequences Worksheet, Why Grow Decision Matrix"
               icon={Rocket}
             />
             <StageCard
-              badge="1-5 Years • $1M-$5M • 5-25 people"
+              badge="1-5 Years • $500K-$5M • 5-25 people"
               title="Growth Stage"
               description="You've proven the model. Now it's time to scale strategically. This path walks you through all five pillars with full tools, templates, and operating rhythms."
               tools="All five pillar tools, Team Alignment Workshop Guide"

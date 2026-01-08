@@ -720,7 +720,7 @@ const BusinessGrowthStrategies = () => {
               INSIDE THE MODULE
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-montserrat">
-              Practical Tools, <span className="text-[#2DD4BF]">Not Theory</span>
+              Practical Tools<span className="text-[#969423]">, Not Theory</span>
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Every concept comes with a worksheet, template, or tool you can use immediately in

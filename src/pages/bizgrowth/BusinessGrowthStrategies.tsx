@@ -32,6 +32,7 @@ import {
   TrendingUp,
   AlertTriangle,
   ArrowDown,
+  ArrowRight,
   CheckCircle,
   XCircle,
   Lightbulb,
@@ -1015,6 +1016,40 @@ const BusinessGrowthStrategies = () => {
               tools="Advanced change management, Executive alignment frameworks"
               icon={Building2}
             />
+          </motion.div>
+
+          {/* HR Module Card */}
+          <motion.div
+            variants={fadeUpVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <Link
+              to="/bizgrowth/human-resources-programs"
+              className="block bg-gradient-to-br from-[#242553] via-[#2d2d6a] to-[#3d3d7a] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-16 h-16 bg-[#C8E600]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="w-8 h-8 text-[#C8E600]" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <span className="inline-flex items-center gap-2 bg-[#C8E600]/10 text-[#C8E600] px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                    <TrendingUp className="w-3 h-3" /> NEW HR MODULE
+                  </span>
+                  <h3 className="text-2xl font-bold text-white mb-2 font-montserrat group-hover:text-[#C8E600] transition-colors">
+                    Human Resources Programs
+                  </h3>
+                  <p className="text-white/80 mb-4">
+                    Master the 10 pillars of HR for growing businesses. From hiring right to building culture that retains top talent.
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-[#C8E600] font-semibold group-hover:gap-3 transition-all">
+                    Explore HR Module <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
           </motion.div>
 
           <motion.p

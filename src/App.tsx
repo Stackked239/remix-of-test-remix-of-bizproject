@@ -182,6 +182,7 @@ const App = () => (
               <Route path="/bizgrowth/technology-innovation-readiness" element={<TechnologyInnovationReadiness />} />
               <Route path="/bizgrowth/financials/breaking-peaks-valleys-cycle" element={<BreakingPeaksValleysCycle />} />
               <Route path="/bizgrowth/vision-playbook" element={<VisionPlaybook />} />
+              <Route path="/bizgrowth/business-growth-strategies" element={<BusinessGrowthStrategies />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

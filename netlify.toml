@@ -125,7 +125,7 @@
   
   # Environment variables for build
   [build.environment]
-    NODE_VERSION = "18"
+    NODE_VERSION = "20"
 
 # SPA fallback for client-side routing
 # Serves index.html for routes that don't have pre-rendered files

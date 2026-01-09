@@ -15,7 +15,7 @@ const EstimatingCrisisServiceBusiness = () => {
       <SEO 
         title="Avoid The Estimating Crisis: Why Service Business Profitability Collapses"
         description="A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect service business profitability."
-        keywords="service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates"
+        keywords="service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, quoting, job quotes, estimates, quote accuracy, proposal pricing, bid accuracy, service quotes, project quotes, cost estimates, labor estimates"
         ogType="article"
         ogImage="https://bizhealth.ai/assets/images/estimating-crisis-service-business-profitability.jpg"
         articlePublishedTime="2026-01-09T12:00:00Z"
@@ -811,7 +811,7 @@ const EstimatingCrisisServiceBusiness = () => {
                 <strong>The businesses winning in service industries</strong> aren't necessarily the cheapest or the slickest marketers. They're often the ones with the most accurate, professional, transparent estimating. They know their costs. They bid confidently. They deliver on promises. Customers trust them. They grow profitably.
               </p>
               
-              <div className="bg-biz-green/10 border border-biz-green/20 rounded-lg p-6 text-center">
+              <div className="bg-biz-green/20 border border-biz-green/30 rounded-lg p-6 text-center">
                 <p className="text-foreground text-xl font-bold">
                   That's the power of strategic estimating.
                 </p>
@@ -835,9 +835,11 @@ const EstimatingCrisisServiceBusiness = () => {
                   </Link>
                   <Link 
                     to="/biztools/toolbox/free-pricing-net-profit-calculator" 
-                    className="inline-flex items-center justify-center gap-2 bg-background hover:bg-muted border border-border text-foreground px-6 py-3 rounded-lg font-medium transition-colors"
+                    className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary/10 to-biz-green/10 hover:from-primary/20 hover:to-biz-green/20 border-2 border-primary/40 hover:border-primary text-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105"
                   >
+                    <Calculator className="w-5 h-5 text-primary group-hover:animate-pulse" />
                     Try Free Pricing Calculator
+                    <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>

@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow",
+    excerpt: "78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap.",
+    author: "BizHealth.ai Research Team",
+    date: "January 9, 2026",
+    readTime: "10 min read",
+    category: "Business Strategy, Business Leadership, Operations",
+    slug: "/blog/growth-trap-or-growth-engine",
+    imageUrl: "/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg",
+    altText: "Business leader with analytics tablet at crossroads in manufacturing facility assessing growth readiness and strategic direction",
+    keywords: "business growth readiness, growth trap, sustainable growth, SMB scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth, business growth, ready to grow, scaling business, growth engine, growth planning"
+  },
+  {
     title: "CRM Reality Check: Cutting Through the Hype to Make the Right Decision for Your Business",
     excerpt: "55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for SMBs.",
     author: "BizHealth.ai Research Team",

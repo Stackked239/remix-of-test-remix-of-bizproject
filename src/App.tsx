@@ -111,6 +111,7 @@ const FeastOrFamineCycle = lazy(() => import("./pages/blog/FeastOrFamineCycle"))
 const HRProgramAssetMultiplier = lazy(() => import("./pages/blog/HRProgramAssetMultiplier"));
 const TechnologyStrategicAllyROI = lazy(() => import("./pages/blog/TechnologyStrategicAllyROI"));
 const CRMRealityCheck = lazy(() => import("./pages/blog/CRMRealityCheck"));
+const GrowthTrapOrGrowthEngine = lazy(() => import("./pages/blog/GrowthTrapOrGrowthEngine"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));

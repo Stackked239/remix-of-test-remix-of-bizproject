@@ -10,14 +10,22 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
 
-// Foundation Audit Data
+// Foundation Audit Data with unique colors for each pillar
 const foundationPillars = [
   {
     id: "financial",
     title: "Financial Foundation",
     subtitle: "Can you answer these questions with confidence?",
     icon: DollarSign,
-    colorClass: "biz-green",
+    colors: {
+      bg: "bg-emerald-500",
+      bgLight: "bg-emerald-500/10",
+      bgHover: "bg-emerald-500/20",
+      border: "border-emerald-500/40",
+      borderLight: "border-emerald-500/20",
+      text: "text-emerald-500",
+      hsl: "142 71% 45%"
+    },
     questions: [
       "Are your revenue streams stable and consistently profitable?",
       "Do you understand your actual costs—not estimates, but real numbers based on actual operations?",
@@ -32,7 +40,15 @@ const foundationPillars = [
     title: "Operational Foundation",
     subtitle: "Growth requires repeatable systems:",
     icon: Settings,
-    colorClass: "primary",
+    colors: {
+      bg: "bg-blue-500",
+      bgLight: "bg-blue-500/10",
+      bgHover: "bg-blue-500/20",
+      border: "border-blue-500/40",
+      borderLight: "border-blue-500/20",
+      text: "text-blue-500",
+      hsl: "217 91% 60%"
+    },
     questions: [
       "Can you document how you do what you do? Not perfectly, but clearly enough that someone could learn it?",
       "Are your core processes scalable, or do they depend entirely on you?",
@@ -47,7 +63,15 @@ const foundationPillars = [
     title: "Team Foundation",
     subtitle: "Growth requires people clarity:",
     icon: Users,
-    colorClass: "primary",
+    colors: {
+      bg: "bg-violet-500",
+      bgLight: "bg-violet-500/10",
+      bgHover: "bg-violet-500/20",
+      border: "border-violet-500/40",
+      borderLight: "border-violet-500/20",
+      text: "text-violet-500",
+      hsl: "258 90% 66%"
+    },
     questions: [
       "Does every team member understand their role, their authority, and how their work connects to bigger goals?",
       "Do your people share your core values, or do you have people who are just collecting a paycheck?",
@@ -62,7 +86,15 @@ const foundationPillars = [
     title: "Customer & Market Foundation",
     subtitle: "Growth requires a solid customer base:",
     icon: Target,
-    colorClass: "primary",
+    colors: {
+      bg: "bg-amber-500",
+      bgLight: "bg-amber-500/10",
+      bgHover: "bg-amber-500/20",
+      border: "border-amber-500/40",
+      borderLight: "border-amber-500/20",
+      text: "text-amber-500",
+      hsl: "38 92% 50%"
+    },
     questions: [
       "Are your best customers loyal, and do you know why?",
       "Are most of your new customers coming from referrals or word-of-mouth, or are you constantly chasing cold leads?",
@@ -76,7 +108,15 @@ const foundationPillars = [
     title: "Leadership & Strategic Foundation",
     subtitle: "Growth requires alignment:",
     icon: Zap,
-    colorClass: "primary",
+    colors: {
+      bg: "bg-rose-500",
+      bgLight: "bg-rose-500/10",
+      bgHover: "bg-rose-500/20",
+      border: "border-rose-500/40",
+      borderLight: "border-rose-500/20",
+      text: "text-rose-500",
+      hsl: "347 77% 50%"
+    },
     questions: [
       "Do you and your leadership team agree on what success looks like?",
       "Is there a written plan for where you're going, or is growth just a vague direction?",
@@ -103,7 +143,7 @@ const FoundationAuditSection = () => {
       </p>
 
       {/* Visual Progress Indicator */}
-      <div className="flex items-center justify-center gap-2 mb-8">
+      <div className="flex items-center justify-center gap-3 mb-8">
         {foundationPillars.map((pillar, index) => {
           const IconComponent = pillar.icon;
           const isActive = activeIndex === index;
@@ -114,17 +154,16 @@ const FoundationAuditSection = () => {
               className={`
                 group relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300
                 ${isActive 
-                  ? pillar.colorClass === 'biz-green' 
-                    ? 'bg-[hsl(var(--biz-green))] text-white scale-110 shadow-lg' 
-                    : 'bg-primary text-primary-foreground scale-110 shadow-lg'
-                  : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground'
+                  ? `${pillar.colors.bg} text-white scale-110 shadow-lg ring-4 ring-offset-2 ring-offset-background`
+                  : `bg-muted hover:${pillar.colors.bgLight} text-muted-foreground hover:${pillar.colors.text}`
                 }
               `}
+              style={isActive ? { boxShadow: `0 8px 25px -5px hsl(${pillar.colors.hsl} / 0.4)` } : {}}
               aria-label={pillar.title}
             >
-              <IconComponent className="w-5 h-5" />
+              <IconComponent className={`w-5 h-5 transition-colors ${!isActive && `group-hover:${pillar.colors.text}`}`} />
               {/* Tooltip */}
-              <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-foreground text-background px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <span className={`absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs ${pillar.colors.bg} text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`}>
                 {pillar.title.split(' ')[0]}
               </span>
             </button>
@@ -137,7 +176,6 @@ const FoundationAuditSection = () => {
         {foundationPillars.map((pillar, index) => {
           const IconComponent = pillar.icon;
           const isActive = activeIndex === index;
-          const isGreen = pillar.colorClass === 'biz-green';
 
           return (
             <motion.div
@@ -146,12 +184,11 @@ const FoundationAuditSection = () => {
               className={`
                 rounded-xl overflow-hidden transition-all duration-300
                 ${isActive 
-                  ? isGreen 
-                    ? 'bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/40 shadow-lg' 
-                    : 'bg-primary/5 border-2 border-primary/30 shadow-lg'
-                  : 'bg-card border border-border hover:border-primary/30'
+                  ? `${pillar.colors.bgLight} border-2 ${pillar.colors.border} shadow-lg`
+                  : 'bg-card border border-border hover:border-muted-foreground/30'
                 }
               `}
+              style={isActive ? { boxShadow: `0 10px 40px -10px hsl(${pillar.colors.hsl} / 0.25)` } : {}}
             >
               {/* Header */}
               <button
@@ -162,26 +199,22 @@ const FoundationAuditSection = () => {
                   <div className={`
                     p-3 rounded-lg transition-all duration-300
                     ${isActive 
-                      ? isGreen 
-                        ? 'bg-[hsl(var(--biz-green))]/20' 
-                        : 'bg-primary/20'
-                      : 'bg-muted group-hover:bg-primary/10'
+                      ? pillar.colors.bgHover
+                      : `bg-muted group-hover:${pillar.colors.bgLight}`
                     }
                   `}>
                     <IconComponent className={`
                       w-6 h-6 transition-colors duration-300
                       ${isActive 
-                        ? isGreen 
-                          ? 'text-[hsl(var(--biz-green))]' 
-                          : 'text-primary'
-                        : 'text-muted-foreground group-hover:text-primary'
+                        ? pillar.colors.text
+                        : `text-muted-foreground group-hover:${pillar.colors.text}`
                       }
                     `} />
                   </div>
                   <div>
                     <h3 className={`
                       text-xl font-bold transition-colors duration-300
-                      ${isActive ? 'text-foreground' : 'text-foreground/80 group-hover:text-foreground'}
+                      ${isActive ? pillar.colors.text : 'text-foreground/80 group-hover:text-foreground'}
                     `}>
                       {pillar.title}
                     </h3>
@@ -190,11 +223,11 @@ const FoundationAuditSection = () => {
                 </div>
                 <div className={`
                   p-2 rounded-full transition-all duration-300
-                  ${isActive ? 'bg-primary/10 rotate-180' : 'bg-transparent group-hover:bg-muted'}
+                  ${isActive ? `${pillar.colors.bgLight} rotate-180` : 'bg-transparent group-hover:bg-muted'}
                 `}>
                   <ChevronDown className={`
                     w-5 h-5 transition-all duration-300
-                    ${isActive ? 'text-primary' : 'text-muted-foreground'}
+                    ${isActive ? pillar.colors.text : 'text-muted-foreground'}
                   `} />
                 </div>
               </button>
@@ -210,7 +243,7 @@ const FoundationAuditSection = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-5 pb-5">
-                      <div className="pt-2 border-t border-border/50">
+                      <div className={`pt-2 border-t ${pillar.colors.borderLight}`}>
                         <ul className="space-y-3 mt-4">
                           {pillar.questions.map((question, qIndex) => (
                             <motion.li
@@ -220,10 +253,7 @@ const FoundationAuditSection = () => {
                               transition={{ delay: qIndex * 0.05 }}
                               className="flex items-start gap-3"
                             >
-                              <CheckCircle className={`
-                                w-5 h-5 shrink-0 mt-0.5
-                                ${isGreen ? 'text-[hsl(var(--biz-green))]' : 'text-primary'}
-                              `} />
+                              <CheckCircle className={`w-5 h-5 shrink-0 mt-0.5 ${pillar.colors.text}`} />
                               <span className="text-muted-foreground">{question}</span>
                             </motion.li>
                           ))}
@@ -233,19 +263,10 @@ const FoundationAuditSection = () => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 }}
-                          className={`
-                            mt-6 p-4 rounded-lg
-                            ${isGreen 
-                              ? 'bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/20' 
-                              : 'bg-amber-500/10 border border-amber-500/20'
-                            }
-                          `}
+                          className={`mt-6 p-4 rounded-lg ${pillar.colors.bgLight} border ${pillar.colors.borderLight}`}
                         >
                           <div className="flex items-start gap-3">
-                            <AlertTriangle className={`
-                              w-5 h-5 shrink-0 mt-0.5
-                              ${isGreen ? 'text-[hsl(var(--biz-green))]' : 'text-amber-500'}
-                            `} />
+                            <AlertTriangle className={`w-5 h-5 shrink-0 mt-0.5 ${pillar.colors.text}`} />
                             <p className="text-foreground font-medium text-sm">
                               {pillar.warning}
                             </p>

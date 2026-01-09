@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Avoid The Estimating Crisis: Why Service Business Profitability Collapses When You Get Estimates Wrong",
+    excerpt: "A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect service business profitability.",
+    author: "BizHealth.ai Research Team",
+    date: "January 9, 2026",
+    readTime: "12 min read",
+    category: "Financials, Operations, Business Strategy, Technology",
+    slug: "/blog/estimating-crisis-service-business-profitability",
+    imageUrl: "/assets/images/estimating-crisis-service-business-profitability.jpg",
+    altText: "Service business team discussing project estimates at commercial job site - accurate estimating prevents profitability collapse",
+    keywords: "service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, estimating system, indirect costs, sales delivery alignment, contingency planning, historical data, change management, service business, estimating, pricing, profitability, job costing, scope creep"
+  },
+  {
     title: "Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow",
     excerpt: "78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap.",
     author: "BizHealth.ai Research Team",

@@ -112,6 +112,7 @@ const HRProgramAssetMultiplier = lazy(() => import("./pages/blog/HRProgramAssetM
 const TechnologyStrategicAllyROI = lazy(() => import("./pages/blog/TechnologyStrategicAllyROI"));
 const CRMRealityCheck = lazy(() => import("./pages/blog/CRMRealityCheck"));
 const GrowthTrapOrGrowthEngine = lazy(() => import("./pages/blog/GrowthTrapOrGrowthEngine"));
+const EstimatingCrisisServiceBusiness = lazy(() => import("./pages/blog/EstimatingCrisisServiceBusiness"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -246,6 +247,7 @@ const App = () => (
               <Route path="/blog/technology-strategic-ally-roi-decisions" element={<TechnologyStrategicAllyROI />} />
               <Route path="/blog/crm-reality-check-small-business-decision" element={<CRMRealityCheck />} />
               <Route path="/blog/growth-trap-or-growth-engine" element={<GrowthTrapOrGrowthEngine />} />
+              <Route path="/blog/estimating-crisis-service-business-profitability" element={<EstimatingCrisisServiceBusiness />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

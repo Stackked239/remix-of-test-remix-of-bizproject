@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     slug: "/blog/estimating-crisis-service-business-profitability",
     imageUrl: "/assets/images/estimating-crisis-service-business-profitability.jpg",
     altText: "Service business team discussing project estimates at commercial job site - accurate estimating prevents profitability collapse",
-    keywords: "service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, estimating system, indirect costs, sales delivery alignment, contingency planning, historical data, change management, service business, estimating, pricing, profitability, job costing, scope creep"
+    keywords: "service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, estimating system, indirect costs, sales delivery alignment, contingency planning, historical data, change management, service business, estimating, pricing, profitability, job costing, scope creep, quoting, job quotes, estimates, quote accuracy, proposal pricing, bid accuracy, service quotes, project quotes, cost estimates, labor estimates"
   },
   {
     title: "Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow",

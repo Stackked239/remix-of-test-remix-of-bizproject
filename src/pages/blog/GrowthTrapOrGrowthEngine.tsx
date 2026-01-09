@@ -5,8 +5,271 @@ import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, XCircle, AlertTriangle, TrendingUp, Users, DollarSign, Settings, Target, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, XCircle, AlertTriangle, TrendingUp, Users, DollarSign, Settings, Target, Zap, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import heroImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
+
+// Foundation Audit Data
+const foundationPillars = [
+  {
+    id: "financial",
+    title: "Financial Foundation",
+    subtitle: "Can you answer these questions with confidence?",
+    icon: DollarSign,
+    colorClass: "biz-green",
+    questions: [
+      "Are your revenue streams stable and consistently profitable?",
+      "Do you understand your actual costs—not estimates, but real numbers based on actual operations?",
+      "Can you forecast cash flow 12-24 months ahead, accounting for seasonal fluctuations?",
+      "Do you have positive cash flow, or are you relying on constant new revenue to cover existing expenses?",
+      "Could your business sustain a 10% drop in revenue without crisis?"
+    ],
+    warning: "If you answer \"no\" to any of these, growth will expose and amplify your financial weaknesses. Fix them first."
+  },
+  {
+    id: "operational",
+    title: "Operational Foundation",
+    subtitle: "Growth requires repeatable systems:",
+    icon: Settings,
+    colorClass: "primary",
+    questions: [
+      "Can you document how you do what you do? Not perfectly, but clearly enough that someone could learn it?",
+      "Are your core processes scalable, or do they depend entirely on you?",
+      "Can your current technology and tools handle double the workload without breaking?",
+      "Where are the bottlenecks in your operations—the places where scaling causes breakdown?",
+      "Do you have systems for quality control that don't depend on you personally checking everything?"
+    ],
+    warning: "Without scalable operations, growth creates chaos. Every new customer or project becomes a custom operation."
+  },
+  {
+    id: "team",
+    title: "Team Foundation",
+    subtitle: "Growth requires people clarity:",
+    icon: Users,
+    colorClass: "primary",
+    questions: [
+      "Does every team member understand their role, their authority, and how their work connects to bigger goals?",
+      "Do your people share your core values, or do you have people who are just collecting a paycheck?",
+      "Could you lose any single person (even you) without the business collapsing?",
+      "Do you have leaders who can manage people, not just individual contributors?",
+      "Are your people engaged, or are they already at capacity and exhausted?"
+    ],
+    warning: "If your team is already stretched, adding growth will break them. If roles are unclear, growth creates confusion and turf battles."
+  },
+  {
+    id: "customer",
+    title: "Customer & Market Foundation",
+    subtitle: "Growth requires a solid customer base:",
+    icon: Target,
+    colorClass: "primary",
+    questions: [
+      "Are your best customers loyal, and do you know why?",
+      "Are most of your new customers coming from referrals or word-of-mouth, or are you constantly chasing cold leads?",
+      "Do you deeply understand what problems you solve for customers and why they choose you?",
+      "Are your customers happy enough to absorb service changes during growth, or are they already at the edge?"
+    ],
+    warning: "Customers are your foundation. If you grow and can't serve them well, they leave."
+  },
+  {
+    id: "leadership",
+    title: "Leadership & Strategic Foundation",
+    subtitle: "Growth requires alignment:",
+    icon: Zap,
+    colorClass: "primary",
+    questions: [
+      "Do you and your leadership team agree on what success looks like?",
+      "Is there a written plan for where you're going, or is growth just a vague direction?",
+      "Does leadership agree on which growth opportunities matter and which are distractions?",
+      "Can you make decisions quickly when needed, or does every decision get debated?"
+    ],
+    warning: "If leadership isn't aligned, growth creates conflict. If there's no clear strategy, growth goes in multiple directions at once."
+  }
+];
+
+const FoundationAuditSection = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  const togglePillar = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="mb-12">
+      <h2 className="text-3xl font-bold mb-6 text-foreground">The Foundation Audit: What Must Be Solid Before Growth Happens</h2>
+      
+      <p className="text-muted-foreground mb-8">
+        Before you pursue any growth, you need to diagnose your business's actual readiness. This isn't about pie-in-the-sky ambition. It's about <strong>honest assessment</strong> of whether your foundation can support expansion.
+      </p>
+
+      {/* Visual Progress Indicator */}
+      <div className="flex items-center justify-center gap-2 mb-8">
+        {foundationPillars.map((pillar, index) => {
+          const IconComponent = pillar.icon;
+          const isActive = activeIndex === index;
+          return (
+            <button
+              key={pillar.id}
+              onClick={() => setActiveIndex(index)}
+              className={`
+                group relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300
+                ${isActive 
+                  ? pillar.colorClass === 'biz-green' 
+                    ? 'bg-[hsl(var(--biz-green))] text-white scale-110 shadow-lg' 
+                    : 'bg-primary text-primary-foreground scale-110 shadow-lg'
+                  : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground'
+                }
+              `}
+              aria-label={pillar.title}
+            >
+              <IconComponent className="w-5 h-5" />
+              {/* Tooltip */}
+              <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-foreground text-background px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                {pillar.title.split(' ')[0]}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Accordion Cards */}
+      <div className="space-y-3">
+        {foundationPillars.map((pillar, index) => {
+          const IconComponent = pillar.icon;
+          const isActive = activeIndex === index;
+          const isGreen = pillar.colorClass === 'biz-green';
+
+          return (
+            <motion.div
+              key={pillar.id}
+              initial={false}
+              className={`
+                rounded-xl overflow-hidden transition-all duration-300
+                ${isActive 
+                  ? isGreen 
+                    ? 'bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/40 shadow-lg' 
+                    : 'bg-primary/5 border-2 border-primary/30 shadow-lg'
+                  : 'bg-card border border-border hover:border-primary/30'
+                }
+              `}
+            >
+              {/* Header */}
+              <button
+                onClick={() => togglePillar(index)}
+                className="w-full flex items-center justify-between p-5 text-left group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className={`
+                    p-3 rounded-lg transition-all duration-300
+                    ${isActive 
+                      ? isGreen 
+                        ? 'bg-[hsl(var(--biz-green))]/20' 
+                        : 'bg-primary/20'
+                      : 'bg-muted group-hover:bg-primary/10'
+                    }
+                  `}>
+                    <IconComponent className={`
+                      w-6 h-6 transition-colors duration-300
+                      ${isActive 
+                        ? isGreen 
+                          ? 'text-[hsl(var(--biz-green))]' 
+                          : 'text-primary'
+                        : 'text-muted-foreground group-hover:text-primary'
+                      }
+                    `} />
+                  </div>
+                  <div>
+                    <h3 className={`
+                      text-xl font-bold transition-colors duration-300
+                      ${isActive ? 'text-foreground' : 'text-foreground/80 group-hover:text-foreground'}
+                    `}>
+                      {pillar.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-0.5">{pillar.subtitle}</p>
+                  </div>
+                </div>
+                <div className={`
+                  p-2 rounded-full transition-all duration-300
+                  ${isActive ? 'bg-primary/10 rotate-180' : 'bg-transparent group-hover:bg-muted'}
+                `}>
+                  <ChevronDown className={`
+                    w-5 h-5 transition-all duration-300
+                    ${isActive ? 'text-primary' : 'text-muted-foreground'}
+                  `} />
+                </div>
+              </button>
+
+              {/* Content */}
+              <AnimatePresence initial={false}>
+                {isActive && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-5 pb-5">
+                      <div className="pt-2 border-t border-border/50">
+                        <ul className="space-y-3 mt-4">
+                          {pillar.questions.map((question, qIndex) => (
+                            <motion.li
+                              key={qIndex}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: qIndex * 0.05 }}
+                              className="flex items-start gap-3"
+                            >
+                              <CheckCircle className={`
+                                w-5 h-5 shrink-0 mt-0.5
+                                ${isGreen ? 'text-[hsl(var(--biz-green))]' : 'text-primary'}
+                              `} />
+                              <span className="text-muted-foreground">{question}</span>
+                            </motion.li>
+                          ))}
+                        </ul>
+                        
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 }}
+                          className={`
+                            mt-6 p-4 rounded-lg
+                            ${isGreen 
+                              ? 'bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/20' 
+                              : 'bg-amber-500/10 border border-amber-500/20'
+                            }
+                          `}
+                        >
+                          <div className="flex items-start gap-3">
+                            <AlertTriangle className={`
+                              w-5 h-5 shrink-0 mt-0.5
+                              ${isGreen ? 'text-[hsl(var(--biz-green))]' : 'text-amber-500'}
+                            `} />
+                            <p className="text-foreground font-medium text-sm">
+                              {pillar.warning}
+                            </p>
+                          </div>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* CTA at bottom */}
+      <div className="mt-8 text-center">
+        <p className="text-muted-foreground mb-4">
+          <strong>Can you confidently answer "yes" to most of these questions?</strong> If not, focus on strengthening your foundation before pursuing aggressive growth.
+        </p>
+      </div>
+    </section>
+  );
+};
 
 const GrowthTrapOrGrowthEngine = () => {
   return (
@@ -168,175 +431,7 @@ const GrowthTrapOrGrowthEngine = () => {
             </section>
             
             {/* Foundation Audit Section */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">The Foundation Audit: What Must Be Solid Before Growth Happens</h2>
-              
-              <p className="text-muted-foreground mb-8">
-                Before you pursue any growth, you need to diagnose your business's actual readiness. This isn't about pie-in-the-sky ambition. It's about <strong>honest assessment</strong> of whether your foundation can support expansion.
-              </p>
-              
-              {/* Financial Foundation */}
-              <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-lg p-6 mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <DollarSign className="w-6 h-6 text-[hsl(var(--biz-green))]" />
-                  Financial Foundation
-                </h3>
-                <p className="text-muted-foreground mb-4">Can you answer these questions with confidence?</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are your revenue streams stable and consistently profitable?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you understand your actual costs—not estimates, but real numbers based on actual operations?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Can you forecast cash flow 12-24 months ahead, accounting for seasonal fluctuations?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you have positive cash flow, or are you relying on constant new revenue to cover existing expenses?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Could your business sustain a 10% drop in revenue without crisis?</span>
-                  </li>
-                </ul>
-                <p className="text-foreground font-medium mt-4">
-                  If you answer "no" to any of these, growth will expose and amplify your financial weaknesses. Fix them first.
-                </p>
-              </div>
-              
-              {/* Operational Foundation */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <Settings className="w-6 h-6 text-primary" />
-                  Operational Foundation
-                </h3>
-                <p className="text-muted-foreground mb-4">Growth requires repeatable systems:</p>
-                <ul className="space-y-3 mb-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Can you document how you do what you do? Not perfectly, but clearly enough that someone could learn it?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are your core processes scalable, or do they depend entirely on you?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Can your current technology and tools handle double the workload without breaking?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Where are the bottlenecks in your operations—the places where scaling causes breakdown?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you have systems for quality control that don't depend on you personally checking everything?</span>
-                  </li>
-                </ul>
-                <p className="text-foreground font-medium">
-                  Without scalable operations, growth creates chaos. Every new customer or project becomes a custom operation.
-                </p>
-              </div>
-              
-              {/* Team Foundation */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <Users className="w-6 h-6 text-primary" />
-                  Team Foundation
-                </h3>
-                <p className="text-muted-foreground mb-4">Growth requires people clarity:</p>
-                <ul className="space-y-3 mb-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Does every team member understand their role, their authority, and how their work connects to bigger goals?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do your people share your core values, or do you have people who are just collecting a paycheck?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Could you lose any single person (even you) without the business collapsing?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you have leaders who can manage people, not just individual contributors?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are your people engaged, or are they already at capacity and exhausted?</span>
-                  </li>
-                </ul>
-                <p className="text-foreground font-medium">
-                  If your team is already stretched, adding growth will break them. If roles are unclear, growth creates confusion and turf battles.
-                </p>
-              </div>
-              
-              {/* Customer & Market Foundation */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <Target className="w-6 h-6 text-primary" />
-                  Customer & Market Foundation
-                </h3>
-                <p className="text-muted-foreground mb-4">Growth requires a solid customer base:</p>
-                <ul className="space-y-3 mb-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are your best customers loyal, and do you know why?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are most of your new customers coming from referrals or word-of-mouth, or are you constantly chasing cold leads?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you deeply understand what problems you solve for customers and why they choose you?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Are your customers happy enough to absorb service changes during growth, or are they already at the edge?</span>
-                  </li>
-                </ul>
-                <p className="text-foreground font-medium">
-                  Customers are your foundation. If you grow and can't serve them well, they leave.
-                </p>
-              </div>
-              
-              {/* Leadership & Strategic Foundation */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <Zap className="w-6 h-6 text-primary" />
-                  Leadership & Strategic Foundation
-                </h3>
-                <p className="text-muted-foreground mb-4">Growth requires alignment:</p>
-                <ul className="space-y-3 mb-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Do you and your leadership team agree on what success looks like?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Is there a written plan for where you're going, or is growth just a vague direction?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Does leadership agree on which growth opportunities matter and which are distractions?</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Can you make decisions quickly when needed, or does every decision get debated?</span>
-                  </li>
-                </ul>
-                <p className="text-foreground font-medium">
-                  If leadership isn't aligned, growth creates conflict. If there's no clear strategy, growth goes in multiple directions at once.
-                </p>
-              </div>
-            </section>
+            <FoundationAuditSection />
             
             {/* Growth Readiness Self-Assessment */}
             <section className="mb-12">

@@ -29,3 +29,21 @@
 # Don't cache HTML
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+# PDF files - proper MIME type and download headers
+/downloads/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=3600
+
+# DOCX files - proper MIME type
+/downloads/*.docx
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=3600
+
+# XLSX files - proper MIME type
+/downloads/*.xlsx
+  Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=3600

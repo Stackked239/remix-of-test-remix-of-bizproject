@@ -135,8 +135,8 @@
   status = 200
   force = false  # Only redirect if file doesn't exist
   
-  # Don't redirect these file types
-  conditions = {path = ["!/**/*.html", "!/**/*.js", "!/**/*.css", "!/**/*.png", "!/**/*.jpg", "!/**/*.jpeg", "!/**/*.gif", "!/**/*.svg", "!/**/*.webp", "!/**/*.ico", "!/**/*.json", "!/**/*.xml", "!/**/*.txt"]}
+  # Don't redirect these file types (including downloadable files)
+  conditions = {path = ["!/**/*.html", "!/**/*.js", "!/**/*.css", "!/**/*.png", "!/**/*.jpg", "!/**/*.jpeg", "!/**/*.gif", "!/**/*.svg", "!/**/*.webp", "!/**/*.ico", "!/**/*.json", "!/**/*.xml", "!/**/*.txt", "!/**/*.pdf", "!/**/*.docx", "!/**/*.xlsx", "!/**/*.doc", "!/**/*.xls", "!/**/*.zip"]}
 
 # Security headers
 [[headers]]
@@ -180,6 +180,30 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# PDF files - proper MIME type and download headers
+[[headers]]
+  for = "/downloads/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=3600"
+
+# DOCX files - proper MIME type and download headers
+[[headers]]
+  for = "/downloads/*.docx"
+  [headers.values]
+    Content-Type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=3600"
+
+# XLSX files - proper MIME type and download headers
+[[headers]]
+  for = "/downloads/*.xlsx"
+  [headers.values]
+    Content-Type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=3600"
 
 # Prerender specific blog posts for better SEO
 [[plugins]]

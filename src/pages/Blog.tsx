@@ -64,9 +64,11 @@ import technologyStrategicAllyImage from "@/assets/images/technology-strategic-a
 import crmRealityCheckImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
 import growthTrapOrGrowthEngineImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
 import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
+import schedulingCrisisImage from "@/assets/images/scheduling-crisis-operational-costs-smb.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/scheduling-crisis-operational-costs": schedulingCrisisImage,
   "/blog/estimating-crisis-service-business-profitability": estimatingCrisisImage,
   "/blog/growth-trap-or-growth-engine": growthTrapOrGrowthEngineImage,
   "/blog/crm-reality-check-small-business-decision": crmRealityCheckImage,

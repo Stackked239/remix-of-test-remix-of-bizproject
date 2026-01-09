@@ -477,7 +477,7 @@ const BusinessGrowthStrategies = () => {
       {/* SECTION 2: THE GROWTH PARADOX */}
       <section className="py-20 bg-[#f7fafc]">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-5 gap-12 items-start">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Left Column - 60% */}
             <motion.div
               variants={fadeUpVariant}
@@ -1439,7 +1439,7 @@ const BusinessGrowthStrategies = () => {
               FAQ
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-[#2d3748] font-montserrat mb-4">
-              Questions? <span className="text-[#319795]">We've Got Answers.</span>
+              Questions? <span className="text-[#969423]">We've Got Answers.</span>
             </h2>
             <p className="text-[#4a5568] text-lg max-w-xl mx-auto">
               Everything you need to know about the Business Growth module

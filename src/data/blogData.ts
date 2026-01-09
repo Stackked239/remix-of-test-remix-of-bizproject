@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     title: "Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth",
     excerpt: "Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI, hidden cost blind spots, and a proven evaluation framework.",
     author: "BizHealth.ai Research Team",
-    date: "January 7, 2026",
+    date: "January 5, 2026",
     readTime: "10 min read",
     category: "Technology, Operations, Business Strategy",
     slug: "/blog/technology-strategic-ally-roi-decisions",

@@ -19,7 +19,7 @@ const TechnologyStrategicAllyROI = () => {
         canonical="https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions"
         ogType="article"
         ogImage="https://bizhealth.ai/og-images/og-technology-strategic-ally-roi.jpg"
-        articlePublishedTime="2026-01-07"
+        articlePublishedTime="2026-01-05"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
@@ -27,7 +27,7 @@ const TechnologyStrategicAllyROI = () => {
         headline="Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth"
         description="Learn how to make ROI-first technology decisions that drive real growth for your small business. Discover the 5 dimensions of technology ROI and a proven decision framework."
         image="https://bizhealth.ai/og-images/og-technology-strategic-ally-roi.jpg"
-        datePublished="2026-01-07"
+        datePublished="2026-01-05"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions"
       />
@@ -68,7 +68,7 @@ const TechnologyStrategicAllyROI = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>January 7, 2026</span>
+                <span>January 5, 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />

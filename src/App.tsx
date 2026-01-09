@@ -245,6 +245,7 @@ const App = () => (
               <Route path="/blog/hr-program-asset-multiplier-small-business" element={<HRProgramAssetMultiplier />} />
               <Route path="/blog/technology-strategic-ally-roi-decisions" element={<TechnologyStrategicAllyROI />} />
               <Route path="/blog/crm-reality-check-small-business-decision" element={<CRMRealityCheck />} />
+              <Route path="/blog/growth-trap-or-growth-engine" element={<GrowthTrapOrGrowthEngine />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

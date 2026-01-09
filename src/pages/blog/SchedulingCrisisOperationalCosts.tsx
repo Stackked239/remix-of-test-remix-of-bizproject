@@ -591,13 +591,6 @@ const SchedulingCrisisOperationalCosts = () => {
                 </p>
               </section>
 
-              {/* Social Share */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <SocialShareButtons 
-                  title="Scheduling: Why Your Most Underestimated Operational Task Is Likely Bleeding Your Profits"
-                  description="Scheduling decisions silently drain $200K+ annually. Learn how to transform scheduling from administrative burden to strategic advantage."
-                />
-              </div>
 
               {/* Related Articles */}
               <section className="mt-12 pt-8 border-t border-border">

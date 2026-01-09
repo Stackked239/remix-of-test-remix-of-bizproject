@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     title: "Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow",
     excerpt: "78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap.",
     author: "BizHealth.ai Research Team",
-    date: "January 9, 2026",
+    date: "January 8, 2026",
     readTime: "10 min read",
     category: "Business Strategy, Business Leadership, Operations",
     slug: "/blog/growth-trap-or-growth-engine",

@@ -303,7 +303,7 @@ const GrowthTrapOrGrowthEngine = () => {
       <BlogHeroSection
         title="Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow"
         author="BizHealth.ai Research Team"
-        publishDate="January 9, 2026"
+        publishDate="January 8, 2026"
         readTime="10 min read"
         heroImage={heroImage}
         heroImageAlt="Business leader with analytics tablet at crossroads in manufacturing facility assessing growth readiness and strategic direction"

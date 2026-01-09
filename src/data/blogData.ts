@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Scheduling: Why Your Most Underestimated Operational Task Is Likely Bleeding Your Profits",
+    excerpt: "Scheduling decisions silently drain $200,000+ annually through labor inefficiency, employee turnover, and lost revenue. Learn how to transform scheduling from administrative burden to strategic advantage.",
+    author: "BizHealth.ai Research Team",
+    date: "January 9, 2026",
+    readTime: "10 min read",
+    category: "Operations, Business Strategy, Business Leadership, Technology",
+    slug: "/blog/scheduling-crisis-operational-costs",
+    imageUrl: "/assets/images/scheduling-crisis-operational-costs-smb.jpg",
+    altText: "Small business manager stressed over complex employee scheduling with spreadsheets, tablets, and shift calendars on desk",
+    keywords: "employee scheduling, workforce management, labor cost optimization, scheduling software, shift scheduling, operational efficiency, employee retention, scheduling automation, workforce scheduling, scheduling ROI, shift management, staff scheduling, scheduling costs, labor scheduling, employee schedules, work schedules, scheduling system, automated scheduling, manual scheduling, scheduling mistakes, scheduling optimization, turnover costs, overstaffing, understaffing, labor costs, payroll, time management, scheduling crisis"
+  },
+  {
     title: "Avoid The Estimating Crisis: Why Service Business Profitability Collapses When You Get Estimates Wrong",
     excerpt: "A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect service business profitability.",
     author: "BizHealth.ai Research Team",

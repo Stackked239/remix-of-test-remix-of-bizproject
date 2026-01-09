@@ -140,10 +140,10 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
-    title: "BizGrowth - Strategic Advancement Awaits",
-    excerpt: "Strategic growth programs and resources for scaling your business effectively.",
+    title: "BizGrowth Academy - Business Growth Programs & Strategic Advancement",
+    excerpt: "Strategic business growth programs and resources for scaling your business effectively. Launch, Scale, and Transform paths for every stage of SMB growth.",
     url: "/bizgrowth",
-    keywords: "bizgrowth, growth, scaling, strategic, advancement, programs",
+    keywords: "bizgrowth, business growth, grow my business, growth strategies, scaling, strategic advancement, growth programs, SMB growth, company growth, revenue growth, growth academy, business expansion, how to grow business, small business growth, grow business, growth path, scaling business",
     icon: Home
   },
   {

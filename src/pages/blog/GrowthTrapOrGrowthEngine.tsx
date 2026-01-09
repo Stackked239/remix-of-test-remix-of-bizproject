@@ -109,13 +109,13 @@ const foundationPillars = [
     subtitle: "Growth requires alignment:",
     icon: Zap,
     colors: {
-      bg: "bg-rose-500",
-      bgLight: "bg-rose-500/10",
-      bgHover: "bg-rose-500/20",
-      border: "border-rose-500/40",
-      borderLight: "border-rose-500/20",
-      text: "text-rose-500",
-      hsl: "347 77% 50%"
+      bg: "bg-cyan-500",
+      bgLight: "bg-cyan-500/10",
+      bgHover: "bg-cyan-500/20",
+      border: "border-cyan-500/40",
+      borderLight: "border-cyan-500/20",
+      text: "text-cyan-500",
+      hsl: "188 94% 43%"
     },
     questions: [
       "Do you and your leadership team agree on what success looks like?",
@@ -184,8 +184,8 @@ const FoundationAuditSection = () => {
               className={`
                 rounded-xl overflow-hidden transition-all duration-300
                 ${isActive 
-                  ? `${pillar.colors.bgLight} border-2 ${pillar.colors.border} shadow-lg`
-                  : 'bg-card border border-border hover:border-muted-foreground/30'
+                  ? `bg-muted/50 border-2 ${pillar.colors.border} shadow-lg`
+                  : 'bg-muted/30 border border-border hover:border-muted-foreground/30'
                 }
               `}
               style={isActive ? { boxShadow: `0 10px 40px -10px hsl(${pillar.colors.hsl} / 0.25)` } : {}}

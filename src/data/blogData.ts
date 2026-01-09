@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     slug: "/blog/scheduling-crisis-operational-costs",
     imageUrl: "/assets/images/scheduling-crisis-operational-costs-smb.jpg",
     altText: "Small business manager stressed over complex employee scheduling with spreadsheets, tablets, and shift calendars on desk",
-    keywords: "employee scheduling, workforce management, labor cost optimization, scheduling software, shift scheduling, operational efficiency, employee retention, scheduling automation, workforce scheduling, scheduling ROI, shift management, staff scheduling, scheduling costs, labor scheduling, employee schedules, work schedules, scheduling system, automated scheduling, manual scheduling, scheduling mistakes, scheduling optimization, turnover costs, overstaffing, understaffing, labor costs, payroll, time management, scheduling crisis"
+    keywords: "employee scheduling, workforce management, labor cost optimization, scheduling software, shift scheduling, operational efficiency, employee retention, scheduling automation, workforce scheduling, scheduling ROI, shift management, staff scheduling, scheduling costs, labor scheduling, employee schedules, work schedules, scheduling system, automated scheduling, manual scheduling, scheduling mistakes, scheduling optimization, turnover costs, overstaffing, understaffing, labor costs, payroll, time management, scheduling crisis, operations, business operations, operational costs, administrative burden, scheduling profitability"
   },
   {
     title: "Avoid The Estimating Crisis: Why Service Business Profitability Collapses When You Get Estimates Wrong",

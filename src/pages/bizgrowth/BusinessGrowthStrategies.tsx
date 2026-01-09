@@ -528,14 +528,14 @@ const BusinessGrowthStrategies = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="lg:col-span-2 space-y-4"
+              className="lg:col-span-2 flex flex-col items-center space-y-4"
             >
-              {/* Breakdown Chain Cards */}
+              {/* Breakdown Chain Cards - Centered on all screens */}
               <motion.div
                 variants={fadeUpVariant}
-                className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#38a169]"
+                className="w-full max-w-sm bg-white rounded-lg p-5 shadow-md border-l-4 border-[#38a169]"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <TrendingUp className="w-6 h-6 text-[#38a169]" />
                   <span className="font-semibold text-[#2d3748]">Revenue Grows Fast</span>
                 </div>
@@ -545,9 +545,9 @@ const BusinessGrowthStrategies = () => {
               </div>
               <motion.div
                 variants={fadeUpVariant}
-                className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#c05621]"
+                className="w-full max-w-sm bg-white rounded-lg p-5 shadow-md border-l-4 border-[#c05621]"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <AlertTriangle className="w-6 h-6 text-[#c05621]" />
                   <span className="font-semibold text-[#2d3748]">Costs Jump Faster</span>
                 </div>
@@ -557,11 +557,11 @@ const BusinessGrowthStrategies = () => {
               </div>
               <motion.div
                 variants={fadeUpVariant}
-                className="bg-white rounded-lg p-5 shadow-md border-l-4 border-[#c53030]"
+                className="w-full max-w-sm bg-white rounded-lg p-5 shadow-md border-l-4 border-[#c53030]"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <Zap className="w-6 h-6 text-[#c53030]" />
-                  <div>
+                  <div className="text-center">
                     <span className="font-semibold text-[#2d3748] block">Something Breaks</span>
                     <span className="text-sm text-[#4a5568]">(Cash / Team / Quality)</span>
                   </div>
@@ -619,17 +619,14 @@ const BusinessGrowthStrategies = () => {
             </p>
             
             {/* Visual pillar indicator */}
-            <div className="flex justify-center gap-2 md:gap-4">
-              {[1, 2, 3, 4, 5].map((num) => (
-                <div
-                  key={num}
-                  className="flex flex-col items-center"
-                >
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#242553] to-[#319795] rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg">
+            <div className="flex justify-center items-center gap-2 md:gap-3">
+              {[1, 2, 3, 4, 5].map((num, index) => (
+                <div key={num} className="flex items-center">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#242553] to-[#319795] rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg relative z-10">
                     {num}
                   </div>
-                  {num < 5 && (
-                    <div className="hidden md:block w-12 h-0.5 bg-gradient-to-r from-[#319795] to-[#242553] absolute translate-x-12 translate-y-5" />
+                  {index < 4 && (
+                    <div className="hidden md:block w-6 lg:w-10 h-1 bg-gradient-to-r from-[#319795] to-[#242553] rounded-full mx-1" />
                   )}
                 </div>
               ))}
@@ -819,8 +816,12 @@ const BusinessGrowthStrategies = () => {
       </section>
 
       {/* SECTION 5: PAIN POINTS & OBJECTIONS */}
-      <section className="py-20 bg-[#f7fafc]">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 bg-gradient-to-b from-[#f7fafc] to-white relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-0 w-64 h-64 bg-[#c05621]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-0 w-64 h-64 bg-[#319795]/5 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <motion.div
             variants={fadeUpVariant}
             initial="hidden"
@@ -828,12 +829,16 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-xs font-semibold tracking-wider text-[#c05621] uppercase mb-4 block">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-[#c05621] uppercase mb-4 bg-[#c05621]/10 px-4 py-2 rounded-full">
+              <AlertTriangle className="w-3.5 h-3.5" />
               REAL TALK
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] font-montserrat">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2d3748] mb-4 font-montserrat">
               What's Really Keeping You Up at Night?
             </h2>
+            <p className="text-[#4a5568] text-lg max-w-2xl mx-auto">
+              We hear these concerns from business owners every day. Here's how this module addresses each one.
+            </p>
           </motion.div>
 
           <motion.div
@@ -843,76 +848,121 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
           >
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="q1" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  "I don't know if I'm ready to grow."
+              <AccordionItem value="q1" className="bg-white rounded-xl border border-gray-200 px-6 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#319795]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <ClipboardCheck className="w-4 h-4 text-[#319795]" />
+                    </div>
+                    <span>"I don't know if I'm ready to grow."</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
+                <AccordionContent className="text-[#4a5568] pb-5 pl-11">
                   <p className="mb-2">That uncertainty is smart—and it's exactly why you need this.</p>
-                  <p>
+                  <p className="mb-4">
                     Pillar 2 walks you through a Growth Readiness Assessment that diagnoses your
                     capacity across finance, operations, people, and market. You'll know your gaps
                     and exactly what to strengthen before you scale.
                   </p>
+                  <div className="flex items-center gap-2 text-sm text-[#319795] font-medium">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Uses: Growth Readiness Scorecard</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="q2" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  "My team is already stretched. How can we add more?"
+              <AccordionItem value="q2" className="bg-white rounded-xl border border-gray-200 px-6 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#c05621]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Users className="w-4 h-4 text-[#c05621]" />
+                    </div>
+                    <span>"My team is already stretched. How can we add more?"</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
+                <AccordionContent className="text-[#4a5568] pb-5 pl-11">
                   <p className="mb-2">
                     Real talk: if your team is at capacity now, growth will break them.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     Pillar 4 (Communication & Change Management) helps you communicate the "why,"
                     get buy-in, and stage resources appropriately. Pillar 5 includes a
                     troubleshooting guide for when the team is overwhelmed—because sometimes you
                     need to slow growth to save your culture.
                   </p>
+                  <div className="flex items-center gap-2 text-sm text-[#319795] font-medium">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Uses: Team Alignment Workshop Guide</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="q3" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  "I'm worried about running out of cash."
+              <AccordionItem value="q3" className="bg-white rounded-xl border border-gray-200 px-6 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#38a169]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <BarChart3 className="w-4 h-4 text-[#38a169]" />
+                    </div>
+                    <span>"I'm worried about running out of cash."</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
+                <AccordionContent className="text-[#4a5568] pb-5 pl-11">
                   <p className="mb-2">You should be. Growth burns cash before it generates cash.</p>
-                  <p>
+                  <p className="mb-4">
                     Pillar 3 includes a 13-week cash flow projection template with best/worst/expected
                     scenarios. You'll know exactly when cash might get tight, and you'll have
                     contingency plans before crisis hits.
                   </p>
+                  <div className="flex items-center gap-2 text-sm text-[#319795] font-medium">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Uses: 13-Week Cash Flow Projection</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="q4" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  "I've tried planning before. It felt useless."
+              <AccordionItem value="q4" className="bg-white rounded-xl border border-gray-200 px-6 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#969423]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-4 h-4 text-[#969423]" />
+                    </div>
+                    <span>"I've tried planning before. It felt useless."</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
+                <AccordionContent className="text-[#4a5568] pb-5 pl-11">
                   <p className="mb-2">
                     Most growth plans fail because they live on a spreadsheet nobody looks at again.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     This module is different: it's integrated, tool-based, and tied to a lightweight
                     operating rhythm (Pillar 5). Weekly check-ins keep the plan alive and adaptable
                     to reality.
                   </p>
+                  <div className="flex items-center gap-2 text-sm text-[#319795] font-medium">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Uses: Growth Dashboard Template</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="q5" className="bg-white rounded-lg border px-6">
-                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline">
-                  "This sounds complicated. I don't have time."
+              <AccordionItem value="q5" className="bg-white rounded-xl border border-gray-200 px-6 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                <AccordionTrigger className="text-left text-[#2d3748] font-semibold hover:no-underline py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#242553]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Calendar className="w-4 h-4 text-[#242553]" />
+                    </div>
+                    <span>"This sounds complicated. I don't have time."</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[#4a5568] pb-4">
+                <AccordionContent className="text-[#4a5568] pb-5 pl-11">
                   <p className="mb-2">
                     It's designed for busy owners. Each tool takes 20-30 minutes. Each lesson is
                     5-10 minutes.
                   </p>
-                  <p>
+                  <p className="mb-4">
                     The benefit? You avoid months of chaos and costly mistakes. That's real ROI on
                     your time.
                   </p>
+                  <div className="flex items-center gap-2 text-sm text-[#319795] font-medium">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Time Investment: 30-60 mins/week</span>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -930,8 +980,8 @@ const BusinessGrowthStrategies = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="w-16 h-16 bg-[#969423]/20 rounded-full flex items-center justify-center mb-6">
-              <CheckCircle className="w-8 h-8 text-[#969423]" />
+            <div className="w-16 h-16 bg-[#C8E600]/20 rounded-full flex items-center justify-center mb-6">
+              <CheckCircle className="w-8 h-8 text-[#C8E600]" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-montserrat">
               Here's Something Other Growth Programs Won't Tell You:

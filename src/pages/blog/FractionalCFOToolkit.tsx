@@ -10,7 +10,7 @@ import {
   AlertTriangle, Lightbulb, ArrowRight, Wallet, PieChart, BarChart3
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import fractionalCFOImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
+import fractionalCFOImage from "@/assets/images/fractional-cfo-toolkit-hero-2026.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import SocialShareButtons from "@/components/SocialShareButtons";
@@ -208,7 +208,7 @@ const FractionalCFOToolkit = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
               <img 
                 src={fractionalCFOImage} 
-                alt="Business owner viewing financial dashboard with declining cash flow velocity and operational stress metrics - fractional CFO toolkit visualization for small business financial visibility"
+                alt="Worried business owner driving with dashboard showing empty financial velocity declining and operational stress rising - fractional CFO toolkit for SMB financial visibility"
                 className="w-full h-auto max-h-[500px] object-cover"
                 width="1200"
                 height="630"

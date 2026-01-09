@@ -57,6 +57,7 @@ const ogImageMap = {
   '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
   '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
   '/blog/growth-trap-or-growth-engine': '/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg',
+  '/blog/fractional-cfo-toolkit': '/assets/images/fractional-cfo-toolkit-hero-2026.jpg',
 };
 
 /**

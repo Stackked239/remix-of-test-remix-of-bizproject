@@ -52,7 +52,7 @@ import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margi
 import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
 import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
-import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
+import fractionalCFOToolkitImage from "@/assets/images/fractional-cfo-toolkit-hero-2026.jpg";
 import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";

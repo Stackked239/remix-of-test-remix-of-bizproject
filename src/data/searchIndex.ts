@@ -289,6 +289,14 @@ export const searchablePages: SearchableItem[] = [
     url: "/glossary-of-terms",
     keywords: "glossary, terms, definitions, terminology, dictionary, vocabulary",
     icon: BookOpen
+  },
+  {
+    type: "Page",
+    title: "Resources - Free Tools & SMB Calculators",
+    excerpt: "Access free business resources including ROI calculators, business valuation estimators, cash flow analyzers, and downloadable templates for SMB growth.",
+    url: "/resources",
+    keywords: "resources, free tools, calculators, ROI calculator, business valuation, cash flow, templates, downloads, free resources, SMB tools, business calculators, estimator, analyzer, valuation calculator, return on investment, business resources, small business tools",
+    icon: Wrench
   }
 ];
 

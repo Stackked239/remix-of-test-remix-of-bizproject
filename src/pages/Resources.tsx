@@ -27,8 +27,8 @@ const Resources = () => {
         {
           name: "ROI Calculator",
           description: "Calculate return on investment for new projects and initiatives",
-          link: "#",
-          external: true
+          link: "/biztools/toolbox/free-roi-calculator",
+          external: false
         },
         {
           name: "Business Valuation Estimator",

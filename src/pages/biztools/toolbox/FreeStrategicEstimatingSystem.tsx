@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Download, ChevronDown, ChevronRight, Check, X, AlertTriangle, TrendingUp, Users, Clock, Target, FileText, Printer, BarChart3 } from "lucide-react";
@@ -6,29 +6,72 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import { trackDownload, trackCTAClick, trackScrollDepth, trackSectionView, trackTimeOnPage, trackFAQInteraction } from "@/utils/analytics";
 
 const FreeStrategicEstimatingSystem = () => {
   const pdfPath = "/downloads/Strategic-Estimating-System-Checklist-BizHealth.pdf";
   const pdfDownloadName = "BizHealth-7-Step-Strategic-Estimating-System.pdf";
+  const pagePath = "/biztools/toolbox/free-strategic-estimating-system";
+  
+  // Track time on page
+  const startTimeRef = useRef(Date.now());
+  const scrollMilestonesRef = useRef<Set<number>>(new Set());
+  
+  useEffect(() => {
+    // Track time on page when user leaves
+    const handleBeforeUnload = () => {
+      const timeSpent = Math.round((Date.now() - startTimeRef.current) / 1000);
+      trackTimeOnPage(timeSpent, pagePath);
+    };
+    
+    // Track scroll depth
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      
+      // Track at 25%, 50%, 75%, 100% milestones
+      const milestones = [25, 50, 75, 100];
+      milestones.forEach(milestone => {
+        if (scrollPercent >= milestone && !scrollMilestonesRef.current.has(milestone)) {
+          scrollMilestonesRef.current.add(milestone);
+          trackScrollDepth(milestone, pagePath);
+        }
+      });
+    };
+    
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  const handleDownloadClick = () => {
-    // Analytics tracking placeholder
-    console.log("PDF Download clicked: Strategic Estimating System");
+  const handleDownloadClick = (buttonLocation: string) => {
+    trackDownload({
+      fileName: 'BizHealth-7-Step-Strategic-Estimating-System',
+      fileType: 'pdf',
+      source: pagePath,
+      category: 'lead_magnet',
+      value: 0, // Free download
+    });
     
-    // GA4 tracking (if available)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'file_download', {
-        file_name: 'Strategic-Estimating-System-Checklist',
-        file_extension: 'pdf',
-        link_url: pdfPath
-      });
-    }
-    
-    // Facebook Pixel tracking (if available)
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead', {
-        content_name: 'Strategic Estimating System PDF'
-      });
+    trackCTAClick(`Download PDF - ${buttonLocation}`, pdfPath, 'conversion');
+  };
+
+  const handleCTAClick = (ctaName: string, destination: string) => {
+    trackCTAClick(ctaName, destination, 'engagement');
+  };
+
+  const handleFAQChange = (value: string) => {
+    if (value) {
+      const faqIndex = parseInt(value.replace('faq-', ''));
+      const faq = faqs[faqIndex];
+      if (faq) {
+        trackFAQInteraction(faq.question, 'expand');
+      }
     }
   };
 
@@ -36,6 +79,7 @@ const FreeStrategicEstimatingSystem = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      trackSectionView(id, pagePath);
     }
   };
 
@@ -160,7 +204,7 @@ const FreeStrategicEstimatingSystem = () => {
                   <a 
                     href={pdfPath} 
                     download={pdfDownloadName}
-                    onClick={handleDownloadClick}
+                    onClick={() => handleDownloadClick('hero')}
                   >
                     <Download className="w-5 h-5 mr-2" />
                     Download Free Checklist
@@ -412,7 +456,7 @@ const FreeStrategicEstimatingSystem = () => {
                 <a 
                   href={pdfPath} 
                   download={pdfDownloadName}
-                  onClick={handleDownloadClick}
+                  onClick={() => handleDownloadClick('download-section')}
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download Free PDF Now
@@ -513,7 +557,7 @@ const FreeStrategicEstimatingSystem = () => {
 
           {/* FAQ Accordion */}
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-4" onValueChange={handleFAQChange}>
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
@@ -550,7 +594,7 @@ const FreeStrategicEstimatingSystem = () => {
               <a 
                 href={pdfPath} 
                 download={pdfDownloadName}
-                onClick={handleDownloadClick}
+                onClick={() => handleDownloadClick('final-cta')}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Free PDF

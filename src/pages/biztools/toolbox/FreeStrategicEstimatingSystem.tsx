@@ -421,11 +421,11 @@ const FreeStrategicEstimatingSystem = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-biz-navy to-[#1a1a3d] rounded-xl p-6 text-center"
+                className="bg-biz-green rounded-xl p-6 text-center"
               >
-                <div className="text-4xl lg:text-5xl font-bold text-biz-green mb-2">{result.stat}</div>
-                <div className="text-white font-semibold mb-2">{result.label}</div>
-                <div className="text-white/70 text-sm">{result.description}</div>
+                <div className="text-4xl lg:text-5xl font-bold text-biz-navy mb-2">{result.stat}</div>
+                <div className="text-biz-navy font-semibold mb-2">{result.label}</div>
+                <div className="text-biz-navy/80 text-sm">{result.description}</div>
               </motion.div>
             ))}
           </div>

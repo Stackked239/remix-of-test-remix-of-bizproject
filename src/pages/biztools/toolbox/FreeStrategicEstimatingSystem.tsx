@@ -80,7 +80,9 @@ const FreeStrategicEstimatingSystem = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navOffset = 100; // Account for fixed nav bar + banner
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: elementPosition - navOffset, behavior: 'smooth' });
       trackSectionView(id, pagePath);
     }
   };

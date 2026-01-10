@@ -540,6 +540,30 @@ const Contact = () => {
                       <p className="text-xs text-muted-foreground leading-relaxed">Common questions answered</p>
                       <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-blue))' }} />
                     </a>
+                    
+                    <a 
+                      href="/ideas" 
+                      className="group relative p-5 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden col-span-2"
+                      style={{ 
+                        borderColor: 'hsl(var(--biz-lime) / 0.3)',
+                        backgroundColor: 'hsl(var(--biz-lime) / 0.05)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-lime))';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-lime) / 0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'hsl(var(--biz-lime) / 0.3)';
+                        e.currentTarget.style.backgroundColor = 'hsl(var(--biz-lime) / 0.05)';
+                      }}
+                    >
+                      <div className="p-2.5 rounded-lg w-fit mb-3" style={{ backgroundColor: 'hsl(var(--biz-lime) / 0.15)' }}>
+                        <Lightbulb className="w-5 h-5" style={{ color: 'hsl(var(--biz-lime))' }} />
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-1 text-sm">Share Your Ideas</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">Help us build what matters most to you</p>
+                      <ArrowRight className="absolute bottom-4 right-4 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" style={{ color: 'hsl(var(--biz-lime))' }} />
+                    </a>
                   </div>
                 </div>
               </div>

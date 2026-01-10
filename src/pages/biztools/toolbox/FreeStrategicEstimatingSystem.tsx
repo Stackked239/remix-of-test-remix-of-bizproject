@@ -266,20 +266,20 @@ const FreeStrategicEstimatingSystem = () => {
                   </div>
                   
                   {/* PDF Preview */}
-                  <div className="bg-gradient-to-br from-biz-navy to-[#1a1a3d] p-8 aspect-[3/4] flex flex-col items-center justify-center text-center">
-                    <div className="bg-white/10 rounded-lg px-4 py-2 mb-4">
-                      <span className="font-heading text-lg font-bold text-white">Biz<span className="text-biz-green">Health</span>.ai</span>
+                  <div className="bg-white p-8 aspect-[3/4] flex flex-col items-center justify-center text-center">
+                    <div className="bg-biz-navy/10 rounded-lg px-4 py-2 mb-4">
+                      <span className="font-heading text-lg font-bold text-biz-navy">Biz<span className="text-biz-green">Health</span>.ai</span>
                     </div>
-                    <h3 className="text-white font-heading font-bold text-2xl mb-2">7-STEP</h3>
+                    <h3 className="text-biz-navy font-heading font-bold text-2xl mb-2">7-STEP</h3>
                     <h3 className="text-biz-green font-heading font-bold text-xl mb-4">STRATEGIC ESTIMATING SYSTEM</h3>
-                    <p className="text-white/80 text-sm">The Complete Checklist for Service Businesses</p>
+                    <p className="text-biz-navy/70 text-sm">The Complete Checklist for Service Businesses</p>
                     <div className="mt-6 flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-biz-green" />
-                      <div className="w-2 h-2 rounded-full bg-white/40" />
-                      <div className="w-2 h-2 rounded-full bg-white/40" />
-                      <div className="w-2 h-2 rounded-full bg-white/40" />
-                      <div className="w-2 h-2 rounded-full bg-white/40" />
-                      <span className="text-white/60 text-xs ml-2">10 pages</span>
+                      <div className="w-2 h-2 rounded-full bg-biz-navy/30" />
+                      <div className="w-2 h-2 rounded-full bg-biz-navy/30" />
+                      <div className="w-2 h-2 rounded-full bg-biz-navy/30" />
+                      <div className="w-2 h-2 rounded-full bg-biz-navy/30" />
+                      <span className="text-biz-navy/60 text-xs ml-2">10 pages</span>
                     </div>
                   </div>
                 </div>

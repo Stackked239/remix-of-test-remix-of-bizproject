@@ -430,7 +430,7 @@ const Resources = () => {
                   <a 
                     href={resource.url} 
                     target="_blank" 
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     className={`inline-flex items-center gap-2 ${colors.text} hover:opacity-80 transition-colors text-sm font-medium group-hover:gap-3`}
                   >
                     Visit Resource

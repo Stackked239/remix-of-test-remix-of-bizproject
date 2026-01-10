@@ -9,6 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import { trackDownload, trackCTAClick, trackScrollDepth, trackSectionView, trackTimeOnPage, trackFAQInteraction } from "@/utils/analytics";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import bizHealthStackedLogo from "@/assets/images/bizhealth-stacked-logo.jpg";
 
 const FreeStrategicEstimatingSystem = () => {
   const pdfPath = "/downloads/Strategic-Estimating-System-Checklist-BizHealth.pdf";
@@ -269,9 +270,11 @@ const FreeStrategicEstimatingSystem = () => {
                   
                   {/* PDF Preview */}
                   <div className="bg-white p-8 aspect-[3/4] flex flex-col items-center justify-center text-center">
-                    <div className="bg-biz-navy/10 rounded-lg px-4 py-2 mb-4">
-                      <span className="font-heading text-lg font-bold text-biz-navy">Biz<span className="text-biz-green">Health</span>.ai</span>
-                    </div>
+                    <img 
+                      src={bizHealthStackedLogo} 
+                      alt="BizHealth.ai Logo" 
+                      className="h-20 w-auto object-contain mb-4"
+                    />
                     <h3 className="text-biz-navy font-heading font-bold text-2xl mb-2">7-STEP</h3>
                     <h3 className="text-biz-green font-heading font-bold text-xl mb-4">STRATEGIC ESTIMATING SYSTEM</h3>
                     <p className="text-biz-navy/70 text-sm">The Complete Checklist for Service Businesses</p>

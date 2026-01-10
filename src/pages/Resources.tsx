@@ -248,15 +248,17 @@ const Resources = () => {
       <GlobalNavigation />
       
       {/* Hero Section - Enhanced with gradient and hero image */}
-      <section className="pt-40 pb-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 50%, hsl(var(--biz-teal) / 0.3) 100%)' }}>
-        {/* Hero background image with overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={resourcesHeroImage} 
-            alt="Business analytics dashboards and tools" 
-            className="w-full h-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-biz-navy/60 via-biz-navy/40 to-biz-navy/80" />
+      <section className="pt-40 pb-20 relative overflow-hidden min-h-[500px]" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 50%, hsl(var(--biz-teal) / 0.3) 100%)' }}>
+        {/* Hero background image with overlay - full coverage */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${resourcesHeroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-biz-navy/70 via-biz-navy/50 to-biz-navy/85" />
         </div>
         
         {/* Decorative elements */}

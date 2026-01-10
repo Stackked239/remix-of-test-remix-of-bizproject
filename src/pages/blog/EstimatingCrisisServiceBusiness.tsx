@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, XCircle, AlertTriangle, DollarSign, Users, Clock, Target, TrendingUp, Calculator, FileText, BarChart3 } from "lucide-react";
 import heroImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
@@ -845,28 +846,33 @@ const EstimatingCrisisServiceBusiness = () => {
               </div>
             </section>
 
-            {/* Related Articles */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-foreground">Related Articles</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link to="/blog/stress-test-pricing-framework-margins-cash-flow" className="group bg-muted/50 border border-border rounded-lg p-4 hover:border-primary transition-colors">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">Stress Test Your Pricing: A Framework for Protecting Margins</h3>
-                  <p className="text-sm text-muted-foreground">Learn how to pressure-test your pricing to ensure profitability in any market condition.</p>
-                </Link>
-                <Link to="/blog/small-business-financials-know-your-numbers" className="group bg-muted/50 border border-border rounded-lg p-4 hover:border-primary transition-colors">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">Know Your Numbers: Small Business Financial Essentials</h3>
-                  <p className="text-sm text-muted-foreground">Master the financial metrics every service business owner needs to track.</p>
-                </Link>
-                <Link to="/blog/fractional-cfo-toolkit" className="group bg-muted/50 border border-border rounded-lg p-4 hover:border-primary transition-colors">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">The Fractional CFO Toolkit: 7 Financial Dashboards</h3>
-                  <p className="text-sm text-muted-foreground">Build CFO-level financial visibility for your service business.</p>
-                </Link>
-              </div>
-            </section>
-            
           </div>
         </div>
       </article>
+
+      {/* Related Articles - Enhanced Component */}
+      <RelatedArticles 
+        articles={[
+          {
+            title: "Stress Test Your Pricing: A Framework for Protecting Margins",
+            slug: "stress-test-pricing-framework-margins-cash-flow",
+            category: "Financial Management",
+            excerpt: "Learn how to pressure-test your pricing to ensure profitability in any market condition."
+          },
+          {
+            title: "Know Your Numbers: Small Business Financial Essentials",
+            slug: "small-business-financials-know-your-numbers",
+            category: "Financial Management",
+            excerpt: "Master the financial metrics every service business owner needs to track."
+          },
+          {
+            title: "The Fractional CFO Toolkit: 7 Financial Dashboards",
+            slug: "fractional-cfo-toolkit",
+            category: "Financial Management",
+            excerpt: "Build CFO-level financial visibility for your service business."
+          }
+        ]}
+      />
       
       <GlobalFooter />
     </div>

@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, XCircle, AlertTriangle, TrendingUp, Users, DollarSign, Settings, Target, Zap, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -792,6 +793,30 @@ const GrowthTrapOrGrowthEngine = () => {
           </div>
         </div>
       </article>
+
+      {/* Related Articles - Enhanced Component */}
+      <RelatedArticles 
+        articles={[
+          {
+            title: "Growth Trap: Why Your Business Model May Be Broken",
+            slug: "growth-trap-broken-business-model",
+            category: "Strategy",
+            excerpt: "Discover why scaling a broken business model only amplifies losses and how to fix it first."
+          },
+          {
+            title: "Scaling Operations Without Losing Control",
+            slug: "scaling-operations-without-losing-control",
+            category: "Operations",
+            excerpt: "Master the art of scaling your operations while maintaining quality and efficiency."
+          },
+          {
+            title: "The SMB Scaling Paradox: Why Growth Often Hurts",
+            slug: "smb-scaling-paradox-2025",
+            category: "Strategy",
+            excerpt: "Understand why rapid growth can destabilize your business and how to scale sustainably."
+          }
+        ]}
+      />
       
       <GlobalFooter />
     </div>

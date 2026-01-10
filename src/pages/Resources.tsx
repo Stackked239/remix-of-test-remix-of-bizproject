@@ -254,9 +254,9 @@ const Resources = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-biz-green/20 border border-biz-green/30 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-white/50 mb-6">
               <Sparkles className="w-4 h-4 text-biz-green" />
-              <span className="text-sm font-medium text-biz-green">Free Resources for SMB Leaders</span>
+              <span className="text-sm font-medium text-biz-green">Resources for SMB/SME Leaders</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Business Resources & Tools
@@ -444,7 +444,7 @@ const Resources = () => {
       </section>
 
       {/* CTA Section - BizGreen gradient */}
-      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, #7a7a1d 50%, hsl(var(--biz-lime) / 0.8) 100%)' }}>
+      <section className="py-12 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, #7a7a1d 50%, hsl(var(--biz-lime) / 0.8) 100%)' }}>
         {/* Decorative pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
@@ -452,10 +452,6 @@ const Resources = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-6">
-              <Sparkles className="w-4 h-4 text-white" />
-              <span className="text-sm font-medium text-white">AI-Powered Insights</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-biz-navy">
               Ready for Personalized Insights?
             </h2>

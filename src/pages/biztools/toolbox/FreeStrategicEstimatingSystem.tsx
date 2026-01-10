@@ -613,9 +613,8 @@ const FreeStrategicEstimatingSystem = () => {
             </Button>
             <Button
               asChild
-              variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-biz-navy font-semibold text-lg px-8 py-6 rounded-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-biz-navy font-semibold text-lg px-8 py-6 rounded-lg transition-all duration-300"
             >
               <Link to="/how-it-works">
                 Learn About Our Assessment

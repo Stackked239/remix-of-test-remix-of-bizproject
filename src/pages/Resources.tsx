@@ -1,13 +1,15 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
-import { BookOpen, Calculator, TrendingUp, FileText, ExternalLink, Users, DollarSign, Target } from "lucide-react";
+import { BookOpen, Calculator, TrendingUp, FileText, ExternalLink, Users, DollarSign, Target, Sparkles, ArrowRight } from "lucide-react";
 
 const Resources = () => {
   const resourceCategories = [
     {
       title: "Business Calculators",
       icon: Calculator,
+      color: "biz-teal",
       description: "Essential financial and business calculators to support your decision-making",
       resources: [
         {
@@ -39,6 +41,7 @@ const Resources = () => {
     {
       title: "Strategic Planning Resources",
       icon: Target,
+      color: "biz-copper",
       description: "Tools and templates to help you plan and execute your business strategy",
       resources: [
         {
@@ -70,6 +73,7 @@ const Resources = () => {
     {
       title: "Financial Management",
       icon: DollarSign,
+      color: "biz-green",
       description: "Resources to help you better manage your business finances",
       resources: [
         {
@@ -101,6 +105,7 @@ const Resources = () => {
     {
       title: "Growth & Scaling",
       icon: TrendingUp,
+      color: "biz-lime",
       description: "Insights and tools for scaling your business effectively",
       resources: [
         {
@@ -136,25 +141,29 @@ const Resources = () => {
       title: "The Hidden Costs of Rapid Growth: What Every Entrepreneur Needs to Know",
       summary: "Discover the often-overlooked expenses that come with scaling your business and how to prepare for them.",
       readTime: "8 min read",
-      category: "Growth Strategy"
+      category: "Growth Strategy",
+      color: "biz-teal"
     },
     {
       title: "Financial Health Indicators Every Small Business Owner Should Track",
       summary: "Learn the key metrics that provide early warning signs about your business's financial well-being.",
       readTime: "12 min read", 
-      category: "Financial Management"
+      category: "Financial Management",
+      color: "biz-green"
     },
     {
       title: "When to Pivot: Data-Driven Signals That It's Time to Change Course",
       summary: "Understand the quantifiable indicators that suggest your business model needs adjustment.",
       readTime: "10 min read",
-      category: "Strategic Planning"
+      category: "Strategic Planning",
+      color: "biz-copper"
     },
     {
       title: "Building Operational Resilience in Uncertain Times",
       summary: "Strategies for creating business systems that can withstand market volatility and unexpected challenges.",
       readTime: "15 min read",
-      category: "Operations"
+      category: "Operations",
+      color: "biz-lime"
     }
   ];
 
@@ -163,27 +172,67 @@ const Resources = () => {
       name: "Small Business Administration (SBA)",
       description: "Comprehensive resources for small business owners including loans, guidance, and tools",
       url: "https://www.sba.gov",
-      category: "Government Resources"
+      category: "Government Resources",
+      color: "biz-navy"
     },
     {
       name: "SCORE Business Mentors",
       description: "Free business mentoring and education from experienced volunteers",
       url: "https://www.score.org",
-      category: "Mentorship"
+      category: "Mentorship",
+      color: "biz-teal"
     },
     {
       name: "Industry-Specific Associations",
       description: "Find your industry association for specialized insights and networking",
       url: "#",
-      category: "Networking"
+      category: "Networking",
+      color: "biz-copper"
     },
     {
       name: "Bureau of Labor Statistics",
       description: "Economic data and industry insights to inform your business decisions",
       url: "https://www.bls.gov",
-      category: "Market Data"
+      category: "Market Data",
+      color: "biz-green"
     }
   ];
+
+  const getColorClasses = (color: string) => {
+    const colorMap: Record<string, { bg: string; text: string; border: string; light: string }> = {
+      "biz-green": {
+        bg: "bg-biz-green",
+        text: "text-biz-green",
+        border: "border-biz-green",
+        light: "bg-biz-green/10"
+      },
+      "biz-teal": {
+        bg: "bg-biz-teal",
+        text: "text-biz-teal",
+        border: "border-biz-teal",
+        light: "bg-biz-teal/10"
+      },
+      "biz-copper": {
+        bg: "bg-biz-copper",
+        text: "text-biz-copper",
+        border: "border-biz-copper",
+        light: "bg-biz-copper/10"
+      },
+      "biz-lime": {
+        bg: "bg-biz-lime",
+        text: "text-biz-lime",
+        border: "border-biz-lime",
+        light: "bg-biz-lime/10"
+      },
+      "biz-navy": {
+        bg: "bg-biz-navy",
+        text: "text-biz-navy",
+        border: "border-biz-navy",
+        light: "bg-biz-navy/10"
+      }
+    };
+    return colorMap[color] || colorMap["biz-green"];
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -194,72 +243,106 @@ const Resources = () => {
         canonical="https://bizhealth.ai/resources"
         ogImage="https://bizhealth.ai/og-images/og-resources.jpg"
       />
+      <PromotionalBanner />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
+      {/* Hero Section - Enhanced with gradient */}
+      <section className="pt-40 pb-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 50%, hsl(var(--biz-teal) / 0.3) 100%)' }}>
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-biz-green/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-biz-teal/15 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-biz-green/20 border border-biz-green/30 mb-6">
+              <Sparkles className="w-4 h-4 text-biz-green" />
+              <span className="text-sm font-medium text-biz-green">Free Resources for SMB Leaders</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Business Resources & Tools
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto">
               Comprehensive collection of calculators, templates, guides, and insights to support your business growth journey. 
               Everything you need to make informed decisions and drive sustainable success.
             </p>
-            <div className="mt-8">
-              <img 
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
-                alt="Business innovation and ideas represented by glowing light bulb"
-                className="rounded-xl shadow-feature mx-auto max-w-2xl w-full"
-              />
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="#calculators" className="inline-flex items-center gap-2 px-6 py-3 bg-biz-green text-white font-semibold rounded-xl hover:bg-biz-green/90 transition-all hover:-translate-y-0.5 shadow-lg">
+                <Calculator className="w-5 h-5" />
+                Explore Calculators
+              </a>
+              <a href="#insights" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-0.5">
+                <BookOpen className="w-5 h-5" />
+                Read Insights
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Resource Categories */}
-      <section className="py-20">
+      {/* Resource Categories - Alternating backgrounds */}
+      <section id="calculators" className="py-20">
         <div className="container mx-auto px-6">
-          {resourceCategories.map((category, index) => (
-            <div key={index} className="mb-16">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <category.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold text-foreground">{category.title}</h2>
-                  <p className="text-muted-foreground">{category.description}</p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {category.resources.map((resource, idx) => (
-                  <div key={idx} className="border border-border rounded-lg p-6 bg-background hover:shadow-card transition-shadow">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="font-semibold text-foreground text-sm leading-tight">{resource.name}</h3>
-                      {resource.external && <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0" />}
-                    </div>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{resource.description}</p>
-                    <a 
-                      href={resource.link} 
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
-                    >
-                      Access Tool
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+          {resourceCategories.map((category, index) => {
+            const colors = getColorClasses(category.color);
+            const isEven = index % 2 === 0;
+            
+            return (
+              <div 
+                key={index} 
+                className={`mb-16 p-8 rounded-2xl ${isEven ? 'bg-background' : 'bg-muted'}`}
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <div className={`p-4 rounded-xl ${colors.light}`}>
+                    <category.icon className={`w-8 h-8 ${colors.text}`} />
                   </div>
-                ))}
+                  <div>
+                    <h2 className="text-2xl font-bold text-foreground">{category.title}</h2>
+                    <p className="text-muted-foreground">{category.description}</p>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {category.resources.map((resource, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`group border-2 rounded-xl p-6 bg-background hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${colors.border} border-opacity-20 hover:border-opacity-100`}
+                      style={{ borderColor: `hsl(var(--${category.color}) / 0.2)` }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = `hsl(var(--${category.color}))`;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = `hsl(var(--${category.color}) / 0.2)`;
+                      }}
+                    >
+                      <div className="flex items-start justify-between mb-3">
+                        <h3 className="font-semibold text-foreground text-sm leading-tight">{resource.name}</h3>
+                        {resource.external && <ExternalLink className={`w-4 h-4 ${colors.text} flex-shrink-0 opacity-60`} />}
+                      </div>
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{resource.description}</p>
+                      <a 
+                        href={resource.link} 
+                        className={`inline-flex items-center gap-2 ${colors.text} hover:opacity-80 transition-colors text-sm font-medium group-hover:gap-3`}
+                      >
+                        Access Tool
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
-      {/* Insights & Articles */}
-      <section className="py-20 bg-muted">
+      {/* Insights & Articles - With colored accents */}
+      <section id="insights" className="py-20" style={{ background: 'linear-gradient(180deg, hsl(var(--biz-navy) / 0.05) 0%, hsl(var(--biz-teal) / 0.08) 100%)' }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-biz-teal/10 border border-biz-teal/20 mb-4">
+              <BookOpen className="w-4 h-4 text-biz-teal" />
+              <span className="text-sm font-medium text-biz-teal">Expert Analysis</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
               Latest Business Insights
             </h2>
@@ -269,31 +352,52 @@ const Resources = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {insightArticles.map((article, index) => (
-              <div key={index} className="border border-border rounded-lg p-6 bg-background hover:shadow-card transition-shadow">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">{article.category}</span>
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight">{article.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{article.summary}</p>
-                <a 
-                  href="#" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+            {insightArticles.map((article, index) => {
+              const colors = getColorClasses(article.color);
+              return (
+                <div 
+                  key={index} 
+                  className="group border-2 rounded-xl p-6 bg-background hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  style={{ borderColor: `hsl(var(--${article.color}) / 0.2)` }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = `hsl(var(--${article.color}))`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = `hsl(var(--${article.color}) / 0.2)`;
+                  }}
                 >
-                  Read Article
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span 
+                      className={`text-xs px-3 py-1 rounded-full font-medium ${colors.light} ${colors.text}`}
+                    >
+                      {article.category}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground leading-tight group-hover:text-biz-navy transition-colors">{article.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{article.summary}</p>
+                  <a 
+                    href="#" 
+                    className={`inline-flex items-center gap-2 ${colors.text} hover:opacity-80 transition-colors font-medium group-hover:gap-3`}
+                  >
+                    Read Article
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* External Resources */}
-      <section className="py-20">
+      {/* External Resources - Card grid with colors */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-biz-copper/10 border border-biz-copper/20 mb-4">
+              <Users className="w-4 h-4 text-biz-copper" />
+              <span className="text-sm font-medium text-biz-copper">Trusted Partners</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
               External Resources & Partners
             </h2>
@@ -303,44 +407,67 @@ const Resources = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {externalResources.map((resource, index) => (
-              <div key={index} className="border border-border rounded-lg p-6 bg-background hover:shadow-card transition-shadow">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-semibold text-foreground text-sm">{resource.name}</h3>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                </div>
-                <p className="text-xs text-primary mb-2">{resource.category}</p>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{resource.description}</p>
-                <a 
-                  href={resource.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+            {externalResources.map((resource, index) => {
+              const colors = getColorClasses(resource.color);
+              return (
+                <div 
+                  key={index} 
+                  className="group border-2 rounded-xl p-6 bg-background hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  style={{ borderColor: `hsl(var(--${resource.color}) / 0.2)` }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = `hsl(var(--${resource.color}))`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = `hsl(var(--${resource.color}) / 0.2)`;
+                  }}
                 >
-                  Visit Resource
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
-            ))}
+                  <div className={`p-3 rounded-lg w-fit mb-4 ${colors.light}`}>
+                    <ExternalLink className={`w-5 h-5 ${colors.text}`} />
+                  </div>
+                  <span className={`text-xs font-medium ${colors.text}`}>{resource.category}</span>
+                  <h3 className="font-semibold text-foreground text-sm mt-2 mb-2">{resource.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{resource.description}</p>
+                  <a 
+                    href={resource.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 ${colors.text} hover:opacity-80 transition-colors text-sm font-medium group-hover:gap-3`}
+                  >
+                    Visit Resource
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      {/* CTA Section - BizGreen gradient */}
+      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, #7a7a1d 50%, hsl(var(--biz-lime) / 0.8) 100%)' }}>
+        {/* Decorative pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-6">
+              <Sparkles className="w-4 h-4 text-white" />
+              <span className="text-sm font-medium text-white">AI-Powered Insights</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-biz-navy">
               Ready for Personalized Insights?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 text-biz-navy/80">
               While these resources provide valuable general guidance, our AI-powered assessment delivers insights specific to your business
             </p>
             <a 
               href="/pricing" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-biz-navy text-white font-semibold rounded-xl hover:bg-biz-navy/90 transition-all hover:-translate-y-0.5 shadow-lg"
             >
               Get Your Custom Assessment
+              <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>

@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { trackDownload, trackCTAClick, trackScrollDepth, trackSectionView, trackTimeOnPage, trackFAQInteraction } from "@/utils/analytics";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const FreeStrategicEstimatingSystem = () => {
   const pdfPath = "/downloads/Strategic-Estimating-System-Checklist-BizHealth.pdf";
@@ -161,8 +163,14 @@ const FreeStrategicEstimatingSystem = () => {
         questions={faqs.map(faq => ({ question: faq.question, answer: faq.answer }))}
       />
 
+      {/* Sticky Banner */}
+      <PromotionalBanner />
+      
+      {/* Global Navigation */}
+      <GlobalNavigation />
+
       {/* Green Accent Bar */}
-      <div className="h-[5px] bg-biz-green w-full" />
+      <div className="h-[5px] bg-biz-green w-full mt-20" />
 
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy to-[#1a1a3d] overflow-hidden">
@@ -181,7 +189,6 @@ const FreeStrategicEstimatingSystem = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 border-2 border-biz-green rounded-full px-4 py-2 text-white">
                 <span className="text-biz-green font-semibold">FREE Download</span>
-                <span className="text-white/80">— No Email Required</span>
               </div>
 
               {/* Headline */}
@@ -211,10 +218,9 @@ const FreeStrategicEstimatingSystem = () => {
                   </a>
                 </Button>
                 <Button
-                  variant="outline"
                   size="lg"
                   onClick={() => scrollToSection('learn-more')}
-                  className="border-2 border-white text-white hover:bg-white hover:text-biz-navy font-semibold text-lg px-8 py-6 rounded-lg transition-all duration-300"
+                  className="bg-white text-biz-navy hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-lg transition-all duration-300 border-2 border-white"
                 >
                   See What's Included
                 </Button>

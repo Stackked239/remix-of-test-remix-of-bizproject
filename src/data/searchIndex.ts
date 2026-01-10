@@ -384,6 +384,14 @@ export const searchableTools: SearchableItem[] = [
     url: "/biztools/financials/health-check",
     keywords: "financial health, health check, financial assessment, business finances, financial evaluation, money health, fiscal health",
     icon: Wrench
+  },
+  {
+    type: "Tool",
+    title: "FREE 7-Step Strategic Estimating System - Stop Losing Money on Every Job",
+    excerpt: "Download the free PDF checklist that transforms your estimating from gut-feel guessing to data-driven profitability. Stop underpricing jobs, eliminate scope creep, and turn every estimate into a profit center.",
+    url: "/biztools/toolbox/free-strategic-estimating-system",
+    keywords: "estimating system, strategic estimating, job estimating, project estimating, quote calculator, pricing jobs, service business estimating, contractor estimating, bidding system, job costing, profit margins, scope creep, underpricing, overbidding, estimating checklist, estimating PDF, free estimating tool, job pricing, project pricing, quote template, estimate template, pricing guide, labor costs, material costs, overhead allocation, profit margin calculator, break even estimating, cost plus pricing, value based pricing, competitive bidding, winning bids, losing money on jobs, profitable estimates, estimating mistakes, job profitability, service pricing, trade business estimating, landscaping estimating, plumbing estimating, HVAC estimating, electrical estimating, construction estimating, home service estimating, field service estimating, proposal pricing, job quotes, bid pricing, estimate accuracy, cost estimation, price calculation, markup pricing, margin pricing",
+    icon: FileText
   }
 ];
 

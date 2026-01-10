@@ -313,14 +313,35 @@ const GlobalNavigation = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link 
-                to="/contact" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/contact') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Contact
-              </Link>
+              {/* Contact Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
+                    isActiveRoute('/contact') || isActiveRoute('/ideas') ? 'text-biz-green' : 'text-biz-navy'
+                  }`}>
+                    Contact
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/contact"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Contact Us</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/ideas"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Share Your Ideas</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* Search Bar */}
@@ -451,9 +472,17 @@ const GlobalNavigation = () => {
                   Legal
                 </Link>
               </div>
-              <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Contact
-              </Link>
+              <div className="space-y-2">
+                <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  Contact
+                </Link>
+                <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Contact Us
+                </Link>
+                <Link to="/ideas" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Share Your Ideas
+                </Link>
+              </div>
               
               {/* Mobile Hub Navigation - Temporarily hidden via feature flag */}
               {SHOW_HUBS && (

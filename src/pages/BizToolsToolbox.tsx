@@ -59,7 +59,7 @@ const BizToolsToolbox = () => {
     },
     {
       title: "Operations Excellence", 
-      tools: ["Process Mapping Tools", "Quality Checklists", "Inventory Management", "Performance Metrics"],
+      tools: ["Process Mapping Tools", "Strategic Estimating System", "Quality Checklists", "Inventory Management", "Performance Metrics"],
       icon: Settings,
       color: "text-biz-navy",
       bgColor: "bg-biz-navy/10",
@@ -274,7 +274,7 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator" || tool === "Pricing Net Profit Calculator";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator" || tool === "Pricing Net Profit Calculator" || tool === "Strategic Estimating System";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
@@ -289,6 +289,8 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/free-roi-calculator"
                           : tool === "Pricing Net Profit Calculator"
                           ? "/biztools/toolbox/free-pricing-net-profit-calculator"
+                          : tool === "Strategic Estimating System"
+                          ? "/biztools/toolbox/free-strategic-estimating-system"
                           : "#";
                         const content = (
                             <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">

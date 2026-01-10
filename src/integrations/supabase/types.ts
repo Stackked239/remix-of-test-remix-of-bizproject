@@ -41,6 +41,60 @@ export type Database = {
         }
         Relationships: []
       }
+      idea_submissions: {
+        Row: {
+          beta_testing: string | null
+          category: string
+          company: string | null
+          created_at: string
+          description: string
+          email: string
+          full_name: string
+          id: string
+          idea_number: number
+          idea_title: string
+          privacy_consent: boolean
+          problems_solved: string[] | null
+          status: string
+          updated_at: string
+          urgency: string | null
+        }
+        Insert: {
+          beta_testing?: string | null
+          category: string
+          company?: string | null
+          created_at?: string
+          description: string
+          email: string
+          full_name: string
+          id?: string
+          idea_number: number
+          idea_title: string
+          privacy_consent?: boolean
+          problems_solved?: string[] | null
+          status?: string
+          updated_at?: string
+          urgency?: string | null
+        }
+        Update: {
+          beta_testing?: string | null
+          category?: string
+          company?: string | null
+          created_at?: string
+          description?: string
+          email?: string
+          full_name?: string
+          id?: string
+          idea_number?: number
+          idea_title?: string
+          privacy_consent?: boolean
+          problems_solved?: string[] | null
+          status?: string
+          updated_at?: string
+          urgency?: string | null
+        }
+        Relationships: []
+      }
       orders: {
         Row: {
           amount: number

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
 import FormStep1 from "./FormStep1";
 import FormStep2 from "./FormStep2";
 import FormStep3 from "./FormStep3";
@@ -36,6 +37,8 @@ const IdeaForm = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [ideaNumber, setIdeaNumber] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const steps = [
     { number: 1, label: "Your Info" },
@@ -62,17 +65,43 @@ const IdeaForm = () => {
   };
 
   const handleSubmit = async () => {
-    // Generate idea number (4000+ range for demo)
-    const generatedNumber = 4000 + Math.floor(Math.random() * 1000);
-    setIdeaNumber(generatedNumber);
-    setIsSubmitted(true);
+    setIsSubmitting(true);
     
-    // In production, this would POST to an API endpoint
-    console.log("Submitted form data:", {
-      ...formData,
-      submittedAt: new Date().toISOString(),
-      ideaNumber: generatedNumber
-    });
+    try {
+      const response = await fetch(
+        "https://lnthvnzounlxjedsbkgc.supabase.co/functions/v1/submit-idea",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit idea");
+      }
+
+      setIdeaNumber(result.ideaNumber);
+      setIsSubmitted(true);
+      
+      toast({
+        title: "Idea submitted successfully!",
+        description: `Your idea number is #${result.ideaNumber}`,
+      });
+    } catch (error: any) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Submission failed",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -185,6 +214,7 @@ const IdeaForm = () => {
                     updateFormData={updateFormData}
                     onBack={handleBack}
                     onSubmit={handleSubmit}
+                    isSubmitting={isSubmitting}
                   />
                 </motion.div>
               )}

@@ -293,7 +293,7 @@ const FreeStrategicEstimatingSystem = () => {
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg px-4 py-3 hidden lg:block"
+                  className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg px-4 py-3 hidden lg:block border-2 border-biz-green"
                 >
                   <div className="flex items-center gap-2 text-biz-navy">
                     <Printer className="w-4 h-4 text-biz-green" />

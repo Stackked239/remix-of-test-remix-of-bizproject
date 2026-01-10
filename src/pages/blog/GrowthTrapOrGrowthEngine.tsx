@@ -776,7 +776,7 @@ const GrowthTrapOrGrowthEngine = () => {
             </section>
             
             {/* CTA Section */}
-            <section className="bg-card border border-border rounded-lg p-8 text-center">
+            <section className="bg-card border-2 border-[hsl(var(--biz-green))] rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Ready to Assess Your Business's Growth Readiness?</h3>
               <p className="text-muted-foreground mb-6">
                 Get a comprehensive business health assessment that reveals your foundation's strengths and gaps before you pursue growth.

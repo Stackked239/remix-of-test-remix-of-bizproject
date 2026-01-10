@@ -5,6 +5,7 @@ import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, DollarSign, Clock, Users, TrendingDown, AlertTriangle, CheckCircle, Settings, Target, Calendar } from "lucide-react";
 import heroImage from "@/assets/images/scheduling-crisis-operational-costs-smb.jpg";
@@ -592,28 +593,33 @@ const SchedulingCrisisOperationalCosts = () => {
               </section>
 
 
-              {/* Related Articles */}
-              <section className="mt-12 pt-8 border-t border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Related Articles</h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <Link to="/blog/chaos-to-clarity-operating-rhythm-scaling-teams" className="group bg-card border border-border rounded-xl p-6 hover:border-biz-green/40 transition-colors">
-                    <h4 className="font-bold text-foreground group-hover:text-biz-green transition-colors mb-2">From Chaos to Clarity: The Operating Rhythm</h4>
-                    <p className="text-muted-foreground text-sm">Install a lightweight operating rhythm that transforms how your team executes.</p>
-                  </Link>
-                  <Link to="/blog/hidden-costs-manual-processes" className="group bg-card border border-border rounded-xl p-6 hover:border-biz-green/40 transition-colors">
-                    <h4 className="font-bold text-foreground group-hover:text-biz-green transition-colors mb-2">Hidden Costs of Manual Processes</h4>
-                    <p className="text-muted-foreground text-sm">Discover where manual processes are silently draining your profits.</p>
-                  </Link>
-                  <Link to="/blog/employee-retention-company-culture-leadership" className="group bg-card border border-border rounded-xl p-6 hover:border-biz-green/40 transition-colors">
-                    <h4 className="font-bold text-foreground group-hover:text-biz-green transition-colors mb-2">Employee Retention & Culture</h4>
-                    <p className="text-muted-foreground text-sm">Learn how day-to-day leadership shapes culture and retention.</p>
-                  </Link>
-                </div>
-              </section>
-
             </div>
           </div>
         </article>
+
+        {/* Related Articles - Enhanced Component */}
+        <RelatedArticles 
+          articles={[
+            {
+              title: "From Chaos to Clarity: The Operating Rhythm Every Scaling Team Needs",
+              slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
+              category: "Operations",
+              excerpt: "Install a lightweight operating rhythm that transforms how your team executes without adding bureaucracy."
+            },
+            {
+              title: "The Hidden Costs of Manual Processes",
+              slug: "hidden-costs-manual-processes",
+              category: "Operations",
+              excerpt: "Discover where manual processes are silently draining your profits and what to do about it."
+            },
+            {
+              title: "Employee Retention: The Day-to-Day Leadership That Shapes Culture",
+              slug: "employee-retention-company-culture-leadership",
+              category: "Leadership",
+              excerpt: "Learn how everyday leadership moments shape culture and drive retention more than policies ever could."
+            }
+          ]}
+        />
 
         <PromotionalBanner />
       </main>

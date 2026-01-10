@@ -303,7 +303,7 @@ const FreeStrategicEstimatingSystem = () => {
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg px-4 py-3 hidden lg:block"
+                  className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg px-4 py-3 hidden lg:block border-2 border-biz-navy"
                 >
                   <div className="flex items-center gap-2 text-biz-navy">
                     <BarChart3 className="w-4 h-4 text-biz-green" />

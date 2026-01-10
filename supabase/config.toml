@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.send-404-report]
 verify_jwt = false
+
+[functions.submit-idea]
+verify_jwt = false

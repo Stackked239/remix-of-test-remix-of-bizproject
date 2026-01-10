@@ -11,6 +11,7 @@ interface FormStep3Props {
   updateFormData: (data: Partial<FormData>) => void;
   onBack: () => void;
   onSubmit: () => void;
+  isSubmitting?: boolean;
 }
 
 interface Errors {
@@ -30,9 +31,8 @@ const betaTestingOptions = [
   { value: "no", label: "No thanks, just notify me when it launches" }
 ];
 
-const FormStep3 = ({ formData, updateFormData, onBack, onSubmit }: FormStep3Props) => {
+const FormStep3 = ({ formData, updateFormData, onBack, onSubmit, isSubmitting = false }: FormStep3Props) => {
   const [errors, setErrors] = useState<Errors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = (): boolean => {
     const newErrors: Errors = {};
@@ -47,11 +47,7 @@ const FormStep3 = ({ formData, updateFormData, onBack, onSubmit }: FormStep3Prop
 
   const handleSubmit = async () => {
     if (validate()) {
-      setIsSubmitting(true);
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
       onSubmit();
-      setIsSubmitting(false);
     }
   };
 

@@ -132,6 +132,7 @@ const FreeStrategicEstimatingSystem = lazy(() => import("./pages/biztools/toolbo
 // Playbooks and other pages
 const LandscapingPlaybook = lazy(() => import("./pages/playbooks/LandscapingPlaybook"));
 const TechnologyInnovationReadiness = lazy(() => import("./pages/bizgrowth/TechnologyInnovationReadiness"));
+const Ideas = lazy(() => import("./pages/Ideas"));
 const BreakingPeaksValleysCycle = lazy(() => import("./pages/bizgrowth/financials/BreakingPeaksValleysCycle"));
 const VisionPlaybook = lazy(() => import("./pages/bizgrowth/VisionPlaybook"));
 const BusinessGrowthStrategies = lazy(() => import("./pages/bizgrowth/BusinessGrowthStrategies"));
@@ -275,6 +276,7 @@ const App = () => (
               <Route path="/search" element={<Search />} />
               <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
               <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />
+              <Route path="/ideas" element={<Ideas />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

@@ -392,6 +392,14 @@ export const searchableTools: SearchableItem[] = [
     url: "/biztools/toolbox/free-strategic-estimating-system",
     keywords: "estimating system, strategic estimating, job estimating, project estimating, quote calculator, pricing jobs, service business estimating, contractor estimating, bidding system, job costing, profit margins, scope creep, underpricing, overbidding, estimating checklist, estimating PDF, free estimating tool, job pricing, project pricing, quote template, estimate template, pricing guide, labor costs, material costs, overhead allocation, profit margin calculator, break even estimating, cost plus pricing, value based pricing, competitive bidding, winning bids, losing money on jobs, profitable estimates, estimating mistakes, job profitability, service pricing, trade business estimating, landscaping estimating, plumbing estimating, HVAC estimating, electrical estimating, construction estimating, home service estimating, field service estimating, proposal pricing, job quotes, bid pricing, estimate accuracy, cost estimation, price calculation, markup pricing, margin pricing, free tool, BizTool, business tool",
     icon: FileText
+  },
+  {
+    type: "Tool",
+    title: "Submit Your Business Ideas | Voice of Customer",
+    excerpt: "Share your ideas for new business tools, resources, and content. Your ideas fuel the tools, insights, and resources that help your business thrive.",
+    url: "/ideas",
+    keywords: "ideas, voice of customer, feedback, suggestions, submit idea, business ideas, feature request, customer input, SMB feedback, business tools ideas, content ideas, resource suggestions",
+    icon: FileText
   }
 ];
 

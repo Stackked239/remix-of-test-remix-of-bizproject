@@ -185,7 +185,7 @@ const Resources = () => {
     {
       name: "Industry-Specific Associations",
       description: "Find your industry association for specialized insights and networking",
-      url: "#",
+      url: "https://directoryofassociations.com/",
       category: "Networking",
       color: "biz-copper"
     },
@@ -455,8 +455,8 @@ const Resources = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-biz-navy">
               Ready for Personalized Insights?
             </h2>
-            <p className="text-xl mb-8 text-biz-navy/80">
-              While these resources provide valuable general guidance, our AI-powered assessment delivers insights specific to your business
+            <p className="text-xl mb-8 text-white">
+              While these resources provide valuable general guidance, our proprietary AI-powered assessment delivers diagnostics & actionable insights specific to your business
             </p>
             <a 
               href="/pricing" 

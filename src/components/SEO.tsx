@@ -30,6 +30,11 @@ const SEO = ({
   // Always use non-www domain for canonical URLs to avoid duplicate content issues
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const url = canonical || `https://bizhealth.ai${pathname}`;
+  
+  // Convert relative OG image paths to absolute URLs for social sharing
+  const absoluteOgImage = ogImage.startsWith('http') 
+    ? ogImage 
+    : `https://bizhealth.ai${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
 
   return (
     <Helmet>
@@ -45,7 +50,7 @@ const SEO = ({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={absoluteOgImage} />
       <meta property="og:site_name" content={siteTitle} />
 
       {/* Twitter */}
@@ -53,7 +58,7 @@ const SEO = ({
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={absoluteOgImage} />
 
       {/* Article Specific Tags */}
       {ogType === 'article' && (

@@ -103,6 +103,26 @@ const Resources = () => {
       ]
     },
     {
+      title: "Industry Playbooks",
+      icon: BookOpen,
+      color: "biz-copper",
+      description: "Industry-specific guides with actionable diagnostics and growth strategies",
+      resources: [
+        {
+          name: "Landscaping Business Playbook",
+          description: "Complete guide for landscaping business owners covering seasonal cash flow, crew management, and scaling strategies",
+          link: "/playbooks/landscaping",
+          external: false
+        },
+        {
+          name: "Service Business Playbook",
+          description: "Essential strategies for service-based businesses to optimize pricing and operations",
+          link: "#",
+          external: false
+        }
+      ]
+    },
+    {
       title: "Growth & Scaling",
       icon: TrendingUp,
       color: "biz-lime",

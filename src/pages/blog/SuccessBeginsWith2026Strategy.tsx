@@ -363,22 +363,22 @@ const SuccessBeginsWith2026Strategy = () => {
             <RelatedArticles
               articles={[
                 {
-                  title: "Business Intelligence ROI: How to Measure and Maximize Returns",
-                  slug: "business-intelligence-roi",
-                  category: "Business Intelligence",
-                  excerpt: "Discover proven strategies to measure and maximize your business intelligence investments for sustainable growth."
+                  title: "Happy New Year 2026: Make This Your Year of Growth",
+                  slug: "happy-new-year-2026-year-of-growth",
+                  category: "Business Strategy",
+                  excerpt: "Start 2026 strong with five critical moves for sustainable SMB growth and a clear action plan."
                 },
                 {
-                  title: "Strategic Planning Post-Pandemic: New Frameworks for Success",
+                  title: "Strategic Planning for the Post-Pandemic Business Landscape",
                   slug: "strategic-planning-post-pandemic",
                   category: "Business Strategy",
-                  excerpt: "Learn how modern strategic planning frameworks can help your business thrive in the post-pandemic economy."
+                  excerpt: "Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
                 },
                 {
-                  title: "AI Business Analytics: The Future of SMB Decision-Making",
+                  title: "How AI is Revolutionizing Small Business Analytics",
                   slug: "ai-business-analytics",
-                  category: "Business Intelligence",
-                  excerpt: "Explore how AI-powered analytics are revolutionizing decision-making for small and medium-sized businesses."
+                  category: "Technology",
+                  excerpt: "Discover how AI-powered analytics are revolutionizing decision-making for small and medium-sized businesses."
                 }
               ]}
             />

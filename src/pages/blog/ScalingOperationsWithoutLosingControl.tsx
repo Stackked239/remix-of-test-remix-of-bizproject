@@ -548,22 +548,22 @@ const ScalingOperationsWithoutLosingControl = () => {
         <PromotionalBanner />
         <RelatedArticles articles={[
           {
-            title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
-            slug: "smb-scaling-paradox-2025",
-            category: "Business Strategy",
-            excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling."
+            title: "Employee Retention: Company Culture and Day-to-Day Leadership",
+            slug: "employee-retention-company-culture-leadership",
+            category: "Business Leadership",
+            excerpt: "Build a retention-focused culture through consistent leadership and employee engagement."
           },
           {
-            title: "Q4 Cost Crunches: Operational Cost Fixes 2025",
-            slug: "Q4-Cost-Cuts-2025",
+            title: "Customer Loyalty Starts With Reliability, Not Delight",
+            slug: "customer-loyalty-starts-with-reliability",
             category: "Operations",
-            excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes."
+            excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures."
           },
           {
-            title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down",
-            slug: "cash-flow-crisis-management",
-            category: "Financial Management",
-            excerpt: "Master cash flow management for small business in 2025."
+            title: "When to Pivot: Signs Your Business Model Needs a Refresh",
+            slug: "when-to-pivot",
+            category: "Business Strategy",
+            excerpt: "Recognize the warning signs and make strategic pivots before it's too late."
           }
         ]} />
       </article>

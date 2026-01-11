@@ -40,6 +40,7 @@ const ogImageMap = {
   '/biztools/how-it-works': '/og-images/og-biztools-how-it-works.jpg',
   '/biztools/toolbox': '/og-images/og-biztools-toolbox.jpg',
   '/biztools/toolbox/process-mapping-tools/guide': '/og-images/og-process-mapping-guide.jpg',
+  '/biztools/toolbox/free-roi-calculator': '/og-images/og-roi-calculator.jpg',
   '/bizguides': '/og-images/og-bizguides.jpg',
   '/bizguides/bizguide-sherpa': '/og-images/og-bizguide-sherpa.jpg',
   '/bizleader': '/og-images/og-bizleader.jpg',
@@ -55,9 +56,18 @@ const ogImageMap = {
   '/concerns': '/og-images/og-concerns.jpg',
   '/logo': '/og-images/og-logo.jpg',
   '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
+  '/playbooks/landscaping': '/og-images/og-landscaping-playbook.jpg',
+  // Blog posts
   '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
   '/blog/growth-trap-or-growth-engine': '/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg',
-  '/blog/fractional-cfo-toolkit': '/assets/images/fractional-cfo-toolkit-hero-2026.jpg',
+  '/blog/fractional-cfo-toolkit': '/og-images/og-fractional-cfo-toolkit.jpg',
+  '/blog/ai-business-analytics': '/og-images/og-ai-business-analytics.jpg',
+  '/blog/business-health-assessment-2025': '/og-images/og-business-health-assessment.jpg',
+  '/blog/business-intelligence-roi': '/og-images/og-business-intelligence-roi.jpg',
+  '/blog/customer-loyalty-starts-with-reliability': '/og-images/og-customer-loyalty-reliability.jpg',
+  '/blog/employee-retention-company-culture-leadership': '/og-images/og-employee-retention-leadership.jpg',
+  '/blog/strategic-planning-post-pandemic': '/og-images/og-strategic-planning.jpg',
+  '/blog/stress-test-pricing-framework-margins-cash-flow': '/og-images/og-stress-test-pricing.jpg',
 };
 
 /**

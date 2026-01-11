@@ -110,6 +110,7 @@ const ogImageMap = {
   '/blog/smb-scaling-paradox-2025': '/og-images/og-scaling-paradox.jpg',
   '/blog/scaling-operations-without-losing-control': '/og-images/og-scaling-operations.jpg',
   '/blog/scheduling-crisis-operational-costs': '/og-images/og-scheduling-crisis.jpg',
+  '/blog/growth-ceiling-gut-instinct-scaling': '/og-images/og-growth-ceiling-gut-instinct-scaling.jpg',
   '/blog/small-business-ai-adoption': '/og-images/og-ai-adoption.jpg',
   '/blog/small-business-struggles': '/og-images/og-small-business-struggles.jpg',
   '/blog/small-business-survival-checklist': '/og-images/og-survival-checklist.jpg',

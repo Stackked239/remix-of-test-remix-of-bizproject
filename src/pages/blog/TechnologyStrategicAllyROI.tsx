@@ -18,7 +18,7 @@ const TechnologyStrategicAllyROI = () => {
         keywords="technology ROI small business, SMB technology decisions, ROI-first technology, AI ROI measurement, technology investment framework, small business automation, tech blind spots, SaaS audit, business technology strategy 2025, measuring technology impact"
         canonical="https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-technology-strategic-ally-roi.jpg"
+        ogImage="/og-images/og-technology-strategic-ally-roi.jpg"
         articlePublishedTime="2026-01-05"
         articleAuthor="BizHealth.ai Research Team"
       />

@@ -68,8 +68,8 @@ const HowItWorks = () => {
                 transition={{ delay: 0.1 * index }}
                 className="relative flex flex-col items-center text-center"
               >
-                {/* Step Circle */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-biz-green to-biz-green/80 flex items-center justify-center shadow-lg z-10 mb-6">
+                {/* Step Circle - added bg-slate-50 to cover the line behind */}
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-biz-green to-biz-green/80 flex items-center justify-center shadow-lg z-10 mb-6 ring-4 ring-slate-50">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -105,9 +105,9 @@ const HowItWorks = () => {
                 transition={{ delay: 0.1 * index }}
                 className="relative flex items-start gap-6 pl-4"
               >
-                {/* Step Circle */}
+                {/* Step Circle - added ring to cover the line behind */}
                 <div className="relative flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-biz-green to-biz-green/80 flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-biz-green to-biz-green/80 flex items-center justify-center shadow-lg ring-4 ring-slate-50">
                     <step.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-biz-navy text-white text-xs font-bold flex items-center justify-center">

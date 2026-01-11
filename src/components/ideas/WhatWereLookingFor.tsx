@@ -49,7 +49,7 @@ const WhatWereLookingFor = () => {
             What We're Looking For
           </h2>
           <p className="font-source-sans text-lg text-[#5C5C5C]">
-            Ideas that help SMBs overcome real challenges
+            Ideas that help business leaders overcome real challenges
           </p>
         </motion.div>
 

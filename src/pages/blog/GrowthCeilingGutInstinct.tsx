@@ -170,23 +170,23 @@ const GrowthCeilingGutInstinct = () => {
                     </p>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
+                        <span className="text-[hsl(var(--biz-green))]">•</span>
                         <span>Actual margins by customer segment (not your estimate)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
+                        <span className="text-[hsl(var(--biz-green))]">•</span>
                         <span>True operational cost of serving each customer (not your assumption)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
+                        <span className="text-[hsl(var(--biz-green))]">•</span>
                         <span>Turnover patterns by team (not your perception)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
+                        <span className="text-[hsl(var(--biz-green))]">•</span>
                         <span>Growth by product line (not overall revenue)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-primary">•</span>
+                        <span className="text-[hsl(var(--biz-green))]">•</span>
                         <span>Team capacity utilization (not how busy people look)</span>
                       </li>
                     </ul>

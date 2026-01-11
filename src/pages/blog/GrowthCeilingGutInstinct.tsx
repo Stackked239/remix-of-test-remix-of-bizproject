@@ -157,8 +157,8 @@ const GrowthCeilingGutInstinct = () => {
               {/* Reason #1 */}
               <div className="bg-card border border-border rounded-lg p-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                    <Brain className="w-6 h-6 text-primary" />
+                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
+                    <Brain className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-3 text-foreground">Reason #1: Your Brain Can't Process the Complexity</h3>
@@ -200,8 +200,8 @@ const GrowthCeilingGutInstinct = () => {
               {/* Reason #2 */}
               <div className="bg-card border border-border rounded-lg p-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                    <Users className="w-6 h-6 text-primary" />
+                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
+                    <Users className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-3 text-foreground">Reason #2: Intuition Doesn't Scale Across Teams</h3>
@@ -221,8 +221,8 @@ const GrowthCeilingGutInstinct = () => {
               {/* Reason #3 */}
               <div className="bg-card border border-border rounded-lg p-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                    <TrendingDown className="w-6 h-6 text-primary" />
+                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
+                    <TrendingDown className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-3 text-foreground">Reason #3: Intuition Gets Worse Under Pressure</h3>

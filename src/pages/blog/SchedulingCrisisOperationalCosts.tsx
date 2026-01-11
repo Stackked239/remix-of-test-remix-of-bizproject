@@ -17,7 +17,7 @@ const SchedulingCrisisOperationalCosts = () => {
         title="Scheduling Crisis: Why Your Most Underestimated Task Is Bleeding Profits | BizHealth.ai"
         description="Scheduling decisions silently drain $200K+ annually through labor inefficiency, turnover, and lost revenue. Learn how to transform scheduling into strategic advantage."
         canonical="https://bizhealth.ai/blog/scheduling-crisis-operational-costs"
-        ogImage="https://bizhealth.ai/assets/images/scheduling-crisis-operational-costs-smb.jpg"
+        ogImage="/og-images/og-scheduling-crisis.jpg"
         keywords="employee scheduling, workforce management, labor cost optimization, scheduling software, shift scheduling, operational efficiency, employee retention, scheduling automation, workforce scheduling, small business operations"
       />
       <StructuredData 

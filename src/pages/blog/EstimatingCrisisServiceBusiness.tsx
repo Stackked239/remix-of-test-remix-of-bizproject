@@ -18,7 +18,7 @@ const EstimatingCrisisServiceBusiness = () => {
         description="A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect service business profitability."
         keywords="service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, quoting, job quotes, estimates, quote accuracy, proposal pricing, bid accuracy, service quotes, project quotes, cost estimates, labor estimates"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/images/estimating-crisis-service-business-profitability.jpg"
+        ogImage="/og-images/og-estimating-crisis.jpg"
         articlePublishedTime="2026-01-09T12:00:00Z"
         articleModifiedTime="2026-01-09T12:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

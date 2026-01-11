@@ -302,7 +302,7 @@ const GrowthTrapOrGrowthEngine = () => {
         description="78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap."
         keywords="business growth readiness, growth trap, sustainable growth, SMB scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg"
+        ogImage="/og-images/og-growth-trap-or-growth-engine.jpg"
         articlePublishedTime="2026-01-09T12:00:00Z"
         articleModifiedTime="2026-01-09T12:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

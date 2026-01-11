@@ -59,7 +59,7 @@ const ogImageMap = {
   '/playbooks/landscaping': '/og-images/og-landscaping-playbook.jpg',
   // Blog posts - Complete OG image mappings (48 blog posts total)
   '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
-  '/blog/growth-trap-or-growth-engine': '/og-images/og-growth-trap.jpg',
+  '/blog/growth-trap-or-growth-engine': '/og-images/og-growth-trap-or-growth-engine.jpg',
   '/blog/growth-trap-broken-business-model': '/og-images/og-growth-trap.jpg',
   '/blog/fractional-cfo-toolkit': '/og-images/og-fractional-cfo-toolkit.jpg',
   '/blog/ai-business-analytics': '/og-images/og-ai-business-analytics.jpg',
@@ -109,7 +109,7 @@ const ogImageMap = {
   '/blog/smb-financial-trends-2025': '/og-images/og-smb-financial-trends.jpg',
   '/blog/smb-scaling-paradox-2025': '/og-images/og-scaling-paradox.jpg',
   '/blog/scaling-operations-without-losing-control': '/og-images/og-scaling-operations.jpg',
-  '/blog/scheduling-crisis-operational-costs': '/og-images/og-operations.jpg',
+  '/blog/scheduling-crisis-operational-costs': '/og-images/og-scheduling-crisis.jpg',
   '/blog/small-business-ai-adoption': '/og-images/og-ai-adoption.jpg',
   '/blog/small-business-struggles': '/og-images/og-small-business-struggles.jpg',
   '/blog/small-business-survival-checklist': '/og-images/og-survival-checklist.jpg',

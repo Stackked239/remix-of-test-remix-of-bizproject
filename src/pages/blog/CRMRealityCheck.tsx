@@ -17,7 +17,7 @@ const CRMRealityCheck = () => {
         description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for SMBs."
         keywords="CRM implementation, small business CRM, CRM success factors, CRM failure reasons, CRM adoption, customer relationship management, CRM ROI, CRM selection guide, SMB CRM strategy, CRM best practices 2026, CRM implementation checklist, sales CRM, lead management, customer data management, CRM user adoption, CRM training, pipeline visibility, sales forecasting, CRM integration"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/images/crm-reality-check-small-business-decision-guide.jpg"
+        ogImage="/og-images/og-crm-reality.jpg"
         articlePublishedTime="2026-01-07T12:00:00Z"
         articleModifiedTime="2026-01-07T12:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

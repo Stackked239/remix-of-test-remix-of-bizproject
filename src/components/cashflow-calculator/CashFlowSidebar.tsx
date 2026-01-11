@@ -96,7 +96,7 @@ const CashFlowSidebar: React.FC = () => {
           to="/register"
           className="inline-flex items-center gap-2 w-full justify-center px-4 py-3 bg-biz-citrine text-biz-navy font-semibold rounded-xl hover:bg-biz-citrine/90 transition-colors"
         >
-          Take Free Business Assessment
+          Take Complete Business Health Assessment
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

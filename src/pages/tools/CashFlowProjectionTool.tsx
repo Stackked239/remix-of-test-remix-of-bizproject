@@ -147,8 +147,8 @@ const CashFlowProjectionTool = () => {
           <div className="absolute bottom-0 left-10 w-48 h-48 bg-biz-green/15 rounded-full blur-2xl" />
           
           <div className="container max-w-6xl mx-auto px-4 text-center relative z-10">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 text-white text-sm font-semibold rounded-full mb-4">
-              <Banknote className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 text-biz-lime text-sm font-semibold rounded-full mb-4">
+              <Banknote className="w-4 h-4 text-biz-lime" />
               Free Business Tool
             </span>
             <h1 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white">

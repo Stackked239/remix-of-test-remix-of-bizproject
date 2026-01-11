@@ -120,8 +120,19 @@ async function prerender() {
           new Promise((resolve) => setTimeout(resolve, 5000))
         ]);
         
+        // Wait for React Helmet to inject meta tags into the head
+        await page.waitForFunction(() => {
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          const ogImage = document.querySelector('meta[property="og:image"]');
+          const ogDesc = document.querySelector('meta[property="og:description"]');
+          // Return true if at least og:title or og:description exists (some pages may not have custom og:image)
+          return ogTitle || ogDesc;
+        }, { timeout: 5000 }).catch(() => {
+          console.warn(`  ⚠️  Helmet meta tags not detected for ${route}, proceeding anyway`);
+        });
+        
         // Additional wait for dynamic content
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 500));
         
         // Get the rendered HTML
         const html = await page.content();

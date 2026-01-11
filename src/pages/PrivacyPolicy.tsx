@@ -289,7 +289,8 @@ const PrivacyPolicy = () => {
           content="Learn how BizHealth.ai protects your business data with GDPR/CCPA compliance. Trusted insights for SMB growth."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.bizhealth.ai/privacy-policy" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-homepage.jpg" />
+        <link rel="canonical" href="https://bizhealth.ai/privacy-policy" />
         
         {/* Schema markup for policy pages */}
         <script type="application/ld+json">

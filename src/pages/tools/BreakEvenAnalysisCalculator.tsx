@@ -61,7 +61,7 @@ const BreakEvenAnalysisCalculator = () => {
         description="Calculate your break-even point in minutes. Find exactly how many units you need to sell to cover all costs and start making profit. Free calculator for SMBs."
         keywords="break-even calculator, break-even analysis, break-even point, contribution margin calculator, profitability calculator, small business calculator, fixed costs, variable costs, business profitability"
         canonical="https://bizhealth.ai/biztools/toolbox/breakeven-analysis-calculator"
-        ogImage="https://bizhealth.ai/og-images/og-breakeven-calculator.jpg"
+        ogImage="/og-images/og-pricing-calculator.jpg"
       />
       <StructuredData type="organization" />
 

@@ -178,6 +178,7 @@ const Legal = () => {
         <meta property="og:description" content="Transparent legal policies protecting your business data. SOC 2 compliant, GDPR ready." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizhealth.ai/legal" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-homepage.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Legal - BizHealth.ai" />

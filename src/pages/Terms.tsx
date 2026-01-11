@@ -80,6 +80,7 @@ const Terms = () => {
         <meta property="og:description" content="Review BizHealth.ai's comprehensive Terms of Service governing our AI-powered business health diagnostic platform." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizhealth.ai/terms" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-homepage.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />

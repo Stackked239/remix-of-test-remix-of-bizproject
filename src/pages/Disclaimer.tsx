@@ -32,6 +32,7 @@ const Disclaimer = () => {
         <meta property="og:description" content="Important legal information about BizHealth.ai warranties, guarantees, and disclaimers for our business health assessment tool." />
         <meta property="og:url" content="https://bizhealth.ai/disclaimer" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-homepage.jpg" />
         
         {/* Schema.org structured data */}
         <script type="application/ld+json">

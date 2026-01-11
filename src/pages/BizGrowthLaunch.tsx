@@ -208,7 +208,7 @@ const BizGrowthLaunch = () => {
         keywords="SMB business health, business health assessment, early-stage business growth, launch-stage business foundations, cash flow training founders, SMB growth academy, KPI training small business"
         canonical="https://bizhealth.ai/bizgrowth/launch"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-bizgrowth-launch.jpg"
+        ogImage="/og-images/og-bizgrowth-launch.jpg"
       />
       
       {/* Course List Schema */}

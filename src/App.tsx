@@ -114,6 +114,7 @@ const CRMRealityCheck = lazy(() => import("./pages/blog/CRMRealityCheck"));
 const GrowthTrapOrGrowthEngine = lazy(() => import("./pages/blog/GrowthTrapOrGrowthEngine"));
 const EstimatingCrisisServiceBusiness = lazy(() => import("./pages/blog/EstimatingCrisisServiceBusiness"));
 const SchedulingCrisisOperationalCosts = lazy(() => import("./pages/blog/SchedulingCrisisOperationalCosts"));
+const GrowthCeilingGutInstinct = lazy(() => import("./pages/blog/GrowthCeilingGutInstinct"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -256,6 +257,7 @@ const App = () => (
               <Route path="/blog/growth-trap-or-growth-engine" element={<GrowthTrapOrGrowthEngine />} />
               <Route path="/blog/estimating-crisis-service-business-profitability" element={<EstimatingCrisisServiceBusiness />} />
               <Route path="/blog/scheduling-crisis-operational-costs" element={<SchedulingCrisisOperationalCosts />} />
+              <Route path="/blog/growth-ceiling-gut-instinct-scaling" element={<GrowthCeilingGutInstinct />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

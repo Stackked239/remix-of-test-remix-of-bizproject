@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won't Scale It",
+    excerpt: "Your gut instinct got your business off the ground—but it won't scale it. Learn why data-driven decision-making is essential at 30+ employees and $3M+ revenue.",
+    author: "BizHealth.ai Research Team",
+    date: "January 11, 2026",
+    readTime: "10 min read",
+    category: "Business Strategy, Business Intelligence, Technology",
+    slug: "/blog/growth-ceiling-gut-instinct-scaling",
+    imageUrl: "/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg",
+    altText: "Business owner contemplating growth challenges between chaotic startup environment and organized scaled operations - gut instinct versus data-driven decision-making",
+    keywords: "gut instinct business, scaling small business, data-driven decisions, business growth ceiling, founder's dilemma, intuitive leadership, SMB scaling challenges, decision-making at scale, business intelligence, transition to data-driven, business blind spots, systematic decision-making, leadership scaling, business complexity, growth ceiling, scaling business, data-driven growth, intuition vs data, business owner decision making, scaling beyond intuition, founder limitations, business systems, scaling leadership, business metrics, decision making framework"
+  },
+  {
     title: "Scheduling: Why Your Most Underestimated Operational Task Is Likely Bleeding Your Profits",
     excerpt: "Scheduling decisions silently drain $200,000+ annually through labor inefficiency, employee turnover, and lost revenue. Learn how to transform scheduling from administrative burden to strategic advantage.",
     author: "BizHealth.ai Research Team",

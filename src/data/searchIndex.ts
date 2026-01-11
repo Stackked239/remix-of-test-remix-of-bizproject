@@ -303,8 +303,16 @@ export const searchablePages: SearchableItem[] = [
     title: "Break-Even Analysis Calculator",
     excerpt: "Calculate your break-even point in minutes. Find exactly how many units you need to sell to cover all costs and start making profit.",
     url: "/biztools/toolbox/breakeven-analysis-calculator",
-    keywords: "break-even calculator, break-even analysis, break-even point, contribution margin, profitability calculator, fixed costs, variable costs, business profitability, sales target",
+    keywords: "break-even calculator, break-even analysis, break-even point, contribution margin, profitability calculator, fixed costs, variable costs, business profitability, sales target, free tool, business tool, biztool",
     icon: Calculator
+  },
+  {
+    type: "Tool",
+    title: "Cash Flow Projection Tool - 12-Month Forecast Calculator",
+    excerpt: "Forecast your business cash flow for the next 12 months. Identify cash shortfalls, plan for growth, and make confident financial decisions with our interactive projections.",
+    url: "/biztools/toolbox/cash-flow-projection-tool",
+    keywords: "cash flow, cashflow projection, cashflow tool, cash flow forecast, cash flow calculator, 12-month forecast, cash flow analysis, financial projection, cash planning, business cash flow, free tool, business tool, biztool, cash flow projection, cashflow forecast, cash flow management, revenue forecast, expense forecast, cash runway, financial planning tool",
+    icon: Banknote
   }
 ];
 

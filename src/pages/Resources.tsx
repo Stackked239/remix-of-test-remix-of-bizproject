@@ -15,8 +15,8 @@ const Resources = () => {
         {
           name: "Break-Even Analysis Calculator",
           description: "Determine the point where your business becomes profitable",
-          link: "#",
-          external: true
+          link: "/biztools/toolbox/breakeven-analysis-calculator",
+          external: false
         },
         {
           name: "Cash Flow Projection Tool",

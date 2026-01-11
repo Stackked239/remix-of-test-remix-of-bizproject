@@ -18,7 +18,7 @@
 // TIP: Include common misspellings, synonyms, and related terms in keywords
 // ============================================================================
 
-import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target } from "lucide-react";
+import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target, Calculator } from "lucide-react";
 
 export interface SearchableItem {
   type: "Page" | "Tool" | "Curriculum" | "Playbook" | "Resource" | "FAQ";
@@ -297,6 +297,14 @@ export const searchablePages: SearchableItem[] = [
     url: "/resources",
     keywords: "resources, free tools, calculators, ROI calculator, business valuation, cash flow, templates, downloads, free resources, SMB tools, business calculators, estimator, analyzer, valuation calculator, return on investment, business resources, small business tools",
     icon: Wrench
+  },
+  {
+    type: "Tool",
+    title: "Break-Even Analysis Calculator",
+    excerpt: "Calculate your break-even point in minutes. Find exactly how many units you need to sell to cover all costs and start making profit.",
+    url: "/biztools/toolbox/breakeven-analysis-calculator",
+    keywords: "break-even calculator, break-even analysis, break-even point, contribution margin, profitability calculator, fixed costs, variable costs, business profitability, sales target",
+    icon: Calculator
   }
 ];
 

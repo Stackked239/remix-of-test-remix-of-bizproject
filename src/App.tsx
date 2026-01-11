@@ -126,6 +126,7 @@ const FinancialHealthCheck = lazy(() => import("./pages/tools/FinancialHealthChe
 const FreeROICalculator = lazy(() => import("./pages/tools/FreeROICalculator"));
 const FreePricingNetProfitCalculator = lazy(() => import("./pages/tools/FreePricingNetProfitCalculator"));
 const BreakEvenAnalysisCalculator = lazy(() => import("./pages/tools/BreakEvenAnalysisCalculator"));
+const CashFlowProjectionTool = lazy(() => import("./pages/tools/CashFlowProjectionTool"));
 
 // Lead magnet landing pages
 const FreeStrategicEstimatingSystem = lazy(() => import("./pages/biztools/toolbox/FreeStrategicEstimatingSystem"));
@@ -275,6 +276,7 @@ const App = () => (
               <Route path="/biztools/toolbox/free-pricing-net-profit-calculator" element={<FreePricingNetProfitCalculator />} />
               <Route path="/biztools/toolbox/free-strategic-estimating-system" element={<FreeStrategicEstimatingSystem />} />
               <Route path="/biztools/toolbox/breakeven-analysis-calculator" element={<BreakEvenAnalysisCalculator />} />
+              <Route path="/biztools/toolbox/cash-flow-projection-tool" element={<CashFlowProjectionTool />} />
               <Route path="/search" element={<Search />} />
               <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
               <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />

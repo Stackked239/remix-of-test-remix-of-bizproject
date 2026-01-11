@@ -21,8 +21,8 @@ const Resources = () => {
         {
           name: "Cash Flow Projection Tool",
           description: "Forecast your business cash flow for the next 12 months", 
-          link: "#",
-          external: true
+          link: "/biztools/toolbox/cash-flow-projection-tool",
+          external: false
         },
         {
           name: "ROI Calculator",

@@ -18,7 +18,7 @@
 // TIP: Include common misspellings, synonyms, and related terms in keywords
 // ============================================================================
 
-import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target, Calculator } from "lucide-react";
+import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target, Calculator, Banknote } from "lucide-react";
 
 export interface SearchableItem {
   type: "Page" | "Tool" | "Curriculum" | "Playbook" | "Resource" | "FAQ";

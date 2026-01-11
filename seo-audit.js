@@ -6,13 +6,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * SEO Audit Script
- * Checks for common SEO issues in the codebase
+ * Checks for common SEO issues in the codebase including OG image validation
  */
 function seoAudit() {
   console.log('🔍 Running SEO Audit...\n');
   
   const issues = [];
   const recommendations = [];
+  const ogImageIssues = [];
+  
+  // Get list of available OG images
+  const ogImagesDir = path.join(__dirname, 'public', 'og-images');
+  const availableOgImages = new Set();
+  
+  if (fs.existsSync(ogImagesDir)) {
+    fs.readdirSync(ogImagesDir).forEach(file => {
+      availableOgImages.add(file);
+    });
+    console.log(`✅ Found ${availableOgImages.size} OG images in public/og-images/`);
+  } else {
+    issues.push('OG images directory not found at public/og-images/');
+  }
   
   // Check if SEO component is used
   console.log('📊 Checking SEO implementation...\n');
@@ -29,6 +43,8 @@ function seoAudit() {
   // Check pages for SEO component usage
   let pagesChecked = 0;
   let pagesWithSEO = 0;
+  let pagesWithOgImage = 0;
+  let pagesWithValidOgImage = 0;
   
   function checkPage(filePath) {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -38,6 +54,38 @@ function seoAudit() {
     
     if (content.includes('from "@/components/SEO"') || content.includes('<SEO ')) {
       pagesWithSEO++;
+      
+      // Check for ogImage prop
+      const ogImageMatch = content.match(/ogImage\s*=\s*["'`]([^"'`]+)["'`]/);
+      
+      if (ogImageMatch) {
+        pagesWithOgImage++;
+        const ogImagePath = ogImageMatch[1];
+        
+        // Validate OG image path format
+        if (ogImagePath.startsWith('https://bizhealth.ai/assets/')) {
+          ogImageIssues.push(`❌ ${relPath}: Uses old URL format (https://bizhealth.ai/assets/...) - should use /og-images/filename.jpg`);
+        } else if (ogImagePath.startsWith('http') && !ogImagePath.includes('/og-images/')) {
+          ogImageIssues.push(`⚠️ ${relPath}: Uses external URL without /og-images/ path - may not work for social sharing`);
+        } else if (ogImagePath.startsWith('/og-images/')) {
+          // Check if file exists
+          const filename = ogImagePath.replace('/og-images/', '');
+          if (availableOgImages.has(filename)) {
+            pagesWithValidOgImage++;
+          } else {
+            ogImageIssues.push(`❌ ${relPath}: OG image file not found: ${filename}`);
+          }
+        } else if (!ogImagePath.startsWith('/') && !ogImagePath.startsWith('http')) {
+          ogImageIssues.push(`⚠️ ${relPath}: Relative OG image path may not work: ${ogImagePath}`);
+        }
+      } else {
+        // Check if it's a blog post (should definitely have ogImage)
+        if (relPath.includes('/blog/')) {
+          ogImageIssues.push(`❌ ${relPath}: Blog post missing ogImage prop - REQUIRED for social sharing`);
+        } else {
+          recommendations.push(`Add ogImage prop to SEO component in ${relPath}`);
+        }
+      }
     } else {
       recommendations.push(`Add SEO component to ${relPath}`);
     }
@@ -122,6 +170,22 @@ function seoAudit() {
     });
   }
   
+  // OG Image Section
+  console.log('\n' + '='.repeat(60));
+  console.log('🖼️  OG Image Audit');
+  console.log('='.repeat(60));
+  console.log(`\n📊 OG Image Coverage: ${pagesWithOgImage}/${pagesWithSEO} pages with SEO have ogImage prop`);
+  console.log(`✅ Valid OG Images: ${pagesWithValidOgImage}/${pagesWithOgImage} have correct paths`);
+  
+  if (ogImageIssues.length === 0) {
+    console.log('\n✅ All OG images are properly configured!');
+  } else {
+    console.log(`\n⚠️  OG Image Issues (${ogImageIssues.length}):`);
+    ogImageIssues.forEach((issue) => {
+      console.log(`   ${issue}`);
+    });
+  }
+  
   if (recommendations.length === 0) {
     console.log('\n✨ No recommendations - SEO is fully optimized!');
   } else {
@@ -146,7 +210,27 @@ function seoAudit() {
   console.log('✓ HTTPS enabled');
   console.log('✓ Sitemap submitted to search engines');
   console.log('✓ Structured data for rich snippets');
+  
+  console.log('\n' + '='.repeat(60));
+  console.log('🖼️  OG Image Requirements:');
+  console.log('='.repeat(60));
+  console.log('✓ Use /og-images/filename.jpg format for ogImage prop');
+  console.log('✓ Image file must exist in public/og-images/');
+  console.log('✓ Images should be under 80KB for fast loading');
+  console.log('✓ Recommended size: 1200x630 pixels (1.91:1 ratio)');
+  console.log('✓ No text overlays on OG images');
+  console.log('✓ Run `npm run seo-audit` before publishing new pages');
   console.log('='.repeat(60) + '\n');
+  
+  // Return exit code for CI/CD integration
+  const hasBlockingIssues = issues.length > 0 || ogImageIssues.some(i => i.startsWith('❌'));
+  if (hasBlockingIssues) {
+    console.log('⛔ Audit failed - fix issues before deploying\n');
+    process.exit(1);
+  } else {
+    console.log('✅ Audit passed\n');
+    process.exit(0);
+  }
 }
 
 seoAudit();

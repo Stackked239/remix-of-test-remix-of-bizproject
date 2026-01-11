@@ -357,22 +357,22 @@ const HowToCheckYourBusinessHealth = () => {
             <RelatedArticles 
               articles={[
                 {
-                  title: "The Complete Guide to Business Health Assessment for 2026",
-                  slug: "complete-guide-business-health-assessment-2026",
+                  title: "The Complete Guide to Business Health Assessment in 2025",
+                  slug: "business-health-assessment-2025",
                   category: "Business Strategy",
-                  excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, and strategic alignment."
+                  excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
                 },
                 {
-                  title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-                  slug: "identifying-smb-leadership-blind-spots",
-                  category: "Business Leadership",
-                  excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success and how to build organizational self-awareness."
+                  title: "How AI is Revolutionizing Small Business Analytics",
+                  slug: "ai-business-analytics",
+                  category: "Technology",
+                  excerpt: "Discover how AI is making enterprise-level business intelligence accessible to SMBs."
                 },
                 {
-                  title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
-                  slug: "scaling-operations-without-losing-control",
+                  title: "How to Prioritize When Everything Feels Urgent: An Operator's Survival Guide",
+                  slug: "how-to-prioritize-operator-survival-guide",
                   category: "Operations",
-                  excerpt: "Discover proven strategies for small businesses to scale operations sustainably. Learn the SCALE framework and avoid growth traps."
+                  excerpt: "A practical framework for overwhelmed business owners to focus on what truly matters."
                 }
               ]}
             />

@@ -19,19 +19,19 @@ const CashFlowCrisisManagement = () => {
 
   const relatedArticles = [
     {
-      title: "SMB Cash Flow Hacks for 2025",
-      excerpt: "Discover proven strategies to optimize your cash flow and maintain healthy working capital.",
-      slug: "smb-cash-flow-hacks-2025",
+      title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every SMB Needs",
+      excerpt: "Build the financial visibility system that fractional CFOs use to transform small business performance.",
+      slug: "fractional-cfo-toolkit",
       category: "Financial Management"
     },
     {
-      title: "2025 SMB Financial Trends",
-      excerpt: "Navigate the evolving financial landscape with insights on cash flow strategies and cost management.",
-      slug: "2025-smb-financial-trends",
-      category: "Financial Management"
+      title: "Stress-Test Your Pricing: A Framework for Margins and Cash Flow",
+      excerpt: "Learn how to evaluate and optimize your pricing strategy to protect margins and improve cash flow.",
+      slug: "stress-test-pricing-framework-margins-cash-flow",
+      category: "Business Strategy"
     },
     {
-      title: "Financial Health Metrics",
+      title: "Financial Health Metrics Every Business Owner Should Track",
       excerpt: "Master the key financial indicators that predict business success and sustainability.",
       slug: "financial-health-metrics",
       category: "Financial Management"

@@ -562,22 +562,22 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
             <div className="max-w-4xl mx-auto">
               <RelatedArticles articles={[
                 {
-                  title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
-                  slug: "success-begins-with-2026-strategy",
+                  title: "The Complete Guide to Business Health Assessment in 2025",
+                  slug: "business-health-assessment-2025",
                   category: "Business Strategy",
-                  excerpt: "Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, and AI-driven growth analytics."
+                  excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
                 },
                 {
-                  title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
-                  slug: "small-business-struggles",
-                  category: "Business Strategy",
-                  excerpt: "Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots."
+                  title: "Financial Health Metrics Every Business Owner Should Track",
+                  slug: "financial-health-metrics",
+                  category: "Financial Management",
+                  excerpt: "Master the key financial indicators that predict business success and sustainability."
                 },
                 {
-                  title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-                  slug: "identifying-smb-leadership-blind-spots",
-                  category: "Business Leadership",
-                  excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success and how to build organizational self-awareness."
+                  title: "Operational Resilience: Building a Business That Can Weather Any Storm",
+                  slug: "operational-resilience",
+                  category: "Operations",
+                  excerpt: "Discover strategies for building operational resilience and business continuity planning."
                 }
               ]} />
             </div>

@@ -726,22 +726,22 @@ const GrowthTrapBrokenBusinessModel = () => {
         <RelatedArticles 
           articles={[
             {
-              title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
-              slug: "/blog/smb-scaling-paradox-2025",
+              title: "Stress-Test Your Pricing: A Simple Framework to Optimize Margins and Cash Flow",
+              slug: "/blog/stress-test-pricing-framework-margins-cash-flow",
               category: "Business Strategy",
-              excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks."
+              excerpt: "Learn how to evaluate and optimize your pricing strategy to protect margins and improve cash flow."
             },
             {
-              title: "Cash Flow Crisis Management for Small Businesses",
-              slug: "/blog/cash-flow-crisis-management",
-              category: "Financial Management",
-              excerpt: "Navigate financial challenges with confidence using proven crisis management strategies."
+              title: "Strategic Planning for the Post-Pandemic Business Landscape",
+              slug: "/blog/strategic-planning-post-pandemic",
+              category: "Business Strategy",
+              excerpt: "Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
             },
             {
-              title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
-              slug: "/blog/scaling-operations-without-losing-control",
-              category: "Operations",
-              excerpt: "Learn the SCALE framework for sustainable growth without operational chaos."
+              title: "The ROI of Business Intelligence for SMBs",
+              slug: "/blog/business-intelligence-roi",
+              category: "Technology",
+              excerpt: "Real-world case studies showing how SMBs achieve measurable returns from business intelligence investments."
             }
           ]}
         />

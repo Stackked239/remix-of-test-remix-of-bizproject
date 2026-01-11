@@ -17,10 +17,10 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
 
   const relatedArticles = [
     {
-      title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
-      slug: "financial-stewardship-everyones-responsibility",
+      title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every SMB Needs",
+      slug: "fractional-cfo-toolkit",
       category: "Financial Management",
-      excerpt: "Discover how to build a culture of financial stewardship where every employee contributes to cash flow health."
+      excerpt: "Build the financial visibility system that fractional CFOs use to transform small business performance."
     },
     {
       title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
@@ -29,10 +29,10 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
       excerpt: "Master cash flow management for small business in 2025. Learn crisis prevention strategies and cash flow planning tips."
     },
     {
-      title: "Financial Health Metrics Every Business Owner Should Track",
-      slug: "financial-health-metrics",
-      category: "Financial Management",
-      excerpt: "A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance."
+      title: "The ROI of Business Intelligence for SMBs",
+      slug: "business-intelligence-roi",
+      category: "Technology",
+      excerpt: "Real-world case studies showing how SMBs achieve measurable returns from business intelligence investments."
     }
   ];
 

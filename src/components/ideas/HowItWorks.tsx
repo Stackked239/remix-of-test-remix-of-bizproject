@@ -56,7 +56,7 @@ const HowItWorks = () => {
         {/* Desktop Timeline */}
         <div className="hidden lg:block relative">
           {/* Connector Line */}
-          <div className="absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-biz-green via-biz-navy to-biz-green rounded-full" />
+          <div className="absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-slate-200 via-biz-green/30 to-slate-200 rounded-full" />
           
           <div className="grid grid-cols-5 gap-4">
             {steps.map((step, index) => (
@@ -93,7 +93,7 @@ const HowItWorks = () => {
         {/* Mobile/Tablet Timeline - Vertical */}
         <div className="lg:hidden relative">
           {/* Vertical Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-biz-green via-biz-navy to-biz-green" />
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-slate-200 via-biz-green/30 to-slate-200" />
           
           <div className="space-y-8">
             {steps.map((step, index) => (

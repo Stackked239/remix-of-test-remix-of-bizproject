@@ -57,17 +57,25 @@ const ogImageMap = {
   '/logo': '/og-images/og-logo.jpg',
   '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
   '/playbooks/landscaping': '/og-images/og-landscaping-playbook.jpg',
-  // Blog posts
+  // Blog posts - Complete OG image mappings
   '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
-  '/blog/growth-trap-or-growth-engine': '/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg',
+  '/blog/growth-trap-or-growth-engine': '/og-images/og-growth-trap.jpg',
   '/blog/fractional-cfo-toolkit': '/og-images/og-fractional-cfo-toolkit.jpg',
   '/blog/ai-business-analytics': '/og-images/og-ai-business-analytics.jpg',
   '/blog/business-health-assessment-2025': '/og-images/og-business-health-assessment.jpg',
+  '/blog/business-health-scores-by-stage': '/og-images/og-business-health-scores-stages.jpg',
   '/blog/business-intelligence-roi': '/og-images/og-business-intelligence-roi.jpg',
   '/blog/customer-loyalty-starts-with-reliability': '/og-images/og-customer-loyalty-reliability.jpg',
   '/blog/employee-retention-company-culture-leadership': '/og-images/og-employee-retention-leadership.jpg',
+  '/blog/financial-health-metrics': '/og-images/og-financial-health-metrics.jpg',
+  '/blog/happy-new-year-2026-year-of-growth': '/og-images/og-happy-new-year-2026.jpg',
+  '/blog/how-to-prioritize-operator-survival-guide': '/og-images/og-prioritize-survival.jpg',
+  '/blog/operational-resilience': '/og-images/og-operational-resilience.jpg',
+  '/blog/small-business-financials-know-your-numbers': '/og-images/og-know-your-numbers.jpg',
   '/blog/strategic-planning-post-pandemic': '/og-images/og-strategic-planning.jpg',
   '/blog/stress-test-pricing-framework-margins-cash-flow': '/og-images/og-stress-test-pricing.jpg',
+  '/blog/warning-signs-business': '/og-images/og-warning-signs-business.jpg',
+  '/blog/when-to-pivot': '/og-images/og-when-to-pivot.jpg',
 };
 
 /**

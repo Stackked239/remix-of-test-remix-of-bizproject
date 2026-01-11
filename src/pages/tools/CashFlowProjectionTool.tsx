@@ -128,7 +128,7 @@ const CashFlowProjectionTool = () => {
         description="Forecast your business cash flow for the next 12 months. See when money comes in, when it goes out, and whether you'll have enough. Free calculator for SMBs."
         keywords="cash flow projection, cash flow forecast, 12-month cash flow, cash flow calculator, small business cash flow, cash flow management, business cash forecast, cash runway, cash flow planning"
         canonical="https://bizhealth.ai/biztools/toolbox/cash-flow-projection-tool"
-        ogImage="https://bizhealth.ai/og-images/og-cashflow-tool.jpg"
+        ogImage="/og-images/og-cash-flow-tracker.jpg"
       />
       <StructuredData type="organization" />
 

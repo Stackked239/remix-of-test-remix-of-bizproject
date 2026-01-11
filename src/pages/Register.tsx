@@ -150,9 +150,9 @@ const Register = () => {
         <div className="w-full max-w-lg p-6 sm:p-8">
           <Card className="shadow-elegant border-border/50">
             <CardHeader className="space-y-2 text-center">
-              <CardTitle className="text-2xl font-montserrat font-bold text-biz-navy">
+              <h1 className="text-2xl font-montserrat font-bold text-biz-navy">
                 Create Your Account
-              </CardTitle>
+              </h1>
               <CardDescription className="font-open-sans text-biz-grey">
                 Join the 2,500+ SMBs already utilizing BizHealth.ai
               </CardDescription>

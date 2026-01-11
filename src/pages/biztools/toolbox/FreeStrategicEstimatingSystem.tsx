@@ -156,7 +156,7 @@ const FreeStrategicEstimatingSystem = () => {
         keywords="estimating system, service business profitability, accurate estimates, project costing, profit margins, contractor estimating, bid management, scope creep, small business tools"
         canonical="https://bizhealth.ai/biztools/toolbox/free-strategic-estimating-system"
         ogType="website"
-        ogImage="https://bizhealth.ai/images/og/strategic-estimating-system.jpg"
+        ogImage="/og-images/og-biztools.jpg"
       />
       
       <StructuredData type="organization" />

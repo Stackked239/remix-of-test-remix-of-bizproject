@@ -233,7 +233,7 @@ const HRProgramAssetMultiplier = () => {
         keywords="HR program small business, small business HR strategy, employee retention SMB, hiring process small business, HR as asset multiplier, HR for SMB, human resources small business, talent management, employee development, performance management, onboarding process, job descriptions, one-on-ones, employee turnover cost, retention strategies, culture building, HR systems"
         canonical="https://bizhealth.ai/blog/hr-program-asset-multiplier-small-business"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-hr-program-asset-multiplier.jpg"
+        ogImage="/og-images/og-hr-asset-multiplier.jpg"
         articlePublishedTime="2026-01-06T00:00:00Z"
         articleModifiedTime="2026-01-06T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

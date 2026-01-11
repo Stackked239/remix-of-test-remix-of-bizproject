@@ -9,7 +9,7 @@ interface IdeasHeroProps {
 const IdeasHero = ({ onScrollToForm }: IdeasHeroProps) => {
   return (
     <section 
-      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-40"
+      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-24"
       style={{
         background: "linear-gradient(135deg, #242553 0%, #1a1b3d 50%, #242553 100%)"
       }}
@@ -28,7 +28,7 @@ const IdeasHero = ({ onScrollToForm }: IdeasHeroProps) => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8"
         >
           <Sparkles className="w-4 h-4 text-biz-green" />
-          <span className="text-white/90 text-sm font-montserrat font-medium">Voice of Customer</span>
+          <span className="text-white/90 text-sm font-montserrat font-medium">You're Our #1 Priority</span>
         </motion.div>
         
         {/* Main Headline */}

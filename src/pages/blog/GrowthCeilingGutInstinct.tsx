@@ -559,7 +559,7 @@ const GrowthCeilingGutInstinct = () => {
             </section>
             
             {/* CTA Section */}
-            <section className="bg-gradient-to-br from-primary/10 via-background to-[hsl(var(--biz-green))]/10 border border-primary/20 rounded-xl p-8 text-center">
+            <section className="bg-gradient-to-br from-[hsl(var(--biz-green))]/15 via-primary/10 to-[hsl(var(--biz-green))]/20 border-2 border-[hsl(var(--biz-green))]/40 rounded-xl p-10 text-center shadow-lg">
               <h2 className="text-2xl font-bold mb-4 text-foreground">Ready to Move From Gut to Data?</h2>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Get the diagnostic clarity you need to understand where data-driven decision-making will have the most impact on your business. Our comprehensive assessment takes under 90 minutes and reveals the blind spots your intuition is missing.
@@ -568,42 +568,71 @@ const GrowthCeilingGutInstinct = () => {
                 to="/business-health-assessment"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105"
               >
-                Start Your Free Assessment
+                Start Your Business Assessment
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </section>
             
             {/* Related Articles */}
-            <section className="mt-16">
-              <h2 className="text-2xl font-bold mb-6 text-foreground">Related Articles</h2>
+            <section className="mt-16 bg-muted/30 -mx-6 px-6 py-10 rounded-xl border border-border/50">
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-2xl font-bold text-foreground">Continue Reading</h2>
+                <Link 
+                  to="/blog" 
+                  className="text-sm text-[hsl(var(--biz-green))] hover:text-[hsl(var(--biz-green))]/80 font-medium flex items-center gap-1 transition-colors"
+                >
+                  View All Articles
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
                   to="/blog/business-blind-spots-operational-issues" 
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-[hsl(var(--biz-green))]/50 hover:shadow-md transition-all duration-300 group"
                 >
-                  <h3 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">Business Blind Spots: Operational Issues Leaders Miss</h3>
-                  <p className="text-muted-foreground text-sm">Discover the hidden operational issues that plague growing businesses and how to identify them before they become costly problems.</p>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
+                      <Eye className="w-4 h-4 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <h3 className="font-bold text-foreground group-hover:text-[hsl(var(--biz-green))] transition-colors">Business Blind Spots: Operational Issues Leaders Miss</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm pl-11">Discover the hidden operational issues that plague growing businesses and how to identify them before they become costly problems.</p>
                 </Link>
                 <Link 
                   to="/blog/growth-trap-or-growth-engine" 
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-[hsl(var(--biz-green))]/50 hover:shadow-md transition-all duration-300 group"
                 >
-                  <h3 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">Growth Trap or Growth Engine?</h3>
-                  <p className="text-muted-foreground text-sm">78% of SMBs want to grow, but 60% stall after year three. Learn how to assess if your business is truly ready for sustainable growth.</p>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
+                      <Target className="w-4 h-4 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <h3 className="font-bold text-foreground group-hover:text-[hsl(var(--biz-green))] transition-colors">Growth Trap or Growth Engine?</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm pl-11">78% of SMBs want to grow, but 60% stall after year three. Learn how to assess if your business is truly ready for sustainable growth.</p>
                 </Link>
                 <Link 
                   to="/blog/fractional-cfo-toolkit" 
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-[hsl(var(--biz-green))]/50 hover:shadow-md transition-all duration-300 group"
                 >
-                  <h3 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">The Fractional CFO Toolkit</h3>
-                  <p className="text-muted-foreground text-sm">Discover the 7 essential financial dashboards every business owner needs for CFO-level visibility into their business.</p>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
+                      <BarChart3 className="w-4 h-4 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <h3 className="font-bold text-foreground group-hover:text-[hsl(var(--biz-green))] transition-colors">The Fractional CFO Toolkit</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm pl-11">Discover the 7 essential financial dashboards every business owner needs for CFO-level visibility into their business.</p>
                 </Link>
                 <Link 
                   to="/blog/complete-guide-business-health-assessment-2026" 
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-[hsl(var(--biz-green))]/50 hover:shadow-md transition-all duration-300 group"
                 >
-                  <h3 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">The Complete Guide to Business Health Assessment</h3>
-                  <p className="text-muted-foreground text-sm">Learn how to conduct a comprehensive business health assessment for 2026, covering financial health, operational efficiency, and strategic alignment.</p>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
+                      <FileText className="w-4 h-4 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <h3 className="font-bold text-foreground group-hover:text-[hsl(var(--biz-green))] transition-colors">The Complete Guide to Business Health Assessment</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm pl-11">Learn how to conduct a comprehensive business health assessment for 2026, covering financial health, operational efficiency, and strategic alignment.</p>
                 </Link>
               </div>
             </section>

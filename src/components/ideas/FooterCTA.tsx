@@ -48,25 +48,29 @@ const FooterCTA = () => {
 
           {/* Secondary CTAs */}
           <Link to="/about">
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white/10 font-montserrat font-semibold px-6 py-6 rounded-xl transition-all duration-300"
-            >
-              <Users className="mr-2 w-5 h-5" />
-              Join Our Community
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white hover:text-biz-navy font-montserrat font-semibold px-6 py-6 rounded-xl transition-all duration-300 group"
+              >
+                <Users className="mr-2 w-5 h-5 group-hover:animate-pulse" />
+                Join Our Community
+              </Button>
+            </motion.div>
           </Link>
 
           <Link to="/contact">
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white/10 font-montserrat font-semibold px-6 py-6 rounded-xl transition-all duration-300"
-            >
-              <Bell className="mr-2 w-5 h-5" />
-              Get Product Updates
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white hover:text-biz-navy font-montserrat font-semibold px-6 py-6 rounded-xl transition-all duration-300 group"
+              >
+                <Bell className="mr-2 w-5 h-5 group-hover:animate-bounce" />
+                Get Product Updates
+              </Button>
+            </motion.div>
           </Link>
         </motion.div>
       </div>

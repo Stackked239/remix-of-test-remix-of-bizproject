@@ -27,8 +27,8 @@ const R2A2JobDescriptions = () => {
         "url": "https://bizhealth.ai/lovable-uploads/3e34ee5c-64f6-4ef4-94c5-c8f6caee8783.png"
       }
     },
-    "datePublished": "2026-01-12",
-    "dateModified": "2026-01-12",
+    "datePublished": "2026-01-10",
+    "dateModified": "2026-01-10",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://bizhealth.ai/blog/r2a2-job-descriptions-role-clarity-small-business-teams"
@@ -55,7 +55,7 @@ const R2A2JobDescriptions = () => {
         <BlogHeroSection
           title="R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams"
           author="BizHealth.ai Research Team"
-          publishDate="January 12, 2026"
+          publishDate="January 10, 2026"
           readTime="10 min read"
           heroImage={heroImage}
           heroImageAlt="Small business team collaborating in manufacturing facility - role clarity and accountability in action through R2A2 job descriptions framework"

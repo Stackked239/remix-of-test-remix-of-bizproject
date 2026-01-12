@@ -96,10 +96,25 @@ async function prerender() {
         // Set viewport for consistent rendering
         await page.setViewport({ width: 1920, height: 1080 });
         
-        // Log console errors from the page
+        // Log console errors from the page (suppress expected 403s from external resources)
         page.on('console', msg => {
           if (msg.type() === 'error') {
-            console.warn(`  ⚠️  Console error on ${route}:`, msg.text());
+            const text = msg.text();
+            // Suppress expected 403 errors from external resources during SSG
+            const suppressedPatterns = [
+              /Failed to load resource.*403/i,
+              /net::ERR_/i,
+              /googletagmanager/i,
+              /google-analytics/i,
+              /fonts\.googleapis/i,
+              /fonts\.gstatic/i,
+              /supabase/i,
+              /favicon\.ico/i
+            ];
+            const isSuppressed = suppressedPatterns.some(pattern => pattern.test(text));
+            if (!isSuppressed) {
+              console.warn(`  ⚠️  Console error on ${route}:`, text);
+            }
           }
         });
         

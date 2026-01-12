@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams",
+    excerpt: "Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams with better hiring, faster onboarding, and stronger retention.",
+    author: "BizHealth.ai Research Team",
+    date: "January 12, 2026",
+    readTime: "10 min read",
+    category: "Operations, Business Leadership, Business Strategy",
+    slug: "/blog/r2a2-job-descriptions-role-clarity-small-business-teams",
+    imageUrl: "/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg",
+    altText: "Small business team collaborating in manufacturing facility - role clarity and accountability in action through R2A2 job descriptions framework",
+    keywords: "R2A2 job descriptions, role clarity small business, job description framework, employee accountability, delegation authority, SMB hiring, team management, employee retention, job roles responsibilities, role definition framework, small business HR, team performance, onboarding best practices, role accountability, decision authority, role responsibilities accountability authority, job clarity, employee empowerment, delegation, business operations, HR strategy, team alignment, role design, job structure"
+  },
+  {
     title: "The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won't Scale It",
     excerpt: "Your gut instinct got your business off the ground—but it won't scale it. Learn why data-driven decision-making is essential at 30+ employees and $3M+ revenue.",
     author: "BizHealth.ai Research Team",

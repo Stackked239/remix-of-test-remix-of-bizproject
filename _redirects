@@ -1,18 +1,34 @@
 # Netlify Redirects for BizHealth.ai
 
-# Redirect HTTP to HTTPS (handled by Netlify, but explicit for clarity)
-http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
-http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
-
-# Redirect www to non-www
+# Handle www to non-www redirects
 https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
+http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
 
-# Fix soft 404s reported in Google Search Console
+# Remove trailing slashes (normalize URLs for SEO)
+/faqs/ /faqs 301!
+/contact/ /contact 301!
+/resources/ /resources 301!
+/login/ /login 301!
+/pricing/ /pricing 301!
+/blog/ /blog 301!
+/about/ /about 301!
+/security/ /security 301!
+/privacy/ /privacy 301!
+/terms/ /terms 301!
+/concerns/ /concerns 301!
+/biztools/ /biztools 301!
+/bizleader/ /bizleader 301!
+/bizgrowth/ /bizgrowth 301!
+/bizguides/ /bizguides 301!
+/sherpas/ /sherpas 301!
+
+# Fix soft 404s and URL variations
 /faq /faqs 301!
+/privacy-policy /privacy 301!
 /blog/e-commerce-scaling-smb-2025 /blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025 301!
 /forgot-password /login 301!
 /refund /concerns 301!
-# Note: /security is a valid page - no redirect needed
 
 # Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
 /bizgrowth-academy/vision-playbook /bizgrowth/vision-playbook 301!

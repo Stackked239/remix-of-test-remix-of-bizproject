@@ -169,65 +169,95 @@ const LeadingBlindBusinessIntelligence = () => {
               </p>
             </section>
             
-            {/* Why Small Businesses Operate Blind */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Why Most Small Businesses Operate Blind</h2>
-              
-              <p className="text-muted-foreground mb-8">
-                There are three reasons small business owners don't have BI:
-              </p>
-              
-              {/* Reason 1 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-bold mb-4 text-foreground">Reason #1: They Think It's Too Expensive or Complicated</h3>
-                <p className="text-muted-foreground mb-4">
-                  Ten years ago, they were right. Implementing business intelligence required:
-                </p>
-                <ul className="space-y-2 text-muted-foreground mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span>Hiring dedicated data people</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span>Investing in expensive enterprise software</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span>Months of customization and training</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span>A significant financial commitment that didn't make sense for a $2M business</span>
-                  </li>
-                </ul>
-                <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-lg p-4">
-                  <p className="text-foreground font-semibold mb-0">
-                    Today, cloud-based BI tools cost <span className="text-[hsl(var(--biz-green))]">$50-500/month</span> and require no technical expertise. The barrier to entry has dropped dramatically. The excuse of cost or complexity no longer holds.
+            {/* Why Small Businesses Operate Blind - Enhanced Section */}
+            <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
+              <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-16 px-6 md:px-12 lg:px-20 rounded-2xl">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-destructive/20 p-3 rounded-xl">
+                      <EyeOff className="w-8 h-8 text-destructive" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-white mb-0">Why Most Small Businesses Operate Blind</h2>
+                  </div>
+                  
+                  <p className="text-slate-300 mb-10 text-lg">
+                    There are three reasons small business owners don't have BI:
                   </p>
+                  
+                  {/* Reason 1 */}
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-amber-500/20 text-amber-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                        1
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-4 text-white">They Think It's Too Expensive or Complicated</h3>
+                        <p className="text-slate-300 mb-4">
+                          Ten years ago, they were right. Implementing business intelligence required:
+                        </p>
+                        <ul className="space-y-2 text-slate-400 mb-4">
+                          <li className="flex items-start gap-2">
+                            <span className="text-slate-500">•</span>
+                            <span>Hiring dedicated data people</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-slate-500">•</span>
+                            <span>Investing in expensive enterprise software</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-slate-500">•</span>
+                            <span>Months of customization and training</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-slate-500">•</span>
+                            <span>A significant financial commitment that didn't make sense for a $2M business</span>
+                          </li>
+                        </ul>
+                        <div className="bg-[hsl(var(--biz-green))]/20 border border-[hsl(var(--biz-green))]/40 rounded-lg p-4">
+                          <p className="text-white font-semibold mb-0">
+                            Today, cloud-based BI tools cost <span className="text-[hsl(var(--biz-green))]">$50-500/month</span> and require no technical expertise. The barrier to entry has dropped dramatically.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Reason 2 */}
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-blue-500/20 text-blue-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                        2
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-4 text-white">They Don't Know What They're Missing</h3>
+                        <p className="text-slate-300 mb-4">
+                          You can't miss what you don't know exists. If you've never seen a real-time dashboard showing your business's health—cash flow, profitability by customer, operational efficiency metrics—you don't know what's possible.
+                        </p>
+                        <p className="text-slate-300 mb-0 italic border-l-4 border-blue-500/50 pl-4">
+                          "You're like someone who's never seen in color complaining that black and white is fine. It <em>is</em> fine... until you see color. Then going back to black and white feels blind."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Reason 3 */}
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500/20 text-purple-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                        3
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-4 text-white">Their Data Is a Mess</h3>
+                        <p className="text-slate-300 mb-4">
+                          Many small businesses have data scattered across multiple systems: accounting software, CRM, spreadsheets, email. To pull meaningful reports, you'd have to manually consolidate data from all these sources—a process that takes hours and is error-prone.
+                        </p>
+                        <p className="text-white font-semibold mb-0">
+                          This is true. But it's also solvable. Modern BI tools can connect to multiple data sources and consolidate them automatically.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Reason 2 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-bold mb-4 text-foreground">Reason #2: They Don't Know What They're Missing</h3>
-                <p className="text-muted-foreground mb-4">
-                  You can't miss what you don't know exists. If you've never seen a real-time dashboard showing your business's health—cash flow, profitability by customer, operational efficiency metrics—you don't know what's possible.
-                </p>
-                <p className="text-muted-foreground mb-0">
-                  <strong className="text-foreground">You're like someone who's never seen in color complaining that black and white is fine.</strong> It <em>is</em> fine... until you see color. Then going back to black and white feels blind.
-                </p>
-              </div>
-              
-              {/* Reason 3 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-foreground">Reason #3: Their Data Is a Mess</h3>
-                <p className="text-muted-foreground mb-4">
-                  Many small businesses have data scattered across multiple systems: accounting software, CRM, spreadsheets, email. To pull meaningful reports, you'd have to manually consolidate data from all these sources—a process that takes hours and is error-prone.
-                </p>
-                <p className="text-muted-foreground mb-0">
-                  <strong className="text-foreground">This is true. But it's also solvable.</strong> Modern BI tools can connect to multiple data sources and consolidate them automatically.
-                </p>
               </div>
             </section>
             
@@ -346,133 +376,138 @@ const LeadingBlindBusinessIntelligence = () => {
               </div>
             </section>
             
-            {/* Hidden Opportunities */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">What Business Intelligence Actually Reveals: The Hidden Opportunities</h2>
-              
-              <p className="text-muted-foreground mb-8">
-                Here's what BI reveals when you implement it:
-              </p>
-              
-              {/* Opportunity 1 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
-                    <DollarSign className="w-6 h-6 text-[hsl(var(--biz-green))]" />
+            {/* Hidden Opportunities - Enhanced Section */}
+            <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-green))]/10 via-emerald-500/5 to-teal-500/10 dark:from-[hsl(var(--biz-green))]/15 dark:via-emerald-600/10 dark:to-teal-600/15 py-16 px-6 md:px-12 lg:px-20 rounded-2xl border border-[hsl(var(--biz-green))]/20">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-3 rounded-xl">
+                      <Lightbulb className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-foreground mb-0">What Business Intelligence Actually Reveals: The Hidden Opportunities</h2>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Opportunity #1: Pricing Power You Didn't Know You Had</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Many small businesses underprice relative to the value they deliver or relative to what customers can afford. BI reveals this through:
-                    </p>
-                    <ul className="space-y-2 text-muted-foreground mb-4">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Margin analysis (which customers are price-sensitive vs. willing to pay more)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Competitor pricing data (how you compare)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Customer segments profitability (some segments can bear higher prices)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Product mix profitability (which offerings should be priced higher)</span>
-                      </li>
-                    </ul>
-                    <p className="text-foreground font-semibold mb-0">
-                      A simple price increase on your profitable customers can add 5-10% to your bottom line without acquiring a single new customer.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Opportunity 2 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
-                    <Settings className="w-6 h-6 text-[hsl(var(--biz-green))]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Opportunity #2: Operational Efficiency That Doesn't Require Hiring</h3>
-                    <p className="text-muted-foreground mb-4">
-                      BI reveals where you're wasting time and resources:
-                    </p>
-                    <ul className="space-y-2 text-muted-foreground mb-4">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Which processes take far longer than they should</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Which steps in your process add no value</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Where you're duplicating work across teams</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Which parts of your delivery require the most manual effort</span>
-                      </li>
-                    </ul>
-                    <p className="text-foreground font-semibold mb-0">
-                      Often, a 10-15% efficiency gain is hiding in operational improvements that don't require new hires.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Opportunity 3 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
-                    <Users className="w-6 h-6 text-[hsl(var(--biz-green))]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Opportunity #3: Customer Value Hidden in Your Data</h3>
-                    <p className="text-muted-foreground mb-4">
-                      BI reveals:
-                    </p>
-                    <ul className="space-y-2 text-muted-foreground mb-4">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Which customers generate the most lifetime value (and why)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>Customer segments you should focus on (because they have the highest ROI)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>The characteristics of your best customers (so you can find more like them)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[hsl(var(--biz-green))]">•</span>
-                        <span>When customers are at risk of leaving (so you can intervene)</span>
-                      </li>
-                    </ul>
-                    <p className="text-foreground font-semibold mb-0">
-                      Many small businesses chase revenue growth without understanding which revenue is actually profitable. BI shows you the difference.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Opportunity 4 */}
-              <div className="bg-card border border-border rounded-lg p-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[hsl(var(--biz-green))]/10 p-3 rounded-lg shrink-0">
-                    <LineChart className="w-6 h-6 text-[hsl(var(--biz-green))]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Opportunity #4: Market Signals Your Competitors Are Acting On</h3>
-                    <p className="text-muted-foreground mb-0">
-                      BI connects to market data—website traffic, search volume, social signals, industry data—to show you trends before they become obvious. <strong className="text-foreground">By the time your competitor is winning with a new approach, they've been seeing it in the data for months.</strong>
-                    </p>
+                  
+                  <p className="text-muted-foreground mb-10 text-lg">
+                    Here's what BI reveals when you implement it:
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {/* Opportunity 1 */}
+                    <div className="bg-card/80 backdrop-blur-sm border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 hover:shadow-lg hover:shadow-[hsl(var(--biz-green))]/10 transition-all hover:-translate-y-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] to-emerald-600 p-3 rounded-xl shrink-0">
+                          <DollarSign className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-lg font-bold text-foreground">Pricing Power You Didn't Know You Had</h3>
+                      </div>
+                      <ul className="space-y-2 text-muted-foreground mb-4 text-sm">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Margin analysis by customer type</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Competitor pricing comparison</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Segment profitability insights</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Product mix optimization</span>
+                        </li>
+                      </ul>
+                      <div className="bg-[hsl(var(--biz-green))]/10 rounded-lg p-3">
+                        <p className="text-sm text-foreground font-medium mb-0">
+                          💰 Add <span className="text-[hsl(var(--biz-green))] font-bold">5-10%</span> to your bottom line with strategic pricing
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Opportunity 2 */}
+                    <div className="bg-card/80 backdrop-blur-sm border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 hover:shadow-lg hover:shadow-[hsl(var(--biz-green))]/10 transition-all hover:-translate-y-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shrink-0">
+                          <Settings className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-lg font-bold text-foreground">Operational Efficiency Without Hiring</h3>
+                      </div>
+                      <ul className="space-y-2 text-muted-foreground mb-4 text-sm">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Process time bottlenecks</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Non-value-add step identification</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Duplicate work detection</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Manual effort reduction</span>
+                        </li>
+                      </ul>
+                      <div className="bg-blue-500/10 rounded-lg p-3">
+                        <p className="text-sm text-foreground font-medium mb-0">
+                          ⚡ Unlock <span className="text-blue-500 font-bold">10-15%</span> efficiency gains hiding in your ops
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Opportunity 3 */}
+                    <div className="bg-card/80 backdrop-blur-sm border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 hover:shadow-lg hover:shadow-[hsl(var(--biz-green))]/10 transition-all hover:-translate-y-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shrink-0">
+                          <Users className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-lg font-bold text-foreground">Customer Value Hidden in Your Data</h3>
+                      </div>
+                      <ul className="space-y-2 text-muted-foreground mb-4 text-sm">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Lifetime value drivers</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>High-ROI segment targeting</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Best customer characteristics</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                          <span>Churn risk early warning</span>
+                        </li>
+                      </ul>
+                      <div className="bg-purple-500/10 rounded-lg p-3">
+                        <p className="text-sm text-foreground font-medium mb-0">
+                          🎯 Focus on revenue that's <span className="text-purple-500 font-bold">actually profitable</span>
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Opportunity 4 */}
+                    <div className="bg-card/80 backdrop-blur-sm border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 hover:shadow-lg hover:shadow-[hsl(var(--biz-green))]/10 transition-all hover:-translate-y-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="bg-gradient-to-br from-amber-500 to-orange-500 p-3 rounded-xl shrink-0">
+                          <LineChart className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-lg font-bold text-foreground">Market Signals Before Your Competitors</h3>
+                      </div>
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        BI connects to market data—website traffic, search volume, social signals, industry data—to show you trends before they become obvious.
+                      </p>
+                      <div className="bg-amber-500/10 rounded-lg p-3">
+                        <p className="text-sm text-foreground font-medium mb-0">
+                          📈 See trends <span className="text-amber-500 font-bold">months before</span> competitors act on them
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

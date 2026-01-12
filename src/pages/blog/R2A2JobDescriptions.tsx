@@ -166,10 +166,10 @@ const R2A2JobDescriptions = () => {
                   </div>
                   <p className="text-muted-foreground">What this role ultimately owns</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1">
+                <div className="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-purple-500/20 rounded-lg">
-                      <Key className="w-6 h-6 text-purple-500" />
+                    <div className="p-2 bg-cyan-500/20 rounded-lg">
+                      <Key className="w-6 h-6 text-cyan-500" />
                     </div>
                     <h3 className="font-bold text-foreground text-lg">Authority</h3>
                   </div>
@@ -334,9 +334,9 @@ const R2A2JobDescriptions = () => {
 
               {/* 4. Authority Section */}
               <div className="relative mt-16">
-                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-purple-500/50 to-transparent rounded-full hidden lg:block" />
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-500 via-cyan-500/50 to-transparent rounded-full hidden lg:block" />
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 text-purple-500 font-bold text-lg">4</span>
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-500 font-bold text-lg">4</span>
                   <h2 className="text-3xl font-bold text-foreground">Authority: What This Role Can Decide Without Asking Permission</h2>
                 </div>
               </div>
@@ -345,9 +345,9 @@ const R2A2JobDescriptions = () => {
                 This is the most neglected part of most roles—and where burnout and bottlenecks are created.
               </p>
               
-              <div className="bg-purple-500/5 border border-purple-500/20 rounded-lg p-4 mb-6">
+              <div className="bg-cyan-500/5 border border-cyan-500/20 rounded-lg p-4 mb-6">
                 <p className="text-foreground">
-                  <strong className="text-purple-500">Question this quadrant answers:</strong> "What decisions can this person make on their own, and where do they need to check in?"
+                  <strong className="text-cyan-500">Question this quadrant answers:</strong> "What decisions can this person make on their own, and where do they need to check in?"
                 </p>
               </div>
               
@@ -357,16 +357,16 @@ const R2A2JobDescriptions = () => {
               
               <h3 className="text-xl font-bold text-foreground mb-4">R2A2 makes authority explicit:</h3>
               <div className="grid gap-4 mb-8">
-                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
-                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 bg-cyan-500/5 rounded-lg p-4 border border-cyan-500/20">
+                  <Key className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" />
                   <span className="text-foreground">"Can approve customer credits up to $200 without manager sign-off."</span>
                 </div>
-                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
-                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 bg-cyan-500/5 rounded-lg p-4 border border-cyan-500/20">
+                  <Key className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" />
                   <span className="text-foreground">"Can adjust daily schedule to address urgent customer issues, as long as changes are logged."</span>
                 </div>
-                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
-                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 bg-cyan-500/5 rounded-lg p-4 border border-cyan-500/20">
+                  <Key className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" />
                   <span className="text-foreground">"Can select vendors within the approved list; new vendors require leadership approval."</span>
                 </div>
               </div>
@@ -428,9 +428,9 @@ const R2A2JobDescriptions = () => {
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-r from-purple-500/10 to-transparent border-l-4 border-purple-500 rounded-r-lg p-6">
+                <div className="bg-gradient-to-r from-cyan-500/10 to-transparent border-l-4 border-cyan-500 rounded-r-lg p-6">
                   <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                    <span className="text-purple-500">5.</span> More Effective Performance Management
+                    <span className="text-cyan-500">5.</span> More Effective Performance Management
                   </h3>
                   <p className="text-muted-foreground">
                     R2A2 reframes performance reviews around: "Are the outcomes you're accountable for being met?" and "Are you using your authority effectively?" Feedback is anchored in clarity, not opinion.

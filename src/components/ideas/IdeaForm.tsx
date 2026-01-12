@@ -126,7 +126,7 @@ const IdeaForm = () => {
   }
 
   return (
-    <section id="idea-form" className="py-20 bg-gradient-to-b from-slate-50 to-white scroll-mt-40">
+    <section id="idea-form" className="py-20 bg-gradient-to-b from-slate-50 to-white scroll-mt-16">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Form Container */}
         <div className="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">

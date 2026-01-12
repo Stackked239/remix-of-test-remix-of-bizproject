@@ -16,17 +16,17 @@ export interface BlogPost {
 
 // Featured post data
 export const featuredPost = {
-  title: "The Complete Guide to Business Health Assessment for 2026",
-  excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth.",
+  title: "R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams",
+  excerpt: "Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams with better hiring, faster onboarding, and stronger retention.",
   author: "BizHealth.ai Research Team",
-  date: "November 24, 2025",
-  readTime: "15 min read",
-  category: "Business Strategy",
+  date: "January 12, 2026",
+  readTime: "10 min read",
+  category: "Operations",
   featured: true,
-  slug: "/blog/complete-guide-business-health-assessment-2026",
-  imageUrl: "/assets/business-health-assessment-guide-2026.png",
-  altText: "Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning",
-  keywords: "business health assessment, 2026 business planning, financial health, operational efficiency, team culture, strategic alignment, business growth, SMB assessment, company analysis, business evaluation, health check, diagnostic, comprehensive assessment, business wellness, organizational health, performance evaluation"
+  slug: "/blog/r2a2-job-descriptions-role-clarity-small-business-teams",
+  imageUrl: "/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg",
+  altText: "Small business team collaborating in manufacturing facility - role clarity and accountability in action through R2A2 job descriptions framework",
+  keywords: "R2A2 job descriptions, role clarity small business, job description framework, employee accountability, delegation authority, SMB hiring, team management, employee retention, job roles responsibilities, role definition framework, small business HR, team performance, onboarding best practices, role accountability, decision authority"
 };
 
 // All blog posts with comprehensive keywords for searchability

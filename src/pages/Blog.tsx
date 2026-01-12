@@ -68,9 +68,11 @@ import schedulingCrisisImage from "@/assets/images/scheduling-crisis-operational
 import growthCeilingGutInstinctImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
 import r2a2JobDescriptionsImage from "@/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg";
 import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
+import leadingBlindBIImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/leading-blind-business-intelligence-small-business": leadingBlindBIImage,
   "/blog/customer-acquisition-cost-guide-smb": customerAcquisitionCostImage,
   "/blog/r2a2-job-descriptions-role-clarity-small-business-teams": r2a2JobDescriptionsImage,
   "/blog/growth-ceiling-gut-instinct-scaling": growthCeilingGutInstinctImage,

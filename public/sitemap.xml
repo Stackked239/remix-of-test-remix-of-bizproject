@@ -2,17 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://bizhealth.ai/og-images/og-technology-strategic-ally-roi.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>https://bizhealth.ai/</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     <image:image>
@@ -21,7 +12,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/about</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -30,7 +21,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/bizgrowth</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -38,38 +29,65 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bizhealth.ai/bizgrowth/business-growth-strategies</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/bizgrowth/financials/breaking-peaks-valleys-cycle</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/peaks-valleys-playbook-og.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/human-resources-programs</loc>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/bizgrowth/launch</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-bizgrowth-launch.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/bizgrowth/launch/step-2-fix-cash-squeeze</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-fix-cash-squeeze.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/bizgrowth/technology-innovation-readiness</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-innovation-readiness.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/bizgrowth/vision-playbook</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-vision-playbook.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/bizguides</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -78,7 +96,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/bizguides/bizguide-sherpa</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -87,7 +105,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/bizleader</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -96,7 +114,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/bizleader/leadership-development-bot</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -105,7 +123,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -114,13 +132,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/financials/health-check</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-financial-health-check.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/how-it-works</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -129,7 +150,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -137,8 +158,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bizhealth.ai/biztools/toolbox/breakeven-analysis-calculator</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/biztools/toolbox/cash-flow-projection-tool</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-cash-flow-tracker.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/biztools/toolbox/cash-flow-tracker</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -147,7 +183,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/customer-journey-maps-tool</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -156,7 +192,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/free-pricing-net-profit-calculator</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -165,13 +201,22 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/free-roi-calculator</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-roi-calculator.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/biztools/toolbox/free-strategic-estimating-system</loc>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/innovation-strategy-tool</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -180,7 +225,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/process-mapping-tools</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -189,7 +234,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/process-mapping-tools/guide</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -198,13 +243,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/biztools/toolbox/swot-analysis-tool</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-swot-tool.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -213,13 +261,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/2025-smb-financial-trends</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-smb-financial-trends.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/Q4-Cost-Cuts-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -228,25 +279,34 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/ai-business-analytics</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-ai-business-analytics.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-business-blind-spots-operational.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-health-assessment-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-business-health-assessment.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-health-scores-by-stage</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -255,7 +315,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-intelligence</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -264,13 +324,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-intelligence-roi</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-business-intelligence-roi.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-leadership</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -279,7 +342,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/business-strategy</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -288,7 +351,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/cash-flow-crisis-management</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -297,13 +360,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-chaos-to-clarity.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -312,7 +378,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/confirm-business-weaknesses-without-consultants</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -320,14 +386,35 @@
     </image:image>
   </url>
   <url>
-    <loc>https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://bizhealth.ai/blog/crm-reality-check-small-business-decision</loc>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-crm-reality.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/customer-acquisition-cost-guide-smb</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-customer-acquisition-cost-guide.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-customer-loyalty-reliability.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/daily-grind-fixes</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -336,19 +423,34 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/e-commerce-scaling-5-strategies-for-smbs-thriving-in-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-ecommerce-scaling.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/employee-retention-company-culture-leadership</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-employee-retention-leadership.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/estimating-crisis-service-business-profitability</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-estimating-crisis.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/feast-or-famine-cycle-small-business</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -357,7 +459,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/financial-health-metrics</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -366,7 +468,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/financial-management</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -375,7 +477,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -384,19 +486,34 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/fractional-cfo-toolkit</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-fractional-cfo-toolkit.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/grow-your-business-with-ai</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-grow-with-ai.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/growth-ceiling-gut-instinct-scaling</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-growth-ceiling-gut-instinct-scaling.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/growth-trap-broken-business-model</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -404,8 +521,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bizhealth.ai/blog/growth-trap-or-growth-engine</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-growth-trap-or-growth-engine.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -414,7 +540,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/hidden-costs-manual-processes</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -423,7 +549,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/how-to-check-your-business-health</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -432,7 +558,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/how-to-prioritize-operator-survival-guide</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -441,19 +567,25 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/hr-program-asset-multiplier-small-business</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-hr-asset-multiplier.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-leadership-blind-spots.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/impact-over-information</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -462,7 +594,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/leadership-stress-success</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -471,7 +603,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/operational-resilience</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -480,7 +612,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/operations</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -489,25 +621,43 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/overcoming-bi-challenges-smb</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-overcoming-bi-challenges.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-marketing-challenges.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/r2a2-job-descriptions-role-clarity-small-business-teams</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-r2a2-job-descriptions-role-clarity.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/real-time-analytics-smb-agility</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-realtime-analytics.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/retail-remote-tools</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -516,7 +666,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/risk-management</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -525,7 +675,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/scaling-operations-without-losing-control</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -533,20 +683,35 @@
     </image:image>
   </url>
   <url>
-    <loc>https://bizhealth.ai/blog/small-business-ai-adoption</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://bizhealth.ai/blog/scheduling-crisis-operational-costs</loc>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-scheduling-crisis.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/small-business-ai-adoption</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-ai-adoption.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/small-business-blind-spots-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-business-blind-spots-2025.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/small-business-financials-know-your-numbers</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -555,7 +720,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/small-business-struggles</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -564,43 +729,61 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/small-business-survival-checklist-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-survival-checklist.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/smb-cash-flow-hacks-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-cash-flow-hacks.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/smb-scaling-paradox-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-scaling-paradox.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-workforce-gaps.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/strategic-planning-post-pandemic</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-strategic-planning.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-stress-test-pricing.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/success-begins-with-2026-strategy</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -609,13 +792,16 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/talent-wars-smb-hiring-2025</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-talent-wars.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/technology</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -624,13 +810,25 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-technology-innovation-gap.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-technology-strategic-ally-roi.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/vision-sharing-business-owner</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -639,7 +837,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/warning-signs-business</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -648,7 +846,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/blog/when-to-pivot</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -656,20 +854,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://bizhealth.ai/business-leadership-sherpas</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizhealth.ai/checkout</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://bizhealth.ai/concerns</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -678,7 +864,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/contact</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -687,13 +873,13 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/disclaimer</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/faqs</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -702,7 +888,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/for-ai-assistants</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -711,7 +897,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/glossary-of-terms</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -720,7 +906,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/how-it-works</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -728,20 +914,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bizhealth.ai/ideas</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/legal</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/login</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/logo</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -749,26 +941,17 @@
     </image:image>
   </url>
   <url>
-    <loc>https://bizhealth.ai/onboarding</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://bizhealth.ai/playbooks/landscaping</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizhealth.ai/portal</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-landscaping-playbook.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://bizhealth.ai/pricing</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -777,19 +960,19 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/privacy</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/register</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizhealth.ai/reports</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -798,7 +981,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/resources</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -806,14 +989,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://bizhealth.ai/search</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://bizhealth.ai/security</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -822,7 +999,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/sherpas</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -831,7 +1008,7 @@
   </url>
   <url>
     <loc>https://bizhealth.ai/terms</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

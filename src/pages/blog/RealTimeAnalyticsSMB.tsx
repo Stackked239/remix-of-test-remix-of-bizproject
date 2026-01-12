@@ -85,7 +85,8 @@ const RealTimeAnalyticsSMB = () => {
                 className="w-full h-[400px] object-cover"
                 loading="eager"
                 decoding="async"
-                fetchPriority="high"
+                // @ts-ignore - fetchpriority is valid but not in React types
+                fetchpriority="high"
                 width="800"
                 height="400"
               />

@@ -163,7 +163,8 @@ const SMBFinancialTrends2025 = () => {
                   alt="Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"
                   className="w-full h-auto rounded-xl shadow-elegant"
                   loading="eager"
-                  fetchPriority="high"
+                  // @ts-ignore - fetchpriority is valid but not in React types
+                  fetchpriority="high"
                   width="1200"
                   height="630"
                 />

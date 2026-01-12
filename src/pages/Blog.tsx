@@ -230,7 +230,8 @@ const Blog = () => {
           height={500}
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
           decoding="async"
         />
         

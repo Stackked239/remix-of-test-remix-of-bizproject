@@ -116,6 +116,7 @@ const EstimatingCrisisServiceBusiness = lazy(() => import("./pages/blog/Estimati
 const SchedulingCrisisOperationalCosts = lazy(() => import("./pages/blog/SchedulingCrisisOperationalCosts"));
 const GrowthCeilingGutInstinct = lazy(() => import("./pages/blog/GrowthCeilingGutInstinct"));
 const R2A2JobDescriptions = lazy(() => import("./pages/blog/R2A2JobDescriptions"));
+const CustomerAcquisitionCostGuide = lazy(() => import("./pages/blog/CustomerAcquisitionCostGuide"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -260,6 +261,7 @@ const App = () => (
               <Route path="/blog/scheduling-crisis-operational-costs" element={<SchedulingCrisisOperationalCosts />} />
               <Route path="/blog/growth-ceiling-gut-instinct-scaling" element={<GrowthCeilingGutInstinct />} />
               <Route path="/blog/r2a2-job-descriptions-role-clarity-small-business-teams" element={<R2A2JobDescriptions />} />
+              <Route path="/blog/customer-acquisition-cost-guide-smb" element={<CustomerAcquisitionCostGuide />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

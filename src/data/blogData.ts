@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Customer Acquisition Cost Guide: Calculate, Optimize, and Stop Bleeding Money on Growth",
+    excerpt: "Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio. Stop bleeding money on growth with this comprehensive guide for SMBs.",
+    author: "BizHealth.ai Research Team",
+    date: "January 12, 2026",
+    readTime: "10 min read",
+    category: "Operations, Financials, Business Intelligence",
+    slug: "/blog/customer-acquisition-cost-guide-smb",
+    imageUrl: "/assets/images/customer-acquisition-cost-guide-smb-growth.jpg",
+    altText: "Small business owner analyzing customer acquisition cost dashboard with profitability metrics and growth analytics",
+    keywords: "customer acquisition cost, CAC calculation, CAC formula, LTV to CAC ratio, customer lifetime value, CAC payback period, marketing ROI, customer acquisition strategy, SMB growth, unit economics, cost per customer, marketing efficiency, growth optimization, sustainable growth, sales and marketing costs, marketing spend, customer profitability, acquisition efficiency, growth metrics, business profitability, customer churn, retention, LTV, lifetime value, marketing channels, cost per acquisition, CPA"
+  },
+  {
     title: "R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams",
     excerpt: "Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams with better hiring, faster onboarding, and stronger retention.",
     author: "BizHealth.ai Research Team",

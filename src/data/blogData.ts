@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     category: "Business Intelligence, Operations, Technology, Business Leadership",
     slug: "/blog/leading-blind-business-intelligence-small-business",
-    imageUrl: "/assets/images/blog/leading-blind-business-intelligence.jpg",
+    imageUrl: "/og-images/og-leading-blind-business-intelligence.jpg",
     altText: "Small business owner analyzing business intelligence dashboard with charts, graphs, and profitability metrics on laptop in retail boutique office",
     keywords: "business intelligence small business, BI for SMB, data-driven decisions, business visibility, SMB analytics, business data insights, operational efficiency, profitability analysis, customer profitability, competitive advantage, BI tools, dashboard analytics, real-time business data, small business metrics, BI implementation, business health, operational blind spots, leading blind, data visibility, business decisions, BI cost, affordable BI, cloud BI tools, market share, customer retention, profitability leaks"
   },

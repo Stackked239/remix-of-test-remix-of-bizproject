@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/leading-blind-business-intelligence-small-business</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-leading-blind-business-intelligence.jpg</image:loc>
+      <image:title>Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/</loc>
     <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>

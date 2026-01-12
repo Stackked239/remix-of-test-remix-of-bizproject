@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business",
+    excerpt: "Discover why operating without BI costs you market share, customers, and profitability. Learn how affordable BI tools transform gut instinct into data-driven decisions.",
+    author: "BizHealth.ai Research Team",
+    date: "January 12, 2026",
+    readTime: "10 min read",
+    category: "Business Intelligence, Operations, Technology, Business Leadership",
+    slug: "/blog/leading-blind-business-intelligence-small-business",
+    imageUrl: "/assets/images/blog/leading-blind-business-intelligence.jpg",
+    altText: "Small business owner analyzing business intelligence dashboard with charts, graphs, and profitability metrics on laptop in retail boutique office",
+    keywords: "business intelligence small business, BI for SMB, data-driven decisions, business visibility, SMB analytics, business data insights, operational efficiency, profitability analysis, customer profitability, competitive advantage, BI tools, dashboard analytics, real-time business data, small business metrics, BI implementation, business health, operational blind spots, leading blind, data visibility, business decisions, BI cost, affordable BI, cloud BI tools, market share, customer retention, profitability leaks"
+  },
+  {
     title: "The Customer Acquisition Cost Guide: Calculate, Optimize, and Stop Bleeding Money on Growth",
     excerpt: "Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio. Stop bleeding money on growth with this comprehensive guide for SMBs.",
     author: "BizHealth.ai Research Team",

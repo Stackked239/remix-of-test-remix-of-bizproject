@@ -635,13 +635,13 @@ const CustomerAcquisitionCostGuide = () => {
               <div className="bg-primary text-white rounded-2xl p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">Ready to Understand Your True Unit Economics?</h3>
                 <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-                  Get a comprehensive business health assessment that reveals your CAC, LTV, retention patterns, and profitability drivers across every function of your business.
+                  Get a comprehensive business health assessment that evaluates your CAC, LTV, retention patterns, and profitability drivers versus your competitors and industry standards.
                 </p>
                 <Link 
                   to="/questionnaire" 
                   className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors"
                 >
-                  Start Your Free Assessment
+                  Start Your Business Assessment
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>

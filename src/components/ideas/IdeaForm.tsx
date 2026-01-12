@@ -129,7 +129,18 @@ const IdeaForm = () => {
     <section id="idea-form" className="py-20 bg-gradient-to-b from-slate-50 to-white scroll-mt-16">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Form Container */}
-        <div className="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ 
+            duration: 0.5, 
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+          }}
+          className="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden"
+        >
           {/* Step Indicator Tabs */}
           <div className="flex border-b border-slate-100">
             {steps.map((step, index) => (
@@ -220,7 +231,7 @@ const IdeaForm = () => {
               )}
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

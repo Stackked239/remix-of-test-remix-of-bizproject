@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     title: "R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams",
     excerpt: "Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams with better hiring, faster onboarding, and stronger retention.",
     author: "BizHealth.ai Research Team",
-    date: "January 12, 2026",
+    date: "January 10, 2026",
     readTime: "10 min read",
     category: "Operations, Business Leadership, Business Strategy",
     slug: "/blog/r2a2-job-descriptions-role-clarity-small-business-teams",

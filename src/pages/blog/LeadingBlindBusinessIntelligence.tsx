@@ -461,7 +461,7 @@ const LeadingBlindBusinessIntelligence = () => {
                     {/* Opportunity 3 */}
                     <div className="bg-card/80 backdrop-blur-sm border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 hover:shadow-lg hover:shadow-[hsl(var(--biz-green))]/10 transition-all hover:-translate-y-1">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-3 rounded-xl shrink-0">
+                        <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shrink-0">
                           <Users className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-lg font-bold text-foreground">Customer Value Hidden in Your Data</h3>
@@ -484,9 +484,9 @@ const LeadingBlindBusinessIntelligence = () => {
                           <span>Churn risk early warning</span>
                         </li>
                       </ul>
-                      <div className="bg-teal-500/10 rounded-lg p-3">
+                      <div className="bg-purple-500/10 rounded-lg p-3">
                         <p className="text-sm text-foreground font-medium mb-0">
-                          🎯 Focus on revenue that's <span className="text-teal-500 font-bold">actually profitable</span>
+                          🎯 Focus on revenue that's <span className="text-purple-500 font-bold">actually profitable</span>
                         </p>
                       </div>
                     </div>

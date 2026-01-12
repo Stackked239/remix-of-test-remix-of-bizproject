@@ -72,11 +72,25 @@ const IdeasHero = ({ onScrollToForm }: IdeasHeroProps) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+          className="relative"
         >
+          {/* Pulsing glow effect */}
+          <motion.div
+            className="absolute inset-0 bg-biz-green rounded-xl blur-xl opacity-40"
+            animate={{ 
+              scale: [1, 1.15, 1],
+              opacity: [0.3, 0.5, 0.3]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
           <Button
             onClick={onScrollToForm}
             size="lg"
-            className="bg-biz-green hover:bg-biz-green/90 text-white font-montserrat font-semibold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+            className="relative bg-biz-green hover:bg-biz-green/90 text-white font-montserrat font-semibold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
           >
             Submit Your Idea
             <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-0.5 transition-transform" />

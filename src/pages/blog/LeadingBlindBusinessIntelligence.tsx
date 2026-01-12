@@ -185,37 +185,37 @@ const LeadingBlindBusinessIntelligence = () => {
                   </p>
                   
                   {/* Reason 1 */}
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6 hover:bg-white/10 transition-colors">
+                  <div className="bg-white backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl p-6 mb-6 hover:shadow-lg transition-all shadow-md">
                     <div className="flex items-start gap-4">
-                      <div className="bg-amber-500/20 text-amber-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                      <div className="bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                         1
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-4 text-white">They Think It's Too Expensive or Complicated</h3>
-                        <p className="text-slate-300 mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-slate-900">They Think It's Too Expensive or Complicated</h3>
+                        <p className="text-slate-600 mb-4">
                           Ten years ago, they were right. Implementing business intelligence required:
                         </p>
-                        <ul className="space-y-2 text-slate-400 mb-4">
+                        <ul className="space-y-2 text-slate-500 mb-4">
                           <li className="flex items-start gap-2">
-                            <span className="text-slate-500">•</span>
+                            <span className="text-slate-400">•</span>
                             <span>Hiring dedicated data people</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-slate-500">•</span>
+                            <span className="text-slate-400">•</span>
                             <span>Investing in expensive enterprise software</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-slate-500">•</span>
+                            <span className="text-slate-400">•</span>
                             <span>Months of customization and training</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-slate-500">•</span>
+                            <span className="text-slate-400">•</span>
                             <span>A significant financial commitment that didn't make sense for a $2M business</span>
                           </li>
                         </ul>
-                        <div className="bg-[hsl(var(--biz-green))]/20 border border-[hsl(var(--biz-green))]/40 rounded-lg p-4">
-                          <p className="text-white font-semibold mb-0">
-                            Today, cloud-based BI tools cost <span className="text-[hsl(var(--biz-green))]">$50-500/month</span> and require no technical expertise. The barrier to entry has dropped dramatically.
+                        <div className="bg-[hsl(var(--biz-green))]/15 border border-[hsl(var(--biz-green))]/40 rounded-lg p-4">
+                          <p className="text-slate-800 font-semibold mb-0">
+                            Today, cloud-based BI tools cost <span className="text-[hsl(var(--biz-green))] font-bold">$50-500/month</span> and require no technical expertise. The barrier to entry has dropped dramatically.
                           </p>
                         </div>
                       </div>
@@ -223,17 +223,17 @@ const LeadingBlindBusinessIntelligence = () => {
                   </div>
                   
                   {/* Reason 2 */}
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-6 hover:bg-white/10 transition-colors">
+                  <div className="bg-white backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl p-6 mb-6 hover:shadow-lg transition-all shadow-md">
                     <div className="flex items-start gap-4">
-                      <div className="bg-blue-500/20 text-blue-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                      <div className="bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                         2
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-4 text-white">They Don't Know What They're Missing</h3>
-                        <p className="text-slate-300 mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-slate-900">They Don't Know What They're Missing</h3>
+                        <p className="text-slate-600 mb-4">
                           You can't miss what you don't know exists. If you've never seen a real-time dashboard showing your business's health—cash flow, profitability by customer, operational efficiency metrics—you don't know what's possible.
                         </p>
-                        <p className="text-slate-300 mb-0 italic border-l-4 border-blue-500/50 pl-4">
+                        <p className="text-slate-600 mb-0 italic border-l-4 border-blue-500/50 pl-4">
                           "You're like someone who's never seen in color complaining that black and white is fine. It <em>is</em> fine... until you see color. Then going back to black and white feels blind."
                         </p>
                       </div>
@@ -241,17 +241,17 @@ const LeadingBlindBusinessIntelligence = () => {
                   </div>
                   
                   {/* Reason 3 */}
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                  <div className="bg-white backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl p-6 hover:shadow-lg transition-all shadow-md">
                     <div className="flex items-start gap-4">
-                      <div className="bg-purple-500/20 text-purple-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                      <div className="bg-purple-500/20 text-purple-600 dark:text-purple-400 font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                         3
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-4 text-white">Their Data Is a Mess</h3>
-                        <p className="text-slate-300 mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-slate-900">Their Data Is a Mess</h3>
+                        <p className="text-slate-600 mb-4">
                           Many small businesses have data scattered across multiple systems: accounting software, CRM, spreadsheets, email. To pull meaningful reports, you'd have to manually consolidate data from all these sources—a process that takes hours and is error-prone.
                         </p>
-                        <p className="text-white font-semibold mb-0">
+                        <p className="text-slate-800 font-semibold mb-0">
                           This is true. But it's also solvable. Modern BI tools can connect to multiple data sources and consolidate them automatically.
                         </p>
                       </div>
@@ -633,16 +633,19 @@ const LeadingBlindBusinessIntelligence = () => {
                 That clarity is worth far more than the minimal investment required to get it.
               </p>
               
-              <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-lg p-8 text-center">
-                <p className="text-2xl font-bold text-foreground mb-4">
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-green))]/15 via-[hsl(var(--biz-green))]/10 to-primary/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-8 text-center">
+                <p className="text-2xl font-bold text-foreground mb-3">
                   Stop leading blind. Start seeing.
                 </p>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Ready to get full visibility into your business health? The <strong className="text-foreground">BizHealth.ai Business Health Assessment</strong> analyzes over 200 indicators across operations, financials, sales, HR, and technology—giving you a complete picture of where your business stands and exactly where to focus.
+                </p>
                 <Link 
-                  to="/biztools" 
-                  className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[hsl(var(--biz-green))]/90 transition-colors"
+                  to="/how-it-works" 
+                  className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[hsl(var(--biz-green))]/90 transition-colors shadow-lg hover:shadow-xl"
                 >
-                  Explore BizHealth.ai Tools
-                  <ArrowRight className="w-4 h-4" />
+                  Learn More About A Business Health Assessment
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </section>

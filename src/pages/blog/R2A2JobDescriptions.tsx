@@ -3,11 +3,10 @@ import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import BlogHeroSection from "@/components/BlogHeroSection";
-import SocialShareButtons from "@/components/SocialShareButtons";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Users, Target, Shield, Key } from "lucide-react";
+import { ArrowRight, CheckCircle2, Users, Target, Shield, Key, AlertTriangle, Lightbulb, TrendingUp, Zap } from "lucide-react";
 import heroImage from "@/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg";
-
 const R2A2JobDescriptions = () => {
   const articleSchema = {
     "@context": "https://schema.org",
@@ -69,14 +68,17 @@ const R2A2JobDescriptions = () => {
         />
 
         {/* Article Content */}
-        <article className="py-16 bg-background">
+        <article className="py-16 bg-gradient-to-b from-background via-muted/20 to-background">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto prose prose-lg">
               
               {/* The Problem Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">The Problem with Traditional Job Descriptions (and Why Your Team Feels Stuck)</h2>
+              <div className="relative">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-destructive via-destructive/50 to-transparent rounded-full hidden lg:block" />
+                <h2 className="text-3xl font-bold text-foreground mb-6">The Problem with Traditional Job Descriptions (and Why Your Team Feels Stuck)</h2>
+              </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                 Most small and mid-sized businesses are running on job descriptions that look and feel like they were cloned from a generic HR template.
               </p>
               
@@ -88,72 +90,90 @@ const R2A2JobDescriptions = () => {
                 And then, a few weeks after hiring, the same pattern shows up:
               </p>
               
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">A new hire keeps asking, "Is this mine or someone else's?"</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Decisions stall because no one is sure who has the final say.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">People are "responsible" for outcomes but don't have the authority to make changes.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">You still get pulled into decisions you thought you'd delegated.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Frustration grows on both sides—yours and theirs.</span>
-                </li>
-              </ul>
+              <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 mb-8">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-foreground">A new hire keeps asking, <em>"Is this mine or someone else's?"</em></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-foreground">Decisions stall because no one is sure who has the final say.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-foreground">People are "responsible" for outcomes but don't have the authority to make changes.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-foreground">You still get pulled into decisions you thought you'd delegated.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-foreground">Frustration grows on both sides—yours and theirs.</span>
+                  </li>
+                </ul>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Nothing is explicitly broken, but nothing is truly working either.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                This is where <strong className="text-foreground">R2A2 job descriptions</strong> come in. Instead of job descriptions that only describe tasks, R2A2 designs roles around <strong className="text-foreground">Roles, Responsibilities, Accountability, and Authority</strong>—the four elements that actually drive performance, ownership, and retention in a growing business.
-              </p>
+              <div className="bg-gradient-to-r from-biz-green/10 via-primary/10 to-biz-green/10 border border-biz-green/30 rounded-xl p-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <Lightbulb className="w-6 h-6 text-biz-green flex-shrink-0 mt-1" />
+                  <p className="text-foreground leading-relaxed">
+                    This is where <strong className="text-biz-green">R2A2 job descriptions</strong> come in. Instead of job descriptions that only describe tasks, R2A2 designs roles around <strong>Roles, Responsibilities, Accountability, and Authority</strong>—the four elements that actually drive performance, ownership, and retention in a growing business.
+                  </p>
+                </div>
+              </div>
 
               {/* What Is R2A2 Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">What Is R2A2? The Four Pieces Traditional JDs Ignore</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-biz-green via-biz-green/50 to-transparent rounded-full hidden lg:block" />
+                <h2 className="text-3xl font-bold text-foreground mb-6">What Is R2A2? The Four Pieces Traditional JDs Ignore</h2>
+              </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
                 R2A2 stands for:
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-muted rounded-lg p-6 border border-border">
+                <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-xl p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <Users className="w-6 h-6 text-primary" />
-                    <h3 className="font-bold text-foreground">Role</h3>
+                    <div className="p-2 bg-blue-500/20 rounded-lg">
+                      <Users className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <h3 className="font-bold text-foreground text-lg">Role</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">Where this seat fits in the bigger picture</p>
+                  <p className="text-muted-foreground">Where this seat fits in the bigger picture</p>
                 </div>
-                <div className="bg-muted rounded-lg p-6 border border-border">
+                <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/5 rounded-xl p-6 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <Target className="w-6 h-6 text-primary" />
-                    <h3 className="font-bold text-foreground">Responsibilities</h3>
+                    <div className="p-2 bg-amber-500/20 rounded-lg">
+                      <Target className="w-6 h-6 text-amber-500" />
+                    </div>
+                    <h3 className="font-bold text-foreground text-lg">Responsibilities</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">What this role actually does</p>
+                  <p className="text-muted-foreground">What this role actually does</p>
                 </div>
-                <div className="bg-muted rounded-lg p-6 border border-border">
+                <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <Shield className="w-6 h-6 text-primary" />
-                    <h3 className="font-bold text-foreground">Accountability</h3>
+                    <div className="p-2 bg-emerald-500/20 rounded-lg">
+                      <Shield className="w-6 h-6 text-emerald-500" />
+                    </div>
+                    <h3 className="font-bold text-foreground text-lg">Accountability</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">What this role ultimately owns</p>
+                  <p className="text-muted-foreground">What this role ultimately owns</p>
                 </div>
-                <div className="bg-muted rounded-lg p-6 border border-border">
+                <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <Key className="w-6 h-6 text-primary" />
-                    <h3 className="font-bold text-foreground">Authority</h3>
+                    <div className="p-2 bg-purple-500/20 rounded-lg">
+                      <Key className="w-6 h-6 text-purple-500" />
+                    </div>
+                    <h3 className="font-bold text-foreground text-lg">Authority</h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">What this role is empowered to decide</p>
+                  <p className="text-muted-foreground">What this role is empowered to decide</p>
                 </div>
               </div>
               
@@ -161,175 +181,262 @@ const R2A2JobDescriptions = () => {
                 Most traditional job descriptions cover only pieces of the first two, and then vaguely imply the rest. R2A2 makes each element explicit, so both the business and the employee know where this role fits, what this role does, what this role owns, and what this role is empowered to decide.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8 font-medium text-foreground">
                 Think of it as moving from a task list to a clarity framework.
               </p>
 
               {/* 1. Role Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">1. Role: Where This Seat Fits in the Bigger Picture</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-blue-500/50 to-transparent rounded-full hidden lg:block" />
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-500/20 text-blue-500 font-bold text-lg">1</span>
+                  <h2 className="text-3xl font-bold text-foreground">Role: Where This Seat Fits in the Bigger Picture</h2>
+                </div>
+              </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">Question this quadrant answers:</strong> "Why does this job exist and how does it contribute to the business?"
-              </p>
+              <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-4 mb-6">
+                <p className="text-foreground">
+                  <strong className="text-blue-500">Question this quadrant answers:</strong> "Why does this job exist and how does it contribute to the business?"
+                </p>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 This goes beyond the title. It explains how the role connects to strategy, customers, and the rest of the team.
               </p>
               
-              <div className="bg-muted/50 border-l-4 border-destructive p-6 mb-6">
-                <p className="text-muted-foreground mb-2"><strong className="text-foreground">Instead of just:</strong></p>
-                <p className="text-muted-foreground italic">"Title: Operations Coordinator"</p>
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6">
+                  <p className="text-destructive font-semibold mb-2 flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4" />
+                    Instead of just:
+                  </p>
+                  <p className="text-muted-foreground italic">"Title: Operations Coordinator"</p>
+                </div>
+                
+                <div className="bg-biz-green/10 border border-biz-green/30 rounded-xl p-6">
+                  <p className="text-biz-green font-semibold mb-2 flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4" />
+                    R2A2 defines:
+                  </p>
+                  <p className="text-muted-foreground italic text-sm">"As our Operations Coordinator, you are the link between sales, scheduling, and delivery. Your role is to keep work moving smoothly..."</p>
+                </div>
               </div>
               
-              <div className="bg-muted/50 border-l-4 border-primary p-6 mb-8">
-                <p className="text-muted-foreground mb-2"><strong className="text-foreground">R2A2 defines:</strong></p>
-                <p className="text-muted-foreground italic">"As our Operations Coordinator, you are the link between sales, scheduling, and delivery. Your role is to keep work moving smoothly from customer commitment through completion so clients experience reliable, on-time service—and our team can plan their week without chaos."</p>
-              </div>
-              
-              <h3 className="text-xl font-bold text-foreground mb-4">Why this matters:</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                <Lightbulb className="w-5 h-5 text-amber-500" />
+                Why this matters:
+              </h3>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">New hires immediately understand why the job matters, not just what to do.</span>
+                  <CheckCircle2 className="w-5 h-5 text-biz-green flex-shrink-0 mt-1" />
+                  <span className="text-foreground">New hires immediately understand <strong>why</strong> the job matters, not just what to do.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Existing employees see how their work connects to results, not just tasks.</span>
+                  <CheckCircle2 className="w-5 h-5 text-biz-green flex-shrink-0 mt-1" />
+                  <span className="text-foreground">Existing employees see how their work connects to results, not just tasks.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">Leaders have a clear answer when someone asks, "Do we really need this role?"</span>
+                  <CheckCircle2 className="w-5 h-5 text-biz-green flex-shrink-0 mt-1" />
+                  <span className="text-foreground">Leaders have a clear answer when someone asks, "Do we really need this role?"</span>
                 </li>
               </ul>
 
               {/* 2. Responsibilities Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">2. Responsibilities: What This Role Actually Does</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 via-amber-500/50 to-transparent rounded-full hidden lg:block" />
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold text-lg">2</span>
+                  <h2 className="text-3xl font-bold text-foreground">Responsibilities: What This Role Actually Does</h2>
+                </div>
+              </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">Question this quadrant answers:</strong> "What are the core activities and outputs of this job?"
-              </p>
+              <div className="bg-amber-500/5 border border-amber-500/20 rounded-lg p-4 mb-6">
+                <p className="text-foreground">
+                  <strong className="text-amber-500">Question this quadrant answers:</strong> "What are the core activities and outputs of this job?"
+                </p>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Traditional job descriptions often stop here, and even here they go wrong in two ways: either they're so high-level they're useless, or they're so detailed they become unmanageable and outdated in three months.
               </p>
               
               <h3 className="text-xl font-bold text-foreground mb-4">R2A2 responsibilities are:</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground"><strong className="text-foreground">Action-oriented</strong> (verbs like coordinate, analyze, prepare, follow up).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground"><strong className="text-foreground">Outcome-linked</strong> (not just "send reports," but "send weekly service reports so leadership can spot trends and schedule capacity").</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground"><strong className="text-foreground">Prioritized</strong> (5–10 core responsibilities, not 40 scattered tasks).</span>
-                </li>
-              </ul>
+              <div className="grid gap-4 mb-8">
+                <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4 border border-border">
+                  <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground"><strong className="text-amber-500">Action-oriented</strong> — verbs like coordinate, analyze, prepare, follow up.</span>
+                </div>
+                <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4 border border-border">
+                  <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground"><strong className="text-amber-500">Outcome-linked</strong> — not just "send reports," but "send weekly service reports so leadership can spot trends."</span>
+                </div>
+                <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4 border border-border">
+                  <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground"><strong className="text-amber-500">Prioritized</strong> — 5–10 core responsibilities, not 40 scattered tasks.</span>
+                </div>
+              </div>
               
-              <div className="bg-muted/50 border-l-4 border-primary p-6 mb-8">
-                <p className="text-muted-foreground mb-2"><strong className="text-foreground">Example:</strong></p>
-                <p className="text-muted-foreground">Instead of "Responsible for customer scheduling and communication," R2A2 frames it as: <em>"Owns the weekly customer schedule: confirms service appointments, adjusts routes based on capacity, and communicates changes to customers within 24 hours."</em></p>
+              <div className="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-500/30 rounded-xl p-6 mb-8">
+                <p className="text-foreground mb-2"><strong className="text-amber-500">Example:</strong></p>
+                <p className="text-muted-foreground">Instead of "Responsible for customer scheduling and communication," R2A2 frames it as: <em className="text-foreground">"Owns the weekly customer schedule: confirms service appointments, adjusts routes based on capacity, and communicates changes to customers within 24 hours."</em></p>
               </div>
 
               {/* 3. Accountability Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">3. Accountability: What This Role Ultimately Owns</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-emerald-500/50 to-transparent rounded-full hidden lg:block" />
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-500 font-bold text-lg">3</span>
+                  <h2 className="text-3xl font-bold text-foreground">Accountability: What This Role Ultimately Owns</h2>
+                </div>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 This is where most businesses quietly break their own culture. People are "responsible" for tasks, but no one is clearly accountable for outcomes.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">Question this quadrant answers:</strong> "If this goes well or badly, whose name is on it?"
-              </p>
+              <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-lg p-4 mb-6">
+                <p className="text-foreground">
+                  <strong className="text-emerald-500">Question this quadrant answers:</strong> "If this goes well or badly, whose name is on it?"
+                </p>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 <strong className="text-foreground">Accountability is not about blame.</strong> It's about clarity: what success looks like for this role, which metrics or outcomes are theirs to own, and what they're expected to drive, not just support.
               </p>
               
-              <div className="bg-muted rounded-lg p-6 mb-8 border border-border">
-                <h4 className="font-bold text-foreground mb-4">Example: Service Manager Accountability</h4>
-                <ul className="space-y-2">
-                  <li className="text-muted-foreground">• "Owns on-time completion of scheduled jobs."</li>
-                  <li className="text-muted-foreground">• "Owns customer satisfaction scores for service calls."</li>
-                  <li className="text-muted-foreground">• "Owns first-visit fix rate."</li>
+              <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 mb-8 border border-emerald-500/30">
+                <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-emerald-500" />
+                  Example: Service Manager Accountability
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-1" />
+                    "Owns on-time completion of scheduled jobs."
+                  </li>
+                  <li className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-1" />
+                    "Owns customer satisfaction scores for service calls."
+                  </li>
+                  <li className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-1" />
+                    "Owns first-visit fix rate."
+                  </li>
                 </ul>
-                <p className="text-muted-foreground text-sm mt-4 italic">This doesn't mean they personally do all the work. It means they are the one who makes sure the outcomes happen.</p>
+                <p className="text-muted-foreground text-sm mt-4 italic border-t border-emerald-500/20 pt-4">This doesn't mean they personally do all the work. It means they are the one who makes sure the outcomes happen.</p>
               </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-8 font-semibold">
-                When everyone is "kind of accountable," no one is.
-              </p>
+              <div className="bg-biz-navy/80 text-white rounded-xl p-6 mb-8 text-center">
+                <p className="text-lg font-semibold">
+                  "When everyone is 'kind of accountable,' <span className="text-biz-green">no one is.</span>"
+                </p>
+              </div>
 
               {/* 4. Authority Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">4. Authority: What This Role Can Decide Without Asking Permission</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-purple-500/50 to-transparent rounded-full hidden lg:block" />
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 text-purple-500 font-bold text-lg">4</span>
+                  <h2 className="text-3xl font-bold text-foreground">Authority: What This Role Can Decide Without Asking Permission</h2>
+                </div>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 This is the most neglected part of most roles—and where burnout and bottlenecks are created.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">Question this quadrant answers:</strong> "What decisions can this person make on their own, and where do they need to check in?"
-              </p>
+              <div className="bg-purple-500/5 border border-purple-500/20 rounded-lg p-4 mb-6">
+                <p className="text-foreground">
+                  <strong className="text-purple-500">Question this quadrant answers:</strong> "What decisions can this person make on their own, and where do they need to check in?"
+                </p>
+              </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Without clarity on authority, you get people who are accountable for outcomes but must ask permission for every decision, owners and managers pulled into endless tactical choices, and teams afraid to act because they don't know if they're "allowed."
               </p>
               
               <h3 className="text-xl font-bold text-foreground mb-4">R2A2 makes authority explicit:</h3>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">"Can approve customer credits up to $200 without manager sign-off."</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">"Can adjust daily schedule to address urgent customer issues, as long as changes are logged and customers are informed."</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-muted-foreground">"Can select and onboard vendors within the approved list; new vendor additions require leadership approval."</span>
-                </li>
-              </ul>
+              <div className="grid gap-4 mb-8">
+                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
+                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground">"Can approve customer credits up to $200 without manager sign-off."</span>
+                </div>
+                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
+                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground">"Can adjust daily schedule to address urgent customer issues, as long as changes are logged."</span>
+                </div>
+                <div className="flex items-start gap-3 bg-purple-500/5 rounded-lg p-4 border border-purple-500/20">
+                  <Key className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                  <span className="text-foreground">"Can select vendors within the approved list; new vendors require leadership approval."</span>
+                </div>
+              </div>
               
-              <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-6 mb-8">
-                <p className="text-foreground font-semibold mb-2">When accountability and authority are misaligned:</p>
-                <p className="text-muted-foreground italic">"I'm responsible if it fails, but I'm not allowed to fix it."</p>
+              <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0" />
+                  <div>
+                    <p className="text-foreground font-semibold mb-2">When accountability and authority are misaligned:</p>
+                    <p className="text-foreground italic">"I'm responsible if it fails, but I'm not allowed to fix it."</p>
+                  </div>
+                </div>
               </div>
 
               {/* Why R2A2 Outperforms Section */}
-              <h2 className="text-3xl font-bold text-foreground mb-6">Why R2A2 Outperforms Traditional Job Descriptions</h2>
+              <div className="relative mt-16">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-biz-green via-biz-green/50 to-transparent rounded-full hidden lg:block" />
+                <h2 className="text-3xl font-bold text-foreground mb-6">Why R2A2 Outperforms Traditional Job Descriptions</h2>
+              </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Switching from traditional JDs to R2A2 isn't just an HR formatting tweak. It changes outcomes in five important ways:
+              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
+                Switching from traditional JDs to R2A2 isn't just an HR formatting tweak. It changes outcomes in <strong className="text-biz-green">five important ways:</strong>
               </p>
               
-              <h3 className="text-xl font-bold text-foreground mb-4">1. Better Hiring Decisions</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Candidates no longer see a vague "laundry list of tasks." They see how the role fits in the business, what they'll be expected to own, and what level of decision-making they'll have. That clarity attracts candidates who want ownership, filters out candidates who want direction but not accountability, and reduces "surprise" mismatches once they start.
-              </p>
-              
-              <h3 className="text-xl font-bold text-foreground mb-4">2. Faster Onboarding and Ramp-Up</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                New hires don't spend the first 60–90 days asking "Is this my decision or yours?" or "Who owns this outcome?" Instead, they have a clear map of their work, known metrics or outcomes they're accountable for, and clear boundaries for decision-making. Managers spend less time clarifying and more time coaching.
-              </p>
-              
-              <h3 className="text-xl font-bold text-foreground mb-4">3. Stronger Retention and Engagement</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                People rarely leave jobs just because of pay. They leave because of role confusion, constant second-guessing, and feeling powerless to fix what they're blamed for. R2A2 gives employees a defined lane, the keys to that lane, and a visible connection between their work and business success.
-              </p>
-              
-              <h3 className="text-xl font-bold text-foreground mb-4">4. Less Bottlenecking Around the Owner</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                For many small businesses, the owner is the bottleneck—every decision flows through them. R2A2 lets you push decisions downward without losing control, because you're clear about what decisions are safe to delegate, people know when to escalate and when not to, and you're no longer the default decision-maker for everything.
-              </p>
-              
-              <h3 className="text-xl font-bold text-foreground mb-4">5. More Effective Performance Management</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Vague expectations make performance conversations emotional and subjective. R2A2 reframes performance reviews around questions like: "Are the outcomes you're accountable for being met?" "Are you using the authority you've been given effectively?" Now feedback is anchored in clarity, not opinion.
-              </p>
+              <div className="space-y-6 mb-8">
+                <div className="bg-gradient-to-r from-biz-green/10 to-transparent border-l-4 border-biz-green rounded-r-lg p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                    <span className="text-biz-green">1.</span> Better Hiring Decisions
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Candidates see how the role fits in the business, what they'll own, and what level of decision-making they'll have. That clarity attracts candidates who want ownership and reduces "surprise" mismatches.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-blue-500/10 to-transparent border-l-4 border-blue-500 rounded-r-lg p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                    <span className="text-blue-500">2.</span> Faster Onboarding and Ramp-Up
+                  </h3>
+                  <p className="text-muted-foreground">
+                    New hires don't spend 60–90 days asking "Is this my decision or yours?" They have a clear map, known metrics, and clear boundaries. Managers spend less time clarifying and more time coaching.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-amber-500/10 to-transparent border-l-4 border-amber-500 rounded-r-lg p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                    <span className="text-amber-500">3.</span> Stronger Retention and Engagement
+                  </h3>
+                  <p className="text-muted-foreground">
+                    People rarely leave just because of pay. They leave due to role confusion and feeling powerless. R2A2 gives employees a defined lane, the keys to that lane, and a visible connection to success.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-emerald-500/10 to-transparent border-l-4 border-emerald-500 rounded-r-lg p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                    <span className="text-emerald-500">4.</span> Less Bottlenecking Around the Owner
+                  </h3>
+                  <p className="text-muted-foreground">
+                    R2A2 lets you push decisions downward without losing control because you're clear about what's safe to delegate and people know when to escalate.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-purple-500/10 to-transparent border-l-4 border-purple-500 rounded-r-lg p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                    <span className="text-purple-500">5.</span> More Effective Performance Management
+                  </h3>
+                  <p className="text-muted-foreground">
+                    R2A2 reframes performance reviews around: "Are the outcomes you're accountable for being met?" and "Are you using your authority effectively?" Feedback is anchored in clarity, not opinion.
+                  </p>
+                </div>
+              </div>
 
               {/* Implementation Steps */}
               <h2 className="text-3xl font-bold text-foreground mb-6">How to Implement R2A2 in Your Business (Step-by-Step)</h2>
@@ -410,37 +517,56 @@ const R2A2JobDescriptions = () => {
                 The result is not just better job descriptions. It's better hires, stronger retention, faster decisions, less owner bottlenecking, and teams that own outcomes instead of waiting for instructions.
               </p>
               
-              <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 mb-8">
-                <p className="text-foreground font-semibold">
-                  For a growing business, that clarity is not a nice-to-have. It's the difference between scaling with intention and getting stuck in permanent firefighting mode.
-                </p>
+              <div className="bg-gradient-to-r from-biz-green/20 via-primary/15 to-biz-green/20 border border-biz-green/40 rounded-xl p-8 mb-8">
+                <div className="flex items-start gap-4">
+                  <TrendingUp className="w-8 h-8 text-biz-green flex-shrink-0" />
+                  <p className="text-foreground font-semibold text-lg">
+                    For a growing business, that clarity is not a nice-to-have. It's the difference between scaling with intention and getting stuck in permanent firefighting mode.
+                  </p>
+                </div>
               </div>
 
               {/* CTA */}
-              <div className="bg-muted rounded-xl p-8 text-center border border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Build Role Clarity Across Your Organization?</h3>
-                <p className="text-muted-foreground mb-6">Discover where role confusion, accountability gaps, and authority bottlenecks are holding your business back.</p>
+              <div className="bg-gradient-to-br from-biz-navy via-biz-navy/95 to-biz-navy rounded-2xl p-8 text-center border border-biz-green/30 shadow-xl">
+                <Zap className="w-10 h-10 text-biz-green mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Build Role Clarity Across Your Organization?</h3>
+                <p className="text-gray-300 mb-6">Discover where role confusion, accountability gaps, and authority bottlenecks are holding your business back.</p>
                 <Link 
                   to="/how-it-works" 
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center gap-2 bg-biz-green text-biz-navy px-8 py-4 rounded-lg font-bold hover:bg-biz-green/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-biz-green/30"
                 >
                   Take the Business Health Assessment
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
-              </div>
-
-              {/* Social Share */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Share this article</h4>
-                <SocialShareButtons 
-                  title="R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams"
-                  description="Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams."
-                />
               </div>
               
             </div>
           </div>
         </article>
+
+        {/* Related Articles */}
+        <RelatedArticles 
+          articles={[
+            {
+              title: "HR Program as Asset & Multiplier to Your Small Business",
+              slug: "hr-program-asset-multiplier-small-business",
+              category: "Operations",
+              excerpt: "Discover why an HR program is not a cost but an asset and multiplier. Learn the 9 components of effective SMB HR."
+            },
+            {
+              title: "Employee Retention, Culture, and Day-to-Day Leadership",
+              slug: "employee-retention-company-culture-leadership",
+              category: "Leadership",
+              excerpt: "Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture."
+            },
+            {
+              title: "Chaos to Clarity: Building an Operating Rhythm for Scaling Teams",
+              slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
+              category: "Operations",
+              excerpt: "Transform reactive management into proactive leadership with a structured operating rhythm for your growing team."
+            }
+          ]}
+        />
       </main>
 
       <GlobalFooter />

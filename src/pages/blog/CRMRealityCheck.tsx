@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, XCircle, AlertTriangle, Target, Users, DollarSign, TrendingUp, Settings } from "lucide-react";
 import heroImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
@@ -545,7 +546,7 @@ const CRMRealityCheck = () => {
               <div className="relative z-10">
                 <h3 className="text-3xl font-bold mb-4 text-[#242553]">Ready to Assess Your Business Before CRM?</h3>
                 <p className="text-white/90 mb-8 max-w-xl mx-auto text-lg">
-                  Identify your real operational bottlenecks before investing in technology. Get a comprehensive business health assessment—it's free and takes just 10 minutes.
+                  Identify your real operational bottlenecks before investing in technology. Get a comprehensive business health assessment—it takes less than 45 minutes.
                 </p>
                 
                 <Link
@@ -560,6 +561,27 @@ const CRMRealityCheck = () => {
           </div>
         </div>
       </article>
+
+      <RelatedArticles articles={[
+        {
+          title: "Technology as a Strategic Ally: Understanding Real ROI",
+          slug: "technology-strategic-ally-roi",
+          category: "Technology",
+          excerpt: "Learn how to measure technology investments beyond features and calculate true business impact."
+        },
+        {
+          title: "The Growth Ceiling: Why Gut Instinct Won't Scale Your Business",
+          slug: "growth-ceiling-gut-instinct",
+          category: "Strategy",
+          excerpt: "Discover why data-driven decisions become essential as your business grows beyond founder intuition."
+        },
+        {
+          title: "Warning Signs Your Business Needs Immediate Attention",
+          slug: "warning-signs-business",
+          category: "Risk Management",
+          excerpt: "Identify critical warning signs before they become major problems for your business."
+        }
+      ]} />
       
       <GlobalFooter />
     </div>

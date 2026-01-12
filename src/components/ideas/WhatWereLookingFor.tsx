@@ -62,10 +62,21 @@ const WhatWereLookingFor = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * (index + 1) }}
-              className="bg-white border border-slate-100 rounded-2xl p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              whileHover={{ 
+                y: -8, 
+                scale: 1.02,
+                boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.15)"
+              }}
+              className="bg-white border border-slate-100 rounded-2xl p-8 cursor-pointer"
             >
               {/* Icon */}
-              <div className="text-5xl mb-4">{category.icon}</div>
+              <motion.div 
+                className="text-5xl mb-4"
+                whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
+                transition={{ duration: 0.3 }}
+              >
+                {category.icon}
+              </motion.div>
               
               {/* Title & Hub */}
               <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-1">

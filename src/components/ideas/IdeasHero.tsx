@@ -9,7 +9,7 @@ interface IdeasHeroProps {
 const IdeasHero = ({ onScrollToForm }: IdeasHeroProps) => {
   return (
     <section 
-      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-16"
+      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-8"
       style={{
         background: "linear-gradient(135deg, #242553 0%, #1a1b3d 50%, #242553 100%)"
       }}

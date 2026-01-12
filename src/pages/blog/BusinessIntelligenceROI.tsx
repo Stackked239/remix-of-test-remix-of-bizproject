@@ -89,7 +89,7 @@ const BusinessIntelligenceROI = () => {
       </section>
 
       {/* Article Content */}
-      <section className="py-16">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">

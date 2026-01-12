@@ -68,7 +68,7 @@ const R2A2JobDescriptions = () => {
         />
 
         {/* Article Content */}
-        <article className="py-16 bg-gradient-to-b from-background via-muted/20 to-background">
+        <article className="pt-16 pb-8 bg-gradient-to-b from-background via-muted/20 to-background">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto prose prose-lg">
               

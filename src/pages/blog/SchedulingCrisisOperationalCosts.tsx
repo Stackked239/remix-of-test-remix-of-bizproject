@@ -51,7 +51,7 @@ const SchedulingCrisisOperationalCosts = () => {
         />
 
         {/* Article Content */}
-        <article className="py-16">
+        <article className="pt-16 pb-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               

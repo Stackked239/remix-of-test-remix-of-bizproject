@@ -17,7 +17,16 @@ const Ideas = () => {
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (formRef.current) {
+      const navbarHeight = 120; // Account for navbar + banner
+      const elementPosition = formRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
   };
 
   return (

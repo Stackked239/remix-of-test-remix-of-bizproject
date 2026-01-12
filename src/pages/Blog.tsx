@@ -66,9 +66,11 @@ import growthTrapOrGrowthEngineImage from "@/assets/images/growth-trap-or-growth
 import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
 import schedulingCrisisImage from "@/assets/images/scheduling-crisis-operational-costs-smb.jpg";
 import growthCeilingGutInstinctImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
+import r2a2JobDescriptionsImage from "@/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/r2a2-job-descriptions-role-clarity-small-business-teams": r2a2JobDescriptionsImage,
   "/blog/growth-ceiling-gut-instinct-scaling": growthCeilingGutInstinctImage,
   "/blog/scheduling-crisis-operational-costs": schedulingCrisisImage,
   "/blog/estimating-crisis-service-business-profitability": estimatingCrisisImage,

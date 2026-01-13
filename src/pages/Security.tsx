@@ -10,6 +10,7 @@ import CalloutBox from '@/components/security/CalloutBox';
 import VendorCards from '@/components/security/VendorCards';
 import SecurityChecklist from '@/components/security/SecurityChecklist';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 
 const Security = () => {
   return (
@@ -628,6 +629,7 @@ const Security = () => {
         </section>
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

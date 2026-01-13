@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -508,6 +509,7 @@ const Terms = () => {
           </Button>
         )}
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

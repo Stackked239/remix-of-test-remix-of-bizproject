@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -546,6 +547,7 @@ const Search = () => {
         </div>
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

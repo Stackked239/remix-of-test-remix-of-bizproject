@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -518,6 +519,7 @@ const PrivacyPolicy = () => {
           </div>
         </main>
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
 
         {/* Floating Back to Top Button */}

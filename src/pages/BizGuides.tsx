@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Compass, Users, TrendingUp, Shield, CheckCircle, BookOpen } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
@@ -234,6 +235,7 @@ const BizGuides = () => {
         </div>
       </section>
 
+      <GradientDivider variant="teal-navy" />
       <GlobalFooter />
       <EmailCapturePopup hubColor="biz-guides" />
     </div>

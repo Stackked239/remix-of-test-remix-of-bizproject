@@ -23,6 +23,7 @@ import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import StoryBrandHeader from '@/components/StoryBrandHeader';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { glossaryTerms, categories, categoryColors, GlossaryTerm } from '@/data/glossaryData';
 import {
@@ -431,6 +432,7 @@ const GlossaryOfTerms = () => {
           </button>
         )}
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

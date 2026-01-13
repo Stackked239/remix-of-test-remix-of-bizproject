@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import PromotionalBanner from '@/components/PromotionalBanner';
 
@@ -448,6 +449,7 @@ const VisionPlaybook = () => {
 
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

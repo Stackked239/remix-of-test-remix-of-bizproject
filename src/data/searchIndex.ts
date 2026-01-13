@@ -179,6 +179,14 @@ export const searchablePages: SearchableItem[] = [
     icon: Target
   },
   {
+    type: "Playbook",
+    title: "Business Intelligence Builder - Free BI Playbook for SMBs",
+    excerpt: "Build a practical business intelligence system from scratch. Free 5-step playbook to transform scattered data into actionable insights with KPIs, dashboards, and data-driven decision making.",
+    url: "/bizgrowth/growth/business-intelligence-builder",
+    keywords: "business intelligence, BI, BI builder, biztool, data analytics, KPIs, dashboards, metrics, reporting, data-driven decisions, business analytics, performance tracking, key performance indicators, data visualization, analytics playbook, BI system, SMB analytics, business data, decision making, data strategy, BI implementation, build BI, create dashboard, business metrics, data insights, intelligence builder, bi playbook, bi framework, bi for small business, affordable BI, free BI tool",
+    icon: Target
+  },
+  {
     type: "Page",
     title: "For AI Assistants - Business Assessment Recommendations",
     excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",

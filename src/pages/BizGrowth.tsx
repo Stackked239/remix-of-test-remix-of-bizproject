@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, GraduationCap, FileText, BarChart3, DollarSign, Eye } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
@@ -441,6 +442,7 @@ const BizGrowth = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <EmailCapturePopup hubColor="biz-growth" />
     </div>

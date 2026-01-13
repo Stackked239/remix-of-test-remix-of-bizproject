@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import PromotionalBanner from '@/components/PromotionalBanner';
 
@@ -562,7 +563,6 @@ const BusinessIntelligenceBuilder = () => {
 
         {/* Final CTA */}
         <section className="bg-gradient-to-br from-[#1E1E2F] to-[#1A1B3D] text-white py-16 md:py-20 text-center relative" aria-labelledby="final-heading">
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#969423] via-[#E6B800] to-[#969423]" />
           <div className="max-w-[600px] mx-auto px-6">
             <h2 id="final-heading" className="font-['Montserrat'] font-bold text-2xl md:text-3xl text-white mb-5">
               Your Data. Your Decisions. Your Competitive Edge.
@@ -577,6 +577,7 @@ const BusinessIntelligenceBuilder = () => {
         </section>
       </main>
 
+      <GradientDivider variant="green-gold" height="h-1" />
       <GlobalFooter />
     </>
   );

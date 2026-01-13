@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, Star } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
@@ -443,6 +444,7 @@ const BizTools = () => {
         </div>
       </section>
 
+      <GradientDivider variant="gold-copper" />
       <GlobalFooter />
       {/* <EmailCapturePopup hubColor="biz-tools" /> */}
     </div>

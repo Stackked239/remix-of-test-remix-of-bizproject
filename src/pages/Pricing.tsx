@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import PricingStoryBrandHeader from "@/components/PricingStoryBrandHeader";
 import SEO from "@/components/SEO";
@@ -751,6 +752,7 @@ const Pricing = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

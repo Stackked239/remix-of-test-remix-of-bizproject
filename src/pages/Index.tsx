@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 
 // Lazy load below-the-fold components to reduce initial JS bundle
 const Benefits = lazy(() => import("@/components/Benefits"));
@@ -39,6 +40,7 @@ return (
       <Suspense fallback={<div className="min-h-[200px]" />}>
         <Pricing />
       </Suspense>
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </div>
   );

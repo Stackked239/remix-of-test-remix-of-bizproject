@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -480,6 +481,7 @@ const Legal = () => {
         </section>
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

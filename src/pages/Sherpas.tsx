@@ -5,6 +5,7 @@ import StructuredData from '@/components/StructuredData';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import { Button } from '@/components/ui/button';
 import sherpaMountainBg from '@/assets/business-sherpas-mt-everest-bizhealth.jpg';
 import { 
@@ -857,6 +858,7 @@ const Sherpas = () => {
         </div>
       </section>
 
+      <GradientDivider variant="teal-navy" />
       <GlobalFooter />
     </>
   );

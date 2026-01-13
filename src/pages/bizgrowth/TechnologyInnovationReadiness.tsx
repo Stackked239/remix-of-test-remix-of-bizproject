@@ -5,6 +5,7 @@ import StructuredData from '@/components/StructuredData';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import InnovationAssessmentTool from '@/components/innovation/InnovationAssessmentTool';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -733,6 +734,7 @@ const TechnologyInnovationReadiness = () => {
         </section>
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

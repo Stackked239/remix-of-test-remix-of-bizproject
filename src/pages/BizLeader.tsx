@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Crown, Users, TrendingUp, Award, CheckCircle, Play, BookOpen } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import LeadershipQuiz from "@/components/LeadershipQuiz";
@@ -320,6 +321,7 @@ const BizLeader = () => {
         </div>
       </section>
 
+      <GradientDivider variant="magenta-navy" />
       <GlobalFooter />
       <EmailCapturePopup hubColor="biz-leader" />
     </div>

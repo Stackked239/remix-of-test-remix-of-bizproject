@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, HelpCircle, ArrowDownRight, ArrowRight, Lightbulb, DollarSign, BookOpen, CircleHelp } from "lucide-react";
@@ -592,6 +593,7 @@ const Contact = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

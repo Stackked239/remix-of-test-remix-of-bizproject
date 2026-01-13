@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { Users, Target, Shield, Heart, Lightbulb } from 'lucide-react';
 import growthPartnerLogo from '@/assets/bizhealth-growth-partner-logo.jpg';
@@ -322,6 +323,7 @@ const About = () => {
           </section>
         </main>
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

@@ -362,7 +362,7 @@ const HumanResourcesMaturityAssessment = () => {
     doc.text(splitDisclaimer, 20, footerY);
     
     doc.setFontSize(8);
-    doc.text('© 2026 BizHealth.ai | Your Business Health Coach', 20, footerY + 15);
+    doc.text('© 2026 BizHealth.ai | Your Business Health Analyst', 20, footerY + 15);
     doc.text('www.bizhealth.ai', pageWidth - 40, footerY + 15);
 
     doc.save('BizHealth-HR-Maturity-Assessment-Results.pdf');
@@ -439,18 +439,6 @@ const QuestionView = ({
 
   return (
     <div className="max-w-3xl mx-auto">
-      {/* Logo Header */}
-      <div className="mb-8 text-center">
-        <div className="inline-block bg-white rounded-lg shadow-sm p-4 mb-4">
-          <img 
-            src={logoSrc} 
-            alt="BizHealth.ai Logo" 
-            className="h-16 w-auto max-w-[300px] object-contain"
-          />
-        </div>
-        <p className="text-sm text-muted-foreground">Your Business Health Coach</p>
-      </div>
-
       {/* Title */}
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold mb-2" style={{ color: COLORS.bizBlue }}>
@@ -570,7 +558,7 @@ const QuestionView = ({
       {/* Footer */}
       <div className="mt-6 text-center">
         <p className="text-xs text-muted-foreground">
-          © 2026 BizHealth.ai | Your Business Health Coach
+          © 2026 BizHealth.ai | Your Business Health Analyst
         </p>
       </div>
     </div>
@@ -588,18 +576,6 @@ interface ResultsViewProps {
 const ResultsView = ({ results, onDownloadPDF, onStartNew, logoSrc }: ResultsViewProps) => {
   return (
     <div className="max-w-4xl mx-auto">
-      {/* Logo Header */}
-      <div className="mb-8 text-center">
-        <div className="inline-block bg-white rounded-lg shadow-sm p-4 mb-4">
-          <img 
-            src={logoSrc} 
-            alt="BizHealth.ai Logo" 
-            className="h-16 w-auto max-w-[300px] object-contain"
-          />
-        </div>
-        <p className="text-sm text-muted-foreground">Your Business Health Coach</p>
-      </div>
-
       <Card className="shadow-xl border-2" style={{ borderColor: COLORS.bizGreen }}>
         <CardHeader 
           className="text-white"
@@ -745,10 +721,49 @@ const ResultsView = ({ results, onDownloadPDF, onStartNew, logoSrc }: ResultsVie
               starting point for discussion with qualified HR professionals.
             </p>
             <p className="text-xs text-muted-foreground/70 text-center mt-3">
-              © 2026 BizHealth.ai | Your Business Health Coach | www.bizhealth.ai
+              © 2026 BizHealth.ai | Your Business Health Analyst | www.bizhealth.ai
             </p>
           </div>
         </CardContent>
+      </Card>
+
+      {/* CTA Section for Full Business Health Assessment */}
+      <Card 
+        className="mt-8 shadow-xl border-2 overflow-hidden"
+        style={{ borderColor: COLORS.bizBlue }}
+      >
+        <div 
+          className="p-6 sm:p-8 text-white"
+          style={{ 
+            background: `linear-gradient(135deg, ${COLORS.bizBlue} 0%, #3a3b7a 50%, ${COLORS.bizGreen} 100%)` 
+          }}
+        >
+          <div className="text-center max-w-2xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              Ready to Assess Your Entire Business Health?
+            </h3>
+            <p className="text-white/90 mb-6 leading-relaxed">
+              HR is just one pillar of a healthy business. Our comprehensive Business Health Assessment 
+              evaluates all 10 critical areas including financial health, operations, marketing, technology, 
+              and more to give you a complete picture of your business wellness.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/business-health-assessment">
+                <Button 
+                  size="lg"
+                  className="px-8 py-6 text-lg font-semibold bg-white hover:bg-white/90"
+                  style={{ color: COLORS.bizBlue }}
+                >
+                  Take Full Business Health Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
+            <p className="text-white/70 text-sm mt-4">
+              Comprehensive evaluation across Finance, HR, Operations, Sales, Marketing & more
+            </p>
+          </div>
+        </div>
       </Card>
     </div>
   );

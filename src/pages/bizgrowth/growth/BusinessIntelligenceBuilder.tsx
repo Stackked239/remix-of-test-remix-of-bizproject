@@ -562,15 +562,15 @@ const BusinessIntelligenceBuilder = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-gradient-to-br from-[#1E1E2F] to-[#1A1B3D] text-white py-16 md:py-20 text-center relative" aria-labelledby="final-heading">
+        <section className="bg-gray-100 py-16 md:py-20 text-center relative" aria-labelledby="final-heading">
           <div className="max-w-[600px] mx-auto px-6">
-            <h2 id="final-heading" className="font-['Montserrat'] font-bold text-2xl md:text-3xl text-white mb-5">
+            <h2 id="final-heading" className="font-['Montserrat'] font-bold text-2xl md:text-3xl text-[#242553] mb-5">
               Your Data. Your Decisions. Your Competitive Edge.
             </h2>
-            <p className="text-lg text-white/85 mb-4">
+            <p className="text-lg text-gray-700 mb-4">
               The Business Intelligence Builder Playbook is your first step toward clarity. Everything else—from data connection to team alignment—flows from the foundation you'll build here.
             </p>
-            <p className="text-[#B0AD3A] font-semibold text-lg">
+            <p className="text-[#969423] font-semibold text-lg">
               Download now and start moving from guesswork to growth.
             </p>
           </div>

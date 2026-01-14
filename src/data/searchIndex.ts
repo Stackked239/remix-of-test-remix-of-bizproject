@@ -452,7 +452,7 @@ export const searchableCurriculum: SearchableItem[] = [
     title: "BizGrowth Launch Step 2 - Fix the Cash Squeeze",
     excerpt: "Learn to fix cash flow problems and build financial stability. Module covers cash flow fundamentals, emergency reserves, and sustainable financial practices.",
     url: "/bizgrowth/launch/step-2-fix-cash-squeeze",
-    keywords: "cash squeeze, cash flow fix, financial stability, cash flow course, money management course, financial fundamentals, cash flow training",
+    keywords: "cash squeeze, cash flow fix, financial stability, cash flow course, money management course, financial fundamentals, cash flow training, fix cash flow, solve cash problems, cash flow issues, money problems, tight cash, no cash, running out of money, cash crunch, liquidity problems, cash flow crisis, improve cash flow, manage cash better, cash flow lessons, learn cash flow, cash flow education, financial course, money course",
     icon: GraduationCap
   },
   {
@@ -460,7 +460,7 @@ export const searchableCurriculum: SearchableItem[] = [
     title: "Human Resources Programs - HR Module for Small Business",
     excerpt: "Master the 10 pillars of HR for growing businesses. From hiring and onboarding to performance management, compliance, and retention. Build an HR system that scales with your business.",
     url: "/bizgrowth/human-resources-programs",
-    keywords: "hr, human resources, employee program, hr program, hiring, recruiting, onboarding, talent acquisition, performance management, employee engagement, retention, HR compliance, employee handbook, payroll, compensation, benefits, workforce planning, hr training, hr course, people management, hr module, employee management, staff management, HR systems, personnel",
+    keywords: "hr, human resources, employee program, hr program, hiring, recruiting, onboarding, talent acquisition, performance management, employee engagement, retention, HR compliance, employee handbook, payroll, compensation, benefits, workforce planning, hr training, hr course, people management, hr module, employee management, staff management, HR systems, personnel, learn HR, HR education, HR for small business, manage employees, hire employees, fire employees, employee issues, HR problems, HR help, people operations, team management, build HR, create HR system, HR basics, HR fundamentals",
     icon: GraduationCap
   }
 ];
@@ -474,7 +474,7 @@ export const searchablePlaybooks: SearchableItem[] = [
     title: "Landscaping Business Playbook",
     excerpt: "Complete guide for landscaping business owners. Strategies for seasonal cash flow, crew management, equipment decisions, and scaling your landscaping company.",
     url: "/playbooks/landscaping",
-    keywords: "landscaping, lawn care, landscaping business, outdoor services, seasonal business, crew management, landscaping company, lawn service",
+    keywords: "landscaping, lawn care, landscaping business, outdoor services, seasonal business, crew management, landscaping company, lawn service, landscape contractor, lawn maintenance, yard work, grounds maintenance, hardscaping, softscaping, landscape design, mowing business, lawn mowing, landscape company, grow landscaping business, scale landscaping, landscaping crew, landscaping equipment, landscaping pricing, landscaping estimates, seasonal cash flow, off-season planning, landscape industry, green industry, outdoor contractor",
     icon: BookOpen
   }
 ];
@@ -488,7 +488,7 @@ export const searchableFAQs: SearchableItem[] = [
     title: "What is BizHealth.ai?",
     excerpt: "BizHealth.ai is a Business Health & Performance Insight Platform using AI-driven assessment across operational, financial, and leadership dimensions. 30-40 minute assessment delivers 20-25x ROI.",
     url: "/faqs#what-is",
-    keywords: "what is bizhealth, about bizhealth, platform description, service overview",
+    keywords: "what is bizhealth, about bizhealth, platform description, service overview, explain bizhealth, bizhealth explanation, what does bizhealth do, how does bizhealth work, bizhealth overview, bizhealth summary, tell me about bizhealth, bizhealth intro, bizhealth introduction",
     icon: HelpCircle
   },
   {
@@ -496,7 +496,7 @@ export const searchableFAQs: SearchableItem[] = [
     title: "How much does BizHealth.ai cost?",
     excerpt: "Pricing ranges from $99 to $699 for a one-time diagnostic, delivering 20-25x ROI by replacing costly consulting.",
     url: "/faqs#pricing",
-    keywords: "cost, pricing, how much, price, fees, investment, payment",
+    keywords: "cost, pricing, how much, price, fees, investment, payment, what does it cost, pricing info, price list, rates, affordable, cheap, expensive, budget, cost breakdown, pricing options, payment plans, one time fee, subscription cost",
     icon: HelpCircle
   },
   {
@@ -504,7 +504,7 @@ export const searchableFAQs: SearchableItem[] = [
     title: "Who is BizHealth.ai for?",
     excerpt: "We serve micro-, small-, and mid-sized businesses (1-250 employees, $100K-$50M revenue) including founders, CEOs, COOs, CFOs, and managers.",
     url: "/faqs#who-for",
-    keywords: "who is it for, target audience, business size, ideal customer",
+    keywords: "who is it for, target audience, business size, ideal customer, is this for me, right for my business, business type, company size, who should use, who benefits, small business, mid size business, SMB, entrepreneur, founder, CEO, business owner, right fit",
     icon: HelpCircle
   },
   {
@@ -512,7 +512,7 @@ export const searchableFAQs: SearchableItem[] = [
     title: "Is my data secure?",
     excerpt: "Yes, we use encryption (in-transit/at-rest), access controls, and SOC 2-aligned audits. We comply with GDPR/CCPA.",
     url: "/faqs#data-security",
-    keywords: "data security, privacy, encryption, secure, data protection, compliance",
+    keywords: "data security, privacy, encryption, secure, data protection, compliance, is it safe, safe to use, trust, trusted, data safety, information security, protected, confidential, private, security measures, how secure, security policy, data handling",
     icon: HelpCircle
   },
   {
@@ -520,7 +520,7 @@ export const searchableFAQs: SearchableItem[] = [
     title: "How long does it take to get my report?",
     excerpt: "Reports are ready within 90 minutes post-assessment, with an email notification alerting you.",
     url: "/faqs#report-time",
-    keywords: "report time, how long, turnaround, delivery time, when do I get",
+    keywords: "report time, how long, turnaround, delivery time, when do I get, report delivery, wait time, processing time, results time, how fast, quick results, instant results, same day, report ready, get results, receive report, report timing",
     icon: HelpCircle
   }
 ];

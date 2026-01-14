@@ -401,7 +401,7 @@ const HumanResourcesMaturityAssessment = () => {
         <PromotionalBanner />
         <GlobalNavigation />
 
-        <main className="flex-1 py-8 px-4 sm:px-6 pt-32">
+        <main className="flex-1 py-8 px-4 sm:px-6 pt-40">
           {showResults && results ? (
             <ResultsView 
               results={results} 

@@ -432,6 +432,14 @@ export const searchableTools: SearchableItem[] = [
     url: "/ideas",
     keywords: "ideas, voice of customer, feedback, suggestions, submit idea, business ideas, feature request, customer input, SMB feedback, business tools ideas, content ideas, resource suggestions",
     icon: FileText
+  },
+  {
+    type: "Tool",
+    title: "R2A2 Job Description Builder - Free HR Tool",
+    excerpt: "Build clear, effective job descriptions using the R2A2 framework: Results, Responsibilities, Authority, and Accountability. Free drag-and-drop builder with PDF export for HR professionals and hiring managers.",
+    url: "/biztools/toolbox/hr/r2a2-job-description-builder",
+    keywords: "R2A2, job description, job description builder, human resources, HR tool, HR, hiring, job posting, job responsibilities, accountability, authority, results, job duties, role description, position description, hiring manager, recruitment, talent acquisition, free tool, BizTool, business tool, workforce planning, job requirements, job template, HR template, employee roles, job expectations, performance expectations, hiring template",
+    icon: Wrench
   }
 ];
 

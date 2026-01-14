@@ -570,9 +570,16 @@ const BusinessIntelligenceBuilder = () => {
             <p className="text-lg text-gray-700 mb-4">
               The Business Intelligence Builder Playbook is your first step toward clarity. Everything else—from data connection to team alignment—flows from the foundation you'll build here.
             </p>
-            <p className="text-[#969423] font-semibold text-lg">
+            <p className="text-[#969423] font-semibold text-lg mb-6">
               Download now and start moving from guesswork to growth.
             </p>
+            <Button 
+              onClick={handleDownload}
+              className="bg-[#242553] hover:bg-[#969423] text-white font-['Montserrat'] font-semibold text-base px-8 py-5 h-auto rounded-lg transition-all inline-flex items-center gap-2"
+            >
+              <Download className="w-5 h-5" />
+              Get Your Free Playbook
+            </Button>
           </div>
         </section>
       </main>

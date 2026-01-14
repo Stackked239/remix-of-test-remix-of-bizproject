@@ -39,7 +39,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Home - BizHealth.ai",
     excerpt: "Your Trusted Business Health Analyst – AI-Powered Diagnostics for SMBs. Stop Guessing, Start Growing with business health assessments.",
     url: "/",
-    keywords: "home, bizhealth, business health, SMB diagnostics, AI powered, small business, assessment",
+    keywords: "home, bizhealth, business health, SMB diagnostics, AI powered, small business, assessment, homepage, main page, start here, business checkup, company health, enterprise wellness, AI analysis, automated diagnostics, machine learning insights, business doctor, company checkup, performance analysis, get started, begin assessment, welcome",
     icon: Home
   },
   {
@@ -47,7 +47,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Pricing - Business Health Assessment Plans",
     excerpt: "Choose the perfect plan for your business. Essentials, Growth, and Enterprise tiers from $99-$699. 20-25x ROI with AI-powered diagnostics.",
     url: "/pricing",
-    keywords: "pricing, plans, cost, essentials, growth, enterprise, ROI, investment, subscription, tiers",
+    keywords: "pricing, plans, cost, essentials, growth, enterprise, ROI, investment, subscription, tiers, how much, price list, rates, fees, packages, membership, what does it cost, affordable, budget, compare plans, value, payment options, monthly, annual, one-time, subscription cost, buy now, purchase, order",
     icon: DollarSign
   },
   {
@@ -55,7 +55,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Contact Us - Get in Touch",
     excerpt: "Contact BizHealth.ai for support, inquiries, or partnership opportunities. Email: support@bizhealth.ai",
     url: "/contact",
-    keywords: "contact, support, help, email, inquiries, partnership, reach out, customer service",
+    keywords: "contact, support, help, email, inquiries, partnership, reach out, customer service, get in touch, talk to us, message us, phone, call, chat, speak to someone, customer support, helpdesk, assistance, feedback, questions, connect, communication, contact form, send message",
     icon: Mail
   },
   {
@@ -63,7 +63,7 @@ export const searchablePages: SearchableItem[] = [
     title: "About BizHealth.ai",
     excerpt: "Learn about our mission to provide affordable, AI-powered business health diagnostics for SMBs across operations, finance, and leadership.",
     url: "/about",
-    keywords: "about, mission, team, company, who we are, story, background, vision",
+    keywords: "about, mission, team, company, who we are, story, background, vision, our story, founders, leadership team, values, culture, why we exist, purpose, history, about us, meet the team, company info, organization, what we do, how we started",
     icon: Home
   },
   {
@@ -71,7 +71,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Get Started - Register for BizHealth.ai",
     excerpt: "Get started with BizHealth.ai today. Register your account to access AI-powered business insights and analytics for SMBs. Create your account and join 10,000+ businesses.",
     url: "/register",
-    keywords: "register, sign up, create account, get started, join, enrollment",
+    keywords: "register, sign up, create account, get started, join, enrollment, new account, start now, begin, onboarding, signup, registration, new user, first time, create profile, join now, become member, activate, start free, try now, open account",
     icon: Home
   },
   {
@@ -79,7 +79,7 @@ export const searchablePages: SearchableItem[] = [
     title: "How It Works - BizHealth.ai Business Assessment",
     excerpt: "Discover how BizHealth.ai works: Choose your assessment tier ($199-$799), complete 45-80 questions covering 12 critical business dimensions, and receive your comprehensive health report within 90 minutes.",
     url: "/how-it-works",
-    keywords: "how it works, process, steps, assessment, questions, report, methodology",
+    keywords: "how it works, process, steps, assessment, questions, report, methodology, how does it work, what happens, walkthrough, guide, tutorial, explanation, process flow, step by step, understanding, learn more, how to use, getting started guide, demo, overview, explained",
     icon: HelpCircle
   },
   {
@@ -87,7 +87,7 @@ export const searchablePages: SearchableItem[] = [
     title: "How It Works - BizTools",
     excerpt: "Learn how BizTools works: Take a business health assessment, get custom recommendations, access tools, and upgrade when ready.",
     url: "/biztools/how-it-works",
-    keywords: "biztools how it works, tools process, free tools, business tools methodology",
+    keywords: "biztools how it works, tools process, free tools, business tools methodology, tool guide, using tools, tool tutorial, tools explained, access tools, tool walkthrough, how to use biztools",
     icon: HelpCircle
   },
   {
@@ -95,7 +95,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Frequently Asked Questions - FAQs",
     excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
     url: "/faqs",
-    keywords: "FAQ, frequently asked questions, help, answers, support, common questions",
+    keywords: "FAQ, frequently asked questions, help, answers, support, common questions, questions and answers, Q&A, help center, knowledge base, troubleshooting, how to, what is, why, when, quick answers, self help, information, clarification, doubts",
     icon: HelpCircle
   },
   {
@@ -103,7 +103,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizGuides - From Gaps to Guided Wins",
     excerpt: "Expert consulting services to implement insights from your business health assessment. Partner consulting network launching Q1 2026.",
     url: "/bizguides",
-    keywords: "bizguides, consulting, implementation, expert guidance, partners, advisors",
+    keywords: "bizguides, consulting, implementation, expert guidance, partners, advisors, coaches, mentors, business consultants, professional services, advisory, one-on-one help, personalized guidance, expert help, consultant network, implementation support, hands-on help",
     icon: Home
   },
   {
@@ -111,7 +111,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizTools - Scalable Essentials at Your Fingertips",
     excerpt: "Business tools, templates, and resources to support SMB growth and operational excellence.",
     url: "/biztools",
-    keywords: "biztools, business tools, templates, resources, essentials, toolkit",
+    keywords: "biztools, business tools, templates, resources, essentials, toolkit, free tools, calculators, spreadsheets, documents, downloads, utilities, productivity tools, business resources, SMB toolkit, operational tools, management tools, planning tools",
     icon: Home
   },
   {
@@ -119,7 +119,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizTools Toolbox - Complete Business Toolkit",
     excerpt: "Explore our complete business toolbox with free tools and premium bundles. Access financial calculators, templates, and resources to grow your SMB.",
     url: "/biztools/toolbox",
-    keywords: "toolbox, complete toolkit, all tools, free tools, premium tools, calculators",
+    keywords: "toolbox, complete toolkit, all tools, free tools, premium tools, calculators, tool library, tool collection, browse tools, explore tools, find tools, tool directory, available tools, tool catalog, business toolkit, resource library",
     icon: Home
   },
   {
@@ -127,7 +127,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizLeaDeR - Drive Scale with Confidence",
     excerpt: "Leadership development courses and webinars for business owners and executives. Coming Spring 2026.",
     url: "/bizleader",
-    keywords: "bizleader, leadership, courses, development, training, executives, webinars",
+    keywords: "bizleader, leadership, courses, development, training, executives, webinars, management training, leadership skills, executive coaching, leader development, management courses, CEO training, owner training, leadership program, professional development, skill building, grow as leader",
     icon: Home
   },
   {
@@ -135,7 +135,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business & Leadership Sherpas - Free AI Guides",
     excerpt: "Access two free tools: BizGuide Sherpa for business insights and BizLeaDeR Sherpa for leadership development. Get business questions answered, free business tool, leadership development, sherpa, business tool, biztool, bizleadership, business leadership guidance. Ask business and leadership questions privately 24/7.",
     url: "/sherpas",
-    keywords: "sherpas, AI guides, business sherpa, leadership sherpa, free AI, chatbot, advisor",
+    keywords: "sherpas, AI guides, business sherpa, leadership sherpa, free AI, chatbot, advisor, AI assistant, virtual mentor, digital coach, ask questions, get advice, 24/7 support, instant answers, AI chatbot, virtual advisor, business bot, leadership bot, free consultation",
     icon: Home
   },
   {
@@ -143,7 +143,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizGrowth Academy - Business Growth Programs & Strategic Advancement",
     excerpt: "Strategic business growth programs and resources for scaling your business effectively. Launch, Scale, and Transform paths for every stage of SMB growth.",
     url: "/bizgrowth",
-    keywords: "bizgrowth, business growth, grow my business, growth strategies, scaling, strategic advancement, growth programs, SMB growth, company growth, revenue growth, growth academy, business expansion, how to grow business, small business growth, grow business, growth path, scaling business",
+    keywords: "bizgrowth, business growth, grow my business, growth strategies, scaling, strategic advancement, growth programs, SMB growth, company growth, revenue growth, growth academy, business expansion, how to grow business, small business growth, grow business, growth path, scaling business, increase revenue, expand business, growth plan, accelerate growth, rapid growth, sustainable growth",
     icon: Home
   },
   {
@@ -151,7 +151,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Growth Strategies - BizGrowth Academy",
     excerpt: "The complete business growth module for SMB owners. Learn the 5-pillar growth framework: Decide, Assess, Prepare, Execute, Sustain. Strategic growth planning, team alignment, and sustainable scaling strategies.",
     url: "/bizgrowth/business-growth-strategies",
-    keywords: "business growth, growth strategy, growth plan, how to grow, grow my business, small business growth, scaling strategy, growth framework, strategic growth, business scaling, 5 pillars, growth module, sustainable growth, prepared growth, growth readiness, scaling your business, expansion strategy, growth planning, revenue growth, company growth",
+    keywords: "business growth, growth strategy, growth plan, how to grow, grow my business, small business growth, scaling strategy, growth framework, strategic growth, business scaling, 5 pillars, growth module, sustainable growth, prepared growth, growth readiness, scaling your business, expansion strategy, growth planning, revenue growth, company growth, growth tactics, growth methods, increase sales, boost revenue",
     icon: Target
   },
   {
@@ -159,7 +159,7 @@ export const searchablePages: SearchableItem[] = [
     title: "BizGrowth Academy Launch - Early-Stage Business Growth Path",
     excerpt: "Build stable foundations for your 0-3 year business. The Launch path helps overwhelmed founders fix cash flow, establish KPIs, and create a 90-day action plan. Prescribed next steps from your BizHealth report, post-assessment guidance, business growth academy, early-stage business foundations.",
     url: "/bizgrowth/launch",
-    keywords: "launch, early stage, startup, founders, 0-3 years, foundations, KPIs, action plan",
+    keywords: "launch, early stage, startup, founders, 0-3 years, foundations, KPIs, action plan, new business, starting out, beginning stages, first years, young business, startup growth, founder support, early growth, initial phase, getting started, new entrepreneur, startup foundations",
     icon: Home
   },
   {
@@ -167,7 +167,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Build & Share Your Vision - 7-Step Vision Alignment Playbook",
     excerpt: "Transform your business vision into a clear, operational strategy your team can execute. Free playbook with 7 actionable steps to build, communicate, and align your vision across your organization.",
     url: "/bizgrowth/vision-playbook",
-    keywords: "vision, vision playbook, vision alignment, business vision, team alignment, strategic vision, mission statement, company vision, leadership vision, shared vision, vision communication, 7 steps, vision building, organizational alignment, vision strategy, build vision, share vision",
+    keywords: "vision, vision playbook, vision alignment, business vision, team alignment, strategic vision, mission statement, company vision, leadership vision, shared vision, vision communication, 7 steps, vision building, organizational alignment, vision strategy, build vision, share vision, create vision, define purpose, company mission, inspire team, vision clarity",
     icon: Target
   },
   {
@@ -175,7 +175,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Breaking the Peaks & Valleys Cycle - 7-Step Cash Flow Playbook",
     excerpt: "Free 7-step framework to break the feast-or-famine cycle and build stable, predictable cash flow. Learn how to smooth revenue, reduce financial stress, and create financial stability.",
     url: "/bizgrowth/financials/breaking-peaks-valleys-cycle",
-    keywords: "revenue, cash flow, peaks valleys, feast famine, revenue cycle, financial stability, cash flow playbook, predictable income, revenue smoothing, financial stress, cash flow management, business financials, 7 steps, cash flow framework, financial planning, stable revenue, income stability, famine cycle, feast or famine",
+    keywords: "revenue, cash flow, peaks valleys, feast famine, revenue cycle, financial stability, cash flow playbook, predictable income, revenue smoothing, financial stress, cash flow management, business financials, 7 steps, cash flow framework, financial planning, stable revenue, income stability, famine cycle, feast or famine, inconsistent income, irregular cash flow, money problems, financial struggles, stabilize finances",
     icon: Target
   },
   {
@@ -183,7 +183,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Intelligence Builder - Free BI Playbook for SMBs",
     excerpt: "Build a practical business intelligence system from scratch. Free 5-step playbook to transform scattered data into actionable insights with KPIs, dashboards, and data-driven decision making.",
     url: "/bizgrowth/growth/business-intelligence-builder",
-    keywords: "business intelligence, BI, BI builder, biztool, data analytics, KPIs, dashboards, metrics, reporting, data-driven decisions, business analytics, performance tracking, key performance indicators, data visualization, analytics playbook, BI system, SMB analytics, business data, decision making, data strategy, BI implementation, build BI, create dashboard, business metrics, data insights, intelligence builder, bi playbook, bi framework, bi for small business, affordable BI, free BI tool",
+    keywords: "business intelligence, BI, BI builder, biztool, data analytics, KPIs, dashboards, metrics, reporting, data-driven decisions, business analytics, performance tracking, key performance indicators, data visualization, analytics playbook, BI system, SMB analytics, business data, decision making, data strategy, BI implementation, build BI, create dashboard, business metrics, data insights, intelligence builder, bi playbook, bi framework, bi for small business, affordable BI, free BI tool, track metrics, measure performance, data analysis",
     icon: Target
   },
   {
@@ -191,7 +191,7 @@ export const searchablePages: SearchableItem[] = [
     title: "For AI Assistants - Business Assessment Recommendations",
     excerpt: "Information for AI assistants about BizHealth.ai: affordable business health assessments for SMBs. AI assistant recommendations, when to recommend business diagnostics, alternatives to expensive consultants.",
     url: "/for-ai-assistants",
-    keywords: "AI assistants, chatgpt, claude, recommendations, integration, API",
+    keywords: "AI assistants, chatgpt, claude, recommendations, integration, API, LLM, large language models, AI integration, bot recommendations, machine learning, AI partners, assistant integration, GPT, Gemini, Copilot",
     icon: Home
   },
   {
@@ -199,7 +199,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Our Logo - BizHealth.ai Company Logo",
     excerpt: "Our logo, company logo, BizHealth.ai logo. This is our company logo - discover the meaning behind the BizHealth.ai logo and brand story. The grid represents 12 key business health areas.",
     url: "/logo",
-    keywords: "logo, brand, branding, company logo, visual identity",
+    keywords: "logo, brand, branding, company logo, visual identity, logo meaning, brand story, logo design, brand assets, logo download, company brand, identity, logo explanation",
     icon: Home
   },
   {
@@ -207,7 +207,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Security & Data Protection - BizHealth.ai",
     excerpt: "Learn how BizHealth.ai protects your data with enterprise security, bank-level encryption, SOC 2 Type II (In Progress), GDPR compliance, secure infrastructure, data protection, risk management, and transparent security practices for SMBs.",
     url: "/security",
-    keywords: "security, data protection, encryption, SOC 2, GDPR, CCPA, privacy, compliance",
+    keywords: "security, data protection, encryption, SOC 2, GDPR, CCPA, privacy, compliance, data security, is it safe, secure data, protected information, cybersecurity, information security, privacy policy, data privacy, safe to use, trusted, secure platform, bank level security, enterprise security",
     icon: Home
   },
   {
@@ -215,7 +215,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Legal Hub - Privacy, Terms, Security & Disclaimer",
     excerpt: "BizHealth.ai's legal hub: straightforward privacy policy, terms of service, security practices, and disclaimers. No legalese—just clear protection for your business. SOC 2 compliant, GDPR ready, CCPA compliant. Legal documents, data protection, transparency, trust.",
     url: "/legal",
-    keywords: "legal, privacy policy, terms of service, disclaimer, compliance, documents",
+    keywords: "legal, privacy policy, terms of service, disclaimer, compliance, documents, terms and conditions, legal documents, policies, user agreement, service agreement, legal information, rights, obligations, legal terms, TOS, ToS, privacy notice, legal notice",
     icon: FileText
   },
   {
@@ -223,7 +223,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Client Support & Concerns - BizHealth.ai",
     excerpt: "Having concerns about your BizHealth.ai experience? Our Client Success team is here to help. Share your concerns about refunds, guarantees, or any issues. We're committed to making things right. No refund policy, but personalized support for all client concerns and questions about money-back guarantees.",
     url: "/concerns",
-    keywords: "concerns, support, refund, guarantee, issues, complaints, help, customer success",
+    keywords: "concerns, support, refund, guarantee, issues, complaints, help, customer success, problems, dissatisfied, unhappy, money back, return policy, dispute, resolution, customer care, issue resolution, not satisfied, want refund, cancel, cancellation",
     icon: HelpCircle
   },
   {
@@ -231,7 +231,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Insights & Strategies",
     excerpt: "Expert insights, strategies, and resources for small and mid-size businesses. Browse articles on business strategy, operations, financial management, leadership, technology, and risk management.",
     url: "/blog",
-    keywords: "articles, insights, resources, news, updates, content, strategies, business",
+    keywords: "articles, insights, resources, news, updates, content, strategies, business, blog posts, latest news, tips, advice, guides, how to, best practices, industry insights, thought leadership, expert articles, business tips, knowledge base",
     icon: FileText
   },
   {
@@ -239,7 +239,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Strategy Blog Articles",
     excerpt: "Expert business strategy articles for SMBs. Learn about strategic planning, growth strategies, business health assessments, and building a strong business foundation for 2025 and beyond.",
     url: "/blog/business-strategy",
-    keywords: "business strategy, strategic planning, growth strategies, planning articles",
+    keywords: "business strategy, strategic planning, growth strategies, planning articles, strategy tips, competitive strategy, market strategy, long term planning, strategic thinking, business planning, strategy guide, strategy advice, strategic decisions",
     icon: FileText
   },
   {
@@ -247,7 +247,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Operations - Operations Blog Articles",
     excerpt: "Business operations insights and operations management for small businesses. Discover tips on process optimization, operational efficiency, scaling operations, and daily operational fixes.",
     url: "/blog/operations",
-    keywords: "operations, process optimization, efficiency, operational management",
+    keywords: "operations, process optimization, efficiency, operational management, business processes, workflow, productivity, operational excellence, streamline operations, improve efficiency, reduce waste, lean operations, operations tips, daily operations, run business better",
     icon: FileText
   },
   {
@@ -255,7 +255,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Financial Management Blog Articles",
     excerpt: "Financial management strategies for SMBs. Articles on cash flow management, financial health metrics, budgeting, and financial planning for small business success.",
     url: "/blog/financial-management",
-    keywords: "financial management, cash flow, budgeting, finance articles",
+    keywords: "financial management, cash flow, budgeting, finance articles, money management, accounting, bookkeeping, financial tips, profit margins, revenue, expenses, financial planning, fiscal management, money advice, financial health, manage finances",
     icon: FileText
   },
   {
@@ -263,7 +263,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Leadership Blog Articles",
     excerpt: "Leadership development articles for business owners. Explore topics on leadership blind spots, stress management, strategic decision-making, and team leadership.",
     url: "/blog/business-leadership",
-    keywords: "leadership, management, team leadership, decision making",
+    keywords: "leadership, management, team leadership, decision making, leadership skills, managing people, team management, executive leadership, leadership tips, become better leader, leadership advice, lead team, motivate employees, leadership development",
     icon: FileText
   },
   {
@@ -271,7 +271,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Technology Blog Articles",
     excerpt: "Technology insights for small businesses. Learn about AI analytics, remote tools, digital transformation, and leveraging technology for business growth.",
     url: "/blog/technology",
-    keywords: "technology, AI, digital transformation, tech tools, software",
+    keywords: "technology, AI, digital transformation, tech tools, software, automation, tech tips, business technology, digital tools, software solutions, tech adoption, modernization, tech trends, IT, cloud, SaaS, apps, tech stack",
     icon: FileText
   },
   {
@@ -279,7 +279,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Risk Management Blog Articles",
     excerpt: "Risk management strategies for SMBs. Articles on identifying business warning signs, crisis management, and building resilient businesses.",
     url: "/blog/risk-management",
-    keywords: "risk management, crisis management, resilience, warning signs",
+    keywords: "risk management, crisis management, resilience, warning signs, business risks, risk mitigation, disaster planning, contingency, risk assessment, protect business, avoid risks, business continuity, crisis planning, emergency planning, risk reduction",
     icon: FileText
   },
   {
@@ -287,7 +287,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Business Intelligence Blog Articles",
     excerpt: "Business intelligence insights for SMBs. Discover how data analytics, real-time BI, and business intelligence ROI can transform your decision-making.",
     url: "/blog/business-intelligence",
-    keywords: "business intelligence, BI, analytics, data, reporting, dashboards",
+    keywords: "business intelligence, BI, analytics, data, reporting, dashboards, data insights, metrics, KPIs, data analysis, business data, performance data, data driven, analytics tools, reporting tools, measure business, track performance",
     icon: FileText
   },
   {
@@ -295,7 +295,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Glossary of Terms - Business Terminology",
     excerpt: "Comprehensive glossary of business terms and definitions. Understand common SMB terminology, financial terms, and business health concepts.",
     url: "/glossary-of-terms",
-    keywords: "glossary, terms, definitions, terminology, dictionary, vocabulary",
+    keywords: "glossary, terms, definitions, terminology, dictionary, vocabulary, what does mean, define, meaning of, business terms, financial terms, jargon, acronyms, abbreviations, explanations, word meanings, business dictionary",
     icon: BookOpen
   },
   {
@@ -303,7 +303,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Resources - Free Tools & SMB Calculators",
     excerpt: "Access free business resources including ROI calculators, business valuation estimators, cash flow analyzers, and downloadable templates for SMB growth.",
     url: "/resources",
-    keywords: "resources, free tools, calculators, ROI calculator, business valuation, cash flow, templates, downloads, free resources, SMB tools, business calculators, estimator, analyzer, valuation calculator, return on investment, business resources, small business tools",
+    keywords: "resources, free tools, calculators, ROI calculator, business valuation, cash flow, templates, downloads, free resources, SMB tools, business calculators, estimator, analyzer, valuation calculator, return on investment, business resources, small business tools, free downloads, spreadsheets, checklists, guides, free stuff",
     icon: Wrench
   },
   {
@@ -311,7 +311,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Break-Even Analysis Calculator",
     excerpt: "Calculate your break-even point in minutes. Find exactly how many units you need to sell to cover all costs and start making profit.",
     url: "/biztools/toolbox/breakeven-analysis-calculator",
-    keywords: "break-even calculator, break-even analysis, break-even point, contribution margin, profitability calculator, fixed costs, variable costs, business profitability, sales target, free tool, business tool, biztool",
+    keywords: "break-even calculator, break-even analysis, break-even point, contribution margin, profitability calculator, fixed costs, variable costs, business profitability, sales target, free tool, business tool, biztool, calculate break even, find break even, when will I profit, cover costs, unit sales needed, profit point, cost coverage",
     icon: Calculator
   },
   {
@@ -319,7 +319,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Cash Flow Projection Tool - 12-Month Forecast Calculator",
     excerpt: "Forecast your business cash flow for the next 12 months. Identify cash shortfalls, plan for growth, and make confident financial decisions with our interactive projections.",
     url: "/biztools/toolbox/cash-flow-projection-tool",
-    keywords: "cash flow, cashflow projection, cashflow tool, cash flow forecast, cash flow calculator, 12-month forecast, cash flow analysis, financial projection, cash planning, business cash flow, free tool, business tool, biztool, cash flow projection, cashflow forecast, cash flow management, revenue forecast, expense forecast, cash runway, financial planning tool",
+    keywords: "cash flow, cashflow projection, cashflow tool, cash flow forecast, cash flow calculator, 12-month forecast, cash flow analysis, financial projection, cash planning, business cash flow, free tool, business tool, biztool, cash flow projection, cashflow forecast, cash flow management, revenue forecast, expense forecast, cash runway, financial planning tool, predict cash flow, forecast finances, future cash, money projection",
     icon: Banknote
   }
 ];
@@ -334,7 +334,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Cash Flow Tracker - Free Financial Management Tool",
     excerpt: "Track income, expenses, and cash flow for your small business. Professional-grade financial management with Excel export, invoicing, and forecasting.",
     url: "/biztools/toolbox/cash-flow-tracker",
-    keywords: "cash flow tracker, cashflow, cash flow tool, income tracker, expense tracker, financial management, invoicing, forecasting, Excel export, money management, budget tracker",
+    keywords: "cash flow tracker, cashflow, cash flow tool, income tracker, expense tracker, financial management, invoicing, forecasting, Excel export, money management, budget tracker, track money, monitor cash, log expenses, record income, financial tracking, money tracker, spending tracker, revenue tracker, cash management, daily cash tracking",
     icon: Wrench
   },
   {
@@ -342,7 +342,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Process Mapping & SOP Builder Tools",
     excerpt: "Create professional process maps and standard operating procedures with our visual drag-and-drop process mapping tool. Build process maps, document workflows, and export to Word, Excel, PDF.",
     url: "/biztools/toolbox/process-mapping-tools",
-    keywords: "process mapping, SOP, standard operating procedures, workflow, process map, documentation, procedures, workflow builder, process documentation, operations manual",
+    keywords: "process mapping, SOP, standard operating procedures, workflow, process map, documentation, procedures, workflow builder, process documentation, operations manual, document processes, create SOP, build workflow, visualize process, flowchart, process diagram, procedure template, workflow diagram, operations documentation, step by step guide, how to document, systematize business",
     icon: Wrench
   },
   {
@@ -350,7 +350,7 @@ export const searchableTools: SearchableItem[] = [
     title: "SWOT Analysis Tool - Strategic Planning Framework",
     excerpt: "Conduct comprehensive SWOT analysis for your small business. Interactive 2x2 matrix builder to identify strengths, weaknesses, opportunities, and threats. Export to Word, Excel, PDF.",
     url: "/biztools/toolbox/swot-analysis-tool",
-    keywords: "SWOT, SWOT analysis, strengths, weaknesses, opportunities, threats, strategic planning, strategy tool, competitive analysis, business analysis",
+    keywords: "SWOT, SWOT analysis, strengths, weaknesses, opportunities, threats, strategic planning, strategy tool, competitive analysis, business analysis, analyze business, strategic assessment, market analysis, competitor analysis, internal analysis, external analysis, SWOT matrix, SWOT template, strategic review, business evaluation, identify strengths, find weaknesses, spot opportunities, recognize threats",
     icon: Wrench
   },
   {
@@ -358,7 +358,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Customer Journey Maps Tool - Visualize Client Experience",
     excerpt: "Free customer journey mapping tool for SMBs. Drag-and-drop journey map builder to map customer touchpoints, stages, and emotions. Create a client journey, customer journey map, and customer journey tool with templates and persona support. Export PDF/PNG.",
     url: "/biztools/toolbox/customer-journey-maps-tool",
-    keywords: "customer journey, journey map, customer experience, CX, touchpoints, customer mapping, client journey, buyer journey, customer touchpoints, user experience, UX",
+    keywords: "customer journey, journey map, customer experience, CX, touchpoints, customer mapping, client journey, buyer journey, customer touchpoints, user experience, UX, map customer experience, visualize journey, customer lifecycle, sales funnel, customer stages, buyer experience, client experience, customer path, purchase journey, user journey, experience mapping, customer engagement",
     icon: Wrench
   },
   {
@@ -366,7 +366,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Free ROI Calculator - Investment Return Analysis Tool",
     excerpt: "Free ROI calculator for business investments. Calculate return on investment for new hires, marketing campaigns, and equipment purchases. Compare scenarios, get payback period analysis, and export professional PDF reports.",
     url: "/biztools/toolbox/free-roi-calculator",
-    keywords: "ROI calculator, return on investment, investment calculator, payback period, marketing ROI, hiring ROI, equipment ROI, business investment tool, cost-benefit analysis, investment analysis, profitability calculator",
+    keywords: "ROI calculator, return on investment, investment calculator, payback period, marketing ROI, hiring ROI, equipment ROI, business investment tool, cost-benefit analysis, investment analysis, profitability calculator, calculate ROI, measure return, investment return, is it worth it, cost vs benefit, investment payback, profit calculator, returns calculator, investment decision, financial return, worth the investment",
     icon: Wrench
   },
   {
@@ -374,7 +374,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Free Pricing Net Profit Calculator - Know Your True Profit Per Sale",
     excerpt: "Free pricing calculator for small business owners. Find out if your prices actually make you money. Calculate profit per sale, net margin, break-even point, and get actionable pricing recommendations. Export professional PDF reports.",
     url: "/biztools/toolbox/free-pricing-net-profit-calculator",
-    keywords: "pricing calculator, net profit calculator, profit per sale, profit margin, pricing strategy, break even, overhead cost, cost calculator, margin calculator, pricing tool, profitability, price setting, small business pricing, product pricing, service pricing",
+    keywords: "pricing calculator, net profit calculator, profit per sale, profit margin, pricing strategy, break even, overhead cost, cost calculator, margin calculator, pricing tool, profitability, price setting, small business pricing, product pricing, service pricing, set prices, calculate profit, margin analysis, how to price, pricing help, price my product, price my service, profit margins, markup calculator, wholesale pricing, retail pricing",
     icon: Wrench
   },
   {
@@ -382,7 +382,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Innovation Strategy Builder - 60-Minute Guided Tool",
     excerpt: "Build a complete innovation strategy in 60 minutes. Free guided tool with 6-step framework: Foundation, Vision, Opportunities, Portfolio (70-20-10 rule), Metrics, and 90-Day Roadmap. Export professional PDF to share with your leadership team.",
     url: "/biztools/toolbox/innovation-strategy-tool",
-    keywords: "innovation strategy, strategic planning, innovation framework, innovation tool, 70-20-10 portfolio, innovation roadmap, SMB innovation, business innovation, strategy builder, R&D planning",
+    keywords: "innovation strategy, strategic planning, innovation framework, innovation tool, 70-20-10 portfolio, innovation roadmap, SMB innovation, business innovation, strategy builder, R&D planning, create innovation plan, build strategy, innovation ideas, new product development, growth innovation, disruptive innovation, innovative thinking, innovation process, creative strategy, transform business",
     icon: Wrench
   },
   {
@@ -390,7 +390,7 @@ export const searchableTools: SearchableItem[] = [
     title: "BizLeaDeR Leadership Development Bot - Free AI Leadership Mentor",
     excerpt: "Your personal leadership mentor with decades of experience, available 24/7. Navigate difficult conversations, motivate your team, make strategic decisions with confidence.",
     url: "/bizleader/leadership-development-bot",
-    keywords: "leadership bot, AI mentor, leadership coach, leadership development, team motivation, strategic decisions, conflict resolution, delegation, leadership questions, management advice",
+    keywords: "leadership bot, AI mentor, leadership coach, leadership development, team motivation, strategic decisions, conflict resolution, delegation, leadership questions, management advice, ask leadership questions, get leadership help, become better leader, improve leadership, leadership guidance, leadership tips, manage team, lead better, executive coaching, leadership AI, virtual leadership coach",
     icon: Wrench
   },
   {
@@ -398,7 +398,7 @@ export const searchableTools: SearchableItem[] = [
     title: "BizGuide Sherpa - Free AI Business Advisor",
     excerpt: "Your on-demand business advisor available 24/7. Navigate cash flow challenges, scale operations, build teams, and grow strategically.",
     url: "/bizguides/bizguide-sherpa",
-    keywords: "business advisor, AI advisor, business sherpa, cash flow help, scaling advice, team building, business questions, SMB advisor, business mentor",
+    keywords: "business advisor, AI advisor, business sherpa, cash flow help, scaling advice, team building, business questions, SMB advisor, business mentor, ask business questions, get business advice, business guidance, business help, virtual consultant, AI consultant, business AI, free business advice, 24/7 advisor, instant business help",
     icon: Wrench
   },
   {
@@ -406,7 +406,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Innovation Readiness Assessment - Close the Technology Gap in 90 Days",
     excerpt: "Free 20-question assessment to discover your innovation gaps across 4 pillars: Technology Infrastructure, Strategic Clarity, Organizational Capacity, and Customer & Market Sensing. Get personalized recommendations and a 90-day improvement plan.",
     url: "/bizgrowth/technology-innovation-readiness",
-    keywords: "innovation readiness, technology assessment, innovation gap, digital transformation readiness, technology infrastructure, innovation assessment, tech readiness, modernization assessment",
+    keywords: "innovation readiness, technology assessment, innovation gap, digital transformation readiness, technology infrastructure, innovation assessment, tech readiness, modernization assessment, assess innovation, evaluate technology, tech gap analysis, digital readiness, innovation audit, technology audit, innovation score, tech score, am I ready, innovation capability",
     icon: Target
   },
   {
@@ -414,7 +414,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Financial Health Check - Quick Business Assessment",
     excerpt: "Quick financial health assessment for your business. Evaluate key financial metrics and get instant recommendations for improvement.",
     url: "/biztools/financials/health-check",
-    keywords: "financial health, health check, financial assessment, business finances, financial evaluation, money health, fiscal health",
+    keywords: "financial health, health check, financial assessment, business finances, financial evaluation, money health, fiscal health, check finances, evaluate finances, financial checkup, money checkup, financial diagnosis, financial review, quick assessment, instant evaluation, financial score",
     icon: Wrench
   },
   {
@@ -422,7 +422,7 @@ export const searchableTools: SearchableItem[] = [
     title: "FREE 7-Step Strategic Estimating System - Stop Losing Money on Every Job",
     excerpt: "Download the free PDF checklist that transforms your estimating from gut-feel guessing to data-driven profitability. Stop underpricing jobs, eliminate scope creep, and turn every estimate into a profit center.",
     url: "/biztools/toolbox/free-strategic-estimating-system",
-    keywords: "estimating system, strategic estimating, job estimating, project estimating, quote calculator, pricing jobs, service business estimating, contractor estimating, bidding system, job costing, profit margins, scope creep, underpricing, overbidding, estimating checklist, estimating PDF, free estimating tool, job pricing, project pricing, quote template, estimate template, pricing guide, labor costs, material costs, overhead allocation, profit margin calculator, break even estimating, cost plus pricing, value based pricing, competitive bidding, winning bids, losing money on jobs, profitable estimates, estimating mistakes, job profitability, service pricing, trade business estimating, landscaping estimating, plumbing estimating, HVAC estimating, electrical estimating, construction estimating, home service estimating, field service estimating, proposal pricing, job quotes, bid pricing, estimate accuracy, cost estimation, price calculation, markup pricing, margin pricing, free tool, BizTool, business tool",
+    keywords: "estimating system, strategic estimating, job estimating, project estimating, quote calculator, pricing jobs, service business estimating, contractor estimating, bidding system, job costing, profit margins, scope creep, underpricing, overbidding, estimating checklist, estimating PDF, free estimating tool, job pricing, project pricing, quote template, estimate template, pricing guide, labor costs, material costs, overhead allocation, profit margin calculator, break even estimating, cost plus pricing, value based pricing, competitive bidding, winning bids, losing money on jobs, profitable estimates, estimating mistakes, job profitability, service pricing, trade business estimating, landscaping estimating, plumbing estimating, HVAC estimating, electrical estimating, construction estimating, home service estimating, field service estimating, proposal pricing, job quotes, bid pricing, estimate accuracy, cost estimation, price calculation, markup pricing, margin pricing, free tool, BizTool, business tool, how to estimate jobs, create estimates, build quotes, price projects, stop undercharging",
     icon: FileText
   },
   {
@@ -430,7 +430,7 @@ export const searchableTools: SearchableItem[] = [
     title: "Submit Your Business Ideas | Voice of Customer",
     excerpt: "Share your ideas for new business tools, resources, and content. Your ideas fuel the tools, insights, and resources that help your business thrive.",
     url: "/ideas",
-    keywords: "ideas, voice of customer, feedback, suggestions, submit idea, business ideas, feature request, customer input, SMB feedback, business tools ideas, content ideas, resource suggestions",
+    keywords: "ideas, voice of customer, feedback, suggestions, submit idea, business ideas, feature request, customer input, SMB feedback, business tools ideas, content ideas, resource suggestions, share feedback, give input, request feature, suggest tool, submit suggestion, your ideas, customer voice, user feedback, improvement ideas",
     icon: FileText
   },
   {
@@ -438,7 +438,7 @@ export const searchableTools: SearchableItem[] = [
     title: "R2A2 Job Description Builder - Free HR Tool",
     excerpt: "Build clear, effective job descriptions using the R2A2 framework: Results, Responsibilities, Authority, and Accountability. Free drag-and-drop builder with PDF export for HR professionals and hiring managers.",
     url: "/biztools/toolbox/hr/r2a2-job-description-builder",
-    keywords: "R2A2, job description, job description builder, human resources, HR tool, HR, hiring, job posting, job responsibilities, accountability, authority, results, job duties, role description, position description, hiring manager, recruitment, talent acquisition, free tool, BizTool, business tool, workforce planning, job requirements, job template, HR template, employee roles, job expectations, performance expectations, hiring template",
+    keywords: "R2A2, job description, job description builder, human resources, HR tool, HR, hiring, job posting, job responsibilities, accountability, authority, results, job duties, role description, position description, hiring manager, recruitment, talent acquisition, free tool, BizTool, business tool, workforce planning, job requirements, job template, HR template, employee roles, job expectations, performance expectations, hiring template, create job description, write job posting, build job description, new hire, open position, job ad, job listing, role requirements",
     icon: Wrench
   }
 ];

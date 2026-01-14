@@ -296,14 +296,16 @@ const HumanResourcesPrograms = () => {
                   Start HR 101 Free
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-white font-semibold px-8 py-6 text-lg transition-all"
-                >
-                  Take HR Assessment
-                  <Compass className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to="/bizgrowth/hr/human-resources-maturity-assessment">
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-white font-semibold px-8 py-6 text-lg transition-all"
+                  >
+                    Take HR Assessment
+                    <Compass className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
               </motion.div>
 
               {/* CTA Subtext */}

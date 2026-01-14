@@ -68,7 +68,7 @@ const BizToolsToolbox = () => {
     },
     {
       title: "HR & People",
-      tools: ["R2A2 Job Description Builder", "Performance Review Templates", "Onboarding Checklists", "Team Development Plans"],
+      tools: ["HR Maturity Assessment", "R2A2 Job Description Builder", "Performance Review Templates", "Onboarding Checklists", "Team Development Plans"],
       icon: Users,
       color: "text-biz-teal",
       bgColor: "bg-biz-teal/10",
@@ -283,7 +283,7 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator" || tool === "Pricing Net Profit Calculator" || tool === "Strategic Estimating System" || tool === "Cash Flow Projection Tool" || tool === "Break-Even Calculator" || tool === "R2A2 Job Description Builder";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator" || tool === "Pricing Net Profit Calculator" || tool === "Strategic Estimating System" || tool === "Cash Flow Projection Tool" || tool === "Break-Even Calculator" || tool === "R2A2 Job Description Builder" || tool === "HR Maturity Assessment";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
@@ -306,6 +306,8 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/breakeven-analysis-calculator"
                           : tool === "R2A2 Job Description Builder"
                           ? "/biztools/toolbox/hr/r2a2-job-description-builder"
+                          : tool === "HR Maturity Assessment"
+                          ? "/bizgrowth/hr/human-resources-maturity-assessment"
                           : "#";
                         const content = (
                             <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">

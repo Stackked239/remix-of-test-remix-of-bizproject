@@ -245,6 +245,35 @@ const HumanResourcesMaturityAssessment = () => {
     const doc = new jsPDF();
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 20;
+    const contentWidth = pageWidth - (margin * 2);
+
+    // Helper function to draw rounded rectangle
+    const drawRoundedRect = (x: number, y: number, w: number, h: number, r: number, fill: boolean = true, stroke: boolean = false) => {
+      doc.roundedRect(x, y, w, h, r, r, fill ? 'F' : stroke ? 'S' : 'FD');
+    };
+
+    // Helper function to draw progress bar
+    const drawProgressBar = (x: number, y: number, width: number, height: number, percentage: number) => {
+      // Background
+      doc.setFillColor(230, 230, 230);
+      drawRoundedRect(x, y, width, height, 2);
+      
+      // Fill based on percentage
+      const fillWidth = (width * percentage) / 100;
+      if (fillWidth > 0) {
+        if (percentage >= 75) {
+          doc.setFillColor(101, 163, 13); // BizLime - excellent
+        } else if (percentage >= 50) {
+          doc.setFillColor(150, 148, 35); // BizGreen - good
+        } else if (percentage >= 25) {
+          doc.setFillColor(180, 83, 9); // BizCopper - needs work
+        } else {
+          doc.setFillColor(220, 38, 38); // Red - critical
+        }
+        drawRoundedRect(x, y, Math.max(fillWidth, 4), height, 2);
+      }
+    };
 
     // Add logo - load image and maintain aspect ratio
     try {
@@ -255,132 +284,194 @@ const HumanResourcesMaturityAssessment = () => {
         img.onerror = reject;
       });
       
-      // Calculate dimensions maintaining aspect ratio
       const originalWidth = img.width;
       const originalHeight = img.height;
-      const maxLogoWidth = 50; // Max width in mm
+      const maxLogoWidth = 55;
       const aspectRatio = originalWidth / originalHeight;
       const logoWidth = maxLogoWidth;
       const logoHeight = logoWidth / aspectRatio;
       
-      doc.addImage(bizHealthEmailLogo, 'JPEG', 20, 12, logoWidth, logoHeight);
+      doc.addImage(bizHealthEmailLogo, 'JPEG', margin, 10, logoWidth, logoHeight);
     } catch (error) {
-      // Fallback to text if logo fails to load
-      doc.setFontSize(20);
+      doc.setFontSize(22);
+      doc.setFont('helvetica', 'bold');
       doc.setTextColor(36, 37, 83);
-      doc.text('BizHealth.ai', 20, 25);
+      doc.text('BizHealth.ai', margin, 22);
     }
+
+    // Header accent bar
+    doc.setFillColor(36, 37, 83); // BizBlue
+    doc.rect(0, 32, pageWidth, 3, 'F');
+    doc.setFillColor(150, 148, 35); // BizGreen accent
+    doc.rect(0, 35, pageWidth, 1, 'F');
+
+    // Title section with background
+    doc.setFillColor(248, 250, 252);
+    drawRoundedRect(margin, 42, contentWidth, 22, 3);
     
-    // Separator line
-    doc.setDrawColor(150, 148, 35); // BizGreen
-    doc.setLineWidth(0.5);
-    doc.line(20, 35, pageWidth - 20, 35);
-
-    // Title
-    doc.setFontSize(18);
+    doc.setFontSize(20);
+    doc.setFont('helvetica', 'bold');
     doc.setTextColor(36, 37, 83);
-    doc.text('HR Maturity Assessment Results', 20, 48);
+    doc.text('HR Maturity Assessment Results', margin + 8, 56);
 
-    // Assessment Date
+    // Assessment Date - right aligned
     doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 100, 100);
     const date = new Date().toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
     });
-    doc.text(`Assessment Date: ${date}`, 20, 55);
+    doc.text(`Assessment Date: ${date}`, pageWidth - margin - 8, 56, { align: 'right' });
 
-    // Overall Score
+    // Overall Score Card
+    const scoreCardY = 72;
+    doc.setFillColor(36, 37, 83);
+    drawRoundedRect(margin, scoreCardY, contentWidth, 40, 4);
+    
+    // Score circle background
+    doc.setFillColor(255, 255, 255);
+    doc.circle(margin + 25, scoreCardY + 20, 15, 'F');
+    
+    // Score percentage in circle
+    doc.setFontSize(18);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(36, 37, 83);
+    doc.text(`${results.percentage}%`, margin + 25, scoreCardY + 23, { align: 'center' });
+    
+    // Score labels
+    doc.setTextColor(255, 255, 255);
     doc.setFontSize(14);
-    doc.setTextColor(36, 37, 83);
-    doc.text('Overall HR Maturity Score', 20, 68);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Overall HR Maturity Score', margin + 50, scoreCardY + 14);
     
-    doc.setFontSize(24);
-    doc.setTextColor(101, 163, 13); // BizLime
-    doc.text(`${results.percentage}%`, 20, 78);
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'normal');
+    doc.text(`${results.totalScore} out of ${results.maxScore} points`, margin + 50, scoreCardY + 24);
     
-    doc.setFontSize(12);
-    doc.setTextColor(36, 37, 83);
-    doc.text(`(${results.totalScore} out of ${results.maxScore} points)`, 20, 85);
+    // Maturity Level Badge
+    doc.setFillColor(150, 148, 35);
+    drawRoundedRect(margin + 50, scoreCardY + 28, 60, 8, 2);
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(255, 255, 255);
+    doc.text(results.maturityLevel.toUpperCase(), margin + 80, scoreCardY + 33.5, { align: 'center' });
 
-    // Maturity Level
-    doc.setFontSize(14);
-    doc.text('Your HR Maturity Level', 20, 98);
-    
-    doc.setFontSize(12);
-    doc.setTextColor(180, 83, 9); // BizCopper
-    doc.text(results.maturityLevel, 20, 106);
-    
-    // Description
+    // Maturity Level Description
+    let yPos = scoreCardY + 50;
     doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(60, 60, 60);
-    const splitDescription = doc.splitTextToSize(results.levelDescription, pageWidth - 40);
-    doc.text(splitDescription, 20, 113);
+    const splitDescription = doc.splitTextToSize(results.levelDescription, contentWidth - 10);
+    doc.text(splitDescription, margin + 5, yPos);
+    yPos += (splitDescription.length * 5) + 8;
 
-    // Pillar Scores
-    let yPos = 133;
-    doc.setFontSize(14);
+    // Pillar Scores Section
+    doc.setFillColor(248, 250, 252);
+    const pillarCount = Object.keys(results.pillarScores).length;
+    const pillarSectionHeight = 14 + (pillarCount * 14);
+    drawRoundedRect(margin, yPos, contentWidth, pillarSectionHeight, 3);
+    
+    yPos += 10;
+    doc.setFontSize(12);
+    doc.setFont('helvetica', 'bold');
     doc.setTextColor(36, 37, 83);
-    doc.text('Scores by HR Pillar', 20, yPos);
+    doc.text('Scores by HR Pillar', margin + 8, yPos);
     yPos += 10;
 
-    doc.setFontSize(10);
+    doc.setFontSize(9);
     Object.entries(results.pillarScores).forEach(([pillar, scores]) => {
-      const pillarPercentage = ((scores.score / scores.max) * 100).toFixed(0);
+      const pillarPercentage = Math.round((scores.score / scores.max) * 100);
+      
+      // Pillar name
+      doc.setFont('helvetica', 'normal');
       doc.setTextColor(60, 60, 60);
-      doc.text(`${pillar}:`, 25, yPos);
-      doc.setTextColor(101, 163, 13);
-      doc.text(`${pillarPercentage}%`, pageWidth - 35, yPos);
-      yPos += 6;
+      const pillarText = pillar.length > 35 ? pillar.substring(0, 35) + '...' : pillar;
+      doc.text(pillarText, margin + 8, yPos);
+      
+      // Progress bar
+      const barX = margin + 95;
+      const barWidth = 60;
+      drawProgressBar(barX, yPos - 3.5, barWidth, 5, pillarPercentage);
+      
+      // Percentage
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(36, 37, 83);
+      doc.text(`${pillarPercentage}%`, pageWidth - margin - 8, yPos, { align: 'right' });
+      
+      yPos += 12;
     });
 
-    // Recommendations
-    if (yPos > pageHeight - 80) {
+    yPos += 5;
+
+    // Recommendations Section
+    if (yPos > pageHeight - 90) {
       doc.addPage();
-      yPos = 20;
-    } else {
-      yPos += 10;
+      yPos = 25;
     }
 
-    doc.setFontSize(14);
-    doc.setTextColor(36, 37, 83);
-    doc.text('Recommended Next Steps', 20, yPos);
-    yPos += 8;
+    // Section header with icon-like element
+    doc.setFillColor(180, 83, 9); // BizCopper
+    drawRoundedRect(margin, yPos, contentWidth, 10, 3);
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(255, 255, 255);
+    doc.text('✓  Recommended Next Steps', margin + 8, yPos + 7);
+    yPos += 18;
 
-    doc.setFontSize(10);
-    doc.setTextColor(60, 60, 60);
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(50, 50, 50);
+    
     results.recommendations.forEach((rec, index) => {
-      const recText = `${index + 1}. ${rec}`;
-      const splitRec = doc.splitTextToSize(recText, pageWidth - 40);
-      doc.text(splitRec, 20, yPos);
-      yPos += (splitRec.length * 5) + 3;
+      // Numbered circle
+      doc.setFillColor(36, 37, 83);
+      doc.circle(margin + 5, yPos - 1.5, 3.5, 'F');
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(255, 255, 255);
+      doc.text(`${index + 1}`, margin + 5, yPos, { align: 'center' });
       
-      if (yPos > pageHeight - 40) {
+      // Recommendation text
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(50, 50, 50);
+      const splitRec = doc.splitTextToSize(rec, contentWidth - 20);
+      doc.text(splitRec, margin + 14, yPos);
+      yPos += (splitRec.length * 4.5) + 5;
+      
+      if (yPos > pageHeight - 50) {
         doc.addPage();
-        yPos = 20;
+        yPos = 25;
       }
     });
 
-    // Footer with disclaimer
-    const footerY = pageHeight - 25;
+    // Footer
+    const footerY = pageHeight - 22;
+    
+    // Footer separator
     doc.setDrawColor(150, 148, 35);
-    doc.setLineWidth(0.3);
-    doc.line(20, footerY - 5, pageWidth - 20, footerY - 5);
+    doc.setLineWidth(0.5);
+    doc.line(margin, footerY - 8, pageWidth - margin, footerY - 8);
     
+    // Disclaimer
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(120, 120, 120);
+    const disclaimer = 'Disclaimer: This assessment provides a general overview of your HR maturity. It is not a substitute for professional HR consultation. Results should be used as a starting point for discussion with qualified HR professionals.';
+    const splitDisclaimer = doc.splitTextToSize(disclaimer, contentWidth);
+    doc.text(splitDisclaimer, margin, footerY - 2);
+    
+    // Copyright and website
     doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 100, 100);
+    doc.text('© 2026 BizHealth.ai | Your Business Health Analyst', margin, footerY + 8);
     
-    const disclaimer = 'Disclaimer: This assessment provides a general overview of your HR maturity based on your responses. ' +
-      'It is not a substitute for professional HR consultation or legal advice. Results are indicative and should be used as a ' +
-      'starting point for discussion with qualified HR professionals.';
-    
-    const splitDisclaimer = doc.splitTextToSize(disclaimer, pageWidth - 40);
-    doc.text(splitDisclaimer, 20, footerY);
-    
-    doc.setFontSize(8);
-    doc.text('© 2026 BizHealth.ai | Your Business Health Analyst', 20, footerY + 15);
-    doc.text('www.bizhealth.ai', pageWidth - 40, footerY + 15);
+    doc.setTextColor(36, 37, 83);
+    doc.setFont('helvetica', 'bold');
+    doc.text('www.bizhealth.ai', pageWidth - margin, footerY + 8, { align: 'right' });
 
     doc.save('BizHealth-HR-Maturity-Assessment-Results.pdf');
   };

@@ -145,6 +145,7 @@ const VisionPlaybook = lazy(() => import("./pages/bizgrowth/VisionPlaybook"));
 const BusinessGrowthStrategies = lazy(() => import("./pages/bizgrowth/BusinessGrowthStrategies"));
 const HumanResourcesPrograms = lazy(() => import("./pages/bizgrowth/HumanResourcesPrograms"));
 const BusinessIntelligenceBuilder = lazy(() => import("./pages/bizgrowth/growth/BusinessIntelligenceBuilder"));
+const HumanResourcesMaturityAssessment = lazy(() => import("./pages/bizgrowth/hr/HumanResourcesMaturityAssessment"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -201,6 +202,7 @@ const App = () => (
               <Route path="/bizgrowth/business-growth-strategies" element={<BusinessGrowthStrategies />} />
               <Route path="/bizgrowth/human-resources-programs" element={<HumanResourcesPrograms />} />
               <Route path="/bizgrowth/growth/business-intelligence-builder" element={<BusinessIntelligenceBuilder />} />
+              <Route path="/bizgrowth/hr/human-resources-maturity-assessment" element={<HumanResourcesMaturityAssessment />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

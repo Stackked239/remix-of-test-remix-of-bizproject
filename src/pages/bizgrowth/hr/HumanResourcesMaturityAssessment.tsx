@@ -12,6 +12,7 @@ import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import bizHealthLogo from '@/assets/bizhealth-logo-horizontal.jpg';
+import bizHealthEmailLogo from '@/assets/bizhealth-email-logo.jpg';
 
 // Brand colors
 const COLORS = {
@@ -245,14 +246,30 @@ const HumanResourcesMaturityAssessment = () => {
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
 
-    // Header with branding
-    doc.setFontSize(20);
-    doc.setTextColor(36, 37, 83); // BizBlue
-    doc.text('BizHealth.ai', 20, 25);
-    
-    doc.setFontSize(10);
-    doc.setTextColor(100, 100, 100);
-    doc.text('Your Business Health Coach', 20, 31);
+    // Add logo - load image and maintain aspect ratio
+    try {
+      const img = new Image();
+      img.src = bizHealthEmailLogo;
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+      
+      // Calculate dimensions maintaining aspect ratio
+      const originalWidth = img.width;
+      const originalHeight = img.height;
+      const maxLogoWidth = 50; // Max width in mm
+      const aspectRatio = originalWidth / originalHeight;
+      const logoWidth = maxLogoWidth;
+      const logoHeight = logoWidth / aspectRatio;
+      
+      doc.addImage(bizHealthEmailLogo, 'JPEG', 20, 12, logoWidth, logoHeight);
+    } catch (error) {
+      // Fallback to text if logo fails to load
+      doc.setFontSize(20);
+      doc.setTextColor(36, 37, 83);
+      doc.text('BizHealth.ai', 20, 25);
+    }
     
     // Separator line
     doc.setDrawColor(150, 148, 35); // BizGreen
@@ -262,7 +279,7 @@ const HumanResourcesMaturityAssessment = () => {
     // Title
     doc.setFontSize(18);
     doc.setTextColor(36, 37, 83);
-    doc.text('HR Maturity Assessment Results', 20, 45);
+    doc.text('HR Maturity Assessment Results', 20, 48);
 
     // Assessment Date
     doc.setFontSize(10);
@@ -272,37 +289,37 @@ const HumanResourcesMaturityAssessment = () => {
       month: 'long', 
       day: 'numeric' 
     });
-    doc.text(`Assessment Date: ${date}`, 20, 52);
+    doc.text(`Assessment Date: ${date}`, 20, 55);
 
     // Overall Score
     doc.setFontSize(14);
     doc.setTextColor(36, 37, 83);
-    doc.text('Overall HR Maturity Score', 20, 65);
+    doc.text('Overall HR Maturity Score', 20, 68);
     
     doc.setFontSize(24);
     doc.setTextColor(101, 163, 13); // BizLime
-    doc.text(`${results.percentage}%`, 20, 75);
+    doc.text(`${results.percentage}%`, 20, 78);
     
     doc.setFontSize(12);
     doc.setTextColor(36, 37, 83);
-    doc.text(`(${results.totalScore} out of ${results.maxScore} points)`, 20, 82);
+    doc.text(`(${results.totalScore} out of ${results.maxScore} points)`, 20, 85);
 
     // Maturity Level
     doc.setFontSize(14);
-    doc.text('Your HR Maturity Level', 20, 95);
+    doc.text('Your HR Maturity Level', 20, 98);
     
     doc.setFontSize(12);
     doc.setTextColor(180, 83, 9); // BizCopper
-    doc.text(results.maturityLevel, 20, 103);
+    doc.text(results.maturityLevel, 20, 106);
     
     // Description
     doc.setFontSize(10);
     doc.setTextColor(60, 60, 60);
     const splitDescription = doc.splitTextToSize(results.levelDescription, pageWidth - 40);
-    doc.text(splitDescription, 20, 110);
+    doc.text(splitDescription, 20, 113);
 
     // Pillar Scores
-    let yPos = 130;
+    let yPos = 133;
     doc.setFontSize(14);
     doc.setTextColor(36, 37, 83);
     doc.text('Scores by HR Pillar', 20, yPos);

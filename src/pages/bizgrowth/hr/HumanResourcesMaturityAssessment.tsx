@@ -817,9 +817,7 @@ const ResultsView = ({ results, onDownloadPDF, onStartNew, logoSrc }: ResultsVie
       >
         <div 
           className="p-6 sm:p-8 text-white"
-          style={{ 
-            background: `linear-gradient(135deg, ${COLORS.bizBlue} 0%, #3a3b7a 50%, ${COLORS.bizGreen} 100%)` 
-          }}
+          style={{ backgroundColor: COLORS.bizBlue }}
         >
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">

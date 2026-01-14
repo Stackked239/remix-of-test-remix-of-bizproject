@@ -440,6 +440,14 @@ export const searchableTools: SearchableItem[] = [
     url: "/biztools/toolbox/hr/r2a2-job-description-builder",
     keywords: "R2A2, job description, job description builder, human resources, HR tool, HR, hiring, job posting, job responsibilities, accountability, authority, results, job duties, role description, position description, hiring manager, recruitment, talent acquisition, free tool, BizTool, business tool, workforce planning, job requirements, job template, HR template, employee roles, job expectations, performance expectations, hiring template, create job description, write job posting, build job description, new hire, open position, job ad, job listing, role requirements",
     icon: Wrench
+  },
+  {
+    type: "Tool",
+    title: "HR Maturity Assessment - Human Resources Evaluation Tool",
+    excerpt: "Evaluate your organization's HR practices across 8 key pillars. Get personalized recommendations for talent acquisition, performance management, employee engagement, compliance, and workforce planning. Download PDF report.",
+    url: "/bizgrowth/hr/human-resources-maturity-assessment",
+    keywords: "HR maturity, HR assessment, human resources assessment, HR evaluation, HR audit, HR maturity model, people management, talent management, workforce assessment, HR practices, HR health check, evaluate HR, assess human resources, HR score, HR level, HR gaps, HR improvement, HR strategy, workforce planning, talent acquisition, recruiting assessment, onboarding evaluation, performance management, compensation review, employee engagement, retention assessment, learning development, L&D assessment, HR compliance, compliance audit, employee handbook, HR benchmark, HR scorecard, people operations, HRIS, HR systems, HR maturity level, HR readiness, HR transformation, build HR, improve HR, fix HR, HR problems, HR tool, free HR assessment, HR quiz, HR questionnaire, HR survey, HR checklist, HR best practices",
+    icon: Wrench
   }
 ];
 

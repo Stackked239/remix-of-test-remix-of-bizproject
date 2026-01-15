@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
@@ -447,6 +448,7 @@ const CashFlowCrisisManagement = () => {
           </div>
         </article>
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

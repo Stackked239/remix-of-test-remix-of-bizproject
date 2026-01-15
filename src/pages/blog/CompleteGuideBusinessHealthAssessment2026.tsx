@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
@@ -584,6 +585,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
           </div>
         </article>
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

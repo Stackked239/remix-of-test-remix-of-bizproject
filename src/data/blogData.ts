@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Emotional Intelligence: The Invisible Leadership Skill That Costs You Your Best People",
+    excerpt: "Discover how emotional intelligence separates leaders who retain talent from those who wonder why great people keep leaving. Learn the 4 pillars of EQ and common mistakes to avoid.",
+    author: "BizHealth.ai Research Team",
+    date: "January 15, 2026",
+    readTime: "12 min read",
+    category: "Business Leadership, Operations, Business Strategy",
+    slug: "/blog/emotional-intelligence-leadership-skill",
+    imageUrl: "/assets/images/blog/emotional-intelligence-leadership-skill.jpg",
+    altText: "Business leader demonstrating emotional intelligence through empathetic team discussion in modern office environment",
+    keywords: "emotional intelligence leadership, EQ leadership, leadership emotional skills, employee retention, leadership development, emotional intelligence business, EI leadership, soft skills leadership, self-awareness leadership, social awareness, relationship management, empathetic leadership, talent retention, emotional IQ, leadership EQ, team management, employee engagement, leadership skills, emotional intelligence skills, EI training, leadership effectiveness, people management, leadership blind spots, high EQ leaders, emotional intelligence training, leadership soft skills"
+  },
+  {
     title: "Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business",
     excerpt: "Discover why operating without BI costs you market share, customers, and profitability. Learn how affordable BI tools transform gut instinct into data-driven decisions.",
     author: "BizHealth.ai Research Team",

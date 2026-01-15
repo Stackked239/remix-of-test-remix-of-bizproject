@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Calendar, User, Share2, Linkedin, Twitter, BarChart3, Target, Zap, Users, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Building2, LineChart } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
@@ -574,6 +575,7 @@ const TechnologyInnovationGap = () => {
         </article>
       </main>
 
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

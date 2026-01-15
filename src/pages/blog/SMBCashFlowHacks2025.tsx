@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
 import { Calendar, Clock, User, Info } from 'lucide-react';
@@ -407,6 +408,7 @@ const SMBCashFlowHacks2025 = () => {
         </article>
 
         <RelatedArticles articles={relatedArticles} />
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

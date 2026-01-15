@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -861,6 +862,7 @@ const StressTestPricingFramework = () => {
         </div>
       </article>
 
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

@@ -2,6 +2,7 @@ import { ArrowLeft, BookOpen, TrendingUp, Users, AlertTriangle, Target } from "l
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
@@ -479,6 +480,7 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
           <RelatedArticles articles={relatedArticles} />
         </article>
 
+        <GradientDivider />
         <GlobalFooter />
       </div>
     </>

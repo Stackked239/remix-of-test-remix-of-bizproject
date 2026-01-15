@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -351,6 +352,7 @@ const RealTimeAnalyticsSMB = () => {
         }
       ]} />
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

@@ -426,9 +426,9 @@ const EmotionalIntelligenceLeadershipSkill = () => {
               </div>
               
               {/* Pillar 3 */}
-              <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/30 rounded-xl p-6 mb-6">
+              <div className="bg-gradient-to-br from-teal-500/10 to-teal-600/5 border border-teal-500/30 rounded-xl p-6 mb-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-purple-500/20 text-purple-600 dark:text-purple-400 font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                  <div className="bg-teal-500/20 text-teal-600 dark:text-teal-400 font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                     3
                   </div>
                   <div>
@@ -439,31 +439,31 @@ const EmotionalIntelligenceLeadershipSkill = () => {
                     <p className="text-muted-foreground mb-4"><strong className="text-foreground">Socially aware leaders:</strong></p>
                     <ul className="space-y-2 text-muted-foreground mb-6">
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Listen to understand, not to respond</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Pick up on unspoken tension</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Notice when someone is struggling</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Recognize power dynamics and team dynamics</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Understand how others perceive them</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500">•</span>
+                        <span className="text-teal-500">•</span>
                         <span>Adapt their communication style to different people</span>
                       </li>
                     </ul>
-                    <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
+                    <div className="bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
                       <p className="text-foreground font-semibold mb-0">
                         <strong>Why it matters:</strong> A team member who's disengaged usually shows signs before they leave. They're quieter in meetings. Their work quality shifts. Their enthusiasm drops. A leader with social awareness catches these signals early. A leader without it is blindsided.
                       </p>

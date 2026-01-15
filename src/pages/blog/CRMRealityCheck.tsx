@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
@@ -583,6 +584,7 @@ const CRMRealityCheck = () => {
         }
       ]} />
       
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

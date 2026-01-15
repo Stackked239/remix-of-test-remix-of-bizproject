@@ -798,16 +798,28 @@ const EmotionalIntelligenceLeadershipSkill = () => {
       </article>
       
       {/* Related Articles */}
-      <section className="pb-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <RelatedArticles 
-              currentSlug="/blog/emotional-intelligence-leadership-skill"
-              category="Business Leadership"
-            />
-          </div>
-        </div>
-      </section>
+      <RelatedArticles 
+        articles={[
+          {
+            title: "Employee Retention Isn't About Perks—It's About Company Culture and Leadership",
+            slug: "employee-retention-company-culture-leadership",
+            category: "Business Leadership",
+            excerpt: "Discover why ping-pong tables and free snacks aren't saving your retention rates and what actually keeps your best people committed.",
+          },
+          {
+            title: "Identifying SMB Leadership Blind Spots",
+            slug: "identifying-smb-leadership-blind-spots",
+            category: "Business Leadership",
+            excerpt: "Learn how to recognize and address the hidden vulnerabilities that hold small business leaders back from reaching their potential.",
+          },
+          {
+            title: "The Myths, Mistakes, and Importance of Sharing Vision as a Business Owner",
+            slug: "vision-sharing-business-owner",
+            category: "Business Leadership",
+            excerpt: "Discover why 'they should already know' is the vision myth destroying team alignment and learn the 5-step framework to unite your team.",
+          },
+        ]}
+      />
       
       <GlobalFooter />
     </div>

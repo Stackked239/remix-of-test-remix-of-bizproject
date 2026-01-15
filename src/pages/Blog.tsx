@@ -70,9 +70,11 @@ import growthCeilingGutInstinctImage from "@/assets/images/growth-ceiling-gut-in
 import r2a2JobDescriptionsImage from "@/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg";
 import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
 import leadingBlindBIImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
+import emotionalIntelligenceImage from "@/assets/images/blog/emotional-intelligence-leadership-skill.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/emotional-intelligence-leadership-skill": emotionalIntelligenceImage,
   "/blog/leading-blind-business-intelligence-small-business": leadingBlindBIImage,
   "/blog/customer-acquisition-cost-guide-smb": customerAcquisitionCostImage,
   "/blog/r2a2-job-descriptions-role-clarity-small-business-teams": r2a2JobDescriptionsImage,

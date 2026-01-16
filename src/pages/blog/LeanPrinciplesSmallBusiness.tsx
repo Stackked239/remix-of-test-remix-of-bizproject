@@ -286,68 +286,68 @@ const LeanPrinciplesSmallBusiness = () => {
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 mb-10">
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Truck className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Transportation</h4>
+                        <h4 className="font-bold text-slate-900">Transportation</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Moving materials, information, or people unnecessarily. Email chains instead of direct communication, files stored in multiple locations, customers waiting in queues.</p>
+                      <p className="text-slate-600 text-sm">Moving materials, information, or people unnecessarily. Email chains instead of direct communication, files stored in multiple locations, customers waiting in queues.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Package className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Inventory</h4>
+                        <h4 className="font-bold text-slate-900">Inventory</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Excess stock sitting idle. Finished goods waiting for shipment, raw materials overordered, obsolete parts. Every dollar tied up is cash you can't use elsewhere.</p>
+                      <p className="text-slate-600 text-sm">Excess stock sitting idle. Finished goods waiting for shipment, raw materials overordered, obsolete parts. Every dollar tied up is cash you can't use elsewhere.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Motion</h4>
+                        <h4 className="font-bold text-slate-900">Motion</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Unnecessary movement by employees. Poorly organized workstations, files stored inefficiently, processes requiring multiple system logins. Adds up to 5–10% of employee time.</p>
+                      <p className="text-slate-600 text-sm">Unnecessary movement by employees. Poorly organized workstations, files stored inefficiently, processes requiring multiple system logins. Adds up to 5–10% of employee time.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Clock className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Waiting</h4>
+                        <h4 className="font-bold text-slate-900">Waiting</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Idle time when work stops because of bottlenecks. Documents wait for approval, customers wait for response, machines wait for supplies. Costs the same as productive time.</p>
+                      <p className="text-slate-600 text-sm">Idle time when work stops because of bottlenecks. Documents wait for approval, customers wait for response, machines wait for supplies. Costs the same as productive time.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <TrendingUp className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Overproduction</h4>
+                        <h4 className="font-bold text-slate-900">Overproduction</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Making more than needed, faster than needed, before it's needed. Running extra batches "just in case," preparing deliverables beyond what customers asked for.</p>
+                      <p className="text-slate-600 text-sm">Making more than needed, faster than needed, before it's needed. Running extra batches "just in case," preparing deliverables beyond what customers asked for.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Settings className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Overprocessing</h4>
+                        <h4 className="font-bold text-slate-900">Overprocessing</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Processes more complicated than needed. Excessive documentation, redundant approvals, unnecessarily detailed specifications, or features customers don't want.</p>
+                      <p className="text-slate-600 text-sm">Processes more complicated than needed. Excessive documentation, redundant approvals, unnecessarily detailed specifications, or features customers don't want.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <AlertTriangle className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Defects</h4>
+                        <h4 className="font-bold text-slate-900">Defects</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Errors requiring rework, scrap, or repair. Quality failures cost twice: once to fix them, and again in lost time and customer trust.</p>
+                      <p className="text-slate-600 text-sm">Errors requiring rework, scrap, or repair. Quality failures cost twice: once to fix them, and again in lost time and customer trust.</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                        <h4 className="font-bold text-white">Skills (Underutilized)</h4>
+                        <h4 className="font-bold text-slate-900">Skills (Underutilized)</h4>
                       </div>
-                      <p className="text-slate-300 text-sm">Highly skilled people doing routine work. Knowledge locked in one person's head. Innovation suppressed by rigid processes. The most damaging waste.</p>
+                      <p className="text-slate-600 text-sm">Highly skilled people doing routine work. Knowledge locked in one person's head. Innovation suppressed by rigid processes. The most damaging waste.</p>
                     </div>
                   </div>
                   

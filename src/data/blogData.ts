@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Guide to Lean Principles for Small Businesses",
+    excerpt: "Discover how Lean principles eliminate waste and boost efficiency for small businesses. Learn 5S, Kaizen, Kanban, and value stream mapping to cut costs by 15-20% and improve operations.",
+    author: "BizHealth.ai Research Team",
+    date: "January 16, 2026",
+    readTime: "13 min read",
+    category: "Operations, Business Strategy",
+    slug: "/blog/lean-principles-small-business",
+    imageUrl: "/assets/images/blog/lean-principles-small-business-guide.jpg",
+    altText: "Business professional standing at crossroads between chaotic disorganized workspace and lean organized 5S workplace - visual transformation through lean principles implementation",
+    keywords: "lean principles small business, lean manufacturing SMB, 5S methodology, kaizen small business, continuous improvement, value stream mapping, operational efficiency, eliminate waste, lean operations, kanban system, process improvement, operational excellence, lean management, toyota production system, small business efficiency, waste elimination, TIMWOODS, lean transformation, lean implementation, lean tools, lean thinking, pull system, flow efficiency, lean culture, operational waste"
+  },
+  {
     title: "Emotional Intelligence: The Invisible Leadership Skill That Costs You Your Best People",
     excerpt: "Discover how emotional intelligence separates leaders who retain talent from those who wonder why great people keep leaving. Learn the 4 pillars of EQ and common mistakes to avoid.",
     author: "BizHealth.ai Research Team",

@@ -119,6 +119,7 @@ const R2A2JobDescriptions = lazy(() => import("./pages/blog/R2A2JobDescriptions"
 const CustomerAcquisitionCostGuide = lazy(() => import("./pages/blog/CustomerAcquisitionCostGuide"));
 const LeadingBlindBusinessIntelligence = lazy(() => import("./pages/blog/LeadingBlindBusinessIntelligence"));
 const EmotionalIntelligenceLeadershipSkill = lazy(() => import("./pages/blog/EmotionalIntelligenceLeadershipSkill"));
+const LeanPrinciplesSmallBusiness = lazy(() => import("./pages/blog/LeanPrinciplesSmallBusiness"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -273,6 +274,7 @@ const App = () => (
               <Route path="/blog/customer-acquisition-cost-guide-smb" element={<CustomerAcquisitionCostGuide />} />
               <Route path="/blog/leading-blind-business-intelligence-small-business" element={<LeadingBlindBusinessIntelligence />} />
               <Route path="/blog/emotional-intelligence-leadership-skill" element={<EmotionalIntelligenceLeadershipSkill />} />
+              <Route path="/blog/lean-principles-small-business" element={<LeanPrinciplesSmallBusiness />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

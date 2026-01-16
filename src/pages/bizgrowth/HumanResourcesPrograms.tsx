@@ -513,10 +513,12 @@ const HumanResourcesPrograms = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
-                  See how to prevent this
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+                <Link to="/bizgrowth/hr/hr101-foundation-module">
+                  <Button className="w-full bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
+                    See how to prevent this
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
@@ -741,9 +743,11 @@ const HumanResourcesPrograms = () => {
                   <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#2DD4BF] flex-shrink-0 mt-0.5" /> Your HR Roadmap by Business Stage</li>
                   <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#2DD4BF] flex-shrink-0 mt-0.5" /> Getting Started—Your First 3 Actions</li>
                 </ul>
-                <Button className="w-full bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
-                  Start HR 101
-                </Button>
+                <Link to="/bizgrowth/hr/hr101-foundation-module">
+                  <Button className="w-full bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
+                    Start HR 101
+                  </Button>
+                </Link>
                 <p className="text-xs text-[#6B7280] text-center mt-3">Perfect entry point if HR feels overwhelming</p>
               </motion.div>
 
@@ -833,10 +837,12 @@ const HumanResourcesPrograms = () => {
                     </ul>
                   </div>
                   <div className="flex flex-col justify-center">
-                    <Button className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white px-8">
-                      Start Assessment
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <Link to="/bizgrowth/hr/human-resources-maturity-assessment">
+                      <Button className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white px-8">
+                        Start Assessment
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </Link>
                     <p className="text-xs text-[#6B7280] text-center mt-3">Not sure where to start? We'll tell you.</p>
                   </div>
                 </div>
@@ -1353,10 +1359,12 @@ const HumanResourcesPrograms = () => {
             </motion.div>
 
             <div className="text-center mt-12">
-              <Button className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white px-8">
-                Ready to be a success story?
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <Link to="/bizgrowth/hr/hr101-foundation-module">
+                <Button className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white px-8">
+                  Ready to be a success story?
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -1427,16 +1435,20 @@ const HumanResourcesPrograms = () => {
               className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12"
             >
               <motion.div variants={fadeUpVariant}>
-                <Button className="w-full h-auto py-4 flex-col bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
-                  <span className="font-bold">Start HR 101 Now</span>
-                  <span className="text-xs opacity-80">FREE • 75 min • No credit card</span>
-                </Button>
+                <Link to="/bizgrowth/hr/hr101-foundation-module">
+                  <Button className="w-full h-auto py-4 flex-col bg-[#2DD4BF] hover:bg-[#14B8A6] text-white">
+                    <span className="font-bold">Start HR 101 Now</span>
+                    <span className="text-xs opacity-80">FREE • 75 min • No credit card</span>
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div variants={fadeUpVariant}>
-                <Button variant="outline" className="w-full h-auto py-4 flex-col border-2 border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-white">
-                  <span className="font-bold">Take HR Assessment</span>
-                  <span className="text-xs">Get personalized path</span>
-                </Button>
+                <Link to="/bizgrowth/hr/human-resources-maturity-assessment">
+                  <Button variant="outline" className="w-full h-auto py-4 flex-col border-2 border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-white">
+                    <span className="font-bold">Take HR Assessment</span>
+                    <span className="text-xs">Get personalized path</span>
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div variants={fadeUpVariant}>
                 <Button variant="outline" className="w-full h-auto py-4 flex-col border-2 border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-white">

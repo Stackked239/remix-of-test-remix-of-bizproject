@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import { Link } from 'react-router-dom';
 import {
   Clock,
@@ -272,10 +273,11 @@ const HR101FoundationModule = () => {
         provider="BizHealth.ai"
         url="https://bizhealth.ai/bizgrowth/hr/hr101-foundation-module"
       />
+      <PromotionalBanner />
       <GlobalNavigation />
 
       {/* SECTION 1: Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
+      <section className="relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#242553] via-[#2e2f6b] to-[#0e7490]">
           {/* Animated radial gradients */}

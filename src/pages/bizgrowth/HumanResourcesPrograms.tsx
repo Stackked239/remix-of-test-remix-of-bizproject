@@ -289,13 +289,15 @@ const HumanResourcesPrograms = () => {
                 variants={fadeUpVariant}
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
               >
-                <Button 
-                  size="lg"
-                  className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all"
-                >
-                  Start HR 101 Free
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to="/bizgrowth/hr/hr101-foundation-module">
+                  <Button 
+                    size="lg"
+                    className="bg-[#2DD4BF] hover:bg-[#14B8A6] text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all"
+                  >
+                    Start HR 101 Free
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
                 <Link to="/bizgrowth/hr/human-resources-maturity-assessment">
                   <Button 
                     size="lg"

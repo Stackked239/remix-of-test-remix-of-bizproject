@@ -470,6 +470,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/human-resources-programs",
     keywords: "hr, human resources, employee program, hr program, hiring, recruiting, onboarding, talent acquisition, performance management, employee engagement, retention, HR compliance, employee handbook, payroll, compensation, benefits, workforce planning, hr training, hr course, people management, hr module, employee management, staff management, HR systems, personnel, learn HR, HR education, HR for small business, manage employees, hire employees, fire employees, employee issues, HR problems, HR help, people operations, team management, build HR, create HR system, HR basics, HR fundamentals",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "HR 101 Foundation Module - Free HR Training for Small Business",
+    excerpt: "Free 5-lesson HR training program. Learn to build essential HR systems in 75 minutes — hiring, onboarding, compliance, and retention. Perfect for first-time business owners with no HR experience.",
+    url: "/bizgrowth/hr/hr101-foundation-module",
+    keywords: "free hr tools, free human resources tool, free hr training, HR 101, hr 101 foundation, free hr course, free hr resources, hr for beginners, learn hr free, small business hr, hr fundamentals, hr basics, hr essentials, free employee management, startup hr, diy hr, hr without experience, build hr system, hr curriculum, hr education, hr learning, hr program free, free people management, workforce management, talent management, hiring training, onboarding training, retention training, compliance training, hr maturity, employee management free, first time owner hr, no hr experience, hr help, hr guidance, beginner hr, entry level hr, simple hr, easy hr, quick hr training, hr crash course, hr overview, hr introduction, intro to hr",
+    icon: GraduationCap
   }
 ];
 

@@ -668,27 +668,73 @@ const R2A2JobDescriptionBuilder = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 lg:py-24 bg-white">
+      <section id="faq" className="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block px-4 py-1.5 bg-biz-navy/10 text-biz-navy text-sm font-semibold rounded-full mb-4">
+              Got Questions?
+            </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-biz-navy mb-4">
               Frequently Asked Questions
             </h2>
-          </div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Everything you need to know about the R2A2 framework and how to implement it in your business.
+            </p>
+          </motion.div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible onValueChange={handleFAQChange}>
+            <Accordion type="single" collapsible onValueChange={handleFAQChange} className="space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`faq-${index}`} className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left font-display font-semibold text-biz-navy hover:text-biz-navy/80 py-6">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <AccordionItem 
+                    value={`faq-${index}`} 
+                    className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden px-6"
+                  >
+                    <AccordionTrigger className="text-left font-display font-semibold text-biz-navy hover:text-biz-green py-5 [&[data-state=open]]:text-biz-green">
+                      <span className="flex items-center gap-3">
+                        <span className="flex-shrink-0 w-8 h-8 bg-biz-green/10 text-biz-green rounded-full flex items-center justify-center text-sm font-bold">
+                          {index + 1}
+                        </span>
+                        {faq.question}
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-5 pl-11 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
               ))}
             </Accordion>
+            
+            {/* Contact CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center p-6 bg-biz-navy/5 rounded-xl"
+            >
+              <p className="text-biz-navy font-medium mb-3">
+                Still have questions about implementing R2A2?
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center gap-2 text-biz-green font-semibold hover:underline"
+              >
+                Get in touch with our team
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

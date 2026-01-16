@@ -829,10 +829,10 @@ const LeanPrinciplesSmallBusiness = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link 
-                      to="/bizgrowth" 
+                      to="/pricing" 
                       className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
                     >
-                      Get Your Free Assessment
+                      Get Your BizHealth Assessment
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link 
@@ -874,6 +874,8 @@ const LeanPrinciplesSmallBusiness = () => {
           }
         ]}
       />
+      
+      <GradientDivider />
       
       <GlobalFooter />
     </div>

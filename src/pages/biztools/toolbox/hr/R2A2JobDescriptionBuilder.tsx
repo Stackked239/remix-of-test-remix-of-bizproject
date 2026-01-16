@@ -319,7 +319,7 @@ const R2A2JobDescriptionBuilder = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="border-biz-gold/60 bg-biz-gold/10 text-biz-gold hover:bg-biz-gold/20 hover:text-biz-gold font-semibold"
                   onClick={() => scrollToSection('framework')}
                 >
                   Learn the Framework

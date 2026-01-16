@@ -42,5 +42,8 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/real-time-analytics-smb /blog/real-time-analytics-smb-agility 301!
 /privacy-policy /privacy 301!
 
+# Serve static files directly (don't redirect to SPA)
+/downloads/* /downloads/:splat 200!
+
 # SPA fallback - serve pre-rendered HTML or fallback to index.html
 /* /index.html 200

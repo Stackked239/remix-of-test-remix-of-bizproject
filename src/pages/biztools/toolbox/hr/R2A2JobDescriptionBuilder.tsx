@@ -713,8 +713,8 @@ const R2A2JobDescriptionBuilder = () => {
                 R2A2 clarifies roles. But organizational health goes deeper. The BizHealth Assessment diagnoses your business across <strong className="text-white">12 critical areas</strong>—strategy, finance, operations, people, and more.
               </p>
               
-              <div className="bg-white/10 border-l-4 border-biz-gold p-4 rounded-r-lg mb-6">
-                <p className="text-white">
+              <div className="bg-white border-l-4 border-biz-gold p-4 rounded-r-lg mb-6 shadow-sm">
+                <p className="text-biz-navy">
                   <strong className="text-biz-gold">20-25x ROI:</strong> Get a personalized diagnostic report that typically costs 10x more from traditional consultants.
                 </p>
               </div>

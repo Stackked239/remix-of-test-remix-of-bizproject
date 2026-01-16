@@ -650,9 +650,7 @@ const HR101FoundationModule = () => {
                     <div className={`flex gap-3 ${index % 2 === 0 ? 'lg:justify-end' : ''}`}>
                       <a
                         href={lesson.downloadUrl}
-                        download={lesson.downloadUrl.split('/').pop()}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        download
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#65A30D] to-[#84cc16] text-white font-semibold shadow-lg shadow-[#65A30D]/35 hover:-translate-y-0.5 transition-all duration-200 text-sm"
                       >
                         <Download className="w-4 h-4" />
@@ -856,9 +854,7 @@ const HR101FoundationModule = () => {
                 {/* Download Button */}
                 <a
                   href={lesson.downloadUrl}
-                  download={lesson.downloadUrl.split('/').pop()}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download
                   className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-[#65A30D] to-[#84cc16] text-white font-semibold shadow-lg shadow-[#65A30D]/35 hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <Download className="w-4 h-4" />

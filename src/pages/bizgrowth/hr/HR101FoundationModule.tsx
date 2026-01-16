@@ -258,9 +258,9 @@ const HR101FoundationModule = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="HR 101 Foundation Module | BizGrowth Academy"
-        description="Transform HR confusion into HR clarity. A 5-lesson, 75-minute foundational curriculum designed for first-time business owners who need to build basic HR systems — without becoming HR experts."
-        keywords="HR 101, human resources training, small business HR, HR fundamentals, employee management, hiring process, onboarding checklist, HR maturity assessment, BizHealth.ai, BizGrowth Academy"
+        title="HR 101 Foundation Module | Free HR Training for Small Business"
+        description="Free HR training for small business owners. 5 lessons, 75 minutes to build essential HR systems — hiring, onboarding, compliance, and retention. No HR experience required."
+        keywords="free hr tools, free human resources tool, free hr training, HR 101, human resources training, small business HR, HR fundamentals, employee management, hiring process, onboarding checklist, HR maturity assessment, free hr course, free hr resources, hr for beginners, learn hr free, small business human resources, hr basics, hr essentials, free employee management training, startup hr, diy hr, hr without experience, build hr system, hr curriculum, hr education free, hr learning, hr program free, free people management, workforce management free, talent management basics, BizHealth.ai, BizGrowth Academy"
         canonical="https://bizhealth.ai/bizgrowth/hr/hr101-foundation-module"
         ogType="website"
         ogImage="/og-images/og-hr101-foundation-module.jpg"

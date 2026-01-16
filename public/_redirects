@@ -43,7 +43,23 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /privacy-policy /privacy 301!
 
 # Serve static files directly (don't redirect to SPA)
+# This prevents downloadable files from being served as index.html
 /downloads/* /downloads/:splat 200!
+/assets/* /assets/:splat 200!
+/fonts/* /fonts/:splat 200!
+/favicon/* /favicon/:splat 200!
+/og-images/* /og-images/:splat 200!
+
+# Serve files by extension directly (global fix for all locations)
+/*.pdf //:splat.pdf 200!
+/*.xlsx //:splat.xlsx 200!
+/*.xls //:splat.xls 200!
+/*.docx //:splat.docx 200!
+/*.doc //:splat.doc 200!
+/*.pptx //:splat.pptx 200!
+/*.csv //:splat.csv 200!
+/*.zip //:splat.zip 200!
+/*.xml //:splat.xml 200!
 
 # SPA fallback - serve pre-rendered HTML or fallback to index.html
 /* /index.html 200

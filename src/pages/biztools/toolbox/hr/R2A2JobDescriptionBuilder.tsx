@@ -255,7 +255,7 @@ const R2A2JobDescriptionBuilder = () => {
       <GlobalNavigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy to-biz-navy/95 pt-32 pb-16 lg:pb-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-biz-navy via-biz-navy to-biz-navy/95 pt-40 pb-16 lg:pb-24 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-biz-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
@@ -317,7 +317,7 @@ const R2A2JobDescriptionBuilder = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white/40 text-white hover:bg-white/10"
+                  className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
                   onClick={() => scrollToSection('framework')}
                 >
                   Learn the Framework

@@ -271,9 +271,11 @@ const R2A2JobDescriptionBuilder = () => {
               transition={{ duration: 0.6 }}
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-biz-gold/30 text-biz-gold text-sm font-medium mb-6">
-                <FileText className="w-4 h-4" />
-                Free BizTool Playbook
+              <div className="flex justify-center lg:justify-start mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-biz-gold/30 text-biz-gold text-sm font-medium">
+                  <FileText className="w-4 h-4" />
+                  Free BizTool Playbook
+                </div>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">

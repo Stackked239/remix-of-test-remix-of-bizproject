@@ -853,8 +853,26 @@ const LeanPrinciplesSmallBusiness = () => {
       <GradientDivider />
       
       <RelatedArticles 
-        currentSlug="/blog/lean-principles-small-business"
-        category="Operations"
+        articles={[
+          {
+            title: "Scheduling: Why Your Most Underestimated Operational Task Is Bleeding Your Profits",
+            slug: "scheduling-crisis-operational-costs",
+            category: "Operations",
+            excerpt: "Scheduling decisions silently drain $200,000+ annually through labor inefficiency, employee turnover, and lost revenue."
+          },
+          {
+            title: "Scaling Operations Without Losing Control",
+            slug: "scaling-operations-without-losing-control",
+            category: "Operations",
+            excerpt: "Learn how to scale your business operations systematically while maintaining quality and team alignment."
+          },
+          {
+            title: "The Hidden Costs of Manual Processes in SMBs",
+            slug: "hidden-costs-manual-processes",
+            category: "Operations",
+            excerpt: "Discover the true cost of manual processes and learn actionable strategies to eliminate inefficiency."
+          }
+        ]}
       />
       
       <GlobalFooter />

@@ -71,9 +71,11 @@ import r2a2JobDescriptionsImage from "@/assets/images/r2a2-job-descriptions-role
 import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
 import leadingBlindBIImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
 import emotionalIntelligenceImage from "@/assets/images/blog/emotional-intelligence-leadership-skill.jpg";
+import leanPrinciplesImage from "@/assets/images/blog/lean-principles-small-business-guide.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/lean-principles-small-business": leanPrinciplesImage,
   "/blog/emotional-intelligence-leadership-skill": emotionalIntelligenceImage,
   "/blog/leading-blind-business-intelligence-small-business": leadingBlindBIImage,
   "/blog/customer-acquisition-cost-guide-smb": customerAcquisitionCostImage,

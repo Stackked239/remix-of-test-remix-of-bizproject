@@ -84,6 +84,91 @@ const handler = async (req: Request): Promise<Response> => {
         console.log("Subscriber saved to database");
       }
 
+      // Send welcome email to subscriber
+      const welcomeEmailHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 20px;">
+            <tr>
+              <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                  <!-- Header -->
+                  <tr>
+                    <td style="background: linear-gradient(135deg, #0D1B2A 0%, #1B3A5C 100%); padding: 40px 40px 30px; text-align: center;">
+                      <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700;">Welcome to BizHealth.ai!</h1>
+                      <p style="color: #38B2AC; margin: 10px 0 0; font-size: 16px;">Your journey to business growth starts here</p>
+                    </td>
+                  </tr>
+                  <!-- Body -->
+                  <tr>
+                    <td style="padding: 40px;">
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        Thank you for subscribing to the BizHealth.ai newsletter! 🎉
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        You've taken the first step toward transforming your business with AI-powered insights and strategic growth tools.
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 30px;">
+                        Here's what you can expect from us:
+                      </p>
+                      <ul style="color: #333333; font-size: 16px; line-height: 1.8; margin: 0 0 30px; padding-left: 20px;">
+                        <li><strong>Business Health Tips</strong> – Actionable insights to optimize your operations</li>
+                        <li><strong>Product Updates</strong> – Be the first to know about new features</li>
+                        <li><strong>Exclusive Resources</strong> – Access to guides, templates, and tools</li>
+                        <li><strong>Growth Strategies</strong> – Expert advice to scale your business</li>
+                      </ul>
+                      <table cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                        <tr>
+                          <td style="background: linear-gradient(135deg, #38B2AC 0%, #319795 100%); border-radius: 8px;">
+                            <a href="https://bizhealth.ai" style="display: inline-block; padding: 14px 32px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">Explore BizHealth.ai</a>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style="color: #666666; font-size: 14px; line-height: 1.6; margin: 0;">
+                        Questions? Reply to this email or reach out to us at <a href="mailto:support@bizhealth.ai" style="color: #38B2AC;">support@bizhealth.ai</a>
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- Footer -->
+                  <tr>
+                    <td style="background-color: #f8f9fa; padding: 30px 40px; text-align: center; border-top: 1px solid #e9ecef;">
+                      <p style="color: #666666; font-size: 14px; margin: 0 0 10px;">
+                        <strong>BizHealth.ai</strong> – Stop Guessing, Start Growing
+                      </p>
+                      <p style="color: #999999; font-size: 12px; margin: 0;">
+                        You received this email because you subscribed to our newsletter.<br>
+                        <a href="https://bizhealth.ai" style="color: #38B2AC;">Unsubscribe</a> | <a href="https://bizhealth.ai/privacy" style="color: #38B2AC;">Privacy Policy</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
+      `;
+
+      // Send welcome email to subscriber
+      const { error: welcomeError } = await resend.emails.send({
+        from: fromEmail,
+        to: [data.email],
+        subject: "Welcome to BizHealth.ai! 🚀",
+        html: welcomeEmailHtml,
+      });
+
+      if (welcomeError) {
+        console.error("Failed to send welcome email to subscriber:", welcomeError);
+      } else {
+        console.log("Welcome email sent to subscriber:", data.email);
+      }
+
+      // Team notification email
       emailSubject = "New Newsletter Subscriber";
       emailHtml = `
         <h2>New Newsletter Subscriber</h2>
@@ -106,6 +191,7 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     }
 
+    // Send team notification email
     const { data: sendData, error: sendError } = await resend.emails.send({
       from: fromEmail,
       to: ["hello@bizhealth.ai"],

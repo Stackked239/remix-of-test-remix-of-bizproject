@@ -146,48 +146,63 @@ const PlanogramsTransformSmallRetail = () => {
                 </p>
               </div>
               
-              <h3 className="text-2xl font-bold mb-6 text-foreground">A Planogram Includes:</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                  <Layers className="w-6 h-6 text-[hsl(var(--biz-green))]" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-0">A Planogram Includes:</h3>
+              </div>
               
               <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="bg-card border border-border rounded-lg p-4">
+                <div className="bg-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/20 rounded-lg p-4 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
                   <div className="flex items-start gap-3">
-                    <Grid3x3 className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                      <Grid3x3 className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-1">Physical Specifications</h4>
                       <p className="text-sm text-muted-foreground">The dimensions of shelves, fixtures, and display areas in your store</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-lg p-4">
+                <div className="bg-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/20 rounded-lg p-4 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                      <MapPin className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-1">Product Placement</h4>
                       <p className="text-sm text-muted-foreground">Exactly which products go in which locations, from top shelf to bottom</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-lg p-4">
+                <div className="bg-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/20 rounded-lg p-4 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
                   <div className="flex items-start gap-3">
-                    <Eye className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                      <Eye className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-1">Facings</h4>
                       <p className="text-sm text-muted-foreground">How many units of each product should be visible (facing the customer)</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-lg p-4">
+                <div className="bg-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/20 rounded-lg p-4 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
                   <div className="flex items-start gap-3">
-                    <Package className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                      <Package className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-1">Quantities</h4>
                       <p className="text-sm text-muted-foreground">How much inventory should be allocated to each location</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-lg p-4 md:col-span-2">
+                <div className="bg-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/20 rounded-lg p-4 md:col-span-2 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
                   <div className="flex items-start gap-3">
-                    <Target className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
+                      <Target className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-1">Strategic Positioning</h4>
                       <p className="text-sm text-muted-foreground">Which items go in high-traffic zones, at eye level, near checkout, etc.</p>
@@ -291,70 +306,79 @@ const PlanogramsTransformSmallRetail = () => {
             </section>
             
             {/* Why Planograms Matter More for Small Retailers */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Why Planograms Matter More for Small Retailers Than Large Ones</h2>
-              
-              <p className="text-muted-foreground mb-6">
-                This might seem counterintuitive. Large retailers have the resources for sophisticated planogramming. Shouldn't they benefit more? Actually, <strong className="text-foreground">small retailers benefit more because their constraints make execution more critical.</strong>
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
-                      <Store className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+            <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-teal))]/20 py-16 px-6 md:px-12 lg:px-20 rounded-2xl">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-3 rounded-xl">
+                      <Store className="w-8 h-8 text-[hsl(var(--biz-green))]" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Space is Finite and Expensive</h4>
-                      <p className="text-muted-foreground">A large chain can afford inefficient shelf space. You cannot. Every square foot carries a cost. Every inch must earn its place through sales productivity. Planograms help you extract maximum revenue from limited space.</p>
-                    </div>
+                    <h2 className="text-3xl font-bold text-white mb-0">Why Planograms Matter More for Small Retailers Than Large Ones</h2>
                   </div>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
-                      <DollarSign className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                  
+                  <p className="text-slate-300 mb-10">
+                    This might seem counterintuitive. Large retailers have the resources for sophisticated planogramming. Shouldn't they benefit more? Actually, <strong className="text-white">small retailers benefit more because their constraints make execution more critical.</strong>
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                          <Store className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Space is Finite and Expensive</h4>
+                          <p className="text-slate-300">A large chain can afford inefficient shelf space. You cannot. Every square foot carries a cost. Every inch must earn its place through sales productivity. Planograms help you extract maximum revenue from limited space.</p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Capital is Tight</h4>
-                      <p className="text-muted-foreground">Excess inventory is existential for a small business. You can't afford $20K in dead stock. A planogram discipline prevents overstock and keeps cash flowing.</p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                          <DollarSign className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Capital is Tight</h4>
+                          <p className="text-slate-300">Excess inventory is existential for a small business. You can't afford $20K in dead stock. A planogram discipline prevents overstock and keeps cash flowing.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
-                      <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                          <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Team is Small</h4>
+                          <p className="text-slate-300">Standard operating procedures (which planograms establish) create consistency and reduce dependence on individual knowledge. When your team is 5 people, one person leaving is a 20% knowledge loss. Planograms codify decisions and make them repeatable.</p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Team is Small</h4>
-                      <p className="text-muted-foreground">Standard operating procedures (which planograms establish) create consistency and reduce dependence on individual knowledge. When your team is 5 people, one person leaving is a 20% knowledge loss. Planograms codify decisions and make them repeatable.</p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                          <Target className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Competition is Real</h4>
+                          <p className="text-slate-300">You're competing with larger retailers. You can't win on price. You win on experience and curation. A beautifully organized, strategically planned store conveys professionalism and expertise. That's your advantage.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
-                      <Target className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Competition is Real</h4>
-                      <p className="text-muted-foreground">You're competing with larger retailers. You can't win on price. You win on experience and curation. A beautifully organized, strategically planned store conveys professionalism and expertise. That's your advantage.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg shrink-0">
-                      <Repeat className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-1">Change Velocity is Important</h4>
-                      <p className="text-muted-foreground">You can adjust your planogram weekly if needed. You're not constrained by chain-wide approval processes. This agility is an asset—test something, see results in days, adjust, repeat.</p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                          <Repeat className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Change Velocity is Important</h4>
+                          <p className="text-slate-300">You can adjust your planogram weekly if needed. You're not constrained by chain-wide approval processes. This agility is an asset—test something, see results in days, adjust, repeat.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -363,17 +387,22 @@ const PlanogramsTransformSmallRetail = () => {
             
             {/* The Anatomy of a Strategic Planogram */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">The Anatomy of a Strategic Planogram for Small Retail</h2>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-xl">
+                  <Layers className="w-8 h-8 text-[hsl(var(--biz-teal))]" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground mb-0">The Anatomy of a Strategic Planogram for Small Retail</h2>
+              </div>
               
               <p className="text-muted-foreground mb-8">
                 A planogram for a small retail operation doesn't need to be complex. Here are the core principles:
               </p>
               
-              <div className="space-y-8">
-                <div className="bg-card border border-border rounded-lg p-6">
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-[hsl(var(--biz-teal))]/10 to-transparent border-l-4 border-[hsl(var(--biz-teal))] rounded-r-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                      <Eye className="w-6 h-6 text-primary" />
+                    <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-lg shrink-0">
+                      <Eye className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-foreground">Eye Level is Buy Level</h3>
@@ -382,19 +411,19 @@ const PlanogramsTransformSmallRetail = () => {
                       </p>
                       <ul className="space-y-2 mb-4">
                         <li className="flex items-start gap-2 text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-1 shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-teal))] mt-1 shrink-0" />
                           <span>Your highest-margin products</span>
                         </li>
                         <li className="flex items-start gap-2 text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-1 shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-teal))] mt-1 shrink-0" />
                           <span>Your bestsellers</span>
                         </li>
                         <li className="flex items-start gap-2 text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-1 shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-teal))] mt-1 shrink-0" />
                           <span>Items with the highest profit contribution</span>
                         </li>
                         <li className="flex items-start gap-2 text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-green))] mt-1 shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-[hsl(var(--biz-teal))] mt-1 shrink-0" />
                           <span>New products you're promoting</span>
                         </li>
                       </ul>
@@ -405,10 +434,10 @@ const PlanogramsTransformSmallRetail = () => {
                   </div>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-gradient-to-r from-[hsl(var(--biz-teal))]/10 to-transparent border-l-4 border-[hsl(var(--biz-teal))] rounded-r-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
+                    <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-lg shrink-0">
+                      <MapPin className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-foreground">Position by Traffic and Category</h3>
@@ -422,10 +451,10 @@ const PlanogramsTransformSmallRetail = () => {
                   </div>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-gradient-to-r from-[hsl(var(--biz-teal))]/10 to-transparent border-l-4 border-[hsl(var(--biz-teal))] rounded-r-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                      <Layers className="w-6 h-6 text-primary" />
+                    <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-lg shrink-0">
+                      <Layers className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-foreground">Strategic Adjacencies Drive Cross-Selling</h3>
@@ -433,10 +462,10 @@ const PlanogramsTransformSmallRetail = () => {
                         What products do customers buy together? Group them intentionally:
                       </p>
                       <div className="grid grid-cols-2 gap-3 mb-4">
-                        <div className="bg-muted/50 rounded-lg px-3 py-2 text-sm text-muted-foreground">Wine → Cheese and crackers</div>
-                        <div className="bg-muted/50 rounded-lg px-3 py-2 text-sm text-muted-foreground">Coffee → Filters and cream</div>
-                        <div className="bg-muted/50 rounded-lg px-3 py-2 text-sm text-muted-foreground">Shampoo → Conditioner</div>
-                        <div className="bg-muted/50 rounded-lg px-3 py-2 text-sm text-muted-foreground">Chips → Dips</div>
+                        <div className="bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/20 rounded-lg px-3 py-2 text-sm text-muted-foreground">Wine → Cheese and crackers</div>
+                        <div className="bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/20 rounded-lg px-3 py-2 text-sm text-muted-foreground">Coffee → Filters and cream</div>
+                        <div className="bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/20 rounded-lg px-3 py-2 text-sm text-muted-foreground">Shampoo → Conditioner</div>
+                        <div className="bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/20 rounded-lg px-3 py-2 text-sm text-muted-foreground">Chips → Dips</div>
                       </div>
                       <p className="text-muted-foreground">
                         This increases average transaction value and improves customer experience by anticipating needs.
@@ -445,10 +474,10 @@ const PlanogramsTransformSmallRetail = () => {
                   </div>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-gradient-to-r from-[hsl(var(--biz-teal))]/10 to-transparent border-l-4 border-[hsl(var(--biz-teal))] rounded-r-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                      <BarChart3 className="w-6 h-6 text-primary" />
+                    <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-lg shrink-0">
+                      <BarChart3 className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-foreground">Allocate Space by Sales Performance</h3>
@@ -462,10 +491,10 @@ const PlanogramsTransformSmallRetail = () => {
                   </div>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-gradient-to-r from-[hsl(var(--biz-teal))]/10 to-transparent border-l-4 border-[hsl(var(--biz-teal))] rounded-r-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg shrink-0">
-                      <Grid3x3 className="w-6 h-6 text-primary" />
+                    <div className="bg-[hsl(var(--biz-teal))]/20 p-3 rounded-lg shrink-0">
+                      <Grid3x3 className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-foreground">Create Visual Consistency</h3>
@@ -479,60 +508,81 @@ const PlanogramsTransformSmallRetail = () => {
             </section>
             
             {/* The Planogram Discipline */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">The Planogram Discipline: Making It Stick</h2>
-              
-              <p className="text-muted-foreground mb-8">
-                A great planogram means nothing if staff don't execute it. Here are practical ways to ensure consistency:
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Camera className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Create a Photo Reference</h4>
+            <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-gold))]/15 via-[hsl(var(--biz-copper))]/10 to-[hsl(var(--biz-gold))]/5 py-16 px-6 md:px-12 lg:px-20 rounded-2xl border border-[hsl(var(--biz-gold))]/20">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-[hsl(var(--biz-gold))]/20 p-3 rounded-xl">
+                      <ClipboardList className="w-8 h-8 text-[hsl(var(--biz-gold))]" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-foreground mb-0">The Planogram Discipline: Making It Stick</h2>
                   </div>
-                  <p className="text-sm text-muted-foreground">Take clear photos of each shelf/display showing the intended layout. Post these in a binder or on a shared phone folder. When restocking, staff reference the photo.</p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Calendar className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Establish a Reset Schedule</h4>
+                  
+                  <p className="text-muted-foreground mb-10">
+                    A great planogram means nothing if staff don't execute it. Here are practical ways to ensure consistency:
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <Camera className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Create a Photo Reference</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Take clear photos of each shelf/display showing the intended layout. Post these in a binder or on a shared phone folder. When restocking, staff reference the photo.</p>
+                    </div>
+                    
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <Calendar className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Establish a Reset Schedule</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Pick a consistent day/time when the planogram is refreshed. Maybe every Sunday evening or Monday morning. This becomes routine and expected.</p>
+                    </div>
+                    
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <BookOpen className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Train on the "Why"</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Explain that eye-level products are highest priority. Explain that certain products go together. When staff understand the reasoning, they execute with more care.</p>
+                    </div>
+                    
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <Users className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Hold Brief Huddles</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">In your weekly team meeting, spend 5 minutes reviewing one section of the planogram. "This week we're focusing on the coffee aisle. Here's the layout. Here's why Product X is at eye level."</p>
+                    </div>
+                    
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <ClipboardList className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Keep It Simple</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Don't overcomplicate. A clear, easy-to-understand planogram gets executed. A complex one gets ignored.</p>
+                    </div>
+                    
+                    <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                          <UserCheck className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        </div>
+                        <h4 className="font-bold text-foreground">Build Accountability</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Assign section ownership. Sarah owns the beverage aisle. Marcus owns the entryway display. When someone owns a zone, they care for it.</p>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">Pick a consistent day/time when the planogram is refreshed. Maybe every Sunday evening or Monday morning. This becomes routine and expected.</p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <BookOpen className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Train on the "Why"</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Explain that eye-level products are highest priority. Explain that certain products go together. When staff understand the reasoning, they execute with more care.</p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Hold Brief Huddles</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">In your weekly team meeting, spend 5 minutes reviewing one section of the planogram. "This week we're focusing on the coffee aisle. Here's the layout. Here's why Product X is at eye level."</p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <ClipboardList className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Keep It Simple</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Don't overcomplicate. A clear, easy-to-understand planogram gets executed. A complex one gets ignored.</p>
-                </div>
-                
-                <div className="bg-card border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <UserCheck className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-                    <h4 className="font-bold text-foreground">Build Accountability</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Assign section ownership. Sarah owns the beverage aisle. Marcus owns the entryway display. When someone owns a zone, they care for it.</p>
                 </div>
               </div>
             </section>
@@ -714,7 +764,7 @@ const PlanogramsTransformSmallRetail = () => {
             {/* CTA Section */}
             <section className="mb-12 bg-gradient-to-br from-[hsl(var(--biz-navy))] to-[hsl(var(--biz-navy))]/90 rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">
-                Get Your Free Business Health Assessment
+                Get Your Business Health Assessment
               </h2>
               <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
                 Discover how your retail operations, financials, and strategy stack up. Our comprehensive assessment identifies gaps and opportunities across your entire business—including your shelf management practices.
@@ -758,6 +808,7 @@ const PlanogramsTransformSmallRetail = () => {
         ]}
       />
       
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </div>
   );

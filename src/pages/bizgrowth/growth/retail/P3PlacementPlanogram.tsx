@@ -42,6 +42,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
+import heroImage from "@/assets/images/p3-placement-planogram-hero.jpg";
 
 // Animation variants
 const fadeInUp = {
@@ -146,9 +147,14 @@ const P3PlacementPlanogram = () => {
         <meta property="og:description" content="Turn your store layout into a sales machine. Learn strategic product placement to boost sales 15–30% without spending on advertising." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizhealth.ai/bizgrowth/growth/retail/p3-placement-planogram" />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-p3-placement-planogram.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Retail professional holding tablet with planogram software in upscale boutique store with strategic product displays" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="P3: Placement & Planogram | BizGrowth Academy" />
         <meta name="twitter:description" content="Strategic retail placement framework to boost sales 15–30%." />
+        <meta name="twitter:image" content="https://bizhealth.ai/og-images/og-p3-placement-planogram.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(courseSchema)}
         </script>
@@ -159,7 +165,7 @@ const P3PlacementPlanogram = () => {
 
       <main className="min-h-screen">
         {/* HERO SECTION */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(237,42%,20%)] to-[hsl(200,35%,18%)]">
+        <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(237,42%,20%)] to-[hsl(200,35%,18%)]">
           {/* Subtle geometric pattern overlay */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
@@ -182,76 +188,91 @@ const P3PlacementPlanogram = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div 
-              className="max-w-4xl mx-auto text-center"
+              className="max-w-5xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {/* Badge */}
-              <Badge 
-                variant="outline" 
-                className="mb-6 border-[hsl(var(--biz-gold))]/40 bg-[hsl(var(--biz-gold))]/10 text-[hsl(var(--biz-gold))] px-4 py-2 text-sm font-medium"
-              >
-                <Store className="w-4 h-4 mr-2" />
-                The 6 P's for Specialty Retailers · Module 3 of 6
-              </Badge>
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                {/* Left: Text Content */}
+                <div className="text-center lg:text-left">
+                  {/* Badge */}
+                  <Badge 
+                    variant="outline" 
+                    className="mb-6 border-[hsl(var(--biz-gold))]/40 bg-[hsl(var(--biz-gold))]/10 text-[hsl(var(--biz-gold))] px-4 py-2 text-sm font-medium"
+                  >
+                    <Store className="w-4 h-4 mr-2" />
+                    The 6 P's for Specialty Retailers · Module 3 of 6
+                  </Badge>
 
-              {/* H1 Headline */}
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                P3: Placement & Planogram
-              </h1>
+                  {/* H1 Headline */}
+                  <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    P3: Placement & Planogram
+                  </h1>
 
-              {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed font-body">
-                Turn your store layout into a sales machine. Learn where products live, why location matters, and how strategic placement boosts sales 15–30%—without spending on advertising.
-              </p>
+                  {/* Subheadline */}
+                  <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed font-body">
+                    Turn your store layout into a sales machine. Learn where products live, why location matters, and how strategic placement boosts sales 15–30%—without spending on advertising.
+                  </p>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button 
-                  size="lg"
-                  className="bg-[hsl(var(--biz-gold))] hover:bg-[hsl(48,100%,40%)] text-[hsl(var(--biz-navy))] font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-                  asChild
-                >
-                  <a href="/downloads/P3-Placement-Planogram-Curriculum-BizHealth-ai.pdf" download>
-                    <Download className="w-5 h-5 mr-2" />
-                    Start This Module
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost"
-                  size="lg"
-                  onClick={scrollToContent}
-                  className="text-white/90 hover:text-white hover:bg-white/10 text-lg"
-                >
-                  See What's Included
-                  <ChevronDown className="w-5 h-5 ml-2" />
-                </Button>
-              </div>
+                  {/* CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <Button 
+                      size="lg"
+                      className="bg-[hsl(var(--biz-gold))] hover:bg-[hsl(48,100%,40%)] text-[hsl(var(--biz-navy))] font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                      asChild
+                    >
+                      <a href="/downloads/P3-Placement-Planogram-Curriculum-BizHealth-ai.pdf" download>
+                        <Download className="w-5 h-5 mr-2" />
+                        Start This Module
+                      </a>
+                    </Button>
+                    <Button 
+                      variant="ghost"
+                      size="lg"
+                      onClick={scrollToContent}
+                      className="text-white/90 hover:text-white hover:bg-white/10 text-lg"
+                    >
+                      See What's Included
+                      <ChevronDown className="w-5 h-5 ml-2" />
+                    </Button>
+                  </div>
+                </div>
 
-              {/* Stage Indicator */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5 text-white/90 text-sm">
-                <BarChart3 className="w-4 h-4 text-[hsl(var(--biz-gold))]" />
-                <span>Best for: Growth & Scaling stages · 5–7 hours total</span>
+                {/* Right: Hero Image */}
+                <div className="relative">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                    <img 
+                      src={heroImage}
+                      alt="Retail professional holding tablet displaying planogram software in a modern boutique store with strategic product displays for women's apparel, accessories, and home decor"
+                      className="w-full h-auto object-cover"
+                      loading="eager"
+                    />
+                    {/* Overlay accent */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--biz-navy))]/30 to-transparent" />
+                  </div>
+                  {/* Decorative glow */}
+                  <div className="absolute -inset-4 bg-[hsl(var(--biz-gold))]/10 rounded-3xl blur-2xl -z-10" />
+                </div>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* PROBLEM SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-[#F5F5F2]" id="problem-section">
+        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-[#F5F5F2] to-white" id="problem-section">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/20 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
+                <Badge variant="outline" className="mb-4 border-red-400/40 bg-red-50 text-red-600 uppercase tracking-wider text-xs font-semibold">
                   The Challenge
                 </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-6">
                   Your Layout Might Be Costing You Sales
                 </h2>
                 <p className="text-lg text-[hsl(var(--biz-grey))] max-w-3xl mx-auto leading-relaxed">
-                  Most specialty retailers arrange products based on gut feel, available space, or "the way it's always been done." But research shows that strategic placement alone can increase sales by 15–30%—and 52% of all retail purchases happen at eye level.
+                  Most specialty retailers arrange products based on gut feel, available space, or "the way it's always been done." But research shows that strategic placement alone can increase sales by <span className="text-[hsl(var(--biz-green))] font-semibold">15–30%</span>—and <span className="text-[hsl(var(--biz-gold))] font-semibold">52% of all retail purchases happen at eye level</span>.
                 </p>
               </div>
 
@@ -267,26 +288,38 @@ const P3PlacementPlanogram = () => {
                   {
                     icon: Target,
                     title: "Random Placement",
-                    description: "Products end up wherever they fit, not where they sell best. High-margin items get buried while slow movers take prime spots."
+                    description: "Products end up wherever they fit, not where they sell best. High-margin items get buried while slow movers take prime spots.",
+                    accentColor: "red"
                   },
                   {
                     icon: TrendingDown,
                     title: "No Measurement",
-                    description: "You can't tell which zones, displays, or shelves actually drive revenue. Every layout change is a guess."
+                    description: "You can't tell which zones, displays, or shelves actually drive revenue. Every layout change is a guess.",
+                    accentColor: "orange"
                   },
                   {
                     icon: RefreshCw,
                     title: "Chaotic Resets",
-                    description: "Seasonal changes and new arrivals create confusion. Staff don't know the logic behind placement decisions."
+                    description: "Seasonal changes and new arrivals create confusion. Staff don't know the logic behind placement decisions.",
+                    accentColor: "amber"
                   }
                 ].map((card, idx) => (
                   <motion.div 
                     key={idx}
                     variants={fadeInUp}
-                    className="bg-white rounded-xl p-6 shadow-[var(--shadow-card)] border border-[hsl(var(--biz-navy))]/8 hover:border-[hsl(var(--biz-gold))]/40 hover:shadow-lg transition-all duration-300"
+                    className={`bg-white rounded-xl p-6 shadow-lg border-l-4 ${
+                      card.accentColor === 'red' ? 'border-l-red-400' : 
+                      card.accentColor === 'orange' ? 'border-l-orange-400' : 'border-l-amber-400'
+                    } hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center mb-4">
-                      <card.icon className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
+                      card.accentColor === 'red' ? 'bg-red-100' : 
+                      card.accentColor === 'orange' ? 'bg-orange-100' : 'bg-amber-100'
+                    }`}>
+                      <card.icon className={`w-6 h-6 ${
+                        card.accentColor === 'red' ? 'text-red-500' : 
+                        card.accentColor === 'orange' ? 'text-orange-500' : 'text-amber-500'
+                      }`} />
                     </div>
                     <h3 className="font-heading font-semibold text-xl text-[hsl(var(--biz-navy))] mb-3">
                       {card.title}
@@ -299,21 +332,23 @@ const P3PlacementPlanogram = () => {
               </motion.div>
 
               {/* Transition Text */}
-              <p className="text-center text-lg text-[hsl(var(--biz-navy))] font-medium max-w-3xl mx-auto">
-                This module gives you the framework to fix all three—starting with a simple 30-day pilot you can run in one section of your store.
-              </p>
+              <div className="text-center bg-[hsl(var(--biz-navy))]/5 rounded-xl p-6 border border-[hsl(var(--biz-navy))]/10">
+                <p className="text-lg text-[hsl(var(--biz-navy))] font-medium max-w-3xl mx-auto">
+                  This module gives you the framework to fix all three—starting with a simple <span className="text-[hsl(var(--biz-gold))] font-bold">30-day pilot</span> you can run in one section of your store.
+                </p>
+              </div>
             </div>
           </div>
         </AnimatedSection>
 
         {/* VALUE PROPOSITION SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-white">
+        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-white to-[hsl(var(--biz-green))]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-green))]/30 text-[hsl(var(--biz-green))] uppercase tracking-wider text-xs font-semibold">
-                  Your Outcomes
+                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-green))]/40 bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))] uppercase tracking-wider text-xs font-semibold">
+                  ✓ Your Outcomes
                 </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-4">
                   What You'll Walk Away With
@@ -363,9 +398,9 @@ const P3PlacementPlanogram = () => {
                   <motion.div 
                     key={idx}
                     variants={fadeInUp}
-                    className="bg-[#FAFAF8] rounded-xl p-6 border border-[hsl(var(--biz-navy))]/6 hover:border-[hsl(var(--biz-green))]/30 hover:shadow-md transition-all duration-300"
+                    className="bg-white rounded-xl p-6 border-2 border-[hsl(var(--biz-green))]/20 hover:border-[hsl(var(--biz-green))]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-[hsl(var(--biz-green))]/10 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--biz-green))]/20 to-[hsl(var(--biz-green))]/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <card.icon className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                     </div>
                     <h3 className="font-heading font-semibold text-lg text-[hsl(var(--biz-navy))] mb-2">
@@ -382,8 +417,14 @@ const P3PlacementPlanogram = () => {
         </AnimatedSection>
 
         {/* METRICS STRIP */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--biz-navy))] to-[hsl(237,42%,22%)]">
-          <div className="container mx-auto px-4">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--biz-navy))] via-[hsl(237,42%,25%)] to-[hsl(var(--biz-navy))] relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-[hsl(var(--biz-gold))] rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-[hsl(var(--biz-green))] rounded-full blur-3xl" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto">
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -393,7 +434,7 @@ const P3PlacementPlanogram = () => {
                 variants={staggerContainer}
               >
                 {[
-                  { number: "15–30%", label: "Sales Increase", subtext: "from strategic placement alone" },
+                  { number: "15–30%", label: "Sales Increase", subtext: "from strategic placement alone", highlight: true },
                   { number: "10–20%", label: "Higher Basket Size", subtext: "via cross-merchandising tactics" },
                   { number: "52%", label: "Eye-Level Purchases", subtext: "of all retail sales happen here" },
                   { number: "5–7", label: "Hours to Complete", subtext: "at your own pace" }
@@ -401,13 +442,13 @@ const P3PlacementPlanogram = () => {
                   <motion.div 
                     key={idx}
                     variants={fadeInUp}
-                    className="text-center"
+                    className={`text-center p-6 rounded-xl ${metric.highlight ? 'bg-white/10 border border-[hsl(var(--biz-gold))]/30' : ''}`}
                   >
-                    <div className="text-3xl md:text-4xl font-bold text-[hsl(var(--biz-gold))] mb-2">
+                    <div className="text-3xl md:text-5xl font-bold text-[hsl(var(--biz-gold))] mb-2 drop-shadow-lg">
                       {metric.number}
                     </div>
-                    <div className="text-white font-semibold mb-1">{metric.label}</div>
-                    <div className="text-white/60 text-sm">{metric.subtext}</div>
+                    <div className="text-white font-semibold mb-1 text-lg">{metric.label}</div>
+                    <div className="text-white/70 text-sm">{metric.subtext}</div>
                   </motion.div>
                 ))}
               </motion.div>
@@ -416,13 +457,13 @@ const P3PlacementPlanogram = () => {
         </section>
 
         {/* CURRICULUM SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-[#FAFAF8]">
+        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-[#FAFAF8] to-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/20 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
-                  Complete Curriculum
+                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/30 bg-[hsl(var(--biz-navy))]/5 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
+                  📚 Complete Curriculum
                 </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-4">
                   What You'll Learn
@@ -430,7 +471,7 @@ const P3PlacementPlanogram = () => {
               </div>
 
               {/* Intro Callout */}
-              <div className="bg-white rounded-xl p-6 border-l-4 border-[hsl(var(--biz-gold))] shadow-sm mb-8">
+              <div className="bg-gradient-to-r from-[hsl(var(--biz-gold))]/10 to-[hsl(var(--biz-gold))]/5 rounded-xl p-6 border-l-4 border-[hsl(var(--biz-gold))] shadow-md mb-8">
                 <p className="text-[hsl(var(--biz-grey))] leading-relaxed">
                   <strong className="text-[hsl(var(--biz-navy))]">6 comprehensive sections + 3 hands-on exercises</strong> designed to be completed in 5–7 hours total. Move at your own pace—each lesson is 20–45 minutes. No business degree required.
                 </p>
@@ -486,20 +527,28 @@ const P3PlacementPlanogram = () => {
                   <AccordionItem 
                     key={module.num} 
                     value={`module-${module.num}`}
-                    className="bg-white rounded-xl border border-[hsl(var(--biz-navy))]/8 overflow-hidden data-[state=open]:border-[hsl(var(--biz-gold))]/40"
+                    className={`bg-white rounded-xl border-2 overflow-hidden transition-all duration-300 ${
+                      module.highlight 
+                        ? 'border-[hsl(var(--biz-gold))]/50 shadow-md' 
+                        : 'border-[hsl(var(--biz-navy))]/10 data-[state=open]:border-[hsl(var(--biz-gold))]/40'
+                    }`}
                   >
-                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-[hsl(var(--biz-gold))]/5 [&[data-state=open]]:border-b [&[data-state=open]]:border-[hsl(var(--biz-navy))]/8">
+                    <AccordionTrigger className="px-6 py-5 hover:no-underline hover:bg-[hsl(var(--biz-gold))]/5 [&[data-state=open]]:border-b [&[data-state=open]]:border-[hsl(var(--biz-navy))]/8">
                       <div className="flex items-center gap-4 text-left w-full">
-                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[hsl(var(--biz-navy))] text-white flex items-center justify-center font-bold">
+                        <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg shadow-sm ${
+                          module.highlight 
+                            ? 'bg-gradient-to-br from-[hsl(var(--biz-gold))] to-[hsl(48,100%,40%)] text-[hsl(var(--biz-navy))]' 
+                            : 'bg-[hsl(var(--biz-navy))] text-white'
+                        }`}>
                           {module.num}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 flex-wrap">
-                            <h3 className="font-heading font-semibold text-[hsl(var(--biz-navy))]">
+                            <h3 className="font-heading font-semibold text-lg text-[hsl(var(--biz-navy))]">
                               {module.title}
                             </h3>
                             {module.highlight && (
-                              <Badge className="bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))] text-xs">
+                              <Badge className="bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))] text-xs shadow-sm">
                                 ⭐ Most Popular
                               </Badge>
                             )}
@@ -508,8 +557,8 @@ const P3PlacementPlanogram = () => {
                         </div>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4">
-                      <div className="pl-14">
+                    <AccordionContent className="px-6 pb-5">
+                      <div className="pl-16">
                         <p className="text-[hsl(var(--biz-grey))] mb-4 leading-relaxed">
                           {module.description}
                         </p>
@@ -518,7 +567,7 @@ const P3PlacementPlanogram = () => {
                             <Badge 
                               key={idx}
                               variant="outline" 
-                              className="border-[hsl(var(--biz-green))]/30 text-[hsl(var(--biz-green))] text-xs"
+                              className="border-[hsl(var(--biz-green))]/40 bg-[hsl(var(--biz-green))]/5 text-[hsl(var(--biz-green))] text-xs font-medium"
                             >
                               {tag}
                             </Badge>
@@ -534,13 +583,13 @@ const P3PlacementPlanogram = () => {
         </AnimatedSection>
 
         {/* LEARNING PATH SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-white">
+        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-white to-[hsl(var(--biz-gold))]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/20 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
-                  Your Journey
+                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-gold))]/40 bg-[hsl(var(--biz-gold))]/10 text-[hsl(var(--biz-gold))] uppercase tracking-wider text-xs font-semibold">
+                  🎯 Your Journey
                 </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-4">
                   How To Move Through This Module
@@ -550,7 +599,7 @@ const P3PlacementPlanogram = () => {
               {/* 4-Step Path */}
               <div className="relative">
                 {/* Connection Line (desktop) */}
-                <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[hsl(var(--biz-gold))] via-[hsl(var(--biz-green))] to-[hsl(var(--biz-navy))]" />
+                <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-1 bg-gradient-to-r from-[hsl(var(--biz-gold))] via-[hsl(var(--biz-green))] to-[hsl(var(--biz-navy))] rounded-full shadow-sm" />
                 
                 <motion.div 
                   className="grid grid-cols-1 md:grid-cols-4 gap-8"
@@ -565,37 +614,46 @@ const P3PlacementPlanogram = () => {
                       icon: BookOpen,
                       title: "Learn the Framework",
                       description: "Understand why placement matters and the science behind it (Sections 1–3).",
-                      status: "Start here"
+                      status: "Start here",
+                      color: "gold"
                     },
                     {
                       num: 2,
                       icon: Eye,
                       title: "Audit Your Store",
-                      description: "Walk your space, map zones, observe traffic patterns (Exercises 1–2)."
+                      description: "Walk your space, map zones, observe traffic patterns (Exercises 1–2).",
+                      color: "green"
                     },
                     {
                       num: 3,
                       icon: PenTool,
                       title: "Build Your Planogram",
-                      description: "Create a simple visual map for one section using the 30-day pilot framework."
+                      description: "Create a simple visual map for one section using the 30-day pilot framework.",
+                      color: "blue"
                     },
                     {
                       num: 4,
                       icon: Activity,
                       title: "Measure & Adjust",
-                      description: "Track results, refine based on data, scale to other sections."
+                      description: "Track results, refine based on data, scale to other sections.",
+                      color: "navy"
                     }
                   ].map((step, idx) => (
                     <motion.div 
                       key={idx}
                       variants={fadeInUp}
-                      className="text-center relative"
+                      className="text-center relative bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-[hsl(var(--biz-navy))]/5"
                     >
-                      <div className="relative z-10 mx-auto w-16 h-16 rounded-full bg-[hsl(var(--biz-navy))] text-white flex items-center justify-center mb-4 shadow-lg">
+                      <div className={`relative z-10 mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg ${
+                        step.color === 'gold' ? 'bg-gradient-to-br from-[hsl(var(--biz-gold))] to-[hsl(48,100%,40%)] text-[hsl(var(--biz-navy))]' :
+                        step.color === 'green' ? 'bg-gradient-to-br from-[hsl(var(--biz-green))] to-[hsl(142,45%,35%)] text-white' :
+                        step.color === 'blue' ? 'bg-gradient-to-br from-[hsl(200,70%,50%)] to-[hsl(200,70%,40%)] text-white' :
+                        'bg-gradient-to-br from-[hsl(var(--biz-navy))] to-[hsl(237,42%,25%)] text-white'
+                      }`}>
                         <step.icon className="w-7 h-7" />
                       </div>
                       {step.status && (
-                        <Badge className="absolute -top-2 left-1/2 -translate-x-1/2 bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))] text-xs">
+                        <Badge className="absolute top-3 right-3 bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))] text-xs shadow-sm">
                           {step.status}
                         </Badge>
                       )}
@@ -614,13 +672,13 @@ const P3PlacementPlanogram = () => {
         </AnimatedSection>
 
         {/* WHAT'S INCLUDED SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-[#F5F5F2]">
+        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-[#F5F5F2] to-[hsl(var(--biz-navy))]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/20 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
-                  Everything You Need
+                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-gold))]/40 bg-[hsl(var(--biz-gold))]/10 text-[hsl(var(--biz-gold))] uppercase tracking-wider text-xs font-semibold">
+                  📦 Everything You Need
                 </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-4">
                   What's Included
@@ -639,7 +697,8 @@ const P3PlacementPlanogram = () => {
                   {
                     icon: ClipboardList,
                     title: "3 Hands-On Exercises",
-                    description: "Map your zones, track traffic patterns, build your first DIY planogram."
+                    description: "Map your zones, track traffic patterns, build your first DIY planogram.",
+                    highlight: true
                   },
                   {
                     icon: LineChart,
@@ -670,10 +729,18 @@ const P3PlacementPlanogram = () => {
                   <motion.div 
                     key={idx}
                     variants={fadeInUp}
-                    className="bg-white rounded-xl p-6 border border-[hsl(var(--biz-navy))]/6 hover:shadow-md transition-all duration-300"
+                    className={`bg-white rounded-xl p-6 border-2 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ${
+                      feature.highlight 
+                        ? 'border-[hsl(var(--biz-gold))]/40 shadow-md' 
+                        : 'border-[hsl(var(--biz-navy))]/8'
+                    }`}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                      feature.highlight 
+                        ? 'bg-gradient-to-br from-[hsl(var(--biz-gold))] to-[hsl(48,100%,40%)]' 
+                        : 'bg-gradient-to-br from-[hsl(var(--biz-gold))]/20 to-[hsl(var(--biz-gold))]/5'
+                    }`}>
+                      <feature.icon className={`w-7 h-7 ${feature.highlight ? 'text-[hsl(var(--biz-navy))]' : 'text-[hsl(var(--biz-gold))]'}`} />
                     </div>
                     <h3 className="font-heading font-semibold text-lg text-[hsl(var(--biz-navy))] mb-2">
                       {feature.title}

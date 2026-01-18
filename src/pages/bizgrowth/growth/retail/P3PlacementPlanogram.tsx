@@ -224,7 +224,7 @@ const P3PlacementPlanogram = () => {
                     >
                       <a href="/downloads/P3-Placement-Planogram-Curriculum-BizHealth-ai.pdf" download>
                         <Download className="w-5 h-5 mr-2" />
-                        Start This Module
+                        Download This Module
                       </a>
                     </Button>
                     <Button 
@@ -342,7 +342,7 @@ const P3PlacementPlanogram = () => {
         </AnimatedSection>
 
         {/* VALUE PROPOSITION SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-gradient-to-b from-white to-[hsl(var(--biz-green))]/5">
+        <AnimatedSection className="py-10 md:py-16 bg-gradient-to-b from-white to-[hsl(var(--biz-green))]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {/* Section Header */}
@@ -444,7 +444,7 @@ const P3PlacementPlanogram = () => {
                     variants={fadeInUp}
                     className={`text-center p-6 rounded-xl ${metric.highlight ? 'bg-white/10 border border-[hsl(var(--biz-gold))]/30' : ''}`}
                   >
-                    <div className="text-3xl md:text-5xl font-bold text-[hsl(var(--biz-gold))] mb-2 drop-shadow-lg">
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(var(--biz-gold))] mb-2 drop-shadow-lg whitespace-nowrap">
                       {metric.number}
                     </div>
                     <div className="text-white font-semibold mb-1 text-lg">{metric.label}</div>
@@ -738,9 +738,9 @@ const P3PlacementPlanogram = () => {
                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
                       feature.highlight 
                         ? 'bg-gradient-to-br from-[hsl(var(--biz-gold))] to-[hsl(48,100%,40%)]' 
-                        : 'bg-gradient-to-br from-[hsl(var(--biz-gold))]/20 to-[hsl(var(--biz-gold))]/5'
+                        : 'bg-gradient-to-br from-[hsl(var(--biz-green))]/20 to-[hsl(var(--biz-green))]/5'
                     }`}>
-                      <feature.icon className={`w-7 h-7 ${feature.highlight ? 'text-[hsl(var(--biz-navy))]' : 'text-[hsl(var(--biz-gold))]'}`} />
+                      <feature.icon className={`w-7 h-7 ${feature.highlight ? 'text-[hsl(var(--biz-navy))]' : 'text-[hsl(var(--biz-green))]'}`} />
                     </div>
                     <h3 className="font-heading font-semibold text-lg text-[hsl(var(--biz-navy))] mb-2">
                       {feature.title}
@@ -795,8 +795,8 @@ const P3PlacementPlanogram = () => {
                 </div>
 
                 {/* Not For You Column */}
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                  <h3 className="font-heading font-semibold text-lg text-gray-500 mb-4 flex items-center gap-2">
+                <div className="bg-red-50/50 rounded-xl p-6 border border-red-200/60">
+                  <h3 className="font-heading font-semibold text-lg text-red-500 mb-4 flex items-center gap-2">
                     <X className="w-5 h-5" />
                     Not For You If...
                   </h3>
@@ -806,8 +806,8 @@ const P3PlacementPlanogram = () => {
                       "You're looking for instant results without implementation",
                       "You want someone to do it for you (this is DIY education)"
                     ].map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-gray-500">
-                        <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start gap-3 text-red-600/80">
+                        <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -1016,6 +1016,9 @@ const P3PlacementPlanogram = () => {
           </div>
         </AnimatedSection>
       </main>
+
+      {/* Gradient Divider */}
+      <div className="w-full h-1 bg-gradient-to-r from-[hsl(var(--biz-green))] via-[hsl(var(--biz-gold))] to-[hsl(var(--biz-green))]" role="presentation" aria-hidden="true" />
 
       <GlobalFooter />
     </>

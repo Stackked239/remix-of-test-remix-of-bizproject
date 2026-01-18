@@ -321,62 +321,62 @@ const PlanogramsTransformSmallRetail = () => {
                   </p>
                   
                   <div className="space-y-4">
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-lg">
                       <div className="flex items-start gap-4">
-                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
                           <Store className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white mb-1">Space is Finite and Expensive</h4>
-                          <p className="text-slate-300">A large chain can afford inefficient shelf space. You cannot. Every square foot carries a cost. Every inch must earn its place through sales productivity. Planograms help you extract maximum revenue from limited space.</p>
+                          <h4 className="font-bold text-slate-900 mb-1">Space is Finite and Expensive</h4>
+                          <p className="text-slate-600">A large chain can afford inefficient shelf space. You cannot. Every square foot carries a cost. Every inch must earn its place through sales productivity. Planograms help you extract maximum revenue from limited space.</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-lg">
                       <div className="flex items-start gap-4">
-                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
                           <DollarSign className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white mb-1">Capital is Tight</h4>
-                          <p className="text-slate-300">Excess inventory is existential for a small business. You can't afford $20K in dead stock. A planogram discipline prevents overstock and keeps cash flowing.</p>
+                          <h4 className="font-bold text-slate-900 mb-1">Capital is Tight</h4>
+                          <p className="text-slate-600">Excess inventory is existential for a small business. You can't afford $20K in dead stock. A planogram discipline prevents overstock and keeps cash flowing.</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-lg">
                       <div className="flex items-start gap-4">
-                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
                           <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white mb-1">Team is Small</h4>
-                          <p className="text-slate-300">Standard operating procedures (which planograms establish) create consistency and reduce dependence on individual knowledge. When your team is 5 people, one person leaving is a 20% knowledge loss. Planograms codify decisions and make them repeatable.</p>
+                          <h4 className="font-bold text-slate-900 mb-1">Team is Small</h4>
+                          <p className="text-slate-600">Standard operating procedures (which planograms establish) create consistency and reduce dependence on individual knowledge. When your team is 5 people, one person leaving is a 20% knowledge loss. Planograms codify decisions and make them repeatable.</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-lg">
                       <div className="flex items-start gap-4">
-                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
                           <Target className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white mb-1">Competition is Real</h4>
-                          <p className="text-slate-300">You're competing with larger retailers. You can't win on price. You win on experience and curation. A beautifully organized, strategically planned store conveys professionalism and expertise. That's your advantage.</p>
+                          <h4 className="font-bold text-slate-900 mb-1">Competition is Real</h4>
+                          <p className="text-slate-600">You're competing with larger retailers. You can't win on price. You win on experience and curation. A beautifully organized, strategically planned store conveys professionalism and expertise. That's your advantage.</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5">
+                    <div className="bg-white rounded-xl p-5 shadow-lg">
                       <div className="flex items-start gap-4">
-                        <div className="bg-[hsl(var(--biz-green))]/30 p-2 rounded-lg shrink-0">
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg shrink-0">
                           <Repeat className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white mb-1">Change Velocity is Important</h4>
-                          <p className="text-slate-300">You can adjust your planogram weekly if needed. You're not constrained by chain-wide approval processes. This agility is an asset—test something, see results in days, adjust, repeat.</p>
+                          <h4 className="font-bold text-slate-900 mb-1">Change Velocity is Important</h4>
+                          <p className="text-slate-600">You can adjust your planogram weekly if needed. You're not constrained by chain-wide approval processes. This agility is an asset—test something, see results in days, adjust, repeat.</p>
                         </div>
                       </div>
                     </div>

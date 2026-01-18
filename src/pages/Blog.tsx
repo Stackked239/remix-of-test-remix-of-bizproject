@@ -72,9 +72,11 @@ import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-c
 import leadingBlindBIImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
 import emotionalIntelligenceImage from "@/assets/images/blog/emotional-intelligence-leadership-skill.jpg";
 import leanPrinciplesImage from "@/assets/images/blog/lean-principles-small-business-guide.jpg";
+import planogramsRetailImage from "@/assets/images/blog/planograms-transform-small-retail-operations.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/planograms-transform-small-retail-operations": planogramsRetailImage,
   "/blog/lean-principles-small-business": leanPrinciplesImage,
   "/blog/emotional-intelligence-leadership-skill": emotionalIntelligenceImage,
   "/blog/leading-blind-business-intelligence-small-business": leadingBlindBIImage,

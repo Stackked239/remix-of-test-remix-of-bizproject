@@ -113,9 +113,9 @@ const PlanogramsTransformSmallRetail = () => {
                 But the costs go deeper than lost sales. Poor shelf organization creates operational chaos: constant restocking, inventory mistakes, confused staff, customer frustration, and inefficient use of your most valuable asset—retail space.
               </p>
               
-              <div className="bg-card border border-border rounded-lg p-6 mb-8">
+              <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-bold mb-4 text-foreground flex items-center gap-2">
-                  <DollarSign className="w-5 h-5 text-primary" />
+                  <DollarSign className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                   Every Inch Has a Price Tag
                 </h3>
                 <p className="text-muted-foreground">

@@ -525,8 +525,8 @@ const PlanogramsTransformSmallRetail = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <Camera className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <Camera className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Create a Photo Reference</h4>
                       </div>
@@ -535,8 +535,8 @@ const PlanogramsTransformSmallRetail = () => {
                     
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <Calendar className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <Calendar className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Establish a Reset Schedule</h4>
                       </div>
@@ -545,8 +545,8 @@ const PlanogramsTransformSmallRetail = () => {
                     
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <BookOpen className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <BookOpen className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Train on the "Why"</h4>
                       </div>
@@ -555,8 +555,8 @@ const PlanogramsTransformSmallRetail = () => {
                     
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <Users className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Hold Brief Huddles</h4>
                       </div>
@@ -565,8 +565,8 @@ const PlanogramsTransformSmallRetail = () => {
                     
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <ClipboardList className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <ClipboardList className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Keep It Simple</h4>
                       </div>
@@ -575,8 +575,8 @@ const PlanogramsTransformSmallRetail = () => {
                     
                     <div className="bg-background/80 backdrop-blur-sm border border-[hsl(var(--biz-gold))]/30 rounded-xl p-5 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
-                          <UserCheck className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                        <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                          <UserCheck className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         </div>
                         <h4 className="font-bold text-foreground">Build Accountability</h4>
                       </div>

@@ -512,8 +512,8 @@ const PlanogramsTransformSmallRetail = () => {
               <div className="bg-gradient-to-br from-[hsl(var(--biz-gold))]/15 via-[hsl(var(--biz-copper))]/10 to-[hsl(var(--biz-gold))]/5 py-16 px-6 md:px-12 lg:px-20 rounded-2xl border border-[hsl(var(--biz-gold))]/20">
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-[hsl(var(--biz-gold))]/20 p-3 rounded-xl">
-                      <ClipboardList className="w-8 h-8 text-[hsl(var(--biz-gold))]" />
+                    <div className="bg-[hsl(var(--biz-green))]/20 p-3 rounded-xl">
+                      <ClipboardList className="w-8 h-8 text-[hsl(var(--biz-green))]" />
                     </div>
                     <h2 className="text-3xl font-bold text-foreground mb-0">The Planogram Discipline: Making It Stick</h2>
                   </div>

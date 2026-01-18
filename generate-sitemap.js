@@ -123,6 +123,7 @@ const ogImageMap = {
   '/blog/vision-sharing-business-owner': '/og-images/og-vision-sharing-business-owner.jpg',
   '/blog/impact-over-information': '/og-images/og-impact-over-information.jpg',
   '/blog/risk-management': '/og-images/og-risk-management.jpg',
+  '/blog/planograms-transform-small-retail-operations': '/og-images/og-planograms-transform-small-retail.jpg',
 };
 
 /**

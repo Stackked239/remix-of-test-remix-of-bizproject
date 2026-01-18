@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Shelf Space Secrets: How Planograms Transform Small Retail Operations",
+    excerpt: "Discover how planograms eliminate lost revenue and operational chaos in small retail. Learn strategic shelf placement, inventory management, and visual merchandising to boost sales 5-15%.",
+    author: "BizHealth.ai Research Team",
+    date: "January 18, 2026",
+    readTime: "13 min read",
+    category: "Operations, Business Strategy, Business Intelligence",
+    slug: "/blog/planograms-transform-small-retail-operations",
+    imageUrl: "/assets/images/blog/planograms-transform-small-retail-operations.jpg",
+    altText: "Retail store professional with organized premium merchandise displays showcasing strategic planogram shelf placement for small retail operations",
+    keywords: "planograms small retail, retail shelf management, visual merchandising, retail store layout, shelf space optimization, product placement strategy, retail operations, inventory management, cross-selling retail, eye level shelf placement, retail profitability, small retail efficiency, store organization, merchandise planning, retail space optimization, planogram software, shelf allocation, retail display strategy, product visibility, retail customer experience, planogram, store layout, retail inventory, shelf management, visual merchandising tips"
+  },
+  {
     title: "The Guide to Lean Principles for Small Businesses",
     excerpt: "Discover how Lean principles eliminate waste and boost efficiency for small businesses. Learn 5S, Kaizen, Kanban, and value stream mapping to cut costs by 15-20% and improve operations.",
     author: "BizHealth.ai Research Team",

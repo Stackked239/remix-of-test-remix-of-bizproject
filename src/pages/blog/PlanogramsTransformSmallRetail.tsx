@@ -736,8 +736,26 @@ const PlanogramsTransformSmallRetail = () => {
       
       {/* Related Articles */}
       <RelatedArticles 
-        currentSlug="/blog/planograms-transform-small-retail-operations"
-        category="Operations"
+        articles={[
+          {
+            title: "The Guide to Lean Principles for Small Businesses",
+            slug: "lean-principles-small-business",
+            category: "Operations",
+            excerpt: "Discover how Lean principles eliminate waste and boost efficiency for small businesses."
+          },
+          {
+            title: "Scaling Operations Without Losing Control",
+            slug: "scaling-operations-without-losing-control",
+            category: "Operations",
+            excerpt: "Learn proven strategies to scale your operations while maintaining quality and efficiency."
+          },
+          {
+            title: "The Hidden Costs of Manual Processes in SMBs",
+            slug: "hidden-costs-manual-processes",
+            category: "Operations",
+            excerpt: "Discover the true cost of manual processes and learn actionable strategies to eliminate inefficiency."
+          }
+        ]}
       />
       
       <GlobalFooter />

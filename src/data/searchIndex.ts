@@ -252,6 +252,14 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
+    title: "Growth & Scaling Blog Articles",
+    excerpt: "Scale your business sustainably with proven growth strategies. Learn frameworks for scaling operations, overcoming growth ceilings, unit economics, and building systems for long-term success.",
+    url: "/blog/growth-scaling",
+    keywords: "growth, scaling, scale business, grow business, business growth, scaling strategies, growth strategies, sustainable growth, scaling operations, growth ceiling, unit economics, CAC, LTV, customer acquisition cost, growth readiness, business expansion, scaling challenges, hypergrowth, scaling framework, grow revenue, increase sales, expand business, business development, growth hacking, scale up, scaling smb, small business growth, growth trap, scaling paradox",
+    icon: FileText
+  },
+  {
+    type: "Page",
     title: "Financial Management Blog Articles",
     excerpt: "Financial management strategies for SMBs. Articles on cash flow management, financial health metrics, budgeting, and financial planning for small business success.",
     url: "/blog/financial-management",

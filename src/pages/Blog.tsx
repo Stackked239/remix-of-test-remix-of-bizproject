@@ -168,7 +168,7 @@ const Blog = () => {
     "Operations",
     "Technology",
     "Risk Management",
-    "Business Intelligence",
+    "Growth & Scaling",
     "Business Leadership"
   ];
 

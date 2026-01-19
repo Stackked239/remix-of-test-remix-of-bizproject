@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/growth-scaling</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-growth-scaling.jpg</image:loc>
+      <image:title>Growth &amp; Scaling Strategies for SMBs | BizHealth.ai</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/renewal-imperative-legacy-business-rebirth</loc>
     <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>

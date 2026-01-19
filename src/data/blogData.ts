@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Why Small Businesses Fail: Chasing Sales Instead of Pursuing Profits",
+    excerpt: "Discover why 60% of small businesses fail within a decade by prioritizing revenue over profitability. Learn the 5 hidden costs of sales obsession and how to shift from volume-driven to profit-focused growth.",
+    author: "BizHealth.ai Research Team",
+    date: "January 19, 2026",
+    readTime: "12 min read",
+    category: "Business Strategy, Financial Management, Operations, Business Intelligence",
+    slug: "/blog/chasing-sales-not-profits",
+    imageUrl: "/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg",
+    altText: "Small business owner analyzing profit margins vs sales volume on financial dashboard - illustration of shifting from revenue-focused to profit-focused growth strategy",
+    keywords: "why small businesses fail, chasing sales vs profits, revenue vs profitability, small business failure, profit margin optimization, sales obsession, volume trap, profit-focused growth, unit economics, customer profitability, sales at any cost, discounting trap, unprofitable customers, break-even analysis, profitability metrics, gross margin, net profit, contribution margin, customer lifetime value, acquisition cost, CAC LTV ratio, sales growth trap, revenue chasing, profitable growth, sustainable business, SMB profitability, small business profits, business failure reasons, profit strategies, margin management, profitability focus, revenue addiction, vanity metrics, meaningful metrics, profit per customer, customer segmentation, pricing strategy, discount dangers, operational efficiency, cost management, profit leaks, hidden costs, business sustainability, financial health, cash flow, working capital, debt spiral, inventory costs, supplier negotiation, overhead reduction, break-even point, contribution analysis, profit optimization, value-based pricing, customer value, profitable customers, unprofitable revenue, sales volume vs profit, growth at all costs, sustainable growth, business intelligence, financial management, operations management, business strategy 2026"
+  },
+  {
     title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
     excerpt: "Learn how to transform your legacy business without losing what made it great. Discover frameworks for product portfolio evaluation, modernization strategy, and sustainable digital transformation.",
     author: "BizHealth.ai Research Team",

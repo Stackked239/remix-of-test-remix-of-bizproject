@@ -27,6 +27,7 @@ import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2
 import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -43,6 +44,17 @@ interface BlogPost {
 
 // Business Intelligence blog posts
 const blogPosts: BlogPost[] = [
+  {
+    id: '0',
+    slug: 'renewal-imperative-legacy-business-rebirth',
+    title: 'The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great',
+    excerpt: 'Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.',
+    featuredImage: renewalImperativeImage,
+    subcategory: 'Data-Driven Decisions',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 19, 2026',
+    readTime: 18
+  },
   {
     id: '1',
     slug: 'overcoming-bi-challenges-smb',

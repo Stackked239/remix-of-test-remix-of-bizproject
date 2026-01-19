@@ -25,6 +25,18 @@ import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
+import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
+import renewalImperativeImage from "@/assets/images/blog/renewal-imperative-legacy-business-rebirth.jpg";
+import growthCeilingImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
+import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
+import growthTrapImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
+import feastFamineImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
+import blindSpotOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
+import pricingStressTestImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
+import blindSpot2025Image from "@/assets/business-blind-spots-assessment.jpg";
+import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
+import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
+import techInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -43,28 +55,138 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    slug: 'operational-resilience',
-    title: 'Building Operational Resilience in Uncertain Times',
-    excerpt: 'Learn how to build a resilient business that can adapt and thrive through disruption, economic uncertainty, and unexpected challenges.',
-    featuredImage: operationalResilienceImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth Research Team',
-    publishedAt: 'Dec 5, 2025',
+    slug: 'chasing-sales-not-profits',
+    title: 'Why Small Businesses Fail: Chasing Sales Instead of Pursuing Profits',
+    excerpt: 'Discover why 60% of small businesses fail within a decade by prioritizing revenue over profitability. Learn the 5 hidden costs of sales obsession.',
+    featuredImage: chasingSalesNotProfitsImage,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 19, 2026',
     readTime: 12
   },
   {
     id: '2',
-    slug: 'warning-signs-business',
-    title: 'Critical Warning Signs Your Business Needs Immediate Attention',
-    excerpt: 'Recognize the early warning signs of business trouble before they escalate into major problems that threaten your company\'s survival.',
-    featuredImage: warningSignsImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth Research Team',
-    publishedAt: 'Nov 18, 2025',
-    readTime: 10
+    slug: 'renewal-imperative-legacy-business-rebirth',
+    title: 'The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great',
+    excerpt: 'Learn how to transform your legacy business without losing what made it great. Discover frameworks for sustainable digital transformation.',
+    featuredImage: renewalImperativeImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 19, 2026',
+    readTime: 13
   },
   {
     id: '3',
+    slug: 'growth-ceiling-gut-instinct-scaling',
+    title: 'The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won\'t Scale It',
+    excerpt: 'Your gut instinct got your business off the ground—but it won\'t scale it. Learn why data-driven decision-making is essential at scale.',
+    featuredImage: growthCeilingImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 11, 2026',
+    readTime: 10
+  },
+  {
+    id: '4',
+    slug: 'estimating-crisis-service-business-profitability',
+    title: 'Avoid The Estimating Crisis: Why Service Business Profitability Collapses',
+    excerpt: 'A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect profitability.',
+    featuredImage: estimatingCrisisImage,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 9, 2026',
+    readTime: 12
+  },
+  {
+    id: '5',
+    slug: 'growth-trap-or-growth-engine',
+    title: 'Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow',
+    excerpt: '78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess growth readiness.',
+    featuredImage: growthTrapImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 8, 2026',
+    readTime: 10
+  },
+  {
+    id: '6',
+    slug: 'feast-or-famine-cycle-small-business',
+    title: 'Breaking the Feast-or-Famine Cycle That Destroys Small Businesses',
+    excerpt: 'Learn how to break the destructive feast-or-famine revenue cycle. Discover 7 proven strategies for stable, predictable growth.',
+    featuredImage: feastFamineImage,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 4, 2026',
+    readTime: 14
+  },
+  {
+    id: '7',
+    slug: 'business-blind-spots-operational-issues-invisible-leadership',
+    title: 'The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible',
+    excerpt: 'Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually.',
+    featuredImage: blindSpotOperationalImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 28, 2025',
+    readTime: 16
+  },
+  {
+    id: '8',
+    slug: 'stress-test-pricing-framework-margins-cash-flow',
+    title: 'Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow',
+    excerpt: 'Discover a proven pricing stress-test framework to optimize your small business margins and cash flow.',
+    featuredImage: pricingStressTestImage,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 26, 2025',
+    readTime: 12
+  },
+  {
+    id: '9',
+    slug: 'technology-innovation-gap-competitive-advantage',
+    title: 'Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap',
+    excerpt: 'Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency.',
+    featuredImage: techInnovationGapImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 28, 2025',
+    readTime: 17
+  },
+  {
+    id: '10',
+    slug: 'success-begins-with-2026-strategy',
+    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
+    excerpt: 'Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for risk mitigation.',
+    featuredImage: businessStrategyPlanningImage,
+    subcategory: 'Business Continuity',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 20, 2025',
+    readTime: 12
+  },
+  {
+    id: '11',
+    slug: 'identifying-smb-leadership-blind-spots',
+    title: 'Identifying Small & Mid-Size Business Leadership Blind Spots',
+    excerpt: 'Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in leaders.',
+    featuredImage: leadershipBlindSpotsImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 23, 2025',
+    readTime: 12
+  },
+  {
+    id: '12',
+    slug: 'small-business-blind-spots-2025',
+    title: 'The Business Blind Spots Costing SMB Leaders $50K+ Annually',
+    excerpt: 'Discover the 5 dangerous business blind spots draining SMB profits. Learn to identify gaps before they cost you $50K+ annually.',
+    featuredImage: blindSpot2025Image,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 4, 2025',
+    readTime: 11
+  },
+  {
+    id: '13',
     slug: 'smb-scaling-paradox-2025',
     title: 'The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business',
     excerpt: 'Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks.',
@@ -75,21 +197,32 @@ const blogPosts: BlogPost[] = [
     readTime: 10
   },
   {
-    id: '4',
-    slug: 'identifying-smb-leadership-blind-spots',
-    title: 'Identifying Small & Mid-Size Business Leadership Blind Spots',
-    excerpt: 'Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in their leaders.',
-    featuredImage: leadershipBlindSpotsImage,
+    id: '14',
+    slug: 'cash-flow-crisis-management',
+    title: 'Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025',
+    excerpt: 'Master cash flow management for small business in 2025. Learn crisis prevention strategies and cash flow planning tips.',
+    featuredImage: cashFlowCrisisImage,
     subcategory: 'Crisis Management',
     author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 23, 2025',
-    readTime: 12
+    publishedAt: 'Nov 3, 2025',
+    readTime: 8
   },
   {
-    id: '5',
+    id: '15',
+    slug: 'Q4-Cost-Cuts-2025',
+    title: 'Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses',
+    excerpt: 'Navigate Q4 2025 cash crunches with proven operational cost fixes. Learn efficiency diagnostics strategies.',
+    featuredImage: q4CostCutsImage,
+    subcategory: 'Financial Risk',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 3, 2025',
+    readTime: 5
+  },
+  {
+    id: '16',
     slug: 'small-business-survival-checklist-2025',
     title: 'The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew',
-    excerpt: 'Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses from failures.',
+    excerpt: 'Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses.',
     featuredImage: survivalChecklistImage,
     subcategory: 'Crisis Management',
     author: 'BizHealth.ai Research Team',
@@ -97,14 +230,25 @@ const blogPosts: BlogPost[] = [
     readTime: 11
   },
   {
-    id: '6',
-    slug: 'success-begins-with-2026-strategy',
-    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
-    excerpt: 'Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for risk mitigation and growth analytics.',
-    featuredImage: businessStrategyPlanningImage,
+    id: '17',
+    slug: 'warning-signs-business',
+    title: 'Critical Warning Signs Your Business Needs Immediate Attention',
+    excerpt: 'Recognize the early warning signs of business trouble before they escalate into major problems.',
+    featuredImage: warningSignsImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Sep 12, 2025',
+    readTime: 10
+  },
+  {
+    id: '18',
+    slug: 'operational-resilience',
+    title: 'Building Operational Resilience in Uncertain Times',
+    excerpt: 'Learn how to build a resilient business that can adapt and thrive through disruption and unexpected challenges.',
+    featuredImage: operationalResilienceImage,
     subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 20, 2025',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Sep 12, 2025',
     readTime: 12
   }
 ];
@@ -117,9 +261,10 @@ const RiskManagement = () => {
   const subcategories = [
     'All',
     'Business Continuity',
+    'Financial Risk',
+    'Crisis Management',
     'Insurance',
     'Compliance',
-    'Crisis Management',
     'Cybersecurity Risk'
   ];
 

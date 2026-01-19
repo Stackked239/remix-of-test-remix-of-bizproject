@@ -37,11 +37,11 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 19, 2026",
     readTime: "12 min read",
-    category: "Business Strategy, Financial Management, Operations, Business Intelligence",
+    category: "Business Strategy, Financial Management, Operations, Business Intelligence, Risk Management",
     slug: "/blog/chasing-sales-not-profits",
     imageUrl: "/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg",
     altText: "Small business owner analyzing profit margins vs sales volume on financial dashboard - illustration of shifting from revenue-focused to profit-focused growth strategy",
-    keywords: "why small businesses fail, chasing sales vs profits, revenue vs profitability, small business failure, profit margin optimization, sales obsession, volume trap, profit-focused growth, unit economics, customer profitability, sales at any cost, discounting trap, unprofitable customers, break-even analysis, profitability metrics, gross margin, net profit, contribution margin, customer lifetime value, acquisition cost, CAC LTV ratio, sales growth trap, revenue chasing, profitable growth, sustainable business, SMB profitability, small business profits, business failure reasons, profit strategies, margin management, profitability focus, revenue addiction, vanity metrics, meaningful metrics, profit per customer, customer segmentation, pricing strategy, discount dangers, operational efficiency, cost management, profit leaks, hidden costs, business sustainability, financial health, cash flow, working capital, debt spiral, inventory costs, supplier negotiation, overhead reduction, break-even point, contribution analysis, profit optimization, value-based pricing, customer value, profitable customers, unprofitable revenue, sales volume vs profit, growth at all costs, sustainable growth, business intelligence, financial management, operations management, business strategy 2026"
+    keywords: "why small businesses fail, chasing sales vs profits, revenue vs profitability, small business failure, profit margin optimization, sales obsession, volume trap, profit-focused growth, unit economics, customer profitability, sales at any cost, discounting trap, unprofitable customers, break-even analysis, profitability metrics, gross margin, net profit, contribution margin, customer lifetime value, acquisition cost, CAC LTV ratio, sales growth trap, revenue chasing, profitable growth, sustainable business, SMB profitability, small business profits, business failure reasons, profit strategies, margin management, profitability focus, revenue addiction, vanity metrics, meaningful metrics, profit per customer, customer segmentation, pricing strategy, discount dangers, operational efficiency, cost management, profit leaks, hidden costs, business sustainability, financial health, cash flow, working capital, debt spiral, inventory costs, supplier negotiation, overhead reduction, break-even point, contribution analysis, profit optimization, value-based pricing, customer value, profitable customers, unprofitable revenue, sales volume vs profit, growth at all costs, sustainable growth, business intelligence, financial management, operations management, business strategy 2026, risk management, financial risk, profitability risk, business failure risk"
   },
   {
     title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
@@ -49,11 +49,11 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 19, 2026",
     readTime: "13 min read",
-    category: "Business Strategy, Operations, Business Intelligence",
+    category: "Business Strategy, Operations, Business Intelligence, Risk Management",
     slug: "/blog/renewal-imperative-legacy-business-rebirth",
     imageUrl: "/assets/images/blog/renewal-imperative-legacy-business-rebirth.jpg",
     altText: "Business owner at crossroads between traditional legacy retail shop and modern tech-forward office environment representing business transformation and renewal",
-    keywords: "legacy business transformation, business renewal strategy, digital transformation SMB, modernize established business, business rebirth, product portfolio optimization, legacy system modernization, business transformation framework 2026, innovator's dilemma, hybrid business approach, established business change, business evolution, company lifespan, competitive advantage, customer relationships, operational modernization, technology adoption, business innovation, transformation timeline, organizational change, skill gaps, business modernization, strategic advantage, business assessment, operational gaps, portfolio inefficiencies, strategic blind spots, business health, renewal imperative, legacy business, business transformation, digital transformation, modernization, established business, rebirth, portfolio evaluation, transformation strategy"
+    keywords: "legacy business transformation, business renewal strategy, digital transformation SMB, modernize established business, business rebirth, product portfolio optimization, legacy system modernization, business transformation framework 2026, innovator's dilemma, hybrid business approach, established business change, business evolution, company lifespan, competitive advantage, customer relationships, operational modernization, technology adoption, business innovation, transformation timeline, organizational change, skill gaps, business modernization, strategic advantage, business assessment, operational gaps, portfolio inefficiencies, strategic blind spots, business health, renewal imperative, legacy business, business transformation, digital transformation, modernization, established business, rebirth, portfolio evaluation, transformation strategy, risk management, obsolescence risk, business continuity, competitive risk"
   },
   {
     title: "Shelf Space Secrets: How Planograms Transform Small Retail Operations",
@@ -133,11 +133,11 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 11, 2026",
     readTime: "10 min read",
-    category: "Business Strategy, Business Intelligence, Technology",
+    category: "Business Strategy, Business Intelligence, Technology, Risk Management",
     slug: "/blog/growth-ceiling-gut-instinct-scaling",
     imageUrl: "/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg",
     altText: "Business owner contemplating growth challenges between chaotic startup environment and organized scaled operations - gut instinct versus data-driven decision-making",
-    keywords: "gut instinct business, scaling small business, data-driven decisions, business growth ceiling, founder's dilemma, intuitive leadership, SMB scaling challenges, decision-making at scale, business intelligence, transition to data-driven, business blind spots, systematic decision-making, leadership scaling, business complexity, growth ceiling, scaling business, data-driven growth, intuition vs data, business owner decision making, scaling beyond intuition, founder limitations, business systems, scaling leadership, business metrics, decision making framework"
+    keywords: "gut instinct business, scaling small business, data-driven decisions, business growth ceiling, founder's dilemma, intuitive leadership, SMB scaling challenges, decision-making at scale, business intelligence, transition to data-driven, business blind spots, systematic decision-making, leadership scaling, business complexity, growth ceiling, scaling business, data-driven growth, intuition vs data, business owner decision making, scaling beyond intuition, founder limitations, business systems, scaling leadership, business metrics, decision making framework, risk management, scaling risk, decision risk"
   },
   {
     title: "Scheduling: Why Your Most Underestimated Operational Task Is Likely Bleeding Your Profits",
@@ -157,11 +157,11 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 9, 2026",
     readTime: "12 min read",
-    category: "Financials, Operations, Business Strategy, Technology",
+    category: "Financials, Operations, Business Strategy, Technology, Risk Management",
     slug: "/blog/estimating-crisis-service-business-profitability",
     imageUrl: "/assets/images/estimating-crisis-service-business-profitability.jpg",
     altText: "Service business team discussing project estimates at commercial job site - accurate estimating prevents profitability collapse",
-    keywords: "service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, estimating system, indirect costs, sales delivery alignment, contingency planning, historical data, change management, service business, estimating, pricing, profitability, job costing, scope creep, quoting, job quotes, estimates, quote accuracy, proposal pricing, bid accuracy, service quotes, project quotes, cost estimates, labor estimates"
+    keywords: "service business estimating, project estimating errors, service business profitability, estimating mistakes, job costing, labor cost estimation, scope creep prevention, construction estimating, contractor pricing, service pricing strategy, profit margin protection, bidding strategy, project management, cost overruns, accurate estimates, estimating system, indirect costs, sales delivery alignment, contingency planning, historical data, change management, service business, estimating, pricing, profitability, job costing, scope creep, quoting, job quotes, estimates, quote accuracy, proposal pricing, bid accuracy, service quotes, project quotes, cost estimates, labor estimates, risk management, financial risk, estimating risk, profitability risk"
   },
   {
     title: "Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow",
@@ -169,11 +169,11 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 8, 2026",
     readTime: "10 min read",
-    category: "Business Strategy, Business Leadership, Operations",
+    category: "Business Strategy, Business Leadership, Operations, Risk Management",
     slug: "/blog/growth-trap-or-growth-engine",
     imageUrl: "/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg",
     altText: "Business leader with analytics tablet at crossroads in manufacturing facility assessing growth readiness and strategic direction",
-    keywords: "business growth readiness, growth trap, sustainable growth, SMB scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth, business growth, ready to grow, scaling business, growth engine, growth planning"
+    keywords: "business growth readiness, growth trap, sustainable growth, SMB scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth, business growth, ready to grow, scaling business, growth engine, growth planning, risk management, growth risk, premature scaling risk"
   },
   {
     title: "CRM Reality Check: Cutting Through the Hype to Make the Right Decision for Your Business",
@@ -217,7 +217,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "January 4, 2026",
     readTime: "14 min read",
-    category: "Financials, Business Strategy, Operations",
+    category: "Financials, Business Strategy, Operations, Risk Management",
     slug: "/blog/feast-or-famine-cycle-small-business",
     imageUrl: "/assets/feast-famine-cycle-small-business-rollercoaster.jpg",
     altText: "Business professionals on rollercoaster representing the feast-or-famine revenue cycle that destroys small business stability and cash flow predictability",
@@ -308,7 +308,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "December 28, 2025",
     readTime: "16 min read",
-    category: "Operations, Business Strategy, Business Leadership, Financials",
+    category: "Operations, Business Strategy, Business Leadership, Financials, Risk Management",
     slug: "/blog/business-blind-spots-operational-issues-invisible-leadership",
     altText: "Business owner discovering hidden operational issues and inefficiencies in financial reports - uncovering business blind spots",
     keywords: "blind spot, blind spots, operations, growth challenges, strategy, business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025, hidden costs, invisible problems, management oversight, process inefficiency, workflow problems, organizational issues, system gaps, performance gaps, accountability gaps"
@@ -330,7 +330,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "December 26, 2025",
     readTime: "12 min read",
-    category: "Business Strategy, Financials, Operations",
+    category: "Business Strategy, Financials, Operations, Risk Management",
     slug: "/blog/stress-test-pricing-framework-margins-cash-flow",
     altText: "Small business owner analyzing pricing data and financial reports to optimize margins and cash flow with stress-test pricing framework",
     keywords: "stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization, pricing analysis, margin improvement, cost plus pricing, competitive pricing, price testing, price increase, price decrease, profitability, gross margin, net margin, pricing power, pricing psychology, discount strategy, premium pricing"
@@ -506,7 +506,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "November 4, 2025",
     readTime: "11 min read",
-    category: "Business Strategy, Financial Management, Business Intelligence",
+    category: "Business Strategy, Financial Management, Business Intelligence, Risk Management",
     slug: "/blog/small-business-blind-spots-2025",
     altText: "Business leader with blindfold representing small business blind spots and hidden operational challenges in strategic planning",
     keywords: "blind spots, financial losses, hidden costs, strategic gaps, profit drains, visibility issues, business intelligence, operational blind spots, financial blind spots, risk assessment, money leaks, waste, inefficiency, profit killers, cost centers"
@@ -550,7 +550,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "November 3, 2025",
     readTime: "8 min read",
-    category: "Financial Management, Business Strategy, Technology",
+    category: "Financial Management, Business Strategy, Technology, Risk Management",
     slug: "/blog/cash-flow-crisis-management",
     altText: "Business financial crisis with declining cash flow charts and warning indicators for small business cash management",
     keywords: "cash flow crisis, cash management, financial planning, working capital, liquidity management, crisis prevention, cash flow forecasting, financial health, cash flow strategies, SMB finance, money problems, cash crunch, cash shortage, accounts receivable, accounts payable, collections, payment terms"
@@ -561,7 +561,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth.ai Research Team",
     date: "November 3, 2025",
     readTime: "5 min read",
-    category: "Operations, Financial Management",
+    category: "Operations, Financial Management, Risk Management",
     slug: "/blog/Q4-Cost-Cuts-2025",
     altText: "Operational cost cutting strategies with scissors cutting through stacks of cash representing small business financial management and cost reduction for 2025",
     keywords: "Q4 cost cuts, operational costs, cost reduction, efficiency improvements, inflation strategies, cost savings, expense management, small business costs, Q4 planning, operational efficiency, year-end savings, budget cuts, cost control, expense reduction, overhead reduction"
@@ -715,7 +715,7 @@ export const blogPosts: BlogPost[] = [
     author: "BizHealth Research Team",
     date: "September 12, 2025",
     readTime: "11 min read",
-    category: "Operations",
+    category: "Operations, Risk Management",
     slug: "/blog/operational-resilience",
     altText: "Operational resilience and business continuity strategy with interconnected systems and adaptive processes",
     keywords: "operational resilience, business continuity, crisis management, adaptive systems, risk mitigation, operational stability, contingency planning, resilient operations, business flexibility, disruption management, disaster recovery, business continuity planning, BCP, risk management, crisis preparedness"

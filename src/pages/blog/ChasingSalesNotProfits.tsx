@@ -110,8 +110,8 @@ const ChasingSalesNotProfits = () => {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-foreground">The Revenue Vanity Problem</h2>
               
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-8">
-                <p className="text-foreground font-semibold text-lg mb-0">
+              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-xl p-8 mb-8 shadow-lg">
+                <p className="text-white font-bold text-xl md:text-2xl mb-0 text-center italic">
                   "Revenue is vanity. Profit is sanity. Cash is king."
                 </p>
               </div>
@@ -131,10 +131,10 @@ const ChasingSalesNotProfits = () => {
               <h3 className="text-2xl font-bold mb-6 text-foreground">Why Small Business Owners Obsess Over Revenue Instead of Profit</h3>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-white dark:bg-card border-2 border-primary/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/40">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
-                      <TrendingUp className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    <div className="bg-primary p-3 rounded-xl shadow-md">
+                      <TrendingUp className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="font-bold text-foreground">Revenue is Immediate</h4>
                   </div>
@@ -143,10 +143,10 @@ const ChasingSalesNotProfits = () => {
                   </p>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-white dark:bg-card border-2 border-primary/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/40">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
-                      <BarChart3 className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    <div className="bg-primary p-3 rounded-xl shadow-md">
+                      <BarChart3 className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="font-bold text-foreground">Profit is Harder to Measure</h4>
                   </div>
@@ -155,10 +155,10 @@ const ChasingSalesNotProfits = () => {
                   </p>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-white dark:bg-card border-2 border-primary/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/40">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
-                      <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    <div className="bg-primary p-3 rounded-xl shadow-md">
+                      <Users className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="font-bold text-foreground">Everyone Talks Growth</h4>
                   </div>
@@ -167,10 +167,10 @@ const ChasingSalesNotProfits = () => {
                   </p>
                 </div>
                 
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-white dark:bg-card border-2 border-primary/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/40">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
-                      <Clock className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    <div className="bg-primary p-3 rounded-xl shadow-md">
+                      <Clock className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="font-bold text-foreground">"Busy" Feels Successful</h4>
                   </div>
@@ -189,57 +189,57 @@ const ChasingSalesNotProfits = () => {
 
             {/* Hidden Cost Section */}
             <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
-              <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-16 px-6 md:px-12 lg:px-20 rounded-2xl">
+              <div className="bg-gradient-to-br from-primary via-primary/90 to-primary dark:from-primary dark:via-primary/90 dark:to-primary py-16 px-6 md:px-12 lg:px-20 rounded-2xl shadow-2xl">
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-destructive/20 p-3 rounded-xl">
-                      <XCircle className="w-8 h-8 text-destructive" />
+                    <div className="bg-white/20 p-3 rounded-xl shadow-lg">
+                      <XCircle className="w-8 h-8 text-white" />
                     </div>
                     <h2 className="text-3xl font-bold text-white mb-0">The Hidden Cost of Unprofitable Growth</h2>
                   </div>
                   
-                  <p className="text-slate-300 mb-8">
+                  <p className="text-white/90 mb-8 text-lg">
                     Let's make this concrete with two scenarios:
                   </p>
                   
                   {/* Scenario Comparison */}
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <div className="bg-white rounded-xl p-6 shadow-xl border-l-4 border-destructive">
+                      <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
                         <XCircle className="w-5 h-5 text-destructive" />
                         Scenario 1: Revenue Growth Trap
                       </h3>
-                      <ul className="text-slate-300 space-y-2 mb-4">
-                        <li>Revenue: $500K → $750K (+50%)</li>
-                        <li>New customers need handholding</li>
-                        <li>Margins are thin from discounts</li>
-                        <li>Hired 2 new employees</li>
+                      <ul className="text-muted-foreground space-y-2 mb-4">
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-destructive rounded-full"></span>Revenue: $500K → $750K (+50%)</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-destructive rounded-full"></span>New customers need handholding</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-destructive rounded-full"></span>Margins are thin from discounts</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-destructive rounded-full"></span>Hired 2 new employees</li>
                       </ul>
-                      <div className="bg-destructive/20 rounded-lg p-4">
+                      <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4">
                         <p className="text-destructive font-bold text-lg mb-0">Profit: DOWN 10%</p>
-                        <p className="text-slate-400 text-sm mb-0">More hours, more stress, less money</p>
+                        <p className="text-muted-foreground text-sm mb-0">More hours, more stress, less money</p>
                       </div>
                     </div>
                     
-                    <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <div className="bg-white rounded-xl p-6 shadow-xl border-l-4 border-[hsl(var(--biz-green))]">
+                      <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
                         <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                         Scenario 2: Profitable Growth
                       </h3>
-                      <ul className="text-slate-300 space-y-2 mb-4">
-                        <li>Revenue: Flat at $500K</li>
-                        <li>Focus on profitable customers</li>
-                        <li>Optimized onboarding systems</li>
-                        <li>Same team, better processes</li>
+                      <ul className="text-muted-foreground space-y-2 mb-4">
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>Revenue: Flat at $500K</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>Focus on profitable customers</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>Optimized onboarding systems</li>
+                        <li className="flex items-center gap-2"><span className="w-2 h-2 bg-[hsl(var(--biz-green))] rounded-full"></span>Same team, better processes</li>
                       </ul>
-                      <div className="bg-[hsl(var(--biz-green))]/20 rounded-lg p-4">
+                      <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-lg p-4">
                         <p className="text-[hsl(var(--biz-green))] font-bold text-lg mb-0">Profit: UP 40%</p>
-                        <p className="text-slate-400 text-sm mb-0">$100K → $140K with less stress</p>
+                        <p className="text-muted-foreground text-sm mb-0">$100K → $140K with less stress</p>
                       </div>
                     </div>
                   </div>
                   
-                  <p className="text-slate-300 text-center text-lg font-semibold">
+                  <p className="text-white text-center text-xl font-bold">
                     Which would you rather have?
                   </p>
                 </div>
@@ -255,8 +255,10 @@ const ChasingSalesNotProfits = () => {
               </p>
               
               <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
-                  <Users className="w-6 h-6 text-destructive mt-1 shrink-0" />
+                <div className="flex items-start gap-4 p-5 bg-white dark:bg-card border-l-4 border-destructive rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-destructive/10 p-2 rounded-lg">
+                    <Users className="w-6 h-6 text-destructive shrink-0" />
+                  </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Team Burnout</h4>
                     <p className="text-muted-foreground text-sm mb-0">
@@ -265,8 +267,10 @@ const ChasingSalesNotProfits = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
-                  <Target className="w-6 h-6 text-destructive mt-1 shrink-0" />
+                <div className="flex items-start gap-4 p-5 bg-white dark:bg-card border-l-4 border-destructive rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-destructive/10 p-2 rounded-lg">
+                    <Target className="w-6 h-6 text-destructive shrink-0" />
+                  </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Quality Declines</h4>
                     <p className="text-muted-foreground text-sm mb-0">
@@ -275,8 +279,10 @@ const ChasingSalesNotProfits = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
-                  <Zap className="w-6 h-6 text-destructive mt-1 shrink-0" />
+                <div className="flex items-start gap-4 p-5 bg-white dark:bg-card border-l-4 border-destructive rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-destructive/10 p-2 rounded-lg">
+                    <Zap className="w-6 h-6 text-destructive shrink-0" />
+                  </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Complexity Explodes</h4>
                     <p className="text-muted-foreground text-sm mb-0">
@@ -285,8 +291,10 @@ const ChasingSalesNotProfits = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
-                  <DollarSign className="w-6 h-6 text-destructive mt-1 shrink-0" />
+                <div className="flex items-start gap-4 p-5 bg-white dark:bg-card border-l-4 border-destructive rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-destructive/10 p-2 rounded-lg">
+                    <DollarSign className="w-6 h-6 text-destructive shrink-0" />
+                  </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Cash Flow Crisis</h4>
                     <p className="text-muted-foreground text-sm mb-0">
@@ -295,8 +303,10 @@ const ChasingSalesNotProfits = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
-                  <Building2 className="w-6 h-6 text-destructive mt-1 shrink-0" />
+                <div className="flex items-start gap-4 p-5 bg-white dark:bg-card border-l-4 border-destructive rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-destructive/10 p-2 rounded-lg">
+                    <Building2 className="w-6 h-6 text-destructive shrink-0" />
+                  </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Inability to Invest</h4>
                     <p className="text-muted-foreground text-sm mb-0">
@@ -308,7 +318,7 @@ const ChasingSalesNotProfits = () => {
             </section>
 
             {/* Profitability Reality Check */}
-            <section className="mb-12">
+            <section className="mb-12 bg-gradient-to-br from-muted/50 to-muted/30 -mx-6 md:-mx-12 lg:-mx-20 px-6 md:px-12 lg:px-20 py-12 rounded-2xl">
               <h2 className="text-3xl font-bold mb-6 text-foreground">The Profitability Reality Check</h2>
               
               <p className="text-muted-foreground mb-6">
@@ -585,61 +595,61 @@ const ChasingSalesNotProfits = () => {
 
             {/* The Profit Mindset Shift */}
             <section className="mb-12 -mx-6 md:-mx-12 lg:-mx-20">
-              <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-16 px-6 md:px-12 lg:px-20 rounded-2xl">
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-green))] via-[hsl(var(--biz-green))]/90 to-[hsl(var(--biz-green))] py-16 px-6 md:px-12 lg:px-20 rounded-2xl shadow-2xl">
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-[hsl(var(--biz-green))]/20 p-3 rounded-xl">
-                      <PiggyBank className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+                    <div className="bg-white/20 p-3 rounded-xl shadow-lg">
+                      <PiggyBank className="w-8 h-8 text-white" />
                     </div>
                     <h2 className="text-3xl font-bold text-white mb-0">The Profit Mindset Shift</h2>
                   </div>
                   
-                  <p className="text-slate-300 mb-8">
+                  <p className="text-white/90 mb-8 text-lg">
                     This is ultimately a mindset shift. Many small business owners measure success by revenue and activity level. But what actually matters is <strong className="text-white">profitability and sustainability</strong>.
                   </p>
                   
                   <h3 className="text-xl font-bold text-white mb-6">Real Success Looks Like:</h3>
                   
                   <div className="grid md:grid-cols-2 gap-4 mb-8">
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Reasonable Hours</h4>
-                      <p className="text-slate-300 text-sm mb-0">You work hard, but not 80+ hours a week</p>
+                      <h4 className="font-bold text-primary mb-2">Reasonable Hours</h4>
+                      <p className="text-muted-foreground text-sm mb-0">You work hard, but not 80+ hours a week</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Healthy Profit Margins</h4>
-                      <p className="text-slate-300 text-sm mb-0">After all expenses, you're keeping adequate profit</p>
+                      <h4 className="font-bold text-primary mb-2">Healthy Profit Margins</h4>
+                      <p className="text-muted-foreground text-sm mb-0">After all expenses, you're keeping adequate profit</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Cash Reserves</h4>
-                      <p className="text-slate-300 text-sm mb-0">You have 3-6 months of operating expenses available</p>
+                      <h4 className="font-bold text-primary mb-2">Cash Reserves</h4>
+                      <p className="text-muted-foreground text-sm mb-0">You have 3-6 months of operating expenses available</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Sustainable Pace</h4>
-                      <p className="text-slate-300 text-sm mb-0">Your team can maintain current performance indefinitely</p>
+                      <h4 className="font-bold text-primary mb-2">Sustainable Pace</h4>
+                      <p className="text-muted-foreground text-sm mb-0">Your team can maintain current performance indefinitely</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Profitable Customers</h4>
-                      <p className="text-slate-300 text-sm mb-0">Most of your business is with customers you enjoy serving</p>
+                      <h4 className="font-bold text-primary mb-2">Profitable Customers</h4>
+                      <p className="text-muted-foreground text-sm mb-0">Most of your business is with customers you enjoy serving</p>
                     </div>
                     
-                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                    <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))] mb-3" />
-                      <h4 className="font-bold text-white mb-2">Growth That's Chosen</h4>
-                      <p className="text-slate-300 text-sm mb-0">You grow because you want to, not because you need to</p>
+                      <h4 className="font-bold text-primary mb-2">Growth That's Chosen</h4>
+                      <p className="text-muted-foreground text-sm mb-0">You grow because you want to, not because you need to</p>
                     </div>
                   </div>
                   
-                  <p className="text-slate-300 text-center">
-                    That's a healthy business. It looks different from maximum-growth businesses, but it's <span className="text-[hsl(var(--biz-green))] font-semibold">far more valuable</span>.
+                  <p className="text-white text-center text-lg">
+                    That's a healthy business. It looks different from maximum-growth businesses, but it's <span className="text-white font-bold underline decoration-2 underline-offset-4">far more valuable</span>.
                   </p>
                 </div>
               </div>

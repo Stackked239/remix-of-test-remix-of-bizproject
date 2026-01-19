@@ -123,6 +123,7 @@ const EmotionalIntelligenceLeadershipSkill = lazy(() => import("./pages/blog/Emo
 const LeanPrinciplesSmallBusiness = lazy(() => import("./pages/blog/LeanPrinciplesSmallBusiness"));
 const PlanogramsTransformSmallRetail = lazy(() => import("./pages/blog/PlanogramsTransformSmallRetail"));
 const RenewalImperativeLegacyBusiness = lazy(() => import("./pages/blog/RenewalImperativeLegacyBusiness"));
+const ChasingSalesNotProfits = lazy(() => import("./pages/blog/ChasingSalesNotProfits"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -283,6 +284,7 @@ const App = () => (
               <Route path="/blog/lean-principles-small-business" element={<LeanPrinciplesSmallBusiness />} />
               <Route path="/blog/planograms-transform-small-retail-operations" element={<PlanogramsTransformSmallRetail />} />
               <Route path="/blog/renewal-imperative-legacy-business-rebirth" element={<RenewalImperativeLegacyBusiness />} />
+              <Route path="/blog/chasing-sales-not-profits" element={<ChasingSalesNotProfits />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

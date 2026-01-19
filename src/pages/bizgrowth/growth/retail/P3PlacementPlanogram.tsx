@@ -819,7 +819,7 @@ const P3PlacementPlanogram = () => {
         </AnimatedSection>
 
         {/* FAQ SECTION */}
-        <AnimatedSection className="py-16 md:py-24 bg-[#F5F5F2]">
+        <AnimatedSection className="py-16 md:py-24 bg-[hsl(var(--biz-green))]/50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               {/* Section Header */}

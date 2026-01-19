@@ -1022,4 +1022,13 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/growth/retail/p3-placement-planogram</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-p3-placement-planogram.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>

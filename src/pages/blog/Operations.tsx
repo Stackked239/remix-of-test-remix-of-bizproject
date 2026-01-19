@@ -13,6 +13,7 @@ import foodBusinessImage from "@/assets/daily-grind-food-business-operations.jpg
 import scalingImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import workforceImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
+import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 
 const Operations = () => {
   const operationsPosts = [
@@ -20,7 +21,7 @@ const Operations = () => {
       title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
       slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
       excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
-      image: scalingImage,
+      image: chaosToClarity,
       author: "BizHealth.ai Research Team",
       date: "December 24, 2025",
       readTime: "15 min read",

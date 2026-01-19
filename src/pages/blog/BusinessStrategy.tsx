@@ -13,9 +13,20 @@ import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import infoOverloadImage from "@/assets/information-overload-business-leader.jpg";
 import comprehensiveHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 const BusinessStrategy = () => {
   const strategyPosts = [
+    {
+      title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
+      slug: "renewal-imperative-legacy-business-rebirth",
+      excerpt: "Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.",
+      image: renewalImperativeImage,
+      author: "BizHealth.ai Research Team",
+      date: "January 19, 2026",
+      readTime: "18 min read",
+      featured: true
+    },
     {
       title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
       slug: "chaos-to-clarity-operating-rhythm-scaling-teams",

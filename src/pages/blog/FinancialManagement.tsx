@@ -159,10 +159,10 @@ const FinancialManagement = () => {
       description: 'Develop winning business strategies'
     },
     {
-      name: 'Business Intelligence',
+      name: 'Technology',
       icon: Monitor,
-      link: '/blog/business-intelligence',
-      description: 'Data-driven decision making'
+      link: '/blog/technology',
+      description: 'Digital tools and data-driven decisions'
     },
     {
       name: 'Operations',

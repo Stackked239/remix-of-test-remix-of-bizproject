@@ -64,7 +64,7 @@ const CustomerAcquisitionCostGuide = () => {
           categories={[
             { label: "Operations", href: "/blog/operations" },
             { label: "Financials", href: "/blog/financial-management" },
-            { label: "Business Intelligence", href: "/blog/business-intelligence" },
+            { label: "Technology", href: "/blog/technology" },
           ]}
           shareDescription="Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio for sustainable growth."
         />

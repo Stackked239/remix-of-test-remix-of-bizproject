@@ -292,10 +292,10 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
-    title: "Business Intelligence Blog Articles",
-    excerpt: "Business intelligence insights for SMBs. Discover how data analytics, real-time BI, and business intelligence ROI can transform your decision-making.",
-    url: "/blog/business-intelligence",
-    keywords: "business intelligence, BI, analytics, data, reporting, dashboards, data insights, metrics, KPIs, data analysis, business data, performance data, data driven, analytics tools, reporting tools, measure business, track performance",
+    title: "Technology Blog Articles",
+    excerpt: "Technology insights for SMBs. Discover digital tools, AI, automation, business intelligence, and data-driven decision-making strategies.",
+    url: "/blog/technology",
+    keywords: "technology, business intelligence, BI, analytics, data, reporting, dashboards, AI, automation, digital tools, software, digital transformation, tech tools, business technology, SaaS, software selection, cybersecurity, machine learning, tech adoption",
     icon: FileText
   },
   {

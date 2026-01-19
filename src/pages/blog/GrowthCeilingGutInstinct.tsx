@@ -47,7 +47,7 @@ const GrowthCeilingGutInstinct = () => {
         heroImageAlt="Business owner contemplating growth challenges between chaotic startup environment and organized scaled operations - gut instinct versus data-driven decision-making"
         categories={[
           { label: "Business Strategy", href: "/blog/business-strategy" },
-          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
           { label: "Technology", href: "/blog/technology" },
         ]}
         shareDescription="Your gut instinct built your business—but it won't scale it. Discover why the transition to data-driven decisions is essential for growth."

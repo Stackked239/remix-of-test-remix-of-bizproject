@@ -47,7 +47,7 @@ const LeadingBlindBusinessIntelligence = () => {
         heroImage={heroImage}
         heroImageAlt="Small business owner analyzing business intelligence dashboard with charts, graphs, and profitability metrics on laptop in retail boutique office"
         categories={[
-          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
           { label: "Operations", href: "/blog/operations" },
           { label: "Technology", href: "/blog/technology" },
           { label: "Business Leadership", href: "/blog/business-leadership" },

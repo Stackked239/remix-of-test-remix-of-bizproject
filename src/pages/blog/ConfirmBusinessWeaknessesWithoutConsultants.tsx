@@ -144,7 +144,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
                 </p>
 
                 <p className="mb-8">
-                  Contrast this with AI tools: Immediate, objective, and scalable. Gartner highlights AI delivering results in hours, not weeks, with 55% of execs boosting investments for such efficiency. BizHealth.ai embodies this: Our AI analyzes your input against <Link to="/blog/business-intelligence" className="text-primary hover:underline">industry benchmarks</Link>, spotting weaknesses like financial misalignments or operational bottlenecks—without the hefty bill or wait.
+                  Contrast this with AI tools: Immediate, objective, and scalable. Gartner highlights AI delivering results in hours, not weeks, with 55% of execs boosting investments for such efficiency. BizHealth.ai embodies this: Our AI analyzes your input against <Link to="/blog/technology" className="text-primary hover:underline">industry benchmarks</Link>, spotting weaknesses like financial misalignments or operational bottlenecks—without the hefty bill or wait.
                 </p>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">

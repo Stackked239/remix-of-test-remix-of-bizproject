@@ -65,7 +65,7 @@ const ChasingSalesNotProfits = () => {
           { label: "Business Strategy", href: "/blog/business-strategy" },
           { label: "Financial Management", href: "/blog/financial-management" },
           { label: "Operations", href: "/blog/operations" },
-          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
         ]}
         shareDescription="Revenue is vanity. Profit is sanity. Cash is king. Learn why chasing sales could be killing your small business."
       />

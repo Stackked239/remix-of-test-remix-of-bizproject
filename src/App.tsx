@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from '@/hooks/useAuth';
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -226,7 +226,7 @@ const App = () => (
               <Route path="/blog/financial-management" element={<FinancialManagement />} />
               <Route path="/blog/technology" element={<Technology />} />
               <Route path="/blog/risk-management" element={<RiskManagement />} />
-              <Route path="/blog/business-intelligence" element={<BusinessIntelligence />} />
+              <Route path="/blog/business-intelligence" element={<Navigate to="/blog/technology" replace />} />
               <Route path="/blog/business-leadership" element={<BusinessLeadership />} />
               <Route path="/blog/growth-scaling" element={<GrowthScaling />} />
               <Route path="/blog/retail-remote-tools" element={<RetailRemoteTools />} />

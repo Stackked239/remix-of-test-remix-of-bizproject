@@ -220,7 +220,7 @@ const EmployeeRetentionLeadership = () => {
         keywords="employee retention strategies, company culture leadership, day-to-day leadership, employee engagement SMB, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies, employee loyalty, workforce development, talent management small business"
         canonical="https://bizhealth.ai/blog/employee-retention-company-culture-leadership"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-employee-retention-leadership.jpg"
+        ogImage="/og-images/og-employee-retention-leadership.jpg"
         articlePublishedTime="2025-12-30T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

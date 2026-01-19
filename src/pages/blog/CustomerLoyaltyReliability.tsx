@@ -50,7 +50,7 @@ const CustomerLoyaltyReliability = () => {
         keywords="customer loyalty, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency, customer feedback loop, empathy in customer service, frontline empowerment, customer churn prevention"
         canonical="https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-customer-loyalty-reliability.jpg"
+        ogImage="/og-images/og-customer-loyalty-reliability.jpg"
         articlePublishedTime="2025-12-27"
         articleModifiedTime="2025-12-27"
         articleAuthor="BizHealth.ai Research Team"

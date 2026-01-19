@@ -122,7 +122,7 @@ const FractionalCFOToolkit = () => {
         keywords="fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics, debt capital dashboard, strategic metrics SMB"
         canonical="https://bizhealth.ai/blog/fractional-cfo-toolkit"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-fractional-cfo-toolkit.jpg"
+        ogImage="/og-images/og-fractional-cfo-toolkit.jpg"
         articlePublishedTime="2025-12-29"
         articleModifiedTime="2025-12-29"
         articleAuthor="BizHealth.ai Research Team"

@@ -28,6 +28,7 @@ import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
+import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -142,6 +143,17 @@ const blogPosts: BlogPost[] = [
     author: 'BizHealth.ai Research Team',
     publishedAt: 'Dec 18, 2025',
     readTime: 10
+  },
+  {
+    id: '9',
+    slug: 'happy-new-year-2026-year-of-growth',
+    title: 'Happy New Year! 2026 – Year of Growth: Lessons from 2025, Momentum for Tomorrow',
+    excerpt: 'Reflect on 2025\'s business lessons and embrace 2026 as your year of intentional growth. Discover the three strategic moves for sustainable small business success.',
+    featuredImage: happyNewYear2026Image,
+    subcategory: 'Growth Strategy',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 1, 2026',
+    readTime: 10
   }
 ];
 
@@ -156,7 +168,9 @@ const GrowthScaling = () => {
     'Scaling Operations',
     'Unit Economics',
     'Growth Readiness',
+    'Growth Strategy',
     'Business Model',
+    'Business Transformation',
     'E-Commerce Growth'
   ];
 

@@ -25,6 +25,7 @@ import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb-o
 import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -41,6 +42,17 @@ interface BlogPost {
 
 // Technology blog posts
 const blogPosts: BlogPost[] = [
+  {
+    id: '0',
+    slug: 'renewal-imperative-legacy-business-rebirth',
+    title: 'The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great',
+    excerpt: 'Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.',
+    featuredImage: renewalImperativeImage,
+    subcategory: 'Digital Tools',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 19, 2026',
+    readTime: 18
+  },
   {
     id: '1',
     slug: 'overcoming-bi-challenges-smb',

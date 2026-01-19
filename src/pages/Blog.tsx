@@ -74,9 +74,11 @@ import emotionalIntelligenceImage from "@/assets/images/blog/emotional-intellige
 import leanPrinciplesImage from "@/assets/images/blog/lean-principles-small-business-guide.jpg";
 import planogramsRetailImage from "@/assets/images/blog/planograms-transform-small-retail-operations.jpg";
 import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
+import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/chasing-sales-not-profits": chasingSalesNotProfitsImage,
   "/blog/renewal-imperative-legacy-business-rebirth": renewalImperativeImage,
   "/blog/planograms-transform-small-retail-operations": planogramsRetailImage,
   "/blog/lean-principles-small-business": leanPrinciplesImage,

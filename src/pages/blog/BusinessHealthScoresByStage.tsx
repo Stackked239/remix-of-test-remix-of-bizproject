@@ -240,7 +240,7 @@ const BusinessHealthScoresByStage = () => {
         keywords="business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model"
         canonical="https://bizhealth.ai/blog/business-health-scores-by-stage"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-business-health-scores-stages.jpg"
+        ogImage="/og-images/og-business-health-scores-stages.jpg"
         articlePublishedTime="2025-12-29T00:00:00Z"
         articleModifiedTime="2025-12-29T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

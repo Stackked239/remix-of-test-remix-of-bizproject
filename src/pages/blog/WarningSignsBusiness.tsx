@@ -145,7 +145,7 @@ const WarningSignsBusiness = () => {
         keywords="business warning signs, SMB challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
         canonical="https://bizhealth.ai/blog/warning-signs-business"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-images/og-warning-signs-business.jpg"
+        ogImage="/og-images/og-warning-signs-business.jpg"
         articlePublishedTime="2025-09-12T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"

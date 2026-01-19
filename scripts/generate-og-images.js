@@ -3,14 +3,24 @@
 /**
  * OG Image Generation Script
  * 
+ * STANDARD: All blog post OG images MUST be generated from their hero images.
+ * This ensures visual consistency between social sharing and article content.
+ * 
  * Generates OG images (1200x630) from hero images for blog posts.
  * 
  * Usage:
  *   node scripts/generate-og-images.js           - Generate all missing OG images
  *   node scripts/generate-og-images.js --dry-run - Preview what would be generated
+ *   node scripts/generate-og-images.js --single src/pages/blog/MyPost.tsx - Generate for one post
  * 
  * Requirements:
  *   npm install sharp
+ * 
+ * WORKFLOW FOR NEW BLOG POSTS:
+ * 1. Create hero image in src/assets/images/
+ * 2. Import heroImage in your blog post component
+ * 3. Run this script to generate OG image from hero
+ * 4. Add ogImage="/og-images/og-[slug].jpg" to SEO component
  */
 
 const fs = require('fs');

@@ -824,11 +824,8 @@ const P3PlacementPlanogram = () => {
             <div className="max-w-3xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <Badge variant="outline" className="mb-4 border-[hsl(var(--biz-navy))]/20 text-[hsl(var(--biz-navy))] uppercase tracking-wider text-xs font-semibold">
-                  Common Questions
-                </Badge>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-[hsl(var(--biz-navy))] mb-4">
-                  FAQ
+                  Frequently Asked Questions
                 </h2>
               </div>
 

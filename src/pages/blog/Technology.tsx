@@ -26,6 +26,22 @@ import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-proces
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
+import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
+import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
+import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
+import techInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
+import growthCeilingImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
+import leadingBlindImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
+import cacGuideImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
+import businessHealthScoresImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
+import planogramsImage from "@/assets/images/blog/planograms-transform-small-retail-operations.jpg";
+import crmRealityImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
+import technologyStrategicAllyImage from "@/assets/images/technology-strategic-ally-roi-decisions-growth.jpg";
+import schedulingCrisisImage from "@/assets/images/scheduling-crisis-operational-costs-smb.jpg";
+import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -40,35 +56,145 @@ interface BlogPost {
   readTime: number;
 }
 
-// Technology blog posts
+// Technology blog posts (merged with Business Intelligence)
 const blogPosts: BlogPost[] = [
   {
-    id: '0',
+    id: '1',
     slug: 'renewal-imperative-legacy-business-rebirth',
     title: 'The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great',
-    excerpt: 'Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.',
+    excerpt: 'Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations.',
     featuredImage: renewalImperativeImage,
-    subcategory: 'Digital Tools',
+    subcategory: 'Digital Transformation',
     author: 'BizHealth.ai Research Team',
     publishedAt: 'Jan 19, 2026',
     readTime: 18
   },
   {
-    id: '1',
+    id: '2',
+    slug: 'planograms-transform-small-retail-operations',
+    title: 'Shelf Space Secrets: How Planograms Transform Small Retail Operations',
+    excerpt: 'Discover how planograms eliminate lost revenue and operational chaos in small retail. Learn strategic shelf placement.',
+    featuredImage: planogramsImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 18, 2026',
+    readTime: 13
+  },
+  {
+    id: '3',
+    slug: 'leading-blind-business-intelligence-small-business',
+    title: 'Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business',
+    excerpt: 'Discover why operating without BI costs you market share, customers, and profitability. Learn how affordable BI tools transform decisions.',
+    featuredImage: leadingBlindImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 12, 2026',
+    readTime: 10
+  },
+  {
+    id: '4',
+    slug: 'customer-acquisition-cost-guide-smb',
+    title: 'The Customer Acquisition Cost Guide: Calculate, Optimize, and Stop Bleeding Money',
+    excerpt: 'Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio for sustainable growth.',
+    featuredImage: cacGuideImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 12, 2026',
+    readTime: 10
+  },
+  {
+    id: '5',
+    slug: 'growth-ceiling-gut-instinct-scaling',
+    title: 'The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won\'t Scale It',
+    excerpt: 'Your gut instinct got your business off the ground—but it won\'t scale it. Learn why data-driven decision-making is essential.',
+    featuredImage: growthCeilingImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 11, 2026',
+    readTime: 10
+  },
+  {
+    id: '6',
+    slug: 'scheduling-crisis-operational-costs',
+    title: 'Scheduling: Why Your Most Underestimated Operational Task Is Bleeding Your Profits',
+    excerpt: 'Scheduling decisions silently drain $200,000+ annually through labor inefficiency. Transform scheduling into strategic advantage.',
+    featuredImage: schedulingCrisisImage,
+    subcategory: 'Automation',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 9, 2026',
+    readTime: 10
+  },
+  {
+    id: '7',
+    slug: 'estimating-crisis-service-business-profitability',
+    title: 'Avoid The Estimating Crisis: Why Service Business Profitability Collapses',
+    excerpt: 'A 5% estimating error can destroy 100% of your profit margin. Learn the 7-step system to protect profitability.',
+    featuredImage: estimatingCrisisImage,
+    subcategory: 'Digital Tools',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 9, 2026',
+    readTime: 12
+  },
+  {
+    id: '8',
+    slug: 'crm-reality-check-small-business-decision',
+    title: 'CRM Reality Check: Cutting Through the Hype to Make the Right Decision',
+    excerpt: '55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, not technology.',
+    featuredImage: crmRealityImage,
+    subcategory: 'Software Selection',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 7, 2026',
+    readTime: 10
+  },
+  {
+    id: '9',
+    slug: 'technology-strategic-ally-roi-decisions',
+    title: 'Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth',
+    excerpt: 'Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI.',
+    featuredImage: technologyStrategicAllyImage,
+    subcategory: 'Software Selection',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 5, 2026',
+    readTime: 10
+  },
+  {
+    id: '10',
+    slug: 'business-health-scores-by-stage',
+    title: 'What Your Business Health Score Should Look Like at Each Stage',
+    excerpt: 'Learn what healthy business scores look like at each growth stage: Survival, Stability, Scale, and Exit.',
+    featuredImage: businessHealthScoresImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 29, 2025',
+    readTime: 15
+  },
+  {
+    id: '11',
+    slug: 'technology-innovation-gap-competitive-advantage',
+    title: 'Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap',
+    excerpt: 'Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency.',
+    featuredImage: techInnovationGapImage,
+    subcategory: 'Digital Transformation',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Dec 28, 2025',
+    readTime: 17
+  },
+  {
+    id: '12',
     slug: 'overcoming-bi-challenges-smb',
     title: 'Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses',
-    excerpt: 'Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics.',
+    excerpt: 'Discover how SMBs can overcome BI challenges. Learn budget-friendly strategies and AI-powered analytics.',
     featuredImage: overcomingBIChallengesImage,
-    subcategory: 'AI & Machine Learning',
+    subcategory: 'Business Intelligence',
     author: 'BizHealth.ai Research Team',
     publishedAt: 'Dec 10, 2025',
     readTime: 12
   },
   {
-    id: '2',
+    id: '13',
     slug: 'hidden-costs-manual-processes',
     title: 'The Hidden Costs of Manual Processes in Today\'s Smaller Businesses',
-    excerpt: 'Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes. Learn how error rates cost businesses $12,000+ annually.',
+    excerpt: 'Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes costing $12,000+ annually.',
     featuredImage: hiddenCostsManualProcessesImage,
     subcategory: 'Automation',
     author: 'BizHealth.ai Research Team',
@@ -76,10 +202,43 @@ const blogPosts: BlogPost[] = [
     readTime: 10
   },
   {
-    id: '3',
+    id: '14',
+    slug: 'scaling-operations-without-losing-control',
+    title: 'How Small & Mid-Size Businesses Can Scale Operations Without Losing Control',
+    excerpt: 'Discover proven strategies to scale operations sustainably. Learn the SCALE framework and avoid growth traps.',
+    featuredImage: scalingOperationsImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 23, 2025',
+    readTime: 12
+  },
+  {
+    id: '15',
+    slug: 'success-begins-with-2026-strategy',
+    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
+    excerpt: 'Discover why proactive 2026 business planning is essential. Get actionable strategies for AI-driven growth analytics.',
+    featuredImage: businessStrategyPlanningImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 20, 2025',
+    readTime: 12
+  },
+  {
+    id: '16',
+    slug: 'confirm-business-weaknesses-without-consultants',
+    title: 'How to Confirm Your Business Weaknesses Without Expensive Consultants',
+    excerpt: 'Learn how AI-powered business health assessments help identify operational weaknesses without consultant fees.',
+    featuredImage: confirmWeaknessesImage,
+    subcategory: 'AI & Machine Learning',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 5, 2025',
+    readTime: 8
+  },
+  {
+    id: '17',
     slug: 'small-business-ai-adoption',
     title: 'AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners',
-    excerpt: 'Skip the hype. Discover practical AI tools for small business owners in 2025—automate tasks, boost efficiency, and save money without technical expertise.',
+    excerpt: 'Skip the hype. Discover practical AI tools for small business owners—automate tasks and save money.',
     featuredImage: aiAdoptionImage,
     subcategory: 'AI & Machine Learning',
     author: 'BizHealth.ai Research Team',
@@ -87,10 +246,21 @@ const blogPosts: BlogPost[] = [
     readTime: 12
   },
   {
-    id: '4',
+    id: '18',
+    slug: 'small-business-blind-spots-2025',
+    title: 'The Business Blind Spots Costing SMB Leaders $50K+ Annually',
+    excerpt: 'Discover the 5 dangerous business blind spots draining SMB profits. Identify gaps before they cost $50K+ annually.',
+    featuredImage: blindSpotsImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Nov 4, 2025',
+    readTime: 11
+  },
+  {
+    id: '19',
     slug: 'cash-flow-crisis-management',
     title: 'Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025',
-    excerpt: 'Master cash flow management for small business in 2025. Learn crisis prevention strategies, cash flow planning tips, and how to avoid common pitfalls.',
+    excerpt: 'Master cash flow management with crisis prevention strategies and planning tips.',
     featuredImage: cashFlowCrisisImage,
     subcategory: 'Digital Tools',
     author: 'BizHealth.ai Research Team',
@@ -98,26 +268,48 @@ const blogPosts: BlogPost[] = [
     readTime: 8
   },
   {
-    id: '5',
-    slug: 'ai-business-analytics',
-    title: 'How AI is Revolutionizing Small Business Analytics',
-    excerpt: 'Explore how artificial intelligence is making enterprise-level business intelligence accessible to small and medium businesses.',
-    featuredImage: aiAnalyticsImage,
-    subcategory: 'AI & Machine Learning',
+    id: '20',
+    slug: 'real-time-analytics-smb-agility',
+    title: 'Real-Time Analytics: Powering SMB Agility in Volatile Markets',
+    excerpt: 'Transform your SMB with real-time BI. Expert insights on analytics agility and data-driven decisions.',
+    featuredImage: realTimeAnalyticsImage,
+    subcategory: 'Business Intelligence',
     author: 'BizHealth Research Team',
-    publishedAt: 'Sep 12, 2025',
+    publishedAt: 'Sep 26, 2025',
     readTime: 10
   },
   {
-    id: '6',
+    id: '21',
+    slug: 'business-intelligence-roi',
+    title: 'The ROI of Business Intelligence for SMBs',
+    excerpt: 'Discover how to measure and maximize the return on investment from your business intelligence tools.',
+    featuredImage: biRoiImage,
+    subcategory: 'Business Intelligence',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Sep 26, 2025',
+    readTime: 9
+  },
+  {
+    id: '22',
     slug: 'retail-remote-tools',
     title: 'Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures',
-    excerpt: 'Discover how family-owned micro retailers can leverage remote tools to streamline operations while preserving their personal touch.',
+    excerpt: 'Discover how family-owned micro retailers can leverage remote tools while preserving their personal touch.',
     featuredImage: retailRemoteImage,
     subcategory: 'Digital Tools',
     author: 'BizHealth Research Team',
     publishedAt: 'Sep 24, 2025',
     readTime: 12
+  },
+  {
+    id: '23',
+    slug: 'ai-business-analytics',
+    title: 'How AI is Revolutionizing Small Business Analytics',
+    excerpt: 'Explore how artificial intelligence is making enterprise-level business intelligence accessible to SMBs.',
+    featuredImage: aiAnalyticsImage,
+    subcategory: 'AI & Machine Learning',
+    author: 'BizHealth Research Team',
+    publishedAt: 'Sep 12, 2025',
+    readTime: 10
   }
 ];
 
@@ -128,11 +320,13 @@ const Technology = () => {
   
   const subcategories = [
     'All',
-    'Digital Tools',
-    'Automation',
+    'Business Intelligence',
     'AI & Machine Learning',
-    'Cybersecurity',
-    'Software Selection'
+    'Automation',
+    'Digital Tools',
+    'Digital Transformation',
+    'Software Selection',
+    'Cybersecurity'
   ];
 
   const relatedCategories = [

@@ -74,7 +74,7 @@ const RenewalImperativeLegacyBusiness = () => {
         categories={[
           { label: "Business Strategy", href: "/blog/business-strategy" },
           { label: "Operations", href: "/blog/operations" },
-          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
         ]}
         shareDescription="Learn how to transform your legacy business without losing what made it great."
       />

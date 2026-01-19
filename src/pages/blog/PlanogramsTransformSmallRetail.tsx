@@ -77,7 +77,7 @@ const PlanogramsTransformSmallRetail = () => {
         categories={[
           { label: "Operations", href: "/blog/operations" },
           { label: "Business Strategy", href: "/blog/business-strategy" },
-          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
         ]}
         shareDescription="Small retailers leave 5-15% of revenue on the table due to poor shelf management. Learn how planograms transform chaos into profit."
       />

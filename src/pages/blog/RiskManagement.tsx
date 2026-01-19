@@ -26,7 +26,7 @@ import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
 import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
-import renewalImperativeImage from "@/assets/images/blog/renewal-imperative-legacy-business-rebirth.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 import growthCeilingImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
 import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
 import growthTrapImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";

@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 const RenewalImperativeLegacyBusiness = () => {
-  const publishDate = "2026-01-19";
-  const modifiedDate = "2026-01-19";
+  const publishDate = "2026-01-14";
+  const modifiedDate = "2026-01-14";
   const readTime = "13 min read";
   const author = "BizHealth.ai Research Team";
 
@@ -67,7 +67,7 @@ const RenewalImperativeLegacyBusiness = () => {
       <BlogHeroSection
         title="The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great"
         author={author}
-        publishDate="January 19, 2026"
+        publishDate="January 14, 2026"
         readTime={readTime}
         heroImage={heroImage}
         heroImageAlt="Business owner standing at crossroads between traditional legacy retail shop and modern tech-forward office environment representing business transformation and renewal"

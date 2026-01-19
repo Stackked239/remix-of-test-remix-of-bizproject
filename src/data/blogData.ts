@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
     excerpt: "Learn how to transform your legacy business without losing what made it great. Discover frameworks for product portfolio evaluation, modernization strategy, and sustainable digital transformation.",
     author: "BizHealth.ai Research Team",
-    date: "January 19, 2026",
+    date: "January 14, 2026",
     readTime: "13 min read",
     category: "Business Strategy, Operations, Technology, Risk Management, Growth & Scaling",
     slug: "/blog/renewal-imperative-legacy-business-rebirth",

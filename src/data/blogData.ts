@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Final Approach: How Methodical Exit Preparation Determines Your Business's Landing Value",
+    excerpt: "Maximize business exit value with methodical preparation. Learn how 3-5 years of strategic planning, due diligence prep, and buyer readiness delivers 20-30% higher valuations.",
+    author: "BizHealth.ai Research Team",
+    date: "January 19, 2026",
+    readTime: "13 min read",
+    category: "Operations, Financials, Business Strategy, Risk Management",
+    slug: "/blog/final-approach-exit-preparation-business-value",
+    imageUrl: "/assets/images/final-approach-exit-preparation.jpg",
+    altText: "Business owner reviewing financial analysis charts for exit preparation with airplane landing metaphor - strategic planning for maximum business valuation",
+    keywords: "business exit strategy, exit preparation, business valuation, sell business, exit planning, due diligence preparation, business sale, owner exit, M&A preparation, business succession, exit readiness, maximize business value, selling your business 2026, exit strategy planning, business transition, final approach, landing value, owner dependency, customer concentration, business transfer, exit timeline, 3-5 year exit plan, due diligence, buyer readiness, valuation premium, distressed sale, exit negotiation, exit leverage, business succession planning, exit valuation, exit discount, prepared exit, exit multiplier, financial integrity, revenue quality, operational sustainability, risk visibility, growth sustainability, exit preparation timeline, strategic exit, proactive exit planning, exit checklist, exit readiness assessment, founder exit, owner transition, business transition planning, business sale preparation, maximize sale price, business owner retirement, exit strategy timeline"
+  },
+  {
     title: "Why Small Businesses Fail: Chasing Sales Instead of Pursuing Profits",
     excerpt: "Discover why 60% of small businesses fail within a decade by prioritizing revenue over profitability. Learn the 5 hidden costs of sales obsession and how to shift from volume-driven to profit-focused growth.",
     author: "BizHealth.ai Research Team",

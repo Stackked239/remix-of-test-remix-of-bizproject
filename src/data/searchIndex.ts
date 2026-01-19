@@ -263,7 +263,7 @@ export const searchablePages: SearchableItem[] = [
     title: "Financial Management Blog Articles",
     excerpt: "Financial management strategies for SMBs. Articles on cash flow management, financial health metrics, budgeting, and financial planning for small business success.",
     url: "/blog/financial-management",
-    keywords: "financial management, cash flow, budgeting, finance articles, money management, accounting, bookkeeping, financial tips, profit margins, revenue, expenses, financial planning, fiscal management, money advice, financial health, manage finances",
+    keywords: "financial management, cash flow, budgeting, finance articles, money management, accounting, bookkeeping, financial tips, profit margins, revenue, expenses, financial planning, fiscal management, money advice, financial health, manage finances, exit preparation, business valuation, due diligence, exit strategy, selling business, business sale, M&A, merger acquisition, exit readiness, exit planning, owner exit, business transition, succession planning, maximize business value",
     icon: FileText
   },
   {

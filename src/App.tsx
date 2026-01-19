@@ -67,6 +67,7 @@ const Technology = lazy(() => import("./pages/blog/Technology"));
 const RiskManagement = lazy(() => import("./pages/blog/RiskManagement"));
 const BusinessIntelligence = lazy(() => import("./pages/blog/BusinessIntelligence"));
 const BusinessLeadership = lazy(() => import("./pages/blog/BusinessLeadership"));
+const GrowthScaling = lazy(() => import("./pages/blog/GrowthScaling"));
 const RetailRemoteTools = lazy(() => import("./pages/blog/RetailRemoteTools"));
 const DailyGrindFixes = lazy(() => import("./pages/blog/DailyGrindFixes"));
 const RealTimeAnalyticsSMB = lazy(() => import("./pages/blog/RealTimeAnalyticsSMB"));
@@ -226,6 +227,7 @@ const App = () => (
               <Route path="/blog/risk-management" element={<RiskManagement />} />
               <Route path="/blog/business-intelligence" element={<BusinessIntelligence />} />
               <Route path="/blog/business-leadership" element={<BusinessLeadership />} />
+              <Route path="/blog/growth-scaling" element={<GrowthScaling />} />
               <Route path="/blog/retail-remote-tools" element={<RetailRemoteTools />} />
               <Route path="/blog/daily-grind-fixes" element={<DailyGrindFixes />} />
               <Route path="/blog/real-time-analytics-smb-agility" element={<RealTimeAnalyticsSMB />} />

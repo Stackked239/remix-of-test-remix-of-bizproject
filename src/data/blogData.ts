@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Small Businesses Fail: Chasing Sales Instead of Pursuing Profits",
     excerpt: "Discover why 60% of small businesses fail within a decade by prioritizing revenue over profitability. Learn the 5 hidden costs of sales obsession and how to shift from volume-driven to profit-focused growth.",
     author: "BizHealth.ai Research Team",
-    date: "January 19, 2026",
+    date: "January 17, 2026",
     readTime: "12 min read",
     category: "Business Strategy, Financial Management, Operations, Technology, Risk Management",
     slug: "/blog/chasing-sales-not-profits",

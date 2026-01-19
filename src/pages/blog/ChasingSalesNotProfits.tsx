@@ -35,8 +35,8 @@ const ChasingSalesNotProfits = () => {
         keywords="small business profitability, revenue vs profit, profit margin optimization, unprofitable sales, cash flow management, business financial health, SMB profit strategies, sustainable business growth, unit economics, customer profitability analysis, profit-first business, revenue vanity profit sanity, small business failure, gross margin, net profit margin"
         ogType="article"
         ogImage="/og-images/og-chasing-sales-not-profits.jpg"
-        articlePublishedTime="2026-01-19T12:00:00Z"
-        articleModifiedTime="2026-01-19T12:00:00Z"
+        articlePublishedTime="2026-01-17T12:00:00Z"
+        articleModifiedTime="2026-01-17T12:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
         canonical="https://bizhealth.ai/blog/chasing-sales-not-profits"
       />
@@ -46,8 +46,8 @@ const ChasingSalesNotProfits = () => {
         headline="Why Small Businesses Fail Chasing Sales, Instead of Pursuing Profits"
         description="Discover why more sales don't equal more profit. Learn to identify the hidden costs of unprofitable growth and build a sustainable, profitable business."
         author="BizHealth.ai Research Team"
-        datePublished="2026-01-19"
-        dateModified="2026-01-19"
+        datePublished="2026-01-17"
+        dateModified="2026-01-17"
         image="https://bizhealth.ai/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg"
         url="https://bizhealth.ai/blog/chasing-sales-not-profits"
       />
@@ -57,7 +57,7 @@ const ChasingSalesNotProfits = () => {
       <BlogHeroSection
         title="Why Small Businesses Fail Chasing Sales, Instead of Pursuing Profits"
         author="BizHealth.ai Research Team"
-        publishDate="January 19, 2026"
+        publishDate="January 17, 2026"
         readTime="14 min read"
         heroImage={heroImage}
         heroImageAlt="Stressed business owner examining financial reports showing high revenue but negative cash flow and declining profit margins"

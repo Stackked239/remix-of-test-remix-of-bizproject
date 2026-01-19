@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
+    excerpt: "Learn how to transform your legacy business without losing what made it great. Discover frameworks for product portfolio evaluation, modernization strategy, and sustainable digital transformation.",
+    author: "BizHealth.ai Research Team",
+    date: "January 19, 2026",
+    readTime: "13 min read",
+    category: "Business Strategy, Operations, Business Intelligence",
+    slug: "/blog/renewal-imperative-legacy-business-rebirth",
+    imageUrl: "/assets/images/blog/renewal-imperative-legacy-business-rebirth.jpg",
+    altText: "Business owner at crossroads between traditional legacy retail shop and modern tech-forward office environment representing business transformation and renewal",
+    keywords: "legacy business transformation, business renewal strategy, digital transformation SMB, modernize established business, business rebirth, product portfolio optimization, legacy system modernization, business transformation framework 2026, innovator's dilemma, hybrid business approach, established business change, business evolution, company lifespan, competitive advantage, customer relationships, operational modernization, technology adoption, business innovation, transformation timeline, organizational change, skill gaps, business modernization, strategic advantage, business assessment, operational gaps, portfolio inefficiencies, strategic blind spots, business health, renewal imperative, legacy business, business transformation, digital transformation, modernization, established business, rebirth, portfolio evaluation, transformation strategy"
+  },
+  {
     title: "Shelf Space Secrets: How Planograms Transform Small Retail Operations",
     excerpt: "Discover how planograms eliminate lost revenue and operational chaos in small retail. Learn strategic shelf placement, inventory management, and visual merchandising to boost sales 5-15%.",
     author: "BizHealth.ai Research Team",

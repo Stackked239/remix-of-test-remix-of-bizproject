@@ -40,7 +40,7 @@ const SecretWeaponProcessMatters = () => {
         title="The Secret Weapon That Separates Growing Businesses from Stalled Ones: Why Process Matters"
         author="BizHealth.ai Research Team"
         publishDate="January 20, 2026"
-        readTime="13 min read"
+        readTime="15 min read"
         heroImage={heroImage}
         heroImageAlt="Business operations manager overseeing streamlined warehouse workflow with standard operating procedures - process documentation enabling scalable business growth"
         categories={[

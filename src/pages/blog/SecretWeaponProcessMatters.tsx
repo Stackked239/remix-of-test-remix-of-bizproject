@@ -634,6 +634,7 @@ const SecretWeaponProcessMatters = () => {
         ]}
       />
       
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

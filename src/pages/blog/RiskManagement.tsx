@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
@@ -19,257 +19,47 @@ import {
   Monitor,
   Users
 } from "lucide-react";
-import operationalResilienceImage from "@/assets/operational-resilience-strategy.jpg";
-import warningSignsImage from "@/assets/business-warning-signs-management.jpg";
-import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
-import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
-import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
-import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
-import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
-import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
-import growthCeilingImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
-import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
-import growthTrapImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
-import feastFamineImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
-import blindSpotOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
-import pricingStressTestImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
-import blindSpot2025Image from "@/assets/business-blind-spots-assessment.jpg";
-import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
-import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
-import techInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
-import fixBusinessBlindSpotsImage from "@/assets/images/business-blind-spots-hero.jpg";
+import { 
+  getPostsByCategoryWithSubcategories, 
+  CategoryBlogPost 
+} from "@/utils/blogCategoryUtils";
 
-// Blog post data structure
-interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  featuredImage: string;
-  subcategory: string;
-  author: string;
-  publishedAt: string;
-  readTime: number;
-}
-
-// Risk Management blog posts
-const blogPosts: BlogPost[] = [
-  {
-    id: '0',
-    slug: 'fix-business-blind-spots',
-    title: 'How Do You Fix What Isn\'t Broken? The Uncomfortable Truth About Business Blind Spots',
-    excerpt: 'Discover the 5 dangerous business blind spots costing you $50K-$100K annually. Learn why identifying gaps is an investment, not a burden.',
-    featuredImage: fixBusinessBlindSpotsImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 20, 2026',
-    readTime: 10
-  },
-  {
-    id: '1',
-    slug: 'chasing-sales-not-profits',
-    title: 'Why Small Businesses Fail: Chasing Sales Instead of Pursuing Profits',
-    excerpt: 'Discover why 60% of small businesses fail within a decade by prioritizing revenue over profitability. Learn the 5 hidden costs of sales obsession.',
-    featuredImage: chasingSalesNotProfitsImage,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 19, 2026',
-    readTime: 12
-  },
-  {
-    id: '2',
-    slug: 'renewal-imperative-legacy-business-rebirth',
-    title: 'The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great',
-    excerpt: 'Learn how to transform your legacy business without losing what made it great. Discover frameworks for sustainable digital transformation.',
-    featuredImage: renewalImperativeImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 19, 2026',
-    readTime: 13
-  },
-  {
-    id: '3',
-    slug: 'growth-ceiling-gut-instinct-scaling',
-    title: 'The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won\'t Scale It',
-    excerpt: 'Your gut instinct got your business off the ground—but it won\'t scale it. Learn why data-driven decision-making is essential at scale.',
-    featuredImage: growthCeilingImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 11, 2026',
-    readTime: 10
-  },
-  {
-    id: '4',
-    slug: 'estimating-crisis-service-business-profitability',
-    title: 'Avoid The Estimating Crisis: Why Service Business Profitability Collapses',
-    excerpt: 'A 5% estimating error can destroy 100% of your profit margin. Learn the 6 common estimating mistakes and 7-step system to protect profitability.',
-    featuredImage: estimatingCrisisImage,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 9, 2026',
-    readTime: 12
-  },
-  {
-    id: '5',
-    slug: 'growth-trap-or-growth-engine',
-    title: 'Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow',
-    excerpt: '78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess growth readiness.',
-    featuredImage: growthTrapImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 8, 2026',
-    readTime: 10
-  },
-  {
-    id: '6',
-    slug: 'feast-or-famine-cycle-small-business',
-    title: 'Breaking the Feast-or-Famine Cycle That Destroys Small Businesses',
-    excerpt: 'Learn how to break the destructive feast-or-famine revenue cycle. Discover 7 proven strategies for stable, predictable growth.',
-    featuredImage: feastFamineImage,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Jan 4, 2026',
-    readTime: 14
-  },
-  {
-    id: '7',
-    slug: 'business-blind-spots-operational-issues-invisible-leadership',
-    title: 'The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible',
-    excerpt: 'Research reveals leaders see only 4% of operational issues. Discover the 6 costly blind spots draining $50K+ annually.',
-    featuredImage: blindSpotOperationalImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Dec 28, 2025',
-    readTime: 16
-  },
-  {
-    id: '8',
-    slug: 'stress-test-pricing-framework-margins-cash-flow',
-    title: 'Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow',
-    excerpt: 'Discover a proven pricing stress-test framework to optimize your small business margins and cash flow.',
-    featuredImage: pricingStressTestImage,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Dec 26, 2025',
-    readTime: 12
-  },
-  {
-    id: '9',
-    slug: 'technology-innovation-gap-competitive-advantage',
-    title: 'Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap',
-    excerpt: 'Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency.',
-    featuredImage: techInnovationGapImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Dec 28, 2025',
-    readTime: 17
-  },
-  {
-    id: '10',
-    slug: 'success-begins-with-2026-strategy',
-    title: 'Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth',
-    excerpt: 'Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for risk mitigation.',
-    featuredImage: businessStrategyPlanningImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 20, 2025',
-    readTime: 12
-  },
-  {
-    id: '11',
-    slug: 'identifying-smb-leadership-blind-spots',
-    title: 'Identifying Small & Mid-Size Business Leadership Blind Spots',
-    excerpt: 'Discover the 7 critical leadership blind spots that prevent SMB success. Learn why 60% of employees lack confidence in leaders.',
-    featuredImage: leadershipBlindSpotsImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 23, 2025',
-    readTime: 12
-  },
-  {
-    id: '12',
-    slug: 'small-business-blind-spots-2025',
-    title: 'The Business Blind Spots Costing SMB Leaders $50K+ Annually',
-    excerpt: 'Discover the 5 dangerous business blind spots draining SMB profits. Learn to identify gaps before they cost you $50K+ annually.',
-    featuredImage: blindSpot2025Image,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 4, 2025',
-    readTime: 11
-  },
-  {
-    id: '13',
-    slug: 'smb-scaling-paradox-2025',
-    title: 'The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business',
-    excerpt: 'Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks.',
-    featuredImage: smbScalingParadoxImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 4, 2025',
-    readTime: 10
-  },
-  {
-    id: '14',
-    slug: 'cash-flow-crisis-management',
-    title: 'Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025',
-    excerpt: 'Master cash flow management for small business in 2025. Learn crisis prevention strategies and cash flow planning tips.',
-    featuredImage: cashFlowCrisisImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 3, 2025',
-    readTime: 8
-  },
-  {
-    id: '15',
-    slug: 'Q4-Cost-Cuts-2025',
-    title: 'Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses',
-    excerpt: 'Navigate Q4 2025 cash crunches with proven operational cost fixes. Learn efficiency diagnostics strategies.',
-    featuredImage: q4CostCutsImage,
-    subcategory: 'Financial Risk',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Nov 3, 2025',
-    readTime: 5
-  },
-  {
-    id: '16',
-    slug: 'small-business-survival-checklist-2025',
-    title: 'The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew',
-    excerpt: 'Learn from 500+ founders about first-year challenges, essential metrics, and KPIs that separate successful businesses.',
-    featuredImage: survivalChecklistImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth.ai Research Team',
-    publishedAt: 'Oct 24, 2025',
-    readTime: 11
-  },
-  {
-    id: '17',
-    slug: 'warning-signs-business',
-    title: 'Critical Warning Signs Your Business Needs Immediate Attention',
-    excerpt: 'Recognize the early warning signs of business trouble before they escalate into major problems.',
-    featuredImage: warningSignsImage,
-    subcategory: 'Crisis Management',
-    author: 'BizHealth Research Team',
-    publishedAt: 'Sep 12, 2025',
-    readTime: 10
-  },
-  {
-    id: '18',
-    slug: 'operational-resilience',
-    title: 'Building Operational Resilience in Uncertain Times',
-    excerpt: 'Learn how to build a resilient business that can adapt and thrive through disruption and unexpected challenges.',
-    featuredImage: operationalResilienceImage,
-    subcategory: 'Business Continuity',
-    author: 'BizHealth Research Team',
-    publishedAt: 'Sep 12, 2025',
-    readTime: 12
-  }
-];
+// Subcategory mapping for Risk Management posts
+const subcategoryMap: Record<string, string> = {
+  'fix-business-blind-spots': 'Crisis Management',
+  'chasing-sales-not-profits': 'Financial Risk',
+  'renewal-imperative-legacy-business-rebirth': 'Business Continuity',
+  'growth-ceiling-gut-instinct-scaling': 'Crisis Management',
+  'estimating-crisis-service-business-profitability': 'Financial Risk',
+  'growth-trap-or-growth-engine': 'Business Continuity',
+  'feast-or-famine-cycle-small-business': 'Financial Risk',
+  'business-blind-spots-operational-issues-invisible-leadership': 'Crisis Management',
+  'stress-test-pricing-framework-margins-cash-flow': 'Financial Risk',
+  'technology-innovation-gap-competitive-advantage': 'Business Continuity',
+  'success-begins-with-2026-strategy': 'Business Continuity',
+  'identifying-smb-leadership-blind-spots': 'Crisis Management',
+  'small-business-blind-spots-2025': 'Financial Risk',
+  'smb-scaling-paradox-2025': 'Business Continuity',
+  'cash-flow-crisis-management': 'Crisis Management',
+  'Q4-Cost-Cuts-2025': 'Financial Risk',
+  'small-business-survival-checklist-2025': 'Crisis Management',
+  'warning-signs-business': 'Crisis Management',
+  'operational-resilience': 'Business Continuity',
+  'final-approach-exit-preparation-business-value': 'Business Continuity',
+  'secret-weapon-why-process-matters': 'Business Continuity'
+};
 
 const RiskManagement = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('All');
   const [sortOrder, setSortOrder] = useState<string>('recent');
   const [currentPage, setCurrentPage] = useState<number>(1);
   
+  // Get posts dynamically from centralized blogData
+  const blogPosts = useMemo(() => 
+    getPostsByCategoryWithSubcategories('Risk Management', subcategoryMap, 'Crisis Management'),
+    []
+  );
+
   const subcategories = [
     'All',
     'Business Continuity',
@@ -313,7 +103,27 @@ const RiskManagement = () => {
     }
   ];
 
-  const totalPosts = blogPosts.length;
+  // Filter posts by subcategory
+  const filteredPosts = selectedSubcategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.subcategory === selectedSubcategory);
+
+  // Sort posts
+  const sortedPosts = useMemo(() => {
+    const posts = [...filteredPosts];
+    if (sortOrder === 'oldest') {
+      return posts.reverse();
+    }
+    return posts; // Already sorted by newest first from utility
+  }, [filteredPosts, sortOrder]);
+
+  const totalPosts = sortedPosts.length;
+  const postsPerPage = 12;
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
+  const paginatedPosts = sortedPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+  );
 
   return (
     <div className="min-h-screen bg-[#faf9f7]">
@@ -388,7 +198,7 @@ const RiskManagement = () => {
             className="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-4 py-2 rounded-full text-white/70"
             style={{ fontSize: '0.9rem' }}
           >
-            {totalPosts} {totalPosts === 1 ? 'Article' : 'Articles'}
+            {blogPosts.length} {blogPosts.length === 1 ? 'Article' : 'Articles'}
           </div>
         </div>
       </section>
@@ -401,7 +211,10 @@ const RiskManagement = () => {
             {subcategories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setSelectedSubcategory(cat)}
+                onClick={() => {
+                  setSelectedSubcategory(cat);
+                  setCurrentPage(1);
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   selectedSubcategory === cat
                     ? 'bg-[#969423] text-white'
@@ -433,115 +246,140 @@ const RiskManagement = () => {
       {/* Section 3: Blog Posts Grid */}
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <article
-                key={post.id}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5"
-              >
-                {/* Featured Image */}
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={post.featuredImage}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Category Tag */}
-                  <span 
-                    className="absolute top-4 left-4 bg-[#969423] text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded"
-                    style={{ letterSpacing: '0.5px' }}
-                  >
-                    {post.subcategory}
-                  </span>
-                </div>
-
-                {/* Card Body */}
-                <div className="p-6">
-                  {/* Post Title */}
-                  <Link to={`/blog/${post.slug}`}>
-                    <h3 
-                      className="font-semibold text-[#212653] mb-3 hover:text-[#969423] transition-colors line-clamp-2"
-                      style={{
-                        fontFamily: 'Montserrat, sans-serif',
-                        fontSize: '1.2rem',
-                        lineHeight: 1.4,
-                        fontWeight: 600
-                      }}
+          {paginatedPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5"
+                >
+                  {/* Featured Image */}
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    {/* Category Tag */}
+                    <span 
+                      className="absolute top-4 left-4 bg-[#969423] text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded"
+                      style={{ letterSpacing: '0.5px' }}
                     >
-                      {post.title}
-                    </h3>
-                  </Link>
-
-                  {/* Post Excerpt */}
-                  <p 
-                    className="text-[#7C7C7C] mb-4 line-clamp-3"
-                    style={{
-                      fontSize: '0.95rem',
-                      lineHeight: 1.6
-                    }}
-                  >
-                    {post.excerpt}
-                  </p>
-
-                  {/* Post Meta */}
-                  <div className="flex items-center gap-4 text-[#a8a8a8] mb-4 text-sm">
-                    <div className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{post.publishedAt}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{post.readTime} min read</span>
-                    </div>
+                      {post.subcategory}
+                    </span>
                   </div>
 
-                  {/* Read More Link */}
-                  <Link 
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-[#969423] font-semibold text-sm hover:gap-3 transition-all"
-                  >
-                    Read Article
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+                  {/* Card Body */}
+                  <div className="p-6">
+                    {/* Post Title */}
+                    <Link to={`/blog/${post.slug}`}>
+                      <h3 
+                        className="font-semibold text-[#212653] mb-3 hover:text-[#969423] transition-colors line-clamp-2"
+                        style={{
+                          fontFamily: 'Montserrat, sans-serif',
+                          fontSize: '1.2rem',
+                          lineHeight: 1.4,
+                          fontWeight: 600
+                        }}
+                      >
+                        {post.title}
+                      </h3>
+                    </Link>
+
+                    {/* Post Excerpt */}
+                    <p 
+                      className="text-[#7C7C7C] mb-4 line-clamp-3"
+                      style={{
+                        fontSize: '0.95rem',
+                        lineHeight: 1.6
+                      }}
+                    >
+                      {post.excerpt}
+                    </p>
+
+                    {/* Post Meta */}
+                    <div className="flex items-center gap-4 text-[#a8a8a8] mb-4 text-sm">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{post.publishedAt}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{post.readTime} min read</span>
+                      </div>
+                    </div>
+
+                    {/* Read More Link */}
+                    <Link 
+                      to={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-[#969423] font-semibold text-sm hover:gap-3 transition-all"
+                    >
+                      Read Article
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-[#7C7C7C] text-lg">No articles found in this subcategory.</p>
+              <button 
+                onClick={() => setSelectedSubcategory('All')}
+                className="mt-4 text-[#969423] font-semibold hover:underline"
+              >
+                View all articles
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Section 4: Pagination */}
-      <section className="pb-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center justify-center gap-2">
-            <button
-              disabled={currentPage === 1}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              Previous
-            </button>
-            
-            <button
-              className="w-10 h-10 rounded-lg bg-[#212653] text-white font-semibold"
-            >
-              1
-            </button>
+      {totalPages > 1 && (
+        <section className="pb-16 px-6">
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex items-center justify-center gap-2">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 rounded-lg font-semibold transition-all ${
+                    currentPage === page
+                      ? 'bg-[#212653] text-white'
+                      : 'border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7]'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
 
-            <button
-              disabled={currentPage === Math.ceil(totalPosts / 12)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-            >
-              Next
-              <ChevronRight className="w-4 h-4" />
-            </button>
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#212653]/15 text-[#212653] hover:bg-[#faf9f7] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+            
+            <p className="text-center mt-4 text-sm text-[#7C7C7C]">
+              Showing {(currentPage - 1) * postsPerPage + 1}-{Math.min(currentPage * postsPerPage, totalPosts)} of {totalPosts} articles
+            </p>
           </div>
-          
-          <p className="text-center mt-4 text-sm text-[#7C7C7C]">
-            Showing 1-{Math.min(12, totalPosts)} of {totalPosts} articles
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Section 5: Related Categories */}
       <section 
@@ -550,92 +388,38 @@ const RiskManagement = () => {
           background: 'linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 50%, #4a4a4a 100%)'
         }}
       >
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <p 
-              className="text-[#b8b344] mb-3 uppercase tracking-widest"
-              style={{ fontSize: '0.8rem', letterSpacing: '2px', fontWeight: 600 }}
-            >
-              Continue Learning
-            </p>
             <h2 
-              className="text-white"
+              className="text-white font-bold mb-4"
               style={{
                 fontFamily: 'Montserrat, sans-serif',
-                fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
-                fontWeight: 700
+                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)'
               }}
             >
-              Explore More Topics
+              Explore Related Categories
             </h2>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Continue your journey to business excellence with insights across these related topics
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedCategories.map((category, index) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {relatedCategories.map((category) => {
               const Icon = category.icon;
-              const iconColors = [
-                { gradient: 'linear-gradient(135deg, #969423 0%, #b8b344 100%)', shadow: 'rgba(150, 148, 35, 0.4)', hover: '#b8b344' },
-                { gradient: 'linear-gradient(135deg, #2a9d8f 0%, #40c9b8 100%)', shadow: 'rgba(42, 157, 143, 0.4)', hover: '#40c9b8' },
-                { gradient: 'linear-gradient(135deg, #e07a5f 0%, #eb9680 100%)', shadow: 'rgba(224, 122, 95, 0.4)', hover: '#eb9680' },
-                { gradient: 'linear-gradient(135deg, #4a7fb8 0%, #6a9fd8 100%)', shadow: 'rgba(74, 127, 184, 0.4)', hover: '#6a9fd8' },
-              ];
-              const colorSet = iconColors[index % iconColors.length];
               return (
                 <Link
                   key={category.name}
                   to={category.link}
-                  className="group flex items-center gap-4 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.08)',
-                    border: '1px solid rgba(255, 255, 255, 0.12)',
-                    backdropFilter: 'blur(8px)'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
-                    e.currentTarget.style.borderColor = `${colorSet.hover}80`;
-                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
+                  className="group bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                 >
-                  <div 
-                    className="flex items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
-                    style={{
-                      width: '52px',
-                      height: '52px',
-                      background: colorSet.gradient,
-                      flexShrink: 0,
-                      boxShadow: `0 4px 12px ${colorSet.shadow}`
-                    }}
-                  >
-                    <Icon size={24} className="text-white" />
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#969423]/20 rounded-full flex items-center justify-center group-hover:bg-[#969423]/30 transition-colors">
+                    <Icon className="w-6 h-6 text-[#969423]" />
                   </div>
-                  <div>
-                    <h3 
-                      className="font-semibold mb-1 transition-colors duration-300"
-                      style={{ 
-                        color: 'white',
-                        fontSize: '1.05rem',
-                        fontFamily: 'Montserrat, sans-serif'
-                      }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = colorSet.hover}
-                      onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-                    >
-                      {category.name}
-                    </h3>
-                    <p 
-                      className="text-sm"
-                      style={{ 
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        fontFamily: 'Open Sans, sans-serif'
-                      }}
-                    >
-                      {category.description}
-                    </p>
-                  </div>
+                  <h3 className="text-white font-semibold mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    {category.name}
+                  </h3>
+                  <p className="text-white/60 text-sm">{category.description}</p>
                 </Link>
               );
             })}
@@ -643,123 +427,38 @@ const RiskManagement = () => {
         </div>
       </section>
 
-      {/* Section 6: CTA Banner */}
-      <section 
-        className="py-16 px-6"
-        style={{
-          background: 'linear-gradient(135deg, #212653 0%, #2d3268 100%)'
-        }}
-      >
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col lg:flex-row items-center gap-10">
-            {/* Left Column - Content */}
-            <div className="flex-1 text-center lg:text-left">
-              <p 
-                className="text-[#b8b344] mb-3 uppercase tracking-widest"
-                style={{
-                  fontSize: '0.8rem',
-                  letterSpacing: '1.5px',
-                  fontWeight: 600
-                }}
-              >
-                The Risks You Don't See Are the Most Dangerous
-              </p>
-              
-              <h2 
-                className="text-white mb-4"
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
-                  fontWeight: 700
-                }}
-              >
-                You Can't Protect What You Don't Understand
-              </h2>
-              
-              <p 
-                className="text-white/80 mb-7 leading-relaxed"
-                style={{
-                  fontSize: '1.05rem',
-                  lineHeight: 1.7
-                }}
-              >
-                Real risk management starts with seeing the full picture. Our Business Health Assessment 
-                uncovers vulnerabilities across your operations, finances, team, and strategy—so you can 
-                address weaknesses before they become crises.
-              </p>
-              
-              <Button
-                asChild
-                className="bg-[#969423] hover:bg-[#b8b344] text-white font-bold text-base px-8 py-6 rounded-md hover:-translate-y-0.5 transition-all shadow-lg"
-              >
-                <Link to="/pricing" className="inline-flex items-center gap-2">
-                  Start Your BizHealth Assessment
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-            </div>
+      <GradientDivider />
 
-            {/* Right Column - Stats */}
-            <div className="flex-1 w-full">
-              <div 
-                className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col sm:flex-row justify-around gap-6 text-center"
-              >
-                <div>
-                  <div className="text-white text-4xl font-bold mb-1">43%</div>
-                  <div className="text-white/70 text-sm">of SMBs lack a continuity plan</div>
-                </div>
-                <div>
-                  <div className="text-white text-4xl font-bold mb-1">4 Pillars</div>
-                  <div className="text-white/70 text-sm">of business health analyzed</div>
-                </div>
-                <div>
-                  <div className="text-white text-4xl font-bold mb-1">Blind Spots</div>
-                  <div className="text-white/70 text-sm">identified before they hurt you</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 7: Newsletter Signup */}
-      <section className="py-12 px-6 bg-[#f5f3ef] border-t border-[#212653]/8">
-        <div className="container mx-auto max-w-2xl text-center">
+      {/* Section 6: Newsletter CTA */}
+      <section className="py-16 px-6 bg-[#faf9f7]">
+        <div className="container mx-auto max-w-4xl text-center">
           <h2 
-            className="mb-3 text-[#212653]"
+            className="font-bold text-[#212653] mb-4"
             style={{
               fontFamily: 'Montserrat, sans-serif',
-              fontSize: '1.5rem',
-              fontWeight: 600
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)'
             }}
           >
             Stay Ahead of Business Risks
           </h2>
-          
-          <p className="text-[#7C7C7C] mb-6">
-            Get practical risk management strategies, compliance updates, and business continuity tips delivered to your inbox weekly.
+          <p className="text-[#7C7C7C] mb-8 max-w-2xl mx-auto">
+            Get expert insights on risk management, business continuity, and crisis prevention delivered to your inbox.
           </p>
-          
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-md border border-[#212653]/15 focus:outline-none focus:ring-2 focus:ring-[#969423]"
-              required
+              className="flex-1 px-4 py-3 border border-[#212653]/15 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#969423]"
             />
-            <Button
-              type="submit"
-              className="bg-[#212653] hover:bg-[#2d3268] text-white font-semibold px-6 py-3 rounded-md transition-colors"
-            >
+            <Button className="bg-[#969423] hover:bg-[#7a7a1d] text-white px-6 py-3 rounded-lg font-semibold">
               Subscribe
             </Button>
-          </form>
+          </div>
         </div>
       </section>
 
-      <GradientDivider />
-      <GlobalFooter />
       <PromotionalBanner />
+      <GlobalFooter />
     </div>
   );
 };

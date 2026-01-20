@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "How Do You Fix What Isn't Broken? The Uncomfortable Truth About Business Blind Spots",
+    excerpt: "Discover the 5 dangerous business blind spots costing you $50K-$100K annually. Learn why identifying gaps is an investment, not a burden—unlock 20-25x ROI with strategic assessment.",
+    author: "BizHealth.ai Research Team",
+    date: "January 20, 2026",
+    readTime: "10 min read",
+    category: "Business Strategy, Risk Management, Financials, Operations",
+    slug: "/blog/fix-business-blind-spots",
+    imageUrl: "/assets/images/business-blind-spots-hero.jpg",
+    altText: "Business owner analyzing business health dashboard with diagnostics, charts, and KPI metrics - discovering hidden blind spots in operations and financials",
+    keywords: "business blind spots, business assessment, SMB diagnostics, hidden costs, operational inefficiency, financial invisibility, customer experience misalignment, strategic drift, talent capability gaps, business gaps, root cause analysis, business health, profitability leaks, SMB growth, business evaluation 2026, business health assessment, 12 critical business areas, ROI, benchmarking, prioritized recommendations, data-driven decisions, fix business problems, identify business gaps, small business challenges, operational efficiency, profit margin analysis, customer retention, strategic alignment, business diagnosis, confirmation bias, internal assessment, industry benchmarks, cascading costs, resource allocation, business consulting alternative, affordable assessment, business blind spot 2026"
+  },
+  {
     title: "The Secret Weapon That Separates Growing Businesses from Stalled Ones: Why Process Matters",
     excerpt: "Discover why documented business processes are the secret weapon for scalable growth. Learn how process clarity drives consistency, reduces errors by 2-5%, and enables 15-30% capacity gains without additional headcount.",
     author: "BizHealth.ai Research Team",

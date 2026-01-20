@@ -77,9 +77,11 @@ import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-
 import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
 import finalApproachExitImage from "@/assets/images/final-approach-exit-preparation.jpg";
 import secretWeaponProcessImage from "@/assets/images/secret-weapon-process-matters-hero.jpg";
+import businessBlindSpotsHeroImage from "@/assets/images/business-blind-spots-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/fix-business-blind-spots": businessBlindSpotsHeroImage,
   "/blog/secret-weapon-why-process-matters": secretWeaponProcessImage,
   "/blog/final-approach-exit-preparation-business-value": finalApproachExitImage,
   "/blog/chasing-sales-not-profits": chasingSalesNotProfitsImage,

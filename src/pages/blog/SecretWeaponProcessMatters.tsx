@@ -578,7 +578,7 @@ const SecretWeaponProcessMatters = () => {
                 
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <img 
-                    src="/favicon-bizhealth.svg" 
+                    src="/favicon-96x96.png" 
                     alt="BizHealth.ai" 
                     className="w-16 h-16 mb-4"
                   />

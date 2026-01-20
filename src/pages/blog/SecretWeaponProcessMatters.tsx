@@ -332,8 +332,8 @@ const SecretWeaponProcessMatters = () => {
             {/* The Price of Not Having Process */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-red-500/10">
-                  <AlertTriangle className="w-7 h-7 text-red-500" />
+                <div className="p-3 rounded-xl bg-destructive/10">
+                  <AlertTriangle className="w-7 h-7 text-destructive" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground m-0">The Price of Not Having Process</h2>
               </div>
@@ -351,7 +351,7 @@ const SecretWeaponProcessMatters = () => {
               
               <h3 className="text-xl font-bold text-foreground mb-4">In a business without process:</h3>
               
-              <div className="bg-red-50/50 dark:bg-red-900/10 rounded-xl p-6 mb-6">
+              <div className="bg-destructive/5 dark:bg-destructive/10 rounded-xl p-6 mb-6">
                 <ul className="space-y-3">
                   {[
                     "Every task is treated as unique, requiring creative problem-solving",
@@ -365,8 +365,8 @@ const SecretWeaponProcessMatters = () => {
                     "You can't scale beyond what you can personally oversee"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 text-red-600 dark:text-red-400 flex items-center justify-center text-sm font-bold">✕</span>
-                      <span className="text-red-700 dark:text-red-300">{item}</span>
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-destructive/20 text-destructive flex items-center justify-center text-sm font-bold">✕</span>
+                      <span className="text-destructive/90 dark:text-destructive/80">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -401,12 +401,12 @@ const SecretWeaponProcessMatters = () => {
               <h3 className="text-xl font-bold text-foreground mb-4">Consider two approaches to customer service:</h3>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-red-50/50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-xl p-6">
+                <div className="bg-destructive/5 dark:bg-destructive/10 border border-destructive/20 dark:border-destructive/30 rounded-xl p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-red-600 dark:text-red-400 font-bold">❌</span>
-                    <h4 className="font-bold text-red-700 dark:text-red-300 m-0">Bad Process (Rigid)</h4>
+                    <span className="text-destructive font-bold">❌</span>
+                    <h4 className="font-bold text-destructive m-0">Bad Process (Rigid)</h4>
                   </div>
-                  <p className="text-red-700/80 dark:text-red-300/80 text-sm m-0">
+                  <p className="text-destructive/80 dark:text-destructive/70 text-sm m-0">
                     Customer arrives with problem. Follow 15-step checklist. No flexibility allowed. Problem that doesn't fit the checklist gets escalated endlessly.
                   </p>
                 </div>

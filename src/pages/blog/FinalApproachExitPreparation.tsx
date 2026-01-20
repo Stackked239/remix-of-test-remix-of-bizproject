@@ -312,7 +312,7 @@ const FinalApproachExitPreparation = () => {
                 When due diligence begins, buyers are running a comprehensive evaluation:
               </p>
               
-              <div className="grid gap-3 mb-6">
+              <div className="grid gap-2 mb-6">
                 {[
                   "Financial accuracy and sustainability—Can revenue be verified? Can profit margins be sustained?",
                   "Customer relationships and contracts—Are they transferable? What's the churn rate?",
@@ -322,9 +322,18 @@ const FinalApproachExitPreparation = () => {
                   "Asset condition and infrastructure—Are physical assets well-maintained?",
                   "Competitive position and sustainability—Is the business defensible?"
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 bg-white dark:bg-card border border-border rounded-lg">
-                    <ArrowRight className="w-4 h-4 text-[hsl(var(--biz-green))] flex-shrink-0 mt-1" />
-                    <p className="text-muted-foreground text-sm">{item}</p>
+                  <div 
+                    key={index} 
+                    className={`flex items-start gap-3 p-4 rounded-lg border border-border transition-colors ${
+                      index % 2 === 0 
+                        ? 'bg-white dark:bg-card' 
+                        : 'bg-slate-50 dark:bg-slate-900/50'
+                    }`}
+                  >
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))] font-bold text-xs flex items-center justify-center mt-0.5">
+                      {index + 1}
+                    </span>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
@@ -503,8 +512,12 @@ const FinalApproachExitPreparation = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white dark:bg-card border border-[hsl(var(--biz-green))]/30 rounded-2xl p-8 md:p-12 shadow-lg">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/30 flex items-center justify-center">
-                <Target className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/30 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/favicon-96x96.png" 
+                  alt="BizHealth.ai" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Ready to Assess Your Exit Readiness?

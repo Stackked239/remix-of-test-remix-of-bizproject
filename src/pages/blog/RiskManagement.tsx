@@ -37,6 +37,7 @@ import blindSpot2025Image from "@/assets/business-blind-spots-assessment.jpg";
 import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import q4CostCutsImage from "@/assets/q4-cost-cuts-operational-fixes-2025.jpg";
 import techInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
+import fixBusinessBlindSpotsImage from "@/assets/images/business-blind-spots-hero.jpg";
 
 // Blog post data structure
 interface BlogPost {
@@ -53,6 +54,17 @@ interface BlogPost {
 
 // Risk Management blog posts
 const blogPosts: BlogPost[] = [
+  {
+    id: '0',
+    slug: 'fix-business-blind-spots',
+    title: 'How Do You Fix What Isn\'t Broken? The Uncomfortable Truth About Business Blind Spots',
+    excerpt: 'Discover the 5 dangerous business blind spots costing you $50K-$100K annually. Learn why identifying gaps is an investment, not a burden.',
+    featuredImage: fixBusinessBlindSpotsImage,
+    subcategory: 'Crisis Management',
+    author: 'BizHealth.ai Research Team',
+    publishedAt: 'Jan 20, 2026',
+    readTime: 10
+  },
   {
     id: '1',
     slug: 'chasing-sales-not-profits',

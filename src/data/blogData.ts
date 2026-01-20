@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Secret Weapon That Separates Growing Businesses from Stalled Ones: Why Process Matters",
+    excerpt: "Discover why documented business processes are the secret weapon for scalable growth. Learn how process clarity drives consistency, reduces errors by 2-5%, and enables 15-30% capacity gains without additional headcount.",
+    author: "BizHealth.ai Research Team",
+    date: "January 20, 2026",
+    readTime: "13 min read",
+    category: "Operations, Business Strategy, Growth & Scaling",
+    slug: "/blog/secret-weapon-why-process-matters",
+    imageUrl: "/assets/images/secret-weapon-process-matters-hero.jpg",
+    altText: "Business operations manager overseeing streamlined warehouse workflow with standard operating procedures - process documentation enabling scalable business growth",
+    keywords: "business process documentation, process improvement, scalable business growth, operational efficiency, SOP development, business systems, process management, small business scaling, documented processes, business growth strategy, operational excellence, process optimization, standard operating procedures, process clarity, business systematization, knowledge preservation, employee onboarding, training efficiency, error reduction, quality consistency, capacity utilization, process waste elimination, competitive advantage, founder dependence, business valuation, exit preparation, business process, workflow documentation, operational scalability, team execution, delegation, process design, rigidity vs clarity, growth without chaos, Michael Gerber, systematized work, process gaps, business health assessment, 12 critical business areas, customer onboarding process, invoicing process, team coordination, quality assurance, process bottlenecks, process documentation 2026"
+  },
+  {
     title: "The Final Approach: How Methodical Exit Preparation Determines Your Business's Landing Value",
     excerpt: "Maximize business exit value with methodical preparation. Learn how 3-5 years of strategic planning, due diligence prep, and buyer readiness delivers 20-30% higher valuations.",
     author: "BizHealth.ai Research Team",

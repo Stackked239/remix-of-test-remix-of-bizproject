@@ -125,6 +125,7 @@ const PlanogramsTransformSmallRetail = lazy(() => import("./pages/blog/Planogram
 const RenewalImperativeLegacyBusiness = lazy(() => import("./pages/blog/RenewalImperativeLegacyBusiness"));
 const ChasingSalesNotProfits = lazy(() => import("./pages/blog/ChasingSalesNotProfits"));
 const FinalApproachExitPreparation = lazy(() => import("./pages/blog/FinalApproachExitPreparation"));
+const SecretWeaponProcessMatters = lazy(() => import("./pages/blog/SecretWeaponProcessMatters"));
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
 const ProcessMappingTools = lazy(() => import("./pages/tools/ProcessMappingTools"));
@@ -286,6 +287,7 @@ const App = () => (
               <Route path="/blog/renewal-imperative-legacy-business-rebirth" element={<RenewalImperativeLegacyBusiness />} />
               <Route path="/blog/chasing-sales-not-profits" element={<ChasingSalesNotProfits />} />
               <Route path="/blog/final-approach-exit-preparation-business-value" element={<FinalApproachExitPreparation />} />
+              <Route path="/blog/secret-weapon-why-process-matters" element={<SecretWeaponProcessMatters />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

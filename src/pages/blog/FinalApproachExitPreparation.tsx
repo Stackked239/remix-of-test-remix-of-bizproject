@@ -333,7 +333,7 @@ const FinalApproachExitPreparation = () => {
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))] font-bold text-xs flex items-center justify-center mt-0.5">
                       {index + 1}
                     </span>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item}</p>
+                    <p className="text-[hsl(var(--biz-blue))] text-sm leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>

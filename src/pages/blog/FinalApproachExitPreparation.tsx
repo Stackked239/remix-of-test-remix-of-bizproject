@@ -343,35 +343,32 @@ const FinalApproachExitPreparation = () => {
                 <h2 className="text-3xl font-bold text-foreground">The Numbers That Matter in Exit Preparation</h2>
               </div>
               
-              <div className="bg-white dark:bg-card border-l-4 border-[hsl(var(--biz-green))] rounded-xl p-6 shadow-sm mb-6">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center flex-shrink-0">
-                      <span className="text-[hsl(var(--biz-green))] font-bold text-lg">20-30%</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Higher valuations for prepared businesses</p>
-                      <p className="text-muted-foreground text-sm">Compared to unprepared businesses in the same industry and financial position.</p>
-                    </div>
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                {/* Higher Valuations */}
+                <div className="bg-gradient-to-br from-[hsl(var(--biz-green))]/5 to-white dark:to-card border border-[hsl(var(--biz-green))]/20 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/30 flex items-center justify-center">
+                    <span className="text-[hsl(var(--biz-green))] font-bold text-2xl">20-30%</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center flex-shrink-0">
-                      <span className="text-red-600 dark:text-red-400 font-bold text-lg">30-50%</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Owner dependency discounts</p>
-                      <p className="text-muted-foreground text-sm">A business heavily dependent on the founder sees significant valuation discounts.</p>
-                    </div>
+                  <p className="font-semibold text-foreground text-lg mb-2">Higher valuations for prepared businesses</p>
+                  <p className="text-muted-foreground text-sm">Compared to unprepared businesses in the same industry and financial position.</p>
+                </div>
+                
+                {/* Owner Dependency Discounts */}
+                <div className="bg-gradient-to-br from-red-50 to-white dark:from-red-950/20 dark:to-card border border-red-200 dark:border-red-900/30 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-red-100 dark:bg-red-900/30 border-2 border-red-300 dark:border-red-700 flex items-center justify-center">
+                    <span className="text-red-600 dark:text-red-400 font-bold text-2xl">30-50%</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-                      <span className="text-amber-600 dark:text-amber-400 font-bold text-lg">25-35%</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">Customer concentration discounts</p>
-                      <p className="text-muted-foreground text-sm">When one customer represents 40% of revenue.</p>
-                    </div>
+                  <p className="font-semibold text-foreground text-lg mb-2">Owner dependency discounts</p>
+                  <p className="text-muted-foreground text-sm">A business heavily dependent on the founder sees significant valuation discounts.</p>
+                </div>
+                
+                {/* Customer Concentration */}
+                <div className="bg-gradient-to-br from-amber-50 to-white dark:from-amber-950/20 dark:to-card border border-amber-200 dark:border-amber-900/30 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 flex items-center justify-center">
+                    <span className="text-amber-600 dark:text-amber-400 font-bold text-2xl">25-35%</span>
                   </div>
+                  <p className="font-semibold text-foreground text-lg mb-2">Customer concentration discounts</p>
+                  <p className="text-muted-foreground text-sm">When one customer represents 40% of revenue.</p>
                 </div>
               </div>
             </section>
@@ -500,6 +497,44 @@ const FinalApproachExitPreparation = () => {
           </div>
         </div>
       </article>
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-br from-[hsl(var(--biz-navy))]/5 via-background to-[hsl(var(--biz-green))]/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white dark:bg-card border border-[hsl(var(--biz-green))]/30 rounded-2xl p-8 md:p-12 shadow-lg">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[hsl(var(--biz-green))]/10 border-2 border-[hsl(var(--biz-green))]/30 flex items-center justify-center">
+                <Target className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Ready to Assess Your Exit Readiness?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-6 max-w-2xl mx-auto">
+                Don't wait until you're forced to sell. Get a comprehensive business health assessment to understand where your business stands today—and what steps will maximize your exit value tomorrow.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link 
+                  to="/get-started"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/90 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  <CheckCircle2 className="w-5 h-5" />
+                  Start Your Business Health Assessment
+                </Link>
+                <Link 
+                  to="/pricing"
+                  className="inline-flex items-center gap-2 px-6 py-4 border-2 border-[hsl(var(--biz-green))] text-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/5 font-semibold rounded-lg transition-all"
+                >
+                  View Assessment Options
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <p className="text-muted-foreground text-sm mt-6">
+                Join thousands of business owners preparing strategically for their exit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <GradientDivider />
       

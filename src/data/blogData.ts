@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Discover why documented business processes are the secret weapon for scalable growth. Learn how process clarity drives consistency, reduces errors by 2-5%, and enables 15-30% capacity gains without additional headcount.",
     author: "BizHealth.ai Research Team",
     date: "January 20, 2026",
-    readTime: "13 min read",
+    readTime: "15 min read",
     category: "Operations, Business Strategy, Growth & Scaling",
     slug: "/blog/secret-weapon-why-process-matters",
     imageUrl: "/assets/images/secret-weapon-process-matters-hero.jpg",

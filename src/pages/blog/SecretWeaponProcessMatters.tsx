@@ -91,8 +91,8 @@ const SecretWeaponProcessMatters = () => {
             {/* What Process Actually Is */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-[hsl(var(--biz-gold))]/10">
-                  <FileText className="w-7 h-7 text-[hsl(var(--biz-gold))]" />
+              <div className="p-3 rounded-xl bg-[hsl(var(--biz-blue))]/10">
+                  <FileText className="w-7 h-7 text-[hsl(var(--biz-blue))]" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground m-0">What Process Actually Is (And Isn't)</h2>
               </div>
@@ -153,8 +153,8 @@ const SecretWeaponProcessMatters = () => {
               {/* Consistency Without Heroics */}
               <div className="bg-card border border-border rounded-xl p-6 mb-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-gold))]/10">
-                    <Target className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-blue))]/10">
+                    <Target className="w-6 h-6 text-[hsl(var(--biz-blue))]" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground m-0">Consistency Without Heroics</h3>
                 </div>
@@ -202,7 +202,7 @@ const SecretWeaponProcessMatters = () => {
                   This transition is predictable because it's driven by a fundamental rule: the human brain can only directly manage about 5-8 people effectively. Beyond that, you need systems and processes to create alignment without constant communication.
                 </p>
                 
-                <p className="text-[hsl(var(--biz-gold))] font-semibold">
+                <p className="text-[hsl(var(--biz-blue))] font-semibold">
                   Companies that document their processes grow through that transition smoothly. Companies that haven't documented processes hit a wall at 20-30 people and either stall or hire more management to re-create communication manually. Both options are expensive.
                 </p>
               </div>
@@ -210,8 +210,8 @@ const SecretWeaponProcessMatters = () => {
               {/* Faster Onboarding */}
               <div className="bg-card border border-border rounded-xl p-6 mb-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-gold))]/10">
-                    <Users className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-blue))]/10">
+                    <Users className="w-6 h-6 text-[hsl(var(--biz-blue))]" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground m-0">Faster Onboarding and Lower Training Costs</h3>
                 </div>
@@ -261,7 +261,7 @@ const SecretWeaponProcessMatters = () => {
                   ))}
                 </ul>
                 
-                <p className="text-[hsl(var(--biz-gold))] font-semibold">
+                <p className="text-[hsl(var(--biz-blue))] font-semibold">
                   The financial impact: error reduction alone often improves profitability by 2-5%.
                 </p>
               </div>
@@ -269,8 +269,8 @@ const SecretWeaponProcessMatters = () => {
               {/* Knowledge Preservation */}
               <div className="bg-card border border-border rounded-xl p-6 mb-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-gold))]/10">
-                    <Shield className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                  <div className="p-2 rounded-lg bg-[hsl(var(--biz-blue))]/10">
+                    <Shield className="w-6 h-6 text-[hsl(var(--biz-blue))]" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground m-0">Knowledge Preservation and Reduced Dependence</h3>
                 </div>
@@ -283,10 +283,10 @@ const SecretWeaponProcessMatters = () => {
                   Documentation prevents this. Knowledge is preserved. New people can learn from what worked before. The business doesn't suffer from key person departure.
                 </p>
                 
-                <div className="bg-[hsl(var(--biz-gold))]/10 border-l-4 border-[hsl(var(--biz-gold))] p-4 rounded-r-lg">
+                <div className="bg-[hsl(var(--biz-blue))]/10 border-l-4 border-[hsl(var(--biz-blue))] p-4 rounded-r-lg">
                   <p className="font-semibold text-foreground mb-2">This matters especially for owner exit.</p>
                   <p className="text-muted-foreground m-0">
-                    A business where all critical knowledge is documented is worth significantly more—maybe <span className="text-[hsl(var(--biz-gold))] font-bold">30-50% more</span>—than a business dependent on the founder. Buyers pay more for businesses that can run without the founder present.
+                    A business where all critical knowledge is documented is worth significantly more—maybe <span className="text-[hsl(var(--biz-green))] font-bold">30-50% more</span>—than a business dependent on the founder. Buyers pay more for businesses that can run without the founder present.
                   </p>
                 </div>
               </div>
@@ -311,7 +311,7 @@ const SecretWeaponProcessMatters = () => {
                     "A scheduling process without systems means constant coordination and rework"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                      <AlertTriangle className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
+                      <AlertTriangle className="w-5 h-5 text-[hsl(var(--biz-blue))] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -380,8 +380,8 @@ const SecretWeaponProcessMatters = () => {
             {/* Rigidity vs Clarity */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-[hsl(var(--biz-gold))]/10">
-                  <Lightbulb className="w-7 h-7 text-[hsl(var(--biz-gold))]" />
+                <div className="p-3 rounded-xl bg-[hsl(var(--biz-blue))]/10">
+                  <Lightbulb className="w-7 h-7 text-[hsl(var(--biz-blue))]" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground m-0">The Difference Between Rigidity and Clarity</h2>
               </div>
@@ -469,8 +469,8 @@ const SecretWeaponProcessMatters = () => {
                   "You can step back from daily operations",
                   "The business has value independent of you"
                 ].map((item, index) => (
-                  <div key={index} className={`flex items-center gap-3 p-3 rounded-lg ${index % 2 === 0 ? 'bg-[hsl(var(--biz-green))]/10' : 'bg-[hsl(var(--biz-gold))]/10'}`}>
-                    <CheckCircle className={`w-5 h-5 flex-shrink-0 ${index % 2 === 0 ? 'text-[hsl(var(--biz-green))]' : 'text-[hsl(var(--biz-gold))]'}`} />
+                  <div key={index} className={`flex items-center gap-3 p-3 rounded-lg ${index % 2 === 0 ? 'bg-[hsl(var(--biz-green))]/10' : 'bg-[hsl(var(--biz-blue))]/10'}`}>
+                    <CheckCircle className={`w-5 h-5 flex-shrink-0 ${index % 2 === 0 ? 'text-[hsl(var(--biz-green))]' : 'text-[hsl(var(--biz-blue))]'}`} />
                     <span className="text-foreground">{item}</span>
                   </div>
                 ))}
@@ -484,8 +484,8 @@ const SecretWeaponProcessMatters = () => {
             {/* Getting Started */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-[hsl(var(--biz-gold))]/10">
-                  <Settings className="w-7 h-7 text-[hsl(var(--biz-gold))]" />
+                <div className="p-3 rounded-xl bg-[hsl(var(--biz-blue))]/10">
+                  <Settings className="w-7 h-7 text-[hsl(var(--biz-blue))]" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground m-0">Getting Started: A Practical First Step</h2>
               </div>
@@ -521,8 +521,8 @@ const SecretWeaponProcessMatters = () => {
                     desc: "Update your documentation based on what you learned. Make it clearer and more actionable."
                   }
                 ].map((item) => (
-                  <div key={item.step} className={`flex gap-4 p-4 rounded-xl ${item.step % 2 === 0 ? 'bg-[hsl(var(--biz-gold))]/10' : 'bg-[hsl(var(--biz-green))]/10'}`}>
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${item.step % 2 === 0 ? 'bg-[hsl(var(--biz-gold))]' : 'bg-[hsl(var(--biz-green))]'}`}>
+                  <div key={item.step} className={`flex gap-4 p-4 rounded-xl ${item.step % 2 === 0 ? 'bg-[hsl(var(--biz-blue))]/10' : 'bg-[hsl(var(--biz-green))]/10'}`}>
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl ${item.step % 2 === 0 ? 'bg-[hsl(var(--biz-blue))]' : 'bg-[hsl(var(--biz-green))]'}`}>
                       {item.step}
                     </div>
                     <div>
@@ -578,7 +578,7 @@ const SecretWeaponProcessMatters = () => {
                 
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <img 
-                    src="/favicon.ico" 
+                    src="/favicon-bizhealth.svg" 
                     alt="BizHealth.ai" 
                     className="w-16 h-16 mb-4"
                   />

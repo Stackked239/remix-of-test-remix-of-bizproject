@@ -110,8 +110,8 @@ const FinalApproachExitPreparation = () => {
             {/* Why Financials Alone Won't Get Top Dollar */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-[hsl(var(--biz-gold))]/10">
-                  <DollarSign className="w-7 h-7 text-[hsl(var(--biz-gold))]" />
+                <div className="p-3 rounded-xl bg-[hsl(var(--biz-green))]/10">
+                  <DollarSign className="w-7 h-7 text-[hsl(var(--biz-green))]" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground">Why Your Financials Alone Won't Get Top Dollar</h2>
               </div>

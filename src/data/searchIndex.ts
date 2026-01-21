@@ -18,7 +18,7 @@
 // TIP: Include common misspellings, synonyms, and related terms in keywords
 // ============================================================================
 
-import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target, Calculator, Banknote } from "lucide-react";
+import { FileText, HelpCircle, Home, DollarSign, Mail, BookOpen, Wrench, GraduationCap, Target, Calculator, Banknote, ClipboardCheck } from "lucide-react";
 
 export interface SearchableItem {
   type: "Page" | "Tool" | "Curriculum" | "Playbook" | "Resource" | "FAQ";
@@ -185,6 +185,14 @@ export const searchablePages: SearchableItem[] = [
     url: "/bizgrowth/growth/business-intelligence-builder",
     keywords: "business intelligence, BI, BI builder, biztool, data analytics, KPIs, dashboards, metrics, reporting, data-driven decisions, business analytics, performance tracking, key performance indicators, data visualization, analytics playbook, BI system, SMB analytics, business data, decision making, data strategy, BI implementation, build BI, create dashboard, business metrics, data insights, intelligence builder, bi playbook, bi framework, bi for small business, affordable BI, free BI tool, track metrics, measure performance, data analysis",
     icon: Target
+  },
+  {
+    type: "Resource",
+    title: "FREE Voice of Customer Checklist - Customer Feedback Collection Guide",
+    excerpt: "Download the free 37-step Voice of Customer Checklist. Learn how to collect, analyze, and act on customer feedback to close the perception gap and improve customer experience.",
+    url: "/bizgrowth/voice-of-customer-checklist",
+    keywords: "free voice of customer checklist, voice of customer, VoC checklist, customer feedback checklist, customer feedback collection, free customer feedback template, customer experience checklist, NPS survey template, customer satisfaction survey, VoC program, voice of customer program, customer insight collection, feedback loop, customer research checklist, free VoC template, VoC framework, customer listening, customer perception gap, customer experience gap, close feedback loop, small business feedback, SMB customer feedback, VoC methodology, collect customer feedback, how to get customer feedback, customer voice, understanding customers, free business checklist, free download checklist, bizhealth checklist, bizgrowth checklist, free checklist, downloadable checklist, customer survey, customer research, feedback collection guide, customer insights, VoC best practices, perception gap, 80 24 gap, customer satisfaction checklist",
+    icon: ClipboardCheck
   },
   {
     type: "Page",

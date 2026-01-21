@@ -332,9 +332,9 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* What Buying Behavior Tells You Section */}
-            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-gold))]/5 to-transparent p-8 -mx-8 rounded-2xl border border-[hsl(var(--biz-gold))]/10">
+            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-green))]/5 to-transparent p-8 -mx-8 rounded-2xl border border-[hsl(var(--biz-green))]/10">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <ShoppingCart className="w-8 h-8 text-[hsl(var(--biz-gold))]" />
+                <ShoppingCart className="w-8 h-8 text-[hsl(var(--biz-green))]" />
                 What Buying Behavior Actually Tells You
               </h2>
               
@@ -372,8 +372,8 @@ const VoiceOfCustomerTruth = () => {
                 ].map((item, index) => (
                   <div key={index} className={`bg-card border border-border p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow ${index === 4 ? 'md:col-span-2 bg-gradient-to-r from-[hsl(var(--biz-gold))]/5 to-[hsl(var(--biz-green))]/5' : ''}`}>
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                      <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-[hsl(var(--biz-green))]" />
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>

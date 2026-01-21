@@ -14,7 +14,8 @@ const AlphabetNav: React.FC<AlphabetNavProps> = ({
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
   return (
-    <div className="flex flex-wrap justify-center gap-0.5">
+    <div className="flex flex-wrap items-center justify-center gap-1">
+      <span className="text-xs font-semibold text-[hsl(var(--biz-blue))] mr-1">Jump to:</span>
       {alphabet.map((letter) => {
         const isAvailable = availableLetters.has(letter);
         const isActive = activeLetter === letter;

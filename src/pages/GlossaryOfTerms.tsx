@@ -169,7 +169,7 @@ const GlossaryOfTerms = () => {
         ogImage="https://bizhealth.ai/og-images/og-glossary.jpg"
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-[hsl(var(--biz-blue))]/5">
         <PromotionalBanner />
         <GlobalNavigation />
         

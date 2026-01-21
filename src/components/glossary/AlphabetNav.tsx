@@ -16,9 +16,9 @@ const AlphabetNav: React.FC<AlphabetNavProps> = ({
   return (
     <nav 
       aria-label="Alphabetical navigation"
-      className="bg-white/80 backdrop-blur-sm border border-[hsl(var(--biz-grey))] rounded-lg px-4 py-3 shadow-sm"
+      className="bg-white/80 backdrop-blur-sm border border-[hsl(var(--biz-grey))] rounded-lg px-3 py-2 shadow-sm"
     >
-      <div className="flex flex-wrap justify-center gap-1">
+      <div className="flex flex-wrap justify-center gap-0.5">
         {alphabet.map((letter) => {
           const isAvailable = availableLetters.has(letter);
           const isActive = activeLetter === letter;

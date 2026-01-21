@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import { Link } from "react-router-dom";
-import { ArrowRight, AlertTriangle, MessageSquare, TrendingDown, Users, Target, ShoppingCart, Heart, DollarSign, RefreshCw, Lightbulb } from "lucide-react";
+import { ArrowRight, AlertTriangle, MessageSquare, TrendingDown, Users, Target, ShoppingCart, Heart, DollarSign, RefreshCw, Lightbulb, Download, ClipboardCheck, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
@@ -578,6 +578,48 @@ const VoiceOfCustomerTruth = () => {
                 >
                   Start Your Business Assessment
                   <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </section>
+
+            {/* Free Checklist CTA */}
+            <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[hsl(var(--biz-blue))] via-[hsl(var(--biz-green))]/90 to-[hsl(var(--biz-gold))]/80 p-8 md:p-10">
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <ClipboardCheck className="w-10 h-10 text-white" />
+                </div>
+                
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    FREE: Voice of Customer Checklist
+                  </h3>
+                  <p className="text-white/90 text-lg mb-4">
+                    Ready to close the perception gap? Get the 37-step checklist to systematically collect, analyze, and act on real customer feedback.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-white/80">
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                      Proven VoC methodology
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                      Ready-to-use templates
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                      Instant download
+                    </span>
+                  </div>
+                </div>
+                
+                <Link 
+                  to="/bizgrowth/voice-of-customer-checklist"
+                  className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-[hsl(var(--biz-blue))] font-bold rounded-xl hover:bg-white/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Download className="w-5 h-5" />
+                  Get Free Checklist
                 </Link>
               </div>
             </section>

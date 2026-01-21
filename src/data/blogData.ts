@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Stop Guessing What Your Customers Think: The Uncomfortable Truth About Voice of the Customer",
+    excerpt: "80% of business leaders think they deliver excellent CX. Only 24% of customers agree. Discover the 56-point perception gap costing you customers and how to close it.",
+    author: "BizHealth.ai Research Team",
+    date: "January 21, 2026",
+    readTime: "10 min read",
+    category: "Growth & Scaling, Operations, Business Strategy, Risk Management",
+    slug: "/blog/voice-of-customer-truth",
+    imageUrl: "/assets/images/voice-of-customer-truth-hero.jpg",
+    altText: "Customer browsing retail store with engaged staff illustrating voice of customer interactions and customer experience moments",
+    keywords: "voice of the customer, VoC, customer feedback, customer experience, customer satisfaction, perception gap, customer churn, customer retention, customer insights, customer behavior, customer loyalty, NPS, customer surveys, customer feedback analysis, CX strategy 2026, customer perception, niceties trap, customer communication, customer service gap, personalization gap, feedback gap, buying behavior, customer preferences, customer advocacy, customer friction, customer pain points, profitable customers, competitive vulnerability, honest feedback, customer listening, customer experience gap, customer trust, customer expectations, customer journey, customer touchpoints, customer value perception, churn prevention, customer voice, strategic insight, customer intelligence"
+  },
+  {
     title: "How Do You Fix What Isn't Broken? The Uncomfortable Truth About Business Blind Spots",
     excerpt: "Discover the 5 dangerous business blind spots costing you $50K-$100K annually. Learn why identifying gaps is an investment, not a burden—unlock 20-25x ROI with strategic assessment.",
     author: "BizHealth.ai Research Team",

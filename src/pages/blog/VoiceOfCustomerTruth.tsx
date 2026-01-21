@@ -134,7 +134,15 @@ const VoiceOfCustomerTruth = () => {
               </div>
 
               <p className="text-[hsl(var(--biz-blue))] leading-relaxed mb-6">
-                Research shows a shocking disconnect: <strong>70% of consumers misreport their purchase habits in surveys.</strong> They say they buy one thing. Their actual purchases show something else. Their recall of spending, frequency, and loyalty is demonstrably inaccurate.
+                Research shows a shocking disconnect: <strong>70% of consumers misreport their purchase habits in surveys.</strong> They say they buy one thing. Their actual purchases show something else. Their recall of spending, frequency, and loyalty is demonstrably inaccurate. This is why{" "}
+                <a 
+                  href="https://www.gartner.com/en/newsroom/press-releases/gartner-predicts-by-2025--60--of-organizations-with-voice-of-the" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[hsl(var(--biz-green))] underline hover:text-[hsl(var(--biz-green))]/80 transition-colors font-medium"
+                >
+                  Gartner predicts that 60% of organizations with VoC programs will supplement traditional surveys by analyzing voice and text interactions
+                </a>—because behavioral signals reveal what surveys can't.
               </p>
 
               <p className="text-[hsl(var(--biz-blue))] leading-relaxed mb-6">

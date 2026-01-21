@@ -870,6 +870,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "The holistic perception a customer forms from all interactions with a company, encompassing every touchpoint from discovery, marketing, sales, service, to post-purchase. CX influences customer feelings, loyalty, and future behavior—it's not just customer service but the entire journey.",
     whyImportant: "Great CX drives customer satisfaction, retention, and revenue. Companies that prioritize CX see higher customer lifetime value, stronger word-of-mouth, and competitive differentiation. Poor CX leads to churn and negative reviews.",
     smbApplication: "A local bakery maps the customer journey from Instagram discovery to in-store visit to follow-up email, ensuring each touchpoint creates positive emotions—resulting in 40% repeat customers and strong referral growth."
+  },
+  {
+    id: 95,
+    term: "Customer Journey",
+    category: "Customer Metrics",
+    definition: "The complete sequence of experiences and interactions a customer goes through when engaging with a company, from initial awareness and consideration through purchase, use, and advocacy. It maps all touchpoints across channels to understand the customer's perspective and pain points.",
+    whyImportant: "Understanding the customer journey reveals friction points, drop-off moments, and opportunities for improvement. It enables businesses to optimize each stage, reduce acquisition costs, increase conversions, and build lasting relationships.",
+    smbApplication: "An online boutique maps their customer journey and discovers 60% of cart abandonments occur at shipping cost reveal. By showing shipping earlier and offering free shipping at $50+, they recover 25% of lost sales and increase average order value."
   }
 ];
 

@@ -124,6 +124,9 @@ const ogImageMap = {
   '/blog/impact-over-information': '/og-images/og-impact-over-information.jpg',
   '/blog/risk-management': '/og-images/og-risk-management.jpg',
   '/blog/planograms-transform-small-retail-operations': '/og-images/og-planograms-transform-small-retail.jpg',
+  '/blog/voice-of-customer-truth': '/og-images/og-voice-of-customer-truth.jpg',
+  // BizGrowth pages
+  '/bizgrowth/voice-of-customer-checklist': '/og-images/og-voice-of-customer-checklist.jpg',
 };
 
 /**

@@ -147,6 +147,8 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(self \"https://getcody.ai\" \"https://*.getcody.ai\"), camera=(self \"https://getcody.ai\" \"https://*.getcody.ai\"), autoplay=(self)"
+    # Content Security Policy - allows Cody bot scripts, frames, and connections
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://trinketsofcody.com https://*.getcody.ai https://getcody.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co https://trinketsofcody.com https://*.getcody.ai https://getcody.ai wss://*.getcody.ai; frame-src 'self' https://*.getcody.ai https://getcody.ai; frame-ancestors 'none';"
 
 # Cache static assets
 [[headers]]

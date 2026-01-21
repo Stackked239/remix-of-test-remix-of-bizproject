@@ -399,21 +399,21 @@ const GlossaryOfTerms = () => {
           )}
 
           {/* CTA Section */}
-          <section className="mt-16 bg-gradient-to-r from-biz-navy to-biz-green rounded-2xl p-8 md:p-12 text-white text-center">
-            <h2 className="text-3xl font-montserrat font-bold mb-4">
+          <section className="mt-16 bg-[hsl(var(--biz-grey))] rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-montserrat font-bold mb-4 text-[hsl(var(--biz-navy))]">
               Ready to Apply These Concepts?
             </h2>
-            <p className="text-lg font-open-sans mb-8 max-w-2xl mx-auto text-white/90">
+            <p className="text-lg font-open-sans mb-8 max-w-2xl mx-auto text-[hsl(var(--biz-blue))]">
               Take your BizHealth.ai assessment to see how these metrics apply to your business and receive personalized insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register">
-                <Button size="lg" className="bg-white text-biz-navy hover:bg-white/90">
-                  Start Free Assessment
+                <Button size="lg" className="bg-[hsl(var(--biz-green))] text-white hover:bg-[hsl(var(--biz-green))]/90">
+                  Start Your Business Assessment
                 </Button>
               </Link>
               <Link to="/pricing">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-[hsl(var(--biz-navy))] text-white hover:bg-[hsl(var(--biz-navy))]/90 border-[hsl(var(--biz-navy))]">
                   View Pricing
                 </Button>
               </Link>

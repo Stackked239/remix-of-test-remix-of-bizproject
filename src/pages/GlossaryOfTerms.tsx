@@ -174,7 +174,7 @@ const GlossaryOfTerms = () => {
         <GlobalNavigation />
         
         {/* Hero Section */}
-        <section className="bg-biz-navy text-white pt-44 pb-12">
+        <section className="bg-biz-navy text-white pt-44 pb-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
@@ -190,10 +190,10 @@ const GlossaryOfTerms = () => {
           </div>
         </section>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Search and Filter Controls */}
-          <div className="bg-biz-green/85 backdrop-blur-sm border-2 border-biz-blue rounded-lg shadow-lg p-6 mb-8 sticky top-36 z-30">
-            <p className="text-base text-biz-blue mb-6 text-center">
+          <div className="bg-biz-green/85 backdrop-blur-sm border-2 border-biz-blue rounded-lg shadow-lg p-4 mb-4 sticky top-36 z-30">
+            <p className="text-sm text-biz-blue mb-4 text-center">
               <span className="font-bold">Interactive Glossary - </span>
               Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
               this interactive glossary is your comprehensive guide to understanding key business concepts.
@@ -290,7 +290,7 @@ const GlossaryOfTerms = () => {
 
           {/* A-Z Navigation */}
           {!isLoading && filteredTerms.length > 0 && (
-            <div className="mb-6">
+            <div className="mb-4">
               <AlphabetNav 
                 availableLetters={availableLetters}
                 onLetterClick={handleLetterClick}

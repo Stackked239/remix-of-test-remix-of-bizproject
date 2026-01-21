@@ -886,6 +886,222 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Any point of interaction between a customer and a business, whether direct (website visit, phone call, in-store experience) or indirect (reviews, social media mentions, word-of-mouth). Each touchpoint shapes customer perception and influences their journey.",
     whyImportant: "Every touchpoint is an opportunity to build trust or lose a customer. Identifying and optimizing touchpoints ensures consistent brand experience, reduces friction, and increases satisfaction across all channels.",
     smbApplication: "A dental practice audits their touchpoints—website booking, reminder texts, waiting room, checkout—and discovers the payment process creates frustration. Adding contactless payment and emailed receipts improves patient satisfaction scores by 35%."
+  },
+  {
+    id: 97,
+    term: "Customer Persona",
+    category: "Customer Metrics",
+    definition: "A semi-fictional representation of your ideal customer based on market research and real data about existing customers. Personas include demographics, behavior patterns, motivations, goals, pain points, and decision-making factors.",
+    whyImportant: "Personas help businesses create targeted marketing, develop relevant products, and craft messaging that resonates. They align teams around customer needs and prevent costly assumptions about who you're serving.",
+    smbApplication: "A fitness studio creates three personas—Busy Professional, New Mom, and Retiree—then tailors class schedules, marketing messages, and membership packages to each, increasing membership by 45% across all segments."
+  },
+  {
+    id: 98,
+    term: "Omnichannel Experience",
+    category: "Customer Metrics",
+    definition: "A seamless, integrated approach to customer engagement that provides consistent experience across all channels—online, mobile, in-store, phone, and social media. Customers can switch between channels without losing context or starting over.",
+    whyImportant: "Modern customers expect fluid experiences across channels. Omnichannel strategies increase customer satisfaction, reduce friction, and boost sales by meeting customers wherever they prefer to engage.",
+    smbApplication: "A home décor store integrates their website, Instagram shop, and physical store inventory. Customers browse online, check in-store availability, and pick up same day—increasing conversion rates by 60%."
+  },
+  {
+    id: 99,
+    term: "Customer Advocacy",
+    category: "Customer Metrics",
+    definition: "When satisfied customers actively promote and recommend your business to others through word-of-mouth, reviews, testimonials, referrals, and social media. Customer advocates become unpaid brand ambassadors who drive organic growth.",
+    whyImportant: "Advocates provide the most trusted form of marketing—peer recommendations. They reduce customer acquisition costs, increase credibility, and create sustainable growth through authentic endorsements.",
+    smbApplication: "A pet grooming salon creates a referral program giving advocates $15 credit per referral. Their top 20 advocates generate 35% of new customers at 80% lower acquisition cost than paid advertising."
+  },
+  {
+    id: 100,
+    term: "Business Valuation",
+    category: "Financial Management",
+    definition: "The process of determining the economic value of a business or company, using various methods including asset-based, earnings-based (multiples of EBITDA or revenue), and market comparison approaches. Valuation considers tangible assets, intellectual property, brand value, and future earning potential.",
+    whyImportant: "Accurate valuation is essential for selling a business, attracting investors, establishing ownership stakes, estate planning, and understanding true business worth beyond daily operations.",
+    smbApplication: "A 15-year-old HVAC company seeking to sell engages a valuator who determines it's worth 4x EBITDA ($2.4M) based on recurring service contracts, trained staff, and established reputation—$800K more than the owner estimated."
+  },
+  {
+    id: 101,
+    term: "Unit Economics",
+    category: "Financial Metrics",
+    definition: "The direct revenues and costs associated with a particular business model expressed on a per-unit basis. For subscription businesses, it's revenue and cost per subscriber; for e-commerce, per order; for services, per client.",
+    whyImportant: "Positive unit economics prove a business model is fundamentally viable. If you lose money on each unit sold, you can't make it up with volume. It reveals true profitability before scaling.",
+    smbApplication: "A meal prep delivery service calculates unit economics: $45 average order, $18 food cost, $12 delivery, $5 packaging = $10 contribution margin. With $50 CAC and 80% monthly retention, they confirm profitability by month 6."
+  },
+  {
+    id: 102,
+    term: "Working Capital Management",
+    category: "Financial Management",
+    definition: "The process of managing short-term assets (cash, inventory, receivables) and short-term liabilities (payables, short-term debt) to ensure sufficient liquidity for day-to-day operations while maximizing operational efficiency.",
+    whyImportant: "Poor working capital management causes cash flow crises even in profitable businesses. Effective management ensures you can meet obligations, take advantage of opportunities, and avoid expensive emergency financing.",
+    smbApplication: "A wholesale distributor improves working capital by negotiating net-60 terms with suppliers while maintaining net-30 for customers, reducing required credit line from $200K to $75K and saving $12K annually in interest."
+  },
+  {
+    id: 103,
+    term: "Succession Planning",
+    category: "Strategic & Governance",
+    definition: "The process of identifying and developing future leaders who can replace current key personnel when they leave, retire, or are otherwise unavailable. It ensures business continuity and preserves institutional knowledge.",
+    whyImportant: "Without succession planning, businesses face leadership vacuums that disrupt operations, lose critical knowledge, and may struggle to survive founder transitions. Planning ahead protects business value.",
+    smbApplication: "A 62-year-old manufacturing company owner identifies two internal candidates, begins cross-training them in leadership, and creates a 5-year transition plan—ensuring the business survives his retirement without losing key customer relationships."
+  },
+  {
+    id: 104,
+    term: "Exit Strategy",
+    category: "Strategic & Governance",
+    definition: "A planned approach for a business owner to transition out of their company, whether through sale to a third party, management buyout, merger, IPO, or passing to family members. Exit strategies define how owners will realize the value they've built.",
+    whyImportant: "Every business owner will eventually exit. Planning ahead maximizes value, ensures smooth transitions, protects employees and customers, and achieves personal financial goals.",
+    smbApplication: "A couple running a successful daycare plans for retirement by documenting all processes, building a management team, and positioning for sale—ultimately selling for 3x revenue to a regional childcare chain."
+  },
+  {
+    id: 105,
+    term: "Artificial Intelligence in Business",
+    category: "Modern Business Practices",
+    definition: "The application of AI technologies—including machine learning, natural language processing, and computer vision—to automate tasks, generate insights, enhance decision-making, and create new business capabilities. AI transforms how businesses operate, compete, and serve customers.",
+    whyImportant: "AI is reshaping competitive landscapes across industries. Early adopters gain efficiency advantages, better customer insights, and new capabilities. Those who delay risk falling behind as AI becomes standard practice.",
+    smbApplication: "A regional accounting firm implements AI for document processing and initial tax preparation, reducing preparation time by 60% and allowing staff to focus on advisory services—increasing revenue per client by 40%."
+  },
+  {
+    id: 106,
+    term: "Business Automation",
+    category: "Modern Business Practices",
+    definition: "Using technology to perform repetitive tasks with minimal human intervention. Automation ranges from simple workflows (auto-email responses) to complex process automation (inventory management, invoicing, customer service bots).",
+    whyImportant: "Automation reduces errors, speeds up processes, cuts labor costs, and frees employees for higher-value work. It enables small businesses to operate at scale without proportionally increasing headcount.",
+    smbApplication: "A property management company automates rent collection, maintenance requests, and lease renewals. Managing 200 units now requires 2 staff instead of 5, while tenant satisfaction improves due to faster response times."
+  },
+  {
+    id: 107,
+    term: "Cloud Computing",
+    category: "Modern Business Practices",
+    definition: "The delivery of computing services—servers, storage, databases, networking, software, analytics—over the internet ('the cloud'). Instead of owning hardware, businesses access resources on-demand and pay for what they use.",
+    whyImportant: "Cloud computing eliminates capital expenditure on IT infrastructure, provides scalability, enables remote work, improves disaster recovery, and gives small businesses access to enterprise-grade technology.",
+    smbApplication: "A growing law firm moves from local servers to cloud-based practice management. They eliminate $40K in server costs, enable attorneys to work from anywhere, and automatic backups prevent data loss risk."
+  },
+  {
+    id: 108,
+    term: "Data Analytics",
+    category: "Modern Business Practices",
+    definition: "The process of examining data sets to draw conclusions about the information they contain. It includes descriptive analytics (what happened), diagnostic analytics (why it happened), predictive analytics (what will happen), and prescriptive analytics (what should we do).",
+    whyImportant: "Data-driven decisions outperform gut instinct. Analytics reveal patterns invisible to intuition, identify opportunities, predict problems, and measure what actually works versus assumptions.",
+    smbApplication: "A restaurant analyzes POS data and discovers Tuesday dinner sales are 40% below average. They introduce 'Taco Tuesday' specials, track results, and turn their slowest night into their third-busiest within two months."
+  },
+  {
+    id: 109,
+    term: "Cybersecurity",
+    category: "Modern Business Practices",
+    definition: "The practice of protecting systems, networks, programs, and data from digital attacks. It encompasses technology safeguards, policies, employee training, and incident response plans to prevent unauthorized access, data breaches, and business disruption.",
+    whyImportant: "Cyber attacks target businesses of all sizes—43% of attacks target small businesses. Breaches cause financial loss, reputation damage, legal liability, and can destroy businesses entirely.",
+    smbApplication: "An insurance agency implements multi-factor authentication, employee phishing training, and encrypted backups after a competitor suffers ransomware. The $5K annual investment prevents a potential $200K+ breach impact."
+  },
+  {
+    id: 110,
+    term: "Digital Transformation",
+    category: "Modern Business Practices",
+    definition: "The integration of digital technology into all areas of a business, fundamentally changing how you operate and deliver value to customers. It's not just about technology adoption but rethinking business models and processes for a digital age.",
+    whyImportant: "Digital transformation improves efficiency, enhances customer experiences, creates new revenue streams, and builds competitive advantage. Businesses that don't transform risk obsolescence.",
+    smbApplication: "A traditional print shop transforms by adding online ordering, automated job tracking, and digital proofing. Print sales stabilize while new digital services grow to represent 35% of revenue."
+  },
+  {
+    id: 111,
+    term: "E-commerce",
+    category: "Sales & Marketing",
+    definition: "Commercial transactions conducted electronically on the internet. It includes B2C (business-to-consumer), B2B (business-to-business), and D2C (direct-to-consumer) models, encompassing online storefronts, marketplaces, and digital payment systems.",
+    whyImportant: "E-commerce expands market reach beyond geographic limitations, operates 24/7, reduces overhead costs, provides rich customer data, and meets modern consumer expectations for convenience.",
+    smbApplication: "A specialty spice shop adds an online store, reaching customers nationwide. Online sales grow to 60% of revenue within 18 months, with 3x the profit margin of in-store sales due to lower overhead."
+  },
+  {
+    id: 112,
+    term: "Search Engine Optimization (SEO)",
+    category: "Sales & Marketing",
+    definition: "The practice of optimizing website content and structure to rank higher in search engine results for relevant queries. SEO includes on-page factors (content, keywords, meta tags), technical factors (site speed, mobile-friendliness), and off-page factors (backlinks, authority).",
+    whyImportant: "Organic search drives significant website traffic. High rankings for relevant keywords bring qualified leads at near-zero marginal cost compared to paid advertising.",
+    smbApplication: "A local plumber optimizes their website for 'emergency plumber [city name]' searches, creates helpful content about common plumbing issues, and builds local citations—increasing organic leads by 150% over 12 months."
+  },
+  {
+    id: 113,
+    term: "Social Media Marketing",
+    category: "Sales & Marketing",
+    definition: "Using social media platforms to connect with audiences, build brand awareness, drive website traffic, and increase sales. It encompasses organic content, paid advertising, influencer partnerships, and community management.",
+    whyImportant: "Social media is where customers spend time and make purchasing decisions. It provides direct customer engagement, viral potential, and cost-effective advertising with precise targeting.",
+    smbApplication: "A boutique clothing store builds Instagram following through outfit inspiration posts, stories showing new arrivals, and user-generated content from customers. Social drives 45% of online sales and strong brand loyalty."
+  },
+  {
+    id: 114,
+    term: "Content Marketing",
+    category: "Sales & Marketing",
+    definition: "A strategic marketing approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience—and ultimately drive profitable customer action.",
+    whyImportant: "Content marketing builds trust and authority, educates potential customers, improves SEO, and generates leads at lower cost than traditional advertising while creating lasting digital assets.",
+    smbApplication: "A financial advisor creates weekly blog posts answering common retirement questions, publishes a free estate planning guide, and shares insights on LinkedIn—generating 40% of new client inquiries from content."
+  },
+  {
+    id: 115,
+    term: "Brand Equity",
+    category: "Sales & Marketing",
+    definition: "The commercial value derived from consumer perception of a brand name rather than the product or service itself. Positive brand equity allows premium pricing, customer loyalty, and easier product launches.",
+    whyImportant: "Strong brand equity creates sustainable competitive advantage. It reduces price sensitivity, lowers customer acquisition costs, attracts better employees, and increases business valuation.",
+    smbApplication: "A local craft brewery's strong brand equity allows them to charge 25% more than competitors, maintain loyal customers despite new competition, and successfully launch new products with immediate adoption."
+  },
+  {
+    id: 116,
+    term: "Operational Efficiency",
+    category: "Operational Metrics",
+    definition: "The ratio between output gained from business operations and the input required to run them. It measures how well a company uses resources (time, labor, materials, capital) to produce goods or services.",
+    whyImportant: "Higher operational efficiency means better margins, competitive pricing ability, faster delivery, and capacity to scale. Inefficiency erodes profits and limits growth potential.",
+    smbApplication: "A catering company maps their kitchen workflow, reorganizes prep stations, and implements batch cooking. They reduce labor hours per event by 30% while improving food quality consistency."
+  },
+  {
+    id: 117,
+    term: "Supply Chain Management",
+    category: "Operational Metrics",
+    definition: "The oversight of materials, information, and finances as they move from supplier to manufacturer to wholesaler to retailer to consumer. It coordinates planning, sourcing, production, and delivery to optimize cost, quality, and speed.",
+    whyImportant: "Effective supply chain management reduces costs, improves reliability, minimizes inventory investment, and creates competitive advantage. Poor management causes stockouts, delays, and excess costs.",
+    smbApplication: "A hardware store implements inventory management software connecting sales data to automatic reorders. They reduce stockouts by 75%, cut inventory carrying costs by 20%, and free up $50K in working capital."
+  },
+  {
+    id: 118,
+    term: "Quality Control",
+    category: "Operational Metrics",
+    definition: "The process of ensuring products or services meet specified requirements and customer expectations. It includes inspection, testing, and correction of defects to maintain consistent output quality.",
+    whyImportant: "Quality control prevents defective products from reaching customers, reduces waste and rework costs, protects reputation, and builds customer trust and loyalty.",
+    smbApplication: "A custom furniture maker implements quality checkpoints at each production stage. Defect rates drop from 8% to 1%, returns decrease by 85%, and online reviews improve from 4.2 to 4.8 stars."
+  },
+  {
+    id: 119,
+    term: "Employee Engagement",
+    category: "Human Resources",
+    definition: "The emotional commitment an employee has to their organization and its goals. Engaged employees care about their work and company, going beyond basic job requirements to contribute to organizational success.",
+    whyImportant: "Engaged employees are more productive, provide better customer service, stay longer, and contribute to positive workplace culture. Disengagement costs businesses billions in lost productivity.",
+    smbApplication: "A marketing agency implements monthly feedback sessions, professional development budgets, and team recognition programs. Employee turnover drops from 35% to 12%, saving $80K annually in hiring and training costs."
+  },
+  {
+    id: 120,
+    term: "Talent Acquisition",
+    category: "Human Resources",
+    definition: "The strategic approach to identifying, attracting, and onboarding skilled individuals to meet organizational needs. Unlike basic recruiting, talent acquisition is ongoing, proactive, and aligned with long-term business goals.",
+    whyImportant: "The right talent drives business success. Strategic acquisition builds a pipeline of qualified candidates, reduces time-to-hire, improves quality of hires, and creates competitive advantage through people.",
+    smbApplication: "A growing tech consultancy builds relationships with local universities, maintains an active LinkedIn presence showcasing culture, and creates an internship pipeline—reducing average hiring time from 60 to 25 days."
+  },
+  {
+    id: 121,
+    term: "Performance Management",
+    category: "Human Resources",
+    definition: "An ongoing process of communication between supervisors and employees that supports accomplishing organizational objectives. It includes goal setting, continuous feedback, regular check-ins, and performance evaluation.",
+    whyImportant: "Effective performance management aligns individual efforts with business goals, identifies development needs, improves accountability, and helps retain top performers through recognition and growth opportunities.",
+    smbApplication: "A dental practice replaces annual reviews with quarterly goal-setting and monthly one-on-ones. Staff productivity increases 25%, patient satisfaction scores improve, and the practice identifies future leaders for expansion."
+  },
+  {
+    id: 122,
+    term: "Competitive Analysis",
+    category: "Strategic & Governance",
+    definition: "The process of identifying competitors and evaluating their strategies, strengths, and weaknesses relative to your own. It examines products, pricing, marketing, market position, and operational approaches to inform strategic decisions.",
+    whyImportant: "Understanding competitors reveals market opportunities, potential threats, and areas for differentiation. It prevents blind spots and helps businesses position themselves effectively.",
+    smbApplication: "A new coffee shop analyzes five local competitors on price, hours, atmosphere, and offerings. They identify an underserved market for quiet workspace and position as the 'work-friendly café'—filling a gap competitors missed."
+  },
+  {
+    id: 123,
+    term: "Strategic Planning",
+    category: "Strategic & Governance",
+    definition: "The process of defining an organization's direction and making decisions on allocating resources to pursue this strategy. It involves setting long-term goals, analyzing competitive environment, and developing action plans.",
+    whyImportant: "Strategic planning provides direction, focuses resources, aligns team efforts, and improves decision-making. Without it, businesses react to circumstances rather than shaping their future.",
+    smbApplication: "A family plumbing business conducts annual strategic planning, identifying commercial contracts as a growth opportunity. They invest in larger equipment and commercial licenses, growing commercial revenue from 10% to 40% of sales over three years."
   }
 ];
 

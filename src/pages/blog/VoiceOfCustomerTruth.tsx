@@ -60,7 +60,7 @@ const VoiceOfCustomerTruth = () => {
             {/* The Perception Gap Section */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <AlertTriangle className="w-8 h-8 text-[hsl(var(--biz-orange))]" />
+                <AlertTriangle className="w-8 h-8 text-destructive" />
                 The Perception Gap That's Costing You Millions
               </h2>
               
@@ -116,7 +116,7 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* The Niceties Trap Section */}
-            <section className="mb-16">
+            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-blue))]/5 to-transparent p-8 -mx-8 rounded-2xl">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
                 <MessageSquare className="w-8 h-8 text-[hsl(var(--biz-green))]" />
                 The Niceties Trap: Why Customer Feedback Lies
@@ -162,7 +162,7 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* Listening vs Hearing Section */}
-            <section className="mb-16">
+            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-green))]/5 via-transparent to-[hsl(var(--biz-gold))]/5 p-8 -mx-8 rounded-2xl border border-[hsl(var(--biz-green))]/10">
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Listening vs. Hearing: The Critical Difference
               </h2>
@@ -310,8 +310,8 @@ const VoiceOfCustomerTruth = () => {
                     rootCauses: "Feedback scattered across systems, no closed-loop communication, and no accountability for action."
                   }
                 ].map((gap, index) => (
-                  <div key={index} className="bg-card border border-border rounded-xl overflow-hidden shadow-sm">
-                    <div className="bg-gradient-to-r from-[hsl(var(--biz-green))] to-[hsl(var(--biz-blue))] p-4">
+                  <div key={index} className="bg-card border border-border rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div className="bg-gradient-to-r from-[hsl(var(--biz-blue))] to-[hsl(var(--biz-green))] p-4">
                       <h3 className="text-xl font-bold text-white flex items-center gap-3">
                         <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-lg">
                           {gap.number}
@@ -332,9 +332,9 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* What Buying Behavior Tells You Section */}
-            <section className="mb-16">
+            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-gold))]/5 to-transparent p-8 -mx-8 rounded-2xl border border-[hsl(var(--biz-gold))]/10">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <ShoppingCart className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+                <ShoppingCart className="w-8 h-8 text-[hsl(var(--biz-gold))]" />
                 What Buying Behavior Actually Tells You
               </h2>
               
@@ -370,10 +370,10 @@ const VoiceOfCustomerTruth = () => {
                     icon: DollarSign
                   }
                 ].map((item, index) => (
-                  <div key={index} className={`bg-card border border-border p-6 rounded-xl shadow-sm ${index === 4 ? 'md:col-span-2' : ''}`}>
+                  <div key={index} className={`bg-card border border-border p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow ${index === 4 ? 'md:col-span-2 bg-gradient-to-r from-[hsl(var(--biz-gold))]/5 to-[hsl(var(--biz-green))]/5' : ''}`}>
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                      <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
@@ -440,7 +440,7 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* The Hard Truth Section */}
-            <section className="mb-16">
+            <section className="mb-16 bg-gradient-to-br from-destructive/5 via-transparent to-[hsl(var(--biz-blue))]/5 p-8 -mx-8 rounded-2xl">
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 The Hard Truth: Hearing What You Don't Want to Hear
               </h2>
@@ -495,7 +495,7 @@ const VoiceOfCustomerTruth = () => {
             </section>
 
             {/* Why This Matters Now Section */}
-            <section className="mb-16">
+            <section className="mb-16 bg-gradient-to-br from-[hsl(var(--biz-navy))]/5 to-[hsl(var(--biz-orange))]/5 p-8 -mx-8 rounded-2xl border border-[hsl(var(--biz-navy))]/10">
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Why This Matters Now
               </h2>

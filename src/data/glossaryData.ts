@@ -878,6 +878,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "The complete sequence of experiences and interactions a customer goes through when engaging with a company, from initial awareness and consideration through purchase, use, and advocacy. It maps all touchpoints across channels to understand the customer's perspective and pain points.",
     whyImportant: "Understanding the customer journey reveals friction points, drop-off moments, and opportunities for improvement. It enables businesses to optimize each stage, reduce acquisition costs, increase conversions, and build lasting relationships.",
     smbApplication: "An online boutique maps their customer journey and discovers 60% of cart abandonments occur at shipping cost reveal. By showing shipping earlier and offering free shipping at $50+, they recover 25% of lost sales and increase average order value."
+  },
+  {
+    id: 96,
+    term: "Customer Touchpoint",
+    category: "Customer Metrics",
+    definition: "Any point of interaction between a customer and a business, whether direct (website visit, phone call, in-store experience) or indirect (reviews, social media mentions, word-of-mouth). Each touchpoint shapes customer perception and influences their journey.",
+    whyImportant: "Every touchpoint is an opportunity to build trust or lose a customer. Identifying and optimizing touchpoints ensures consistent brand experience, reduces friction, and increases satisfaction across all channels.",
+    smbApplication: "A dental practice audits their touchpoints—website booking, reminder texts, waiting room, checkout—and discovers the payment process creates frustration. Adding contactless payment and emailed receipts improves patient satisfaction scores by 35%."
   }
 ];
 

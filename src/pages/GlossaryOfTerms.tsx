@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -25,6 +25,7 @@ import StoryBrandHeader from '@/components/StoryBrandHeader';
 import GlobalFooter from '@/components/GlobalFooter';
 import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import AlphabetNav from '@/components/glossary/AlphabetNav';
 import { glossaryTerms, categories, categoryColors, GlossaryTerm } from '@/data/glossaryData';
 import {
   Select,
@@ -42,6 +43,8 @@ const GlossaryOfTerms = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
+  const [activeLetter, setActiveLetter] = useState<string | undefined>();
+  const letterRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Load favorites from localStorage
   useEffect(() => {
@@ -81,6 +84,41 @@ const GlossaryOfTerms = () => {
     });
   }, [searchTerm, selectedCategory]);
 
+  // Group terms by first letter
+  const { groupedTerms, availableLetters } = useMemo(() => {
+    const groups: { [key: string]: GlossaryTerm[] } = {};
+    const letters = new Set<string>();
+    
+    // Sort filtered terms alphabetically
+    const sortedTerms = [...filteredTerms].sort((a, b) => 
+      a.term.toLowerCase().localeCompare(b.term.toLowerCase())
+    );
+    
+    sortedTerms.forEach(term => {
+      const firstLetter = term.term.charAt(0).toUpperCase();
+      if (!groups[firstLetter]) {
+        groups[firstLetter] = [];
+      }
+      groups[firstLetter].push(term);
+      letters.add(firstLetter);
+    });
+    
+    return { groupedTerms: groups, availableLetters: letters };
+  }, [filteredTerms]);
+
+  const handleLetterClick = (letter: string) => {
+    setActiveLetter(letter);
+    const element = letterRefs.current[letter];
+    if (element) {
+      const offset = 200; // Account for sticky header
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const toggleTerm = (id: number) => {
     const newExpanded = new Set(expandedTerms);
     if (newExpanded.has(id)) {
@@ -115,6 +153,7 @@ const GlossaryOfTerms = () => {
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedCategory('All Terms');
+    setActiveLetter(undefined);
   };
 
   const hasActiveFilters = searchTerm !== '' || selectedCategory !== 'All Terms';
@@ -249,152 +288,184 @@ const GlossaryOfTerms = () => {
             </div>
           )}
 
-          {/* Terms Grid */}
+          {/* A-Z Navigation */}
           {!isLoading && filteredTerms.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTerms.map((term) => {
-                const isExpanded = expandedTerms.has(term.id);
-                const isFavorite = favorites.has(term.id);
-                const isCopied = copiedId === term.id;
-                
-                return (
-                  <Card 
-                    key={term.id}
-                    onClick={() => toggleTerm(term.id)}
-                    className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
-                      isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
-                    }`}
-                  >
-                    <CardContent className="p-6">
-                      {/* Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-biz-green transition-colors">
-                            {term.term}
-                          </h3>
-                          <Badge 
-                            className={`${categoryColors[term.category]} text-white`}
-                          >
-                            {term.category}
-                          </Badge>
-                        </div>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleFavorite(term.id);
-                          }}
-                          className={`ml-2 transition-colors ${
-                            isFavorite ? 'text-yellow-500' : 'text-muted-foreground hover:text-yellow-500'
+            <div className="mb-6">
+              <AlphabetNav 
+                availableLetters={availableLetters}
+                onLetterClick={handleLetterClick}
+                activeLetter={activeLetter}
+              />
+            </div>
+          )}
+
+          {/* Terms Grid - Grouped by Letter */}
+          {!isLoading && filteredTerms.length > 0 && (
+            <div className="space-y-8">
+              {Object.keys(groupedTerms).sort().map((letter) => (
+                <div 
+                  key={letter}
+                  ref={(el) => { letterRefs.current[letter] = el; }}
+                >
+                  {/* Letter Header */}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-[hsl(var(--biz-navy))] text-white rounded-lg flex items-center justify-center font-bold text-2xl mr-4">
+                      {letter}
+                    </div>
+                    <div className="flex-1 h-px bg-[hsl(var(--biz-grey))]" />
+                    <span className="ml-4 text-sm text-muted-foreground">
+                      {groupedTerms[letter].length} term{groupedTerms[letter].length !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                  
+                  {/* Terms for this letter */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {groupedTerms[letter].map((term) => {
+                      const isExpanded = expandedTerms.has(term.id);
+                      const isFavorite = favorites.has(term.id);
+                      const isCopied = copiedId === term.id;
+                      
+                      return (
+                        <Card 
+                          key={term.id}
+                          onClick={() => toggleTerm(term.id)}
+                          className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                            isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
                           }`}
-                          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
                         >
-                          <svg className="w-5 h-5" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                          </svg>
-                        </button>
-                      </div>
+                          <CardContent className="p-6">
+                            {/* Header */}
+                            <div className="flex items-start justify-between mb-4">
+                              <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-biz-green transition-colors">
+                                  {term.term}
+                                </h3>
+                                <Badge 
+                                  className={`${categoryColors[term.category]} text-white`}
+                                >
+                                  {term.category}
+                                </Badge>
+                              </div>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleFavorite(term.id);
+                                }}
+                                className={`ml-2 transition-colors ${
+                                  isFavorite ? 'text-yellow-500' : 'text-muted-foreground hover:text-yellow-500'
+                                }`}
+                                aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+                              >
+                                <svg className="w-5 h-5" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                              </button>
+                            </div>
 
-                      {/* Definition Preview */}
-                      <p className="text-muted-foreground mb-4 line-clamp-2">
-                        {term.definition}
-                      </p>
-
-                      {/* Expanded Content */}
-                      {isExpanded && (
-                        <div className="space-y-4 animate-in fade-in duration-300">
-                          <div className="pt-4 border-t border-border">
-                            <p className="text-foreground leading-relaxed">
+                            {/* Definition Preview */}
+                            <p className="text-muted-foreground mb-4 line-clamp-2">
                               {term.definition}
                             </p>
-                          </div>
 
-                          {/* Formula */}
-                          {term.formula && (
-                            <div className="bg-biz-accent/10 rounded-lg p-4 border-l-4 border-biz-green">
-                              <div className="flex items-start space-x-2">
-                                <Calculator className="w-5 h-5 text-biz-green mt-0.5 flex-shrink-0" />
-                                <div>
-                                  <p className="text-sm font-semibold text-foreground mb-1">Formula</p>
-                                  <code className="text-sm text-foreground font-mono">
-                                    {term.formula}
-                                  </code>
+                            {/* Expanded Content */}
+                            {isExpanded && (
+                              <div className="space-y-4 animate-in fade-in duration-300">
+                                <div className="pt-4 border-t border-border">
+                                  <p className="text-foreground leading-relaxed">
+                                    {term.definition}
+                                  </p>
+                                </div>
+
+                                {/* Formula */}
+                                {term.formula && (
+                                  <div className="bg-biz-accent/10 rounded-lg p-4 border-l-4 border-biz-green">
+                                    <div className="flex items-start space-x-2">
+                                      <Calculator className="w-5 h-5 text-biz-green mt-0.5 flex-shrink-0" />
+                                      <div>
+                                        <p className="text-sm font-semibold text-foreground mb-1">Formula</p>
+                                        <code className="text-sm text-foreground font-mono">
+                                          {term.formula}
+                                        </code>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Why Important */}
+                                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
+                                  <div className="flex items-start space-x-2">
+                                    <Lightbulb className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                      <p className="text-sm font-semibold text-foreground mb-1">Why Important</p>
+                                      <p className="text-sm text-muted-foreground leading-relaxed">
+                                        {term.whyImportant}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* SMB Application */}
+                                <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
+                                  <div className="flex items-start space-x-2">
+                                    <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                      <p className="text-sm font-semibold text-foreground mb-1">SMB Application</p>
+                                      <p className="text-sm text-muted-foreground leading-relaxed">
+                                        {term.smbApplication}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Copy Button */}
+                                <div className="pt-2">
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      copyToClipboard(term);
+                                    }}
+                                    className="w-full"
+                                  >
+                                    {isCopied ? (
+                                      <>
+                                        <Check className="w-4 h-4 mr-2" />
+                                        Copied!
+                                      </>
+                                    ) : (
+                                      <>
+                                        <Copy className="w-4 h-4 mr-2" />
+                                        Copy Term Details
+                                      </>
+                                    )}
+                                  </Button>
                                 </div>
                               </div>
-                            </div>
-                          )}
+                            )}
 
-                          {/* Why Important */}
-                          <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                            <div className="flex items-start space-x-2">
-                              <Lightbulb className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                              <div>
-                                <p className="text-sm font-semibold text-foreground mb-1">Why Important</p>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                  {term.whyImportant}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* SMB Application */}
-                          <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
-                            <div className="flex items-start space-x-2">
-                              <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                              <div>
-                                <p className="text-sm font-semibold text-foreground mb-1">SMB Application</p>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                  {term.smbApplication}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Copy Button */}
-                          <div className="pt-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
+                            {/* Expand/Collapse Button */}
+                            <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                copyToClipboard(term);
+                                toggleTerm(term.id);
                               }}
-                              className="w-full"
+                              className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
                             >
-                              {isCopied ? (
-                                <>
-                                  <Check className="w-4 h-4 mr-2" />
-                                  Copied!
-                                </>
+                              <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+                              {isExpanded ? (
+                                <ChevronUp className="w-4 h-4" />
                               ) : (
-                                <>
-                                  <Copy className="w-4 h-4 mr-2" />
-                                  Copy Term Details
-                                </>
+                                <ChevronDown className="w-4 h-4" />
                               )}
-                            </Button>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Expand/Collapse Button */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleTerm(term.id);
-                        }}
-                        className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
-                      >
-                        <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
-                        {isExpanded ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
-                      </button>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                            </button>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 

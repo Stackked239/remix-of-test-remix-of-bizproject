@@ -309,11 +309,11 @@ const GlossaryOfTerms = () => {
                 >
                   {/* Letter Header */}
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-[hsl(var(--biz-navy))] text-white rounded-lg flex items-center justify-center font-bold text-2xl mr-4">
+                    <div className="w-8 h-8 bg-[hsl(var(--biz-navy))] text-white rounded flex items-center justify-center font-semibold text-sm mr-3">
                       {letter}
                     </div>
-                    <div className="flex-1 h-px bg-[hsl(var(--biz-grey))]" />
-                    <span className="ml-4 text-sm text-muted-foreground">
+                    <div className="flex-1 h-px bg-[hsl(var(--biz-grey))]/50" />
+                    <span className="ml-3 text-xs text-muted-foreground">
                       {groupedTerms[letter].length} term{groupedTerms[letter].length !== 1 ? 's' : ''}
                     </span>
                   </div>

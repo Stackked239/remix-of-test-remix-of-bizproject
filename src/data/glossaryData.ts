@@ -862,6 +862,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     formula: "(Number of Departures / Average Employees) × 100",
     whyImportant: "High turnover is costly (1.5-2x salary to replace). Indicates culture and management issues.",
     smbApplication: "Reducing 30% annual turnover to 15% saves $150K in 50-person company earning average $50K salaries."
+  },
+  {
+    id: 94,
+    term: "Customer Experience (CX)",
+    category: "Customer Metrics",
+    definition: "The holistic perception a customer forms from all interactions with a company, encompassing every touchpoint from discovery, marketing, sales, service, to post-purchase. CX influences customer feelings, loyalty, and future behavior—it's not just customer service but the entire journey.",
+    whyImportant: "Great CX drives customer satisfaction, retention, and revenue. Companies that prioritize CX see higher customer lifetime value, stronger word-of-mouth, and competitive differentiation. Poor CX leads to churn and negative reviews.",
+    smbApplication: "A local bakery maps the customer journey from Instagram discovery to in-store visit to follow-up email, ensuring each touchpoint creates positive emotions—resulting in 40% repeat customers and strong referral growth."
   }
 ];
 

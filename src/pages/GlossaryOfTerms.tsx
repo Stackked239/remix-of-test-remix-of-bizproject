@@ -362,19 +362,14 @@ const GlossaryOfTerms = () => {
                               </button>
                             </div>
 
-                            {/* Definition Preview */}
-                            <p className="text-muted-foreground mb-4 line-clamp-2">
+                            {/* Definition */}
+                            <p className={`text-muted-foreground mb-4 ${isExpanded ? '' : 'line-clamp-2'}`}>
                               {term.definition}
                             </p>
 
                             {/* Expanded Content */}
                             {isExpanded && (
-                              <div className="space-y-4 animate-in fade-in duration-300">
-                                <div className="pt-4 border-t border-border">
-                                  <p className="text-foreground leading-relaxed">
-                                    {term.definition}
-                                  </p>
-                                </div>
+                              <div className="space-y-4 animate-in fade-in duration-300 pt-4 border-t border-border">
 
                                 {/* Formula */}
                                 {term.formula && (

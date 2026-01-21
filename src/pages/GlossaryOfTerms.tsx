@@ -399,7 +399,7 @@ const GlossaryOfTerms = () => {
           )}
 
           {/* CTA Section */}
-          <section className="mt-16 bg-[hsl(var(--biz-grey))] rounded-2xl p-8 md:p-12 text-center">
+          <section className="mt-16 bg-[hsl(var(--biz-grey))]/50 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-montserrat font-bold mb-4 text-[hsl(var(--biz-navy))]">
               Ready to Apply These Concepts?
             </h2>

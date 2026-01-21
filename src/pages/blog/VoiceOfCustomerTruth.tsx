@@ -1,11 +1,14 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSection from "@/components/BlogHeroSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, MessageSquare, TrendingDown, Users, Target, ShoppingCart, Heart, DollarSign, RefreshCw, Lightbulb } from "lucide-react";
 import heroImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
+import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const VoiceOfCustomerTruth = () => {
   return (
@@ -31,6 +34,7 @@ const VoiceOfCustomerTruth = () => {
         url="https://bizhealth.ai/blog/voice-of-customer-truth"
       />
       <GlobalNavigation />
+      <PromotionalBanner />
       
       <BlogHeroSection
         title="Stop Guessing What Your Customers Think: The Uncomfortable Truth About Voice of the Customer"
@@ -539,12 +543,13 @@ const VoiceOfCustomerTruth = () => {
 
             {/* Author Bio */}
             <section className="border-t border-border pt-8 mb-12">
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--biz-green))] to-[hsl(var(--biz-blue))] flex items-center justify-center text-white font-bold text-xl">
-                  BH
+              <div className="flex items-start gap-6 bg-muted/30 p-6 rounded-xl">
+                <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                  <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">BizHealth.ai Research Team</h3>
+                  <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
+                  <h3 className="font-semibold" style={{ color: 'hsl(var(--biz-navy) / 0.9)' }}>BizHealth.ai Research Team</h3>
                   <p className="text-muted-foreground mb-2">Customer Experience & Business Strategy Experts</p>
                   <p className="text-sm text-[hsl(var(--biz-blue))]">
                     Our research team combines decades of experience in customer experience strategy, business intelligence, and operational excellence. We analyze industry trends and synthesize actionable insights for small and medium business leaders seeking sustainable growth.
@@ -592,7 +597,9 @@ const VoiceOfCustomerTruth = () => {
         </div>
       </article>
 
+      <GradientDivider />
       <GlobalFooter />
+      <PromotionalBanner />
     </div>
   );
 };

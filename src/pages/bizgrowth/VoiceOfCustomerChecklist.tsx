@@ -231,9 +231,9 @@ const VoiceOfCustomerChecklist = () => {
             {/* Left Column - Content */}
             <div className="space-y-6">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 border-2 border-biz-lime-green rounded-full px-4 py-2 text-white">
-                <Sparkles className="w-4 h-4 text-biz-lime-green" />
-                <span className="text-biz-lime-green font-semibold">FREE Voice of Customer Checklist</span>
+              <div className="inline-flex items-center gap-2 border-2 border-biz-lime rounded-full px-4 py-2 text-white">
+                <Sparkles className="w-4 h-4 text-biz-lime" />
+                <span className="text-biz-lime font-semibold">FREE Voice of Customer Checklist</span>
               </div>
 
               {/* Headline */}

@@ -1119,13 +1119,13 @@ export const categories = [
 ];
 
 export const categoryColors: Record<string, string> = {
-  "Financial Metrics": "bg-blue-500",
-  "Customer Metrics": "bg-green-500",
-  "Sales & Marketing": "bg-purple-500",
-  "Operational Metrics": "bg-orange-500",
-  "Financial Management": "bg-teal-500",
-  "Strategic & Governance": "bg-indigo-500",
-  "Growth & Scaling": "bg-pink-500",
-  "Modern Business Practices": "bg-cyan-500",
-  "Human Resources": "bg-amber-500"
+  "Financial Metrics": "bg-blue-500/20",
+  "Customer Metrics": "bg-green-500/20",
+  "Sales & Marketing": "bg-purple-500/20",
+  "Operational Metrics": "bg-orange-500/20",
+  "Financial Management": "bg-teal-500/20",
+  "Strategic & Governance": "bg-indigo-500/20",
+  "Growth & Scaling": "bg-pink-500/20",
+  "Modern Business Practices": "bg-cyan-500/20",
+  "Human Resources": "bg-amber-500/20"
 };

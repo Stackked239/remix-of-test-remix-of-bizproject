@@ -110,7 +110,7 @@ const GlossaryOfTerms = () => {
     setActiveLetter(letter);
     const element = letterRefs.current[letter];
     if (element) {
-      const offset = 280; // Account for sticky header + search card
+      const offset = 360; // Account for sticky header + search card with A-Z nav
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - offset,

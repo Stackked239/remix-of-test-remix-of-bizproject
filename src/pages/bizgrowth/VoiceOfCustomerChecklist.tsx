@@ -194,9 +194,9 @@ const VoiceOfCustomerChecklist = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
       <SEO
-        title="FREE Customer Feedback Collection Checklist | Close the 56% Perception Gap"
-        description="Download the free Customer Feedback Collection Checklist. 80% of businesses think they deliver great experience—only 24% of customers agree. Bridge this gap with proven VoC methodology."
-        keywords="customer feedback, voice of customer, VoC checklist, customer experience, feedback collection, NPS survey, customer satisfaction, business improvement, small business tools"
+        title="FREE Voice of Customer Checklist | Customer Feedback Collection Guide"
+        description="Download the free Voice of Customer Checklist—37 actionable steps to collect customer feedback. 80% of businesses think they deliver great experience, only 24% of customers agree. Bridge the perception gap with proven VoC methodology."
+        keywords="free voice of customer checklist, voice of customer, VoC checklist, customer feedback checklist, customer feedback collection, free customer feedback template, customer experience checklist, NPS survey template, customer satisfaction survey, VoC program, voice of customer program, customer insight collection, feedback loop, customer research checklist, free VoC template, VoC framework, customer listening, customer perception gap, customer experience gap, close feedback loop, small business feedback, SMB customer feedback, VoC methodology, collect customer feedback, how to get customer feedback, customer voice, understanding customers, free business checklist, free download checklist, bizhealth checklist, bizgrowth checklist"
         canonical="https://bizhealth.ai/bizgrowth/voice-of-customer-checklist"
         ogType="website"
         ogImage="/og-images/og-voice-of-customer-checklist.jpg"

@@ -548,8 +548,7 @@ const VoiceOfCustomerTruth = () => {
                   <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1" style={{ color: 'hsl(var(--biz-navy))' }}>About the Author</h4>
-                  <h3 className="font-semibold" style={{ color: 'hsl(var(--biz-navy) / 0.9)' }}>BizHealth.ai Research Team</h3>
+                  <h3 className="font-semibold text-lg" style={{ color: 'hsl(var(--biz-navy))' }}>BizHealth.ai Research Team</h3>
                   <p className="text-muted-foreground mb-2">Customer Experience & Business Strategy Experts</p>
                   <p className="text-sm text-[hsl(var(--biz-blue))]">
                     Our research team combines decades of experience in customer experience strategy, business intelligence, and operational excellence. We analyze industry trends and synthesize actionable insights for small and medium business leaders seeking sustainable growth.
@@ -558,9 +557,34 @@ const VoiceOfCustomerTruth = () => {
               </div>
             </section>
 
-            {/* Related Articles CTA */}
+            {/* CTA Section */}
+            <section className="mb-12 text-center py-12 px-8 bg-gradient-to-br from-[hsl(var(--biz-navy))]/10 via-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-gold))]/10 rounded-2xl border border-[hsl(var(--biz-green))]/20">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Stop Guessing—Get the Full Picture of Your Business Health
+              </h2>
+              <p className="text-lg text-[hsl(var(--biz-blue))] mb-6 max-w-2xl mx-auto">
+                Understanding your customers is just one dimension of business health. Our comprehensive Business Health Assessment analyzes your operations, finances, customer experience, and growth potential—giving you a complete diagnostic of where your business stands and what to prioritize next.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/pricing" 
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[hsl(var(--biz-navy))] text-white font-semibold rounded-lg hover:bg-[hsl(var(--biz-navy))]/90 transition-colors"
+                >
+                  View Pricing
+                </Link>
+                <Link 
+                  to="/onboarding" 
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[hsl(var(--biz-green))] text-white font-semibold rounded-lg hover:bg-[hsl(var(--biz-green))]/90 transition-colors"
+                >
+                  Start Your Business Assessment
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </section>
+
+            {/* Related Articles */}
             <section className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-6">Continue Learning</h3>
+              <h3 className="text-xl font-bold text-foreground mb-6">Related Articles</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <Link 
                   to="/blog/customer-loyalty-starts-with-reliability" 
@@ -584,10 +608,10 @@ const VoiceOfCustomerTruth = () => {
                   <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  to="/bizgrowth" 
-                  className="flex items-center justify-between p-4 bg-[hsl(var(--biz-green))]/10 hover:bg-[hsl(var(--biz-green))]/20 rounded-lg transition-colors group"
+                  to="/blog/identifying-smb-leadership-blind-spots" 
+                  className="flex items-center justify-between p-4 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
                 >
-                  <span className="font-medium text-foreground">Explore BizGrowth Programs</span>
+                  <span className="font-medium text-foreground">Identifying SMB Leadership Blind Spots</span>
                   <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

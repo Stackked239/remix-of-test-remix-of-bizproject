@@ -193,11 +193,23 @@ const GlossaryOfTerms = () => {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Search and Filter Controls */}
           <div className="bg-biz-green backdrop-blur-sm border-2 border-biz-blue rounded-lg shadow-lg p-4 mb-4 sticky top-36 z-30">
-            <p className="text-sm text-biz-blue mb-4 text-center">
+            <p className="text-sm text-biz-blue mb-3 text-center">
               <span className="font-bold">Interactive Glossary - </span>
               Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
               this interactive glossary is your comprehensive guide to understanding key business concepts.
             </p>
+            
+            {/* A-Z Quick Navigation */}
+            {!isLoading && filteredTerms.length > 0 && (
+              <div className="mb-3 pb-3 border-b border-biz-blue/20">
+                <AlphabetNav 
+                  availableLetters={availableLetters}
+                  onLetterClick={handleLetterClick}
+                  activeLetter={activeLetter}
+                />
+              </div>
+            )}
+            
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
               {/* Search Bar */}
               <div className="md:col-span-5">
@@ -288,16 +300,6 @@ const GlossaryOfTerms = () => {
             </div>
           )}
 
-          {/* A-Z Navigation */}
-          {!isLoading && filteredTerms.length > 0 && (
-            <div className="mb-4">
-              <AlphabetNav 
-                availableLetters={availableLetters}
-                onLetterClick={handleLetterClick}
-                activeLetter={activeLetter}
-              />
-            </div>
-          )}
 
           {/* Terms Grid - Grouped by Letter */}
           {!isLoading && filteredTerms.length > 0 && (

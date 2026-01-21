@@ -341,7 +341,7 @@ const GlossaryOfTerms = () => {
                                   {term.term}
                                 </h3>
                                 <Badge 
-                                  className={`${categoryColors[term.category]} text-white`}
+                                  className={`${categoryColors[term.category]} text-[hsl(var(--biz-blue))] font-medium`}
                                 >
                                   {term.category}
                                 </Badge>

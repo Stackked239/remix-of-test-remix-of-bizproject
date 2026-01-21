@@ -28,10 +28,10 @@ const AlphabetNav: React.FC<AlphabetNavProps> = ({
               w-5 h-5 text-xs font-medium rounded
               transition-colors duration-150
               ${isActive 
-                ? 'bg-[hsl(var(--biz-navy))] text-white' 
+                ? 'bg-[hsl(var(--biz-green))] text-white' 
                 : isAvailable 
-                  ? 'text-[hsl(var(--biz-navy))] hover:bg-[hsl(var(--biz-navy))]/10 cursor-pointer' 
-                  : 'text-[hsl(var(--biz-navy))]/25 cursor-not-allowed'
+                  ? 'text-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/10 cursor-pointer' 
+                  : 'text-[hsl(var(--biz-green))]/25 cursor-not-allowed'
               }
             `}
             aria-label={isAvailable ? `Jump to ${letter}` : `No terms for ${letter}`}

@@ -11,7 +11,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
-import { CodyWidget } from "@/components/CodyWidget";
+import CodyWidget from "@/components/CodyWidget";
 
 const BizGuideSherpa = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);

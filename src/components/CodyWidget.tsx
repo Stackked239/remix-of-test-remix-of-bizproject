@@ -56,3 +56,5 @@ export const CodyWidget = () => {
   return null;
 };
 
+export default CodyWidget;
+

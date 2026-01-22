@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Clock, Zap, ChevronDown } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import VocQuiz from "@/components/voc/VocQuiz";
@@ -63,11 +64,12 @@ const VoiceOfCustomer = () => {
         inLanguage="en-US"
       />
       
+      <PromotionalBanner />
       <GlobalNavigation />
 
-      {/* Hero Section */}
+      {/* Hero Section - pt-40 accounts for fixed banner (80px) + nav bar */}
       <section 
-        className="relative min-h-[60vh] md:min-h-[50vh] flex items-center justify-center px-4 py-20"
+        className="relative min-h-[60vh] md:min-h-[50vh] flex items-center justify-center px-4 py-20 pt-40"
         style={{
           backgroundImage: `linear-gradient(135deg, hsl(var(--biz-blue)) 0%, #1a1b3d 100%)`,
         }}

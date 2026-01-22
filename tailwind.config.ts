@@ -172,6 +172,23 @@ export default {
 						transform: 'translateY(-15%) scale(1.05)',
 						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
 					}
+				},
+				'glow-pulse': {
+					'0%': {
+						opacity: '0.7',
+						transform: 'scale(0.98)',
+						textShadow: '0 0 0px hsl(81 61% 47% / 0)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.02)',
+						textShadow: '0 0 12px hsl(81 61% 47% / 0.5)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)',
+						textShadow: '0 0 0px hsl(81 61% 47% / 0)'
+					}
 				}
 			},
 			animation: {
@@ -179,7 +196,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.5s ease-out',
 				'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 0.5s ease-out'
 			}
 		}
 	},

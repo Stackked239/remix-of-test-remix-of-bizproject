@@ -777,13 +777,13 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
             </div>
 
             {/* Related Articles */}
+            <GradientDivider variant="green-gold" />
             <RelatedArticles articles={relatedArticles} />
           </div>
         </div>
       </article>
 
       <PromotionalBanner />
-      <GradientDivider />
       <GlobalFooter />
     </div>
   );

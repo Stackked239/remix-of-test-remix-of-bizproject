@@ -816,12 +816,10 @@ const VisionSharingBusinessOwner = () => {
         </article>
 
         {/* Related Articles */}
-        <div className="mt-16">
-          <RelatedArticles articles={relatedArticles} />
-        </div>
+        <GradientDivider variant="green-gold" />
+        <RelatedArticles articles={relatedArticles} />
       </main>
       
-      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </>

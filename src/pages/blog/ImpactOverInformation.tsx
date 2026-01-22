@@ -163,34 +163,31 @@ const ImpactOverInformation = () => {
         </section>
 
         {/* Related Articles */}
-        <section className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <RelatedArticles
-              articles={[
-                {
-                  title: "AI-Powered Business Analytics: The Future of SMB Intelligence",
-                  slug: "ai-business-analytics",
-                  category: "Technology",
-                  excerpt: "Discover how AI is revolutionizing business analytics for small and mid-sized businesses."
-                },
-                {
-                  title: "Essential Financial Health Metrics Every SMB Should Track",
-                  slug: "financial-health-metrics",
-                  category: "Financial Management",
-                  excerpt: "Learn the key financial metrics that indicate your business's health and growth potential."
-                },
-                {
-                  title: "The Complete Guide to Business Intelligence ROI for SMBs",
-                  slug: "business-intelligence-roi",
-                  category: "Business Intelligence",
-                  excerpt: "Understand how to measure and maximize the ROI of your business intelligence investments."
-                }
-              ]}
-            />
-          </div>
-        </section>
+        <GradientDivider variant="green-gold" />
+        <RelatedArticles
+          articles={[
+            {
+              title: "AI-Powered Business Analytics: The Future of SMB Intelligence",
+              slug: "ai-business-analytics",
+              category: "Technology",
+              excerpt: "Discover how AI is revolutionizing business analytics for small and mid-sized businesses."
+            },
+            {
+              title: "Essential Financial Health Metrics Every SMB Should Track",
+              slug: "financial-health-metrics",
+              category: "Financial Management",
+              excerpt: "Learn the key financial metrics that indicate your business's health and growth potential."
+            },
+            {
+              title: "The Complete Guide to Business Intelligence ROI for SMBs",
+              slug: "business-intelligence-roi",
+              category: "Business Intelligence",
+              excerpt: "Understand how to measure and maximize the ROI of your business intelligence investments."
+            }
+          ]}
+        />
 
-        <GradientDivider />
+        <GlobalFooter />
         <GlobalFooter />
       </div>
     </>

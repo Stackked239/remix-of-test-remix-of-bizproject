@@ -512,6 +512,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
         </div>
 
         {/* Internal Links Section */}
+        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={[
           {
             title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
@@ -530,23 +531,11 @@ const FinancialStewardshipEveryonesResponsibility = () => {
             slug: "financial-health-metrics",
             category: "Financial Management",
             excerpt: "A comprehensive guide to the key financial indicators for business performance."
-          },
-          {
-            title: "How Small Businesses Can Scale Operations Without Losing Control",
-            slug: "scaling-operations-without-losing-control",
-            category: "Operations",
-            excerpt: "Learn the SCALE framework and build operational architecture for controlled expansion."
-          },
-          {
-            title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-            slug: "identifying-smb-leadership-blind-spots",
-            category: "Business Leadership",
-            excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success."
           }
         ]} />
       </article>
 
-      <GradientDivider />
+      <GlobalFooter />
       <GlobalFooter />
       <PromotionalBanner />
     </>

@@ -444,13 +444,9 @@ const CashFlowCrisisManagement = () => {
 
           {/* Related Articles */}
           <GradientDivider variant="green-gold" />
-          
-          <div className="mt-16 pt-8 border-t border-border">
-            <RelatedArticles articles={relatedArticles} />
-          </div>
+          <RelatedArticles articles={relatedArticles} />
         </article>
 
-        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

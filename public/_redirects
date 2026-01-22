@@ -25,11 +25,9 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/real-time-analytics-smb /blog/real-time-analytics-smb-agility 301!
 /privacy-policy /privacy 301!
 
-# Universal trailing slash removal - catches ALL paths ending with /
-# This prevents future GSC redirect errors automatically
-/*/ /:splat 301!
-
-# Note: Individual trailing slash redirects removed - universal rule above handles all cases
+# Note: Universal trailing slash redirect (/*/  -> /:splat) has been REMOVED
+# because it matches the root path / and breaks the Netlify Lighthouse plugin.
+# Add individual trailing slash redirects above if needed for specific GSC errors.
 
 # Serve static files directly (don't redirect to SPA)
 # This prevents downloadable files from being served as index.html

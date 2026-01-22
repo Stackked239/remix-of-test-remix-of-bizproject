@@ -2,49 +2,60 @@
 
 Updated: 2026-01-22
 
-## Critical: Universal Trailing Slash Redirect Must Use force=false
+## Critical: Universal Trailing Slash Redirect Breaks Lighthouse Plugin
 
-The universal trailing slash redirect rule in `netlify.toml` **MUST** use `force = false` to prevent breaking the Netlify Lighthouse plugin.
+The universal trailing slash redirect rule `/*/ -> /:splat` in `netlify.toml` **MUST NOT BE USED** because it breaks the Netlify Lighthouse plugin, regardless of the `force` setting.
 
-### Correct Configuration
+### Root Cause
 
+The pattern `/*/` matches the root path `/` because:
+- The root URL `/` technically ends with a slash
+- Netlify's redirect engine intercepts this before serving static HTML
+- Results in an empty MIME type response
+- Causes `NOT_HTML` error: "The page provided is not HTML (served as MIME type )."
+
+### The Fix: Remove Universal Trailing Slash Redirect
+
+Do NOT use this pattern:
 ```toml
+# ❌ WRONG - Breaks Lighthouse (even with force=false)
 [[redirects]]
   from = "/*/"
   to = "/:splat"
   status = 301
-  force = false  # CRITICAL: Must be false for Lighthouse
+  force = false  # Still breaks!
 ```
 
-### Why force=true Breaks Lighthouse
+### Alternative Approach
 
-When `force = true`:
-- ALL requests ending in `/` are redirected BEFORE static files can be served
-- The root path `/` effectively ends in a slash
-- Lighthouse plugin requests `/` and receives an empty MIME type response
-- Results in `NOT_HTML` error: "The page provided is not HTML (served as MIME type )."
+If trailing slash redirects are needed for specific URLs (GSC errors), add them **individually**:
+```toml
+# ✅ CORRECT - Individual redirects don't affect root path
+[[redirects]]
+  from = "/blog/"
+  to = "/blog"
+  status = 301
+  force = true
 
-### Why force=false Works
-
-When `force = false`:
-- Static HTML files are served first if they exist
-- Redirect only applies to non-existent paths
-- Root path `/` serves `index.html` with proper `Content-Type: text/html`
-- Lighthouse receives valid HTML and generates scores
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+  force = true
+```
 
 ### Historical Context
 
 - **Last working deploy:** 7:46pm (individual trailing slash rules)
 - **First failure:** 7:53pm (universal rule with `force = true`)
-- **Fix applied:** Changed to `force = false`
+- **Second failure:** After changing to `force = false` - still failed
+- **Root cause identified:** The pattern `/*/` matches `/` regardless of force setting
+- **Final fix:** Remove universal rule entirely
 
-### Never Do This
+### Why force=false Didn't Work
 
-```toml
-# ❌ WRONG - Breaks Lighthouse
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-  force = true
-```
+The `force` setting only controls whether existing static files are bypassed:
+- `force = true`: Always redirect, ignore static files
+- `force = false`: Only redirect if no static file exists
+
+The problem is that the **pattern matching** happens before file existence is checked, and the root path `/` matches `/*/ ` during the redirect processing phase, causing the MIME type to be empty during Lighthouse's request.

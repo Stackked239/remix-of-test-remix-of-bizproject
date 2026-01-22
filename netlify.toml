@@ -116,16 +116,11 @@
   status = 301
   force = true
 
-# Universal trailing slash removal - catches paths ending with / (except root)
-# This prevents future GSC redirect errors automatically
-# Note: Using force = false to not interfere with Lighthouse plugin requests
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-  force = false
-
-# Note: Individual trailing slash redirects removed - universal rule above handles all cases
+# Note: Universal trailing slash redirect (/*/  -> /:splat) has been REMOVED
+# because the pattern /*/  matches the root path / which breaks the Netlify Lighthouse plugin.
+# The root path ends with a slash, causing NOT_HTML errors during audits.
+# Trailing slash normalization is handled by the SPA fallback and pre-rendered HTML files.
+# If specific trailing slash redirects are needed, add them individually above this comment.
 
 [build]
   # Build command - runs SSG pre-rendering with Puppeteer support

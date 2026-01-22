@@ -56,7 +56,7 @@ const BlogHeroSectionEnhanced = ({
         <div className="max-w-4xl mx-auto">
           <Link 
             to="/blog" 
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-3 group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             Back to Blog

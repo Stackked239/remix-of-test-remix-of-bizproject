@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SEO from '@/components/SEO';
 import PromotionalBanner from "@/components/PromotionalBanner";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
@@ -275,11 +275,12 @@ const Search = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Search Results - BizHealth.ai</title>
-        <meta name="description" content="Search results for BizHealth.ai - Find pages, blog posts, FAQs, and resources." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      <SEO
+        title="Search Results - BizHealth.ai"
+        description="Search results for BizHealth.ai - Find pages, blog posts, FAQs, and resources."
+        canonical="https://bizhealth.ai/search"
+        noindex={true}
+      />
 
       <PromotionalBanner />
       <GlobalNavigation />

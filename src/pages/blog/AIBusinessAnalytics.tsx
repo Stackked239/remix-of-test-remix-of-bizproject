@@ -5,8 +5,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import SocialShareButtons from "@/components/SocialShareButtons";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import aiAnalyticsImage from "@/assets/ai-business-analytics-dashboard.jpg";
 
@@ -43,74 +42,22 @@ const AIBusinessAnalytics = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        <article className="pt-40 pb-16 bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto px-4 py-12 max-w-4xl">
-            {/* Breadcrumb Navigation */}
-            <nav className="mb-8" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li className="select-none">/</li>
-                <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                <li className="select-none">/</li>
-                <li className="text-foreground font-medium">AI Business Analytics</li>
-              </ol>
-            </nav>
+        <BlogHeroSectionEnhanced
+          title="How AI is Revolutionizing Small Business Analytics"
+          author="BizHealth.ai Research Team"
+          publishDate="August 10, 2025"
+          readTime="10 min read"
+          heroImage={aiAnalyticsImage}
+          heroImageAlt="AI-powered business analytics dashboard with real-time data visualizations for small business decision-making"
+          categories={[
+            { label: "Technology", href: "/blog/technology" },
+            { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          ]}
+          shareDescription="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs."
+        />
 
-            {/* Article Header */}
-            <header className="mb-12">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="inline-block px-4 py-1.5 bg-[#969423]/15 text-[#969423] rounded-full text-sm font-semibold border border-[#969423]/30">
-                  Technology
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-[hsl(var(--biz-navy))]/10 text-[hsl(var(--biz-navy))] rounded-full text-sm font-semibold border border-[hsl(var(--biz-navy))]/30">
-                  Business Intelligence
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-[#969423]/15 text-[#969423] rounded-full text-sm font-semibold border border-[#969423]/30">
-                  Analytics
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                How AI is Revolutionizing Small Business Analytics
-              </h1>
-              
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-8">
-                <span className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  By BizHealth.ai Research Team
-                </span>
-                <span className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  August 10, 2025
-                </span>
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  10 minute read
-                </span>
-              </div>
-              
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="How AI is Revolutionizing Small Business Analytics"
-                description="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs."
-                url={articleUrl}
-                className="mb-8"
-              />
-
-              {/* Hero Image */}
-              <figure className="mb-10 mx-auto" style={{ width: '85%' }}>
-                <img 
-                  src={aiAnalyticsImage} 
-                  alt="AI-powered business analytics dashboard with real-time data visualizations and machine learning insights for small business decision-making"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                  loading="eager"
-                />
-                <figcaption className="text-sm text-muted-foreground text-center mt-3 italic">
-                  AI analytics dashboards transform raw data into actionable business insights
-                </figcaption>
-              </figure>
-            </header>
-
+        <article className="pb-16">
+          <div className="container mx-auto px-4 max-w-4xl">
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">

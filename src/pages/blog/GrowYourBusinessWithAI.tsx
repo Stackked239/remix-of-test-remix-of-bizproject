@@ -6,9 +6,9 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import growWithAIHero from '@/assets/grow-your-business-with-ai-smb-growth-2025.jpg';
 import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
-import SocialShareButtons from "@/components/SocialShareButtons";
 
 const GrowYourBusinessWithAI = () => {
   const publishDate = '2025-12-23';
@@ -44,92 +44,23 @@ const GrowYourBusinessWithAI = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        {/* Hero Section with gradient overlay */}
-        <div className="relative pt-32 pb-8 overflow-hidden">
-          {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-cyan-500/5" />
-          <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
-          
-          <div className="container mx-auto px-4 max-w-4xl relative z-10">
-            {/* Breadcrumb Navigation */}
-            <nav className="mb-8" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li className="select-none text-primary/50">/</li>
-                <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                <li className="select-none text-primary/50">/</li>
-                <li className="text-primary font-medium">Growing with AI</li>
-              </ol>
-            </nav>
-
-            {/* Article Header */}
-            <header className="mb-12">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30 shadow-sm">
-                  Business Intelligence
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/30 shadow-sm">
-                  Business Strategy
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-600 dark:text-purple-400 rounded-full text-sm font-semibold border border-purple-500/30 shadow-sm">
-                  Technology
-                </span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
-                The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'
-              </h1>
-
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-8">
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  By BizHealth.ai Research Team
-                </span>
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  December 23, 2025
-                </span>
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  14 minute read
-                </span>
-              </div>
-
-              {/* Social Share Buttons */}
-              <SocialShareButtons 
-                title="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
-                description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA."
-                url={articleUrl}
-                className="mb-8"
-              />
-
-              {/* Hero Image */}
-              <figure className="mb-10 mx-auto relative group" style={{ width: '85%' }}>
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 via-cyan-500/50 to-emerald-500/50 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
-                <img
-                  src={growWithAIHero}
-                  alt="Business leader analyzing AI-powered growth analytics dashboard with holographic data visualizations for strategic decision-making in 2025"
-                  className="relative w-full h-auto rounded-xl shadow-2xl ring-1 ring-border/50"
-                  loading="eager"
-                />
-                <figcaption className="text-sm text-muted-foreground text-center mt-4 italic">
-                  AI transforms from productivity tool to strategic growth partner for forward-thinking SMBs
-                </figcaption>
-              </figure>
-            </header>
-          </div>
-        </div>
+        <BlogHeroSectionEnhanced
+          title="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
+          author="BizHealth.ai Research Team"
+          publishDate="December 23, 2025"
+          readTime="14 min read"
+          heroImage={growWithAIHero}
+          heroImageAlt="Business leader analyzing AI-powered growth analytics dashboard for strategic decision-making"
+          categories={[
+            { label: "Business Intelligence", href: "/blog/business-intelligence" },
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Technology", href: "/blog/technology" },
+          ]}
+          shareDescription="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI."
+        />
 
         <article className="pb-16 bg-gradient-to-b from-background to-muted/10">
           <div className="container mx-auto px-4 max-w-4xl">
-
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               {/* Lead paragraph with special styling */}

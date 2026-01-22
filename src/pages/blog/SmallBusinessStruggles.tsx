@@ -5,7 +5,8 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
@@ -42,56 +43,22 @@ const SmallBusinessStruggles = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        {/* Hero Section */}
-        <article className="pt-40 pb-16">
+        <BlogHeroSectionEnhanced
+          title="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
+          author="BizHealth.ai Team"
+          publishDate="November 13, 2025"
+          readTime="12 min read"
+          heroImage={heroImage}
+          heroImageAlt="Small business owner facing operational challenges and pain points in 2025"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Growth & Scaling", href: "/blog/growth-scaling" },
+          ]}
+          shareDescription="Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered diagnostics uncover blind spots."
+        />
+
+        <article className="pb-16">
           <div className="container mx-auto px-4 max-w-4xl">
-            {/* Article Header */}
-            <header className="mb-8">
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  Business Strategy
-                </span>
-                <span className="px-3 py-1 bg-growth/10 text-growth rounded-full text-sm font-medium">
-                  Business Leadership
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems
-              </h1>
-              
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span className="text-sm">BizHealth.ai Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime={publishDate} className="text-sm">November 13, 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm">12 min read</span>
-                </div>
-              </div>
-
-              <p className="text-xl text-muted-foreground italic border-l-4 border-primary pl-4 mb-8">
-                "You can't fix what you don't understand." – A reality most small business owners confront far too late.
-              </p>
-            </header>
-
-            {/* Hero Image */}
-            <figure className="mb-12 rounded-xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Small business owner facing operational challenges and pain points in 2025"
-                className="w-full h-auto object-cover"
-                loading="eager"
-                width={1200}
-                height={675}
-              />
-            </figure>
-
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="lead text-lg mb-8">

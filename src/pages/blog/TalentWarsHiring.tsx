@@ -4,13 +4,11 @@ import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Info } from "lucide-react";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
-import SocialShareButtons from "@/components/SocialShareButtons";
 
 const TalentWarsHiring = () => {
   const publishDate = "2025-10-14";
@@ -90,70 +88,22 @@ const TalentWarsHiring = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        <article className="pt-32 pb-12">
+        <BlogHeroSectionEnhanced
+          title="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
+          author="BizHealth.ai Research Team"
+          publishDate="October 14, 2025"
+          readTime="7 min read"
+          heroImage={talentWarsImage}
+          heroImageAlt="Professional SMB hiring interview showing business leader conducting talent acquisition strategy meeting"
+          categories={[
+            { label: "Growth & Scaling", href: "/blog/growth-scaling" },
+          ]}
+          shareDescription="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies and retention tips."
+        />
+
+        <article className="pb-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-            {/* Breadcrumb Navigation */}
-            <nav className="mb-8">
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Blog
-              </Link>
-            </nav>
-
-            {/* Article Header */}
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full uppercase tracking-wide">
-                  Business Leadership
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages
-              </h1>
-              
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <span className="font-medium text-foreground flex items-center gap-1.5 cursor-help">
-                        {author}
-                        <Info className="w-3.5 h-3.5 text-primary" />
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
-                      <p className="text-sm">
-                        The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                <span>•</span>
-                <time dateTime={publishDate}>October 14, 2025</time>
-                <span>•</span>
-                <span>7 min read</span>
-              </div>
-
-              <SocialShareButtons 
-                title="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
-                description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies and retention tips."
-                className="mb-8"
-              />
-
-              <figure className="mb-8">
-                <img 
-                  src={talentWarsImage} 
-                  alt="Professional SMB hiring interview showing business leader conducting talent acquisition strategy meeting with candidate discussing retention tips and leadership strategies for 2025 workforce challenges"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                  loading="eager"
-                />
-              </figure>
-            </header>
-
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">

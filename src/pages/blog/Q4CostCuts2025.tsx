@@ -5,18 +5,11 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
-import { Calendar, Clock, User, Info } from 'lucide-react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import heroImage from '@/assets/q4-cost-cuts-operational-fixes-2025.jpg';
 import businessTrendsImage from '@/assets/q4-cost-cuts-2025-business-trends.jpg';
 import businessIndexImage from '@/assets/q4-cost-cuts-small-business-index-white.png';
 import costReductionImage from '@/assets/q4-cost-cuts-cost-reduction-strategies.png';
-import SocialShareButtons from "@/components/SocialShareButtons";
 
 const Q4CostCuts2025 = () => {
   const publishDate = "2025-11-03";
@@ -88,102 +81,48 @@ const Q4CostCuts2025 = () => {
   };
 
   return (
-    <TooltipProvider>
-      <div className="min-h-screen bg-background">
-        <SEO
-          title="Q4 Cost Crunches: Operational Cost Fixes 2025 | BizHealth.ai"
-          description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings."
-          keywords="operational cost fixes 2025, small business cash crunch, efficiency diagnostics, inflation ops impact, Q4 cost management, cash-strapped businesses, operational efficiency, cost reduction strategies"
-          canonical="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
-          ogType="article"
-          ogImage="/og-images/og-q4-cost-cuts.jpg"
-          articlePublishedTime={publishDate}
-          articleAuthor="BizHealth.ai Research Team"
-        />
-        <StructuredData
-          type="blogPosting"
-          headline="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses"
-          description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to achieve 15-20% cost savings."
-          image={`https://bizhealth.ai${heroImage}`}
-          datePublished={publishDate}
-          author="BizHealth.ai Research Team"
-          url="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
-          keywords={["operational cost fixes", "small business cash crunch", "efficiency diagnostics", "Q4 cost management", "operational efficiency"]}
-        />
+    <div className="min-h-screen bg-background">
+      <SEO
+        title="Q4 Cost Crunches: Operational Cost Fixes 2025 | BizHealth.ai"
+        description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to combat inflation's impact and achieve 15-20% cost savings."
+        keywords="operational cost fixes 2025, small business cash crunch, efficiency diagnostics, inflation ops impact, Q4 cost management, cash-strapped businesses, operational efficiency, cost reduction strategies"
+        canonical="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
+        ogType="article"
+        ogImage="/og-images/og-q4-cost-cuts.jpg"
+        articlePublishedTime={publishDate}
+        articleAuthor="BizHealth.ai Research Team"
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses"
+        description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses. Learn efficiency diagnostics strategies to achieve 15-20% cost savings."
+        image={`https://bizhealth.ai${heroImage}`}
+        datePublished={publishDate}
+        author="BizHealth.ai Research Team"
+        url="https://bizhealth.ai/blog/Q4-Cost-Cuts-2025"
+        keywords={["operational cost fixes", "small business cash crunch", "efficiency diagnostics", "Q4 cost management", "operational efficiency"]}
+      />
 
-        <GlobalNavigation />
+      <GlobalNavigation />
 
-        <article className="pt-32 pb-12">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              {/* Breadcrumb */}
-              <nav className="mb-8 text-sm text-muted-foreground">
-                <a href="/" className="hover:text-primary transition-colors">Home</a>
-                <span className="mx-2">/</span>
-                <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
-                <span className="mx-2">/</span>
-                <span className="text-foreground">Q4 Cost Cuts 2025</span>
-              </nav>
+      <BlogHeroSectionEnhanced
+        title="Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses"
+        author={author}
+        publishDate="November 3, 2025"
+        readTime={readTime}
+        heroImage={heroImage}
+        heroImageAlt="Operational cost cutting strategies for small business financial management in 2025"
+        categories={[
+          { label: "Operations", href: "/blog/operations" },
+          { label: "Financial Management", href: "/blog/financial-management" },
+        ]}
+        shareDescription="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses."
+      />
 
-              {/* Categories */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                  Operations
-                </span>
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                  Financial Management
-                </span>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Q4 Cost Crunches: Operational Cost Fixes 2025 for Cash-Strapped Small Businesses
-              </h1>
-
-              {/* Meta Information */}
-              <div className="flex flex-wrap items-center gap-6 mb-8 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime={publishDate}>November 3, 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <span className="flex items-center gap-1 cursor-help hover:text-primary transition-colors">
-                        {author}
-                        <Info className="w-3 h-3" />
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
-                      <p className="text-sm">
-                        The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{readTime} read</span>
-                </div>
-              </div>
-
-              <SocialShareButtons 
-                title="Q4 Cost Crunches: Operational Fixes for Cash-Strapped Small Businesses"
-                description="Navigate Q4 2025 cash crunches with proven operational cost fixes for small businesses."
-              />
-
-              {/* Hero Image */}
-              <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={heroImage} 
-                  alt="Operational cost cutting strategies with scissors cutting through stacks of cash representing small business financial management and cost reduction for 2025"
-                  className="w-full h-auto object-cover"
-                  loading="eager"
-                />
-              </div>
-
-              {/* Article Content */}
+      <article className="pb-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            {/* Article Content */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   As Q4 2025 ramps up, small and mid-sized business leaders like you are facing intensified pressures. In sectors like professional services, retail, tech startups, and healthcare, the end-of-year push often amplifies cash constraints, especially amid lingering inflation. According to recent insights, nearly six in ten small & mid-size business owners are feeling inflation's sting, with rising costs cited as a major barrier to growth despite overall optimism in the U.S. Small Business Index.
@@ -425,7 +364,6 @@ const Q4CostCuts2025 = () => {
         <GlobalFooter />
         <PromotionalBanner />
       </div>
-    </TooltipProvider>
   );
 };
 

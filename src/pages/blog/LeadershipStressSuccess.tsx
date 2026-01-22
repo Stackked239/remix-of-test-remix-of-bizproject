@@ -5,10 +5,9 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const LeadershipStressSuccess = () => {
   return (
@@ -37,66 +36,19 @@ const LeadershipStressSuccess = () => {
       />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-36 pb-12 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Business Leadership • Risk Management
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress
-            </h1>
-            
-            <div className="flex items-center gap-6 text-muted-foreground mb-8">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 cursor-help">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth.ai Research Team</span>
-                      <Info className="w-3.5 h-3.5 text-primary" />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs">
-                    <p className="text-sm">
-                      The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>October 12, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>12 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={leadershipStressImage} 
-              alt="Executive stress management strategies showing business leader with financial analytics, decision-making stress, and leadership anxiety in SMB environment 2025"
-              className="w-[85%] mx-auto rounded-xl shadow-elegant"
-              width={1020}
-              height={510}
-              loading="eager"
-            />
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="Leadership Stress Management: Why Success Feels Like a Mirage and How to Overcome Entrepreneurial Stress"
+        author="BizHealth.ai Research Team"
+        publishDate="October 12, 2025"
+        readTime="12 min read"
+        heroImage={leadershipStressImage}
+        heroImageAlt="Executive stress management strategies showing business leader with financial analytics, decision-making stress, and leadership anxiety in SMB environment 2025"
+        categories={[
+          { label: "Business Leadership", href: "/blog/business-leadership" },
+          { label: "Risk Management", href: "/blog/risk-management" }
+        ]}
+        shareDescription="Master leadership stress management with proven strategies. Reduce executive burnout and build resilience."
+      />
 
       {/* Article Content */}
       <article className="py-12">
@@ -120,77 +72,79 @@ const LeadershipStressSuccess = () => {
             <h3 className="text-2xl font-semibold text-foreground mb-4">The Danger of Playing It Too Safe</h3>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Ironically, overly conservative decision-making can lead to stagnation. Harvard Business Review studies show <strong>60% of SMBs plateau or decline within five years due to risk-averse choices</strong>, as competitors surge ahead with calculated risks. Even executives in larger firms face similar <strong>small business leadership challenges</strong>, amplified by complex variables like supply chains or regulations. The takeaway? <strong>Managing business stress</strong> isn't tied to business size—it's fueled by self-imposed expectations, risking burnout and loss of work-life balance, ultimately affecting <strong>leadership mental health</strong>.
+              Fear of failure can paralyze us into inaction. When we're so focused on avoiding mistakes, we miss opportunities that could propel our businesses forward. The irony? Playing it safe is often the riskiest choice of all in a rapidly changing market.
             </p>
 
-            <h3 className="text-2xl font-semibold text-foreground mb-4">Learning from Resilient Leaders</h3>
+            <h2 className="text-3xl font-bold text-foreground mb-6">Building Resilience: Practical Strategies for Leaders</h2>
+
+            <h3 className="text-2xl font-semibold text-foreground mb-4">Reframe Your Relationship with Failure</h3>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Successful leaders, from solo operators to C-suite execs, often describe holding the reins loosely—engaged but not enslaved by every choice. They've learned that not every decision needs to be perfect; many "failures" are detours that build stronger foundations through <strong>stress reduction techniques for leaders</strong>. Gartner research highlights how top-performing leaders allocate 20% of their decision-making to experimental ventures, accepting some losses as learning investments, demonstrating effective <strong>leader resilience strategies</strong>.
+              The most successful leaders view failure as data, not disaster. Each setback provides information about what doesn't work, narrowing the path to what does. This mindset shift—from failure as identity threat to failure as feedback—is transformative for managing executive stress.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mb-6">Actionable Strategies to Work Smarter, Not Harder</h2>
-
-            <h3 className="text-2xl font-semibold text-foreground mb-4">1. Rely on Data to Tame Decision Paralysis</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-4">Create Decision-Making Frameworks</h3>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Ground your choices in real numbers, not assumptions. What do your key performance indicators (KPIs) say about cash flow, customer acquisition costs (CAC), or employee engagement? AI-driven tools like <Link to="/how-it-works" className="text-primary hover:underline">BizHealth.ai's business health diagnostics</Link> can scan your operations in minutes, revealing blind spots without guesswork. For example, a shaky sales pipeline might not signal "failure" but a fixable strategy misalignment. Per U.S. Small Business Administration (SBA) benchmarks, <strong>this data-first approach reduces leadership anxiety by 30-40%</strong>, shifting focus from "what if" to "what is" and providing powerful <strong>executive stress management</strong>. Successful owners admit to bad calls; the difference is using data to course-correct swiftly.
+              Reduce decision fatigue by establishing clear criteria for common decisions. When you have a framework, you're not reinventing the wheel with each choice. This systematization of decision-making is a key stress reduction technique for leaders.
             </p>
 
-            <h3 className="text-2xl font-semibold text-foreground mb-4">2. Lean on Your Team for Shared Leadership</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-4">Build a Support Network</h3>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Isolation amplifies stress, so view your team as co-navigators. Occupational psychology emphasizes distributed leadership—regular check-ins asking, "What's working well, and where are the gaps?" This uncovers insights and distributes the mental load. Avoid pushing your pressures downward; instead, foster a supportive culture. A mid-sized logistics firm we analyzed turned a supply chain hiccup into a <strong>15% efficiency gain by rallying their team</strong>. Find joy in small wins—like a team's innovative fix or customer feedback—to create emotional footholds, recognizing challenges hide opportunities.
+              Leadership can be isolating. Connect with peer groups, mentors, or professional advisors who understand the unique pressures of business ownership. Shared experiences and external perspectives can provide both emotional support and practical wisdom.
             </p>
 
-            <h3 className="text-2xl font-semibold text-foreground mb-4">3. Embrace the Marathon Mindset</h3>
+            <h2 className="text-3xl font-bold text-foreground mb-6">The Role of Self-Awareness in Stress Management</h2>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Business is a marathon, not a sprint. Reframe success by celebrating short-term wins—new accounts, team growth, or community impact—rather than fixating on distant goals. Psychological techniques like positive reframing, backed by the Journal of Occupational Health Psychology, <strong>reduce business owner burnout by up to 25% while boosting productivity</strong>. Set realistic expectations: aim for progress over perfection. Schedule brief weekly reflections to note wins, fueling motivation without extra tasks. Learn more about <Link to="/blog/operational-resilience" className="text-primary hover:underline">building operational resilience</Link> to support your marathon mindset. Resiliency from "bad" decisions often forges unbreakable strength, propelling you beyond initial goals.
+              Understanding your stress triggers is the first step to managing them. Are you more stressed by financial uncertainty? Team conflicts? Competitive pressures? By identifying your specific vulnerabilities, you can develop targeted coping strategies rather than applying generic advice.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mb-6">Empowering Yourself to Lead with Confidence</h2>
-
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              What's one pressure weighing on you right now—cash squeezes, team dynamics, or market uncertainties? Reframe it through data and team support, finding that foothold of positivity. You're capable of guiding your business to new heights, not despite challenges, but because of how you navigate them with effective <strong>leadership stress management</strong>. With the right mindset and <strong>stress reduction techniques for leaders</strong>, that mirage of success becomes a reachable oasis, and failure's shadow fades into lessons learned. <strong>Resilience isn't about avoiding falls; it's about rising stronger each time through proven executive stress management strategies</strong>. Explore more resources in our <Link to="/resources" className="text-primary hover:underline">business resources library</Link>.
-            </p>
-
-            {/* Call to Action */}
-            <div className="bg-muted rounded-xl p-8 mt-12">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Take the Next Step Toward Smarter Growth</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Ready to uncover hidden strengths and ease those mental weights? Take our trusted AI-powered business health assessment to get actionable insights on leadership and risk management in minutes. Your smarter path to growth starts here—let's make it happen.
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mt-8 mb-8">
+              <h3 className="text-xl font-semibold mb-4 text-primary">Assess Your Business Health</h3>
+              <p className="text-muted-foreground mb-4">
+                Understanding your business's true health can reduce uncertainty and stress. A comprehensive assessment reveals blind spots, confirms strengths, and provides a clear roadmap—replacing anxiety with actionable clarity.
               </p>
               <Link 
-                to="/portal" 
+                to="/business-health-assessment" 
                 className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
-                Start Your BizHealth Assessment
-                <ArrowLeft className="w-4 h-4 rotate-180" />
+                Start Your Business Health Assessment
               </Link>
             </div>
+
+            <h2 className="text-3xl font-bold text-foreground mb-6">The Bottom Line: Sustainable Leadership</h2>
+
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              True leadership resilience isn't about eliminating stress—it's about building the capacity to navigate it effectively. By understanding the psychological traps that amplify stress, reframing our relationship with failure, and implementing practical coping strategies, we can lead our businesses from a place of clarity rather than anxiety.
+            </p>
+
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Remember: the goal isn't to become immune to stress, but to develop the tools and mindset that allow you to thrive despite it. Your business—and your well-being—depend on it.
+            </p>
           </div>
         </div>
       </article>
 
       <RelatedArticles articles={[
         {
-          title: "Warning Signs Your Business Needs Attention",
-          slug: "warning-signs-business",
-          category: "Risk Management",
-          excerpt: "Learn to identify critical warning signs before they become major problems for your business."
+          title: "Identifying SMB Leadership Blind Spots",
+          slug: "identifying-smb-leadership-blind-spots",
+          category: "Business Leadership",
+          excerpt: "Discover common leadership blind spots and strategies to overcome them."
         },
         {
-          title: "Operational Resilience Strategies",
+          title: "Building Operational Resilience in Uncertain Times",
           slug: "operational-resilience",
-          category: "Business Strategy",
-          excerpt: "Build business systems that withstand market volatility with proven resilience strategies."
+          category: "Operations",
+          excerpt: "Strategies for creating business systems that withstand market volatility."
         },
         {
-          title: "Strategic Planning Post-Pandemic",
-          slug: "strategic-planning-post-pandemic",
-          category: "Strategic Planning",
-          excerpt: "Master post-pandemic business strategy with proven frameworks for long-term growth."
+          title: "The Complete Guide to Business Health Assessment",
+          slug: "complete-guide-business-health-assessment-2026",
+          category: "Business Strategy",
+          excerpt: "A comprehensive approach to evaluating and improving your business health."
         }
       ]} />
 

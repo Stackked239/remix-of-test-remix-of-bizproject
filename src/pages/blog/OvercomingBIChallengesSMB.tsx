@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
-import { Target, Zap, BarChart3, Database, Lightbulb, TrendingUp, CheckCircle } from "lucide-react";
+import { Target, Zap, BarChart3, Database, Lightbulb, TrendingUp, CheckCircle, ArrowLeft, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
 

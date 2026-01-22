@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 
 export const CodyWidget = () => {
   useEffect(() => {
-    // Defer widget loading to improve initial page load performance
     const loadWidget = () => {
       // Expose Cody settings before script loads
       (window as any).codySettings = {
@@ -41,11 +40,16 @@ export const CodyWidget = () => {
       patchIframes();
     };
 
-    // Use requestIdleCallback for lowest priority, fallback to setTimeout
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(loadWidget, { timeout: 5000 });
+    // Wait for page load, then delay 1.5s for React hydration to complete
+    const initWidget = () => {
+      setTimeout(loadWidget, 1500);
+    };
+
+    if (document.readyState === 'complete') {
+      initWidget();
     } else {
-      setTimeout(loadWidget, 3000);
+      window.addEventListener('load', initWidget);
+      return () => window.removeEventListener('load', initWidget);
     }
   }, []);
 

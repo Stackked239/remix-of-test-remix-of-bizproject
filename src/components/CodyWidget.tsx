@@ -20,6 +20,15 @@ export const CodyWidget = () => {
       script.type = 'text/javascript';
       script.async = true;
       script.src = 'https://trinketsofcody.com/cody-widget.js';
+      
+      // Add error logging for debugging production issues
+      script.onerror = (e) => {
+        console.error('[CodyWidget] Failed to load cody-widget.js:', e);
+      };
+      
+      script.onload = () => {
+        console.log('[CodyWidget] Script loaded successfully');
+      };
 
       // Insert at end of body for lowest priority
       document.body.appendChild(script);
@@ -40,16 +49,27 @@ export const CodyWidget = () => {
       patchIframes();
     };
 
-    // Wait for page load, then delay 1.5s for React hydration to complete
+    // Use a shorter delay and multiple fallback triggers for production reliability
     const initWidget = () => {
-      setTimeout(loadWidget, 1500);
+      setTimeout(loadWidget, 500);
     };
 
+    // Try multiple approaches to ensure widget loads in production SSG context
     if (document.readyState === 'complete') {
       initWidget();
+    } else if (document.readyState === 'interactive') {
+      // Page is interactive but not fully loaded - wait a bit then init
+      setTimeout(initWidget, 100);
     } else {
+      // Page is still loading
       window.addEventListener('load', initWidget);
-      return () => window.removeEventListener('load', initWidget);
+      // Also listen for DOMContentLoaded as a fallback
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(initWidget, 200);
+      });
+      return () => {
+        window.removeEventListener('load', initWidget);
+      };
     }
   }, []);
 
@@ -57,4 +77,3 @@ export const CodyWidget = () => {
 };
 
 export default CodyWidget;
-

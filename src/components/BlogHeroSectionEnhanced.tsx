@@ -91,28 +91,28 @@ const BlogHeroSectionEnhanced = ({
           </div>
           
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
             {title}
           </h1>
           
           {/* Meta Info */}
-          <div className="flex items-center gap-6 mb-4 text-muted-foreground flex-wrap">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4" />
+          <div className="flex items-center gap-5 mb-2 text-muted-foreground flex-wrap text-sm">
+            <div className="flex items-center gap-1.5">
+              <User className="w-3.5 h-3.5" />
               <span>{author}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
+            <div className="flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5" />
               <span>{publishDate}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" />
               <span>{readTime}</span>
             </div>
           </div>
           
           {/* Social Share Buttons */}
-          <div className="mb-8">
+          <div className="mb-5">
             <SocialShareButtons 
               title={title}
               description={shareDescription || title}

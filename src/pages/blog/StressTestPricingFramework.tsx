@@ -32,18 +32,21 @@ const StressTestPricingFramework = () => {
   const relatedArticles = [
     {
       title: "Cash Flow Crisis Management: Essential Strategies for SMB Survival",
-      slug: "/blog/cash-flow-crisis-management",
-      category: "Financial Management"
+      slug: "cash-flow-crisis-management",
+      category: "Financial Management",
+      excerpt: "Learn essential strategies for managing cash flow crises and ensuring SMB survival."
     },
     {
       title: "Small Business Financials: Know Your Numbers, Know Your Business",
-      slug: "/blog/small-business-financials-know-your-numbers",
-      category: "Financials"
+      slug: "small-business-financials-know-your-numbers",
+      category: "Financial Management",
+      excerpt: "Master the essential financial metrics every small business owner needs to track."
     },
     {
       title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
-      slug: "/blog/growth-trap-broken-business-model",
-      category: "Business Strategy"
+      slug: "growth-trap-broken-business-model",
+      category: "Strategy",
+      excerpt: "Discover why chasing revenue growth can mask fundamental business model problems."
     }
   ];
 
@@ -821,23 +824,8 @@ const StressTestPricingFramework = () => {
           </section>
 
           {/* Related Articles */}
-          <section className="mt-12">
-            <h3 className="text-xl font-bold text-foreground mb-6">Related Articles</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {relatedArticles.map((article, index) => (
-                <Link key={index} to={article.slug}>
-                  <Card className="hover:shadow-lg transition-all hover:border-primary/50 h-full">
-                    <CardContent className="p-4">
-                      <Badge variant="secondary" className="mb-2 text-xs">{article.category}</Badge>
-                      <h4 className="font-semibold text-foreground text-sm leading-tight hover:text-primary transition-colors">
-                        {article.title}
-                      </h4>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </section>
+          <GradientDivider variant="green-gold" />
+          <RelatedArticles articles={relatedArticles} />
 
           {/* Author Bio */}
           <section className="mt-12 p-6 bg-muted/50 rounded-2xl">
@@ -862,7 +850,7 @@ const StressTestPricingFramework = () => {
         </div>
       </article>
 
-      <GradientDivider />
+      <GlobalFooter />
       <GlobalFooter />
     </div>
   );

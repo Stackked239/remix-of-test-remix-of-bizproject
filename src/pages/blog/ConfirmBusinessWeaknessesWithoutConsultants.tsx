@@ -272,9 +272,9 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={relatedArticles} />
 
-        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

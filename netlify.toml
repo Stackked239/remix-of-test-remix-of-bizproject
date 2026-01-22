@@ -116,13 +116,14 @@
   status = 301
   force = true
 
-# Universal trailing slash removal - catches ALL paths ending with /
+# Universal trailing slash removal - catches paths ending with / (except root)
 # This prevents future GSC redirect errors automatically
+# Note: Using force = false to not interfere with Lighthouse plugin requests
 [[redirects]]
   from = "/*/"
   to = "/:splat"
   status = 301
-  force = true
+  force = false
 
 # Note: Individual trailing slash redirects removed - universal rule above handles all cases
 

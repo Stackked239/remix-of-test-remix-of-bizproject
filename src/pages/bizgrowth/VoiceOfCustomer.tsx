@@ -108,42 +108,46 @@ const VoiceOfCustomer = () => {
             No business degree required. Real results in 7 days.
           </motion.p>
           
-          {/* Trust Stats */}
+          {/* Trust Stats - with glassmorphism for better contrast */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="grid grid-cols-3 gap-4 md:gap-8 max-w-md mx-auto"
+            className="grid grid-cols-3 gap-4 md:gap-6 max-w-lg mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
           >
-            <div className="flex flex-col items-center gap-1">
-              <BookOpen className="h-6 w-6 text-[hsl(var(--biz-yellow))]" />
-              <span className="text-2xl font-heading font-bold text-[hsl(var(--biz-yellow))]">7</span>
-              <span className="text-sm text-white/70">Modules</span>
+            <div className="flex flex-col items-center gap-2">
+              <BookOpen className="h-6 w-6 text-white" />
+              <span className="text-3xl md:text-4xl font-heading font-bold text-white">7</span>
+              <span className="text-sm font-medium text-white/90">Modules</span>
             </div>
-            <div className="flex flex-col items-center gap-1">
-              <Clock className="h-6 w-6 text-[hsl(var(--biz-yellow))]" />
-              <span className="text-2xl font-heading font-bold text-[hsl(var(--biz-yellow))]">~90</span>
-              <span className="text-sm text-white/70">Minutes</span>
+            <div className="flex flex-col items-center gap-2 border-x border-white/20 px-4">
+              <Clock className="h-6 w-6 text-white" />
+              <span className="text-3xl md:text-4xl font-heading font-bold text-white">~90</span>
+              <span className="text-sm font-medium text-white/90">Minutes</span>
             </div>
-            <div className="flex flex-col items-center gap-1">
-              <Zap className="h-6 w-6 text-[hsl(var(--biz-yellow))]" />
-              <span className="text-2xl font-heading font-bold text-[hsl(var(--biz-yellow))]">7-Day</span>
-              <span className="text-sm text-white/70">First Win</span>
+            <div className="flex flex-col items-center gap-2">
+              <Zap className="h-6 w-6 text-white" />
+              <span className="text-3xl md:text-4xl font-heading font-bold text-white">7-Day</span>
+              <span className="text-sm font-medium text-white/90">First Win</span>
             </div>
           </motion.div>
           
-          {/* Scroll Indicator */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            onClick={scrollToQuiz}
-            className="hidden md:flex flex-col items-center gap-2 mt-12 text-white/60 hover:text-white transition-colors cursor-pointer"
-            aria-label="Scroll to quiz"
+          {/* Primary CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mt-10"
           >
-            <span className="text-sm">Take the Quiz</span>
-            <ChevronDown className="h-5 w-5 animate-bounce" />
-          </motion.button>
+            <button
+              onClick={scrollToQuiz}
+              className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/90 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg shadow-[hsl(var(--biz-green))]/30 transition-all hover:scale-105"
+            >
+              Take the Quiz
+              <ChevronDown className="h-5 w-5 animate-bounce" />
+            </button>
+            <p className="text-white/70 text-sm mt-3">60 seconds · No email required</p>
+          </motion.div>
         </div>
       </section>
 

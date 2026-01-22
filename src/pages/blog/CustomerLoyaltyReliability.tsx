@@ -734,6 +734,8 @@ const CustomerLoyaltyReliability = () => {
       </article>
 
       {/* Related Articles */}
+      <GradientDivider variant="green-gold" />
+      
       <section className="bg-muted/30 py-16">
         <div className="container mx-auto px-4">
           <RelatedArticles articles={relatedArticles} />

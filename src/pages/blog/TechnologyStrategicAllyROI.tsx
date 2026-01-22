@@ -381,6 +381,8 @@ const TechnologyStrategicAllyROI = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "The Hidden Costs of Manual Processes: What Small Businesses Are Missing",

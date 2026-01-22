@@ -833,6 +833,8 @@ const HRProgramAssetMultiplier = () => {
         </div>
         
         {/* Related Articles - Reduced spacing */}
+        <GradientDivider variant="green-gold" />
+        
         <div className="container mx-auto px-4 pb-8">
           <div className="max-w-6xl mx-auto">
             <RelatedArticles 

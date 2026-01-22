@@ -402,6 +402,8 @@ const WarningSignsBusiness = () => {
         </div>
       </article>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Financial Health Metrics Every Business Owner Should Track",

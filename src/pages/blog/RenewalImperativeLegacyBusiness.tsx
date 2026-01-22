@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
+import GradientDivider from "@/components/GradientDivider";
 import { AlertCircle, CheckCircle2, TrendingUp, Target, Users, Zap, Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -482,6 +483,8 @@ const RenewalImperativeLegacyBusiness = () => {
           </article>
 
           {/* Related Articles */}
+          <GradientDivider variant="green-gold" />
+          
           <RelatedArticles articles={relatedArticles} />
 
         </div>

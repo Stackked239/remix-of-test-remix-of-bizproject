@@ -840,6 +840,8 @@ const EmployeeRetentionLeadership = () => {
         </div>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
             <RelatedArticles 

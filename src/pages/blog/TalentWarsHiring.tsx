@@ -353,6 +353,8 @@ const TalentWarsHiring = () => {
           </div>
         </article>
 
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={relatedArticles} />
         <GradientDivider />
         <GlobalFooter />

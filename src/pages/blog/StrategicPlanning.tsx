@@ -229,6 +229,8 @@ const StrategicPlanning = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Operational Resilience Strategies",

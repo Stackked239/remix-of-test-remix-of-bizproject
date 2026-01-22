@@ -271,6 +271,7 @@ const SuccessBeginsWith2026Strategy = () => {
         </div>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
         <div className="container mx-auto px-4 pb-16">
           <div className="max-w-6xl mx-auto">
             <RelatedArticles

@@ -655,6 +655,8 @@ const LeadingBlindBusinessIntelligence = () => {
         </div>
       </article>
       
+      <GradientDivider variant="green-gold" />
+      
       {/* Related Articles */}
       <RelatedArticles 
         articles={[

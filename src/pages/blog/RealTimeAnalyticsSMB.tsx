@@ -284,6 +284,8 @@ const RealTimeAnalyticsSMB = () => {
         </div>
       </main>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "AI-Powered Business Analytics",

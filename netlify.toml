@@ -116,7 +116,15 @@
   status = 301
   force = true
 
-# Remove trailing slashes to prevent redirect loops (GSC redirect errors)
+# Universal trailing slash removal - catches ALL paths ending with /
+# This prevents future GSC redirect errors automatically
+[[redirects]]
+  from = "/*/"
+  to = "/:splat"
+  status = 301
+  force = true
+
+# Specific trailing slash redirects (kept for documentation/explicit handling)
 [[redirects]]
   from = "/blog/chasing-sales-not-profits/"
   to = "/blog/chasing-sales-not-profits"

@@ -4,7 +4,7 @@ import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, MessageSquare, TrendingDown, Users, Target, ShoppingCart, Heart, DollarSign, RefreshCw, Lightbulb, Download, ClipboardCheck, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
@@ -36,7 +36,7 @@ const VoiceOfCustomerTruth = () => {
       <GlobalNavigation />
       <PromotionalBanner />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="Stop Guessing What Your Customers Think: The Uncomfortable Truth About Voice of the Customer"
         author="BizHealth.ai Research Team"
         publishDate="January 21, 2026"

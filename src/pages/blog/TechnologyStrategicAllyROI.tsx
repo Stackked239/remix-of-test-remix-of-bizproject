@@ -5,8 +5,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import LazyBlogImage from "@/components/LazyBlogImage";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/images/technology-strategic-ally-roi-decisions-growth.jpg";
 
@@ -34,61 +33,20 @@ const TechnologyStrategicAllyROI = () => {
       />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6 flex flex-wrap gap-2">
-              <Link to="/blog/technology" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
-                Technology
-              </Link>
-              <Link to="/blog/operations" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
-                Operations
-              </Link>
-              <Link to="/blog/business-strategy" className="bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))] text-sm font-medium px-3 py-1 rounded-full hover:bg-[hsl(var(--biz-green))]/25 transition-colors border border-[hsl(var(--biz-green))]/30">
-                Business Strategy
-              </Link>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground flex-wrap">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>BizHealth.ai Research Team</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>January 5, 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>10 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={heroImage} 
-              alt="Small business owner reviewing software automation ROI spreadsheets and analytics reports in manufacturing facility office"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              width={1200}
-              height={675}
-              loading="eager"
-              decoding="async"
-            />
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="Technology as Your Strategic Ally: Making ROI-First Decisions That Drive Real Growth"
+        author="BizHealth.ai Research Team"
+        publishDate="January 5, 2026"
+        readTime="10 min read"
+        heroImage={heroImage}
+        heroImageAlt="Small business owner reviewing software automation ROI spreadsheets and analytics reports in manufacturing facility office"
+        categories={[
+          { label: "Technology", href: "/blog/technology" },
+          { label: "Operations", href: "/blog/operations" },
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+        ]}
+        shareDescription="Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI and a proven evaluation framework."
+      />
 
       {/* Article Content */}
       <section className="pt-16 pb-8">

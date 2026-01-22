@@ -5,7 +5,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 
@@ -39,55 +39,18 @@ const BusinessIntelligenceROI = () => {
       
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Business Intelligence
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              The ROI of Business Intelligence for SMBs
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>BizHealth Research Team</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>September 26, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>9 min read</span>
-              </div>
-            </div>
-            
-            <div className="w-full flex justify-center">
-              <img 
-                src={biRoiImage} 
-                alt="Business intelligence ROI visualization with investment returns and analytics charts for small business success"
-                className="w-[85%] h-auto rounded-lg shadow-md object-cover brightness-100"
-                style={{ filter: 'brightness(1)' }}
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="The ROI of Business Intelligence for SMBs"
+        author="BizHealth Research Team"
+        publishDate="September 26, 2025"
+        readTime="9 min read"
+        heroImage={biRoiImage}
+        heroImageAlt="Business intelligence ROI visualization with investment returns and analytics charts for small business success"
+        categories={[
+          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+        ]}
+        shareDescription="Discover measurable BI ROI results for SMBs. Real case studies show 112% median returns within 18 months."
+      />
 
       {/* Article Content */}
       <section className="pt-16 pb-8">

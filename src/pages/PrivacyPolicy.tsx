@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from '@/components/SEO';
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
@@ -283,32 +283,12 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BizHealth.ai Privacy Policy | SMB Data Protection 2025</title>
-        <meta
-          name="description"
-          content="Learn how BizHealth.ai protects your business data with GDPR/CCPA compliance. Trusted insights for SMB growth."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:image" content="https://bizhealth.ai/og-images/og-homepage.jpg" />
-        <link rel="canonical" href="https://bizhealth.ai/privacy-policy" />
-        
-        {/* Schema markup for policy pages */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Privacy Policy",
-            "description": "BizHealth.ai Privacy Policy - Data protection for SMB business intelligence",
-            "url": "https://www.bizhealth.ai/privacy-policy",
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "url": "https://www.bizhealth.ai"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="BizHealth.ai Privacy Policy | SMB Data Protection 2025"
+        description="Learn how BizHealth.ai protects your business data with GDPR/CCPA compliance. Trusted insights for SMB growth."
+        canonical="https://bizhealth.ai/privacy"
+        ogImage="/og-images/og-homepage.jpg"
+      />
 
       <div className="min-h-screen bg-background">
         <PromotionalBanner />

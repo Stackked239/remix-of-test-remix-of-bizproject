@@ -348,7 +348,7 @@ const Blog = () => {
                   
                   <Link 
                     to="/blog/complete-guide-business-health-assessment-2026" 
-                    className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    className="inline-flex items-center gap-2 bg-background text-primary px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
                   >
                     Read Full Article
                     <ArrowRight className="w-4 h-4" />

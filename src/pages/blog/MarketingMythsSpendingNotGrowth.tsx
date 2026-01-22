@@ -5,7 +5,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
-import RelatedArticlesEnhanced from "@/components/RelatedArticlesEnhanced";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, DollarSign, TrendingDown, Target, Megaphone, BarChart3, Users, Lightbulb, CheckCircle2, XCircle, Zap, LineChart, ShoppingCart, RefreshCw } from "lucide-react";
 import heroImage from "@/assets/images/marketing-myths-smb-growth-hero.jpg";
@@ -555,7 +555,7 @@ const MarketingMythsSpendingNotGrowth = () => {
         </div>
       </article>
 
-      <RelatedArticlesEnhanced 
+      <RelatedArticles 
         articles={[
           {
             title: "Customer Acquisition Cost: The Complete SMB Guide",

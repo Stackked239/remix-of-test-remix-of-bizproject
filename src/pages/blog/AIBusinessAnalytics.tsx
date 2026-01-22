@@ -239,6 +239,8 @@ const AIBusinessAnalytics = () => {
           </div>
         </article>
 
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={[
         {
           title: "Business Intelligence ROI: Maximizing Returns",

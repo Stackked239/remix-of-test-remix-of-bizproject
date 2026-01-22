@@ -269,6 +269,8 @@ const SmallBusinessSurvivalChecklist = () => {
             </div>
 
             {/* Related Articles */}
+            <GradientDivider variant="green-gold" />
+            
             <RelatedArticles
               articles={[
                 {

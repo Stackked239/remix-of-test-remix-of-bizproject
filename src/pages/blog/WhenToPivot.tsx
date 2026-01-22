@@ -206,6 +206,8 @@ const WhenToPivot = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Strategic Planning Post-Pandemic",

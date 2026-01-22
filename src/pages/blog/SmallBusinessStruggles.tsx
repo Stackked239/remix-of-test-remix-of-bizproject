@@ -368,6 +368,8 @@ const SmallBusinessStruggles = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles 
           articles={[
             {

@@ -298,6 +298,8 @@ const HowToCheckYourBusinessHealth = () => {
             </div>
           </div>
 
+          <GradientDivider variant="green-gold" />
+          
           <div className="container mx-auto px-4 mt-16">
             <RelatedArticles 
               articles={[

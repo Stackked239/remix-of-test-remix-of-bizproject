@@ -127,6 +127,8 @@ const LeadershipStressSuccess = () => {
         </div>
       </article>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Identifying SMB Leadership Blind Spots",

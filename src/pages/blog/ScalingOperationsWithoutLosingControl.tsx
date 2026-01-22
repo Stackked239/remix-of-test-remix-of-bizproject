@@ -547,6 +547,8 @@ const ScalingOperationsWithoutLosingControl = () => {
         </div>
 
         <PromotionalBanner />
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={[
           {
             title: "Employee Retention: Company Culture and Day-to-Day Leadership",

@@ -52,6 +52,11 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/planograms-transform-small-retail-operations/ /blog/planograms-transform-small-retail-operations 301!
 /about/ /about 301!
 /blog/growth-scaling/ /blog/growth-scaling 301!
+/blog/fractional-cfo-toolkit/ /blog/fractional-cfo-toolkit 301!
+/sherpas/ /sherpas 301!
+/blog/r2a2-job-descriptions-role-clarity-small-business-teams/ /blog/r2a2-job-descriptions-role-clarity-small-business-teams 301!
+/pricing/ /pricing 301!
+/contact/ /contact 301!
 
 # Serve static files directly (don't redirect to SPA)
 # This prevents downloadable files from being served as index.html

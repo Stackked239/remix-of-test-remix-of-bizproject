@@ -52,6 +52,11 @@ http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/planograms-transform-small-retail-operations/ /blog/planograms-transform-small-retail-operations 301!
 /about/ /about 301!
 /blog/growth-scaling/ /blog/growth-scaling 301!
+/blog/fractional-cfo-toolkit/ /blog/fractional-cfo-toolkit 301!
+/sherpas/ /sherpas 301!
+/blog/r2a2-job-descriptions-role-clarity-small-business-teams/ /blog/r2a2-job-descriptions-role-clarity-small-business-teams 301!
+/pricing/ /pricing 301!
+/contact/ /contact 301!
 
 # SPA fallback - serve pre-rendered HTML or fallback to index.html
 /* /index.html 200

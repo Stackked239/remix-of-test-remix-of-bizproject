@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -159,6 +160,7 @@ const WhyItMatters = () => {
         <Module1FAQ />
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </div>
   );

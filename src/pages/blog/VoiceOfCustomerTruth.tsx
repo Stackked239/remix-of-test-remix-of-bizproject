@@ -5,6 +5,7 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, MessageSquare, TrendingDown, Users, Target, ShoppingCart, Heart, DollarSign, RefreshCw, Lightbulb, Download, ClipboardCheck, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
@@ -624,46 +625,35 @@ const VoiceOfCustomerTruth = () => {
               </div>
             </section>
 
-            {/* Related Articles */}
-            <section className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-6">Related Articles</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link 
-                  to="/blog/customer-loyalty-starts-with-reliability" 
-                  className="flex items-center justify-between p-4 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
-                >
-                  <span className="font-medium text-foreground">Customer Loyalty Starts with Reliability</span>
-                  <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link 
-                  to="/blog/customer-acquisition-cost-guide-smb" 
-                  className="flex items-center justify-between p-4 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
-                >
-                  <span className="font-medium text-foreground">Customer Acquisition Cost Guide</span>
-                  <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link 
-                  to="/blog/chasing-sales-not-profits" 
-                  className="flex items-center justify-between p-4 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
-                >
-                  <span className="font-medium text-foreground">Chasing Sales Instead of Profits</span>
-                  <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link 
-                  to="/blog/identifying-smb-leadership-blind-spots" 
-                  className="flex items-center justify-between p-4 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
-                >
-                  <span className="font-medium text-foreground">Identifying SMB Leadership Blind Spots</span>
-                  <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))] group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </section>
-
           </div>
         </div>
       </article>
 
-      <GradientDivider />
+      {/* Gradient divider before related articles */}
+      <GradientDivider variant="green-gold" />
+
+      {/* Related Articles Section */}
+      <RelatedArticles articles={[
+        {
+          title: "Customer Loyalty Starts with Reliability",
+          slug: "customer-loyalty-starts-with-reliability",
+          category: "Operations",
+          excerpt: "Discover why consistent reliability—not discounts or gimmicks—is the foundation of lasting customer loyalty."
+        },
+        {
+          title: "Customer Acquisition Cost Guide for SMBs",
+          slug: "customer-acquisition-cost-guide-smb",
+          category: "Financial Management",
+          excerpt: "Learn how to calculate, track, and optimize your customer acquisition costs for sustainable growth."
+        },
+        {
+          title: "Why Most SMBs Chase Sales Instead of Profits",
+          slug: "chasing-sales-not-profits",
+          category: "Strategy",
+          excerpt: "The hidden trap of revenue obsession and how to refocus on what actually matters: profitability."
+        }
+      ]} />
+
       <GlobalFooter />
       <PromotionalBanner />
     </div>

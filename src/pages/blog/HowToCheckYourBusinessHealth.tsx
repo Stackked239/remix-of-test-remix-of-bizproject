@@ -6,7 +6,8 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield } from 'lucide-react';
 import heroImage from '@/assets/how-to-check-business-health-guide-optimized.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
@@ -44,78 +45,21 @@ const HowToCheckYourBusinessHealth = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-32 pb-16">
-          {/* Hero Section */}
-          <div className="relative pt-16 pb-10" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                {/* Back Link */}
-                <Link 
-                  to="/blog" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
-                >
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                  <span className="font-medium">Back to Blog</span>
-                </Link>
+        <BlogHeroSectionEnhanced
+          title="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
+          author={author}
+          publishDate="December 14, 2025"
+          readTime="12 min read"
+          heroImage={heroImage}
+          heroImageAlt="Small business owner juggling multiple spheres representing different aspects of business health"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Risk Management", href: "/blog/risk-management" },
+          ]}
+          shareDescription="Your complete roadmap to uncovering hidden business weaknesses and unlocking sustainable growth."
+        />
 
-                {/* Categories */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Business Strategy
-                  </span>
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Risk Management
-                  </span>
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Business Leadership
-                  </span>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
-                  How to Check Your Business Health: A Comprehensive Guide for Small Business Owners
-                </h1>
-
-                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
-                  <span>By {author}</span>
-                  <span>•</span>
-                  <time dateTime={publishDate}>December 14, 2025</time>
-                  <span>•</span>
-                  <span>12 min read</span>
-                </div>
-
-                <img
-                  src={heroImage}
-                  alt="Small business owner juggling multiple colorful spheres representing different aspects of business health including operations, finance, HR, marketing, and strategy"
-                  className="w-full rounded-lg shadow-xl mb-8"
-                  loading="eager"
-                  style={{ opacity: 0.85 }}
-                />
-
-                <p className="text-lg italic leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                  Your complete roadmap to uncovering hidden business weaknesses and unlocking sustainable growth
-                </p>
-              </div>
-            </div>
-          </div>
-
+        <article className="pb-16">
           {/* Content */}
           <div className="container mx-auto px-4 mt-12">
             <div className="max-w-4xl mx-auto prose prose-lg">

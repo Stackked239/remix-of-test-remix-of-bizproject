@@ -6,6 +6,7 @@ import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import survivalChecklistHero from '@/assets/small-business-survival-checklist-2025.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
@@ -40,56 +41,22 @@ const SmallBusinessSurvivalChecklist = () => {
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-40 pb-16 bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto px-4 py-12 max-w-4xl">
-            {/* Breadcrumb Navigation */}
-            <nav className="mb-8" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Small Business Survival Checklist</li>
-              </ol>
-            </nav>
+        <BlogHeroSectionEnhanced
+          title="The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One"
+          author="BizHealth.ai Research Team"
+          publishDate="October 24, 2025"
+          readTime="11 min read"
+          heroImage={survivalChecklistHero}
+          heroImageAlt="Small business owner in crisis management mode - first year survival strategies"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Risk Management", href: "/blog/risk-management" },
+          ]}
+          shareDescription="Learn from 500+ founders about the critical first-year challenges, metrics, and systems that separate successful businesses from failures."
+        />
 
-            {/* Article Header */}
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                  Business Strategy
-                </span>
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 ml-2">
-                  Business Leadership
-                </span>
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 ml-2">
-                  Risk Management
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                The Small Business Survival Checklist: What 500+ Reddit Founders Wish They Knew in Year One
-              </h1>
-              
-              <div className="flex items-center text-muted-foreground text-sm mb-8">
-                <span>By BizHealth.ai Research Team</span>
-                <span className="mx-2">•</span>
-                <time dateTime={publishDate}>October 24, 2025</time>
-                <span className="mx-2">•</span>
-                <span>11 min read</span>
-              </div>
-            </header>
-
-            {/* Hero Image */}
-            <div className="mb-12 rounded-lg overflow-hidden shadow-xl">
-              <img
-                src={survivalChecklistHero}
-                alt="Small business owner in crisis management mode - first year survival strategies and business health assessment 2025"
-                className="w-[85%] mx-auto h-auto object-cover"
-                loading="eager"
-              />
-            </div>
-
+        <article className="pb-16">
+          <div className="container mx-auto px-4 max-w-4xl">
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">

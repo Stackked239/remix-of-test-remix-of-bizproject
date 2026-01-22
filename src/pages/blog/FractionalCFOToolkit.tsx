@@ -5,16 +5,15 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { 
-  Calendar, Clock, User, ArrowLeft, Info, CheckCircle, 
+  CheckCircle, 
   DollarSign, TrendingUp, Users, LineChart, Gauge, Building2, Target,
   AlertTriangle, Lightbulb, ArrowRight, Wallet, PieChart, BarChart3
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import fractionalCFOImage from "@/assets/images/fractional-cfo-toolkit-hero-2026.jpg";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import SocialShareButtons from "@/components/SocialShareButtons";
 
 // Dashboard card component for visual consistency
 const DashboardCard = ({ 
@@ -139,87 +138,19 @@ const FractionalCFOToolkit = () => {
       />
       <GlobalNavigation />
       
-      {/* Hero Section with gradient */}
-      <section className="pt-40 pb-16 bg-gradient-to-b from-muted via-muted to-background relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
-            >
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6 flex flex-wrap gap-2">
-              <span className="bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 text-sm px-4 py-1.5 rounded-full font-medium">
-                Financials
-              </span>
-              <span className="bg-blue-500/15 text-blue-700 dark:text-blue-400 text-sm px-4 py-1.5 rounded-full font-medium">
-                Business Leadership
-              </span>
-              <span className="bg-purple-500/15 text-purple-700 dark:text-purple-400 text-sm px-4 py-1.5 rounded-full font-medium">
-                Business Strategy
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              The Fractional CFO Toolkit: <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">7 Financial Dashboards</span> Every Business Owner Should Have
-            </h1>
-            
-            <div className="flex flex-wrap items-center gap-6 mb-8 text-muted-foreground">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 cursor-help hover:text-foreground transition-colors">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth.ai Research Team</span>
-                      <Info className="w-3.5 h-3.5 text-primary" />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs">
-                    <p className="text-sm">
-                      The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>December 29, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>12 min read</span>
-              </div>
-            </div>
-            
-            <SocialShareButtons 
-              title="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have"
-              description="Discover the 7 essential financial dashboards every business owner needs for CFO-level visibility."
-              className="mb-8"
-            />
-            
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
-              <img 
-                src={fractionalCFOImage} 
-                alt="Worried business owner driving with dashboard showing empty financial velocity declining and operational stress rising - fractional CFO toolkit for SMB financial visibility"
-                className="w-full h-auto max-h-[500px] object-cover"
-                width="1200"
-                height="630"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="The Fractional CFO Toolkit: 7 Financial Dashboards Every Business Owner Should Have"
+        author="BizHealth.ai Research Team"
+        publishDate="December 29, 2025"
+        readTime="12 min read"
+        heroImage={fractionalCFOImage}
+        heroImageAlt="Fractional CFO toolkit dashboard for SMB financial visibility"
+        categories={[
+          { label: "Financial Management", href: "/blog/financial-management" },
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+        ]}
+        shareDescription="Discover the 7 essential financial dashboards every business owner needs for CFO-level visibility."
+      />
 
       {/* Key Takeaways Box */}
       <section className="py-8">

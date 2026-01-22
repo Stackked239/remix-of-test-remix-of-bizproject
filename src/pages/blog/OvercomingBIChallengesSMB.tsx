@@ -5,7 +5,8 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft, Target, Zap, BarChart3, Database, Lightbulb, TrendingUp, CheckCircle } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { Target, Zap, BarChart3, Database, Lightbulb, TrendingUp, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
 
@@ -42,80 +43,22 @@ const OvercomingBIChallengesSMB = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
+      <BlogHeroSectionEnhanced
+        title="Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses"
+        author="BizHealth.ai Research Team"
+        publishDate="December 10, 2025"
+        readTime="12 min read"
+        heroImage={heroImage}
+        heroImageAlt="Small business owner analyzing business intelligence dashboard with colorful charts"
+        categories={[
+          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Technology", href: "/blog/technology" },
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+        ]}
+        shareDescription="Learn how SMBs can transform fragmented data into strategic clarity with affordable BI tools and AI-powered analytics."
+      />
+
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative pt-40 pb-16 md:pb-24 overflow-hidden">
-          <div 
-            className="absolute inset-0 z-0"
-            style={{ 
-              background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 50%, hsl(var(--biz-green) / 0.3) 100%)'
-            }}
-          />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Blog
-              </Link>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green))', color: 'hsl(var(--biz-navy))' }}>
-                  Business Intelligence
-                </span>
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.3)', color: 'white' }}>
-                  Technology
-                </span>
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.3)', color: 'white' }}>
-                  Business Strategy
-                </span>
-              </div>
-
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses
-              </h1>
-              
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                Learn how SMBs can transform fragmented data into strategic clarity with affordable BI tools, AI-powered analytics, and practical implementation strategies for 2025.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-6 text-white/80">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>BizHealth.ai Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>December 10, 2025</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>12 min read</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Hero Image */}
-        <section className="relative -mt-8 mb-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={heroImage} 
-                  alt="Small business owner analyzing business intelligence dashboard with colorful charts and data visualizations for SMB analytics strategy 2025"
-                  className="w-full h-auto object-cover"
-                  loading="eager"
-                  style={{ filter: 'brightness(0.85)' }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Article Content */}
         <article className="py-12">
           <div className="container mx-auto px-4">

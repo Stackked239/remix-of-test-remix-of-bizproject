@@ -44,16 +44,17 @@ const VoiceOfCustomer = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Voice of Customer (VoC) Curriculum | BizGrowth Academy"
-        description="Build a customer feedback system that actually works. Get a personalized learning path in 60 seconds. No business degree required. Real results in 7 days."
+        title="Voice of Customer (VoC) Curriculum | Free Customer Feedback Training"
+        description="Build a customer feedback system that actually works. 7 modules in ~90 minutes. Get a personalized learning path in 60 seconds. No business degree required. Real results in 7 days. Free VoC training for SMBs."
+        keywords="voice of customer, VoC curriculum, customer feedback system, customer feedback training, VoC program, customer listening, customer experience training, NPS, CSAT, customer satisfaction, customer retention, feedback collection, VoC for small business, free VoC training, customer insights, customer success, bizgrowth academy, customer centric business"
         canonical="https://bizhealth.ai/bizgrowth/voice-of-customer"
         ogImage="/og-images/og-voc-curriculum.jpg"
         ogType="website"
       />
       <StructuredData
         type="course"
-        name="Voice of Customer (VoC) Curriculum"
-        description="Learn how to build a customer feedback system that drives business growth. Personalized learning paths based on your business stage."
+        name="Voice of Customer (VoC) Curriculum - Free Customer Feedback Training"
+        description="Learn how to build a customer feedback system that drives business growth. 7 modules covering feedback collection, analysis, metrics (NPS/CSAT), loop closure, and implementation. Personalized learning paths based on your business stage. ~90 minutes total, real results in 7 days."
         url="https://bizhealth.ai/bizgrowth/voice-of-customer"
         provider="BizHealth.ai"
         providerUrl="https://bizhealth.ai"

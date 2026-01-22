@@ -128,6 +128,7 @@ const FinalApproachExitPreparation = lazy(() => import("./pages/blog/FinalApproa
 const SecretWeaponProcessMatters = lazy(() => import("./pages/blog/SecretWeaponProcessMatters"));
 const FixBusinessBlindSpots = lazy(() => import("./pages/blog/FixBusinessBlindSpots"));
 const VoiceOfCustomerTruth = lazy(() => import("./pages/blog/VoiceOfCustomerTruth"));
+const MarketingMythsSpendingNotGrowth = lazy(() => import("./pages/blog/MarketingMythsSpendingNotGrowth"));
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
 const ProcessMappingTools = lazy(() => import("./pages/tools/ProcessMappingTools"));
@@ -294,6 +295,7 @@ const App = () => (
               <Route path="/blog/secret-weapon-why-process-matters" element={<SecretWeaponProcessMatters />} />
               <Route path="/blog/fix-business-blind-spots" element={<FixBusinessBlindSpots />} />
               <Route path="/blog/voice-of-customer-truth" element={<VoiceOfCustomerTruth />} />
+              <Route path="/blog/marketing-myths-spending-not-creating-growth" element={<MarketingMythsSpendingNotGrowth />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

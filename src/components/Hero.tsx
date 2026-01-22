@@ -310,7 +310,7 @@ const Hero = () => {
                   <p className="font-open-sans text-[10px] sm:text-xs lg:text-sm text-black mb-1">Recommended Plan:</p>
                   <p 
                     key={recommendedTier}
-                    className="font-montserrat font-bold text-2xl sm:text-2xl lg:text-3xl text-biz-lime break-words animate-scale-in"
+                    className="font-montserrat font-bold text-2xl sm:text-2xl lg:text-3xl text-biz-lime break-words animate-glow-pulse"
                   >
                     {recommendedTier}
                   </p>

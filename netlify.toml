@@ -171,6 +171,36 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/fractional-cfo-toolkit/"
+  to = "/blog/fractional-cfo-toolkit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sherpas/"
+  to = "/sherpas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/r2a2-job-descriptions-role-clarity-small-business-teams/"
+  to = "/blog/r2a2-job-descriptions-role-clarity-small-business-teams"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing/"
+  to = "/pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact/"
+  to = "/contact"
+  status = 301
+  force = true
+
 [build]
   # Build command - runs SSG pre-rendering with Puppeteer support
   command = "chmod +x netlify-build.sh && ./netlify-build.sh"

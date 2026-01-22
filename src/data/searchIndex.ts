@@ -510,6 +510,22 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/hr/hr101-foundation-module",
     keywords: "free hr tools, free human resources tool, free hr training, HR 101, hr 101 foundation, free hr course, free hr resources, hr for beginners, learn hr free, small business hr, hr fundamentals, hr basics, hr essentials, free employee management, startup hr, diy hr, hr without experience, build hr system, hr curriculum, hr education, hr learning, hr program free, free people management, workforce management, talent management, hiring training, onboarding training, retention training, compliance training, hr maturity, employee management free, first time owner hr, no hr experience, hr help, hr guidance, beginner hr, entry level hr, simple hr, easy hr, quick hr training, hr crash course, hr overview, hr introduction, intro to hr",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Voice of Customer (VoC) Curriculum - BizGrowth Academy",
+    excerpt: "Build a customer feedback system that actually works. Get a personalized learning path in 60 seconds. 7 modules, ~90 minutes total. No business degree required. Real results in 7 days.",
+    url: "/bizgrowth/voice-of-customer",
+    keywords: "voice of customer, VoC, VoC curriculum, customer feedback, customer feedback system, customer listening, customer experience, CX, customer satisfaction, NPS, net promoter score, CSAT, customer surveys, feedback collection, customer insights, customer retention, churn prevention, customer loyalty, closed loop feedback, feedback loop, customer perception gap, personalized learning path, VoC program, VoC training, customer voice, listening to customers, customer complaints, customer reviews, customer data, customer analytics, customer success, feedback management, survey design, customer interview, customer research, VoC system, VoC framework, VoC methodology, 7 modules, bizgrowth academy, customer centric, customer focus, customer obsession, understand customers, customer needs, customer pain points, customer journey, touchpoints, feedback tracker, customer feedback tracker, 7 day results, SMB customer feedback, small business VoC, customer feedback for small business, how to collect feedback, how to listen to customers, customer feedback best practices",
+    icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 1: Why VoC Matters - Voice of Customer Curriculum",
+    excerpt: "Learn why Voice of Customer is your #1 competitive advantage. Discover the business case for VoC, 41% revenue uplift stats, and complete a self-assessment quiz to understand where you stand.",
+    url: "/bizgrowth/voc/why-it-matters",
+    keywords: "why VoC matters, VoC module 1, voice of customer module, customer feedback business case, VoC ROI, VoC benefits, customer feedback importance, why customer feedback matters, VoC competitive advantage, VoC self assessment, VoC quiz, customer feedback ROI, 41% revenue uplift, customer retention savings, customer feedback system benefits, flying blind, customer listening system, VoC four step cycle, listen analyze act monitor, customer perception gap, VoC training module, VoC curriculum module 1, bizgrowth academy VoC, customer feedback learning, VoC for SMB, small business customer feedback, VoC business case, customer feedback matters, feedback importance, why listen to customers, customer insight value, VoC segment selector, business stage assessment, launch growth scaling enterprise",
+    icon: GraduationCap
   }
 ];
 

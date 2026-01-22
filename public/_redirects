@@ -46,21 +46,7 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 # This prevents future GSC redirect errors automatically
 /*/ /:splat 301!
 
-# Specific trailing slash redirects (kept for documentation)
-/blog/chasing-sales-not-profits/ /blog/chasing-sales-not-profits 301!
-/blog/business-health-scores-by-stage/ /blog/business-health-scores-by-stage 301!
-/blog/emotional-intelligence-leadership-skill/ /blog/emotional-intelligence-leadership-skill 301!
-/blog/lean-principles-small-business/ /blog/lean-principles-small-business 301!
-/security/ /security 301!
-/bizgrowth/growth/retail/p3-placement-planogram/ /bizgrowth/growth/retail/p3-placement-planogram 301!
-/blog/planograms-transform-small-retail-operations/ /blog/planograms-transform-small-retail-operations 301!
-/about/ /about 301!
-/blog/growth-scaling/ /blog/growth-scaling 301!
-/blog/fractional-cfo-toolkit/ /blog/fractional-cfo-toolkit 301!
-/sherpas/ /sherpas 301!
-/blog/r2a2-job-descriptions-role-clarity-small-business-teams/ /blog/r2a2-job-descriptions-role-clarity-small-business-teams 301!
-/pricing/ /pricing 301!
-/contact/ /contact 301!
+# Note: Individual trailing slash redirects removed - universal rule above handles all cases
 
 # Serve static files directly (don't redirect to SPA)
 # This prevents downloadable files from being served as index.html

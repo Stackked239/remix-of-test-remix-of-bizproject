@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Users, TrendingDown, AlertTriangle, Target, BarChart3, CheckCircle, Lightbulb, LineChart, Eye, FileText, Settings } from "lucide-react";
@@ -38,7 +38,7 @@ const GrowthCeilingGutInstinct = () => {
       
       <GlobalNavigation />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won't Scale It"
         author="BizHealth.ai Research Team"
         publishDate="January 11, 2026"

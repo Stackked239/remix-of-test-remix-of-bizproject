@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
@@ -39,7 +39,7 @@ const EstimatingCrisisServiceBusiness = () => {
       
       <GlobalNavigation />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="Avoid The Estimating Crisis: Why Service Business Profitability Collapses When You Get Estimates Wrong"
         author="BizHealth.ai Research Team"
         publishDate="January 9, 2026"

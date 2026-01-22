@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
@@ -58,7 +58,7 @@ const EmotionalIntelligenceLeadershipSkill = () => {
       
       <GlobalNavigation />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="The Invisible Leadership Skill That Separates Thriving Businesses From Struggling Ones: Emotional Intelligence"
         author="BizHealth.ai Research Team"
         publishDate="January 15, 2026"

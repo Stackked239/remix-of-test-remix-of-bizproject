@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
@@ -39,7 +39,7 @@ const LeadingBlindBusinessIntelligence = () => {
       
       <GlobalNavigation />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business"
         author="BizHealth.ai Research Team"
         publishDate="January 12, 2026"

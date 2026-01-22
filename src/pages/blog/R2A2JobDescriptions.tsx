@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Users, Target, Shield, Key, AlertTriangle, Lightbulb, TrendingUp, Zap } from "lucide-react";
@@ -53,7 +53,7 @@ const R2A2JobDescriptions = () => {
       <GlobalNavigation />
 
       <main>
-        <BlogHeroSection
+        <BlogHeroSectionEnhanced
           title="R2A2 Job Descriptions: How Modern Role Clarity Transforms Small Business Teams"
           author="BizHealth.ai Research Team"
           publishDate="January 10, 2026"

@@ -1,7 +1,7 @@
 import BlogPostLayout from "@/components/BlogPostLayout";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AlertCircle, CheckCircle2, TrendingUp, Target, Users, Zap, Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -64,7 +64,7 @@ const RenewalImperativeLegacyBusiness = () => {
         keywords={["legacy business transformation", "business renewal strategy", "digital transformation SMB", "modernize established business", "business rebirth"]}
       />
 
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great"
         author={author}
         publishDate="January 14, 2026"

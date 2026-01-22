@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SocialShareButtons from "@/components/SocialShareButtons";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -35,7 +35,7 @@ const SchedulingCrisisOperationalCosts = () => {
       <GlobalNavigation />
       
       <main>
-        <BlogHeroSection
+        <BlogHeroSectionEnhanced
           title="Scheduling: Why Your Most Underestimated Operational Task Is Likely Bleeding Your Profits"
           author="BizHealth.ai Research Team"
           publishDate="January 9, 2026"

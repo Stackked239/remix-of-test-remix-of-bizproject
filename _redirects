@@ -5,23 +5,7 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 http://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
 
-# Remove trailing slashes (normalize URLs for SEO)
-/faqs/ /faqs 301!
-/contact/ /contact 301!
-/resources/ /resources 301!
-/login/ /login 301!
-/pricing/ /pricing 301!
-/blog/ /blog 301!
-/about/ /about 301!
-/security/ /security 301!
-/privacy/ /privacy 301!
-/terms/ /terms 301!
-/concerns/ /concerns 301!
-/biztools/ /biztools 301!
-/bizleader/ /bizleader 301!
-/bizgrowth/ /bizgrowth 301!
-/bizguides/ /bizguides 301!
-/sherpas/ /sherpas 301!
+# Note: Specific trailing slash redirects removed - universal rule (/*/) handles all cases
 
 # Fix soft 404s and URL variations
 /faq /faqs 301!

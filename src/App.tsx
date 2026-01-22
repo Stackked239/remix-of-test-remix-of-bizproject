@@ -160,6 +160,10 @@ const HR101FoundationModule = lazy(() => import("./pages/bizgrowth/hr/HR101Found
 const VoiceOfCustomerChecklist = lazy(() => import("./pages/bizgrowth/VoiceOfCustomerChecklist"));
 const P3PlacementPlanogram = lazy(() => import("./pages/bizgrowth/growth/retail/P3PlacementPlanogram"));
 
+// VoC Curriculum
+const VoiceOfCustomer = lazy(() => import("./pages/bizgrowth/VoiceOfCustomer"));
+const VocModulePlaceholder = lazy(() => import("./pages/bizgrowth/voc/VocModulePlaceholder"));
+
 // Loading fallback component
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">

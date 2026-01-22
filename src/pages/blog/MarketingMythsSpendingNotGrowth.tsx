@@ -364,7 +364,7 @@ const MarketingMythsSpendingNotGrowth = () => {
             {/* The Real Reason Your Marketing Isn't Working */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-[hsl(var(--biz-gold))]" />
+                <Lightbulb className="w-8 h-8 text-[hsl(var(--biz-green))]" />
                 The Real Reason Your Marketing Isn't Working
               </h2>
               
@@ -375,8 +375,8 @@ const MarketingMythsSpendingNotGrowth = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-card border border-border p-6 rounded-xl shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center">
-                      <BarChart3 className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center">
+                      <BarChart3 className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                     </div>
                     <span className="text-lg font-bold text-foreground">Missing Data</span>
                   </div>
@@ -384,8 +384,8 @@ const MarketingMythsSpendingNotGrowth = () => {
                 </div>
                 <div className="bg-card border border-border p-6 rounded-xl shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                     </div>
                     <span className="text-lg font-bold text-foreground">Unknown Customers</span>
                   </div>
@@ -393,8 +393,8 @@ const MarketingMythsSpendingNotGrowth = () => {
                 </div>
                 <div className="bg-card border border-border p-6 rounded-xl shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center">
-                      <LineChart className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center">
+                      <LineChart className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                     </div>
                     <span className="text-lg font-bold text-foreground">Disconnected Metrics</span>
                   </div>
@@ -402,8 +402,8 @@ const MarketingMythsSpendingNotGrowth = () => {
                 </div>
                 <div className="bg-card border border-border p-6 rounded-xl shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-gold))]/10 flex items-center justify-center">
-                      <Target className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-green))]/10 flex items-center justify-center">
+                      <Target className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                     </div>
                     <span className="text-lg font-bold text-foreground">No Baseline</span>
                   </div>

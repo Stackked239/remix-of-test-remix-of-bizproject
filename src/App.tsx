@@ -163,6 +163,7 @@ const P3PlacementPlanogram = lazy(() => import("./pages/bizgrowth/growth/retail/
 // VoC Curriculum
 const VoiceOfCustomer = lazy(() => import("./pages/bizgrowth/VoiceOfCustomer"));
 const VocModulePlaceholder = lazy(() => import("./pages/bizgrowth/voc/VocModulePlaceholder"));
+const WhyItMatters = lazy(() => import("./pages/bizgrowth/voc/WhyItMatters"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -226,7 +227,7 @@ const App = () => (
               
               {/* VoC Curriculum Routes */}
               <Route path="/bizgrowth/voice-of-customer" element={<VoiceOfCustomer />} />
-              <Route path="/bizgrowth/voc/why-it-matters" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/why-it-matters" element={<WhyItMatters />} />
               <Route path="/bizgrowth/voc/core-components" element={<VocModulePlaceholder />} />
               <Route path="/bizgrowth/voc/metrics" element={<VocModulePlaceholder />} />
               <Route path="/bizgrowth/voc/closing-the-loop" element={<VocModulePlaceholder />} />

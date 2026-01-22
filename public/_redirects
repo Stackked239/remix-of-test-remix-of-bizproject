@@ -42,6 +42,17 @@ https://www.bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/real-time-analytics-smb /blog/real-time-analytics-smb-agility 301!
 /privacy-policy /privacy 301!
 
+# Fix GSC redirect errors - trailing slash normalization for specific pages
+/blog/chasing-sales-not-profits/ /blog/chasing-sales-not-profits 301!
+/blog/business-health-scores-by-stage/ /blog/business-health-scores-by-stage 301!
+/blog/emotional-intelligence-leadership-skill/ /blog/emotional-intelligence-leadership-skill 301!
+/blog/lean-principles-small-business/ /blog/lean-principles-small-business 301!
+/security/ /security 301!
+/bizgrowth/growth/retail/p3-placement-planogram/ /bizgrowth/growth/retail/p3-placement-planogram 301!
+/blog/planograms-transform-small-retail-operations/ /blog/planograms-transform-small-retail-operations 301!
+/about/ /about 301!
+/blog/growth-scaling/ /blog/growth-scaling 301!
+
 # Serve static files directly (don't redirect to SPA)
 # This prevents downloadable files from being served as index.html
 /downloads/* /downloads/:splat 200!

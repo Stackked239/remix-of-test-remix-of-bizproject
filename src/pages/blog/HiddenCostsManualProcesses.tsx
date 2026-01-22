@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
-import { AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe } from "lucide-react";
+import { AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 

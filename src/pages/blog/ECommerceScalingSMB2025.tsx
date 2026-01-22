@@ -230,9 +230,9 @@ const ECommerceScalingSMB2025 = () => {
                   </Link>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
-        </section>
+        </article>
 
         <RelatedArticles 
           articles={[

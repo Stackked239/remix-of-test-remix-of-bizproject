@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, Lightbulb, TrendingUp, Calculator, DollarSign, Target, BarChart3, Users, Clock, Zap } from "lucide-react";
@@ -54,7 +54,7 @@ const CustomerAcquisitionCostGuide = () => {
       <GlobalNavigation />
 
       <main>
-        <BlogHeroSection
+        <BlogHeroSectionEnhanced
           title="The Customer Acquisition Cost Guide: Calculate, Optimize, and Stop Bleeding Money on Growth"
           author="BizHealth.ai Research Team"
           publishDate="January 12, 2026"

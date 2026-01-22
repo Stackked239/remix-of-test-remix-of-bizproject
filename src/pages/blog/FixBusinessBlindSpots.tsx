@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Link } from "react-router-dom";
@@ -37,7 +37,7 @@ const FixBusinessBlindSpots = () => {
       <PromotionalBanner />
       
       {/* Hero Section */}
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="How Do You Fix What Isn't Broken? The Uncomfortable Truth About Business Blind Spots"
         author="BizHealth.ai Research Team"
         publishDate="January 20, 2026"

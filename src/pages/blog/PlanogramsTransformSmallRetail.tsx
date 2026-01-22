@@ -3,7 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import BlogHeroSection from "@/components/BlogHeroSection";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
@@ -67,7 +67,7 @@ const PlanogramsTransformSmallRetail = () => {
       
       <GlobalNavigation />
       
-      <BlogHeroSection
+      <BlogHeroSectionEnhanced
         title="Shelf Space Secrets: How Planograms Transform Small Retail Operations"
         author="BizHealth.ai Research Team"
         publishDate="January 18, 2026"

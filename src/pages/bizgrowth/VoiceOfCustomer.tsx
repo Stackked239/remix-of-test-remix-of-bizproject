@@ -7,6 +7,13 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import VocQuiz from "@/components/voc/VocQuiz";
 import VocResults from "@/components/voc/VocResults";
+import VocCurriculumPreview from "@/components/voc/VocCurriculumPreview";
+import VocToolsPreview from "@/components/voc/VocToolsPreview";
+import VocSuccessStories from "@/components/voc/VocSuccessStories";
+import VocFAQ from "@/components/voc/VocFAQ";
+import VocCoachingGateway from "@/components/voc/VocCoachingGateway";
+import VocFinalCTA from "@/components/voc/VocFinalCTA";
+import VocAssessmentUpsell from "@/components/voc/VocAssessmentUpsell";
 import { QuizAnswers, Recommendation } from "@/state/vocStateManager";
 import { useVocState } from "@/hooks/useVocState";
 import vocHeroBg from "@/assets/images/voc-hero-bg.jpg";
@@ -44,10 +51,16 @@ const VoiceOfCustomer = () => {
       />
       <StructuredData
         type="course"
-        courseName="Voice of Customer (VoC) Curriculum"
-        courseDescription="Learn how to build a customer feedback system that drives business growth. Personalized learning paths based on your business stage."
+        name="Voice of Customer (VoC) Curriculum"
+        description="Learn how to build a customer feedback system that drives business growth. Personalized learning paths based on your business stage."
+        url="https://bizhealth.ai/bizgrowth/voice-of-customer"
         provider="BizHealth.ai"
-        duration="PT90M"
+        providerUrl="https://bizhealth.ai"
+        courseMode="Self-Paced"
+        isAccessibleForFree={true}
+        educationalLevel="Beginner to Intermediate"
+        learningResourceType="Curriculum"
+        inLanguage="en-US"
       />
       
       <GlobalNavigation />
@@ -140,20 +153,26 @@ const VoiceOfCustomer = () => {
         <VocResults answers={quizAnswers} recommendation={recommendation} />
       )}
 
-      {/* Placeholder for additional sections */}
-      <section className="py-16 px-4 bg-muted/30" id="modules">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-            Your Learning Path
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Each module builds on the last — complete at your own pace
-          </p>
-          <p className="text-muted-foreground">
-            Module cards and additional sections coming soon...
-          </p>
-        </div>
-      </section>
+      {/* Curriculum Preview */}
+      <VocCurriculumPreview />
+
+      {/* Tools Preview */}
+      <VocToolsPreview />
+
+      {/* Assessment Upsell */}
+      <VocAssessmentUpsell />
+
+      {/* Success Stories */}
+      <VocSuccessStories />
+
+      {/* FAQ */}
+      <VocFAQ />
+
+      {/* Coaching Gateway */}
+      <VocCoachingGateway />
+
+      {/* Final CTA */}
+      <VocFinalCTA />
 
       <GlobalFooter />
     </div>

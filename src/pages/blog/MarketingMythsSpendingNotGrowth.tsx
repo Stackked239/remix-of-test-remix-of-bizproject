@@ -8,7 +8,7 @@ import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, DollarSign, TrendingDown, Target, Megaphone, BarChart3, Users, Lightbulb, CheckCircle2, XCircle, Zap, LineChart, ShoppingCart, RefreshCw } from "lucide-react";
-import heroImage from "@/assets/images/marketing-myths-smb-growth-hero.jpg";
+import heroImage from "@/assets/images/marketing-myths-laundromat-hero.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const MarketingMythsSpendingNotGrowth = () => {

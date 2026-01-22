@@ -62,8 +62,8 @@ const BlogHeroSectionEnhanced = ({
             Back to Blog
           </Link>
           
-          {/* Refined Category Badges - Subtle & Unified */}
-          <div className="mb-6 flex flex-wrap gap-2">
+          {/* Refined Category Badges - Minimal & Subtle */}
+          <div className="mb-6 flex flex-wrap gap-1.5">
             {categories.map((category) => {
               const IconComponent = categoryIcons[category.label] || Briefcase;
               
@@ -72,17 +72,15 @@ const BlogHeroSectionEnhanced = ({
                   key={category.href}
                   to={category.href} 
                   className="
-                    group/badge inline-flex items-center gap-2
-                    bg-[hsl(var(--biz-navy))]/8 
-                    text-[hsl(var(--biz-navy))]/80
-                    text-sm font-medium px-3.5 py-1.5 rounded-full
-                    border border-[hsl(var(--biz-navy))]/15
-                    backdrop-blur-[2px]
+                    group/badge inline-flex items-center gap-1.5
+                    bg-[hsl(var(--biz-navy))]/6 
+                    text-[hsl(var(--biz-navy))]/70
+                    text-xs font-medium px-2.5 py-1 rounded-full
+                    border border-[hsl(var(--biz-navy))]/10
                     transition-all duration-200 ease-out
-                    hover:bg-[hsl(var(--biz-navy))]/12
-                    hover:border-[hsl(var(--biz-navy))]/25
-                    hover:text-[hsl(var(--biz-navy))]
-                    hover:-translate-y-px
+                    hover:bg-[hsl(var(--biz-green))]/10
+                    hover:border-[hsl(var(--biz-green))]/30
+                    hover:text-[hsl(var(--biz-green))]
                   "
                 >
                   <IconComponent className="w-3.5 h-3.5 opacity-60 group-hover/badge:opacity-80 transition-opacity" />

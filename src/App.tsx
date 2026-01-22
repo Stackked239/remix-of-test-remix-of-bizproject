@@ -12,7 +12,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 // Lazy load CodyWidget - not needed for initial render
-const CodyWidget = lazy(() => import("@/components/CodyWidget").then(m => ({ default: m.CodyWidget })));
+const CodyWidget = lazy(() => import("@/components/CodyWidget"));
 
 // Lazy load all other pages for code splitting
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));

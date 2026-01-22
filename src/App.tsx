@@ -223,6 +223,16 @@ const App = () => (
               <Route path="/bizgrowth/hr/hr101-foundation-module" element={<HR101FoundationModule />} />
               <Route path="/bizgrowth/growth/retail/p3-placement-planogram" element={<P3PlacementPlanogram />} />
               <Route path="/bizgrowth/voice-of-customer-checklist" element={<VoiceOfCustomerChecklist />} />
+              
+              {/* VoC Curriculum Routes */}
+              <Route path="/bizgrowth/voice-of-customer" element={<VoiceOfCustomer />} />
+              <Route path="/bizgrowth/voc/why-it-matters" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/core-components" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/metrics" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/closing-the-loop" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/7-day-quickstart" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/90-day-system" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/advanced" element={<VocModulePlaceholder />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

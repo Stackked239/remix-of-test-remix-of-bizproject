@@ -79,7 +79,7 @@ import finalApproachExitImage from "@/assets/images/final-approach-exit-preparat
 import secretWeaponProcessImage from "@/assets/images/secret-weapon-process-matters-hero.jpg";
 import businessBlindSpotsHeroImage from "@/assets/images/business-blind-spots-hero.jpg";
 import voiceOfCustomerTruthImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
-import marketingMythsImage from "@/assets/images/marketing-myths-laundromat-hero.jpg";
+import marketingMythsImage from "@/assets/images/marketing-myths-smb-growth-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {

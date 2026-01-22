@@ -5,10 +5,9 @@ import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import financialMetricsImage from "@/assets/financial-health-metrics-dashboard.jpg";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const FinancialHealthMetrics = () => {
   return (
@@ -35,66 +34,18 @@ const FinancialHealthMetrics = () => {
       />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Financial Management
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Financial Health Metrics Every Business Owner Should Track in 2025
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 cursor-help">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth.ai Research Team</span>
-                      <Info className="w-3.5 h-3.5 text-primary" />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs">
-                    <p className="text-sm">
-                      The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>October 12, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>15 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={financialMetricsImage} 
-              alt="Comprehensive financial health metrics dashboard displaying business KPIs, profit margins, cash flow analytics, and performance indicators for SMB growth tracking"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              width="1200"
-              height="630"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="Financial Health Metrics Every Business Owner Should Track in 2025"
+        author="BizHealth.ai Research Team"
+        publishDate="October 12, 2025"
+        readTime="15 min read"
+        heroImage={financialMetricsImage}
+        heroImageAlt="Comprehensive financial health metrics dashboard displaying business KPIs, profit margins, cash flow analytics, and performance indicators for SMB growth tracking"
+        categories={[
+          { label: "Financial Management", href: "/blog/financial-management" },
+        ]}
+        shareDescription="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking."
+      />
 
       {/* Article Content */}
       <section className="pt-16 pb-8">

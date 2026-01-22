@@ -19,92 +19,26 @@ interface BlogHeroSectionEnhancedProps {
   shareDescription?: string;
 }
 
-// Category color and icon mapping for world-class visual hierarchy
-const categoryConfig: Record<string, { 
-  bgColor: string; 
-  textColor: string; 
-  borderColor: string;
-  hoverBg: string;
-  glowColor: string;
-  icon: React.ElementType;
-}> = {
-  "Growth & Scaling": {
-    bgColor: "bg-[hsl(var(--biz-gold))]/15",
-    textColor: "text-[hsl(var(--biz-gold))]",
-    borderColor: "border-[hsl(var(--biz-gold))]/40",
-    hoverBg: "hover:bg-[hsl(var(--biz-gold))]/25",
-    glowColor: "hover:shadow-[0_0_20px_hsl(var(--biz-gold)/0.3)]",
-    icon: TrendingUp,
-  },
-  "Operations": {
-    bgColor: "bg-[hsl(var(--biz-green))]/15",
-    textColor: "text-[hsl(var(--biz-green))]",
-    borderColor: "border-[hsl(var(--biz-green))]/40",
-    hoverBg: "hover:bg-[hsl(var(--biz-green))]/25",
-    glowColor: "hover:shadow-[0_0_20px_hsl(var(--biz-green)/0.3)]",
-    icon: Settings,
-  },
-  "Business Strategy": {
-    bgColor: "bg-[hsl(var(--biz-blue))]/15",
-    textColor: "text-[hsl(var(--biz-blue))]",
-    borderColor: "border-[hsl(var(--biz-blue))]/40",
-    hoverBg: "hover:bg-[hsl(var(--biz-blue))]/25",
-    glowColor: "hover:shadow-[0_0_20px_hsl(var(--biz-blue)/0.3)]",
-    icon: Briefcase,
-  },
-  "Risk Management": {
-    bgColor: "bg-destructive/15",
-    textColor: "text-destructive",
-    borderColor: "border-destructive/40",
-    hoverBg: "hover:bg-destructive/25",
-    glowColor: "hover:shadow-[0_0_20px_hsl(var(--destructive)/0.3)]",
-    icon: Shield,
-  },
-  "Business Intelligence": {
-    bgColor: "bg-[hsl(var(--biz-orange))]/15",
-    textColor: "text-[hsl(var(--biz-orange))]",
-    borderColor: "border-[hsl(var(--biz-orange))]/40",
-    hoverBg: "hover:bg-[hsl(var(--biz-orange))]/25",
-    glowColor: "hover:shadow-[0_0_20px_hsl(var(--biz-orange)/0.3)]",
-    icon: BarChart3,
-  },
-  "Financial Management": {
-    bgColor: "bg-emerald-500/15",
-    textColor: "text-emerald-600",
-    borderColor: "border-emerald-500/40",
-    hoverBg: "hover:bg-emerald-500/25",
-    glowColor: "hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]",
-    icon: DollarSign,
-  },
-  "Technology": {
-    bgColor: "bg-violet-500/15",
-    textColor: "text-violet-600",
-    borderColor: "border-violet-500/40",
-    hoverBg: "hover:bg-violet-500/25",
-    glowColor: "hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]",
-    icon: Cpu,
-  },
-};
-
-// Default config for unknown categories
-const defaultCategoryConfig = {
-  bgColor: "bg-[hsl(var(--biz-green))]/15",
-  textColor: "text-[hsl(var(--biz-green))]",
-  borderColor: "border-[hsl(var(--biz-green))]/40",
-  hoverBg: "hover:bg-[hsl(var(--biz-green))]/25",
-  glowColor: "hover:shadow-[0_0_20px_hsl(var(--biz-green)/0.3)]",
-  icon: Briefcase,
+// Subtle category icon mapping - icons only, unified color scheme
+const categoryIcons: Record<string, React.ElementType> = {
+  "Growth & Scaling": TrendingUp,
+  "Operations": Settings,
+  "Business Strategy": Briefcase,
+  "Risk Management": Shield,
+  "Business Intelligence": BarChart3,
+  "Financial Management": DollarSign,
+  "Technology": Cpu,
 };
 
 /**
- * BlogHeroSectionEnhanced - World-class hero section for blog posts
+ * BlogHeroSectionEnhanced - Refined hero section for blog posts
  * 
- * Enhanced Features:
- * - Category-specific color coding with semantic meaning
- * - Glassmorphism effect with backdrop blur
- * - Micro-interactions (scale, glow on hover)
- * - Category icons for visual scanning
- * - Smooth transitions throughout
+ * Design Philosophy:
+ * - Subtle glassmorphism that doesn't compete with content
+ * - Unified muted color palette (BizNavy-based)
+ * - Gentle micro-interactions
+ * - Category icons for quick visual scanning
+ * - Title and content remain the focal point
  */
 const BlogHeroSectionEnhanced = ({
   title,
@@ -128,28 +62,30 @@ const BlogHeroSectionEnhanced = ({
             Back to Blog
           </Link>
           
-          {/* Enhanced Category Badges with Glassmorphism */}
-          <div className="mb-6 flex flex-wrap gap-3">
+          {/* Refined Category Badges - Subtle & Unified */}
+          <div className="mb-6 flex flex-wrap gap-2">
             {categories.map((category) => {
-              const config = categoryConfig[category.label] || defaultCategoryConfig;
-              const IconComponent = config.icon;
+              const IconComponent = categoryIcons[category.label] || Briefcase;
               
               return (
                 <Link 
                   key={category.href}
                   to={category.href} 
-                  className={`
-                    group/badge relative inline-flex items-center gap-2
-                    ${config.bgColor} ${config.textColor} 
-                    text-sm font-semibold px-4 py-2 rounded-full
-                    ${config.hoverBg} transition-all duration-300 ease-out
-                    border ${config.borderColor}
-                    backdrop-blur-sm
-                    hover:scale-105 ${config.glowColor}
-                    hover:-translate-y-0.5
-                  `}
+                  className="
+                    group/badge inline-flex items-center gap-2
+                    bg-[hsl(var(--biz-navy))]/8 
+                    text-[hsl(var(--biz-navy))]/80
+                    text-sm font-medium px-3.5 py-1.5 rounded-full
+                    border border-[hsl(var(--biz-navy))]/15
+                    backdrop-blur-[2px]
+                    transition-all duration-200 ease-out
+                    hover:bg-[hsl(var(--biz-navy))]/12
+                    hover:border-[hsl(var(--biz-navy))]/25
+                    hover:text-[hsl(var(--biz-navy))]
+                    hover:-translate-y-px
+                  "
                 >
-                  <IconComponent className="w-4 h-4 transition-transform duration-300 group-hover/badge:rotate-12" />
+                  <IconComponent className="w-3.5 h-3.5 opacity-60 group-hover/badge:opacity-80 transition-opacity" />
                   <span>{category.label}</span>
                 </Link>
               );

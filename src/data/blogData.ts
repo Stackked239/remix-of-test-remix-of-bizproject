@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Stop Falling for These Marketing Myths: Why Your Spending Isn't Creating Growth",
+    excerpt: "Research shows marketers waste $1 for every $4 spent. Discover the 7 marketing myths draining your budget and learn data-backed strategies to stop wasting money.",
+    author: "BizHealth.ai Research Team",
+    date: "January 22, 2026",
+    readTime: "12 min read",
+    category: "Growth & Scaling, Financial Management, Business Strategy",
+    slug: "/blog/marketing-myths-spending-not-creating-growth",
+    imageUrl: "/assets/images/marketing-myths-smb-growth-hero.jpg",
+    altText: "Businesswoman confused in laundromat surrounded by washing machines metaphor for wasted marketing spend and unclear ROI on advertising budget",
+    keywords: "marketing myths, marketing spending waste, marketing ROI, small business marketing, marketing budget optimization, customer acquisition cost, marketing mistakes, marketing strategy 2026, wasted marketing spend, marketing effectiveness, SMB marketing, growth marketing, marketing myths debunked, digital marketing myths, marketing budget waste, marketing channel optimization, brand awareness myth, lead generation, marketing agency, marketing trends, marketing fundamentals, marketing metrics, CAC, LTV, marketing optimization, marketing investment, marketing returns, advertising waste, social media marketing, content marketing, SEO marketing, PPC advertising, marketing spend optimization, marketing ROI calculator, marketing budget allocation, marketing channel strategy, omnichannel marketing, marketing focus, marketing scalability"
+  },
+  {
     title: "Stop Guessing What Your Customers Think: The Uncomfortable Truth About Voice of the Customer",
     excerpt: "80% of business leaders think they deliver excellent CX. Only 24% of customers agree. Discover the 56-point perception gap costing you customers and how to close it.",
     author: "BizHealth.ai Research Team",

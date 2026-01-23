@@ -20,10 +20,10 @@ const engagementCards: EngagementCard[] = [
   {
     id: "TYPE_A",
     icon: Users,
-    title: "Onsite Support & Team Coaching",
-    description: "Hands-on facilitation, team coaching, capability building, and implementation oversight for organizations ready to invest in direct engagement.",
+    title: "Ongoing Support & Team Coaching",
+    description: "Virtual facilitation, team coaching, capability building, and implementation oversight for organizations ready to invest in direct engagement.",
     duration: "30–90 days",
-    investment: "$3,000–$8,000",
+    investment: "$2,000–$5,000+",
     benefits: [
       "Direct access to expert advisor",
       "Real-time team coaching & feedback",
@@ -42,9 +42,9 @@ const engagementCards: EngagementCard[] = [
     icon: Target,
     badge: "MOST POPULAR",
     title: "Strategic Consulting & Planning",
-    description: "Specialized expertise in exit prep, financial restructuring, operational redesign, business model innovation, and strategic planning for scaling organizations.",
+    description: "Specialized expertise in strategic planning for scaling organizations, operational redesign, business model innovation, financial restructuring, leadership team development, and exit prep.",
     duration: "90–180 days",
-    investment: "$8,000–$18,000",
+    investment: "$7,000–$15,000+",
     benefits: [
       "Expert-led strategic roadmap (12–24 months)",
       "Risk analysis & mitigation strategies",

@@ -47,15 +47,10 @@ const CustomRequestFAQ = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[hsl(var(--biz-navy))] to-background">
+    <section className="py-8 md:py-12 bg-gradient-to-b from-[hsl(var(--biz-navy))] to-background">
       <div className="container mx-auto px-5 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-[hsl(var(--biz-teal))]/20 border border-[hsl(var(--biz-teal))]/30 rounded-full px-4 py-2 mb-4">
-            <span className="text-[hsl(var(--biz-teal))] text-sm font-semibold font-montserrat">
-              FAQ
-            </span>
-          </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-4">
             Questions About Custom BizGuides Engagements?
           </h2>

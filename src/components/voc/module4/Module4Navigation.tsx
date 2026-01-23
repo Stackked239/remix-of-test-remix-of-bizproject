@@ -93,10 +93,14 @@ const Module4Navigation = ({ isComplete }: Module4NavigationProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-8 bg-background rounded-xl border p-4"
+          className="mt-8 bg-gradient-to-r from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-blue))]/5 to-[hsl(var(--biz-navy))]/5 rounded-xl border border-[hsl(var(--biz-blue))]/20 p-4 shadow-sm"
         >
           <div className="flex items-center justify-between">
-            <Button variant="ghost" asChild className="gap-2">
+            <Button 
+              variant="outline" 
+              asChild 
+              className="gap-2 border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
+            >
               <Link to={VOC_URLS.modules[3].url}>
                 <ArrowLeft className="h-4 w-4" />
                 <span className="hidden sm:inline">Previous: Metrics</span>
@@ -106,12 +110,16 @@ const Module4Navigation = ({ isComplete }: Module4NavigationProps) => {
 
             <Link
               to={VOC_URLS.landing}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-[hsl(var(--biz-blue))] hover:text-[hsl(var(--biz-navy))] transition-colors px-3 py-1.5 rounded-lg hover:bg-[hsl(var(--biz-blue))]/10"
             >
               Back to Curriculum Overview
             </Link>
 
-            <Button variant="ghost" asChild className="gap-2">
+            <Button 
+              variant="outline" 
+              asChild 
+              className="gap-2 border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 text-[hsl(var(--biz-green))]"
+            >
               <Link to={VOC_URLS.modules[5].url}>
                 <span className="hidden sm:inline">Next: 7-Day Quick Start</span>
                 <span className="sm:hidden">Next</span>

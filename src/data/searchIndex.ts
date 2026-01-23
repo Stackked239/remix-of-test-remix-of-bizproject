@@ -542,6 +542,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/metrics",
     keywords: "VoC metrics, VoC module 3, measuring customer satisfaction, NPS, net promoter score, CSAT, customer satisfaction score, CES, customer effort score, sentiment analysis, NPS calculator, customer metrics, satisfaction metrics, customer feedback metrics, survey metrics, loyalty metrics, customer loyalty score, promoters detractors passives, NPS survey, CSAT survey, CES survey, sentiment tracking, feedback measurement, customer analytics, VoC measurement, measure customer experience, track customer satisfaction, customer score, NPS benchmark, CSAT benchmark, VoC KPIs, customer feedback KPIs, satisfaction KPIs, loyalty measurement, retention metrics, churn prediction, customer health score, feedback analytics, VoC dashboard, metrics template, survey template, NPS template, CSAT template, VoC training module 3, bizgrowth academy VoC, customer metrics guide, how to measure satisfaction, which metric to use, choosing customer metrics, 7 day quick start, metric trends, trend analysis",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 4: Closing the Loop - Voice of Customer Curriculum",
+    excerpt: "Master the 6-step closed-loop process that transforms customer feedback into loyalty. Includes 5 ready-to-use email templates for every scenario and interactive progress tracking.",
+    url: "/bizgrowth/voc/closing-the-loop",
+    keywords: "closing the loop, VoC module 4, customer feedback response, feedback loop, closed-loop process, customer recovery, detractor outreach, feedback acknowledgment, customer loyalty, VoC follow-up, feedback response templates, email templates, customer response, loop closure, feedback system, VoC best practices, customer advocacy, promoter conversion, feedback management, response time, 48 hour response, customer retention, feedback acknowledgment email, detractor recovery, you asked we delivered, honest no response, customer communication, feedback ownership, VoC training module 4, bizgrowth academy VoC, how to respond to feedback, customer complaint response, negative review response, turning complaints into loyalty",
+    icon: GraduationCap
   }
 ];
 

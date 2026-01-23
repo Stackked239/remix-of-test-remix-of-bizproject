@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Table, Calculator, Mail, CheckSquare, Download, ExternalLink, MessageCircle } from "lucide-react";
+import { FileText, Table, Calculator, Mail, CheckSquare, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { vocState } from "@/state/vocStateManager";
@@ -119,19 +119,23 @@ const Module3Downloads = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[hsl(var(--biz-blue))]/10 via-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-gold))]/10 border rounded-xl p-6 md:p-8"
+          className="bg-[hsl(var(--biz-grey))]/10 border rounded-xl p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="w-16 h-16 rounded-2xl bg-[hsl(var(--biz-green))]/20 flex items-center justify-center flex-shrink-0">
-              <MessageCircle className="h-8 w-8 text-[hsl(var(--biz-green))]" />
+              <img 
+                src="/favicon-96x96.png" 
+                alt="BizHealth.ai" 
+                className="h-10 w-10"
+              />
             </div>
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-xl font-bold text-foreground mb-2">
                 Feeling overwhelmed?
               </h3>
               <p className="text-muted-foreground">
-                You don't have to do this alone. Our VoC coaches have helped 500+ businesses 
-                measure what matters and grow faster. We'll help you set up your system, 
+                You don't have to do this alone. Our BizGuides coaches have helped hundreds of businesses 
+                measure what matters and grow faster. We can help you set up your system, 
                 analyze your first feedback, and close the loop.
               </p>
             </div>

@@ -122,7 +122,7 @@ const Module3Downloads = () => {
           className="bg-[hsl(var(--biz-grey))]/10 border rounded-xl p-6 md:p-8"
         >
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-16 h-16 rounded-2xl bg-[hsl(var(--biz-green))]/20 flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-[hsl(var(--biz-blue))]/20 flex items-center justify-center flex-shrink-0">
               <img 
                 src="/favicon-96x96.png" 
                 alt="BizHealth.ai" 

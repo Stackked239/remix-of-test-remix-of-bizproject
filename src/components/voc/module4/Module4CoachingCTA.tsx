@@ -94,22 +94,14 @@ const Module4CoachingCTA = ({ onView }: Module4CoachingCTAProps) => {
               </ul>
             </div>
 
-            {/* Special Offer Badge */}
-            <div className="inline-flex items-center gap-2 bg-[hsl(var(--biz-yellow))]/20 backdrop-blur-sm border border-[hsl(var(--biz-yellow))]/50 rounded-lg px-4 py-2 mb-6">
-              <span className="text-lg">🎁</span>
-              <span className="text-[hsl(var(--biz-yellow))] font-semibold">
-                First 30-min session FREE with Module 4 completion
-              </span>
-            </div>
-
             <div>
               <Button
                 asChild
                 size="lg"
-                className="bg-[hsl(var(--biz-yellow))] hover:bg-[hsl(var(--biz-yellow))]/90 text-[hsl(var(--biz-blue))] font-bold text-lg px-8 gap-2"
+                className="bg-[hsl(var(--biz-gold))] hover:bg-[hsl(var(--biz-gold))]/90 text-[hsl(var(--biz-navy))] font-bold text-lg px-8 gap-2"
               >
-                <Link to={`${VOC_URLS.external.coaching}?source=voc_module4_coaching`}>
-                  Book a Coaching Session
+                <Link to="/bizguides">
+                  Learn more about BizGuides
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>

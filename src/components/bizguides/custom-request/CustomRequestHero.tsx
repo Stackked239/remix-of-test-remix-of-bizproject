@@ -5,19 +5,23 @@ const CustomRequestHero = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById("request-form");
     if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80; // Account for fixed header
+      const y = formSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
   const scrollToEngagements = () => {
     const engagementSection = document.getElementById("engagement-types");
     if (engagementSection) {
-      engagementSection.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80; // Account for fixed header
+      const y = engagementSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
   const benefits = [
-    { icon: Target, text: "Investment-level engagement ($3K–$25K+)" },
+    { icon: Target, text: "Investment-level engagement ($2K–$25K+)" },
     { icon: Calendar, text: "90–180+ day strategic partnerships" },
     { icon: Users, text: "Dedicated advisor + advisory support" },
     { icon: TrendingUp, text: "20–30% efficiency gains, strategic clarity" },

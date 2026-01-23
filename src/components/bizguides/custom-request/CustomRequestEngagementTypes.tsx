@@ -94,7 +94,7 @@ const CustomRequestEngagementTypes = () => {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-[hsl(var(--biz-navy))] mb-4">
-            Three Engagement Types to Match Your Needs
+            Engagement Solutions Tailored To Your Needs
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose the engagement level that fits your organization's goals, timeline, and investment capacity.

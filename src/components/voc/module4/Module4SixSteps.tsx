@@ -125,7 +125,7 @@ const Module4SixSteps = ({ onView }: Module4SixStepsProps) => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-20 px-4 bg-muted/30"
+      className="py-16 md:py-20 px-4 bg-[hsl(var(--biz-green))]/5"
       data-section="six-steps"
       data-section-number="3"
     >

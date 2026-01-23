@@ -125,17 +125,17 @@ const Module4Hero = ({ onView }: Module4HeroProps) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="bg-white/15 backdrop-blur-md rounded-xl p-5 border border-white/30 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-background rounded-xl p-5 border border-border hover:shadow-lg transition-all duration-300 shadow-md"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-[hsl(var(--biz-gold))]/30 flex items-center justify-center border border-[hsl(var(--biz-gold))]/40">
-                    <stat.icon className="h-5 w-5 text-[hsl(var(--biz-gold))]" />
+                  <div className="w-10 h-10 rounded-lg bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center border border-[hsl(var(--biz-blue))]/20">
+                    <stat.icon className="h-5 w-5 text-[hsl(var(--biz-blue))]" />
                   </div>
                 </div>
-                <div className="text-3xl md:text-4xl font-heading font-bold text-[hsl(var(--biz-gold))] mb-2 drop-shadow-sm">
+                <div className="text-3xl md:text-4xl font-heading font-bold text-[hsl(var(--biz-blue))] mb-2">
                   {stat.value}
                 </div>
-                <p className="text-sm text-white/90 leading-snug font-medium">
+                <p className="text-sm text-muted-foreground leading-snug font-medium">
                   {stat.label}
                 </p>
               </motion.div>

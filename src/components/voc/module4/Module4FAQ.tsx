@@ -68,7 +68,7 @@ const Module4FAQ = ({ onView }: Module4FAQProps) => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-20 px-4 bg-background"
+      className="py-16 md:py-20 px-4 bg-gradient-to-b from-[hsl(var(--biz-navy))]/5 to-background"
       data-section="faq"
       data-section-number="8"
     >
@@ -80,6 +80,9 @@ const Module4FAQ = ({ onView }: Module4FAQProps) => {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
+          <span className="inline-block bg-[hsl(var(--biz-blue))]/10 text-[hsl(var(--biz-blue))] font-heading text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4">
+            FAQ
+          </span>
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
@@ -94,17 +97,17 @@ const Module4FAQ = ({ onView }: Module4FAQProps) => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="bg-muted/30 rounded-xl border px-6 data-[state=open]:bg-muted/50"
+                className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-[hsl(var(--biz-green))]/50 shadow-sm"
               >
-                <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline py-4">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:text-[hsl(var(--biz-green))] py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 pb-4">
+                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

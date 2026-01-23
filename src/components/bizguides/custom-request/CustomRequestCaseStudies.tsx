@@ -76,72 +76,102 @@ const CustomRequestCaseStudies = () => {
 
         {/* Case Study Cards */}
         <div className="space-y-8">
-          {caseStudies.map((caseStudy, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl p-6 md:p-8 border border-[hsl(var(--biz-teal))]/10 border-l-4 border-l-[hsl(var(--biz-teal))] shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
-                {/* Company Profile */}
-                <div className="lg:col-span-1">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-[hsl(var(--biz-teal))]/10 rounded-xl flex items-center justify-center">
-                      <caseStudy.icon className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
+          {caseStudies.map((caseStudy, index) => {
+            const colorSchemes = [
+              {
+                iconBg: "bg-[hsl(var(--biz-teal))]/10",
+                iconColor: "text-[hsl(var(--biz-teal))]",
+                borderLeft: "border-l-[hsl(var(--biz-teal))]",
+                solutionColor: "text-[hsl(var(--biz-teal))]",
+                checkColor: "text-[hsl(var(--biz-teal))]",
+                quoteColor: "text-[hsl(var(--biz-teal))]/30",
+              },
+              {
+                iconBg: "bg-[hsl(var(--biz-gold))]/10",
+                iconColor: "text-[hsl(var(--biz-gold))]",
+                borderLeft: "border-l-[hsl(var(--biz-gold))]",
+                solutionColor: "text-[hsl(var(--biz-gold))]",
+                checkColor: "text-[hsl(var(--biz-gold))]",
+                quoteColor: "text-[hsl(var(--biz-gold))]/30",
+              },
+              {
+                iconBg: "bg-[hsl(var(--biz-green))]/10",
+                iconColor: "text-[hsl(var(--biz-green))]",
+                borderLeft: "border-l-[hsl(var(--biz-green))]",
+                solutionColor: "text-[hsl(var(--biz-green))]",
+                checkColor: "text-[hsl(var(--biz-green))]",
+                quoteColor: "text-[hsl(var(--biz-green))]/30",
+              },
+            ];
+            const colors = colorSchemes[index % colorSchemes.length];
+            
+            return (
+              <div
+                key={index}
+                className={`bg-card rounded-xl p-6 md:p-8 border border-[hsl(var(--biz-teal))]/10 border-l-4 ${colors.borderLeft} shadow-md hover:shadow-lg transition-all duration-300`}
+              >
+                <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+                  {/* Company Profile */}
+                  <div className="lg:col-span-1">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className={`w-12 h-12 ${colors.iconBg} rounded-xl flex items-center justify-center`}>
+                        <caseStudy.icon className={`w-6 h-6 ${colors.iconColor}`} />
+                      </div>
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-[hsl(var(--biz-navy))]">
+                          {caseStudy.company}
+                        </h3>
+                        <span className="text-sm text-muted-foreground">{caseStudy.revenue}</span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-montserrat font-semibold text-[hsl(var(--biz-navy))]">
-                        {caseStudy.company}
-                      </h3>
-                      <span className="text-sm text-muted-foreground">{caseStudy.revenue}</span>
+
+                    <div className="bg-muted rounded-lg p-4 space-y-3">
+                      <div>
+                        <span className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide">
+                          Challenge
+                        </span>
+                        <p className="text-sm text-muted-foreground mt-1">{caseStudy.challenge}</p>
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide">
+                          Solution
+                        </span>
+                        <p className={`text-sm ${colors.solutionColor} font-medium mt-1`}>{caseStudy.solution}</p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="bg-muted rounded-lg p-4 space-y-3">
-                    <div>
-                      <span className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide">
-                        Challenge
-                      </span>
-                      <p className="text-sm text-muted-foreground mt-1">{caseStudy.challenge}</p>
-                    </div>
-                    <div>
-                      <span className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide">
-                        Solution
-                      </span>
-                      <p className="text-sm text-[hsl(var(--biz-teal))] font-medium mt-1">{caseStudy.solution}</p>
-                    </div>
+                  {/* Results */}
+                  <div className="lg:col-span-1">
+                    <h4 className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide mb-4">
+                      Results
+                    </h4>
+                    <ul className="space-y-3">
+                      {caseStudy.results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-[hsl(var(--biz-navy))]">
+                          <Check className={`w-4 h-4 ${colors.checkColor} flex-shrink-0 mt-0.5`} />
+                          <span>{result}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
 
-                {/* Results */}
-                <div className="lg:col-span-1">
-                  <h4 className="text-xs font-semibold text-[hsl(var(--biz-navy))] uppercase tracking-wide mb-4">
-                    Results
-                  </h4>
-                  <ul className="space-y-3">
-                    {caseStudy.results.map((result, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-[hsl(var(--biz-navy))]">
-                        <Check className="w-4 h-4 text-[hsl(var(--biz-teal))] flex-shrink-0 mt-0.5" />
-                        <span>{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Testimonial */}
-                <div className="lg:col-span-1">
-                  <div className="bg-muted rounded-lg p-5 border-l-[3px] border-l-[hsl(var(--biz-teal))] h-full flex flex-col justify-center">
-                    <Quote className="w-8 h-8 text-[hsl(var(--biz-teal))]/30 mb-3" />
-                    <p className="text-sm text-[hsl(var(--biz-navy))] leading-relaxed italic mb-4">
-                      "{caseStudy.testimonial}"
-                    </p>
-                    <p className="text-xs font-semibold text-muted-foreground">
-                      — {caseStudy.attribution}
-                    </p>
+                  {/* Testimonial */}
+                  <div className="lg:col-span-1">
+                    <div className={`bg-muted rounded-lg p-5 border-l-[3px] ${colors.borderLeft} h-full flex flex-col justify-center`}>
+                      <Quote className={`w-8 h-8 ${colors.quoteColor} mb-3`} />
+                      <p className="text-sm text-[hsl(var(--biz-navy))] leading-relaxed italic mb-4">
+                        "{caseStudy.testimonial}"
+                      </p>
+                      <p className="text-xs font-semibold text-muted-foreground">
+                        — {caseStudy.attribution}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

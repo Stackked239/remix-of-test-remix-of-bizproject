@@ -128,8 +128,8 @@ const Module4Hero = ({ onView }: Module4HeroProps) => {
                 className="bg-background rounded-xl p-5 border border-border hover:shadow-lg transition-all duration-300 shadow-md"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center border border-[hsl(var(--biz-blue))]/20">
-                    <stat.icon className="h-5 w-5 text-[hsl(var(--biz-blue))]" />
+                  <div className="w-10 h-10 rounded-lg bg-[hsl(var(--biz-green))]/10 flex items-center justify-center border border-[hsl(var(--biz-green))]/20">
+                    <stat.icon className="h-5 w-5 text-[hsl(var(--biz-green))]" />
                   </div>
                 </div>
                 <div className="text-3xl md:text-4xl font-heading font-bold text-[hsl(var(--biz-blue))] mb-2">

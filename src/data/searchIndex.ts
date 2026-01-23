@@ -100,10 +100,10 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
-    title: "BizGuides - From Gaps to Guided Wins",
-    excerpt: "Expert consulting services to implement insights from your business health assessment. Partner consulting network launching Q1 2026.",
+    title: "BizGuides - Expert Coaching & Consulting for SMB Growth",
+    excerpt: "Get expert coaching and consulting to turn BizHealth insights into real business momentum. Free articles, 1:1 sessions, and custom solutions for every growth stage.",
     url: "/bizguides",
-    keywords: "bizguides, consulting, implementation, expert guidance, partners, advisors, coaches, mentors, business consultants, professional services, advisory, one-on-one help, personalized guidance, expert help, consultant network, implementation support, hands-on help",
+    keywords: "bizguides, coaching, consulting, expert guidance, business coach, SMB consultant, 1:1 sessions, custom solutions, executive coaching, business advisor, professional services, implementation support, hands-on help, personalized guidance, growth coaching, leadership coaching, strategy consulting, business mentoring, advisor matching, fractional consultant",
     icon: Home
   },
   {

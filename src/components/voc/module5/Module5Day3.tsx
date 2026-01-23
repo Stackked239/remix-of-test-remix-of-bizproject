@@ -48,7 +48,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
             ${isComplete ? 'border-[hsl(var(--biz-green))]' : 'border-border'}`}
         >
           {/* Day Header */}
-          <div className="flex items-center justify-between p-6 border-b bg-muted/30">
+          <div className="flex items-center justify-between p-6 border-b bg-[hsl(var(--biz-green))]/8">
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center
                 ${isComplete ? 'bg-[hsl(var(--biz-green))]/10' : 'bg-[hsl(var(--biz-navy))]/10'}`}>
@@ -103,7 +103,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
             </div>
 
             {/* Tracker Preview */}
-            <div className="bg-muted/50 border rounded-xl p-4">
+            <div className="bg-[hsl(var(--biz-teal))]/8 border border-[hsl(var(--biz-teal))]/20 rounded-xl p-4">
               <h4 className="text-sm font-semibold text-foreground mb-3">Tracker Columns Preview:</h4>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -128,7 +128,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
                         <td className="p-2 text-foreground">{row.category}</td>
                         <td className="p-2">
                           <span className={`px-2 py-0.5 rounded text-xs font-medium
-                            ${row.sentiment === 'Positive' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                            ${row.sentiment === 'Positive' ? 'bg-[hsl(var(--biz-green))]/15 text-[hsl(var(--biz-green))]' : 'bg-destructive/15 text-destructive'}`}>
                             {row.sentiment}
                           </span>
                         </td>
@@ -141,9 +141,9 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
             </div>
 
             {/* Quick Tip */}
-            <div className="bg-[hsl(var(--biz-yellow))]/10 border border-[hsl(var(--biz-yellow))]/30 rounded-xl p-4 md:p-5">
+            <div className="bg-[hsl(var(--biz-gold))]/12 border border-[hsl(var(--biz-gold))]/30 rounded-xl p-4 md:p-5">
               <div className="flex items-start gap-3">
-                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-yellow))] flex-shrink-0 mt-0.5" />
+                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-foreground">Quick Tip</span>
                   <p className="text-muted-foreground mt-1">
@@ -160,7 +160,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
                 onClick={() => handleTemplateClick('Google Sheets')}
                 className="gap-2"
               >
-                <FileSpreadsheet className="w-4 h-4 text-green-600" />
+                <FileSpreadsheet className="w-4 h-4 text-[hsl(var(--biz-green))]" />
                 Google Sheets Template
                 <ExternalLink className="w-3 h-3" />
               </Button>
@@ -169,7 +169,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
                 onClick={() => handleTemplateClick('Airtable')}
                 className="gap-2"
               >
-                <BarChart3 className="w-4 h-4 text-blue-600" />
+                <BarChart3 className="w-4 h-4 text-[hsl(var(--biz-blue))]" />
                 Airtable Template
                 <ExternalLink className="w-3 h-3" />
               </Button>
@@ -178,7 +178,7 @@ const Module5Day3 = ({ isComplete, onToggleComplete }: Module5Day3Props) => {
                 onClick={() => handleTemplateClick('Excel')}
                 className="gap-2"
               >
-                <FileSpreadsheet className="w-4 h-4 text-green-700" />
+                <FileSpreadsheet className="w-4 h-4 text-[hsl(var(--biz-green))]" />
                 Excel Template
                 <ExternalLink className="w-3 h-3" />
               </Button>

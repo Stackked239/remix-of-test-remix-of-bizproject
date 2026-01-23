@@ -71,7 +71,7 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
       <div className="max-w-5xl mx-auto px-4">
         {/* Phase Header */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 text-sm font-bold mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--biz-teal))]/15 text-[hsl(var(--biz-teal))] text-sm font-bold mb-4">
             PHASE 1
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -99,7 +99,7 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
                   aria-controls={`week-${weekData.week}-content`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 font-bold">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-teal))]/15 flex items-center justify-center text-[hsl(var(--biz-teal))] font-bold">
                       {weekData.week}
                     </div>
                     <div>
@@ -129,7 +129,7 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
                         <ul className="space-y-3 mb-6">
                           {weekData.tasks.map((task, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-5 h-5 text-[hsl(var(--biz-teal))] flex-shrink-0 mt-0.5" />
                               <div>
                                 <span className="text-foreground">{task.text}</span>
                                 {task.hint && (
@@ -148,12 +148,12 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
                               {weekData.rhythm.map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-3 p-3 bg-muted/50 rounded-lg">
                                   {item.frequency === 'Daily' ? (
-                                    <Clock className="w-4 h-4 text-blue-500" />
+                                    <Clock className="w-4 h-4 text-[hsl(var(--biz-teal))]" />
                                   ) : (
-                                    <Calendar className="w-4 h-4 text-blue-500" />
+                                    <Calendar className="w-4 h-4 text-[hsl(var(--biz-teal))]" />
                                   )}
                                   <div>
-                                    <span className="text-xs font-medium text-blue-500 uppercase">{item.frequency}</span>
+                                    <span className="text-xs font-medium text-[hsl(var(--biz-teal))] uppercase">{item.frequency}</span>
                                     <p className="text-sm text-foreground">{item.task}</p>
                                   </div>
                                 </div>
@@ -163,8 +163,8 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
                         )}
 
                         {/* Quick Win */}
-                        <div className="flex items-start gap-3 p-4 bg-blue-500/5 rounded-lg mb-4">
-                          <Trophy className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                        <div className="flex items-start gap-3 p-4 bg-[hsl(var(--biz-gold))]/20 border border-[hsl(var(--biz-gold))]/40 rounded-lg mb-4">
+                          <Trophy className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                           <p className="text-foreground">
                             <strong>Quick Win:</strong> {weekData.quickWin}
                           </p>
@@ -174,7 +174,7 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
                         {weekData.resourceLink && (
                           <Link 
                             to={weekData.resourceLink}
-                            className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 font-medium transition-colors"
+                            className="inline-flex items-center gap-2 text-[hsl(var(--biz-teal))] hover:text-[hsl(var(--biz-teal))]/80 font-medium transition-colors"
                           >
                             <Download className="w-4 h-4" />
                             {weekData.resourceText}
@@ -190,9 +190,9 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
         </div>
 
         {/* Phase 1 Milestone Summary */}
-        <div className="p-6 bg-blue-500/5 border border-blue-500/20 rounded-xl">
+        <div className="p-6 bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/30 rounded-xl">
           <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-            <CheckCircle2 className="w-6 h-6 text-blue-500" />
+            <CheckCircle2 className="w-6 h-6 text-[hsl(var(--biz-teal))]" />
             Phase 1 Complete: Foundation Built
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
@@ -203,7 +203,7 @@ const Module6Foundation = ({ expandedWeeks, onToggleWeek }: Module6FoundationPro
               "First action plan in motion"
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-2 text-foreground">
-                <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                <CheckCircle2 className="w-4 h-4 text-[hsl(var(--biz-teal))]" />
                 <span>{item}</span>
               </div>
             ))}

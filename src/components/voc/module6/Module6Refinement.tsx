@@ -48,8 +48,8 @@ const Module6Refinement = () => {
             </div>
 
             {/* Pitfall Warning */}
-            <div className="flex items-start gap-4 p-4 bg-amber-500/10 border border-amber-500/20 rounded-lg h-fit">
-              <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0" />
+            <div className="flex items-start gap-4 p-4 bg-[hsl(var(--biz-gold))]/20 border border-[hsl(var(--biz-gold))]/40 rounded-lg h-fit">
+              <AlertTriangle className="w-6 h-6 text-[hsl(var(--biz-gold))] flex-shrink-0" />
               <div>
                 <strong className="text-foreground">Pitfall to Avoid:</strong>
                 <p className="text-muted-foreground mt-1">

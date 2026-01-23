@@ -12,10 +12,10 @@ const PHASES = [
     days: "Days 1-30",
     title: "Foundation",
     description: "Get the basics working",
-    color: "blue",
-    bgClass: "bg-blue-500/10",
-    textClass: "text-blue-500",
-    borderClass: "border-blue-500",
+    color: "teal",
+    bgClass: "bg-[hsl(var(--biz-teal))]/15",
+    textClass: "text-[hsl(var(--biz-teal))]",
+    borderClass: "border-[hsl(var(--biz-teal))]",
     icon: Target,
     activities: [
       "Set up collection from 3-5 channels",
@@ -143,8 +143,8 @@ const Module6Timeline = ({ activePhase, onPhaseClick }: Module6TimelineProps) =>
         </div>
 
         {/* Key Insight */}
-        <div className="flex items-start gap-4 p-6 bg-[hsl(var(--biz-yellow))]/10 rounded-xl border border-[hsl(var(--biz-yellow))]/30">
-          <Lightbulb className="w-6 h-6 text-[hsl(var(--biz-yellow))] flex-shrink-0 mt-0.5" />
+        <div className="flex items-start gap-4 p-6 bg-[hsl(var(--biz-gold))]/20 rounded-xl border border-[hsl(var(--biz-gold))]/40">
+          <Lightbulb className="w-6 h-6 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
           <div>
             <p className="text-foreground">
               <strong>The Goal:</strong> By Day 90, VoC should run without you pushing it daily. 

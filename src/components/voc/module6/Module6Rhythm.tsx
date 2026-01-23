@@ -15,7 +15,7 @@ const RHYTHMS = [
       "Log in tracker"
     ],
     owner: "CX Lead or rotating team member",
-    colorClass: "bg-[hsl(var(--biz-yellow))]/10 border-[hsl(var(--biz-yellow))]/30"
+    colorClass: "bg-[hsl(var(--biz-gold))]/15 border-[hsl(var(--biz-gold))]/30"
   },
   {
     frequency: "WEEKLY",
@@ -57,7 +57,7 @@ const RHYTHMS = [
       "VoC program improvements"
     ],
     owner: "Leadership + VoC Lead",
-    colorClass: "bg-purple-500/10 border-purple-500/30"
+    colorClass: "bg-[hsl(var(--biz-copper))]/15 border-[hsl(var(--biz-copper))]/30"
   }
 ];
 

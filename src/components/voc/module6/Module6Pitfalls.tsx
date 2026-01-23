@@ -112,7 +112,7 @@ const Module6Pitfalls = () => {
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <AlertTriangle className="w-8 h-8 text-amber-500 mb-4" />
+                    <AlertTriangle className="w-8 h-8 text-[hsl(var(--biz-gold))] mb-4" />
                     <h4 className="font-bold text-foreground mb-2">
                       Pitfall #{pitfall.number}: {pitfall.title}
                     </h4>
@@ -149,8 +149,8 @@ const Module6Pitfalls = () => {
         </div>
 
         {/* Summary Callout */}
-        <div className="flex items-start gap-4 p-6 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-          <ShieldAlert className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+        <div className="flex items-start gap-4 p-6 bg-[hsl(var(--biz-gold))]/20 border border-[hsl(var(--biz-gold))]/40 rounded-xl">
+          <ShieldAlert className="w-6 h-6 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
           <div>
             <p className="text-foreground">
               <strong>The Pattern:</strong> Every pitfall comes down to one thing — treating VoC as 

@@ -558,6 +558,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/7-day-quickstart",
     keywords: "7 day VoC plan, VoC quick start, customer feedback implementation, VoC action plan, survey templates, feedback tracker, closing the loop, customer insights implementation, VoC module 5, week one VoC, first VoC survey, VoC launch, start VoC program, implement customer feedback, collect feedback, analyze feedback, act on feedback, feedback patterns, customer themes, quick win, VoC momentum, day by day plan, VoC checklist, VoC tracker, bizgrowth academy VoC, how to start VoC, VoC for beginners, practical VoC, VoC implementation guide, 7 day challenge, weekly VoC plan, VoC kickoff, feedback collection day, insight analysis, customer insight action, first improvement",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 6: Building Your 90-Day System - Voice of Customer Curriculum",
+    excerpt: "Transform the 7-day quick start into a sustainable 90-day VoC system. Build team accountability, operational rhythms, and organizational capability with RACI matrices, weekly/monthly checkpoints, and downloadable implementation guides.",
+    url: "/bizgrowth/voc/90-day-system",
+    keywords: "90 day VoC system, VoC module 6, sustainable VoC, VoC implementation, team VoC, organizational VoC, VoC ownership, RACI matrix, VoC accountability, weekly VoC rhythm, monthly VoC review, quarterly VoC planning, VoC team training, VoC delegation, scale VoC, VoC at scale, VoC operations, VoC process, VoC playbook, 12 week VoC plan, foundation weeks, refinement weeks, optimization weeks, VoC KPIs, VoC metrics, VoC dashboard, VoC reporting, VoC pitfalls, common VoC mistakes, VoC best practices, VoC system design, VoC framework, long-term VoC, enterprise VoC, VoC maturity, VoC culture, customer-centric culture, feedback culture, VoC training module 6, bizgrowth academy VoC, how to build VoC system, VoC for teams, VoC organization, systematic feedback, operational excellence VoC, VoC calendar, VoC templates, implementation guide",
+    icon: GraduationCap
   }
 ];
 

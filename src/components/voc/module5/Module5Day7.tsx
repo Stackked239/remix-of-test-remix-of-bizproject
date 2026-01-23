@@ -107,7 +107,7 @@ const Module5Day7 = ({ isComplete, onToggleComplete }: Module5Day7Props) => {
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-bold text-[hsl(var(--biz-navy))] uppercase tracking-wide">Day 7</span>
-                  <span className="px-2 py-0.5 bg-[hsl(var(--biz-lime-green))]/25 text-[hsl(var(--biz-lime-green))] text-xs font-bold rounded">FINAL DAY</span>
+                  <span className="px-2 py-0.5 bg-[hsl(var(--biz-lime))]/25 text-[hsl(var(--biz-lime))] text-xs font-bold rounded">FINAL DAY</span>
                   <span className="text-sm text-muted-foreground">⏱ 15 minutes</span>
                 </div>
                 <h2 className="text-xl md:text-2xl font-bold text-foreground">Close the Loop with Customers</h2>

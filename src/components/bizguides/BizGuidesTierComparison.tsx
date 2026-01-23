@@ -1,9 +1,29 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ScheduleSessionModal from "./ScheduleSessionModal";
 
-const tiers = [
+interface TierData {
+  id: string;
+  label: string;
+  headline: string;
+  subheadline: string;
+  bestFor: string;
+  features: string[];
+  pricing: string;
+  pricingNote: string;
+  ctaText: string;
+  ctaLink: string;
+  secondaryCta: string;
+  isFeatured: boolean;
+  guarantee?: string;
+  timeline?: string;
+  isModal?: boolean;
+}
+
+const tiers: TierData[] = [
   {
     id: "tier1",
     label: "TIER 1",
@@ -43,9 +63,10 @@ const tiers = [
     pricingNote: "per hour",
     guarantee: "If your first session doesn't provide clear value, we'll refund 100%.",
     ctaText: "Schedule Your First Session",
-    ctaLink: "/contact",
+    ctaLink: "",
     secondaryCta: "See how it works →",
-    isFeatured: true
+    isFeatured: true,
+    isModal: true
   },
   {
     id: "tier3",
@@ -73,6 +94,8 @@ const tiers = [
 ];
 
 const BizGuidesTierComparison = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const scrollToFaq = () => {
     const element = document.getElementById('faq-section');
     if (element) {
@@ -80,136 +103,165 @@ const BizGuidesTierComparison = () => {
     }
   };
 
+  const handleTierCta = (tier: TierData) => {
+    if (tier.isModal) {
+      setIsModalOpen(true);
+    }
+  };
+
   return (
-    <section id="tier-comparison" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Three Ways to Get Expert Guidance
-          </h2>
-          <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start with insights. Move to coaching. Scale with custom solutions. Your timeline, your budget.
-          </p>
-        </motion.div>
+    <>
+      <section id="tier-comparison" className="py-24 bg-muted/30">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
+              Three Ways to Get Expert Guidance
+            </h2>
+            <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+              Start with insights. Move to coaching. Scale with custom solutions. Your timeline, your budget.
+            </p>
+          </motion.div>
 
-        {/* Tier Cards Grid */}
-        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
-          {tiers.map((tier, index) => (
-            <motion.div
-              key={tier.id}
-              className={`relative bg-background rounded-2xl p-8 flex flex-col ${
-                tier.isFeatured 
-                  ? 'border-2 border-[hsl(var(--biz-teal))] shadow-xl shadow-[hsl(var(--biz-teal))]/10 lg:scale-[1.02] z-10' 
-                  : 'border border-border/50 shadow-md'
-              }`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              {/* Featured Badge */}
-              {tier.isFeatured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(var(--biz-teal))] text-background font-montserrat font-semibold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide flex items-center gap-1.5">
-                  <Sparkles className="w-3 h-3" />
-                  Most Popular
-                </div>
-              )}
-
-              {/* Header */}
-              <div className="mb-5">
-                <span className="font-montserrat text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                  {tier.label}
-                </span>
-                <h3 className="font-montserrat font-bold text-xl md:text-2xl text-foreground mt-2 mb-2">
-                  {tier.headline}
-                </h3>
-                <p className="font-open-sans text-[15px] text-muted-foreground leading-snug">
-                  {tier.subheadline}
-                </p>
-              </div>
-
-              {/* Best For */}
-              <div className="bg-[hsl(var(--biz-teal))]/5 rounded-lg p-4 mb-5">
-                <span className="font-montserrat text-xs font-semibold text-[hsl(var(--biz-teal))] uppercase tracking-wide">
-                  Best For
-                </span>
-                <p className="font-open-sans text-sm text-muted-foreground mt-1.5 leading-relaxed">
-                  {tier.bestFor}
-                </p>
-              </div>
-
-              {/* Features Checklist */}
-              <ul className="space-y-3 mb-6 flex-grow">
-                {tier.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-[hsl(var(--biz-teal))] flex-shrink-0 mt-0.5" />
-                    <span className="font-open-sans text-sm text-muted-foreground leading-snug">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Pricing */}
-              <div className="text-center py-5 border-t border-border/50 mt-auto">
-                <span className="font-montserrat font-bold text-3xl text-foreground">
-                  {tier.pricing}
-                </span>
-                <p className="font-open-sans text-sm text-muted-foreground mt-1">
-                  {tier.pricingNote}
-                </p>
-                {tier.timeline && (
-                  <p className="font-open-sans text-xs text-muted-foreground mt-2">
-                    {tier.timeline}
-                  </p>
+          {/* Tier Cards Grid */}
+          <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
+            {tiers.map((tier, index) => (
+              <motion.div
+                key={tier.id}
+                className={`relative bg-background rounded-2xl p-8 flex flex-col ${
+                  tier.isFeatured 
+                    ? 'border-2 border-[hsl(var(--biz-teal))] shadow-xl shadow-[hsl(var(--biz-teal))]/10 lg:scale-[1.02] z-10' 
+                    : 'border border-border/50 shadow-md'
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Featured Badge */}
+                {tier.isFeatured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(var(--biz-teal))] text-background font-montserrat font-semibold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide flex items-center gap-1.5">
+                    <Sparkles className="w-3 h-3" />
+                    Most Popular
+                  </div>
                 )}
-              </div>
 
-              {/* Guarantee (Tier 2 only) */}
-              {tier.guarantee && (
-                <div className="bg-[hsl(var(--biz-teal))]/10 rounded-lg p-3 text-center mb-4">
-                  <p className="font-open-sans text-sm text-[hsl(var(--biz-teal))] font-medium">
-                    💰 {tier.guarantee}
+                {/* Header */}
+                <div className="mb-5">
+                  <span className="font-montserrat text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                    {tier.label}
+                  </span>
+                  <h3 className="font-montserrat font-bold text-xl md:text-2xl text-foreground mt-2 mb-2">
+                    {tier.headline}
+                  </h3>
+                  <p className="font-open-sans text-[15px] text-muted-foreground leading-snug">
+                    {tier.subheadline}
                   </p>
                 </div>
-              )}
 
-              {/* CTAs */}
-              <div className="space-y-3">
-                <Button 
-                  asChild
-                  size="lg"
-                  className={`w-full font-montserrat font-semibold ${
-                    tier.isFeatured 
-                      ? 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background shadow-lg shadow-[hsl(var(--biz-teal))]/20' 
-                      : 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background'
-                  }`}
-                >
-                  <Link to={tier.ctaLink}>
-                    {tier.ctaText}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-                
-                <button 
-                  onClick={scrollToFaq}
-                  className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors"
-                >
-                  {tier.secondaryCta}
-                </button>
-              </div>
-            </motion.div>
-          ))}
+                {/* Best For */}
+                <div className="bg-[hsl(var(--biz-teal))]/5 rounded-lg p-4 mb-5">
+                  <span className="font-montserrat text-xs font-semibold text-[hsl(var(--biz-teal))] uppercase tracking-wide">
+                    Best For
+                  </span>
+                  <p className="font-open-sans text-sm text-muted-foreground mt-1.5 leading-relaxed">
+                    {tier.bestFor}
+                  </p>
+                </div>
+
+                {/* Features Checklist */}
+                <ul className="space-y-3 mb-6 flex-grow">
+                  {tier.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[hsl(var(--biz-teal))] flex-shrink-0 mt-0.5" />
+                      <span className="font-open-sans text-sm text-muted-foreground leading-snug">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Pricing */}
+                <div className="text-center py-5 border-t border-border/50 mt-auto">
+                  <span className="font-montserrat font-bold text-3xl text-foreground">
+                    {tier.pricing}
+                  </span>
+                  <p className="font-open-sans text-sm text-muted-foreground mt-1">
+                    {tier.pricingNote}
+                  </p>
+                  {tier.timeline && (
+                    <p className="font-open-sans text-xs text-muted-foreground mt-2">
+                      {tier.timeline}
+                    </p>
+                  )}
+                </div>
+
+                {/* Guarantee (Tier 2 only) */}
+                {tier.guarantee && (
+                  <div className="bg-[hsl(var(--biz-teal))]/10 rounded-lg p-3 text-center mb-4">
+                    <p className="font-open-sans text-sm text-[hsl(var(--biz-teal))] font-medium">
+                      💰 {tier.guarantee}
+                    </p>
+                  </div>
+                )}
+
+                {/* CTAs */}
+                <div className="space-y-3">
+                  {tier.isModal ? (
+                    <Button 
+                      size="lg"
+                      onClick={() => handleTierCta(tier)}
+                      className={`w-full font-montserrat font-semibold ${
+                        tier.isFeatured 
+                          ? 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background shadow-lg shadow-[hsl(var(--biz-teal))]/20' 
+                          : 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background'
+                      }`}
+                    >
+                      {tier.ctaText}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  ) : (
+                    <Button 
+                      asChild
+                      size="lg"
+                      className={`w-full font-montserrat font-semibold ${
+                        tier.isFeatured 
+                          ? 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background shadow-lg shadow-[hsl(var(--biz-teal))]/20' 
+                          : 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background'
+                      }`}
+                    >
+                      <Link to={tier.ctaLink}>
+                        {tier.ctaText}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  )}
+                  
+                  <button 
+                    onClick={scrollToFaq}
+                    className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors"
+                  >
+                    {tier.secondaryCta}
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Schedule Session Modal */}
+      <ScheduleSessionModal 
+        open={isModalOpen} 
+        onOpenChange={setIsModalOpen} 
+      />
+    </>
   );
 };
 

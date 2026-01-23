@@ -73,14 +73,14 @@ const Module3Hero = ({ onView }: Module3HeroProps) => {
           The 4 metrics that reveal what customers really think — and which one to start with for YOUR business
         </motion.p>
 
-        {/* Learning Objectives Card - Glassmorphism */}
+        {/* Learning Objectives Card - White Background */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-white/15 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/30 shadow-xl"
+          className="bg-background rounded-xl p-6 md:p-8 border border-border shadow-xl"
         >
-          <h3 className="text-lg font-semibold text-white mb-5">
+          <h3 className="text-lg font-semibold text-[hsl(var(--biz-navy))] mb-5">
             After this module, you'll be able to:
           </h3>
           <ul className="space-y-4">
@@ -92,10 +92,10 @@ const Module3Hero = ({ onView }: Module3HeroProps) => {
                 transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                 className="flex items-start gap-3"
               >
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[hsl(var(--biz-gold))]/20 flex items-center justify-center border border-[hsl(var(--biz-gold))]/30">
-                  <objective.icon className="h-4 w-4 text-[hsl(var(--biz-gold))]" />
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center border border-[hsl(var(--biz-blue))]/20">
+                  <objective.icon className="h-4 w-4 text-[hsl(var(--biz-blue))]" />
                 </div>
-                <span className="text-white pt-1">{objective.text}</span>
+                <span className="text-foreground pt-1">{objective.text}</span>
               </motion.li>
             ))}
           </ul>

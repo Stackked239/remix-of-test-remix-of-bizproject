@@ -60,7 +60,7 @@ const Module6Navigation = ({ isComplete, onMarkComplete }: Module6NavigationProp
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link 
               to={VOC_URLS.modules[5].url}
-              className="flex items-center gap-4 p-4 rounded-lg border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
+              className="flex items-center gap-4 p-4 rounded-lg bg-background border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
             >
               <ArrowLeft className="w-5 h-5 text-[hsl(var(--biz-blue))]" />
               <div className="text-left">
@@ -71,7 +71,7 @@ const Module6Navigation = ({ isComplete, onMarkComplete }: Module6NavigationProp
 
             <Link 
               to={VOC_URLS.modules[7].url}
-              className="flex items-center gap-4 p-4 rounded-lg border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors"
+              className="flex items-center gap-4 p-4 rounded-lg bg-background border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors"
             >
               <div className="text-left flex-1">
                 <span className="text-xs text-[hsl(var(--biz-green))] uppercase tracking-wide font-medium">

@@ -114,7 +114,7 @@ const Module5Navigation = ({ isComplete }: Module5NavigationProps) => {
           <div className="flex flex-col md:flex-row items-stretch gap-4">
             <Link 
               to={VOC_URLS.modules[4].url}
-              className="flex-1 flex items-center gap-3 p-4 rounded-lg border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors group"
+              className="flex-1 flex items-center gap-3 p-4 rounded-lg bg-background border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors group"
             >
               <ArrowLeft className="w-5 h-5 text-[hsl(var(--biz-blue))]" />
               <div>
@@ -126,7 +126,7 @@ const Module5Navigation = ({ isComplete }: Module5NavigationProps) => {
             </Link>
             <Link 
               to={VOC_URLS.modules[6].url}
-              className="flex-1 flex items-center justify-end gap-3 p-4 rounded-lg border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors group text-right"
+              className="flex-1 flex items-center justify-end gap-3 p-4 rounded-lg bg-background border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors group text-right"
             >
               <div>
                 <span className="text-xs text-muted-foreground">Next</span>

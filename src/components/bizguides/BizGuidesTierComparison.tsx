@@ -88,7 +88,7 @@ const tiers: TierData[] = [
     timeline: "Most projects: 6–12 weeks | Investment range: $3K–$25K+",
     ctaText: "Request a Custom Solution",
     ctaLink: "/bizguides/request-custom",
-    secondaryCta: "Schedule a discovery call →",
+    secondaryCta: "Submit a request →",
     isFeatured: false
   }
 ];

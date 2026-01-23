@@ -103,7 +103,16 @@ const CustomRequestEngagementTypes = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {engagementCards.map((card) => (
+          {engagementCards.map((card, index) => {
+            // Tier-specific icon colors: Navy (A), Teal (B featured), Green (C)
+            const iconBgColors = [
+              "bg-[hsl(var(--biz-navy))]",
+              "bg-[hsl(var(--biz-teal))]",
+              "bg-[hsl(var(--biz-green))]",
+            ];
+            const iconBg = iconBgColors[index] || "bg-[hsl(var(--biz-navy))]";
+            
+            return (
             <div
               key={card.id}
               onClick={() => handleCardClick(card.id)}
@@ -128,14 +137,8 @@ const CustomRequestEngagementTypes = () => {
               )}
 
               {/* Icon */}
-              <div className={`
-                w-14 h-14 rounded-xl flex items-center justify-center mb-5
-                ${card.featured 
-                  ? "bg-[hsl(var(--biz-teal))]" 
-                  : "bg-[hsl(var(--biz-navy))]/10"
-                }
-              `}>
-                <card.icon className={`w-7 h-7 ${card.featured ? "text-white" : "text-[hsl(var(--biz-navy))]"}`} />
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${iconBg}`}>
+                <card.icon className="w-7 h-7 text-white" />
               </div>
 
               {/* Title */}
@@ -195,7 +198,8 @@ const CustomRequestEngagementTypes = () => {
                 </div>
               )}
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Helper Text */}

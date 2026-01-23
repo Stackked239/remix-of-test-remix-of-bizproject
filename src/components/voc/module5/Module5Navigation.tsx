@@ -110,31 +110,33 @@ const Module5Navigation = ({ isComplete }: Module5NavigationProps) => {
         </motion.div>
 
         {/* Previous/Next Navigation */}
-        <div className="flex flex-col md:flex-row items-stretch gap-4 mb-8">
-          <Link 
-            to={VOC_URLS.modules[4].url}
-            className="flex-1 p-5 border rounded-xl hover:border-[hsl(var(--biz-navy))] hover:bg-muted/30 transition-colors group"
-          >
-            <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
-              <ArrowLeft className="w-4 h-4" />
-              Previous
-            </div>
-            <span className="font-medium text-foreground group-hover:text-[hsl(var(--biz-navy))] transition-colors">
-              Module 4: Closing the Loop
-            </span>
-          </Link>
-          <Link 
-            to={VOC_URLS.modules[6].url}
-            className="flex-1 p-5 border rounded-xl hover:border-[hsl(var(--biz-green))] hover:bg-muted/30 transition-colors group text-right"
-          >
-            <div className="flex items-center justify-end gap-2 text-muted-foreground text-sm mb-1">
-              Next
-              <ArrowRight className="w-4 h-4" />
-            </div>
-            <span className="font-medium text-foreground group-hover:text-[hsl(var(--biz-green))] transition-colors">
-              Module 6: 90-Day System
-            </span>
-          </Link>
+        <div className="bg-gradient-to-r from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-blue))]/5 to-[hsl(var(--biz-navy))]/5 rounded-xl border border-[hsl(var(--biz-blue))]/20 p-4 shadow-sm mb-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-4">
+            <Link 
+              to={VOC_URLS.modules[4].url}
+              className="flex-1 flex items-center gap-3 p-4 rounded-lg border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors group"
+            >
+              <ArrowLeft className="w-5 h-5 text-[hsl(var(--biz-blue))]" />
+              <div>
+                <span className="text-xs text-muted-foreground">Previous</span>
+                <p className="font-medium text-[hsl(var(--biz-blue))]">
+                  Module 4: Closing the Loop
+                </p>
+              </div>
+            </Link>
+            <Link 
+              to={VOC_URLS.modules[6].url}
+              className="flex-1 flex items-center justify-end gap-3 p-4 rounded-lg border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors group text-right"
+            >
+              <div>
+                <span className="text-xs text-muted-foreground">Next</span>
+                <p className="font-medium text-[hsl(var(--biz-green))]">
+                  Module 6: 90-Day System
+                </p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+            </Link>
+          </div>
         </div>
 
         {/* All Modules */}

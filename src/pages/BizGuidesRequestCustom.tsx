@@ -39,20 +39,20 @@ const BizGuidesRequestCustom = () => {
       {/* Section 1: Hero + Value Positioning */}
       <CustomRequestHero />
       
-      {/* Section 2: Three Engagement Types */}
+      {/* Section 2: Request Form (Centerpiece) */}
+      <CustomRequestForm />
+      
+      {/* Section 3: Three Engagement Types */}
       <CustomRequestEngagementTypes />
       
-      {/* Section 3: What's Included (6-Step Process) */}
+      {/* Section 4: What's Included (6-Step Process) */}
       <CustomRequestProcess />
       
-      {/* Section 4: Investment & Outcomes */}
+      {/* Section 5: Investment & Outcomes */}
       <CustomRequestInvestment />
       
-      {/* Section 5: Success Stories */}
+      {/* Section 6: Success Stories */}
       <CustomRequestCaseStudies />
-      
-      {/* Section 6: Request Form (Centerpiece) */}
-      <CustomRequestForm />
       
       {/* Section 7: Trust Signals & Reassurance */}
       <CustomRequestTrustSignals />

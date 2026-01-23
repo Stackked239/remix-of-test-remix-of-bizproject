@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, Check, ArrowRight } from "lucide-react";
+import { Users, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { VOC_URLS } from "@/config/vocUrls";
@@ -62,7 +62,7 @@ const Module4CoachingCTA = ({ onView }: Module4CoachingCTAProps) => {
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                <MessageSquare className="h-6 w-6 text-white" />
+                <Users className="h-6 w-6 text-white" />
               </div>
             </div>
 

@@ -22,7 +22,7 @@ const Module5Timeline = ({ daysCompleted, currentActiveDay, onDayClick }: Module
   const isDayComplete = (day: number) => daysCompleted.find(d => d.dayNumber === day)?.completed || false;
 
   return (
-    <section className="py-8 bg-background border-b sticky top-[120px] z-30">
+    <section className="py-4 bg-background border-b sticky top-[108px] z-30">
       <div className="max-w-7xl mx-auto px-4">
         {/* Mobile: Horizontal Scrollable */}
         <div className="overflow-x-auto pb-2 -mx-4 px-4 lg:hidden">

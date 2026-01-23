@@ -54,11 +54,6 @@ const SharksInTheWater = () => {
         shareDescription="40-60% of small businesses never reopen after a crisis. Learn the survival framework: stay calm, assess fast, act strategically."
       />
 
-      <SocialShareButtons 
-        title="Sharks in the Water: When Your Business Is Under Attack, Stay Calm But Act Fast"
-        description="40-60% of small businesses never reopen after a crisis. Learn the survival framework: stay calm, assess fast, act strategically."
-      />
-
       {/* Article Content */}
       <article className="py-16">
         <div className="container mx-auto px-6">

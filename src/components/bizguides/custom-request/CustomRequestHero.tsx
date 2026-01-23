@@ -70,18 +70,12 @@ const CustomRequestHero = () => {
                   "text-[hsl(var(--biz-green))]",
                   "text-[hsl(var(--biz-lime))]",
                 ];
-                const bgColors = [
-                  "bg-[hsl(var(--biz-teal))]/20",
-                  "bg-[hsl(var(--biz-gold))]/20",
-                  "bg-[hsl(var(--biz-green))]/20",
-                  "bg-[hsl(var(--biz-lime))]/20",
-                ];
                 return (
                   <div 
                     key={index}
                     className="flex items-center gap-3 text-left"
                   >
-                    <div className={`flex-shrink-0 w-10 h-10 ${bgColors[index]} rounded-lg flex items-center justify-center`}>
+                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
                       <benefit.icon className={`w-5 h-5 ${iconColors[index]}`} />
                     </div>
                     <span className="text-sm md:text-base text-white/90 font-medium">
@@ -148,13 +142,13 @@ const CustomRequestHero = () => {
 
                 {/* Stats */}
                 <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
-                  <div className="text-center">
+                  <div className="text-center bg-white rounded-lg py-3 px-2 shadow-sm">
                     <div className="text-2xl font-bold text-[hsl(var(--biz-teal))]">20-30%</div>
-                    <div className="text-xs text-white/60">Efficiency Gains</div>
+                    <div className="text-xs text-[hsl(var(--biz-navy))]/70">Efficiency Gains</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-white rounded-lg py-3 px-2 shadow-sm">
                     <div className="text-2xl font-bold text-[hsl(var(--biz-gold))]">90-180</div>
-                    <div className="text-xs text-white/60">Day Partnerships</div>
+                    <div className="text-xs text-[hsl(var(--biz-navy))]/70">Day Partnerships</div>
                   </div>
                 </div>
               </div>

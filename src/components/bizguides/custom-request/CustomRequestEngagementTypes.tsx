@@ -104,13 +104,13 @@ const CustomRequestEngagementTypes = () => {
         {/* Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {engagementCards.map((card, index) => {
-            // Tier-specific icon colors: Navy (A), Teal (B featured), Green (C)
-            const iconBgColors = [
-              "bg-[hsl(var(--biz-navy))]",
-              "bg-[hsl(var(--biz-teal))]",
-              "bg-[hsl(var(--biz-green))]",
+            // Tier-specific colors: Navy (A), Teal (B featured), Green (C)
+            const tierColors = [
+              { bg: "bg-[hsl(var(--biz-navy))]", border: "hover:border-[hsl(var(--biz-navy))]", activeBorder: "border-[hsl(var(--biz-navy))]", activeBg: "bg-[hsl(var(--biz-navy))]/[0.04]" },
+              { bg: "bg-[hsl(var(--biz-teal))]", border: "hover:border-[hsl(var(--biz-teal))]", activeBorder: "border-[hsl(var(--biz-teal))]", activeBg: "bg-[hsl(var(--biz-teal))]/[0.04]" },
+              { bg: "bg-[hsl(var(--biz-green))]", border: "hover:border-[hsl(var(--biz-green))]", activeBorder: "border-[hsl(var(--biz-green))]", activeBg: "bg-[hsl(var(--biz-green))]/[0.04]" },
             ];
-            const iconBg = iconBgColors[index] || "bg-[hsl(var(--biz-navy))]";
+            const tierColor = tierColors[index] || tierColors[0];
             
             return (
             <div
@@ -118,13 +118,13 @@ const CustomRequestEngagementTypes = () => {
               onClick={() => handleCardClick(card.id)}
               className={`
                 relative bg-card rounded-xl p-6 cursor-pointer transition-all duration-300
-                border-2 hover:shadow-lg
+                border-2 hover:shadow-lg ${tierColor.border}
                 ${card.featured 
-                  ? "border-[hsl(var(--biz-teal))] shadow-[var(--shadow-hub-teal)]" 
-                  : "border-border hover:border-[hsl(var(--biz-teal))]"
+                  ? `${tierColor.activeBorder} shadow-[var(--shadow-hub-teal)]` 
+                  : "border-border"
                 }
                 ${selectedType === card.id 
-                  ? "border-[hsl(var(--biz-teal))] bg-[hsl(var(--biz-teal))]/[0.04] shadow-lg transform -translate-y-1" 
+                  ? `${tierColor.activeBorder} ${tierColor.activeBg} shadow-lg transform -translate-y-1` 
                   : ""
                 }
               `}
@@ -137,7 +137,7 @@ const CustomRequestEngagementTypes = () => {
               )}
 
               {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${iconBg}`}>
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${tierColor.bg}`}>
                 <card.icon className="w-7 h-7 text-white" />
               </div>
 

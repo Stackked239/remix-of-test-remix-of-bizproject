@@ -550,6 +550,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/closing-the-loop",
     keywords: "closing the loop, VoC module 4, customer feedback response, feedback loop, closed-loop process, customer recovery, detractor outreach, feedback acknowledgment, customer loyalty, VoC follow-up, feedback response templates, email templates, customer response, loop closure, feedback system, VoC best practices, customer advocacy, promoter conversion, feedback management, response time, 48 hour response, customer retention, feedback acknowledgment email, detractor recovery, you asked we delivered, honest no response, customer communication, feedback ownership, VoC training module 4, bizgrowth academy VoC, how to respond to feedback, customer complaint response, negative review response, turning complaints into loyalty",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 5: Your 7-Day Quick Start - Voice of Customer Curriculum",
+    excerpt: "Transform from learner to implementer with a realistic 7-day VoC action plan. Collect real feedback, find patterns, and make ONE visible improvement this week with interactive day-by-day progress tracking.",
+    url: "/bizgrowth/voc/7-day-quickstart",
+    keywords: "7 day VoC plan, VoC quick start, customer feedback implementation, VoC action plan, survey templates, feedback tracker, closing the loop, customer insights implementation, VoC module 5, week one VoC, first VoC survey, VoC launch, start VoC program, implement customer feedback, collect feedback, analyze feedback, act on feedback, feedback patterns, customer themes, quick win, VoC momentum, day by day plan, VoC checklist, VoC tracker, bizgrowth academy VoC, how to start VoC, VoC for beginners, practical VoC, VoC implementation guide, 7 day challenge, weekly VoC plan, VoC kickoff, feedback collection day, insight analysis, customer insight action, first improvement",
+    icon: GraduationCap
   }
 ];
 

@@ -93,7 +93,12 @@ const SevenDayQuickstart = () => {
   };
 
   const scrollToDay = (dayNumber: number) => {
-    dayRefs.current[dayNumber - 1]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const element = dayRefs.current[dayNumber - 1];
+    if (element) {
+      // Account for sticky progress bar (~48px) + sticky timeline (~140px) + buffer
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 220;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
   };
 
   const isDayComplete = (dayNumber: number) => {

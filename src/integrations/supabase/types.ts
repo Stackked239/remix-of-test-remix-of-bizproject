@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      bizguides_inquiries: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          industry: string
+          primary_challenge: string
+          referral_source: string | null
+          revenue_stage: string
+          session_length: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          industry: string
+          primary_challenge: string
+          referral_source?: string | null
+          revenue_stage: string
+          session_length: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          industry?: string
+          primary_challenge?: string
+          referral_source?: string | null
+          revenue_stage?: string
+          session_length?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       email_subscribers: {
         Row: {
           email: string

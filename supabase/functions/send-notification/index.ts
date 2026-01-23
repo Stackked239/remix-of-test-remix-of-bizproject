@@ -14,7 +14,7 @@ const corsHeaders = {
 };
 
 interface EmailNotificationRequest {
-  type: "popup_subscriber" | "contact_form" | "checklist_download";
+  type: "popup_subscriber" | "contact_form" | "checklist_download" | "bizguides_inquiry";
   email: string;
   name?: string;
   firstName?: string;
@@ -26,6 +26,14 @@ interface EmailNotificationRequest {
   hubColor?: string;
   checklist?: string;
   source?: string;
+  // BizGuides inquiry fields
+  fullName?: string;
+  companyName?: string;
+  industry?: string;
+  revenueStage?: string;
+  primaryChallenge?: string;
+  sessionLength?: string;
+  referralSource?: string;
 }
 
 // HTML escaping function to prevent injection attacks
@@ -46,7 +54,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const payload = await req.json();
     const emailSchema = z.object({
-      type: z.enum(["popup_subscriber", "contact_form", "checklist_download"]),
+      type: z.enum(["popup_subscriber", "contact_form", "checklist_download", "bizguides_inquiry"]),
       email: z.string().trim().email().max(255, "Email must be less than 255 characters"),
       name: z.string().trim().max(100, "Name must be less than 100 characters").optional(),
       firstName: z.string().trim().min(1, "First name is required").max(100, "First name must be less than 100 characters").optional(),
@@ -58,6 +66,14 @@ const handler = async (req: Request): Promise<Response> => {
       hubColor: z.string().optional(),
       checklist: z.string().optional(),
       source: z.string().optional(),
+      // BizGuides inquiry fields
+      fullName: z.string().trim().min(2).max(50).optional(),
+      companyName: z.string().trim().max(100).optional(),
+      industry: z.string().optional(),
+      revenueStage: z.string().optional(),
+      primaryChallenge: z.string().trim().min(20).max(500).optional(),
+      sessionLength: z.string().optional(),
+      referralSource: z.string().optional(),
     });
     const data = emailSchema.parse(payload);
     console.log("Received notification request:", data.type);
@@ -350,6 +366,179 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Business:</strong> ${escapeHtml(businessName || "Not provided")}</p>
         <p><strong>Source Page:</strong> ${escapeHtml(sourcePage)}</p>
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
+      `;
+    } else if (data.type === "bizguides_inquiry") {
+      // Handle BizGuides coaching session requests (Tier 2)
+      const fullName = data.fullName || "Unknown";
+      const companyName = data.companyName || "Not provided";
+      const industry = data.industry || "Not specified";
+      const revenueStage = data.revenueStage || "Not specified";
+      const primaryChallenge = data.primaryChallenge || "Not provided";
+      const sessionLength = data.sessionLength || "60 min";
+      const referralSource = data.referralSource || "Not specified";
+
+      console.log(`Processing BizGuides inquiry from ${data.email}`);
+
+      // Store inquiry in database
+      const { error: dbError } = await supabase
+        .from("bizguides_inquiries")
+        .insert({
+          full_name: fullName,
+          email: data.email,
+          company_name: companyName !== "Not provided" ? companyName : null,
+          industry: industry,
+          revenue_stage: revenueStage,
+          primary_challenge: primaryChallenge,
+          session_length: sessionLength,
+          referral_source: referralSource !== "Not specified" ? referralSource : null,
+          status: "new"
+        });
+
+      if (dbError) {
+        console.error("Database insert error:", dbError);
+        throw new Error(`Failed to save inquiry: ${dbError.message}`);
+      }
+      console.log("BizGuides inquiry saved to database");
+
+      // Send confirmation email to submitter
+      const confirmationEmailHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 20px;">
+            <tr>
+              <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                  <!-- Header -->
+                  <tr>
+                    <td style="background: linear-gradient(135deg, #008080 0%, #006666 100%); padding: 40px 40px 30px; text-align: center;">
+                      <h1 style="color: #ffffff; margin: 0; font-size: 26px; font-weight: 700;">Your Coaching Session Request Is Received!</h1>
+                      <p style="color: #ffffff; opacity: 0.9; margin: 10px 0 0; font-size: 16px;">Where Insights Meet Execution</p>
+                    </td>
+                  </tr>
+                  <!-- Body -->
+                  <tr>
+                    <td style="padding: 40px;">
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        Hi ${escapeHtml(fullName.split(' ')[0])},
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        Thank you for requesting an expert coaching session with BizGuides! 🎯
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 30px;">
+                        <strong>Here's what happens next:</strong>
+                      </p>
+                      
+                      <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #008080;">1. Expert Matching (Within 48 hours)</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">We'll match you with 2-3 coaches who specialize in your industry and growth stage.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #008080;">2. Session Scheduling (Within 5 business days)</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">Choose the coach that fits best and schedule your ${escapeHtml(sessionLength)} session.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #008080;">3. Your First Session</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">Get personalized guidance + an action plan. 100% satisfaction guaranteed.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <div style="background-color: #008080; color: #ffffff; border-radius: 8px; padding: 16px; margin-bottom: 30px; text-align: center;">
+                        <p style="margin: 0; font-size: 14px;">💰 <strong>Money-Back Guarantee:</strong> If your first session doesn't provide clear value, we'll refund 100%.</p>
+                      </div>
+
+                      <p style="color: #666666; font-size: 14px; line-height: 1.6; margin: 0;">
+                        Questions before your session? Reply to this email or reach out at <a href="mailto:support@bizhealth.ai" style="color: #008080; font-weight: 600;">support@bizhealth.ai</a>
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- Footer -->
+                  <tr>
+                    <td style="background-color: #f8f9fa; padding: 30px 40px; text-align: center; border-top: 1px solid #e9ecef;">
+                      <p style="color: #666666; font-size: 14px; margin: 0 0 10px;">
+                        <strong>BizGuides by BizHealth.ai</strong>
+                      </p>
+                      <p style="color: #999999; font-size: 12px; margin: 0;">
+                        <a href="https://bizhealth.ai/bizguides" style="color: #008080;">Learn More</a> | 
+                        <a href="https://bizhealth.ai/privacy" style="color: #008080;">Privacy Policy</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
+      `;
+
+      // Send confirmation email
+      const { error: confirmError } = await resend.emails.send({
+        from: fromEmail,
+        to: [data.email],
+        subject: "🎯 Your BizGuides Session Request Is Confirmed!",
+        html: confirmationEmailHtml,
+      });
+
+      if (confirmError) {
+        console.error("Failed to send confirmation email:", confirmError);
+      } else {
+        console.log("Confirmation email sent to:", data.email);
+      }
+
+      // Team notification email
+      emailSubject = "🎯 New BizGuides Coaching Request";
+      emailHtml = `
+        <h2 style="color: #008080;">New BizGuides Coaching Session Request</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Name</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(fullName)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Email</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Company</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(companyName)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Industry</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(industry)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Revenue Stage</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(revenueStage)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Session Length</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(sessionLength)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Referral Source</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(referralSource)}</td>
+          </tr>
+        </table>
+        <h3 style="color: #333; margin-top: 20px;">Primary Challenge:</h3>
+        <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #008080; margin-bottom: 20px;">
+          <p style="margin: 0; color: #333;">${escapeHtml(primaryChallenge)}</p>
+        </div>
+        <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+        <p style="margin-top: 20px;"><em>⏰ Next Steps: Match with expert within 48 hours and schedule session within 5 business days.</em></p>
       `;
     } else if (data.type === "contact_form") {
       emailSubject = `New Contact Form: ${escapeHtml(data.subject || "General Inquiry")}`;

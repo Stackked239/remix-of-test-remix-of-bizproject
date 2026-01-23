@@ -11,8 +11,8 @@ interface InvestmentTier {
 
 const investmentTiers: InvestmentTier[] = [
   {
-    tier: "Tier A: Onsite Support",
-    investment: "$3,000–$8,000",
+    tier: "Tier A: Ongoing Support",
+    investment: "$2,000–$5,000+",
     duration: "30–90 days",
     resources: "Single advisor + limited support",
     outcomes: [
@@ -24,7 +24,7 @@ const investmentTiers: InvestmentTier[] = [
   },
   {
     tier: "Tier B: Strategic Consulting",
-    investment: "$8,000–$18,000",
+    investment: "$7,000–$15,000+",
     duration: "90–180 days",
     resources: "Lead advisor + specialized SME team",
     outcomes: [

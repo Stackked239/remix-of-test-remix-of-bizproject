@@ -105,7 +105,7 @@ const CustomRequestProcess = () => {
           {processSteps.map((step) => {
             const isEngagementSpecific = step.step >= 3;
             const badgeColor = isEngagementSpecific 
-              ? "bg-[hsl(var(--biz-gold))]" 
+              ? "bg-[hsl(var(--biz-blue))]" 
               : "bg-[hsl(var(--biz-teal))]";
             
             return (
@@ -150,6 +150,18 @@ const CustomRequestProcess = () => {
             </div>
             );
           })}
+        </div>
+
+        {/* Legend */}
+        <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 bg-[hsl(var(--biz-teal))] rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
+            <span>Steps 1–2: All engagements</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 bg-[hsl(var(--biz-blue))] rounded-full flex items-center justify-center text-white text-xs font-bold">3</div>
+            <span>Steps 3–6: Strategic Consulting & Full Project Management</span>
+          </div>
         </div>
       </div>
     </section>

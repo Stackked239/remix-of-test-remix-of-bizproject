@@ -47,14 +47,19 @@ const CustomRequestFAQ = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-[hsl(var(--biz-navy))] to-background">
       <div className="container mx-auto px-5 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-[hsl(var(--biz-navy))] mb-4">
+          <div className="inline-flex items-center gap-2 bg-[hsl(var(--biz-teal))]/20 border border-[hsl(var(--biz-teal))]/30 rounded-full px-4 py-2 mb-4">
+            <span className="text-[hsl(var(--biz-teal))] text-sm font-semibold font-montserrat">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-4">
             Questions About Custom BizGuides Engagements?
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto">
             Get answers to the most common questions about working with us.
           </p>
         </div>
@@ -66,17 +71,19 @@ const CustomRequestFAQ = () => {
               key={index}
               open={openItems.includes(index)}
               onOpenChange={() => toggleItem(index)}
-              className="bg-card rounded-lg border border-[hsl(var(--biz-teal))]/10 overflow-hidden transition-all duration-300 hover:border-[hsl(var(--biz-teal))]/20"
+              className="bg-white rounded-lg border border-[hsl(var(--biz-teal))]/20 overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:border-[hsl(var(--biz-teal))]/40"
             >
-              <CollapsibleTrigger className="flex items-center justify-between w-full p-5 text-left hover:bg-muted/50 transition-colors">
-                <span className={`text-[15px] font-semibold pr-4 ${openItems.includes(index) ? "text-[hsl(var(--biz-teal))]" : "text-[hsl(var(--biz-navy))]"}`}>
+              <CollapsibleTrigger className="flex items-center justify-between w-full p-5 text-left hover:bg-[hsl(var(--biz-teal))]/5 transition-colors group">
+                <span className={`text-[15px] font-semibold pr-4 transition-colors ${openItems.includes(index) ? "text-[hsl(var(--biz-teal))]" : "text-[hsl(var(--biz-navy))] group-hover:text-[hsl(var(--biz-teal))]"}`}>
                   {faq.question}
                 </span>
-                <ChevronDown 
-                  className={`w-5 h-5 text-[hsl(var(--biz-teal))] flex-shrink-0 transition-transform duration-300 ${openItems.includes(index) ? "rotate-180" : ""}`} 
-                />
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openItems.includes(index) ? "bg-[hsl(var(--biz-teal))] rotate-180" : "bg-[hsl(var(--biz-teal))]/10 group-hover:bg-[hsl(var(--biz-teal))]/20"}`}>
+                  <ChevronDown 
+                    className={`w-4 h-4 transition-colors ${openItems.includes(index) ? "text-white" : "text-[hsl(var(--biz-teal))]"}`} 
+                  />
+                </div>
               </CollapsibleTrigger>
-              <CollapsibleContent className="bg-muted/30 border-t border-[hsl(var(--biz-teal))]/10">
+              <CollapsibleContent className="bg-[hsl(var(--biz-teal))]/5 border-t border-[hsl(var(--biz-teal))]/10">
                 <div className="p-5 text-sm text-[hsl(var(--biz-navy))] leading-relaxed">
                   {faq.answer}
                 </div>

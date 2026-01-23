@@ -63,19 +63,33 @@ const CustomRequestHero = () => {
 
             {/* Benefits Grid */}
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center gap-3 text-left"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 bg-[hsl(var(--biz-teal))]/20 rounded-lg flex items-center justify-center">
-                    <benefit.icon className="w-5 h-5 text-[hsl(var(--biz-teal))]" />
+              {benefits.map((benefit, index) => {
+                const iconColors = [
+                  "text-[hsl(var(--biz-teal))]",
+                  "text-[hsl(var(--biz-gold))]",
+                  "text-[hsl(var(--biz-green))]",
+                  "text-[hsl(var(--biz-lime))]",
+                ];
+                const bgColors = [
+                  "bg-[hsl(var(--biz-teal))]/20",
+                  "bg-[hsl(var(--biz-gold))]/20",
+                  "bg-[hsl(var(--biz-green))]/20",
+                  "bg-[hsl(var(--biz-lime))]/20",
+                ];
+                return (
+                  <div 
+                    key={index}
+                    className="flex items-center gap-3 text-left"
+                  >
+                    <div className={`flex-shrink-0 w-10 h-10 ${bgColors[index]} rounded-lg flex items-center justify-center`}>
+                      <benefit.icon className={`w-5 h-5 ${iconColors[index]}`} />
+                    </div>
+                    <span className="text-sm md:text-base text-white/90 font-medium">
+                      {benefit.text}
+                    </span>
                   </div>
-                  <span className="text-sm md:text-base text-white/90 font-medium">
-                    {benefit.text}
-                  </span>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* CTAs */}
@@ -90,7 +104,7 @@ const CustomRequestHero = () => {
               <Button
                 onClick={scrollToEngagements}
                 variant="outline"
-                className="border-2 border-white/40 text-white hover:bg-white/10 font-montserrat font-semibold px-8 py-6 text-base backdrop-blur-sm"
+                className="border-2 border-[hsl(var(--biz-teal))] text-[hsl(var(--biz-teal))] bg-white/90 hover:bg-white font-montserrat font-semibold px-8 py-6 text-base shadow-md"
               >
                 See Engagement Options
               </Button>

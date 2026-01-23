@@ -54,7 +54,7 @@ const Module3Trends = ({ onView }: Module3TrendsProps) => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-background">
+    <section ref={sectionRef} className="py-10 md:py-12 bg-background">
       <div className="max-w-4xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

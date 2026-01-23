@@ -127,15 +127,15 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card border-2 border-[hsl(var(--${stage.borderColor}))] rounded-xl p-5 transition-all ${
+                className={`bg-card border-2 border-[hsl(var(--${stage.borderColor}))]/50 rounded-xl p-5 transition-all duration-200 hover:border-[hsl(var(--${stage.borderColor}))] hover:shadow-md hover:scale-[1.01] ${
                   stage.highlight 
                     ? 'ring-2 ring-[hsl(var(--biz-green))]/20' 
                     : ''
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[hsl(var(--${stage.borderColor}))]/10`}>
-                    <stage.icon className={`h-6 w-6 text-[hsl(var(--${stage.borderColor}))]`} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[hsl(var(--biz-green))]/10">
+                    <stage.icon className="h-6 w-6 text-[hsl(var(--biz-green))]" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">

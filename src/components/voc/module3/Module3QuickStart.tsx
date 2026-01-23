@@ -264,15 +264,15 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
     },
   ];
 
-  // Define day badge colors for visual variety
+  // Alternate day badge colors between BizBlue and BizGreen
   const dayColors = [
     'bg-[hsl(var(--biz-blue))]',
     'bg-[hsl(var(--biz-green))]',
-    'bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))]',
     'bg-[hsl(var(--biz-blue))]',
     'bg-[hsl(var(--biz-green))]',
-    'bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))]',
-    'bg-gradient-to-r from-[hsl(var(--biz-green))] to-[hsl(var(--biz-blue))]',
+    'bg-[hsl(var(--biz-blue))]',
+    'bg-[hsl(var(--biz-green))]',
+    'bg-[hsl(var(--biz-blue))]',
   ];
 
   return (

@@ -3,7 +3,7 @@ import { Award, TrendingUp, Star } from "lucide-react";
 const trustBadges = [
   {
     icon: Award,
-    stat: "50+",
+    stat: "75+",
     label: "Years Combined Experience",
     description: "Across 20+ Industries",
   },
@@ -23,7 +23,7 @@ const trustBadges = [
 
 const CustomRequestTrustSignals = () => {
   return (
-    <section className="py-16 md:py-20 bg-muted/30">
+    <section className="py-8 md:py-12 bg-muted/30">
       <div className="container mx-auto px-5 md:px-8">
         {/* Trust Badges */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">

@@ -53,7 +53,7 @@ const Module4Hero = ({ onView }: Module4HeroProps) => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 px-4 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-blue))]"
+      className="py-12 md:py-16 px-4 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-blue))]"
       data-section="hero"
       data-section-number="1"
     >

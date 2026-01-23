@@ -167,6 +167,7 @@ const WhyItMatters = lazy(() => import("./pages/bizgrowth/voc/WhyItMatters"));
 const CoreComponents = lazy(() => import("./pages/bizgrowth/voc/CoreComponents"));
 const Metrics = lazy(() => import("./pages/bizgrowth/voc/Metrics"));
 const ClosingTheLoop = lazy(() => import("./pages/bizgrowth/voc/ClosingTheLoop"));
+const SevenDayQuickstart = lazy(() => import("./pages/bizgrowth/voc/SevenDayQuickstart"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -234,7 +235,7 @@ const App = () => (
               <Route path="/bizgrowth/voc/core-components" element={<CoreComponents />} />
               <Route path="/bizgrowth/voc/metrics" element={<Metrics />} />
               <Route path="/bizgrowth/voc/closing-the-loop" element={<ClosingTheLoop />} />
-              <Route path="/bizgrowth/voc/7-day-quickstart" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/7-day-quickstart" element={<SevenDayQuickstart />} />
               <Route path="/bizgrowth/voc/90-day-system" element={<VocModulePlaceholder />} />
               <Route path="/bizgrowth/voc/advanced" element={<VocModulePlaceholder />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />

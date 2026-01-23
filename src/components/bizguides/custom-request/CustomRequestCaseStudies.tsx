@@ -87,12 +87,12 @@ const CustomRequestCaseStudies = () => {
                 quoteColor: "text-[hsl(var(--biz-teal))]/30",
               },
               {
-                iconBg: "bg-[hsl(var(--biz-gold))]/10",
-                iconColor: "text-[hsl(var(--biz-gold))]",
-                borderLeft: "border-l-[hsl(var(--biz-gold))]",
-                solutionColor: "text-[hsl(var(--biz-gold))]",
-                checkColor: "text-[hsl(var(--biz-gold))]",
-                quoteColor: "text-[hsl(var(--biz-gold))]/30",
+                iconBg: "bg-[hsl(var(--biz-blue))]/10",
+                iconColor: "text-[hsl(var(--biz-blue))]",
+                borderLeft: "border-l-[hsl(var(--biz-blue))]",
+                solutionColor: "text-[hsl(var(--biz-blue))]",
+                checkColor: "text-[hsl(var(--biz-blue))]",
+                quoteColor: "text-[hsl(var(--biz-blue))]/30",
               },
               {
                 iconBg: "bg-[hsl(var(--biz-green))]/10",

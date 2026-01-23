@@ -99,10 +99,10 @@ const Module3CSAT = ({ onView }: Module3CSATProps) => {
               <div key={num} className="text-center">
                 <div className="flex justify-center mb-2">
                   {Array.from({ length: num }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-[hsl(var(--biz-gold))] fill-[hsl(var(--biz-gold))]" />
+                    <Star key={i} className="h-5 w-5 text-[hsl(var(--biz-gold))] fill-[hsl(var(--biz-gold))] stroke-muted-foreground/50" />
                   ))}
                   {Array.from({ length: 5 - num }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-muted" />
+                    <Star key={i} className="h-5 w-5 text-muted-foreground/30 stroke-muted-foreground/50" />
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground">

@@ -146,20 +146,26 @@ const Module3CES = ({ onView }: Module3CESProps) => {
           <h3 className="text-xl font-semibold text-foreground mb-4">The Scale (1-7)</h3>
           <div className="bg-card border rounded-xl p-5">
             <div className="flex justify-between items-center mb-3">
-              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                <div 
-                  key={num} 
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium ${
-                    num <= 3 
-                      ? 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400' 
-                      : num === 4 
-                        ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400'
-                        : 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'
-                  }`}
-                >
-                  {num}
-                </div>
-              ))}
+              {[1, 2, 3, 4, 5, 6, 7].map((num) => {
+                // Color gradient from red (1) to green (7)
+                const colorClasses = {
+                  1: 'bg-red-500 text-white',
+                  2: 'bg-red-400 text-white',
+                  3: 'bg-orange-400 text-white',
+                  4: 'bg-yellow-400 text-yellow-900',
+                  5: 'bg-lime-400 text-lime-900',
+                  6: 'bg-green-400 text-white',
+                  7: 'bg-green-500 text-white',
+                };
+                return (
+                  <div 
+                    key={num} 
+                    className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm ${colorClasses[num as keyof typeof colorClasses]}`}
+                  >
+                    {num}
+                  </div>
+                );
+              })}
             </div>
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>Very Difficult</span>

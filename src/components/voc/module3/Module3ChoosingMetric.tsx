@@ -65,7 +65,7 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-muted/30">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-gradient-to-br from-[hsl(var(--biz-blue))]/5 via-background to-[hsl(var(--biz-green))]/5">
       <div className="max-w-4xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-foreground mb-8"
         >
-          Which Metric Should YOU Use?
+          Which Metric Should <span className="text-[hsl(var(--biz-blue))]">YOU</span> Use?
         </motion.h2>
 
         {/* Quick Decision Guide */}
@@ -84,22 +84,22 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
           className="mb-10"
         >
           <h3 className="text-xl font-semibold text-foreground mb-4">Quick Decision Guide</h3>
-          <div className="bg-card border rounded-xl overflow-hidden">
+          <div className="bg-card border-2 border-[hsl(var(--biz-blue))]/20 rounded-xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-muted/50 border-b">
+                  <tr className="bg-gradient-to-r from-[hsl(var(--biz-blue))]/10 to-[hsl(var(--biz-green))]/10 border-b border-[hsl(var(--biz-blue))]/20">
                     <th className="text-left py-3 px-4 font-semibold text-foreground">If You Want to Know...</th>
                     <th className="text-left py-3 px-4 font-semibold text-[hsl(var(--biz-blue))]">Use This</th>
-                    <th className="text-left py-3 px-4 font-semibold text-muted-foreground">How Often</th>
+                    <th className="text-left py-3 px-4 font-semibold text-[hsl(var(--biz-green))]">How Often</th>
                   </tr>
                 </thead>
                 <tbody>
                   {decisionGuide.map((row, i) => (
-                    <tr key={i} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
-                      <td className="py-4 px-4 text-muted-foreground">{row.question}</td>
-                      <td className="py-4 px-4 font-semibold text-[hsl(var(--biz-blue))]">{row.metric}</td>
-                      <td className="py-4 px-4 text-muted-foreground">{row.frequency}</td>
+                    <tr key={i} className="border-b border-border/50 hover:bg-[hsl(var(--biz-blue))]/5 transition-colors">
+                      <td className="py-4 px-4 text-foreground">{row.question}</td>
+                      <td className="py-4 px-4 font-bold text-[hsl(var(--biz-blue))]">{row.metric}</td>
+                      <td className="py-4 px-4 text-[hsl(var(--biz-green))] font-medium">{row.frequency}</td>
                     </tr>
                   ))}
                 </tbody>

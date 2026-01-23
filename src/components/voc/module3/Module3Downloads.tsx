@@ -14,6 +14,8 @@ const Module3Downloads = () => {
   const assets = [
     {
       icon: FileText,
+      iconColor: 'text-[hsl(var(--biz-blue))]',
+      bgColor: 'bg-[hsl(var(--biz-blue))]/10',
       title: "Survey Question Library",
       description: "12 pre-written questions organized by metric type (NPS, CSAT, CES)",
       meta: "PDF • 1.2 MB",
@@ -22,6 +24,8 @@ const Module3Downloads = () => {
     },
     {
       icon: Table,
+      iconColor: 'text-[hsl(var(--biz-green))]',
+      bgColor: 'bg-[hsl(var(--biz-green))]/10',
       title: "Feedback Tracker Spreadsheet",
       description: "Ready-to-use Google Sheet with columns for tracking feedback across channels. Auto-calculates sentiment breakdown.",
       meta: "Google Sheets • Editable",
@@ -31,6 +35,8 @@ const Module3Downloads = () => {
     },
     {
       icon: Calculator,
+      iconColor: 'text-[hsl(var(--biz-gold))]',
+      bgColor: 'bg-[hsl(var(--biz-gold))]/10',
       title: "NPS Calculator Spreadsheet",
       description: "Drop in your response data. Auto-calculates NPS, segments, and compares to benchmarks.",
       meta: "Excel/Sheets • 500 KB",
@@ -39,6 +45,8 @@ const Module3Downloads = () => {
     },
     {
       icon: Mail,
+      iconColor: 'text-[hsl(var(--biz-blue))]',
+      bgColor: 'bg-[hsl(var(--biz-blue))]/10',
       title: "Close-the-Loop Email Templates",
       description: "5 email templates for responding to feedback: positive, negative, feature request, resolution follow-up, and 'You Asked, We Delivered' announcements.",
       meta: "PDF + Word • 800 KB",
@@ -47,6 +55,8 @@ const Module3Downloads = () => {
     },
     {
       icon: CheckSquare,
+      iconColor: 'text-[hsl(var(--biz-green))]',
+      bgColor: 'bg-[hsl(var(--biz-green))]/10',
       title: "7-Day Implementation Checklist",
       description: "Print this out and check it off as you go. Print-friendly, includes space for notes.",
       meta: "PDF • 200 KB",
@@ -81,10 +91,10 @@ const Module3Downloads = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-card border rounded-xl p-5 flex flex-col"
+              className="bg-card border rounded-xl p-5 flex flex-col hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 rounded-xl bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center mb-4">
-                <asset.icon className="h-6 w-6 text-[hsl(var(--biz-blue))]" />
+              <div className={`w-12 h-12 rounded-xl ${asset.bgColor} flex items-center justify-center mb-4`}>
+                <asset.icon className={`h-6 w-6 ${asset.iconColor}`} />
               </div>
               <h3 className="font-semibold text-foreground mb-2">{asset.title}</h3>
               <p className="text-sm text-muted-foreground mb-3 flex-1">{asset.description}</p>

@@ -25,7 +25,7 @@ const Module3Navigation = ({ isComplete }: Module3NavigationProps) => {
             {/* Previous Module */}
             <Link 
               to={prevModule.url}
-              className="group flex items-center gap-3 px-4 py-3 rounded-lg border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
+              className="group flex items-center gap-3 px-4 py-3 rounded-lg bg-background border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
             >
               <ArrowLeft className="h-5 w-5 text-[hsl(var(--biz-blue))]" />
               <div>
@@ -47,7 +47,7 @@ const Module3Navigation = ({ isComplete }: Module3NavigationProps) => {
             {/* Next Module */}
             <Link 
               to={nextModule.url}
-              className={`group flex items-center justify-end gap-3 px-4 py-3 rounded-lg border transition-colors ${
+              className={`group flex items-center justify-end gap-3 px-4 py-3 rounded-lg bg-background border transition-colors ${
                 isComplete 
                   ? 'border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50' 
                   : 'border-muted opacity-75'

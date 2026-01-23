@@ -252,25 +252,6 @@ const Module5Day7 = ({ isComplete, onToggleComplete }: Module5Day7Props) => {
               Get Loop-Closure Email Templates PDF
             </Button>
 
-            {/* Optional Coaching CTA */}
-            <div className="bg-[hsl(var(--biz-navy))]/5 border border-[hsl(var(--biz-navy))]/20 rounded-xl p-5">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-[hsl(var(--biz-navy))]/10 flex items-center justify-center flex-shrink-0">
-                  <Calendar className="w-5 h-5 text-[hsl(var(--biz-navy))]" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-foreground mb-1">Want to Do This Perfectly? (Optional)</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    A 20-minute coaching call shows you how top businesses close the loop. It's a small investment that builds huge customer loyalty.
-                  </p>
-                  <Button asChild variant="secondary" size="sm">
-                    <Link to="/bizguides">
-                      Schedule Excellence Call
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>

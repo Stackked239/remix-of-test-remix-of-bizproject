@@ -60,7 +60,7 @@ const Module5Day6 = ({ isComplete, onToggleComplete }: Module5Day6Props) => {
             ${isComplete ? 'border-[hsl(var(--biz-green))]' : 'border-border'}`}
         >
           {/* Day Header with Star (Critical Day) */}
-          <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-[hsl(var(--biz-yellow))]/10 to-transparent">
+          <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/5">
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative
                 ${isComplete ? 'bg-[hsl(var(--biz-green))]/10' : 'bg-[hsl(var(--biz-yellow))]/20'}`}>

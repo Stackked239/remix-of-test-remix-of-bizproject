@@ -15,7 +15,7 @@ const Module5Hero = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-green))]/5 to-background">
+    <section className="py-10 md:py-14 bg-gradient-to-br from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-green))]/5 to-background">
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

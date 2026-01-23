@@ -135,9 +135,9 @@ const SevenDayQuickstart = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-32">
+      <main className="pt-36">
         {/* Breadcrumb */}
-        <div className="max-w-7xl mx-auto px-4 mb-8">
+        <div className="max-w-7xl mx-auto px-4 mb-4">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
             <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
             <span>/</span>

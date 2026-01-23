@@ -124,8 +124,8 @@ const ClosingTheLoop = () => {
           </nav>
         </div>
 
-        {/* Progress Bar */}
-        <div className="sticky top-[72px] z-40 bg-background/95 backdrop-blur-sm border-b">
+        {/* Progress Bar - positioned below nav with breadcrumb space */}
+        <div className="sticky top-[80px] z-40 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-foreground">Module 4 of 7</span>

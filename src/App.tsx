@@ -28,6 +28,7 @@ const Portal = lazy(() => import("./pages/Portal"));
 const Checkout = lazy(() => import("./pages/Checkout"));
 const Onboarding = lazy(() => import("./pages/Onboarding"));
 const BizGuides = lazy(() => import("./pages/BizGuides"));
+const BizGuidesArchive = lazy(() => import("./pages/BizGuidesArchive"));
 const BizTools = lazy(() => import("./pages/BizTools"));
 const BizLeader = lazy(() => import("./pages/BizLeader"));
 const BizGrowth = lazy(() => import("./pages/BizGrowth"));
@@ -210,6 +211,7 @@ const App = () => (
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/bizguides" element={<BizGuides />} />
+              <Route path="/bizguides-archive" element={<BizGuidesArchive />} />
               <Route path="/bizguides/bizguide-sherpa" element={<BizGuideSherpa />} />
               <Route path="/sherpas" element={<Sherpas />} />
               <Route path="/business-leadership-sherpas" element={<Sherpas />} />

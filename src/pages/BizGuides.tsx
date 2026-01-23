@@ -3,6 +3,7 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import BizGuidesHero from "@/components/bizguides/BizGuidesHero";
 import BizGuidesEmpathy from "@/components/bizguides/BizGuidesEmpathy";
 import BizGuidesSolutionIntro from "@/components/bizguides/BizGuidesSolutionIntro";
@@ -32,6 +33,7 @@ const BizGuides = () => {
         url="https://bizhealth.ai/bizguides"
       />
       
+      <PromotionalBanner />
       <GlobalNavigation />
       
       {/* Section 1: Hero */}

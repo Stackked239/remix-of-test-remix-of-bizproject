@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Sharks in the Water: When Your Business Is Under Attack, Stay Calm But Act Fast",
+    excerpt: "40-60% of small businesses never reopen after a crisis. Learn the survival framework: assess, prioritize, stabilize, recover. Stay calm but act fast when the sharks are circling.",
+    author: "BizHealth.ai Research Team",
+    date: "January 23, 2026",
+    readTime: "14 min read",
+    category: "Business Strategy, Risk Management, Financials, Operations",
+    slug: "/blog/sharks-in-the-water-business-crisis",
+    imageUrl: "/assets/images/sharks-in-the-water-business-crisis.jpg",
+    altText: "Business owner surrounded by sharks metaphor for business crisis and competitive threats requiring calm strategic response",
+    keywords: "business crisis management, small business crisis, financial crisis SMB, operational crisis, business survival, crisis response, business recovery, cash flow crisis, customer exodus, staffing crisis, crisis triage, business assessment, crisis leadership, business turnaround, SMB crisis 2026, sharks in the water, business under attack, stay calm act fast, crisis survival, business failure prevention, crisis assessment, stabilize business, recover from crisis, business emergency, crisis strategy, rapid assessment, fact-based decisions, operational breakdown, customer crisis, market shift, root cause analysis, crisis phases, crisis timeline, survival path, critical problems, crisis prioritization, business runway, cash preservation, stakeholder communication, crisis recovery plan"
+  },
+  {
     title: "Stop Falling for These Marketing Myths: Why Your Spending Isn't Creating Growth",
     excerpt: "Research shows marketers waste $1 for every $4 spent. Discover the 7 marketing myths draining your budget and learn data-backed strategies to stop wasting money.",
     author: "BizHealth.ai Research Team",

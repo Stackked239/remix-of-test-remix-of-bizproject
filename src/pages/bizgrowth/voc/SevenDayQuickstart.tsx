@@ -95,8 +95,8 @@ const SevenDayQuickstart = () => {
   const scrollToDay = (dayNumber: number) => {
     const element = dayRefs.current[dayNumber - 1];
     if (element) {
-      // Account for sticky progress bar (~36px) + sticky timeline (~100px) + buffer
-      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 180;
+      // Account for nav (144px) + progress bar (~36px) + timeline (~110px) + buffer
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 310;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
   };
@@ -150,7 +150,7 @@ const SevenDayQuickstart = () => {
         </div>
 
         {/* Sticky Progress Bar */}
-        <div className="sticky top-[72px] z-40 bg-background backdrop-blur-sm border-b">
+        <div className="sticky top-[144px] z-40 bg-background backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-2">
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-foreground">Module 5 of 7</span>

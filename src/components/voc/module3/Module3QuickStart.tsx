@@ -307,7 +307,7 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
               transition={{ delay: day.day * 0.05 }}
               className={`${day.day % 2 === 0 ? 'bg-muted/30' : 'bg-card'} border-2 rounded-xl overflow-hidden shadow-sm transition-all ${
                 expandedDay === day.day 
-                  ? 'border-[hsl(var(--biz-green))]/40 shadow-md' 
+                  ? `border-l-4 ${day.day % 2 === 1 ? 'border-l-[hsl(var(--biz-blue))]' : 'border-l-[hsl(var(--biz-green))]'} border-[hsl(var(--biz-green))]/40 shadow-md` 
                   : 'border-border hover:border-[hsl(var(--biz-blue))]/30'
               }`}
             >

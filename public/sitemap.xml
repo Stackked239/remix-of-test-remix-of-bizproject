@@ -136,6 +136,86 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bizhealth.ai/bizgrowth/voice-of-customer</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-landing.jpg</image:loc>
+      <image:title>Voice of Customer (VoC) Curriculum - Free Customer Feedback Training</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/why-it-matters</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module1.jpg</image:loc>
+      <image:title>Module 1: Why VoC Matters - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/core-components</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module2.jpg</image:loc>
+      <image:title>Module 2: The Four Core Components - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/metrics</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module3.jpg</image:loc>
+      <image:title>Module 3: Measuring What Matters - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/closing-the-loop</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module4.jpg</image:loc>
+      <image:title>Module 4: Closing the Loop - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/7-day-quickstart</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module5.jpg</image:loc>
+      <image:title>Module 5: Your 7-Day Quick Start - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/90-day-system</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module6.jpg</image:loc>
+      <image:title>Module 6: Building Your 90-Day VoC System - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bizhealth.ai/bizgrowth/voc/advanced</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-voc-module7.jpg</image:loc>
+      <image:title>Module 7: Advanced VoC Techniques - Voice of Customer Curriculum</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/bizguides</loc>
     <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>

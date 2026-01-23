@@ -49,7 +49,7 @@ const VoiceOfCustomer = () => {
         description="Build a customer feedback system that actually works. 7 modules in ~90 minutes. Get a personalized learning path in 60 seconds. No business degree required. Real results in 7 days. Free VoC training for SMBs."
         keywords="voice of customer, VoC curriculum, customer feedback system, customer feedback training, VoC program, customer listening, customer experience training, NPS, CSAT, customer satisfaction, customer retention, feedback collection, VoC for small business, free VoC training, customer insights, customer success, bizgrowth academy, customer centric business"
         canonical="https://bizhealth.ai/bizgrowth/voice-of-customer"
-        ogImage="/og-images/og-voc-curriculum.jpg"
+        ogImage="/og-images/og-voc-landing.jpg"
         ogType="website"
       />
       <StructuredData

@@ -197,16 +197,37 @@ Best regards,
         >
           <Tabs defaultValue="acknowledge" className="w-full">
             <div className="border-b overflow-x-auto">
-              <TabsList className="h-auto p-0 bg-transparent rounded-none flex-nowrap justify-start">
-                {Object.entries(templates).map(([key, template]) => (
-                  <TabsTrigger
-                    key={key}
-                    value={key}
-                    className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-yellow))] px-4 py-3 text-sm whitespace-nowrap"
-                  >
-                    {template.title.split(" ")[0]}
-                  </TabsTrigger>
-                ))}
+              <TabsList className="h-auto p-0 bg-transparent rounded-none flex-nowrap justify-start w-full">
+                <TabsTrigger
+                  value="acknowledge"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-green))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-green))] font-semibold"
+                >
+                  Immediate Acknowledgment
+                </TabsTrigger>
+                <TabsTrigger
+                  value="detractor"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-blue))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-blue))] font-semibold"
+                >
+                  Detractor Outreach
+                </TabsTrigger>
+                <TabsTrigger
+                  value="solution"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-gold))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-gold))] font-semibold"
+                >
+                  Solution Follow-Up
+                </TabsTrigger>
+                <TabsTrigger
+                  value="youAsked"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-teal))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-teal))] font-semibold"
+                >
+                  You Asked, We Delivered
+                </TabsTrigger>
+                <TabsTrigger
+                  value="honestNo"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-copper))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-copper))] font-semibold"
+                >
+                  Honest "No"
+                </TabsTrigger>
               </TabsList>
             </div>
 

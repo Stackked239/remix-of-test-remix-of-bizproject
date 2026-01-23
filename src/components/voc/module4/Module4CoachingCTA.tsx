@@ -31,9 +31,9 @@ const Module4CoachingCTA = ({ onView }: Module4CoachingCTAProps) => {
   }, [onView]);
 
   const benefits = [
-    "How to apologize without over-apologizing",
-    "How to say \"no\" and keep the customer",
-    "How to turn a complaint into a loyalty opportunity",
+    "Expert guidance tailored to your business challenges",
+    "Actionable strategies you can implement immediately",
+    "Ongoing support to help you grow with confidence",
   ];
 
   return (
@@ -67,22 +67,23 @@ const Module4CoachingCTA = ({ onView }: Module4CoachingCTAProps) => {
             </div>
 
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
-              Need Help Crafting Difficult Responses?
+              Meet the BizGuides
             </h2>
 
             <p className="text-white/80 text-lg mb-6 max-w-2xl">
-              Some feedback is easier to respond to than others. Negative feedback,
-              complaints, feature requests you can't fulfill — these require finesse.
+              Behind every thriving business is a guide who's been there before. 
+              BizGuides are experienced advisors who help small business owners 
+              navigate challenges and unlock their full potential.
             </p>
 
             <p className="text-white/90 mb-6">
-              Our BizGuides specialize in helping businesses respond to tough
-              feedback without losing the customer.
+              Whether you're scaling operations, improving customer retention, or 
+              building a stronger team — a BizGuide can help you get there faster.
             </p>
 
             <div className="mb-8">
               <p className="text-white font-semibold mb-3">
-                Get personalized coaching on:
+                What BizGuides offer:
               </p>
               <ul className="space-y-2">
                 {benefits.map((benefit, index) => (

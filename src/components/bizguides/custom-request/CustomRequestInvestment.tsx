@@ -25,7 +25,7 @@ const investmentTiers: InvestmentTier[] = [
   {
     tier: "Tier B: Strategic Consulting",
     investment: "$7,000–$15,000+",
-    duration: "90–180 days",
+    duration: "30–180 days",
     resources: "Lead advisor + specialized SME team",
     outcomes: [
       "12–24 month strategic roadmap",
@@ -38,7 +38,7 @@ const investmentTiers: InvestmentTier[] = [
   {
     tier: "Tier C: Full Project Management",
     investment: "$18,000–$25,000+",
-    duration: "120–240 days",
+    duration: "60–240 days",
     resources: "PM + lead advisor + implementation team",
     outcomes: [
       "End-to-end execution",

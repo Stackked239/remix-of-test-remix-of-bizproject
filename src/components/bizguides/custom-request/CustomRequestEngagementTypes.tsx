@@ -43,7 +43,7 @@ const engagementCards: EngagementCard[] = [
     badge: "MOST POPULAR",
     title: "Strategic Consulting & Planning",
     description: "Specialized expertise in strategic planning for scaling organizations, operational redesign, business model innovation, financial restructuring, leadership team development, and exit prep.",
-    duration: "90–180 days",
+    duration: "30–180 days",
     investment: "$7,000–$15,000+",
     benefits: [
       "Expert-led strategic roadmap (12–24 months)",
@@ -64,7 +64,7 @@ const engagementCards: EngagementCard[] = [
     icon: Rocket,
     title: "Full Project Management & Execution",
     description: "End-to-end execution of major transformation projects with dedicated project manager, lead advisor, and implementation team. Ideal for company-wide initiatives.",
-    duration: "120–240 days",
+    duration: "60–240 days",
     investment: "$18,000–$25,000+",
     benefits: [
       "Dedicated PM + lead advisor + implementation team",

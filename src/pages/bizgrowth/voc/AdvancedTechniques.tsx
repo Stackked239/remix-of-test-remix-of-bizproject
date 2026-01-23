@@ -76,7 +76,7 @@ const AdvancedTechniques = () => {
       <SEO
         title="Advanced VoC Techniques: Root Cause Analysis, Segmentation & Culture | BizGrowth Academy"
         description="Master advanced Voice of Customer techniques: 5 Whys root cause analysis, customer segmentation strategy, building customer-centric culture, dashboard setup, and maturity benchmarking."
-        ogImage="/og-images/og-voc-advanced.jpg"
+        ogImage="/og-images/og-voc-module7.jpg"
         ogType="article"
         articlePublishedTime="2026-01-23"
         articleAuthor="BizHealth.ai Research Team"

@@ -131,16 +131,8 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                    stage.highlight 
-                      ? 'bg-[hsl(var(--biz-green))]/10' 
-                      : 'bg-[hsl(var(--biz-blue))]/10'
-                  }`}>
-                    <stage.icon className={`h-6 w-6 ${
-                      stage.highlight 
-                        ? 'text-[hsl(var(--biz-green))]' 
-                        : 'text-[hsl(var(--biz-blue))]'
-                    }`} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[hsl(var(--biz-green))]/10">
+                    <stage.icon className="h-6 w-6 text-[hsl(var(--biz-green))]" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">

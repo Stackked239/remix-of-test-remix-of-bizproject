@@ -108,6 +108,14 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
+    title: "Request Custom BizGuides Solution - Strategic Partnership",
+    excerpt: "Request a custom BizGuides consulting solution. Expert advisors, proven frameworks, 90-180 day engagements for organizations ready to scale.",
+    url: "/bizguides/request-custom",
+    keywords: "custom solution, custom consulting, strategic partnership, business transformation, executive coaching, exit preparation, business scaling, dedicated advisor, multi-month engagement, custom bizguides, enterprise consulting, strategic planning, business strategy, growth roadmap, scale my business, exit planning, succession planning, transformation, turnaround",
+    icon: Target
+  },
+  {
+    type: "Page",
     title: "BizTools - Scalable Essentials at Your Fingertips",
     excerpt: "Business tools, templates, and resources to support SMB growth and operational excellence.",
     url: "/biztools",

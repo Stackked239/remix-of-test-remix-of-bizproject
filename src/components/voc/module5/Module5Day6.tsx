@@ -154,7 +154,7 @@ const Module5Day6 = ({ isComplete, onToggleComplete }: Module5Day6Props) => {
             </div>
 
             {/* Quick Tip */}
-            <div className="bg-[hsl(var(--biz-gold))]/12 border border-[hsl(var(--biz-gold))]/30 rounded-xl p-4 md:p-5">
+            <div className="bg-[hsl(var(--biz-gold))]/20 border border-[hsl(var(--biz-gold))]/40 rounded-xl p-4 md:p-5">
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                 <div>

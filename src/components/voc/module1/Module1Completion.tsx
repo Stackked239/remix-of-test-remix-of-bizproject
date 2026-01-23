@@ -103,20 +103,22 @@ const Module1Completion = ({ quizScore, segment }: Module1CompletionProps) => {
           </Button>
 
           {/* Secondary Options */}
-          <div className="mt-6 flex items-center justify-center gap-4 text-sm">
-            <Link
-              to={VOC_URLS.landing}
-              className="text-muted-foreground hover:text-foreground underline transition-colors"
-            >
-              Return to Curriculum Overview
-            </Link>
-            <span className="text-muted-foreground">|</span>
-            <Link
-              to={VOC_URLS.modules[3].url}
-              className="text-muted-foreground hover:text-foreground underline transition-colors"
-            >
-              Skip to Module 3
-            </Link>
+          <div className="mt-8 bg-gradient-to-r from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-blue))]/5 to-[hsl(var(--biz-navy))]/5 rounded-xl border border-[hsl(var(--biz-blue))]/20 p-4 shadow-sm">
+            <div className="flex items-center justify-center gap-6 text-sm">
+              <Link
+                to={VOC_URLS.landing}
+                className="font-medium text-[hsl(var(--biz-blue))] hover:text-[hsl(var(--biz-navy))] transition-colors px-3 py-1.5 rounded-lg hover:bg-[hsl(var(--biz-blue))]/10"
+              >
+                Return to Curriculum Overview
+              </Link>
+              <span className="text-border">|</span>
+              <Link
+                to={VOC_URLS.modules[3].url}
+                className="font-medium text-[hsl(var(--biz-green))] hover:text-[hsl(var(--biz-green))]/80 transition-colors px-3 py-1.5 rounded-lg hover:bg-[hsl(var(--biz-green))]/10"
+              >
+                Skip to Module 3
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -56,31 +56,33 @@ const Module6Navigation = ({ isComplete, onMarkComplete }: Module6NavigationProp
         </motion.div>
 
         {/* Navigation Buttons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <Link 
-            to={VOC_URLS.modules[5].url}
-            className="flex items-center gap-4 p-4 bg-card border rounded-xl hover:border-muted-foreground/30 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5 text-muted-foreground" />
-            <div className="text-left">
-              <span className="text-xs text-muted-foreground uppercase tracking-wide">Previous</span>
-              <p className="font-medium text-foreground">Module 5: 7-Day Quick Start</p>
-            </div>
-          </Link>
+        <div className="bg-gradient-to-r from-[hsl(var(--biz-navy))]/5 via-[hsl(var(--biz-blue))]/5 to-[hsl(var(--biz-navy))]/5 rounded-xl border border-[hsl(var(--biz-blue))]/20 p-4 shadow-sm mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link 
+              to={VOC_URLS.modules[5].url}
+              className="flex items-center gap-4 p-4 rounded-lg border border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 text-[hsl(var(--biz-blue))]" />
+              <div className="text-left">
+                <span className="text-xs text-muted-foreground uppercase tracking-wide">Previous</span>
+                <p className="font-medium text-[hsl(var(--biz-blue))]">Module 5: 7-Day Quick Start</p>
+              </div>
+            </Link>
 
-          <Link 
-            to={VOC_URLS.modules[7].url}
-            className="flex items-center gap-4 p-4 bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-yellow))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl hover:border-[hsl(var(--biz-green))]/50 transition-colors"
-          >
-            <div className="text-left flex-1">
-              <span className="text-xs text-[hsl(var(--biz-green))] uppercase tracking-wide font-medium">
-                {isComplete ? "UNLOCKED" : "Up Next"}
-              </span>
-              <p className="font-medium text-foreground">Module 7: Advanced Techniques</p>
-              <p className="text-xs text-muted-foreground">+ Certificate & Full Reference Guide</p>
-            </div>
-            <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))]" />
-          </Link>
+            <Link 
+              to={VOC_URLS.modules[7].url}
+              className="flex items-center gap-4 p-4 rounded-lg border border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 transition-colors"
+            >
+              <div className="text-left flex-1">
+                <span className="text-xs text-[hsl(var(--biz-green))] uppercase tracking-wide font-medium">
+                  {isComplete ? "UNLOCKED" : "Up Next"}
+                </span>
+                <p className="font-medium text-[hsl(var(--biz-green))]">Module 7: Advanced Techniques</p>
+                <p className="text-xs text-muted-foreground">+ Certificate & Full Reference Guide</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+            </Link>
+          </div>
         </div>
 
         {/* Return Link */}

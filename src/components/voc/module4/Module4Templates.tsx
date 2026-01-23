@@ -212,7 +212,7 @@ Best regards,
                 </TabsTrigger>
                 <TabsTrigger
                   value="solution"
-                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-gold))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-gold))] font-semibold"
+                  className="data-[state=active]:bg-muted rounded-none border-b-2 border-transparent data-[state=active]:border-[hsl(var(--biz-lime))] px-5 py-3 text-sm whitespace-nowrap min-w-[140px] text-[hsl(var(--biz-lime))] font-semibold"
                 >
                   Solution Follow-Up
                 </TabsTrigger>

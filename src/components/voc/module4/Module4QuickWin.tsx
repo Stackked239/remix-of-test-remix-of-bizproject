@@ -75,7 +75,7 @@ const Module4QuickWin = ({
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-20 px-4 bg-background"
+      className="py-16 md:py-20 px-4 bg-[hsl(var(--biz-teal))]/5"
       data-section="quick-win"
       data-section-number="6"
     >

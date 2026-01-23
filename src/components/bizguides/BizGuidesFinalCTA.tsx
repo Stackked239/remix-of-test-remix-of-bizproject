@@ -82,7 +82,7 @@ const BizGuidesFinalCTA = () => {
                 size="lg"
                 className="border-2 border-[hsl(var(--biz-teal))] text-[hsl(var(--biz-teal))] hover:bg-[hsl(var(--biz-teal))]/10 font-montserrat font-semibold px-6"
               >
-                <Link to="/contact">
+                <Link to="/bizguides/request-custom">
                   Request Custom Solution
                 </Link>
               </Button>

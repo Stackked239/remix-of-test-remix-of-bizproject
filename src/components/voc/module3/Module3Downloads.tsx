@@ -143,7 +143,7 @@ const Module3Downloads = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-[hsl(var(--biz-green))] text-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/10"
+                className="border-[hsl(var(--biz-blue))] text-[hsl(var(--biz-blue))] hover:bg-[hsl(var(--biz-blue))]/10"
               >
                 Let's Talk
               </Button>

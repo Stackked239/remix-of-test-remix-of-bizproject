@@ -127,6 +127,15 @@ const ogImageMap = {
   '/blog/voice-of-customer-truth': '/og-images/og-voice-of-customer-truth.jpg',
   // BizGrowth pages
   '/bizgrowth/voice-of-customer-checklist': '/og-images/og-voice-of-customer-checklist.jpg',
+  // VoC Curriculum (8 pages: landing + 7 modules)
+  '/bizgrowth/voice-of-customer': '/og-images/og-voc-landing.jpg',
+  '/bizgrowth/voc/why-it-matters': '/og-images/og-voc-module1.jpg',
+  '/bizgrowth/voc/core-components': '/og-images/og-voc-module2.jpg',
+  '/bizgrowth/voc/metrics': '/og-images/og-voc-module3.jpg',
+  '/bizgrowth/voc/closing-the-loop': '/og-images/og-voc-module4.jpg',
+  '/bizgrowth/voc/7-day-quickstart': '/og-images/og-voc-module5.jpg',
+  '/bizgrowth/voc/90-day-system': '/og-images/og-voc-module6.jpg',
+  '/bizgrowth/voc/advanced': '/og-images/og-voc-module7.jpg',
 };
 
 /**

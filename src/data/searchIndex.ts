@@ -566,6 +566,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/90-day-system",
     keywords: "90 day VoC system, VoC module 6, sustainable VoC, VoC implementation, team VoC, organizational VoC, VoC ownership, RACI matrix, VoC accountability, weekly VoC rhythm, monthly VoC review, quarterly VoC planning, VoC team training, VoC delegation, scale VoC, VoC at scale, VoC operations, VoC process, VoC playbook, 12 week VoC plan, foundation weeks, refinement weeks, optimization weeks, VoC KPIs, VoC metrics, VoC dashboard, VoC reporting, VoC pitfalls, common VoC mistakes, VoC best practices, VoC system design, VoC framework, long-term VoC, enterprise VoC, VoC maturity, VoC culture, customer-centric culture, feedback culture, VoC training module 6, bizgrowth academy VoC, how to build VoC system, VoC for teams, VoC organization, systematic feedback, operational excellence VoC, VoC calendar, VoC templates, implementation guide",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 7: Advanced Techniques - Voice of Customer Curriculum",
+    excerpt: "Master advanced VoC techniques: 5 Whys root cause analysis, customer segmentation strategy, building customer-centric culture, VoC dashboard setup, and maturity benchmarking. Gated graduation module with certificate and reference guide.",
+    url: "/bizgrowth/voc/advanced",
+    keywords: "VoC advanced techniques, VoC module 7, root cause analysis, 5 whys, five whys, customer segmentation, VoC segmentation, customer personas, customer-centric culture, VoC culture, VoC dashboard, feedback dashboard, VoC maturity, maturity assessment, VoC benchmarking, VoC certification, VoC certificate, VoC graduation, VoC capstone, advanced customer feedback, enterprise VoC, VoC mastery, VoC practitioner, theme analysis, feedback analysis, pattern recognition, customer cohorts, buyer personas, cultural transformation, customer obsession, VoC metrics, VoC KPIs, executive VoC, VoC leadership, VoC governance, VoC training module 7, bizgrowth academy VoC, VoC final module, complete VoC curriculum, VoC reference guide, downloadable VoC resources, gated content, unlock advanced VoC, VoC completion, VoC program completion",
+    icon: GraduationCap
   }
 ];
 

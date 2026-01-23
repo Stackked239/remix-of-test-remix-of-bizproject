@@ -169,6 +169,7 @@ const Metrics = lazy(() => import("./pages/bizgrowth/voc/Metrics"));
 const ClosingTheLoop = lazy(() => import("./pages/bizgrowth/voc/ClosingTheLoop"));
 const SevenDayQuickstart = lazy(() => import("./pages/bizgrowth/voc/SevenDayQuickstart"));
 const NinetyDaySystem = lazy(() => import("./pages/bizgrowth/voc/NinetyDaySystem"));
+const AdvancedTechniques = lazy(() => import("./pages/bizgrowth/voc/AdvancedTechniques"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -238,7 +239,7 @@ const App = () => (
               <Route path="/bizgrowth/voc/closing-the-loop" element={<ClosingTheLoop />} />
               <Route path="/bizgrowth/voc/7-day-quickstart" element={<SevenDayQuickstart />} />
               <Route path="/bizgrowth/voc/90-day-system" element={<NinetyDaySystem />} />
-              <Route path="/bizgrowth/voc/advanced" element={<VocModulePlaceholder />} />
+              <Route path="/bizgrowth/voc/advanced" element={<AdvancedTechniques />} />
               <Route path="/blog/warning-signs-business" element={<WarningSignsBusiness />} />
               <Route path="/blog/operational-resilience" element={<OperationalResilience />} />
               <Route path="/blog/financial-health-metrics" element={<FinancialHealthMetrics />} />

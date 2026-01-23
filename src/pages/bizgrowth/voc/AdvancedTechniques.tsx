@@ -62,27 +62,6 @@ const AdvancedTechniques = () => {
     });
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: "Voice of Customer: Advanced Techniques",
-    description: "Master advanced VoC techniques including root cause analysis, customer segmentation, culture building, dashboards, and maturity benchmarking.",
-    provider: {
-      "@type": "Organization",
-      name: "BizGrowth Academy by BizHealth.ai",
-      url: "https://bizhealth.ai/bizgrowth"
-    },
-    courseCode: "VOC-007",
-    educationalLevel: "Advanced",
-    isAccessibleForFree: true,
-    timeRequired: "PT35M",
-    hasCourseInstance: {
-      "@type": "CourseInstance",
-      courseMode: "Online",
-      courseWorkload: "PT35M"
-    }
-  };
-
   return (
     <>
       <SEO
@@ -93,7 +72,17 @@ const AdvancedTechniques = () => {
         articlePublishedTime="2026-01-23"
         articleAuthor="BizHealth.ai Research Team"
       />
-      <StructuredData data={structuredData} />
+      <StructuredData 
+        type="course"
+        name="Voice of Customer: Advanced Techniques"
+        description="Master advanced VoC techniques including root cause analysis, customer segmentation, culture building, dashboards, and maturity benchmarking."
+        url="https://bizhealth.ai/bizgrowth/voc/advanced"
+        provider="BizGrowth Academy by BizHealth.ai"
+        providerUrl="https://bizhealth.ai/bizgrowth"
+        educationalLevel="Advanced"
+        isAccessibleForFree={true}
+        courseMode="Self-Paced"
+      />
 
       <main className="min-h-screen bg-background">
         {!isUnlocked ? (

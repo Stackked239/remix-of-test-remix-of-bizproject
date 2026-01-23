@@ -17,6 +17,7 @@ interface TierData {
   ctaText: string;
   ctaLink: string;
   secondaryCta: string;
+  secondaryCtaLink?: string;
   isFeatured: boolean;
   guarantee?: string;
   timeline?: string;
@@ -89,6 +90,7 @@ const tiers: TierData[] = [
     ctaText: "Request a Custom Solution",
     ctaLink: "/bizguides/request-custom",
     secondaryCta: "Submit a request →",
+    secondaryCtaLink: "/bizguides/request-custom",
     isFeatured: false
   }
 ];
@@ -243,12 +245,21 @@ const BizGuidesTierComparison = () => {
                     </Button>
                   )}
                   
-                  <button 
-                    onClick={scrollToFaq}
-                    className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors"
-                  >
-                    {tier.secondaryCta}
-                  </button>
+                  {tier.secondaryCtaLink ? (
+                    <Link 
+                      to={tier.secondaryCtaLink}
+                      className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors block"
+                    >
+                      {tier.secondaryCta}
+                    </Link>
+                  ) : (
+                    <button 
+                      onClick={scrollToFaq}
+                      className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors"
+                    >
+                      {tier.secondaryCta}
+                    </button>
+                  )}
                 </div>
               </motion.div>
             ))}

@@ -74,7 +74,7 @@ const Module5Day2 = ({ isComplete, onToggleComplete }: Module5Day2Props) => {
             ${isComplete ? 'border-[hsl(var(--biz-green))]' : 'border-border'}`}
         >
           {/* Day Header */}
-          <div className="flex items-center justify-between p-6 border-b bg-muted/30">
+          <div className="flex items-center justify-between p-6 border-b bg-[hsl(var(--biz-green))]/8">
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center
                 ${isComplete ? 'bg-[hsl(var(--biz-green))]/10' : 'bg-[hsl(var(--biz-navy))]/10'}`}>
@@ -129,7 +129,7 @@ const Module5Day2 = ({ isComplete, onToggleComplete }: Module5Day2Props) => {
             </div>
 
             {/* Survey Template */}
-            <div className="relative bg-muted/50 border rounded-xl p-4 md:p-5">
+            <div className="relative bg-[hsl(var(--biz-teal))]/8 border border-[hsl(var(--biz-teal))]/20 rounded-xl p-4 md:p-5">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold text-foreground">Survey Template (Copy-Paste Ready)</span>
                 <Button
@@ -157,9 +157,9 @@ const Module5Day2 = ({ isComplete, onToggleComplete }: Module5Day2Props) => {
             </div>
 
             {/* Quick Tip */}
-            <div className="bg-[hsl(var(--biz-yellow))]/10 border border-[hsl(var(--biz-yellow))]/30 rounded-xl p-4 md:p-5">
+            <div className="bg-[hsl(var(--biz-gold))]/12 border border-[hsl(var(--biz-gold))]/30 rounded-xl p-4 md:p-5">
               <div className="flex items-start gap-3">
-                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-yellow))] flex-shrink-0 mt-0.5" />
+                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-foreground">Quick Tip</span>
                   <p className="text-muted-foreground mt-1">

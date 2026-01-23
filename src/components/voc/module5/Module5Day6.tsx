@@ -117,7 +117,7 @@ const Module5Day6 = ({ isComplete, onToggleComplete }: Module5Day6Props) => {
             </div>
 
             {/* Decision Framework */}
-            <div className="bg-muted/50 border rounded-xl p-5">
+            <div className="bg-[hsl(var(--biz-teal))]/8 border border-[hsl(var(--biz-teal))]/20 rounded-xl p-5">
               <h4 className="font-semibold text-foreground mb-4">Decision Framework:</h4>
               <p className="text-sm text-muted-foreground mb-4">Ask these 3 questions:</p>
               <div className="space-y-4">
@@ -154,9 +154,9 @@ const Module5Day6 = ({ isComplete, onToggleComplete }: Module5Day6Props) => {
             </div>
 
             {/* Quick Tip */}
-            <div className="bg-[hsl(var(--biz-yellow))]/10 border border-[hsl(var(--biz-yellow))]/30 rounded-xl p-4 md:p-5">
+            <div className="bg-[hsl(var(--biz-gold))]/12 border border-[hsl(var(--biz-gold))]/30 rounded-xl p-4 md:p-5">
               <div className="flex items-start gap-3">
-                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-yellow))] flex-shrink-0 mt-0.5" />
+                <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-foreground">Quick Tip</span>
                   <p className="text-muted-foreground mt-1">

@@ -356,9 +356,9 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 text-center"
+          className="mt-8 bg-[hsl(var(--biz-teal))]/10 border border-[hsl(var(--biz-teal))]/30 rounded-xl p-6 text-center"
         >
-          <PartyPopper className="h-10 w-10 text-[hsl(var(--biz-green))] mx-auto mb-3" />
+          <PartyPopper className="h-10 w-10 text-[hsl(var(--biz-teal))] mx-auto mb-3" />
           <h3 className="text-xl font-bold text-foreground mb-2">Congratulations!</h3>
           <p className="text-muted-foreground">
             You now have a working Voice of Customer measurement system.<br />

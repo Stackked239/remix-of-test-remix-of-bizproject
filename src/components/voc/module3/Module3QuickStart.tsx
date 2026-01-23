@@ -264,8 +264,19 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
     },
   ];
 
+  // Define day badge colors for visual variety
+  const dayColors = [
+    'bg-[hsl(var(--biz-blue))]',
+    'bg-[hsl(var(--biz-green))]',
+    'bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))]',
+    'bg-[hsl(var(--biz-blue))]',
+    'bg-[hsl(var(--biz-green))]',
+    'bg-[hsl(var(--biz-gold))] text-[hsl(var(--biz-navy))]',
+    'bg-gradient-to-r from-[hsl(var(--biz-green))] to-[hsl(var(--biz-blue))]',
+  ];
+
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-muted/30">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-gradient-to-br from-[hsl(var(--biz-navy))]/5 via-background to-[hsl(var(--biz-green))]/10">
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -273,8 +284,11 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
+          <span className="inline-block px-4 py-1.5 bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))] text-sm font-semibold rounded-full mb-4 border border-[hsl(var(--biz-green))]/20">
+            Action Plan
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Your 7-Day Quick Start
+            Your <span className="text-[hsl(var(--biz-green))]">7-Day</span> Quick Start
           </h2>
           <p className="text-lg text-muted-foreground">
             No software. No perfect system. Just action.<br />
@@ -291,26 +305,30 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: day.day * 0.05 }}
-              className="bg-card border rounded-xl overflow-hidden"
+              className={`bg-card border-2 rounded-xl overflow-hidden shadow-sm transition-all ${
+                expandedDay === day.day 
+                  ? 'border-[hsl(var(--biz-green))]/40 shadow-md' 
+                  : 'border-border hover:border-[hsl(var(--biz-blue))]/30'
+              }`}
             >
               <button
                 onClick={() => setExpandedDay(expandedDay === day.day ? null : day.day)}
-                className="w-full flex items-center justify-between p-4 hover:bg-muted/50 transition-colors"
+                className="w-full flex items-center justify-between p-4 hover:bg-muted/30 transition-colors"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[hsl(var(--biz-blue))] text-white flex items-center justify-center font-bold text-sm">
+                  <div className={`w-10 h-10 rounded-full ${dayColors[day.day - 1]} text-white flex items-center justify-center font-bold text-sm shadow-sm`}>
                     {day.day}
                   </div>
                   <div className="text-left">
                     <h3 className="font-semibold text-foreground">{day.title}</h3>
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3" />
+                      <Clock className="h-3 w-3 text-[hsl(var(--biz-blue))]" />
                       {day.time}
                     </div>
                   </div>
                 </div>
-                <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${
-                  expandedDay === day.day ? 'rotate-180' : ''
+                <ChevronDown className={`h-5 w-5 transition-transform ${
+                  expandedDay === day.day ? 'rotate-180 text-[hsl(var(--biz-green))]' : 'text-muted-foreground'
                 }`} />
               </button>
               
@@ -323,7 +341,7 @@ const Module3QuickStart = ({ onView, onAction }: Module3QuickStartProps) => {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-4 pb-4 pt-2 border-t">
+                    <div className="px-4 pb-4 pt-2 border-t border-[hsl(var(--biz-green))]/20">
                       {day.content}
                     </div>
                   </motion.div>

@@ -99,7 +99,7 @@ const Module3WhyMetricsMatter = ({ onView }: Module3WhyMetricsMatterProps) => {
           className="bg-[hsl(var(--biz-gold))]/10 border-l-4 border-[hsl(var(--biz-gold))] rounded-r-xl p-6 mb-10"
         >
           <div className="flex items-start gap-4">
-            <AlertTriangle className="h-6 w-6 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="h-6 w-6 text-orange-500 flex-shrink-0 mt-0.5" />
             <div>
               <h4 className="font-semibold text-foreground mb-2">The Problem Without Metrics</h4>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -124,10 +124,10 @@ const Module3WhyMetricsMatter = ({ onView }: Module3WhyMetricsMatterProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[hsl(var(--biz-blue))]/5 border border-[hsl(var(--biz-blue))]/20 rounded-xl p-6 md:p-8 mb-10"
+          className="bg-[hsl(var(--biz-green))]/30 border border-[hsl(var(--biz-green))]/40 rounded-xl p-6 md:p-8 mb-10"
         >
           <div className="flex items-center gap-3 mb-4">
-            <TrendingUp className="h-6 w-6 text-[hsl(var(--biz-blue))]" />
+            <TrendingUp className="h-6 w-6 text-[hsl(var(--biz-green))]" />
             <h4 className="font-semibold text-foreground">The ROI of Measurement</h4>
           </div>
           <p className="text-muted-foreground mb-6">
@@ -141,9 +141,9 @@ const Module3WhyMetricsMatter = ({ onView }: Module3WhyMetricsMatterProps) => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-4 bg-background rounded-lg"
+                className="text-center p-4 bg-background rounded-lg shadow-sm"
               >
-                <div className="text-3xl font-bold text-[hsl(var(--biz-blue))] mb-1">
+                <div className="text-3xl font-bold text-[hsl(var(--biz-green))] mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>

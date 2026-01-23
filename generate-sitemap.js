@@ -57,7 +57,8 @@ const ogImageMap = {
   '/logo': '/og-images/og-logo.jpg',
   '/for-ai-assistants': '/og-images/og-ai-assistants.jpg',
   '/playbooks/landscaping': '/og-images/og-landscaping-playbook.jpg',
-  // Blog posts - Complete OG image mappings (48 blog posts total)
+  // Blog posts - Complete OG image mappings
+  '/blog/sharks-in-the-water-business-crisis': '/og-images/og-sharks-in-the-water-business-crisis.jpg',
   '/blog/feast-or-famine-cycle-small-business': '/og-images/og-feast-famine-cycle.jpg',
   '/blog/growth-trap-or-growth-engine': '/og-images/og-growth-trap-or-growth-engine.jpg',
   '/blog/growth-trap-broken-business-model': '/og-images/og-growth-trap.jpg',

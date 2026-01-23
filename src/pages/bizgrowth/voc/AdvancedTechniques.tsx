@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
+import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { VOC_URLS } from "@/config/vocUrls";
 import { vocState } from "@/state/vocStateManager";
@@ -26,6 +30,7 @@ const AdvancedTechniques = () => {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const [completedModulesCount, setCompletedModulesCount] = useState(0);
+  const [progressPercentage, setProgressPercentage] = useState(0);
 
   useEffect(() => {
     // Check if Module 7 is unlocked
@@ -39,6 +44,9 @@ const AdvancedTechniques = () => {
       const savedComplete = localStorage.getItem('voc_module7_complete');
       if (savedComplete === 'true') {
         setIsComplete(true);
+        setProgressPercentage(100);
+      } else {
+        setProgressPercentage(50);
       }
     }
 
@@ -50,6 +58,7 @@ const AdvancedTechniques = () => {
 
   const handleMarkComplete = () => {
     setIsComplete(true);
+    setProgressPercentage(100);
     localStorage.setItem('voc_module7_complete', 'true');
     vocState.completeModule(7);
     
@@ -63,7 +72,7 @@ const AdvancedTechniques = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEO
         title="Advanced VoC Techniques: Root Cause Analysis, Segmentation & Culture | BizGrowth Academy"
         description="Master advanced Voice of Customer techniques: 5 Whys root cause analysis, customer segmentation strategy, building customer-centric culture, dashboard setup, and maturity benchmarking."
@@ -84,7 +93,41 @@ const AdvancedTechniques = () => {
         courseMode="Self-Paced"
       />
 
-      <main className="min-h-screen bg-background">
+      <PromotionalBanner />
+      <GlobalNavigation />
+
+      <main className="pt-40">
+        {/* Breadcrumb - static */}
+        <div className="max-w-7xl mx-auto px-4 mb-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+            <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/bizgrowth" className="hover:text-foreground transition-colors">BizGrowth Academy</Link>
+            <span>/</span>
+            <Link to={VOC_URLS.landing} className="hover:text-foreground transition-colors">Voice of Customer</Link>
+            <span>/</span>
+            <span className="text-foreground font-medium">Module 7</span>
+          </nav>
+        </div>
+
+        {/* Sticky Progress Bar */}
+        <div className="sticky top-[144px] z-30 bg-background/95 backdrop-blur-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 py-3">
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium text-foreground">Module 7 of 7</span>
+              <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progressPercentage}%` }}
+                  transition={{ duration: 0.5 }}
+                  className="h-full bg-gradient-to-r from-[hsl(var(--biz-green))] to-[hsl(var(--biz-lime))] rounded-full"
+                />
+              </div>
+              <span className="text-sm text-muted-foreground">{isComplete ? "Complete 🎉" : `${progressPercentage}%`}</span>
+            </div>
+          </div>
+        </div>
+
         {!isUnlocked ? (
           <Module7LockedHero 
             completedCount={completedModulesCount}
@@ -129,10 +172,11 @@ const AdvancedTechniques = () => {
             <Module7Navigation />
           </>
         )}
-
-        <GradientDivider variant="green-gold" />
       </main>
-    </>
+
+      <GradientDivider variant="green-gold" />
+      <GlobalFooter />
+    </div>
   );
 };
 

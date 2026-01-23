@@ -100,9 +100,9 @@ const Metrics = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-32">
-        {/* Breadcrumb */}
-        <div className="max-w-7xl mx-auto px-4 mb-8">
+      <main className="pt-40">
+        {/* Breadcrumb - static */}
+        <div className="max-w-7xl mx-auto px-4 mb-4">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
             <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
             <span>/</span>
@@ -114,8 +114,8 @@ const Metrics = () => {
           </nav>
         </div>
 
-        {/* Progress Bar */}
-        <div className="sticky top-[72px] z-40 bg-background/95 backdrop-blur-sm border-b">
+        {/* Progress Bar - sticky under nav */}
+        <div className="sticky top-[144px] z-30 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-foreground">Module 3 of 7</span>

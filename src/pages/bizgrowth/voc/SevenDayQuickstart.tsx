@@ -135,8 +135,8 @@ const SevenDayQuickstart = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-36">
-        {/* Breadcrumb */}
+      <main className="pt-40">
+        {/* Breadcrumb - static */}
         <div className="max-w-7xl mx-auto px-4 mb-4">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
             <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
@@ -150,7 +150,7 @@ const SevenDayQuickstart = () => {
         </div>
 
         {/* Sticky Progress Bar */}
-        <div className="sticky top-[144px] z-40 bg-background backdrop-blur-sm border-b">
+        <div className="sticky top-[144px] z-30 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-2">
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-foreground">Module 5 of 7</span>

@@ -7,7 +7,7 @@ interface Module7HeroProps {
 
 const Module7Hero = ({ isComplete }: Module7HeroProps) => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-green))]/20">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-green))]/20">
       <div className="max-w-5xl mx-auto px-4">
         {/* Unlock Badge */}
         <motion.div

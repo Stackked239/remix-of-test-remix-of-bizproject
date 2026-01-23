@@ -21,7 +21,7 @@ const Module7LockedHero = ({ completedCount, totalRequired }: Module7LockedHeroP
   ) || 1;
 
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-navy))]/90">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy))]/95 to-[hsl(var(--biz-navy))]/90">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

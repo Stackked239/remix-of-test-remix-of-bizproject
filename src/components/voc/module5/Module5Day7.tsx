@@ -98,7 +98,7 @@ const Module5Day7 = ({ isComplete, onToggleComplete }: Module5Day7Props) => {
             ${isComplete ? 'border-[hsl(var(--biz-green))]' : 'border-border'}`}
         >
           {/* Day Header */}
-          <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-transparent">
+          <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/5">
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center
                 ${isComplete ? 'bg-[hsl(var(--biz-green))]/20' : 'bg-[hsl(var(--biz-green))]/10'}`}>
@@ -231,7 +231,7 @@ const Module5Day7 = ({ isComplete, onToggleComplete }: Module5Day7Props) => {
             </div>
 
             {/* Quick Tip */}
-            <div className="bg-[hsl(var(--biz-gold))]/12 border border-[hsl(var(--biz-gold))]/30 rounded-xl p-4 md:p-5">
+            <div className="bg-[hsl(var(--biz-gold))]/20 border border-[hsl(var(--biz-gold))]/40 rounded-xl p-4 md:p-5">
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-gold))] flex-shrink-0 mt-0.5" />
                 <div>

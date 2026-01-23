@@ -67,35 +67,38 @@ const CustomRequestInvestment = () => {
 
         {/* Investment Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {investmentTiers.map((tier, index) => (
-            <div
-              key={index}
-              className={`
-                bg-card rounded-xl overflow-hidden border transition-all duration-300
-                ${tier.featured 
-                  ? "border-2 border-[hsl(var(--biz-teal))] shadow-[var(--shadow-hub-teal)] scale-[1.02]" 
-                  : "border-[hsl(var(--biz-teal))]/10 shadow-md hover:shadow-lg"
-                }
-              `}
-            >
-              {/* Header */}
-              <div className={`
-                px-6 py-6 text-center
-                ${tier.featured 
-                  ? "bg-[hsl(var(--biz-teal))]" 
-                  : "bg-[hsl(var(--biz-navy))]"
-                }
-              `}>
-                <div className="text-sm text-white/80 mb-2 font-medium">
-                  {tier.tier}
+          {investmentTiers.map((tier, index) => {
+            // Tier-specific header colors: Navy (A), Teal (B featured), Green (C)
+            const headerColors = [
+              "bg-[hsl(var(--biz-navy))]",
+              "bg-[hsl(var(--biz-teal))]",
+              "bg-[hsl(var(--biz-green))]",
+            ];
+            const headerBg = headerColors[index] || "bg-[hsl(var(--biz-navy))]";
+            
+            return (
+              <div
+                key={index}
+                className={`
+                  bg-card rounded-xl overflow-hidden border transition-all duration-300
+                  ${tier.featured 
+                    ? "border-2 border-[hsl(var(--biz-teal))] shadow-[var(--shadow-hub-teal)] scale-[1.02]" 
+                    : "border-[hsl(var(--biz-teal))]/10 shadow-md hover:shadow-lg"
+                  }
+                `}
+              >
+                {/* Header */}
+                <div className={`px-6 py-6 text-center ${headerBg}`}>
+                  <div className="text-sm text-white/80 mb-2 font-medium">
+                    {tier.tier}
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {tier.investment}
+                  </div>
+                  <div className="text-sm text-white/70">
+                    {tier.duration}
+                  </div>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  {tier.investment}
-                </div>
-                <div className="text-sm text-white/70">
-                  {tier.duration}
-                </div>
-              </div>
 
               {/* Body */}
               <div className="p-6">
@@ -115,7 +118,8 @@ const CustomRequestInvestment = () => {
                 </ul>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Disclaimer */}

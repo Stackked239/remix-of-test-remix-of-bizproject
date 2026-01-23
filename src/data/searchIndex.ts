@@ -526,6 +526,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/why-it-matters",
     keywords: "why VoC matters, VoC module 1, voice of customer module, customer feedback business case, VoC ROI, VoC benefits, customer feedback importance, why customer feedback matters, VoC competitive advantage, VoC self assessment, VoC quiz, customer feedback ROI, 41% revenue uplift, customer retention savings, customer feedback system benefits, flying blind, customer listening system, VoC four step cycle, listen analyze act monitor, customer perception gap, VoC training module, VoC curriculum module 1, bizgrowth academy VoC, customer feedback learning, VoC for SMB, small business customer feedback, VoC business case, customer feedback matters, feedback importance, why listen to customers, customer insight value, VoC segment selector, business stage assessment, launch growth scaling enterprise",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 2: The Four Core Components - Voice of Customer Curriculum",
+    excerpt: "Master the 4 essential VoC components: active + passive feedback collection, omnichannel listening, closing the loop, and centralized data management. Free feedback tracker template included.",
+    url: "/bizgrowth/voc/core-components",
+    keywords: "VoC core components, VoC module 2, four components, active feedback, passive feedback, omnichannel listening, closing the loop, centralized data, feedback tracker, feedback collection methods, customer surveys, review monitoring, social listening, support tickets, feedback channels, response loop, customer follow-up, feedback data management, VoC system components, VoC training module 2, bizgrowth academy VoC, feedback tracker template, free feedback tracker, NPS survey, CSAT survey, post-purchase survey, review collection, Google reviews, feedback consolidation, customer data hub, VoC architecture, VoC building blocks, VoC framework, VoC system design, multi-channel feedback, customer touchpoints, feedback sources, VoC best practices, SMB feedback system, small business VoC system, how to collect feedback, feedback collection guide",
+    icon: GraduationCap
   }
 ];
 

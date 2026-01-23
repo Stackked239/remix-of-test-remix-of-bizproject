@@ -102,15 +102,21 @@ const CustomRequestProcess = () => {
 
         {/* Process Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {processSteps.map((step) => (
-            <div
-              key={step.step}
-              className="bg-card rounded-xl p-7 border border-[hsl(var(--biz-teal))]/10 shadow-sm hover:shadow-md transition-all duration-300 relative"
-            >
-              {/* Step Badge */}
-              <div className="w-12 h-12 bg-[hsl(var(--biz-teal))] text-white rounded-full flex items-center justify-center text-lg font-bold font-montserrat mb-5">
-                {step.step}
-              </div>
+          {processSteps.map((step) => {
+            const isEngagementSpecific = step.step >= 3;
+            const badgeColor = isEngagementSpecific 
+              ? "bg-[hsl(var(--biz-gold))]" 
+              : "bg-[hsl(var(--biz-teal))]";
+            
+            return (
+              <div
+                key={step.step}
+                className="bg-card rounded-xl p-7 border border-[hsl(var(--biz-teal))]/10 shadow-sm hover:shadow-md transition-all duration-300 relative"
+              >
+                {/* Step Badge */}
+                <div className={`w-12 h-12 ${badgeColor} text-white rounded-full flex items-center justify-center text-lg font-bold font-montserrat mb-5`}>
+                  {step.step}
+                </div>
 
               {/* Title */}
               <h3 className="text-lg font-montserrat font-semibold text-[hsl(var(--biz-navy))] mb-2">
@@ -142,7 +148,8 @@ const CustomRequestProcess = () => {
                 </ul>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

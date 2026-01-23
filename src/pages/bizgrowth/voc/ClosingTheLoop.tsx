@@ -110,21 +110,23 @@ const ClosingTheLoop = () => {
       <PromotionalBanner />
       <GlobalNavigation />
 
-      <main className="pt-24">
+      <main className="pt-40">
+        {/* Breadcrumb - static */}
+        <div className="max-w-7xl mx-auto px-4 mb-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+            <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/bizgrowth" className="hover:text-foreground transition-colors">BizGrowth Academy</Link>
+            <span>/</span>
+            <Link to={VOC_URLS.landing} className="hover:text-foreground transition-colors">Voice of Customer</Link>
+            <span>/</span>
+            <span className="text-foreground font-medium">Module 4</span>
+          </nav>
+        </div>
+
         {/* Progress Bar - sticky under nav */}
         <div className="sticky top-[144px] z-30 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap mb-3">
-              <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
-              <span>/</span>
-              <Link to="/bizgrowth" className="hover:text-foreground transition-colors">BizGrowth Academy</Link>
-              <span>/</span>
-              <Link to={VOC_URLS.landing} className="hover:text-foreground transition-colors">Voice of Customer</Link>
-              <span>/</span>
-              <span className="text-foreground font-medium">Module 4</span>
-            </nav>
-            {/* Progress Bar */}
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-foreground">Module 4 of 7</span>
               <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">

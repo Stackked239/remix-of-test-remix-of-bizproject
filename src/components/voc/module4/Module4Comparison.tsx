@@ -123,8 +123,8 @@ const Module4Comparison = ({ onView }: Module4ComparisonProps) => {
                 <X className="h-5 w-5 text-red-600 dark:text-red-400" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground">
-                  THE BAD LOOP
+              <h3 className="font-heading font-bold text-foreground">
+                  THE BAD
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   What Most Companies Do
@@ -165,8 +165,8 @@ const Module4Comparison = ({ onView }: Module4ComparisonProps) => {
                 <Check className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground">
-                  THE GOOD LOOP
+              <h3 className="font-heading font-bold text-foreground">
+                  THE GOOD
                 </h3>
                 <p className="text-sm text-muted-foreground">The VoC Way</p>
               </div>
@@ -223,7 +223,7 @@ const Module4Comparison = ({ onView }: Module4ComparisonProps) => {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground">
-                  {showGood ? "THE GOOD LOOP" : "THE BAD LOOP"}
+                  {showGood ? "THE GOOD" : "THE BAD"}
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   {showGood ? "The VoC Way" : "What Most Companies Do"}

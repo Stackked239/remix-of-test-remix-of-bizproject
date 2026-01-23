@@ -36,6 +36,9 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
       bestFor: ["Detractors", "High-value customers", "Serious issues"],
       effort: "Medium",
       impact: "Very High",
+      gradient: "from-[hsl(var(--biz-blue))] to-[hsl(var(--biz-teal))]",
+      iconBg: "bg-[hsl(var(--biz-blue))]/15",
+      iconColor: "text-[hsl(var(--biz-blue))]",
     },
     {
       icon: Megaphone,
@@ -44,6 +47,9 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
       bestFor: ["Common issues", "Process changes", "New features"],
       effort: "Medium",
       impact: "High",
+      gradient: "from-[hsl(var(--biz-green))] to-[hsl(var(--biz-teal))]",
+      iconBg: "bg-[hsl(var(--biz-green))]/15",
+      iconColor: "text-[hsl(var(--biz-green))]",
     },
     {
       icon: ClipboardList,
@@ -52,13 +58,16 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
       bestFor: ["Building trust", "Product feedback", "Long-term engagement"],
       effort: "High initial",
       impact: "Very High",
+      gradient: "from-[hsl(var(--biz-gold))] to-[hsl(var(--biz-copper))]",
+      iconBg: "bg-[hsl(var(--biz-gold))]/15",
+      iconColor: "text-[hsl(var(--biz-gold))]",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-20 px-4 bg-background"
+      className="py-16 md:py-20 px-4 bg-gradient-to-b from-background to-[hsl(var(--biz-blue))]/5"
       data-section="communication"
       data-section-number="4"
     >
@@ -78,7 +87,7 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
           </p>
         </motion.div>
 
-        {/* Method Cards */}
+        {/* Method Cards - Enhanced with color and contrast */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {methods.map((method, index) => (
             <motion.div
@@ -87,10 +96,13 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-background rounded-xl border p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-background rounded-xl border-2 border-transparent hover:border-[hsl(var(--biz-green))]/30 p-6 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center mb-4">
-                <method.icon className="h-6 w-6 text-[hsl(var(--biz-blue))]" />
+              {/* Gradient accent bar at top */}
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${method.gradient}`} />
+              
+              <div className={`w-14 h-14 rounded-xl ${method.iconBg} flex items-center justify-center mb-4 border border-current/10 group-hover:scale-105 transition-transform`}>
+                <method.icon className={`h-7 w-7 ${method.iconColor}`} />
               </div>
 
               <h3 className="font-heading font-bold text-lg text-foreground mb-2">
@@ -100,29 +112,29 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
                 {method.description}
               </p>
 
-              <div className="border-t pt-4 space-y-3">
+              <div className="border-t border-border pt-4 space-y-3">
                 <div>
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                     Best for:
                   </p>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1.5">
                     {method.bestFor.map((item, i) => (
                       <li key={i} className="text-sm text-foreground/80 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--biz-green))]" />
+                        <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${method.gradient}`} />
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex gap-4 pt-2">
-                  <div>
-                    <p className="text-xs text-muted-foreground">Effort</p>
-                    <p className="text-sm font-medium text-foreground">{method.effort}</p>
+                <div className="flex gap-6 pt-3 border-t border-border/50">
+                  <div className="flex-1">
+                    <p className="text-xs text-muted-foreground mb-1">Effort</p>
+                    <p className="text-sm font-semibold text-foreground">{method.effort}</p>
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">Impact</p>
-                    <p className="text-sm font-medium text-[hsl(var(--biz-green))]">
+                  <div className="flex-1">
+                    <p className="text-xs text-muted-foreground mb-1">Impact</p>
+                    <p className="text-sm font-bold text-[hsl(var(--biz-green))]">
                       {method.impact}
                     </p>
                   </div>
@@ -138,7 +150,7 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-[hsl(var(--biz-blue))]/5 to-[hsl(var(--biz-green))]/5 rounded-xl border p-6"
+          className="bg-gradient-to-br from-[hsl(var(--biz-blue))]/10 to-[hsl(var(--biz-green))]/10 rounded-xl border-2 border-[hsl(var(--biz-blue))]/20 p-6"
         >
           <button
             onClick={() => setExpandedStory(!expandedStory)}
@@ -204,7 +216,7 @@ const Module4Communication = ({ onView }: Module4CommunicationProps) => {
                     </div>
                   </div>
 
-                  <p className="text-sm italic text-muted-foreground border-l-2 border-[hsl(var(--biz-yellow))] pl-4">
+                  <p className="text-sm italic text-muted-foreground border-l-2 border-[hsl(var(--biz-gold))] pl-4">
                     Key insight: "The difference wasn't collecting more feedback. It was
                     what they did with it."
                   </p>

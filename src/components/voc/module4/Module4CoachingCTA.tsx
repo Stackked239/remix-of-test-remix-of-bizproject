@@ -67,7 +67,7 @@ const Module4CoachingCTA = ({ onView }: Module4CoachingCTAProps) => {
             </div>
 
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
-              Meet the BizGuides
+              Need Some Help? Consider A BizGuide
             </h2>
 
             <p className="text-white/80 text-lg mb-6 max-w-2xl">

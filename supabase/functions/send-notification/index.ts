@@ -14,7 +14,7 @@ const corsHeaders = {
 };
 
 interface EmailNotificationRequest {
-  type: "popup_subscriber" | "contact_form" | "checklist_download" | "bizguides_inquiry";
+  type: "popup_subscriber" | "contact_form" | "checklist_download" | "bizguides_inquiry" | "custom_request";
   email: string;
   name?: string;
   firstName?: string;
@@ -34,6 +34,19 @@ interface EmailNotificationRequest {
   primaryChallenge?: string;
   sessionLength?: string;
   referralSource?: string;
+  // Custom request fields
+  phone?: string;
+  title?: string;
+  revenueRange?: string;
+  teamSize?: string;
+  solutionType?: string;
+  areasOfFocus?: string[];
+  challengeDescription?: string;
+  idealTimeline?: string;
+  successMetrics?: string;
+  constraints?: string;
+  contactPreference?: string;
+  formCompletionTime?: number;
 }
 
 // HTML escaping function to prevent injection attacks
@@ -54,7 +67,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const payload = await req.json();
     const emailSchema = z.object({
-      type: z.enum(["popup_subscriber", "contact_form", "checklist_download", "bizguides_inquiry"]),
+      type: z.enum(["popup_subscriber", "contact_form", "checklist_download", "bizguides_inquiry", "custom_request"]),
       email: z.string().trim().email().max(255, "Email must be less than 255 characters"),
       name: z.string().trim().max(100, "Name must be less than 100 characters").optional(),
       firstName: z.string().trim().min(1, "First name is required").max(100, "First name must be less than 100 characters").optional(),
@@ -74,6 +87,19 @@ const handler = async (req: Request): Promise<Response> => {
       primaryChallenge: z.string().trim().min(20).max(500).optional(),
       sessionLength: z.string().optional(),
       referralSource: z.string().optional(),
+      // Custom request fields
+      phone: z.string().optional(),
+      title: z.string().optional(),
+      revenueRange: z.string().optional(),
+      teamSize: z.string().optional(),
+      solutionType: z.string().optional(),
+      areasOfFocus: z.array(z.string()).optional(),
+      challengeDescription: z.string().trim().max(500).optional(),
+      idealTimeline: z.string().optional(),
+      successMetrics: z.string().optional(),
+      constraints: z.string().optional(),
+      contactPreference: z.string().optional(),
+      formCompletionTime: z.number().optional(),
     });
     const data = emailSchema.parse(payload);
     console.log("Received notification request:", data.type);
@@ -539,6 +565,231 @@ const handler = async (req: Request): Promise<Response> => {
         </div>
         <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
         <p style="margin-top: 20px;"><em>⏰ Next Steps: Match with expert within 48 hours and schedule session within 5 business days.</em></p>
+      `;
+    } else if (data.type === "custom_request") {
+      // Handle Custom BizGuides Solution Requests (Tier 3)
+      const fullName = data.fullName || "Unknown";
+      const companyName = data.companyName || "Not provided";
+      const industry = data.industry || "Not specified";
+      const revenueRange = data.revenueRange || "Not specified";
+      const solutionType = data.solutionType || "Not specified";
+      const challengeDescription = data.challengeDescription || "Not provided";
+      const teamSize = data.teamSize || "Not specified";
+      const idealTimeline = data.idealTimeline || "Not specified";
+      const successMetrics = data.successMetrics || "";
+      const constraints = data.constraints || "";
+      const contactPreference = data.contactPreference || "email";
+      const areasOfFocus = data.areasOfFocus || [];
+      const phone = data.phone || "";
+      const title = data.title || "Not provided";
+      const formCompletionTime = data.formCompletionTime || 0;
+
+      console.log(`Processing Custom Request from ${data.email}`);
+
+      // Store inquiry in bizguides_inquiries table with custom request flag
+      const { error: dbError } = await supabase
+        .from("bizguides_inquiries")
+        .insert({
+          full_name: fullName,
+          email: data.email,
+          company_name: companyName !== "Not provided" ? companyName : null,
+          industry: industry,
+          revenue_stage: revenueRange,
+          primary_challenge: `[CUSTOM REQUEST - ${solutionType}] ${challengeDescription}`,
+          session_length: `Custom: ${idealTimeline} | Team: ${teamSize} | Areas: ${areasOfFocus.join(", ")}`,
+          referral_source: null,
+          status: "new"
+        });
+
+      if (dbError) {
+        console.error("Database insert error:", dbError);
+        throw new Error(`Failed to save custom request: ${dbError.message}`);
+      }
+      console.log("Custom request saved to database");
+
+      // Send confirmation email to submitter
+      const solutionLabels: Record<string, string> = {
+        "TYPE_A": "Onsite Support & Team Coaching",
+        "TYPE_B": "Strategic Consulting & Planning",
+        "TYPE_C": "Full Project Management & Execution"
+      };
+      const solutionLabel = solutionLabels[solutionType] || solutionType;
+
+      const confirmationEmailHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 20px;">
+            <tr>
+              <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                  <!-- Header -->
+                  <tr>
+                    <td style="background: linear-gradient(135deg, #0D1B2A 0%, #1B3A5C 100%); padding: 40px 40px 30px; text-align: center;">
+                      <h1 style="color: #ffffff; margin: 0; font-size: 26px; font-weight: 700;">Your Custom Solution Request Is Received!</h1>
+                      <p style="color: #38B2AC; margin: 10px 0 0; font-size: 16px; font-weight: 600;">BizGuides Strategic Partnership</p>
+                    </td>
+                  </tr>
+                  <!-- Body -->
+                  <tr>
+                    <td style="padding: 40px;">
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        Hi ${escapeHtml(fullName.split(' ')[0])},
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                        Thank you for requesting a custom BizGuides solution! Your request for <strong>${escapeHtml(solutionLabel)}</strong> has been received. 🎯
+                      </p>
+                      <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 30px;">
+                        <strong>Here's what happens next:</strong>
+                      </p>
+                      
+                      <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #0D1B2A;">1. Executive Review (Within 24 hours)</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">Our senior team will review your requirements and prepare a preliminary assessment.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #0D1B2A;">2. Discovery Call (Within 48 hours)</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">A dedicated advisor will reach out to schedule a complimentary 30-minute strategy call.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px 0;">
+                              <strong style="color: #0D1B2A;">3. Custom Proposal (Within 5 business days)</strong>
+                              <p style="color: #666666; font-size: 14px; margin: 5px 0 0;">Receive a tailored engagement plan with clear deliverables, timelines, and investment.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <div style="background: linear-gradient(135deg, #0D1B2A 0%, #1B3A5C 100%); color: #ffffff; border-radius: 8px; padding: 16px; margin-bottom: 30px; text-align: center;">
+                        <p style="margin: 0; font-size: 14px;">🤝 <strong>No Obligation:</strong> The discovery call is completely free. We only proceed if there's mutual fit.</p>
+                      </div>
+
+                      <p style="color: #666666; font-size: 14px; line-height: 1.6; margin: 0;">
+                        Questions? Reply to this email or reach out at <a href="mailto:support@bizhealth.ai" style="color: #38B2AC; font-weight: 600;">support@bizhealth.ai</a>
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- Footer -->
+                  <tr>
+                    <td style="background-color: #f8f9fa; padding: 30px 40px; text-align: center; border-top: 1px solid #e9ecef;">
+                      <p style="color: #666666; font-size: 14px; margin: 0 0 10px;">
+                        <strong>BizGuides Custom Solutions by BizHealth.ai</strong>
+                      </p>
+                      <p style="color: #999999; font-size: 12px; margin: 0;">
+                        <a href="https://bizhealth.ai/bizguides/request-custom" style="color: #38B2AC;">Learn More</a> | 
+                        <a href="https://bizhealth.ai/privacy" style="color: #38B2AC;">Privacy Policy</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
+      `;
+
+      // Send confirmation email
+      const { error: confirmError } = await resend.emails.send({
+        from: fromEmail,
+        to: [data.email],
+        subject: "🎯 Your Custom BizGuides Solution Request Is Confirmed!",
+        html: confirmationEmailHtml,
+      });
+
+      if (confirmError) {
+        console.error("Failed to send confirmation email:", confirmError);
+      } else {
+        console.log("Confirmation email sent to:", data.email);
+      }
+
+      // Team notification email
+      emailSubject = "🚀 New Custom BizGuides Solution Request";
+      emailHtml = `
+        <h2 style="color: #0D1B2A;">New Custom BizGuides Solution Request</h2>
+        <div style="background: linear-gradient(135deg, #38B2AC 0%, #319795 100%); color: #fff; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px;">
+          <strong>Solution Type:</strong> ${escapeHtml(solutionLabel)}
+        </div>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Name</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(fullName)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Email</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Phone</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(phone || "Not provided")}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Company</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(companyName)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Title/Role</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(title)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Industry</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(industry)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Revenue Range</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(revenueRange)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Team Size</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(teamSize)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Timeline</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(idealTimeline)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Preferred Contact</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(contactPreference)}</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Form Completion Time</strong></td>
+            <td style="padding: 10px; border: 1px solid #ddd;">${formCompletionTime}s</td>
+          </tr>
+        </table>
+        <h3 style="color: #333; margin-top: 20px;">Areas of Focus:</h3>
+        <div style="background-color: #e8f5f4; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+          <ul style="margin: 0; padding-left: 20px; color: #333;">
+            ${areasOfFocus.map(area => `<li>${escapeHtml(area)}</li>`).join("")}
+          </ul>
+        </div>
+        <h3 style="color: #333; margin-top: 20px;">Challenge Description:</h3>
+        <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #0D1B2A; margin-bottom: 20px;">
+          <p style="margin: 0; color: #333;">${escapeHtml(challengeDescription)}</p>
+        </div>
+        ${successMetrics ? `
+        <h3 style="color: #333; margin-top: 20px;">Success Metrics:</h3>
+        <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #38B2AC; margin-bottom: 20px;">
+          <p style="margin: 0; color: #333;">${escapeHtml(successMetrics)}</p>
+        </div>
+        ` : ""}
+        ${constraints ? `
+        <h3 style="color: #333; margin-top: 20px;">Constraints/Considerations:</h3>
+        <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #ffc107; margin-bottom: 20px;">
+          <p style="margin: 0; color: #333;">${escapeHtml(constraints)}</p>
+        </div>
+        ` : ""}
+        <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+        <p style="margin-top: 20px; background-color: #fff3cd; padding: 12px; border-radius: 6px; border-left: 4px solid #ffc107;"><em>⏰ <strong>PRIORITY:</strong> Schedule discovery call within 48 hours. High-value lead.</em></p>
       `;
     } else if (data.type === "contact_form") {
       emailSubject = `New Contact Form: ${escapeHtml(data.subject || "General Inquiry")}`;

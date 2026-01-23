@@ -42,6 +42,7 @@ const ogImageMap = {
   '/biztools/toolbox/process-mapping-tools/guide': '/og-images/og-process-mapping-guide.jpg',
   '/biztools/toolbox/free-roi-calculator': '/og-images/og-roi-calculator.jpg',
   '/bizguides': '/og-images/og-bizguides.jpg',
+  '/bizguides/request-custom': '/og-images/og-bizguides-custom.jpg',
   '/bizguides/bizguide-sherpa': '/og-images/og-bizguide-sherpa.jpg',
   '/bizleader': '/og-images/og-bizleader.jpg',
   '/bizleader/leadership-development-bot': '/og-images/og-bizleader-bot.jpg',

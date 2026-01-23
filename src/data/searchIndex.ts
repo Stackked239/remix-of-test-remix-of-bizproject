@@ -534,6 +534,14 @@ export const searchableCurriculum: SearchableItem[] = [
     url: "/bizgrowth/voc/core-components",
     keywords: "VoC core components, VoC module 2, four components, active feedback, passive feedback, omnichannel listening, closing the loop, centralized data, feedback tracker, feedback collection methods, customer surveys, review monitoring, social listening, support tickets, feedback channels, response loop, customer follow-up, feedback data management, VoC system components, VoC training module 2, bizgrowth academy VoC, feedback tracker template, free feedback tracker, NPS survey, CSAT survey, post-purchase survey, review collection, Google reviews, feedback consolidation, customer data hub, VoC architecture, VoC building blocks, VoC framework, VoC system design, multi-channel feedback, customer touchpoints, feedback sources, VoC best practices, SMB feedback system, small business VoC system, how to collect feedback, feedback collection guide",
     icon: GraduationCap
+  },
+  {
+    type: "Curriculum",
+    title: "Module 3: Measuring What Matters - Voice of Customer Curriculum",
+    excerpt: "Learn to measure customer satisfaction with 4 proven metrics: NPS, CSAT, CES, and Sentiment Analysis. Interactive NPS calculator, downloadable survey templates, and 7-day quick start checklist included.",
+    url: "/bizgrowth/voc/metrics",
+    keywords: "VoC metrics, VoC module 3, measuring customer satisfaction, NPS, net promoter score, CSAT, customer satisfaction score, CES, customer effort score, sentiment analysis, NPS calculator, customer metrics, satisfaction metrics, customer feedback metrics, survey metrics, loyalty metrics, customer loyalty score, promoters detractors passives, NPS survey, CSAT survey, CES survey, sentiment tracking, feedback measurement, customer analytics, VoC measurement, measure customer experience, track customer satisfaction, customer score, NPS benchmark, CSAT benchmark, VoC KPIs, customer feedback KPIs, satisfaction KPIs, loyalty measurement, retention metrics, churn prediction, customer health score, feedback analytics, VoC dashboard, metrics template, survey template, NPS template, CSAT template, VoC training module 3, bizgrowth academy VoC, customer metrics guide, how to measure satisfaction, which metric to use, choosing customer metrics, 7 day quick start, metric trends, trend analysis",
+    icon: GraduationCap
   }
 ];
 

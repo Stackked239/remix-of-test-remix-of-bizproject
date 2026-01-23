@@ -42,7 +42,8 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
       startWith: "CSAT (easiest, most actionable)",
       add: "Sentiment monitoring (free, passive)",
       why: "You're optimizing first interactions. CSAT tells you if they're working. Sentiment catches problems early with zero effort.",
-      highlight: userSegment === 'launch'
+      highlight: userSegment === 'launch',
+      borderColor: "biz-gold"
     },
     {
       icon: TrendingUp,
@@ -51,7 +52,8 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
       startWith: "Keep CSAT + Sentiment",
       add: "NPS (track loyalty quarterly)",
       why: "Now you care about repeat customers and referrals. NPS shows if satisfied customers are becoming advocates.",
-      highlight: userSegment === 'growth'
+      highlight: userSegment === 'growth',
+      borderColor: "biz-lime"
     },
     {
       icon: Building2,
@@ -60,7 +62,8 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
       startWith: "Use all four metrics",
       add: "NPS, CSAT, CES, Sentiment",
       why: "At scale, you have the data volume and operational complexity to benefit from all four perspectives working together.",
-      highlight: userSegment === 'scaling' || userSegment === 'enterprise'
+      highlight: userSegment === 'scaling' || userSegment === 'enterprise',
+      borderColor: "biz-teal"
     },
   ];
 
@@ -124,15 +127,15 @@ const Module3ChoosingMetric = ({ userSegment, onView }: Module3ChoosingMetricPro
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card border rounded-xl p-5 transition-all ${
+                className={`bg-card border-2 border-[hsl(var(--${stage.borderColor}))] rounded-xl p-5 transition-all ${
                   stage.highlight 
-                    ? 'border-[hsl(var(--biz-green))] ring-2 ring-[hsl(var(--biz-green))]/20' 
+                    ? 'ring-2 ring-[hsl(var(--biz-green))]/20' 
                     : ''
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[hsl(var(--biz-green))]/10">
-                    <stage.icon className="h-6 w-6 text-[hsl(var(--biz-green))]" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-[hsl(var(--${stage.borderColor}))]/10`}>
+                    <stage.icon className={`h-6 w-6 text-[hsl(var(--${stage.borderColor}))]`} />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">

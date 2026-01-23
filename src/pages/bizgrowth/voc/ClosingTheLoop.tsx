@@ -112,7 +112,7 @@ const ClosingTheLoop = () => {
 
       <main className="pt-24">
         {/* Progress Bar - sticky under nav */}
-        <div className="sticky top-[80px] z-40 bg-background/95 backdrop-blur-sm border-b">
+        <div className="sticky top-[144px] z-30 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap mb-3">

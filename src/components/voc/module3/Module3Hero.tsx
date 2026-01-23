@@ -27,10 +27,10 @@ const Module3Hero = ({ onView }: Module3HeroProps) => {
   }, [onView]);
 
   const learningObjectives = [
-    { icon: BarChart3, text: "Understand 4 key customer satisfaction metrics" },
-    { icon: Target, text: "Know which metric to use for different situations" },
-    { icon: Calculator, text: "Calculate and interpret scores correctly" },
-    { icon: FileCheck, text: "Get templates to start measuring this week" },
+    { icon: BarChart3, text: "Understand 4 key customer satisfaction metrics", color: "biz-blue" },
+    { icon: Target, text: "Know which metric to use for different situations", color: "biz-green" },
+    { icon: Calculator, text: "Calculate and interpret scores correctly", color: "biz-gold" },
+    { icon: FileCheck, text: "Get templates to start measuring this week", color: "biz-teal" },
   ];
 
   return (
@@ -92,8 +92,8 @@ const Module3Hero = ({ onView }: Module3HeroProps) => {
                 transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                 className="flex items-start gap-3"
               >
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[hsl(var(--biz-blue))]/10 flex items-center justify-center border border-[hsl(var(--biz-blue))]/20">
-                  <objective.icon className="h-4 w-4 text-[hsl(var(--biz-blue))]" />
+                <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-[hsl(var(--${objective.color}))]/10 flex items-center justify-center border border-[hsl(var(--${objective.color}))]/20`}>
+                  <objective.icon className={`h-4 w-4 text-[hsl(var(--${objective.color}))]`} />
                 </div>
                 <span className="text-foreground pt-1">{objective.text}</span>
               </motion.li>

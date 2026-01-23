@@ -14,7 +14,7 @@ const Module2Navigation = ({ isComplete }: Module2NavigationProps) => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link 
               to={VOC_URLS.modules[1].url} 
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[hsl(var(--biz-blue))]/30 text-[hsl(var(--biz-blue))] hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-background border border-[hsl(var(--biz-blue))]/30 text-[hsl(var(--biz-blue))] hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
               <span className="text-sm font-medium">Module 1: Why VoC Matters</span>
@@ -30,7 +30,7 @@ const Module2Navigation = ({ isComplete }: Module2NavigationProps) => {
             <Link
               to={isComplete ? VOC_URLS.modules[3].url : '#'}
               onClick={(e) => !isComplete && e.preventDefault()}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-background border transition-colors ${
                 isComplete 
                   ? 'border-[hsl(var(--biz-green))]/30 text-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50' 
                   : 'border-muted text-muted-foreground cursor-not-allowed'

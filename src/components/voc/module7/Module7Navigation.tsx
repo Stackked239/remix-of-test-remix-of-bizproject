@@ -12,7 +12,7 @@ const Module7Navigation = () => {
             <Button 
               asChild 
               variant="outline" 
-              className="gap-2 border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
+              className="gap-2 bg-background border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
             >
               <Link to={VOC_URLS.modules[6].url}>
                 <ChevronLeft className="w-4 h-4" />
@@ -23,7 +23,7 @@ const Module7Navigation = () => {
               <Button 
                 asChild 
                 variant="outline" 
-                className="gap-2 border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 text-[hsl(var(--biz-green))]"
+                className="gap-2 bg-background border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 text-[hsl(var(--biz-green))]"
               >
                 <Link to={VOC_URLS.landing}>
                   <Home className="w-4 h-4" />
@@ -33,7 +33,7 @@ const Module7Navigation = () => {
               <Button 
                 asChild 
                 variant="outline" 
-                className="gap-2 border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
+                className="gap-2 bg-background border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
               >
                 <Link to="/bizgrowth">
                   <BookOpen className="w-4 h-4" />

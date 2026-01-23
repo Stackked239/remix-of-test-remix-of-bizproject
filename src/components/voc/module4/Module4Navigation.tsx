@@ -99,7 +99,7 @@ const Module4Navigation = ({ isComplete }: Module4NavigationProps) => {
             <Button 
               variant="outline" 
               asChild 
-              className="gap-2 border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
+              className="gap-2 bg-background border-[hsl(var(--biz-blue))]/30 hover:bg-[hsl(var(--biz-blue))]/10 hover:border-[hsl(var(--biz-blue))]/50 text-[hsl(var(--biz-blue))]"
             >
               <Link to={VOC_URLS.modules[3].url}>
                 <ArrowLeft className="h-4 w-4" />
@@ -118,7 +118,7 @@ const Module4Navigation = ({ isComplete }: Module4NavigationProps) => {
             <Button 
               variant="outline" 
               asChild 
-              className="gap-2 border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 text-[hsl(var(--biz-green))]"
+              className="gap-2 bg-background border-[hsl(var(--biz-green))]/30 hover:bg-[hsl(var(--biz-green))]/10 hover:border-[hsl(var(--biz-green))]/50 text-[hsl(var(--biz-green))]"
             >
               <Link to={VOC_URLS.modules[5].url}>
                 <span className="hidden sm:inline">Next: 7-Day Quick Start</span>

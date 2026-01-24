@@ -140,7 +140,7 @@ const BizGuidesTierComparison = () => {
             {tiers.map((tier, index) => (
               <motion.div
                 key={tier.id}
-                className={`relative bg-background rounded-2xl p-8 flex flex-col border-2 border-[hsl(var(--${tier.color}))] ${
+                className={`relative bg-background rounded-2xl p-8 flex flex-col border-2 border-[hsl(var(--${tier.color}))] transition-all duration-300 hover:border-[hsl(var(--${tier.color}))] hover:shadow-lg hover:shadow-[hsl(var(--${tier.color}))]/15 ${
                   tier.isFeatured 
                     ? 'shadow-xl shadow-[hsl(var(--biz-teal))]/10 lg:scale-[1.02] z-10' 
                     : 'shadow-md'
@@ -149,6 +149,7 @@ const BizGuidesTierComparison = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -4 }}
               >
                 {/* Featured Badge */}
                 {tier.isFeatured && (
@@ -223,10 +224,8 @@ const BizGuidesTierComparison = () => {
                     <Button 
                       size="lg"
                       onClick={() => handleTierCta(tier)}
-                      className={`w-full font-montserrat font-semibold ${
-                        tier.isFeatured 
-                          ? 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background shadow-lg shadow-[hsl(var(--biz-teal))]/20' 
-                          : 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background'
+                      className={`w-full font-montserrat font-semibold bg-[hsl(var(--${tier.color}))] hover:brightness-110 text-background ${
+                        tier.isFeatured ? 'shadow-lg shadow-[hsl(var(--biz-teal))]/20' : ''
                       }`}
                     >
                       {tier.ctaText}
@@ -236,10 +235,8 @@ const BizGuidesTierComparison = () => {
                     <Button 
                       asChild
                       size="lg"
-                      className={`w-full font-montserrat font-semibold ${
-                        tier.isFeatured 
-                          ? 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background shadow-lg shadow-[hsl(var(--biz-teal))]/20' 
-                          : 'bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background'
+                      className={`w-full font-montserrat font-semibold bg-[hsl(var(--${tier.color}))] hover:brightness-110 text-background ${
+                        tier.isFeatured ? 'shadow-lg shadow-[hsl(var(--biz-teal))]/20' : ''
                       }`}
                     >
                       <Link to={tier.ctaLink}>
@@ -252,14 +249,14 @@ const BizGuidesTierComparison = () => {
                   {tier.secondaryCtaLink ? (
                     <Link 
                       to={tier.secondaryCtaLink}
-                      className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors block"
+                      className={`w-full text-center font-open-sans text-sm text-[hsl(var(--${tier.color}))] hover:brightness-125 transition-all block`}
                     >
                       {tier.secondaryCta}
                     </Link>
                   ) : (
                     <button 
                       onClick={scrollToFaq}
-                      className="w-full text-center font-open-sans text-sm text-[hsl(var(--biz-teal))] hover:text-[hsl(180,100%,30%)] transition-colors"
+                      className={`w-full text-center font-open-sans text-sm text-[hsl(var(--${tier.color}))] hover:brightness-125 transition-all`}
                     >
                       {tier.secondaryCta}
                     </button>

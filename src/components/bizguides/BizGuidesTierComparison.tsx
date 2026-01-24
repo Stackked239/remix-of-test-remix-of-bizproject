@@ -23,6 +23,7 @@ interface TierData {
   timeline?: string;
   isModal?: boolean;
   color: "biz-blue" | "biz-teal" | "biz-green";
+  badge: string;
 }
 
 const tiers: TierData[] = [
@@ -45,7 +46,8 @@ const tiers: TierData[] = [
     ctaLink: "/blog",
     secondaryCta: "Upgrade to coaching →",
     isFeatured: false,
-    color: "biz-blue"
+    color: "biz-blue",
+    badge: "Zero Cost"
   },
   {
     id: "tier2",
@@ -70,7 +72,8 @@ const tiers: TierData[] = [
     secondaryCta: "See how it works →",
     isFeatured: true,
     isModal: true,
-    color: "biz-teal"
+    color: "biz-teal",
+    badge: "Most Popular"
   },
   {
     id: "tier3",
@@ -95,7 +98,8 @@ const tiers: TierData[] = [
     secondaryCta: "Submit a request →",
     secondaryCtaLink: "/bizguides/request-custom",
     isFeatured: false,
-    color: "biz-green"
+    color: "biz-green",
+    badge: "Full Service"
   }
 ];
 
@@ -151,13 +155,11 @@ const BizGuidesTierComparison = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -4 }}
               >
-                {/* Featured Badge */}
-                {tier.isFeatured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(var(--biz-teal))] text-background font-montserrat font-semibold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide flex items-center gap-1.5">
-                    <Sparkles className="w-3 h-3" />
-                    Most Popular
-                  </div>
-                )}
+                {/* Tier Badge */}
+                <div className={`absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(var(--${tier.color}))] text-background font-montserrat font-semibold text-xs px-4 py-1.5 rounded-full uppercase tracking-wide flex items-center gap-1.5`}>
+                  <Sparkles className="w-3 h-3" />
+                  {tier.badge}
+                </div>
 
                 {/* Header */}
                 <div className="mb-5">

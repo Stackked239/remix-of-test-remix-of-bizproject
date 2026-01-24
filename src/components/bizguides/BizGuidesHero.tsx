@@ -52,13 +52,13 @@ const BizGuidesHero = () => {
             </motion.div>
 
             <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-[56px] leading-tight text-[hsl(var(--biz-navy))] mb-4">
-              Awareness Is Just
+              Expert Guidance,
               <br />
-              <span className="text-background">the Start.</span>
+              <span className="text-background">Real Results</span>
             </h1>
             
             <p className="font-montserrat font-semibold text-xl md:text-2xl text-background/95 mb-4">
-              Now Comes the Challenging Part.
+              From Gaps to Guided Wins
             </p>
             
             <p className="font-open-sans text-lg text-background/90 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">

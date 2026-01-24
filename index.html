@@ -98,5 +98,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Cody Floating Chat Widget - loaded outside React for reliability -->
+    <script>
+      window.codySettings = {
+        widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef',
+        base_url: 'https://getcody.ai'
+      };
+    </script>
+    <script src="https://trinketsofcody.com/cody-widget.js" async></script>
   </body>
 </html>

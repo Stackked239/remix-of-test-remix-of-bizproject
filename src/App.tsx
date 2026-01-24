@@ -11,8 +11,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-// CodyWidget loaded directly (not lazy) for reliable SSG hydration
-import CodyWidget from "@/components/CodyWidget";
+// CodyWidget is now loaded directly in index.html for maximum reliability
+// import CodyWidget from "@/components/CodyWidget";
 
 // Lazy load all other pages for code splitting
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
@@ -191,7 +191,7 @@ const App = () => (
       <AuthProvider>
         <Toaster />
         <Sonner />
-        <CodyWidget />
+        {/* CodyWidget now loaded via index.html for SSG reliability */}
         <BrowserRouter>
           <ScrollToTop />
           <Suspense fallback={<PageLoader />}>

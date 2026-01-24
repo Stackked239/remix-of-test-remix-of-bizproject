@@ -1,19 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export const CodyWidget = () => {
+  const hasInitialized = useRef(false);
+
   useEffect(() => {
+    // Prevent double initialization (React 18 StrictMode)
+    if (hasInitialized.current) return;
+    hasInitialized.current = true;
+
     const loadWidget = () => {
+      // Avoid duplicate injection
+      const existing = document.getElementById('cody-widget-loader') as HTMLScriptElement | null;
+      if (existing) {
+        console.log('[CodyWidget] Script already exists, skipping');
+        return;
+      }
+
       // Expose Cody settings before script loads
       (window as any).codySettings = {
         widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef',
         base_url: 'https://getcody.ai',
       };
 
-      // Avoid duplicate injection (React 18 StrictMode double-invokes effects in dev)
-      const existing = document.getElementById('cody-widget-loader') as HTMLScriptElement | null;
-      if (existing) {
-        return; // already loaded
-      }
+      console.log('[CodyWidget] Injecting cody-widget.js script');
 
       const script = document.createElement('script');
       script.id = 'cody-widget-loader';
@@ -21,7 +30,6 @@ export const CodyWidget = () => {
       script.async = true;
       script.src = 'https://trinketsofcody.com/cody-widget.js';
       
-      // Add error logging for debugging production issues
       script.onerror = (e) => {
         console.error('[CodyWidget] Failed to load cody-widget.js:', e);
       };
@@ -30,7 +38,6 @@ export const CodyWidget = () => {
         console.log('[CodyWidget] Script loaded successfully');
       };
 
-      // Insert at end of body for lowest priority
       document.body.appendChild(script);
 
       // Patch Cody iframes with required permissions and top z-index
@@ -49,26 +56,31 @@ export const CodyWidget = () => {
       patchIframes();
     };
 
-    // Use a shorter delay and multiple fallback triggers for production reliability
-    const initWidget = () => {
-      setTimeout(loadWidget, 500);
+    // For SSG: wait for hydration to complete before injecting external scripts
+    // Use requestIdleCallback for better timing, with setTimeout fallback
+    const scheduleLoad = () => {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => {
+          setTimeout(loadWidget, 100);
+        }, { timeout: 2000 });
+      } else {
+        setTimeout(loadWidget, 500);
+      }
     };
 
-    // Try multiple approaches to ensure widget loads in production SSG context
+    // Check document ready state for SSG hydration scenarios
     if (document.readyState === 'complete') {
-      initWidget();
-    } else if (document.readyState === 'interactive') {
-      // Page is interactive but not fully loaded - wait a bit then init
-      setTimeout(initWidget, 100);
+      scheduleLoad();
     } else {
-      // Page is still loading
-      window.addEventListener('load', initWidget);
-      // Also listen for DOMContentLoaded as a fallback
-      window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(initWidget, 200);
-      });
+      // Wait for page to fully load
+      const handleLoad = () => {
+        scheduleLoad();
+        window.removeEventListener('load', handleLoad);
+      };
+      window.addEventListener('load', handleLoad);
+      
       return () => {
-        window.removeEventListener('load', initWidget);
+        window.removeEventListener('load', handleLoad);
       };
     }
   }, []);

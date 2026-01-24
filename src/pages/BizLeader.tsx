@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,9 +8,11 @@ import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import LeadershipQuiz from "@/components/LeadershipQuiz";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+
+// Lazy load heavy components
+const LeadershipQuiz = lazy(() => import("@/components/LeadershipQuiz"));
 
 const BizLeader = () => {
   const [countdown, setCountdown] = useState("");
@@ -202,8 +204,10 @@ const BizLeader = () => {
         </div>
       </section>
 
-      {/* Leadership Quiz Section */}
-      <LeadershipQuiz />
+      {/* Leadership Quiz Section - Lazy loaded */}
+      <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-pulse bg-muted rounded-lg h-32 w-full max-w-4xl mx-6" /></div>}>
+        <LeadershipQuiz />
+      </Suspense>
 
       {/* Programs Section */}
       <section className="py-20 bg-background">

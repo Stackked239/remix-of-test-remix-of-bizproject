@@ -32,7 +32,7 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
-    title: "Build Your High-Performing Team: The Unglamorous Truth About What Actually Works",
+    title: "Build A High-Performing Team: The Unglamorous Truth About What Actually Works",
     excerpt: "Learn why team dynamics matter more than individual talent. Discover the 4 foundations: trust, transparency, clear goals, and accountability. 18-month transformation guide.",
     author: "BizHealth.ai Research Team",
     date: "January 24, 2026",

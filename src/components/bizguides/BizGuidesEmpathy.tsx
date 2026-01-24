@@ -38,7 +38,7 @@ const BizGuidesEmpathy = () => {
           </h2>
           
           <p className="font-open-sans text-lg text-muted-foreground leading-relaxed">
-            You have clarity on where your business stands—12 diagnostic categories, clear scores, peer benchmarks. But translating that insight into action? That's where most leaders get stuck. You're juggling operations, cash flow, and team management. A 6-month consulting engagement isn't realistic. You need expert guidance that fits your timeline and budget.
+            You understand where your business needs improvement. But translating that awareness into action? That's where most leaders get stuck. You're juggling operations, cash flow, and team management. A 6-month consulting engagement isn't realistic. You need expert guidance that fits your timeline and budget.
           </p>
         </motion.div>
 

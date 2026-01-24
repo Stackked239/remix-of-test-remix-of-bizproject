@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Compass, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import heroImage from "@/assets/images/bizguides-hero-consultation.jpg";
 
 const BizGuidesHero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -11,39 +12,66 @@ const BizGuidesHero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(237,40%,28%)] to-[hsl(237,35%,35%)]">
-      {/* Subtle background accents */}
+    <section className="relative overflow-hidden min-h-[600px] lg:min-h-[650px]">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="Business professionals in strategic consultation session" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--biz-teal))]/95 via-[hsl(var(--biz-teal))]/85 to-[hsl(var(--biz-teal))]/70" />
+      </div>
+
+      {/* Subtle accent elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-[hsl(var(--biz-teal))]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-20 w-80 h-80 bg-background/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-96 h-96 bg-background/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-[hsl(var(--biz-navy))]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative container mx-auto px-6 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-5 gap-12 items-center min-h-[500px]">
-          {/* Content - 60% */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[450px]">
+          {/* Content */}
           <motion.div 
-            className="lg:col-span-3 text-center lg:text-left"
+            className="text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-[52px] leading-tight text-background mb-6">
-              Your Diagnostic is Done.
+            {/* Badge */}
+            <motion.div 
+              className="inline-flex items-center gap-2 bg-background/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
+              <span className="text-background font-montserrat font-semibold text-sm">BizGuides</span>
+              <span className="text-background/70 text-sm">•</span>
+              <span className="text-background/90 font-open-sans text-sm">Coaching & Consulting</span>
+            </motion.div>
+
+            <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-[56px] leading-tight text-[hsl(var(--biz-navy))] mb-4">
+              Expert Guidance,
               <br />
-              <span className="text-[hsl(var(--biz-teal))]">Now Comes the Execution.</span>
+              <span className="text-background">Real Results</span>
             </h1>
             
-            <p className="font-open-sans text-lg md:text-xl text-background/90 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Expert coaching powered by your BizHealth insights—get unstuck in one focused session.
+            <p className="font-montserrat font-semibold text-xl md:text-2xl text-background/95 mb-4">
+              From Gaps to Guided Wins
+            </p>
+            
+            <p className="font-open-sans text-lg text-background/90 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              Your trusted source for dedicated business coaching and consulting—providing personalized guidance powered by expertise, insight, and real-world experience. Navigate challenges with confidence and accelerate your growth journey.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
                 onClick={() => scrollToSection('tier-comparison')}
-                className="bg-[hsl(var(--biz-teal))] hover:bg-[hsl(180,100%,30%)] text-background font-montserrat font-semibold text-base px-8 py-6 rounded-lg shadow-lg shadow-[hsl(var(--biz-teal))]/20 transition-all hover:shadow-xl hover:-translate-y-0.5"
+                className="bg-[hsl(var(--biz-navy))] hover:bg-[hsl(237,40%,25%)] text-background font-montserrat font-semibold text-base px-8 py-6 rounded-lg shadow-lg shadow-[hsl(var(--biz-navy))]/30 transition-all hover:shadow-xl hover:-translate-y-0.5"
               >
-                Browse Free Resources
+                Schedule a Session
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               
@@ -51,31 +79,49 @@ const BizGuidesHero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('tier-comparison')}
-                className="border-2 border-[hsl(var(--biz-teal))] text-[hsl(var(--biz-teal))] hover:bg-[hsl(var(--biz-teal))]/10 font-montserrat font-semibold text-base px-8 py-6 rounded-lg bg-transparent transition-all"
+                className="border-2 border-background text-background hover:bg-background/10 font-montserrat font-semibold text-base px-8 py-6 rounded-lg bg-transparent transition-all"
               >
-                Schedule a Session
+                View Services
               </Button>
             </div>
           </motion.div>
 
-          {/* Visual - 40% */}
+          {/* Right side - floating stats or trust indicators */}
           <motion.div 
-            className="lg:col-span-2 hidden lg:flex justify-center items-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hidden lg:flex flex-col gap-6 items-end"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="relative">
-              {/* Compass container */}
-              <div className="w-64 h-64 bg-gradient-to-br from-[hsl(var(--biz-teal))]/20 to-[hsl(var(--biz-teal))]/5 rounded-full flex items-center justify-center border border-[hsl(var(--biz-teal))]/30">
-                <div className="w-48 h-48 bg-gradient-to-br from-background/10 to-background/5 rounded-full flex items-center justify-center border border-background/20">
-                  <Compass className="w-24 h-24 text-[hsl(var(--biz-teal))] animate-pulse" strokeWidth={1.5} />
+            {/* Trust indicators */}
+            <div className="bg-background/15 backdrop-blur-sm rounded-2xl p-6 border border-background/20 max-w-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-navy))] flex items-center justify-center">
+                  <span className="text-background font-montserrat font-bold text-lg">✓</span>
+                </div>
+                <div>
+                  <p className="font-montserrat font-bold text-background text-lg">Vetted Experts</p>
+                  <p className="font-open-sans text-background/80 text-sm">Industry-specific advisors</p>
                 </div>
               </div>
-              
-              {/* Floating accent elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-[hsl(var(--biz-teal))]/20 rounded-full blur-md" />
-              <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-background/10 rounded-full blur-lg" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-navy))] flex items-center justify-center">
+                  <span className="text-background font-montserrat font-bold text-lg">⚡</span>
+                </div>
+                <div>
+                  <p className="font-montserrat font-bold text-background text-lg">Rapid Results</p>
+                  <p className="font-open-sans text-background/80 text-sm">Actionable guidance in one session</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-[hsl(var(--biz-navy))] flex items-center justify-center">
+                  <span className="text-background font-montserrat font-bold text-lg">🎯</span>
+                </div>
+                <div>
+                  <p className="font-montserrat font-bold text-background text-lg">Tailored Solutions</p>
+                  <p className="font-open-sans text-background/80 text-sm">Matched to your growth stage</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

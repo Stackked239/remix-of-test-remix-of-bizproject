@@ -101,9 +101,9 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "BizGuides - Expert Coaching & Consulting for SMB Growth",
-    excerpt: "Get expert coaching and consulting to turn BizHealth insights into real business momentum. Free articles, 1:1 sessions, and custom solutions for every growth stage.",
+    excerpt: "Get expert coaching and consulting to turn awareness into real business momentum. Free articles, 1:1 sessions, and custom solutions for every growth stage.",
     url: "/bizguides",
-    keywords: "bizguides, coaching, consulting, expert guidance, business coach, SMB consultant, 1:1 sessions, custom solutions, executive coaching, business advisor, professional services, implementation support, hands-on help, personalized guidance, growth coaching, leadership coaching, strategy consulting, business mentoring, advisor matching, fractional consultant",
+    keywords: "bizguides, coaching, consulting, expert guidance, business coach, SMB consultant, 1:1 sessions, custom solutions, executive coaching, business advisor, professional services, implementation support, hands-on help, personalized guidance, growth coaching, leadership coaching, strategy consulting, business mentoring, advisor matching, fractional consultant, online business coaching, online business consultant, ai business consultant, ai business coach, free business coaching, virtual business coach, remote consulting, digital coaching, small business advisor, startup coach, entrepreneur coaching, business mentor online",
     icon: Home
   },
   {

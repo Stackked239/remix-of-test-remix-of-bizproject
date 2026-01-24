@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import heroImage from "@/assets/images/bizguides-hero-consultation.jpg";
 
 const BizGuidesHero = () => {
@@ -11,6 +12,19 @@ const BizGuidesHero = () => {
     }
   };
 
+  // Preload hero image for better LCP
+  useEffect(() => {
+    const existingPreload = document.querySelector(`link[rel="preload"][href="${heroImage}"]`);
+    if (!existingPreload) {
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.as = 'image';
+      preloadLink.href = heroImage;
+      preloadLink.setAttribute('fetchpriority', 'high');
+      document.head.appendChild(preloadLink);
+    }
+  }, []);
+
   return (
     <section className="relative overflow-hidden min-h-[600px] lg:min-h-[650px]">
       {/* Background Image with Overlay */}
@@ -18,6 +32,12 @@ const BizGuidesHero = () => {
         <img 
           src={heroImage} 
           alt="Business professionals in strategic consultation session" 
+          width={1920}
+          height={1080}
+          loading="eager"
+          decoding="sync"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
           className="w-full h-full object-cover object-center"
         />
         {/* Gradient overlay for text readability */}

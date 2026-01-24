@@ -113,7 +113,12 @@ const Contact = () => {
           src={heroImage} 
           alt="Business health dashboard showing analytics of comprehensive business assessment"
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
+          width={1920}
+          height={300}
+          loading="eager"
+          decoding="sync"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-primary/80"></div>
         <div className="relative container mx-auto px-6 h-full flex items-center justify-center">

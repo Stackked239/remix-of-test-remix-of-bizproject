@@ -32,7 +32,7 @@ const BizGuidesSolutionIntro = () => {
           </p>
           
           <p className="font-open-sans text-lg text-foreground font-medium">
-            Move from stuck to scaling with guidance powered by your business reality, not generic playbooks.
+            Move from stuck to scaling with guidance tailored to your unique challenges, not generic playbooks.
           </p>
         </motion.div>
       </div>

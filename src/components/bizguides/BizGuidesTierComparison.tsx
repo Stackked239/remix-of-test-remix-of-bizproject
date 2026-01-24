@@ -22,6 +22,7 @@ interface TierData {
   guarantee?: string;
   timeline?: string;
   isModal?: boolean;
+  color: "biz-blue" | "biz-teal" | "biz-green";
 }
 
 const tiers: TierData[] = [
@@ -43,7 +44,8 @@ const tiers: TierData[] = [
     ctaText: "Browse Free Resources",
     ctaLink: "/blog",
     secondaryCta: "Upgrade to coaching →",
-    isFeatured: false
+    isFeatured: false,
+    color: "biz-blue"
   },
   {
     id: "tier2",
@@ -67,7 +69,8 @@ const tiers: TierData[] = [
     ctaLink: "",
     secondaryCta: "See how it works →",
     isFeatured: true,
-    isModal: true
+    isModal: true,
+    color: "biz-teal"
   },
   {
     id: "tier3",
@@ -91,7 +94,8 @@ const tiers: TierData[] = [
     ctaLink: "/bizguides/request-custom",
     secondaryCta: "Submit a request →",
     secondaryCtaLink: "/bizguides/request-custom",
-    isFeatured: false
+    isFeatured: false,
+    color: "biz-green"
   }
 ];
 
@@ -136,10 +140,10 @@ const BizGuidesTierComparison = () => {
             {tiers.map((tier, index) => (
               <motion.div
                 key={tier.id}
-                className={`relative bg-background rounded-2xl p-8 flex flex-col ${
+                className={`relative bg-background rounded-2xl p-8 flex flex-col border-2 border-[hsl(var(--${tier.color}))] ${
                   tier.isFeatured 
-                    ? 'border-2 border-[hsl(var(--biz-teal))] shadow-xl shadow-[hsl(var(--biz-teal))]/10 lg:scale-[1.02] z-10' 
-                    : 'border border-border/50 shadow-md'
+                    ? 'shadow-xl shadow-[hsl(var(--biz-teal))]/10 lg:scale-[1.02] z-10' 
+                    : 'shadow-md'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +160,7 @@ const BizGuidesTierComparison = () => {
 
                 {/* Header */}
                 <div className="mb-5">
-                  <span className="font-montserrat text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  <span className={`font-montserrat text-xs font-semibold text-[hsl(var(--${tier.color}))] uppercase tracking-wider`}>
                     {tier.label}
                   </span>
                   <h3 className="font-montserrat font-bold text-xl md:text-2xl text-foreground mt-2 mb-2">
@@ -168,8 +172,8 @@ const BizGuidesTierComparison = () => {
                 </div>
 
                 {/* Best For */}
-                <div className="bg-[hsl(var(--biz-teal))]/5 rounded-lg p-4 mb-5">
-                  <span className="font-montserrat text-xs font-semibold text-[hsl(var(--biz-teal))] uppercase tracking-wide">
+                <div className={`bg-[hsl(var(--${tier.color}))]/5 rounded-lg p-4 mb-5`}>
+                  <span className={`font-montserrat text-xs font-semibold text-[hsl(var(--${tier.color}))] uppercase tracking-wide`}>
                     Best For
                   </span>
                   <p className="font-open-sans text-sm text-muted-foreground mt-1.5 leading-relaxed">
@@ -181,7 +185,7 @@ const BizGuidesTierComparison = () => {
                 <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-[hsl(var(--biz-teal))] flex-shrink-0 mt-0.5" />
+                      <Check className={`w-5 h-5 text-[hsl(var(--${tier.color}))] flex-shrink-0 mt-0.5`} />
                       <span className="font-open-sans text-sm text-muted-foreground leading-snug">
                         {feature}
                       </span>

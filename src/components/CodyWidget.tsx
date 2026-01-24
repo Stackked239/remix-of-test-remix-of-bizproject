@@ -1,17 +1,23 @@
 import { useEffect, useRef } from 'react';
 
+const MAX_RETRIES = 3;
+const RETRY_DELAYS = [1000, 3000, 5000]; // Exponential backoff
+
 export const CodyWidget = () => {
   const hasInitialized = useRef(false);
+  const retryCount = useRef(0);
 
   useEffect(() => {
-    // Prevent double initialization (React 18 StrictMode)
     if (hasInitialized.current) return;
     hasInitialized.current = true;
 
-    const loadWidget = () => {
-      // Avoid duplicate injection
-      const existing = document.getElementById('cody-widget-loader') as HTMLScriptElement | null;
-      if (existing) {
+    const loadWidget = (attempt = 0) => {
+      // Remove failed script if retrying
+      const existing = document.getElementById('cody-widget-loader');
+      if (existing && attempt > 0) {
+        existing.remove();
+        console.log(`[CodyWidget] Retry attempt ${attempt}/${MAX_RETRIES}`);
+      } else if (existing) {
         console.log('[CodyWidget] Script already exists, skipping');
         return;
       }
@@ -30,12 +36,22 @@ export const CodyWidget = () => {
       script.async = true;
       script.src = 'https://trinketsofcody.com/cody-widget.js';
       
-      script.onerror = (e) => {
-        console.error('[CodyWidget] Failed to load cody-widget.js:', e);
+      script.onerror = () => {
+        console.error(`[CodyWidget] Failed to load (attempt ${attempt + 1})`);
+        retryCount.current = attempt + 1;
+        
+        if (retryCount.current < MAX_RETRIES) {
+          const delay = RETRY_DELAYS[retryCount.current - 1] || 5000;
+          console.log(`[CodyWidget] Retrying in ${delay}ms...`);
+          setTimeout(() => loadWidget(retryCount.current), delay);
+        } else {
+          console.error('[CodyWidget] Max retries reached, widget unavailable');
+        }
       };
       
       script.onload = () => {
         console.log('[CodyWidget] Script loaded successfully');
+        retryCount.current = 0;
       };
 
       document.body.appendChild(script);
@@ -56,23 +72,19 @@ export const CodyWidget = () => {
       patchIframes();
     };
 
-    // For SSG: wait for hydration to complete before injecting external scripts
-    // Use requestIdleCallback for better timing, with setTimeout fallback
     const scheduleLoad = () => {
       if ('requestIdleCallback' in window) {
         (window as any).requestIdleCallback(() => {
-          setTimeout(loadWidget, 100);
+          setTimeout(() => loadWidget(0), 100);
         }, { timeout: 2000 });
       } else {
-        setTimeout(loadWidget, 500);
+        setTimeout(() => loadWidget(0), 500);
       }
     };
 
-    // Check document ready state for SSG hydration scenarios
     if (document.readyState === 'complete') {
       scheduleLoad();
     } else {
-      // Wait for page to fully load
       const handleLoad = () => {
         scheduleLoad();
         window.removeEventListener('load', handleLoad);

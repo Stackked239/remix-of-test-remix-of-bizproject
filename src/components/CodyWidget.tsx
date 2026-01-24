@@ -1,100 +1,71 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
-const MAX_RETRIES = 3;
-const RETRY_DELAYS = [1000, 3000, 5000]; // Exponential backoff
+const WIDGET_ID = 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef';
+const SCRIPT_ID = 'cody-widget-loader';
+const SCRIPT_URL = 'https://trinketsofcody.com/cody-widget.js';
 
 export const CodyWidget = () => {
-  const hasInitialized = useRef(false);
-  const retryCount = useRef(0);
-
   useEffect(() => {
-    if (hasInitialized.current) return;
-    hasInitialized.current = true;
+    // Skip SSR
+    if (typeof window === 'undefined') return;
 
-    const loadWidget = (attempt = 0) => {
-      // Remove failed script if retrying
-      const existing = document.getElementById('cody-widget-loader');
-      if (existing && attempt > 0) {
-        existing.remove();
-        console.log(`[CodyWidget] Retry attempt ${attempt}/${MAX_RETRIES}`);
-      } else if (existing) {
-        console.log('[CodyWidget] Script already exists, skipping');
-        return;
-      }
-
-      // Expose Cody settings before script loads
-      (window as any).codySettings = {
-        widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef',
-        base_url: 'https://getcody.ai',
-      };
-
-      console.log('[CodyWidget] Injecting cody-widget.js script');
-
-      const script = document.createElement('script');
-      script.id = 'cody-widget-loader';
-      script.type = 'text/javascript';
-      script.async = true;
-      script.src = 'https://trinketsofcody.com/cody-widget.js';
-      
-      script.onerror = () => {
-        console.error(`[CodyWidget] Failed to load (attempt ${attempt + 1})`);
-        retryCount.current = attempt + 1;
-        
-        if (retryCount.current < MAX_RETRIES) {
-          const delay = RETRY_DELAYS[retryCount.current - 1] || 5000;
-          console.log(`[CodyWidget] Retrying in ${delay}ms...`);
-          setTimeout(() => loadWidget(retryCount.current), delay);
-        } else {
-          console.error('[CodyWidget] Max retries reached, widget unavailable');
-        }
-      };
-      
-      script.onload = () => {
-        console.log('[CodyWidget] Script loaded successfully');
-        retryCount.current = 0;
-      };
-
-      document.body.appendChild(script);
-
-      // Patch Cody iframes with required permissions and top z-index
-      const patchIframes = () => {
-        document.querySelectorAll('iframe.cody-iframe').forEach((el) => {
-          const iframe = el as HTMLIFrameElement;
-          if (!iframe.hasAttribute('data-cody-patched')) {
-            iframe.setAttribute('data-cody-patched', '1');
-            try { iframe.allow = 'microphone; camera; clipboard-write; autoplay'; } catch {}
-            if (!iframe.style.zIndex) iframe.style.zIndex = '2147483647';
-          }
-        });
-      };
-      const observer = new MutationObserver(() => patchIframes());
-      observer.observe(document.body, { childList: true, subtree: true });
-      patchIframes();
-    };
-
-    const scheduleLoad = () => {
-      if ('requestIdleCallback' in window) {
-        (window as any).requestIdleCallback(() => {
-          setTimeout(() => loadWidget(0), 100);
-        }, { timeout: 2000 });
-      } else {
-        setTimeout(() => loadWidget(0), 500);
-      }
-    };
-
-    if (document.readyState === 'complete') {
-      scheduleLoad();
-    } else {
-      const handleLoad = () => {
-        scheduleLoad();
-        window.removeEventListener('load', handleLoad);
-      };
-      window.addEventListener('load', handleLoad);
-      
-      return () => {
-        window.removeEventListener('load', handleLoad);
-      };
+    // Check if already loaded
+    if (document.getElementById(SCRIPT_ID)) {
+      console.log('[CodyWidget] Script already exists');
+      return;
     }
+
+    // Set Cody settings before loading script
+    (window as any).codySettings = {
+      widget_id: WIDGET_ID,
+      base_url: 'https://getcody.ai',
+    };
+
+    console.log('[CodyWidget] Loading widget script...');
+
+    const script = document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.src = SCRIPT_URL;
+    script.async = true;
+
+    script.onload = () => {
+      console.log('[CodyWidget] Script loaded successfully');
+    };
+
+    script.onerror = () => {
+      console.error('[CodyWidget] Failed to load script');
+      // Retry once after 2 seconds
+      setTimeout(() => {
+        const retryScript = document.getElementById(SCRIPT_ID);
+        if (retryScript) retryScript.remove();
+        
+        const retry = document.createElement('script');
+        retry.id = SCRIPT_ID;
+        retry.src = SCRIPT_URL;
+        retry.async = true;
+        retry.onload = () => console.log('[CodyWidget] Retry successful');
+        retry.onerror = () => console.error('[CodyWidget] Retry failed');
+        document.body.appendChild(retry);
+      }, 2000);
+    };
+
+    document.body.appendChild(script);
+
+    // Patch iframes for visibility
+    const patchIframes = () => {
+      document.querySelectorAll('iframe.cody-iframe').forEach((el) => {
+        const iframe = el as HTMLIFrameElement;
+        if (!iframe.hasAttribute('data-patched')) {
+          iframe.setAttribute('data-patched', '1');
+          iframe.style.zIndex = '2147483647';
+        }
+      });
+    };
+
+    const observer = new MutationObserver(patchIframes);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
   }, []);
 
   return null;

@@ -11,7 +11,6 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
-import CodyWidget from "@/components/CodyWidget";
 
 const BizGuideSherpa = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -85,7 +84,6 @@ const BizGuideSherpa = () => {
 
   return (
     <>
-      <CodyWidget />
       <SEO
         title="Free AI Business Advisor | BizGuide Sherpa | BizHealth.ai"
         description="Get instant business advice from an AI-powered consultant. Navigate cash flow, scale operations, build teams, and grow strategically. Free for BizHealth.ai users."

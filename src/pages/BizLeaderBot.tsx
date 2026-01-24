@@ -11,7 +11,6 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
-import CodyWidget from "@/components/CodyWidget";
 
 const BizLeaderBot = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -85,7 +84,6 @@ const BizLeaderBot = () => {
 
   return (
     <>
-      <CodyWidget />
       <SEO
         title="Free AI Leadership Mentor | BizLeaDeR Leadership Development Bot | BizHealth.ai"
         description="BizLeaDeR Leadership Development Sherpa - FREE Leadership Development Business Tool"

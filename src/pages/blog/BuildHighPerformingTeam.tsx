@@ -15,7 +15,7 @@ const BuildHighPerformingTeam = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Build a High-Performing Team: The Unglamorous Truth | BizHealth.ai"
+        title="Build A High-Performing Team: The Unglamorous Truth | BizHealth.ai"
         description="Learn why team dynamics matter more than individual talent. Discover the 4 foundations of high-performing teams: trust, transparency, clear goals, and accountability. 18-month transformation guide."
         keywords="high performing team, team building, team culture, leadership, trust building, team transparency, team accountability, team goals, psychological safety, team dynamics, team management, SMB team, small business team, employee engagement, team performance, leadership development 2026"
         canonical="https://bizhealth.ai/blog/build-high-performing-team"
@@ -26,7 +26,7 @@ const BuildHighPerformingTeam = () => {
       />
       <StructuredData 
         type="article"
-        headline="Build Your High-Performing Team: The Unglamorous Truth About What Actually Works"
+        headline="Build A High-Performing Team: The Unglamorous Truth About What Actually Works"
         description="Learn why the best individual contributors don't automatically create the best teams. Discover the 4 critical foundations for building high-performing teams over 18+ months."
         author="BizHealth.ai Research Team"
         datePublished="2026-01-24"
@@ -38,7 +38,7 @@ const BuildHighPerformingTeam = () => {
       <PromotionalBanner />
       
       <BlogHeroSectionEnhanced
-        title="Build Your High-Performing Team: The Unglamorous Truth About What Actually Works"
+        title="Build A High-Performing Team: The Unglamorous Truth About What Actually Works"
         author="BizHealth.ai Research Team"
         publishDate="January 24, 2026"
         readTime="15 min read"

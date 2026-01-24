@@ -17,9 +17,9 @@ const BizGuides = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="BizGuides: Expert Coaching & Consulting for SMB Growth | BizHealth.ai"
-        description="Get expert coaching and consulting to turn BizHealth insights into real business momentum. Free articles, 1:1 sessions, custom solutions. Start today."
-        keywords="small business coaching, SMB consulting, business advisor, expert matching, BizHealth, business growth, executive coaching"
+        title="BizGuides: Online Business Coaching & AI Business Consulting | BizHealth.ai"
+        description="Get expert online business coaching and AI-powered consulting. Free resources, 1:1 sessions, and custom solutions. Start with free business coaching today."
+        keywords="online business coaching, online business consultant, ai business consultant, ai business coach, free business coaching, small business coaching, SMB consulting, business advisor, expert matching, BizHealth, business growth, executive coaching, virtual business coach, remote consulting"
         canonical="https://bizhealth.ai/bizguides"
         ogImage="/og-images/og-bizguides.jpg"
         ogType="website"

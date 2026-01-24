@@ -81,9 +81,11 @@ import businessBlindSpotsHeroImage from "@/assets/images/business-blind-spots-he
 import voiceOfCustomerTruthImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
 import marketingMythsImage from "@/assets/images/marketing-myths-smb-growth-hero.jpg";
 import sharksInTheWaterImage from "@/assets/images/sharks-in-the-water-business-crisis.jpg";
+import buildHighPerformingTeamImage from "@/assets/images/build-high-performing-team-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/build-high-performing-team": buildHighPerformingTeamImage,
   "/blog/sharks-in-the-water-business-crisis": sharksInTheWaterImage,
   "/blog/marketing-myths-spending-not-creating-growth": marketingMythsImage,
   "/blog/voice-of-customer-truth": voiceOfCustomerTruthImage,

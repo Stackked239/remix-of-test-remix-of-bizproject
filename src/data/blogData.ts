@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Build Your High-Performing Team: The Unglamorous Truth About What Actually Works",
+    excerpt: "Learn why team dynamics matter more than individual talent. Discover the 4 foundations: trust, transparency, clear goals, and accountability. 18-month transformation guide.",
+    author: "BizHealth.ai Research Team",
+    date: "January 24, 2026",
+    readTime: "15 min read",
+    category: "Business Leadership, Operations, Business Strategy, Growth & Scaling",
+    slug: "/blog/build-high-performing-team",
+    imageUrl: "/assets/images/build-high-performing-team-hero.jpg",
+    altText: "Diverse business team putting hands together in unity demonstrating trust and collaboration for high-performing team culture",
+    keywords: "high performing team, team building, team culture, leadership, trust building, team transparency, team accountability, team goals, psychological safety, team dynamics, team management, SMB team, small business team, employee engagement, team performance, leadership development, owner dependency, team empowerment, delegation, team meetings, operating rhythm, 90-day team plan, team transformation, culture building, authentic leadership, team trust, team communication, team collaboration, business scaling, reduce owner bottleneck, develop leaders, team motivation, team alignment, vision alignment, team foundations, accountability with care, team development timeline, 18 month culture change, team operating cadence, weekly huddles, monthly reviews, quarterly planning 2026"
+  },
+  {
     title: "Sharks in the Water: When Your Business Is Under Attack, Stay Calm But Act Fast",
     excerpt: "40-60% of small businesses never reopen after a crisis. Learn the survival framework: assess, prioritize, stabilize, recover. Stay calm but act fast when the sharks are circling.",
     author: "BizHealth.ai Research Team",

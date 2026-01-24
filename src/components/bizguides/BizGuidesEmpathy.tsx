@@ -32,9 +32,9 @@ const BizGuidesEmpathy = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-6">
-            Your BizHealth Report Revealed the Gaps.
+            Awareness Is Just the Start.
             <br />
-            <span className="text-[hsl(var(--biz-teal))]">Now Comes the Hard Part.</span>
+            <span className="text-[hsl(var(--biz-teal))]">Now Comes the Challenging Part.</span>
           </h2>
           
           <p className="font-open-sans text-lg text-muted-foreground leading-relaxed">

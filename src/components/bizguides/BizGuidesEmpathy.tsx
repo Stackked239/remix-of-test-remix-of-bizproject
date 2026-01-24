@@ -5,7 +5,7 @@ const painPoints = [
   {
     icon: ClipboardList,
     headline: "Insights Overload",
-    body: "Twelve categories. Clear scores. But which gaps matter most? Where do you even start? The report is thorough, but implementation feels overwhelming."
+    body: "You're confident you know where the gaps are. But which ones matter most? Where do you even start? The list of improvements feels endless, and implementation feels overwhelming."
   },
   {
     icon: Clock,

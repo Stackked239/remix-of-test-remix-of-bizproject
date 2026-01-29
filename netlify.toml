@@ -116,6 +116,85 @@
   status = 301
   force = true
 
+# Fix GSC "redirect errors" - ensure trailing slash versions redirect to canonical
+[[redirects]]
+  from = "/biztools/"
+  to = "/biztools"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/build-high-performing-team/"
+  to = "/blog/build-high-performing-team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/business-health-scores-by-stage/"
+  to = "/blog/business-health-scores-by-stage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/stress-test-pricing-framework-margins-cash-flow/"
+  to = "/blog/stress-test-pricing-framework-margins-cash-flow"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bizgrowth/hr/human-resources-maturity-assessment/"
+  to = "/bizgrowth/hr/human-resources-maturity-assessment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bizgrowth/growth/business-intelligence-builder/"
+  to = "/bizgrowth/growth/business-intelligence-builder"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/chasing-sales-not-profits/"
+  to = "/blog/chasing-sales-not-profits"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/emotional-intelligence-leadership-skill/"
+  to = "/blog/emotional-intelligence-leadership-skill"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/lean-principles-small-business/"
+  to = "/blog/lean-principles-small-business"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bizgrowth/growth/retail/p3-placement-planogram/"
+  to = "/bizgrowth/growth/retail/p3-placement-planogram"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/planograms-transform-small-retail-operations/"
+  to = "/blog/planograms-transform-small-retail-operations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/fractional-cfo-toolkit/"
+  to = "/blog/fractional-cfo-toolkit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/r2a2-job-descriptions-role-clarity-small-business-teams/"
+  to = "/blog/r2a2-job-descriptions-role-clarity-small-business-teams"
+  status = 301
+  force = true
+
 # Note: Universal trailing slash redirect (/*/  -> /:splat) has been REMOVED
 # because the pattern /*/  matches the root path / which breaks the Netlify Lighthouse plugin.
 # The root path ends with a slash, causing NOT_HTML errors during audits.

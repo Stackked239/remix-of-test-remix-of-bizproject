@@ -84,9 +84,11 @@ import sharksInTheWaterImage from "@/assets/images/sharks-in-the-water-business-
 import buildHighPerformingTeamImage from "@/assets/images/build-high-performing-team-hero.jpg";
 import ebitdaBusinessValuationImage from "@/assets/images/ebitda-business-valuation-hero.jpg";
 import ebitdaMistakesImage from "@/assets/images/ebitda-mistakes-hero.jpg";
+import coachingForGrowthImage from "@/assets/images/coaching-for-growth-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/coaching-for-growth-leadership": coachingForGrowthImage,
   "/blog/ebitda-mistakes-business-reality": ebitdaMistakesImage,
   "/blog/ebitda-business-valuation": ebitdaBusinessValuationImage,
   "/blog/build-high-performing-team": buildHighPerformingTeamImage,

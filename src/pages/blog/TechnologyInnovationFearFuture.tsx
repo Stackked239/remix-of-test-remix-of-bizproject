@@ -83,7 +83,7 @@ const TechnologyInnovationFearFuture = () => {
               {/* The Uncomfortable Question */}
               <section className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-copper))]/10 text-[hsl(var(--biz-copper))]">
                     <AlertTriangle className="w-5 h-5" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground m-0">The Uncomfortable Question You're Not Asking</h2>
@@ -113,7 +113,7 @@ const TechnologyInnovationFearFuture = () => {
               {/* The False Choice */}
               <section className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-destructive/10 text-destructive">
                     <XCircle className="w-5 h-5" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground m-0">The False Choice That Kills Businesses</h2>
@@ -284,7 +284,7 @@ const TechnologyInnovationFearFuture = () => {
               {/* Why Businesses Fall Behind */}
               <section className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-copper))]/10 text-[hsl(var(--biz-copper))]">
                     <AlertTriangle className="w-5 h-5" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground m-0">Why Businesses Fall Behind (The Real Reasons)</h2>
@@ -353,7 +353,7 @@ const TechnologyInnovationFearFuture = () => {
               {/* What Separates Winners */}
               <section className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-lime))]/10 text-[hsl(var(--biz-lime))]">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground m-0">What Actually Separates Winners From Losers</h2>
@@ -442,7 +442,7 @@ const TechnologyInnovationFearFuture = () => {
               {/* Practical Framework */}
               <section className="mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-gold))]/15 text-[hsl(var(--biz-gold))]">
                     <Lightbulb className="w-5 h-5" />
                   </div>
                   <h2 className="text-2xl font-bold text-foreground m-0">A Practical Framework (Not Revolution, Strategy)</h2>
@@ -450,7 +450,7 @@ const TechnologyInnovationFearFuture = () => {
 
                 <div className="space-y-6">
                   {/* Step 1 */}
-                  <div className="bg-muted/30 p-6 rounded-xl">
+                  <div className="bg-[hsl(var(--biz-blue))]/5 p-6 rounded-xl border border-[hsl(var(--biz-blue))]/20">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-blue))] text-white font-bold text-sm">1</span>
                       <h3 className="text-lg font-bold text-foreground m-0">Honest Assessment</h3>
@@ -470,7 +470,7 @@ const TechnologyInnovationFearFuture = () => {
                   </div>
 
                   {/* Step 2 */}
-                  <div className="bg-muted/30 p-6 rounded-xl">
+                  <div className="bg-[hsl(var(--biz-blue))]/5 p-6 rounded-xl border border-[hsl(var(--biz-blue))]/20">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-blue))] text-white font-bold text-sm">2</span>
                       <h3 className="text-lg font-bold text-foreground m-0">Industry Baseline Mapping</h3>
@@ -490,7 +490,7 @@ const TechnologyInnovationFearFuture = () => {
                   </div>
 
                   {/* Step 3 */}
-                  <div className="bg-muted/30 p-6 rounded-xl">
+                  <div className="bg-[hsl(var(--biz-blue))]/5 p-6 rounded-xl border border-[hsl(var(--biz-blue))]/20">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-blue))] text-white font-bold text-sm">3</span>
                       <h3 className="text-lg font-bold text-foreground m-0">Gap Analysis</h3>
@@ -509,7 +509,7 @@ const TechnologyInnovationFearFuture = () => {
                   </div>
 
                   {/* Step 4 */}
-                  <div className="bg-muted/30 p-6 rounded-xl">
+                  <div className="bg-[hsl(var(--biz-blue))]/5 p-6 rounded-xl border border-[hsl(var(--biz-blue))]/20">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-blue))] text-white font-bold text-sm">4</span>
                       <h3 className="text-lg font-bold text-foreground m-0">Strategic Implementation</h3>
@@ -527,7 +527,7 @@ const TechnologyInnovationFearFuture = () => {
                   </div>
 
                   {/* Step 5 */}
-                  <div className="bg-muted/30 p-6 rounded-xl">
+                  <div className="bg-[hsl(var(--biz-blue))]/5 p-6 rounded-xl border border-[hsl(var(--biz-blue))]/20">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[hsl(var(--biz-blue))] text-white font-bold text-sm">5</span>
                       <h3 className="text-lg font-bold text-foreground m-0">Iterate and Expand</h3>

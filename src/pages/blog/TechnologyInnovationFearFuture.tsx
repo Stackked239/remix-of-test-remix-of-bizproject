@@ -773,9 +773,9 @@ const TechnologyInnovationFearFuture = () => {
                     className="w-16 h-16 rounded-full"
                   />
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">About the Author</h3>
+                    <h3 className="text-lg font-bold text-foreground mb-2">Expert Insights Provided by Experts</h3>
                     <p className="text-foreground/80 text-sm mb-2">
-                      <strong>Expert Insights Provided by Experts</strong>
+                      <strong>The BizHealth.ai Research Team</strong>
                     </p>
                     <p className="text-foreground/70 text-sm m-0">
                       The BizHealth.ai Research Team analyzes market trends, industry benchmarks, and operational best practices to help small and mid-sized business owners make data-driven decisions. Our technology and innovation insights are grounded in real-world research and designed to deliver actionable strategies for sustainable growth.

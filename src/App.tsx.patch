@@ -1,0 +1,21 @@
+// App.tsx Route Updates
+// Add these imports at the top of App.tsx:
+
+import Questionnaire from './pages/Questionnaire';
+import CheckoutNew from './pages/CheckoutNew';
+import CheckoutSuccess from './pages/CheckoutSuccess';
+import PortalNew from './pages/PortalNew';
+
+// Add these routes inside the <Routes> component:
+
+<Route path="/questionnaire" element={<Questionnaire />} />
+<Route path="/checkout" element={<CheckoutNew />} />
+<Route path="/checkout/success" element={<CheckoutSuccess />} />
+<Route path="/portal" element={<PortalNew />} />
+
+// Alternatively, update the existing Portal and Checkout routes to use the new components:
+// Replace: <Route path="/portal" element={<Portal />} />
+// With:    <Route path="/portal" element={<PortalNew />} />
+
+// Replace: <Route path="/checkout" element={<Checkout />} />
+// With:    <Route path="/checkout" element={<CheckoutNew />} />

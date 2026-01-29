@@ -177,7 +177,7 @@ const CheckoutNew = () => {
       />
       <GlobalNavigation />
       
-      <main className="flex-1 container mx-auto px-4 py-12 pt-24">
+      <main className="flex-1 container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">

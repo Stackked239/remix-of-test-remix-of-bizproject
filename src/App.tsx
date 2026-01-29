@@ -24,9 +24,14 @@ const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
-const Portal = lazy(() => import("./pages/Portal"));
+const Portal = lazy(() => import("./pages/PortalRevamped"));
+const ReportViewer = lazy(() => import("./pages/ReportViewer"));
 const Checkout = lazy(() => import("./pages/Checkout"));
 const Onboarding = lazy(() => import("./pages/Onboarding"));
+const Questionnaire = lazy(() => import("./pages/Questionnaire"));
+const EssentialsQuestionnaire = lazy(() => import("./pages/EssentialsQuestionnaire"));
+const Processing = lazy(() => import("./pages/Processing"));
+const CheckoutSuccess = lazy(() => import("./pages/CheckoutSuccess"));
 const BizGuides = lazy(() => import("./pages/BizGuides"));
 const BizTools = lazy(() => import("./pages/BizTools"));
 const BizLeader = lazy(() => import("./pages/BizLeader"));
@@ -154,8 +159,13 @@ const App = () => (
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/portal" element={<Portal />} />
+              <Route path="/report/:reportId" element={<ReportViewer />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/onboarding" element={<Onboarding />} />
+              <Route path="/questionnaire" element={<Questionnaire />} />
+              <Route path="/essentials-questionnaire" element={<EssentialsQuestionnaire />} />
+              <Route path="/processing" element={<Processing />} />
+              <Route path="/checkout/success" element={<CheckoutSuccess />} />
               <Route path="/bizguides" element={<BizGuides />} />
               <Route path="/bizguides/bizguide-sherpa" element={<BizGuideSherpa />} />
               <Route path="/sherpas" element={<Sherpas />} />

@@ -10,195 +10,215 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.1"
   }
   public: {
     Tables: {
-      email_subscribers: {
-        Row: {
-          email: string
-          id: string
-          metadata: Json | null
-          source: string | null
-          subscribed_at: string
-          user_id: string | null
-        }
-        Insert: {
-          email: string
-          id?: string
-          metadata?: Json | null
-          source?: string | null
-          subscribed_at?: string
-          user_id?: string | null
-        }
-        Update: {
-          email?: string
-          id?: string
-          metadata?: Json | null
-          source?: string | null
-          subscribed_at?: string
-          user_id?: string | null
-        }
-        Relationships: []
-      }
       orders: {
         Row: {
           amount: number
-          created_at: string
-          currency: string
+          completed_at: string | null
+          created_at: string | null
+          currency: string | null
+          customer_email: string | null
           id: string
+          product_id: string
+          promo_code: string | null
+          refunded_at: string | null
           status: string
-          stripe_payment_intent_id: string | null
-          tier: string
+          stripe_payment_intent: string | null
+          stripe_session_id: string | null
           user_id: string
         }
         Insert: {
-          amount: number
-          created_at?: string
-          currency?: string
+          amount?: number
+          completed_at?: string | null
+          created_at?: string | null
+          currency?: string | null
+          customer_email?: string | null
           id?: string
+          product_id?: string
+          promo_code?: string | null
+          refunded_at?: string | null
           status?: string
-          stripe_payment_intent_id?: string | null
-          tier: string
+          stripe_payment_intent?: string | null
+          stripe_session_id?: string | null
           user_id: string
         }
         Update: {
           amount?: number
-          created_at?: string
-          currency?: string
+          completed_at?: string | null
+          created_at?: string | null
+          currency?: string | null
+          customer_email?: string | null
           id?: string
+          product_id?: string
+          promo_code?: string | null
+          refunded_at?: string | null
           status?: string
-          stripe_payment_intent_id?: string | null
-          tier?: string
+          stripe_payment_intent?: string | null
+          stripe_session_id?: string | null
           user_id?: string
         }
         Relationships: []
       }
-      page_not_found_logs: {
+      pipeline_queue: {
         Row: {
-          attempted_url: string
+          attempts: number | null
+          completed_at: string | null
           created_at: string | null
           id: string
-          ip_address: string | null
-          referrer: string | null
-          timestamp: string | null
-          user_agent: string | null
-          user_id: string | null
+          last_error: string | null
+          payload: Json
+          questionnaire_id: string | null
+          started_at: string | null
+          status: string
+          user_id: string
         }
         Insert: {
-          attempted_url: string
+          attempts?: number | null
+          completed_at?: string | null
           created_at?: string | null
           id?: string
-          ip_address?: string | null
-          referrer?: string | null
-          timestamp?: string | null
-          user_agent?: string | null
-          user_id?: string | null
+          last_error?: string | null
+          payload: Json
+          questionnaire_id?: string | null
+          started_at?: string | null
+          status?: string
+          user_id: string
         }
         Update: {
-          attempted_url?: string
+          attempts?: number | null
+          completed_at?: string | null
           created_at?: string | null
           id?: string
-          ip_address?: string | null
-          referrer?: string | null
-          timestamp?: string | null
-          user_agent?: string | null
-          user_id?: string | null
+          last_error?: string | null
+          payload?: Json
+          questionnaire_id?: string | null
+          started_at?: string | null
+          status?: string
+          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "pipeline_queue_questionnaire_id_fkey"
+            columns: ["questionnaire_id"]
+            isOneToOne: false
+            referencedRelation: "questionnaires"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       profiles: {
         Row: {
+          avatar_url: string | null
           company_name: string | null
-          created_at: string
+          created_at: string | null
           email: string | null
-          first_name: string | null
+          full_name: string | null
           id: string
-          last_name: string | null
           phone: string | null
-          updated_at: string
-          user_id: string
+          updated_at: string | null
         }
         Insert: {
+          avatar_url?: string | null
           company_name?: string | null
-          created_at?: string
+          created_at?: string | null
           email?: string | null
-          first_name?: string | null
-          id?: string
-          last_name?: string | null
+          full_name?: string | null
+          id: string
           phone?: string | null
-          updated_at?: string
-          user_id: string
+          updated_at?: string | null
         }
         Update: {
+          avatar_url?: string | null
           company_name?: string | null
-          created_at?: string
+          created_at?: string | null
           email?: string | null
-          first_name?: string | null
+          full_name?: string | null
           id?: string
-          last_name?: string | null
           phone?: string | null
-          updated_at?: string
-          user_id?: string
+          updated_at?: string | null
         }
         Relationships: []
       }
       questionnaires: {
         Row: {
+          company_profile: Json | null
           completed_at: string | null
-          created_at: string
+          created_at: string | null
+          current_section: number | null
           id: string
-          responses: Json
-          tier: string
-          updated_at: string
+          pipeline_payload: Json | null
+          responses: Json | null
+          status: string
+          updated_at: string | null
           user_id: string
         }
         Insert: {
+          company_profile?: Json | null
           completed_at?: string | null
-          created_at?: string
+          created_at?: string | null
+          current_section?: number | null
           id?: string
-          responses?: Json
-          tier: string
-          updated_at?: string
+          pipeline_payload?: Json | null
+          responses?: Json | null
+          status?: string
+          updated_at?: string | null
           user_id: string
         }
         Update: {
+          company_profile?: Json | null
           completed_at?: string | null
-          created_at?: string
+          created_at?: string | null
+          current_section?: number | null
           id?: string
-          responses?: Json
-          tier?: string
-          updated_at?: string
+          pipeline_payload?: Json | null
+          responses?: Json | null
+          status?: string
+          updated_at?: string | null
           user_id?: string
         }
         Relationships: []
       }
       reports: {
         Row: {
-          content: Json
-          created_at: string
+          created_at: string | null
+          file_url: string | null
+          generated_at: string | null
+          html_content: string | null
           id: string
-          pdf_url: string | null
-          questionnaire_id: string
+          questionnaire_id: string | null
           report_type: string
+          status: string
+          summary: Json | null
+          title: string
           user_id: string
         }
         Insert: {
-          content?: Json
-          created_at?: string
+          created_at?: string | null
+          file_url?: string | null
+          generated_at?: string | null
+          html_content?: string | null
           id?: string
-          pdf_url?: string | null
-          questionnaire_id: string
+          questionnaire_id?: string | null
           report_type: string
+          status?: string
+          summary?: Json | null
+          title: string
           user_id: string
         }
         Update: {
-          content?: Json
-          created_at?: string
+          created_at?: string | null
+          file_url?: string | null
+          generated_at?: string | null
+          html_content?: string | null
           id?: string
-          pdf_url?: string | null
-          questionnaire_id?: string
+          questionnaire_id?: string | null
           report_type?: string
+          status?: string
+          summary?: Json | null
+          title?: string
           user_id?: string
         }
         Relationships: [
@@ -211,42 +231,15 @@ export type Database = {
           },
         ]
       }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
+      [_ in never]: never
     }
     Enums: {
-      app_role: "admin" | "moderator" | "user"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -373,8 +366,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin", "moderator", "user"],
-    },
+    Enums: {},
   },
 } as const

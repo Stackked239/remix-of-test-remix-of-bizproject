@@ -83,9 +83,11 @@ import marketingMythsImage from "@/assets/images/marketing-myths-smb-growth-hero
 import sharksInTheWaterImage from "@/assets/images/sharks-in-the-water-business-crisis.jpg";
 import buildHighPerformingTeamImage from "@/assets/images/build-high-performing-team-hero.jpg";
 import ebitdaBusinessValuationImage from "@/assets/images/ebitda-business-valuation-hero.jpg";
+import ebitdaMistakesImage from "@/assets/images/ebitda-mistakes-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/ebitda-mistakes-business-reality": ebitdaMistakesImage,
   "/blog/ebitda-business-valuation": ebitdaBusinessValuationImage,
   "/blog/build-high-performing-team": buildHighPerformingTeamImage,
   "/blog/sharks-in-the-water-business-crisis": sharksInTheWaterImage,

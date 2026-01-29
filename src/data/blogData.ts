@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Technology & Innovation: Don't Let Fear Turn Your Business Into a Ghost",
+    excerpt: "78% of small businesses say technology limits impact their growth. Learn why staying current—not cutting-edge—is the key to competitive survival in 2026.",
+    author: "BizHealth.ai Research Team",
+    date: "January 27, 2026",
+    readTime: "12 min read",
+    category: "Technology, Business Strategy, Operations, Growth & Scaling, Risk Management",
+    slug: "/blog/technology-innovation-fear-future",
+    imageUrl: "/assets/images/technology-innovation-fear-future-hero.jpg",
+    altText: "Business owner in dress shop contemplating technology and innovation adoption for competitive business growth",
+    keywords: "technology adoption, digital transformation, business innovation, technology strategy, industry standard technology, competitive advantage technology, small business technology 2026, technology gap, digital modernization, legacy systems, technology implementation, technology ROI, digital competitiveness, technology fear, business technology, SMB technology strategy, technology baseline, industry standards, technology investment, digital strategy, business modernization, technology planning, tech adoption fear, technology hesitation, outdated technology, technology upgrade, digital business, technology readiness, competitive technology, innovation strategy"
+  },
+  {
     title: "Coaching for Growth, Not Policing for Mistakes: The Hidden Choice Every Business Owner Makes",
     excerpt: "Every manager chooses between coaching for growth or policing for mistakes. Discover why coaching cultures outperform and retain talent while mistake-policing drives turnover.",
     author: "BizHealth.ai Research Team",

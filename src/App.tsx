@@ -136,6 +136,7 @@ const BuildHighPerformingTeam = lazy(() => import("./pages/blog/BuildHighPerform
 const EbitdaBusinessValuation = lazy(() => import("./pages/blog/EbitdaBusinessValuation"));
 const EbitdaMistakesBusinessReality = lazy(() => import("./pages/blog/EbitdaMistakesBusinessReality"));
 const CoachingForGrowthLeadership = lazy(() => import("./pages/blog/CoachingForGrowthLeadership"));
+const TechnologyInnovationFearFuture = lazy(() => import("./pages/blog/TechnologyInnovationFearFuture"));
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
 const ProcessMappingTools = lazy(() => import("./pages/tools/ProcessMappingTools"));
@@ -329,6 +330,7 @@ const App = () => (
               <Route path="/blog/ebitda-business-valuation" element={<EbitdaBusinessValuation />} />
               <Route path="/blog/ebitda-mistakes-business-reality" element={<EbitdaMistakesBusinessReality />} />
               <Route path="/blog/coaching-for-growth-leadership" element={<CoachingForGrowthLeadership />} />
+              <Route path="/blog/technology-innovation-fear-future" element={<TechnologyInnovationFearFuture />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

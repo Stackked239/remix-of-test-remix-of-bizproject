@@ -22,7 +22,7 @@ const EbitdaBusinessValuation = () => {
         canonical="https://bizhealth.ai/blog/ebitda-business-valuation"
         ogType="article"
         ogImage="/og-images/og-ebitda-business-valuation.jpg"
-        articlePublishedTime="2026-01-29"
+        articlePublishedTime="2026-01-26"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
@@ -30,8 +30,8 @@ const EbitdaBusinessValuation = () => {
         headline="EBITDA: The Simple Number That Quietly Decides What Your Business Is Worth"
         description="Understand EBITDA and how buyers, lenders, and investors use it to value your business. Learn practical strategies for tracking and improving EBITDA as a management tool."
         author="BizHealth.ai Research Team"
-        datePublished="2026-01-29"
-        dateModified="2026-01-29"
+        datePublished="2026-01-26"
+        dateModified="2026-01-26"
         image="https://bizhealth.ai/og-images/og-ebitda-business-valuation.jpg"
         url="https://bizhealth.ai/blog/ebitda-business-valuation"
       />
@@ -41,7 +41,7 @@ const EbitdaBusinessValuation = () => {
       <BlogHeroSectionEnhanced
         title="EBITDA: The Simple Number That Quietly Decides What Your Business Is Worth"
         author="BizHealth.ai Research Team"
-        publishDate="January 29, 2026"
+        publishDate="January 26, 2026"
         readTime="12 min read"
         heroImage={heroImage}
         heroImageAlt="Business owner analyzing EBITDA financial charts and profitability metrics for business valuation"

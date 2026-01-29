@@ -187,7 +187,7 @@ const CoachingForGrowthLeadership = () => {
             {/* The Financial Cost */}
             <section className="mb-12">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-gold))]/10 text-[hsl(var(--biz-gold))]">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))]">
                   <DollarSign className="w-5 h-5" />
                 </div>
                 <h2 className="text-2xl font-bold text-foreground m-0">The Financial Cost of the Wrong Choice</h2>

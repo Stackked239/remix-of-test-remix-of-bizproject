@@ -26,6 +26,21 @@ http://bizhealth.ai/* https://bizhealth.ai/:splat 301!
 /blog/solving-smb-workforce-gaps /blog/solving-smb-workforce-gaps-2025 301!
 /blog/real-time-analytics-smb /blog/real-time-analytics-smb-agility 301!
 
+# Fix GSC "redirect errors" - trailing slash redirects
+/biztools/ /biztools 301!
+/blog/build-high-performing-team/ /blog/build-high-performing-team 301!
+/blog/business-health-scores-by-stage/ /blog/business-health-scores-by-stage 301!
+/blog/stress-test-pricing-framework-margins-cash-flow/ /blog/stress-test-pricing-framework-margins-cash-flow 301!
+/bizgrowth/hr/human-resources-maturity-assessment/ /bizgrowth/hr/human-resources-maturity-assessment 301!
+/bizgrowth/growth/business-intelligence-builder/ /bizgrowth/growth/business-intelligence-builder 301!
+/blog/chasing-sales-not-profits/ /blog/chasing-sales-not-profits 301!
+/blog/emotional-intelligence-leadership-skill/ /blog/emotional-intelligence-leadership-skill 301!
+/blog/lean-principles-small-business/ /blog/lean-principles-small-business 301!
+/bizgrowth/growth/retail/p3-placement-planogram/ /bizgrowth/growth/retail/p3-placement-planogram 301!
+/blog/planograms-transform-small-retail-operations/ /blog/planograms-transform-small-retail-operations 301!
+/blog/fractional-cfo-toolkit/ /blog/fractional-cfo-toolkit 301!
+/blog/r2a2-job-descriptions-role-clarity-small-business-teams/ /blog/r2a2-job-descriptions-role-clarity-small-business-teams 301!
+
 # Note: Universal trailing slash redirect (/*/  -> /:splat) has been REMOVED
 # because it matches the root path / and breaks the Netlify Lighthouse plugin.
 # Add individual trailing slash redirects above if needed for specific GSC errors.

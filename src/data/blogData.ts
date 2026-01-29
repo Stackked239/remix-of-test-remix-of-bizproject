@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "EBITDA: The Simple Number That Quietly Decides What Your Business Is Worth",
+    excerpt: "Understand EBITDA and how it determines your business valuation. Learn what buyers and lenders look for, common pitfalls to avoid, and how to use EBITDA as a strategic management tool.",
+    author: "BizHealth.ai Research Team",
+    date: "January 29, 2026",
+    readTime: "12 min read",
+    category: "Financial Management, Growth & Scaling, Risk Management, Business Intelligence",
+    slug: "/blog/ebitda-business-valuation",
+    imageUrl: "/assets/images/ebitda-business-valuation-hero.jpg",
+    altText: "Business owner analyzing EBITDA financial charts and profitability metrics for business valuation",
+    keywords: "EBITDA, ebitda explained, business valuation, EBITDA calculation, business worth, earnings before interest taxes depreciation amortization, EBITDA multiple, business sale, SMB valuation, operating profitability, EBITDA margin, business valuation 2026, financial metrics, business health, profitability metrics, lender requirements, what is EBITDA, EBITDA for small business, how to calculate EBITDA, EBITDA vs net income, business valuation multiple, trailing 12 month EBITDA, EBITDA pain points, EBITDA traps, operating income, debt service coverage, business exit valuation, financial health metrics, profit vs revenue, EBITDA management, SMB financial analysis"
+  },
+  {
     title: "Build A High-Performing Team: The Unglamorous Truth About What Actually Works",
     excerpt: "Learn why team dynamics matter more than individual talent. Discover the 4 foundations: trust, transparency, clear goals, and accountability. 18-month transformation guide.",
     author: "BizHealth.ai Research Team",

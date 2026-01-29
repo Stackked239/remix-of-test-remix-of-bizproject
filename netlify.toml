@@ -195,6 +195,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/ebitda-business-valuation/"
+  to = "/blog/ebitda-business-valuation"
+  status = 301
+  force = true
+
 # Note: Universal trailing slash redirect (/*/  -> /:splat) has been REMOVED
 # because the pattern /*/  matches the root path / which breaks the Netlify Lighthouse plugin.
 # The root path ends with a slash, causing NOT_HTML errors during audits.

@@ -31,12 +31,71 @@ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 
 
 // Product configuration
 const PRODUCTS = {
-  standard: {
-    id: 'standard',
-    name: 'Business Health Assessment',
+  essentials: {
+    id: 'essentials',
+    name: 'Essentials Assessment',
+    description: 'Focused 45-question assessment for startups and small businesses',
+    price: 99,
+    originalPrice: 199,
+    pipelineType: 'LIL',
+    questionnaireUrl: '/essentials-questionnaire',
+    features: [
+      '45-question focused assessment',
+      'Basic business health score',
+      'Core recommendations report',
+      'Industry benchmark comparison',
+      'PDF download',
+      'Email support',
+      '30-60-90 day roadmap',
+    ],
+  },
+  growth: {
+    id: 'growth',
+    name: 'Growth Assessment',
     description: 'Comprehensive 12-dimension analysis with personalized recommendations',
     price: 297,
     originalPrice: 497,
+    pipelineType: 'BIG',
+    questionnaireUrl: '/questionnaire',
+    features: [
+      'Complete 87-question assessment',
+      '12-dimension health score',
+      'Industry benchmark comparison',
+      'Executive summary report',
+      'Detailed analysis report',
+      'Priority action recommendations',
+      '90-day transformation roadmap',
+      '17+ comprehensive reports',
+    ],
+  },
+  enterprise: {
+    id: 'enterprise',
+    name: 'Enterprise Assessment',
+    description: 'Complete solution for established businesses planning major transitions',
+    price: 499,
+    originalPrice: 799,
+    pipelineType: 'BIG',
+    questionnaireUrl: '/questionnaire',
+    features: [
+      'Comprehensive business assessment',
+      'Complete business valuation insights',
+      'Exit strategy recommendations',
+      'Risk assessment & mitigation plans',
+      'Market positioning analysis',
+      'Leadership transition planning',
+      'Quarterly review sessions',
+      'Direct consultant access',
+    ],
+  },
+  // Legacy mappings for backward compatibility
+  standard: {
+    id: 'growth',
+    name: 'Growth Assessment',
+    description: 'Comprehensive 12-dimension analysis with personalized recommendations',
+    price: 297,
+    originalPrice: 497,
+    pipelineType: 'BIG',
+    questionnaireUrl: '/questionnaire',
     features: [
       'Complete 87-question assessment',
       '12-dimension health score',
@@ -48,13 +107,15 @@ const PRODUCTS = {
     ],
   },
   premium: {
-    id: 'premium',
-    name: 'Premium Assessment + Consultation',
-    description: 'Everything in Standard plus 1-hour expert consultation',
-    price: 597,
-    originalPrice: 997,
+    id: 'enterprise',
+    name: 'Enterprise Assessment',
+    description: 'Complete solution with expert consultation',
+    price: 499,
+    originalPrice: 799,
+    pipelineType: 'BIG',
+    questionnaireUrl: '/questionnaire',
     features: [
-      'Everything in Standard Assessment',
+      'Everything in Growth Assessment',
       '1-hour expert consultation call',
       'Custom implementation plan',
       'Priority email support (30 days)',
@@ -69,7 +130,8 @@ const CheckoutNew = () => {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
 
-  const productId = searchParams.get('product') || 'standard';
+  // Support both 'product' and 'tier' query params
+  const productId = searchParams.get('tier') || searchParams.get('product') || 'growth';
   const product = PRODUCTS[productId as keyof typeof PRODUCTS] || PRODUCTS.standard;
 
   const [isProcessing, setIsProcessing] = useState(false);
@@ -197,7 +259,9 @@ const CheckoutNew = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div>
-                      <Badge className="mb-2 bg-biz-green">Most Popular</Badge>
+                      <Badge className="mb-2 bg-biz-green">
+                        {productId === 'essentials' ? 'Best for Startups' : productId === 'enterprise' ? 'Best Value' : 'Most Popular'}
+                      </Badge>
                       <CardTitle className="text-2xl text-biz-navy">{product.name}</CardTitle>
                       <CardDescription className="text-base mt-1">
                         {product.description}

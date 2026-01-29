@@ -194,7 +194,7 @@ const BizLeaderBot = () => {
                     frameBorder={1} 
                     marginHeight={0} 
                     marginWidth={0} 
-                    height="550px" 
+                    height="800px" 
                     width="100%" 
                     allowFullScreen
                     title="BizLeadership Sherpa"

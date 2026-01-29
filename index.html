@@ -107,5 +107,66 @@
       };
     </script>
     <script src="https://trinketsofcody.com/cody-widget.js" async></script>
+    
+    <!-- Fallback help button if Cody widget fails to load -->
+    <style>
+      #cody-fallback {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 2147483646;
+        background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-size: 24px;
+      }
+      #cody-fallback:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 102, 204, 0.5);
+      }
+      #cody-fallback svg {
+        width: 28px;
+        height: 28px;
+      }
+    </style>
+    <a id="cody-fallback" href="/contact" aria-label="Contact us for help" title="Chat unavailable - Click for help">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+      </svg>
+    </a>
+    <script>
+      (function() {
+        var fallbackTimeout = setTimeout(function() {
+          // Check if Cody widget iframe exists
+          var codyIframe = document.querySelector('iframe[class*="cody"], iframe[src*="getcody"], iframe[src*="trinketsofcody"]');
+          if (!codyIframe) {
+            console.warn('[CodyWidget] Widget did not load within 5 seconds, showing fallback');
+            var fallback = document.getElementById('cody-fallback');
+            if (fallback) fallback.style.display = 'flex';
+            fallback.style.alignItems = 'center';
+            fallback.style.justifyContent = 'center';
+          }
+        }, 5000);
+        
+        // Hide fallback if Cody loads later
+        var observer = new MutationObserver(function() {
+          var codyIframe = document.querySelector('iframe[class*="cody"], iframe[src*="getcody"], iframe[src*="trinketsofcody"]');
+          if (codyIframe) {
+            clearTimeout(fallbackTimeout);
+            var fallback = document.getElementById('cody-fallback');
+            if (fallback) fallback.style.display = 'none';
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      })();
+    </script>
   </body>
 </html>

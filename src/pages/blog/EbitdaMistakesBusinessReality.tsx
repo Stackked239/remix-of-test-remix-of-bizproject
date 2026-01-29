@@ -645,7 +645,7 @@ const EbitdaMistakesBusinessReality = () => {
             Take a Business Health Assessment to uncover hidden issues in your financial metrics, operations, and growth potential.
           </p>
           <Link 
-            to="/assessment"
+            to="/how-it-works"
             className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Start Your Business Health Assessment

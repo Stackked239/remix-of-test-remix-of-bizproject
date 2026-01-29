@@ -65,12 +65,13 @@ const Questionnaire = () => {
       if (!user) return;
 
       try {
-        // Check for completed payment/order
+        // Check for completed payment/order (growth, enterprise, or standard plans)
         const { data: orders, error } = await supabase
           .from('orders')
           .select('*')
           .eq('user_id', user.id)
           .eq('status', 'completed')
+          .in('product_id', ['growth', 'enterprise', 'standard', 'premium'])
           .order('created_at', { ascending: false })
           .limit(1);
 

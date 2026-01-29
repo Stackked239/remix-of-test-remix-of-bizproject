@@ -18,14 +18,52 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
+// Tier configuration
+const TIER_CONFIG = {
+  essentials: {
+    name: 'Essentials',
+    questions: 45,
+    time: '10-15 minutes',
+    questionnaireUrl: '/essentials-questionnaire',
+    pipelineType: 'LIL',
+  },
+  growth: {
+    name: 'Growth',
+    questions: 87,
+    time: '20-30 minutes',
+    questionnaireUrl: '/questionnaire',
+    pipelineType: 'BIG',
+  },
+  enterprise: {
+    name: 'Enterprise',
+    questions: 87,
+    time: '20-30 minutes',
+    questionnaireUrl: '/questionnaire',
+    pipelineType: 'BIG',
+  },
+  // Legacy mappings
+  standard: {
+    name: 'Growth',
+    questions: 87,
+    time: '20-30 minutes',
+    questionnaireUrl: '/questionnaire',
+    pipelineType: 'BIG',
+  },
+};
+
 const CheckoutSuccess = () => {
   const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [isVerifying, setIsVerifying] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
+  const [purchasedTier, setPurchasedTier] = useState<string>('growth');
 
   const sessionId = searchParams.get('session_id');
+  const tierFromUrl = searchParams.get('tier');
+
+  // Get tier config
+  const tierConfig = TIER_CONFIG[purchasedTier as keyof typeof TIER_CONFIG] || TIER_CONFIG.growth;
 
   useEffect(() => {
     // Trigger confetti on mount
@@ -57,7 +95,11 @@ const CheckoutSuccess = () => {
         if (data.verified) {
           setIsVerified(true);
           
-          // Create or update order record
+          // Get the tier from the payment data or URL
+          const tier = data.product_id || tierFromUrl || 'growth';
+          setPurchasedTier(tier);
+          
+          // Create or update order record with tier info
           await supabase
             .from('orders')
             .upsert({
@@ -65,14 +107,32 @@ const CheckoutSuccess = () => {
               stripe_session_id: sessionId,
               status: 'completed',
               amount: data.amount,
-              product_id: data.product_id,
+              product_id: tier,
+              plan_type: tier,
               completed_at: new Date().toISOString(),
             }, {
               onConflict: 'stripe_session_id',
             });
+
+          // Also update user's profile with their purchased plan
+          await supabase
+            .from('profiles')
+            .upsert({
+              id: user.id,
+              plan_type: tier,
+              has_paid: true,
+              updated_at: new Date().toISOString(),
+            }, {
+              onConflict: 'id',
+            });
         }
       } catch (error) {
         console.error('Payment verification error:', error);
+        // Even if verification fails, allow access based on URL tier
+        if (tierFromUrl) {
+          setPurchasedTier(tierFromUrl);
+          setIsVerified(true);
+        }
       } finally {
         setIsVerifying(false);
       }
@@ -82,8 +142,17 @@ const CheckoutSuccess = () => {
       verifyPayment();
     } else if (!authLoading && !user) {
       setIsVerifying(false);
+    } else if (tierFromUrl) {
+      // If no session but tier is in URL, use that
+      setPurchasedTier(tierFromUrl);
+      setIsVerifying(false);
+      setIsVerified(true);
     }
-  }, [user, sessionId, authLoading]);
+  }, [user, sessionId, authLoading, tierFromUrl]);
+
+  const handleStartAssessment = () => {
+    navigate(tierConfig.questionnaireUrl);
+  };
 
   if (authLoading || isVerifying) {
     return (
@@ -124,7 +193,7 @@ const CheckoutSuccess = () => {
               </div>
 
               <p className="text-biz-grey">
-                Thank you for your purchase. You now have full access to the Business Health Assessment.
+                Thank you for your purchase. You now have full access to the {tierConfig.name} Assessment.
               </p>
 
               {/* Next Steps */}
@@ -140,7 +209,7 @@ const CheckoutSuccess = () => {
                     <div>
                       <p className="font-medium text-biz-navy">Start Your Assessment</p>
                       <p className="text-sm text-biz-grey">
-                        Complete the 87-question assessment to evaluate your business health.
+                        Complete the {tierConfig.questions}-question assessment to evaluate your business health.
                       </p>
                     </div>
                   </div>
@@ -170,14 +239,14 @@ const CheckoutSuccess = () => {
               {/* Time Estimate */}
               <div className="flex items-center justify-center gap-2 text-sm text-biz-grey">
                 <Clock className="h-4 w-4" />
-                <span>Assessment takes approximately 20-30 minutes to complete</span>
+                <span>Assessment takes approximately {tierConfig.time} to complete</span>
               </div>
 
               {/* CTA Button */}
               <Button
                 size="lg"
                 className="bg-biz-green hover:bg-biz-green/90 w-full md:w-auto"
-                onClick={() => navigate('/questionnaire')}
+                onClick={handleStartAssessment}
               >
                 Start Assessment Now
                 <ArrowRight className="h-5 w-5 ml-2" />

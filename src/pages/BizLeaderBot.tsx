@@ -4,6 +4,7 @@ import {
   Clock, MessageSquare, Shield, Lightbulb, Users, Compass, Target, Brain,
   Zap, CheckCircle, MessageCircle, ArrowRight, BookOpen, ChevronRight, TrendingUp, User, Copy
 } from "lucide-react";
+import GradientDivider from "@/components/GradientDivider";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -443,6 +444,7 @@ const BizLeaderBot = () => {
           </div>
         </section>
 
+        <GradientDivider />
         <GlobalFooter />
       </div>
     </>

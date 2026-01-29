@@ -208,19 +208,19 @@ const BizLeaderBot = () => {
         </section>
 
         {/* Conversation Starters Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 text-biz-green text-sm font-semibold uppercase tracking-wider mb-4">
+                <div className="inline-flex items-center gap-2 text-[hsl(var(--biz-green))] text-sm font-semibold uppercase tracking-wider mb-4 bg-[hsl(var(--biz-green))]/10 px-4 py-2 rounded-full">
                   <Lightbulb className="w-4 h-4" />
                   Conversation Starters
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-biz-navy mb-4">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-[hsl(var(--biz-navy))] mb-4">
                   What Leadership Challenge Can We Help With?
                 </h2>
-                <p className="text-lg text-biz-grey max-w-3xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   Click any scenario below for sample questions, then ask your own version to the mentor above. 
                   Every business leader faces these moments.
                 </p>
@@ -235,35 +235,35 @@ const BizLeaderBot = () => {
                   return (
                     <article 
                       key={index}
-                      className="group bg-white border-2 border-gray-200 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-l-4 hover:border-l-biz-green cursor-pointer"
+                      className="group bg-card border-2 border-border rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[hsl(var(--biz-green))] hover:border-l-4 cursor-pointer"
                       onClick={() => setExpandedCard(isExpanded ? null : index)}
                     >
                       {/* Icon */}
-                      <div className="w-14 h-14 rounded-lg bg-biz-green/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-biz-green">
-                        <Icon className="w-7 h-7 text-biz-green transition-colors duration-300 group-hover:text-white" />
+                      <div className="w-14 h-14 rounded-lg bg-[hsl(var(--biz-green))]/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[hsl(var(--biz-green))]">
+                        <Icon className="w-7 h-7 text-[hsl(var(--biz-green))] transition-colors duration-300 group-hover:text-white" />
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-biz-navy mb-3">
+                      <h3 className="text-xl font-bold text-[hsl(var(--biz-navy))] mb-3">
                         {scenario.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-biz-grey mb-4">
+                      <p className="text-muted-foreground mb-4">
                         {scenario.description}
                       </p>
 
                       {/* CTA */}
-                      <button className="flex items-center gap-2 text-biz-green font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                      <button className="flex items-center gap-2 text-[hsl(var(--biz-green))] font-semibold text-sm group-hover:gap-3 transition-all duration-300">
                         {isExpanded ? 'Hide' : 'See'} sample question
                         <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
                       </button>
 
                       {/* Sample Question */}
                       {isExpanded && (
-                        <div className="mt-4 pt-4 border-t-2 border-gray-100 animate-fade-in" onClick={(e) => e.stopPropagation()}>
-                          <div className="bg-biz-cream border-l-4 border-biz-green p-4 rounded-r-lg">
-                            <p className="text-biz-navy italic text-sm leading-relaxed mb-3">
+                        <div className="mt-4 pt-4 border-t-2 border-border animate-fade-in" onClick={(e) => e.stopPropagation()}>
+                          <div className="bg-[hsl(var(--biz-green))]/5 border-l-4 border-[hsl(var(--biz-green))] p-4 rounded-r-lg">
+                            <p className="text-[hsl(var(--biz-navy))] italic text-sm leading-relaxed mb-3">
                               "{scenario.sample}"
                             </p>
                             <button
@@ -272,7 +272,7 @@ const BizLeaderBot = () => {
                                 navigator.clipboard.writeText(scenario.sample);
                                 toast.success("Question copied to clipboard!");
                               }}
-                              className="flex items-center gap-2 text-biz-green hover:text-biz-navy font-semibold text-xs transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-white"
+                              className="flex items-center gap-2 text-[hsl(var(--biz-green))] hover:text-[hsl(var(--biz-navy))] font-semibold text-xs transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-background"
                             >
                               <Copy className="w-3.5 h-3.5" />
                               Copy Question

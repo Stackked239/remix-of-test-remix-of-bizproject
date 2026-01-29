@@ -583,10 +583,14 @@ const EbitdaMistakesBusinessReality = () => {
 
             {/* Author Bio */}
             <section className="mb-12 bg-card border border-border p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-foreground mb-4">About the Author</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">Expert Insights provided by Experts</h3>
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-[hsl(var(--biz-green))]/20 rounded-full flex items-center justify-center shrink-0">
-                  <User className="w-8 h-8 text-[hsl(var(--biz-green))]" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+                  <img 
+                    src="/favicon-96x96.png" 
+                    alt="BizHealth.ai" 
+                    className="w-12 h-12"
+                  />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">BizHealth.ai Research Team</p>
@@ -597,11 +601,6 @@ const EbitdaMistakesBusinessReality = () => {
               </div>
             </section>
 
-            {/* Social Share */}
-            <SocialShareButtons 
-              title="The Comfortable Lie: 9 EBITDA Mistakes That Hide Business Reality"
-              description="Discover the 9 most dangerous EBITDA mistakes that create a false picture of your business health."
-            />
           </div>
         </div>
       </article>
@@ -643,13 +642,13 @@ const EbitdaMistakesBusinessReality = () => {
             See If Your Business Metrics Tell the Full Story
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Take a free Business Health Assessment to uncover hidden issues in your financial metrics, operations, and growth potential.
+            Take a Business Health Assessment to uncover hidden issues in your financial metrics, operations, and growth potential.
           </p>
           <Link 
             to="/assessment"
             className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Start Your Free Assessment
+            Start Your Business Health Assessment
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

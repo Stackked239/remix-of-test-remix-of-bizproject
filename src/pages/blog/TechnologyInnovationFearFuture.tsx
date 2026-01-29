@@ -681,27 +681,27 @@ const TechnologyInnovationFearFuture = () => {
                   <h2 className="text-2xl font-bold text-foreground m-0">What Happens If You Do This Right</h2>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex gap-4 items-start p-4 bg-[hsl(var(--biz-green))]/5 rounded-lg border border-[hsl(var(--biz-green))]/20">
-                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap">Year 1:</div>
+                <div className="space-y-0 rounded-xl overflow-hidden border border-[hsl(var(--biz-green))]/20">
+                  <div className="flex gap-4 items-start p-5 bg-[hsl(var(--biz-green))]/10">
+                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 1:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You implement one or two strategic technologies. You're more efficient. Your people have better tools. You see measurable improvement.
                     </p>
                   </div>
-                  <div className="flex gap-4 items-start p-4 bg-[hsl(var(--biz-green))]/5 rounded-lg border border-[hsl(var(--biz-green))]/20">
-                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap">Year 2:</div>
+                  <div className="flex gap-4 items-start p-5 bg-background">
+                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 2:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You've proven success. The organization is more confident. You tackle the next gap. Your competitive position improves.
                     </p>
                   </div>
-                  <div className="flex gap-4 items-start p-4 bg-[hsl(var(--biz-green))]/5 rounded-lg border border-[hsl(var(--biz-green))]/20">
-                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap">Year 3:</div>
+                  <div className="flex gap-4 items-start p-5 bg-[hsl(var(--biz-green))]/10">
+                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 3:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You're operating at modern standards. You're not bleeding-edge, but you're current. Your competitive moat has gotten stronger. You're attracting better talent. You're acquiring customers competitors are losing because your capabilities are better.
                     </p>
                   </div>
-                  <div className="flex gap-4 items-start p-4 bg-[hsl(var(--biz-green))]/5 rounded-lg border border-[hsl(var(--biz-green))]/20">
-                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap">Year 5:</div>
+                  <div className="flex gap-4 items-start p-5 bg-background">
+                    <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 5:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You look back and realize that business would be completely different—and much worse—if you hadn't started this journey.
                     </p>
@@ -724,7 +724,7 @@ const TechnologyInnovationFearFuture = () => {
 
                 <div className="bg-[hsl(var(--biz-blue))] text-white p-6 rounded-xl mb-6">
                   <p className="text-xl font-semibold text-center m-0">
-                    You're choosing between "Staying current enough to compete" and "Becoming a ghost of what we used to be."
+                    You're choosing between "Staying current enough to compete" and "Becoming a ghost of what you used to be."
                   </p>
                 </div>
 

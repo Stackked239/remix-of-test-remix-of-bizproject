@@ -134,6 +134,7 @@ const MarketingMythsSpendingNotGrowth = lazy(() => import("./pages/blog/Marketin
 const SharksInTheWater = lazy(() => import("./pages/blog/SharksInTheWater"));
 const BuildHighPerformingTeam = lazy(() => import("./pages/blog/BuildHighPerformingTeam"));
 const EbitdaBusinessValuation = lazy(() => import("./pages/blog/EbitdaBusinessValuation"));
+const EbitdaMistakesBusinessReality = lazy(() => import("./pages/blog/EbitdaMistakesBusinessReality"));
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
 const ProcessMappingTools = lazy(() => import("./pages/tools/ProcessMappingTools"));
@@ -325,6 +326,7 @@ const App = () => (
               <Route path="/blog/sharks-in-the-water-business-crisis" element={<SharksInTheWater />} />
               <Route path="/blog/build-high-performing-team" element={<BuildHighPerformingTeam />} />
               <Route path="/blog/ebitda-business-valuation" element={<EbitdaBusinessValuation />} />
+              <Route path="/blog/ebitda-mistakes-business-reality" element={<EbitdaMistakesBusinessReality />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

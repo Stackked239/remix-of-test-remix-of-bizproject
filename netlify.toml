@@ -49,6 +49,13 @@
 
 # Note: /security is a valid page - no redirect needed
 
+# EBITDA Mistakes blog post trailing slash redirect
+[[redirects]]
+  from = "/blog/ebitda-mistakes-business-reality/"
+  to = "/blog/ebitda-mistakes-business-reality"
+  status = 301
+  force = true
+
 # Fix noindex URL mismatches - Redirect hyphenated URLs to correct routes
 [[redirects]]
   from = "/biz-tools"

@@ -32,10 +32,22 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Comfortable Lie: 9 EBITDA Mistakes That Hide Business Reality",
+    excerpt: "Discover the 9 most dangerous EBITDA mistakes that create a false picture of your business health. Learn how to use EBITDA correctly for better financial decisions.",
+    author: "BizHealth.ai Research Team",
+    date: "January 29, 2026",
+    readTime: "10 min read",
+    category: "Financial Management, Growth & Scaling, Risk Management, Business Intelligence",
+    slug: "/blog/ebitda-mistakes-business-reality",
+    imageUrl: "/assets/images/ebitda-mistakes-hero.jpg",
+    altText: "Business owner analyzing EBITDA financial report with revenue growth charts, questioning financial metrics accuracy",
+    keywords: "EBITDA mistakes, EBITDA traps, adjusted EBITDA abuse, EBITDA vs cash flow, EBITDA cash conversion, EBITDA misuse, business valuation errors, EBITDA pitfalls, financial metrics mistakes, EBITDA reality, operating profitability traps, EBITDA margin errors, working capital EBITDA, EBITDA expansion trap, owner salary EBITDA, segmented EBITDA, company-wide EBITDA problems, EBITDA cost cutting mistakes, EBITDA truth, EBITDA comfortable lie, EBITDA discipline, financial metrics 2026, business reality, cash flow vs EBITDA, EBITDA-to-cash ratio, small business EBITDA, SMB financial analysis, EBITDA add-backs, one-time expenses EBITDA"
+  },
+  {
     title: "EBITDA: The Simple Number That Quietly Decides What Your Business Is Worth",
     excerpt: "Understand EBITDA and how it determines your business valuation. Learn what buyers and lenders look for, common pitfalls to avoid, and how to use EBITDA as a strategic management tool.",
     author: "BizHealth.ai Research Team",
-    date: "January 29, 2026",
+    date: "January 26, 2026",
     readTime: "12 min read",
     category: "Financial Management, Growth & Scaling, Risk Management, Business Intelligence",
     slug: "/blog/ebitda-business-valuation",

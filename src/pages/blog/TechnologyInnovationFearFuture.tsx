@@ -688,7 +688,7 @@ const TechnologyInnovationFearFuture = () => {
                       You implement one or two strategic technologies. You're more efficient. Your people have better tools. You see measurable improvement.
                     </p>
                   </div>
-                  <div className="flex gap-4 items-start p-5 bg-background">
+                  <div className="flex gap-4 items-start p-5 bg-[hsl(var(--biz-blue))]/5">
                     <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 2:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You've proven success. The organization is more confident. You tackle the next gap. Your competitive position improves.
@@ -700,7 +700,7 @@ const TechnologyInnovationFearFuture = () => {
                       You're operating at modern standards. You're not bleeding-edge, but you're current. Your competitive moat has gotten stronger. You're attracting better talent. You're acquiring customers competitors are losing because your capabilities are better.
                     </p>
                   </div>
-                  <div className="flex gap-4 items-start p-5 bg-background">
+                  <div className="flex gap-4 items-start p-5 bg-[hsl(var(--biz-blue))]/5">
                     <div className="font-bold text-[hsl(var(--biz-green))] text-lg whitespace-nowrap min-w-[70px]">Year 5:</div>
                     <p className="text-foreground/80 text-sm m-0">
                       You look back and realize that business would be completely different—and much worse—if you hadn't started this journey.

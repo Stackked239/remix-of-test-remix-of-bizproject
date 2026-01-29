@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Coaching for Growth, Not Policing for Mistakes: The Hidden Choice Every Business Owner Makes",
+    excerpt: "Every manager chooses between coaching for growth or policing for mistakes. Discover why coaching cultures outperform and retain talent while mistake-policing drives turnover.",
+    author: "BizHealth.ai Research Team",
+    date: "January 28, 2026",
+    readTime: "10 min read",
+    category: "Operations, Business Leadership, Growth & Scaling, Risk Management",
+    slug: "/blog/coaching-for-growth-leadership",
+    imageUrl: "/assets/images/coaching-for-growth-hero.jpg",
+    altText: "Business leader coaching team members on job site demonstrating growth-focused leadership and employee development culture",
+    keywords: "coaching culture, leadership coaching, employee development, mistake policing, team management, business leadership, employee retention, workplace culture, coaching vs policing, growth mindset leadership, accountability culture, team coaching 2026, psychological safety, one on ones, feedback culture, leadership development, team engagement, turnover reduction, coaching accountability, leadership choice, management style, employee engagement, team performance, development conversations, constructive feedback, positive leadership, retention strategies, business culture, team building leadership, leadership transformation"
+  },
+  {
     title: "The Comfortable Lie: 9 EBITDA Mistakes That Hide Business Reality",
     excerpt: "Discover the 9 most dangerous EBITDA mistakes that create a false picture of your business health. Learn how to use EBITDA correctly for better financial decisions.",
     author: "BizHealth.ai Research Team",

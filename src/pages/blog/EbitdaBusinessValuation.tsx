@@ -90,9 +90,9 @@ const EbitdaBusinessValuation = () => {
                   { title: "Depreciation", desc: "Non-cash expense for equipment/building wear-and-tear" },
                   { title: "Amortization", desc: "Non-cash expense for intangible assets (software, trademarks, etc.)" }
                 ].map((item, index) => (
-                  <div key={index} className="bg-card border border-border p-4 rounded-lg">
-                    <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
-                    <p className="text-[hsl(var(--biz-blue))] text-sm">{item.desc}</p>
+                  <div key={index} className="bg-[hsl(var(--biz-blue))] p-4 rounded-lg">
+                    <h4 className="font-bold text-white mb-1">{item.title}</h4>
+                    <p className="text-white/90 text-sm">{item.desc}</p>
                   </div>
                 ))}
               </div>

@@ -16,7 +16,7 @@ const GrowthCeilingGutInstinct = () => {
       <SEO 
         title="The Growth Ceiling: Why Your Gut Instinct Built Your Business But Won't Scale It"
         description="Your gut instinct got your business off the ground—but it won't scale it. Learn why data-driven decision-making is essential at 30+ employees and $3M+ revenue."
-        keywords="gut instinct business, scaling small business, data-driven decisions, business growth ceiling, founder's dilemma, intuitive leadership, SMB scaling challenges, decision-making at scale, business intelligence, transition to data-driven, business blind spots, systematic decision-making, leadership scaling, business complexity"
+        keywords="gut instinct business, scaling small business, data-driven decisions, business growth ceiling, founder's dilemma, intuitive leadership, small business scaling challenges, decision-making at scale, business intelligence, transition to data-driven, business blind spots, systematic decision-making, leadership scaling, business complexity"
         ogType="article"
         ogImage="/og-images/og-growth-ceiling-gut-instinct-scaling.jpg"
         articlePublishedTime="2026-01-11T12:00:00Z"

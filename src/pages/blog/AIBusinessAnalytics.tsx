@@ -19,7 +19,7 @@ const AIBusinessAnalytics = () => {
       <SEO 
         title="How AI is Revolutionizing Small Business Analytics | BizHealth.ai"
         description="Discover how artificial intelligence is making enterprise-level business intelligence accessible to SMBs. Learn about AI-powered analytics, automated insights, and data-driven decision making for small businesses."
-        keywords="AI business analytics, small business intelligence, AI for SMBs, business analytics tools, machine learning, data-driven decisions, automated insights, predictive analytics, business intelligence AI, SMB analytics 2025"
+        keywords="AI business analytics, small business intelligence, AI for small business, business analytics tools, machine learning, data-driven decisions, automated insights, predictive analytics, business intelligence AI, small business analytics 2025"
         canonical={articleUrl}
         ogType="article"
         ogImage="/og-images/og-ai-business-analytics.jpg"
@@ -36,7 +36,7 @@ const AIBusinessAnalytics = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
-        keywords={["AI business analytics", "small business intelligence", "AI for SMBs", "business analytics tools", "machine learning"]}
+        keywords={["AI business analytics", "small business intelligence", "AI for small business", "business analytics tools", "machine learning"]}
       />
 
       <div className="min-h-screen bg-background">

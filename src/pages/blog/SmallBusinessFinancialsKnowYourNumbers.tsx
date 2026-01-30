@@ -42,7 +42,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
       <SEO
         title="Small Business Financials: Know Your Numbers, Know Your Business | BizHealth.ai"
         description="Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions."
-        keywords="small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, cash conversion cycle, financial literacy business owners, SMB finance"
+        keywords="small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, cash conversion cycle, financial literacy business owners, small business finance"
         canonical="https://bizhealth.ai/blog/small-business-financials-know-your-numbers"
         ogType="article"
         ogImage="/og-images/og-know-your-numbers.jpg"

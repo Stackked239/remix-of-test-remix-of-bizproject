@@ -17,7 +17,7 @@ const BuildHighPerformingTeam = () => {
       <SEO 
         title="Build A High-Performing Team: The Unglamorous Truth | BizHealth.ai"
         description="Learn why team dynamics matter more than individual talent. Discover the 4 foundations of high-performing teams: trust, transparency, clear goals, and accountability. 18-month transformation guide."
-        keywords="high performing team, team building, team culture, leadership, trust building, team transparency, team accountability, team goals, psychological safety, team dynamics, team management, SMB team, small business team, employee engagement, team performance, leadership development 2026"
+        keywords="high performing team, team building, team culture, leadership, trust building, team transparency, team accountability, team goals, psychological safety, team dynamics, team management, small business team, small business team, employee engagement, team performance, leadership development 2026"
         canonical="https://bizhealth.ai/blog/build-high-performing-team"
         ogType="article"
         ogImage="/og-images/og-build-high-performing-team.jpg"

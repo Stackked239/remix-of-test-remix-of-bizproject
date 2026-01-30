@@ -117,9 +117,9 @@ const BusinessStrategy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Business Strategy Insights for SMBs | BizHealth.ai"
+        title="Business Strategy Insights for Small Business | BizHealth.ai"
         description="Expert business strategy articles for small and mid-sized business owners. Learn strategic planning, competitive analysis, decision-making frameworks, and market positioning for sustainable growth in 2025."
-        keywords="business strategy, SMB strategy, strategic planning, competitive analysis, business growth strategy, market positioning, business decision making, strategic frameworks 2025"
+        keywords="business strategy, small business strategy, strategic planning, competitive analysis, business growth strategy, market positioning, business decision making, strategic frameworks 2025"
         canonical="https://bizhealth.ai/blog/business-strategy"
         ogType="website"
         ogImage="/og-images/og-business-strategy.jpg"

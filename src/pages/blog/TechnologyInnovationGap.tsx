@@ -28,8 +28,8 @@ const TechnologyInnovationGap = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Why 72% of Innovative Small Businesses Are Outgrowing You | BizHealth.ai"
-        description="Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days with our proven framework."
-        keywords="innovation gap small business, SMB technology innovation 2025, competitive advantage strategy, small business innovation management, technology infrastructure SMB, business innovation framework, closing innovation gap, SMB growth strategies, innovation readiness assessment, business intelligence technology"
+        description="Discover the innovation gap destroying small business competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days with our proven framework."
+        keywords="innovation gap small business, small business technology innovation 2025, competitive advantage strategy, small business innovation management, technology infrastructure small business, business innovation framework, closing innovation gap, small business growth strategies, innovation readiness assessment, business intelligence technology"
         canonical="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
         ogType="article"
         ogImage="/og-images/og-technology-innovation-gap.jpg"
@@ -40,13 +40,13 @@ const TechnologyInnovationGap = () => {
       <StructuredData
         type="blogPosting"
         headline="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap That's Destroying Competitive Advantage"
-        description="Research reveals the widening innovation gap between SMBs. Learn the 4 pillars of innovation competency and a 90-day framework to close the gap before competitors leave you behind."
+        description="Research reveals the widening innovation gap between small businesses. Learn the 4 pillars of innovation competency and a 90-day framework to close the gap before competitors leave you behind."
         datePublished="2025-12-28"
         dateModified="2025-12-28"
         author="BizHealth.ai Research Team"
         image="https://bizhealth.ai/og-images/og-technology-innovation-gap.jpg"
         url="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
-        keywords={["innovation gap small business", "SMB technology innovation", "competitive advantage strategy", "business innovation framework", "innovation readiness assessment"]}
+        keywords={["innovation gap small business", "small business technology innovation", "competitive advantage strategy", "business innovation framework", "innovation readiness assessment"]}
       />
       
       <PromotionalBanner />
@@ -91,7 +91,7 @@ const TechnologyInnovationGap = () => {
 
             <SocialShareButtons 
               title="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap"
-              description="Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency."
+              description="Discover the innovation gap destroying small business competitive advantage. Learn the 4 pillars of innovation competency."
             />
           </header>
 

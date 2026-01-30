@@ -44,7 +44,7 @@ const CashFlowCrisisManagement = () => {
       <SEO 
         title="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025"
         description="Discover how to fix your cash flow management before it's too late. Learn digital transformation strategies, identify hidden cash flow killers, and implement proactive forecasting frameworks to achieve sustainable growth."
-        keywords="cash flow management small business, business cash flow 2025, SMB financial challenges, cash flow crisis, small business cash management, cash flow strategies, business financial health, working capital management, cash flow forecasting, SMB cash flow solutions"
+        keywords="cash flow management small business, business cash flow 2025, small business financial challenges, cash flow crisis, small business cash management, cash flow strategies, business financial health, working capital management, cash flow forecasting, small business cash flow solutions"
         canonical="https://bizhealth.ai/blog/cash-flow-crisis-management"
         ogType="article"
         ogImage="/og-images/og-cash-flow-crisis.jpg"

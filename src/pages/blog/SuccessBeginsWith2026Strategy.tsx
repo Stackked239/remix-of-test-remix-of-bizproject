@@ -19,8 +19,8 @@ const SuccessBeginsWith2026Strategy = () => {
     <>
       <SEO
         title="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
-        description="Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
-        keywords="2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment"
+        description="Discover why proactive 2026 business planning is essential for small businesses. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
+        keywords="2026 business planning, small business growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 small business trends, strategic goal setting, business health assessment"
         canonical="https://bizhealth.ai/blog/success-begins-with-2026-strategy"
         ogType="article"
         ogImage="/og-images/og-success-2026-strategy.jpg"
@@ -32,13 +32,13 @@ const SuccessBeginsWith2026Strategy = () => {
       <StructuredData
         type="blogPosting"
         headline="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
-        description="Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
+        description="Discover why proactive 2026 business planning is essential for small businesses. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
         image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/success-begins-with-2026-strategy"
-        keywords={["2026 business planning", "SMB growth strategies", "strategic planning 2026", "business strategy plan", "AI business analytics"]}
+        keywords={["2026 business planning", "small business growth strategies", "strategic planning 2026", "business strategy plan", "AI business analytics"]}
       />
 
       <GlobalNavigation />

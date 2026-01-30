@@ -73,9 +73,9 @@ const SMBFinancialTrends2025 = () => {
   return (
     <>
       <SEO
-        title="2025 SMB Financial Trends Guide | BizHealth.ai"
-        description="Unlock predictable growth with SMB financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!"
-        keywords="SMB financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence SMB, financial health metrics, predictive analytics, SMB growth strategies"
+        title="2025 Small Business Financial Trends Guide | BizHealth.ai"
+        description="Unlock predictable growth with small business financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!"
+        keywords="small business financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence small business, financial health metrics, predictive analytics, small business growth strategies"
         canonical="https://bizhealth.ai/blog/2025-smb-financial-trends"
         ogType="article"
         ogImage="/og-images/og-smb-financial-trends.jpg"

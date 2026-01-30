@@ -16,7 +16,7 @@ const FixBusinessBlindSpots = () => {
       <SEO 
         title="How Do You Fix What Isn't Broken? Business Blind Spots Guide 2026"
         description="Discover the 5 dangerous business blind spots costing you $50K-$100K annually. Learn why identifying gaps is an investment, not a burden—unlock 20-25x ROI with strategic assessment."
-        keywords="business blind spots, business assessment, SMB diagnostics, hidden costs, operational inefficiency, financial invisibility, customer experience, strategic drift, business gaps, root cause analysis, business health, profitability leaks, SMB growth, business evaluation 2026"
+        keywords="business blind spots, business assessment, small business diagnostics, hidden costs, operational inefficiency, financial invisibility, customer experience, strategic drift, business gaps, root cause analysis, business health, profitability leaks, small business growth, business evaluation 2026"
         canonical="https://bizhealth.ai/blog/fix-business-blind-spots"
         ogType="article"
         ogImage="/og-images/og-fix-business-blind-spots.jpg"

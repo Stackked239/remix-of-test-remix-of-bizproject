@@ -42,9 +42,9 @@ const SolvingSMBWorkforceGaps = () => {
   return (
     <>
       <SEO
-        title="Solving SMB Workforce Gaps 2025 | BizHealth.ai"
-        description="Discover actionable SMB growth strategies to solve workforce challenges in 2025. Bridge talent gaps with AI business analytics and proven retention tactics—read now!"
-        keywords="SMB workforce challenges 2025, talent gaps, employee retention, AI business analytics, SMB growth strategies, workforce planning, communication strategies"
+        title="Solving Small Business Workforce Gaps 2025 | BizHealth.ai"
+        description="Discover actionable small business growth strategies to solve workforce challenges in 2025. Bridge talent gaps with AI business analytics and proven retention tactics—read now!"
+        keywords="small business workforce challenges 2025, talent gaps, employee retention, AI business analytics, small business growth strategies, workforce planning, communication strategies"
         canonical="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025"
         ogType="article"
         ogImage="/og-images/og-workforce-gaps.jpg"

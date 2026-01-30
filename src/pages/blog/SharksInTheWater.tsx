@@ -18,7 +18,7 @@ const SharksInTheWater = () => {
       <SEO 
         title="Sharks in the Water: Business Crisis Management Guide | BizHealth.ai"
         description="When your business is under attack, stay calm but act fast. Learn the crisis survival framework: assess, prioritize, stabilize, recover. 40-60% of businesses fail after crisis—don't be one."
-        keywords="business crisis management, small business crisis, financial crisis SMB, operational crisis, business survival, crisis response, business recovery, cash flow crisis, customer exodus, staffing crisis, crisis triage, business assessment, crisis leadership, business turnaround, SMB crisis 2026"
+        keywords="business crisis management, small business crisis, financial crisis small business, operational crisis, business survival, crisis response, business recovery, cash flow crisis, customer exodus, staffing crisis, crisis triage, business assessment, crisis leadership, business turnaround, small business crisis 2026"
         canonical="https://bizhealth.ai/blog/sharks-in-the-water-business-crisis"
         ogType="article"
         ogImage="/og-images/og-sharks-in-the-water-business-crisis.jpg"

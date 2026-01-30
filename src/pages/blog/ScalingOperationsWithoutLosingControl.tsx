@@ -20,7 +20,7 @@ const ScalingOperationsWithoutLosingControl = () => {
       <SEO
         title="How Small & Mid-Size Businesses Can Scale Operations Without Losing Control"
         description="Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture for controlled expansion."
-        keywords="business scaling, operations management, SMB growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
+        keywords="business scaling, operations management, small business growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
         canonical="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
         ogType="article"
         ogImage="/og-images/og-scaling-operations.jpg"
@@ -38,7 +38,7 @@ const ScalingOperationsWithoutLosingControl = () => {
         dateModified={modifiedDate}
         image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
-        keywords={["business scaling", "operations management", "SMB growth strategies", "operational excellence", "scaling framework"]}
+        keywords={["business scaling", "operations management", "small business growth strategies", "operational excellence", "scaling framework"]}
       />
 
       <GlobalNavigation />

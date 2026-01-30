@@ -32,7 +32,7 @@ const ChasingSalesNotProfits = () => {
       <SEO 
         title="Why Small Businesses Fail: Chasing Sales Instead of Profits | BizHealth.ai"
         description="Discover why revenue growth doesn't equal profit. Learn to identify unprofitable sales, measure true profitability, and build a sustainable business—read now!"
-        keywords="small business profitability, revenue vs profit, profit margin optimization, unprofitable sales, cash flow management, business financial health, SMB profit strategies, sustainable business growth, unit economics, customer profitability analysis, profit-first business, revenue vanity profit sanity, small business failure, gross margin, net profit margin"
+        keywords="small business profitability, revenue vs profit, profit margin optimization, unprofitable sales, cash flow management, business financial health, small business profit strategies, sustainable business growth, unit economics, customer profitability analysis, profit-first business, revenue vanity profit sanity, small business failure, gross margin, net profit margin"
         ogType="article"
         ogImage="/og-images/og-chasing-sales-not-profits.jpg"
         articlePublishedTime="2026-01-17T12:00:00Z"

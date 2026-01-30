@@ -44,7 +44,7 @@ const RenewalImperativeLegacyBusiness = () => {
       <SEO
         title="The Renewal Imperative: Rebirth Your Legacy Business 2026 | BizHealth.ai"
         description="Learn how to transform your legacy business without losing what made it great. Discover frameworks for product portfolio evaluation, modernization strategy, and sustainable digital transformation."
-        keywords="legacy business transformation, business renewal strategy, digital transformation SMB, modernize established business, business rebirth, product portfolio optimization, legacy system modernization, business transformation framework 2026, innovator's dilemma, hybrid business approach"
+        keywords="legacy business transformation, business renewal strategy, digital transformation small business, modernize established business, business rebirth, product portfolio optimization, legacy system modernization, business transformation framework 2026, innovator's dilemma, hybrid business approach"
         canonical="https://bizhealth.ai/blog/renewal-imperative-legacy-business-rebirth"
         ogType="article"
         ogImage="/og-images/og-renewal-imperative-legacy-business.jpg"

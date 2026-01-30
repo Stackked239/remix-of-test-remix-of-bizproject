@@ -19,8 +19,8 @@ const GrowYourBusinessWithAI = () => {
     <>
       <SEO
         title="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
-        description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth in 2025."
-        keywords="AI business growth 2025, small business AI strategy, SMB AI implementation, AI-driven growth, business intelligence AI, predictive analytics SMB, AI operational efficiency, AI for small business, business health assessment, AI transformation framework"
+        description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for small businesses to integrate AI into business DNA for sustainable, scalable growth in 2025."
+        keywords="AI business growth 2025, small business AI strategy, small business AI implementation, AI-driven growth, business intelligence AI, predictive analytics small business, AI operational efficiency, AI for small business, business health assessment, AI transformation framework"
         canonical={articleUrl}
         ogType="article"
         ogImage="/og-images/og-grow-with-ai.jpg"
@@ -32,13 +32,13 @@ const GrowYourBusinessWithAI = () => {
       <StructuredData
         type="blogPosting"
         headline="The Algorithmic Advantage: Moving from 'Using AI' to 'Growing with AI'"
-        description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for SMBs to integrate AI into business DNA for sustainable, scalable growth in 2025."
+        description="Transform AI from a productivity hack into a strategic growth partner. Learn the 5-phase framework for small businesses to integrate AI into business DNA for sustainable, scalable growth in 2025."
         image={growWithAIHero}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
-        keywords={["AI business growth", "small business AI strategy", "SMB AI implementation", "AI-driven growth", "business intelligence AI"]}
+        keywords={["AI business growth", "small business AI strategy", "small business AI implementation", "AI-driven growth", "business intelligence AI"]}
       />
 
       <div className="min-h-screen bg-background">

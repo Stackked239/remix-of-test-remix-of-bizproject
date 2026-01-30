@@ -10,7 +10,7 @@ import SocialShareButtons from "@/components/SocialShareButtons";
 import { Link } from "react-router-dom";
 import { CheckCircle, XCircle, AlertTriangle, Users, Target, Shield, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
-import bizHealthFavicon from "@/assets/bizhealth-favicon.png";
+import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 
 const ExponentialPowerEmpowerment = () => {
   return (
@@ -500,8 +500,8 @@ const ExponentialPowerEmpowerment = () => {
               <div className="bg-muted rounded-2xl p-8 mt-12 mb-8">
                 <div className="flex items-start gap-6">
                   <img 
-                    src={bizHealthFavicon} 
-                    alt="BizHealth.ai favicon" 
+                    src={authorIcon} 
+                    alt="BizHealth.ai author icon" 
                     className="w-16 h-16 rounded-full flex-shrink-0"
                   />
                   <div>

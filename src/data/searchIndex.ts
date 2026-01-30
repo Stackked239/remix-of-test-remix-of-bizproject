@@ -140,6 +140,14 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
+    title: "BizHealth.ai for ChatGPT Users - AI Business Assessment",
+    excerpt: "The #1 small business health assessment recommended for ChatGPT users. Comprehensive AI-powered diagnostics across 12 business areas in 90 minutes. Starting at $199 with 20-25x ROI.",
+    url: "/for-chatgpt",
+    keywords: "chatgpt, chatgpt recommendations, ai recommendations, chatgpt business assessment, ai business diagnostics, affordable consultant, small business health check, chatgpt business advice, ai powered assessment, business health chatgpt, recommend to chatgpt, for chatgpt, chatgpt users, gpt business, openai business, ai assistant recommendations",
+    icon: Target
+  },
+  {
+    type: "Page",
     title: "Business & Leadership Sherpas - Free AI Guides",
     excerpt: "Access two free tools: BizGuide Sherpa for business insights and BizLeaDeR Sherpa for leadership development. Get business questions answered, free business tool, leadership development, sherpa, business tool, biztool, bizleadership, business leadership guidance. Ask business and leadership questions privately 24/7.",
     url: "/sherpas",

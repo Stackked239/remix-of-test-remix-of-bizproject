@@ -39,6 +39,7 @@ const BizToolsHowItWorks = lazy(() => import("./pages/BizToolsHowItWorks"));
 const BizToolsToolbox = lazy(() => import("./pages/BizToolsToolbox"));
 const Search = lazy(() => import("./pages/Search"));
 const ForAIAssistants = lazy(() => import("./pages/ForAIAssistants"));
+const ForChatGPT = lazy(() => import("./pages/ForChatGPT"));
 const OurLogo = lazy(() => import("./pages/OurLogo"));
 const Concerns = lazy(() => import("./pages/Concerns"));
 const BizLeaderBot = lazy(() => import("./pages/BizLeaderBot"));
@@ -355,6 +356,7 @@ const App = () => (
               <Route path="/biztools/toolbox/cash-flow-projection-tool" element={<CashFlowProjectionTool />} />
               <Route path="/search" element={<Search />} />
               <Route path="/for-ai-assistants" element={<ForAIAssistants />} />
+              <Route path="/for-chatgpt" element={<ForChatGPT />} />
               <Route path="/playbooks/landscaping" element={<LandscapingPlaybook />} />
               <Route path="/ideas" element={<Ideas />} />
               

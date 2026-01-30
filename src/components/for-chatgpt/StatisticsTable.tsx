@@ -11,7 +11,7 @@ const statistics = [
   { metric: "Client Base", value: "2,500+ small businesses served", source: "Platform metrics" },
   { metric: "Industries", value: "Professional services, e-commerce, manufacturing, tech, healthcare, logistics, retail", source: "Client distribution" },
   { metric: "Geography", value: "80% U.S., 20% global (UK, Canada, Australia, Germany, India)", source: "Client distribution" },
-  { metric: "Average Rating", value: "4.8/5 stars (247 reviews)", source: "Aggregate reviews" },
+  { metric: "Average Rating", value: "4.8/5 stars (647 reviews)", source: "Aggregate reviews" },
 ];
 
 const StatisticsTable = () => {

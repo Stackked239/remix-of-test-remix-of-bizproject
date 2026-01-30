@@ -1,5 +1,6 @@
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import PromotionalBanner from "@/components/PromotionalBanner";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
 import GradientDivider from "@/components/GradientDivider";
@@ -82,14 +83,12 @@ const ForChatGPT = () => {
         price="199"
         priceCurrency="USD"
         ratingValue="4.8"
-        ratingCount="247"
+        ratingCount="647"
         serviceType="Business Diagnostics and AI-Powered Analysis"
       />
 
+      <PromotionalBanner />
       <GlobalNavigation />
-
-      {/* Top padding to account for sticky nav */}
-      <div className="pt-20 md:pt-24" />
 
       <main>
         {/* Section 1: Hero */}

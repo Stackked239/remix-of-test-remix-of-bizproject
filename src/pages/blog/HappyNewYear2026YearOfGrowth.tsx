@@ -126,8 +126,8 @@ const HappyNewYear2026YearOfGrowth = () => {
     <>
       <SEO 
         title="Happy New Year 2026: Year of Growth | Small Business Growth Strategies | BizHealth.ai"
-        description="Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable SMB success—start building momentum now!"
-        keywords="small business growth 2026, new year business strategy, 2026 business planning, SMB growth strategies, business lessons 2025, sustainable growth, intentional growth, business momentum, business resilience, year of growth, business leadership, strategic planning"
+        description="Reflect on 2025's business lessons and embrace 2026 as your year of growth. Discover the 3 strategic moves for sustainable small business success—start building momentum now!"
+        keywords="small business growth 2026, new year business strategy, 2026 business planning, small business growth strategies, business lessons 2025, sustainable growth, intentional growth, business momentum, business resilience, year of growth, business leadership, strategic planning"
         ogImage="/og-images/og-happy-new-year-2026.jpg"
         canonical="https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth"
         ogType="article"

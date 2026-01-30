@@ -16,8 +16,8 @@ const CRMRealityCheck = () => {
       <PromotionalBanner />
       <SEO 
         title="CRM Reality Check: Making the Right Decision for Your Business"
-        description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for SMBs."
-        keywords="CRM implementation, small business CRM, CRM success factors, CRM failure reasons, CRM adoption, customer relationship management, CRM ROI, CRM selection guide, SMB CRM strategy, CRM best practices 2026, CRM implementation checklist, sales CRM, lead management, customer data management, CRM user adoption, CRM training, pipeline visibility, sales forecasting, CRM integration"
+        description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for small business."
+        keywords="CRM implementation, small business CRM, CRM success factors, CRM failure reasons, CRM adoption, customer relationship management, CRM ROI, CRM selection guide, small business CRM strategy, CRM best practices 2026, CRM implementation checklist, sales CRM, lead management, customer data management, CRM user adoption, CRM training, pipeline visibility, sales forecasting, CRM integration"
         ogType="article"
         ogImage="/og-images/og-crm-reality.jpg"
         articlePublishedTime="2026-01-07T12:00:00Z"
@@ -29,7 +29,7 @@ const CRMRealityCheck = () => {
       <StructuredData 
         type="article"
         headline="CRM Reality Check: Cutting Through the Hype to Make the Right Decision for Your Business"
-        description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for SMBs."
+        description="55% of CRM implementations fail. Learn why CRM success depends 80% on people and process, the hidden costs of ignoring CRM, and a 5-step success checklist for small business."
         author="BizHealth.ai Research Team"
         datePublished="2026-01-07"
         dateModified="2026-01-07"

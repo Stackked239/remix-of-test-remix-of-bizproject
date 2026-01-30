@@ -140,9 +140,9 @@ const WarningSignsBusiness = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="5 Warning Signs Your Business Needs Immediate Attention | SMB Risk Guide"
-        description="Discover the critical warning signs 70% of SMBs face. Learn to spot cash flow issues, customer retention problems, and operational bottlenecks before they derail your business success."
-        keywords="business warning signs, SMB challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
+        title="5 Warning Signs Your Business Needs Immediate Attention | Small Business Risk Guide"
+        description="Discover the critical warning signs 70% of small businesses face. Learn to spot cash flow issues, customer retention problems, and operational bottlenecks before they derail your business success."
+        keywords="business warning signs, small business challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
         canonical="https://bizhealth.ai/blog/warning-signs-business"
         ogType="article"
         ogImage="/og-images/og-warning-signs-business.jpg"

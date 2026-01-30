@@ -17,9 +17,9 @@ const OvercomingBIChallengesSMB = () => {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'hsl(var(--background))' }}>
       <SEO
-        title="Overcoming Business Intelligence Challenges for SMBs"
-        description="Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making."
-        keywords="business intelligence SMB, BI challenges small business, SMB data analytics, business intelligence adoption, BI for small business, data-driven decisions, affordable BI tools, AI business intelligence 2025, SMB analytics strategy, business intelligence implementation"
+        title="Overcoming Business Intelligence Challenges for Small Business"
+        description="Discover how small businesses can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making."
+        keywords="business intelligence small business, BI challenges small business, small business data analytics, business intelligence adoption, BI for small business, data-driven decisions, affordable BI tools, AI business intelligence 2025, small business analytics strategy, business intelligence implementation"
         canonical="https://bizhealth.ai/blog/overcoming-bi-challenges-smb"
         ogType="article"
         ogImage="/og-images/og-overcoming-bi-challenges.jpg"
@@ -31,13 +31,13 @@ const OvercomingBIChallengesSMB = () => {
       <StructuredData
         type="blogPosting"
         headline="Overcoming Business Intelligence Challenges for Small and Mid-Size Businesses"
-        description="Discover how SMBs can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making."
+        description="Discover how small businesses can overcome BI challenges in 2025. Learn budget-friendly strategies, data integration tips, and AI-powered analytics to transform decision-making."
         image={`https://bizhealth.ai${heroImage}`}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/overcoming-bi-challenges-smb"
-        keywords={["business intelligence SMB", "BI challenges small business", "SMB data analytics", "data-driven decisions", "AI business intelligence"]}
+        keywords={["business intelligence small business", "BI challenges small business", "small business data analytics", "data-driven decisions", "AI business intelligence"]}
       />
 
       <PromotionalBanner />
@@ -55,7 +55,7 @@ const OvercomingBIChallengesSMB = () => {
           { label: "Technology", href: "/blog/technology" },
           { label: "Business Strategy", href: "/blog/business-strategy" },
         ]}
-        shareDescription="Learn how SMBs can transform fragmented data into strategic clarity with affordable BI tools and AI-powered analytics."
+        shareDescription="Learn how small businesses can transform fragmented data into strategic clarity with affordable BI tools and AI-powered analytics."
       />
 
       <main className="flex-grow">

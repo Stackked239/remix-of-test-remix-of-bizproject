@@ -141,9 +141,9 @@ const FeastOrFamineCycle = () => {
   return (
     <>
       <SEO 
-        title="Break the Feast-or-Famine Cycle: Revenue Stability Guide for SMBs | BizHealth.ai"
+        title="Break the Feast-or-Famine Cycle: Revenue Stability Guide for Small Business | BizHealth.ai"
         description="Learn how to break the destructive feast-or-famine revenue cycle destroying small businesses. Discover 7 proven strategies for stable, predictable growth—escape the rollercoaster now!"
-        keywords="feast or famine cycle, small business revenue stability, cash flow management SMB, breaking revenue cycles, predictable business income, business cash flow strategies, revenue volatility solutions, sustainable business growth, business financial planning, SMB revenue management, cyclical revenue problems, business stability strategies, small business cash reserves, revenue forecasting, sales pipeline management"
+        keywords="feast or famine cycle, small business revenue stability, cash flow management small business, breaking revenue cycles, predictable business income, business cash flow strategies, revenue volatility solutions, sustainable business growth, business financial planning, small business revenue management, cyclical revenue problems, business stability strategies, small business cash reserves, revenue forecasting, sales pipeline management"
         ogImage="/og-images/og-feast-famine-cycle.jpg"
         canonical="https://bizhealth.ai/blog/feast-or-famine-cycle-small-business"
         ogType="article"

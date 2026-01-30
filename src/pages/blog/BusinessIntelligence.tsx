@@ -121,9 +121,9 @@ const BusinessIntelligence = () => {
   return (
     <>
       <SEO
-        title="Business Intelligence Insights for SMBs | BizHealth.ai Blog"
+        title="Business Intelligence Insights for Small Business | BizHealth.ai Blog"
         description="Practical business intelligence guidance for small and mid-sized business owners. Learn data analytics, KPIs, metrics, reporting, and data-driven decision-making strategies."
-        keywords="business intelligence, SMB analytics, KPIs for small business, business metrics, data-driven decisions, business reporting, business dashboards, performance tracking"
+        keywords="business intelligence, small business analytics, KPIs for small business, business metrics, data-driven decisions, business reporting, business dashboards, performance tracking"
         canonical="https://bizhealth.ai/blog/business-intelligence"
         ogType="website"
         ogImage="/og-images/og-business-intelligence.jpg"

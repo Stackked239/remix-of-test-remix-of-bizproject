@@ -19,8 +19,8 @@ const SmallBusinessStruggles = () => {
     <>
       <SEO
         title="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
-        description="Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive 20-25x ROI for small business growth."
-        keywords="business health analysis, small business diagnostics, small business pain points, small business growth, why small businesses fail, SMB blind spots, AI business analytics, operational resilience"
+        description="Discover why 70% of small businesses face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive 20-25x ROI for small business growth."
+        keywords="business health analysis, small business diagnostics, small business pain points, small business growth, why small businesses fail, small business blind spots, AI business analytics, operational resilience"
         canonical="https://bizhealth.ai/blog/small-business-struggles"
         ogType="article"
         ogImage="/og-images/og-small-business-struggles.jpg"
@@ -37,7 +37,7 @@ const SmallBusinessStruggles = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Team"
         url="https://bizhealth.ai/blog/small-business-struggles"
-        keywords={["business health analysis", "small business diagnostics", "small business pain points", "SMB blind spots", "AI business analytics"]}
+        keywords={["business health analysis", "small business diagnostics", "small business pain points", "small business blind spots", "AI business analytics"]}
       />
       
       <div className="min-h-screen bg-background">
@@ -54,7 +54,7 @@ const SmallBusinessStruggles = () => {
             { label: "Business Strategy", href: "/blog/business-strategy" },
             { label: "Growth & Scaling", href: "/blog/growth-scaling" },
           ]}
-          shareDescription="Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered diagnostics uncover blind spots."
+          shareDescription="Discover why 70% of small businesses face cash flow challenges and 60% stall after year three. Learn how AI-powered diagnostics uncover blind spots."
         />
 
         <article className="pb-16">

@@ -120,9 +120,9 @@ const GrowthScaling = () => {
   return (
     <div className="min-h-screen bg-[#faf9f7]">
       <SEO
-        title="Growth & Scaling Strategies for SMBs | BizHealth.ai"
+        title="Growth & Scaling Strategies for Small Business | BizHealth.ai"
         description="Scale your business sustainably with proven growth strategies. Learn frameworks for scaling operations, overcoming growth ceilings, unit economics, and building systems that support long-term success."
-        keywords="business scaling, SMB growth strategies, scaling operations, growth challenges, unit economics, sustainable growth, business expansion, scaling framework, growth readiness, business model optimization, LTV CAC ratio, customer acquisition cost"
+        keywords="business scaling, small business growth strategies, scaling operations, growth challenges, unit economics, sustainable growth, business expansion, scaling framework, growth readiness, business model optimization, LTV CAC ratio, customer acquisition cost"
         canonical="https://bizhealth.ai/blog/growth-scaling"
         ogType="website"
         ogImage="/og-images/og-growth-scaling.jpg"

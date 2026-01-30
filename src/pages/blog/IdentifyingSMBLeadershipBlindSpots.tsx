@@ -37,9 +37,9 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
   return (
     <>
       <SEO
-        title="Identifying SMB Leadership Blind Spots | Leadership Guide 2025"
+        title="Identifying Small Business Leadership Blind Spots | Leadership Guide 2025"
         description="Discover the 7 critical leadership blind spots affecting small and mid-size business success. Learn practical strategies to uncover hidden gaps and strengthen your leadership."
-        keywords="leadership blind spots, SMB leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies"
+        keywords="leadership blind spots, small business leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies"
         canonical="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
         ogType="article"
         ogImage="/og-images/og-leadership-blind-spots.jpg"
@@ -51,13 +51,13 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
       <StructuredData
         type="blogPosting"
         headline="Identifying Small & Mid-Size Business Leadership Blind Spots"
-        description="A comprehensive guide to understanding and addressing the seven critical leadership blind spots that affect SMB success, with practical strategies for building organizational self-awareness."
+        description="A comprehensive guide to understanding and addressing the seven critical leadership blind spots that affect small business success, with practical strategies for building organizational self-awareness."
         image={`https://bizhealth.ai${heroImage}`}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
-        keywords={["leadership blind spots", "SMB leadership", "business leadership development", "self-awareness business", "management blind spots"]}
+        keywords={["leadership blind spots", "small business leadership", "business leadership development", "self-awareness business", "management blind spots"]}
       />
 
       <div className="min-h-screen bg-background">

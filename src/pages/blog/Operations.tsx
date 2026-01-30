@@ -100,9 +100,9 @@ const Operations = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Business Operations Insights & Strategies for SMBs (2025) | BizHealth.ai"
-        description="Streamline business operations, boost operational efficiency, and scale your SMB confidently in 2025. Expert guides on process optimization, AI automation, lean operations, supply chain resilience, and operational excellence for small & mid-sized businesses."
-        keywords="business operations SMB, operational efficiency 2025, streamline business processes, AI business operations, SMB operations strategies, operational resilience, process optimization AI, lean operations small business, business process automation 2025"
+        title="Business Operations Insights & Strategies for Small Business (2025) | BizHealth.ai"
+        description="Streamline business operations, boost operational efficiency, and scale your small business confidently in 2025. Expert guides on process optimization, AI automation, lean operations, supply chain resilience, and operational excellence for small & mid-sized businesses."
+        keywords="business operations small business, operational efficiency 2025, streamline business processes, AI business operations, small business operations strategies, operational resilience, process optimization AI, lean operations small business, business process automation 2025"
         canonical="https://bizhealth.ai/blog/operations"
         ogType="website"
         ogImage="/og-images/og-operations.jpg"

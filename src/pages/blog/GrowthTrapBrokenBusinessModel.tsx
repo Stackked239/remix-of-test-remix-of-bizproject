@@ -19,8 +19,8 @@ const GrowthTrapBrokenBusinessModel = () => {
     <>
       <SEO
         title="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
-        description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling. Stop the growth trap in 2025."
-        keywords="growth trap small business, broken business model, SMB scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
+        description="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling. Stop the growth trap in 2025."
+        keywords="growth trap small business, broken business model, small business scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
         canonical={articleUrl}
         ogType="article"
         ogImage="/og-images/og-growth-trap.jpg"
@@ -32,13 +32,13 @@ const GrowthTrapBrokenBusinessModel = () => {
       <StructuredData
         type="blogPosting"
         headline="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
-        description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling."
+        description="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling."
         image={growthTrapHero}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
-        keywords={["growth trap small business", "broken business model", "SMB scaling problems", "business health vs growth", "unit economics"]}
+        keywords={["growth trap small business", "broken business model", "small business scaling problems", "business health vs growth", "unit economics"]}
       />
 
       <div className="min-h-screen bg-background">
@@ -55,7 +55,7 @@ const GrowthTrapBrokenBusinessModel = () => {
             { label: "Business Strategy", href: "/blog/business-strategy" },
             { label: "Financial Management", href: "/blog/financial-management" },
           ]}
-          shareDescription="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention and unit economics."
+          shareDescription="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention and unit economics."
         />
 
         {/* Article Content */}

@@ -131,9 +131,9 @@ const Technology = () => {
   return (
     <div className="min-h-screen bg-[#faf9f7]">
       <SEO
-        title="Technology & Business Intelligence Insights for SMBs | BizHealth.ai"
+        title="Technology & Business Intelligence Insights for Small Business | BizHealth.ai"
         description="Navigate the digital landscape with expert guidance on business intelligence, AI adoption, automation, software selection, and digital transformation strategies for small and mid-sized businesses."
-        keywords="business technology, SMB tech, business intelligence, AI for small business, automation, digital transformation, software selection, data analytics, BI tools, technology ROI"
+        keywords="business technology, small business tech, business intelligence, AI for small business, automation, digital transformation, software selection, data analytics, BI tools, technology ROI"
         canonical="https://bizhealth.ai/blog/technology"
         ogType="website"
         ogImage="/og-images/og-technology.jpg"

@@ -39,9 +39,9 @@ const R2A2JobDescriptions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="R2A2 Job Descriptions: Role Clarity for SMB Teams | BizHealth.ai"
+        title="R2A2 Job Descriptions: Role Clarity for Small Business Teams | BizHealth.ai"
         description="Learn how R2A2 job descriptions—Role, Responsibilities, Accountability, and Authority—transform small business teams with better hiring, faster onboarding, and stronger retention."
-        keywords="R2A2 job descriptions, role clarity small business, job description framework, employee accountability, delegation authority, SMB hiring, team management, employee retention, job roles responsibilities, role definition framework, small business HR, team performance, onboarding best practices, role accountability, decision authority"
+        keywords="R2A2 job descriptions, role clarity small business, job description framework, employee accountability, delegation authority, small business hiring, team management, employee retention, job roles responsibilities, role definition framework, small business HR, team performance, onboarding best practices, role accountability, decision authority"
         canonical="https://bizhealth.ai/blog/r2a2-job-descriptions-role-clarity-small-business-teams"
         ogImage="/og-images/og-r2a2-job-descriptions-role-clarity.jpg"
       />

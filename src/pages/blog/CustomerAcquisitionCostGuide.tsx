@@ -41,8 +41,8 @@ const CustomerAcquisitionCostGuide = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Customer Acquisition Cost Guide: Calculate CAC & Optimize Growth | BizHealth.ai"
-        description="Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio. Stop bleeding money on growth with this comprehensive guide for SMBs."
-        keywords="customer acquisition cost, CAC calculation, CAC formula, LTV to CAC ratio, customer lifetime value, CAC payback period, marketing ROI, customer acquisition strategy, SMB growth, unit economics, cost per customer, marketing efficiency, growth optimization, sustainable growth, sales and marketing costs"
+        description="Learn how to calculate CAC, understand payback periods, and optimize your LTV-to-CAC ratio. Stop bleeding money on growth with this comprehensive guide for small business."
+        keywords="customer acquisition cost, CAC calculation, CAC formula, LTV to CAC ratio, customer lifetime value, CAC payback period, marketing ROI, customer acquisition strategy, small business growth, unit economics, cost per customer, marketing efficiency, growth optimization, sustainable growth, sales and marketing costs"
         canonical="https://bizhealth.ai/blog/customer-acquisition-cost-guide-smb"
         ogImage="/og-images/og-customer-acquisition-cost-guide.jpg"
       />

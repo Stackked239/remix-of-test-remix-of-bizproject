@@ -13,9 +13,9 @@ const TechnologyStrategicAllyROI = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Technology as Your Strategic Ally: ROI-First Decisions for SMB Growth"
-        description="Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI, hidden cost blind spots, and a proven evaluation framework."
-        keywords="technology ROI small business, SMB technology decisions, ROI-first technology, AI ROI measurement, technology investment framework, small business automation, tech blind spots, SaaS audit, business technology strategy 2025, measuring technology impact"
+        title="Technology as Your Strategic Ally: ROI-First Decisions for Small Business Growth"
+        description="Learn to make ROI-first technology decisions that drive real small business growth. Discover the 5 dimensions of tech ROI, hidden cost blind spots, and a proven evaluation framework."
+        keywords="technology ROI small business, small business technology decisions, ROI-first technology, AI ROI measurement, technology investment framework, small business automation, tech blind spots, SaaS audit, business technology strategy 2025, measuring technology impact"
         canonical="https://bizhealth.ai/blog/technology-strategic-ally-roi-decisions"
         ogType="article"
         ogImage="/og-images/og-technology-strategic-ally-roi.jpg"
@@ -45,7 +45,7 @@ const TechnologyStrategicAllyROI = () => {
           { label: "Operations", href: "/blog/operations" },
           { label: "Business Strategy", href: "/blog/business-strategy" },
         ]}
-        shareDescription="Learn to make ROI-first technology decisions that drive real SMB growth. Discover the 5 dimensions of tech ROI and a proven evaluation framework."
+        shareDescription="Learn to make ROI-first technology decisions that drive real small business growth. Discover the 5 dimensions of tech ROI and a proven evaluation framework."
       />
 
       {/* Article Content */}

@@ -254,9 +254,9 @@ const BusinessLeadership = () => {
   return (
     <>
       <SEO
-        title="Business Leadership Insights for SMBs"
+        title="Business Leadership Insights for Small Business"
         description="Practical business leadership guidance for small and mid-sized business owners. Learn communication, team development, decision-making, emotional intelligence, and change management."
-        keywords="business leadership, SMB leadership, leadership development, team management, business communication, leadership skills, emotional intelligence, change management, decision making"
+        keywords="business leadership, small business leadership, leadership development, team management, business communication, leadership skills, emotional intelligence, change management, decision making"
         canonical="https://bizhealth.ai/blog/business-leadership"
         ogType="website"
         ogImage="/og-images/og-business-leadership.jpg"

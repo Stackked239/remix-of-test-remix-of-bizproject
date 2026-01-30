@@ -17,9 +17,9 @@ const ImpactOverInformation = () => {
   return (
     <>
       <SEO
-        title="The Pitfall of Information Overload: Why General Advice Falls Short for SMBs"
-        description="Discover why generic business advice fails SMBs and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth."
-        keywords="business health diagnostics, SMB business assessment, operational assessment, AI business analysis, SMB growth strategies, business evaluation tools, data-driven insights, business intelligence for SMBs"
+        title="The Pitfall of Information Overload: Why General Advice Falls Short for Small Business"
+        description="Discover why generic business advice fails small businesses and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth."
+        keywords="business health diagnostics, small business assessment, operational assessment, AI business analysis, small business growth strategies, business evaluation tools, data-driven insights, business intelligence for small business"
         canonical={articleUrl}
         ogType="article"
         ogImage="/og-images/og-impact-over-information.jpg"

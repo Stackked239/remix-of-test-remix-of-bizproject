@@ -300,8 +300,8 @@ const GrowthTrapOrGrowthEngine = () => {
       <PromotionalBanner />
       <SEO 
         title="Growth Trap or Growth Engine? Assessing Business Growth Readiness"
-        description="78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap."
-        keywords="business growth readiness, growth trap, sustainable growth, SMB scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth"
+        description="78% of small businesses want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap."
+        keywords="business growth readiness, growth trap, sustainable growth, small business scaling, business foundation audit, growth assessment, premature growth, business expansion, growth strategy, scaling small business, growth readiness checklist, business growth plan 2026, cash flow for growth, operational scalability, team capacity, leadership alignment, growth sustainability, fast vs sustainable growth"
         ogType="article"
         ogImage="/og-images/og-growth-trap-or-growth-engine.jpg"
         articlePublishedTime="2026-01-09T12:00:00Z"
@@ -313,7 +313,7 @@ const GrowthTrapOrGrowthEngine = () => {
       <StructuredData 
         type="article"
         headline="Growth Trap or Growth Engine? Assessing Whether Your Business is Actually Ready to Grow"
-        description="78% of SMBs want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap."
+        description="78% of small businesses want to grow, but 60% stall after year three. Learn the Foundation Audit framework to assess if your business is ready for sustainable growth—or heading into a trap."
         author="BizHealth.ai Research Team"
         datePublished="2026-01-09"
         dateModified="2026-01-09"
@@ -335,7 +335,7 @@ const GrowthTrapOrGrowthEngine = () => {
           { label: "Business Leadership", href: "/blog/business-leadership" },
           { label: "Operations", href: "/blog/operations" },
         ]}
-        shareDescription="78% of SMBs want to grow, but 60% stall after year three. Is your business a growth trap or a growth engine? Take the Foundation Audit."
+        shareDescription="78% of small businesses want to grow, but 60% stall after year three. Is your business a growth trap or a growth engine? Take the Foundation Audit."
       />
       
       {/* Blog Content */}

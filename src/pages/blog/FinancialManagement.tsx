@@ -135,9 +135,9 @@ const FinancialManagement = () => {
   return (
     <>
       <SEO
-        title="Financial Management Insights for SMBs | BizHealth.ai Blog"
+        title="Financial Management Insights for Small Business | BizHealth.ai Blog"
         description="Master your business finances with expert guidance on cash flow management, financial planning, budgeting, and key performance indicators for small and mid-sized businesses."
-        keywords="financial management, SMB finance, cash flow management, business budgeting, financial planning, financial metrics, small business finance, financial health, business KPIs"
+        keywords="financial management, small business finance, cash flow management, business budgeting, financial planning, financial metrics, small business finance, financial health, business KPIs"
         canonical="https://bizhealth.ai/blog/financial-management"
         ogType="website"
         ogImage="/og-images/og-financial-management.jpg"

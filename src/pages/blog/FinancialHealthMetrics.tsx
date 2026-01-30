@@ -14,8 +14,8 @@ const FinancialHealthMetrics = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Financial Health Metrics Guide 2025 | BizHealth.ai"
-        description="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking. Boost business performance—read now!"
-        keywords="financial health metrics, business KPIs, profit margins, cash flow management, financial ratios, SMB metrics, business performance indicators"
+        description="Master 8 critical financial health metrics for small business: profit margins, cash flow, KPIs, and growth tracking. Boost business performance—read now!"
+        keywords="financial health metrics, business KPIs, profit margins, cash flow management, financial ratios, small business metrics, business performance indicators"
         canonical="https://bizhealth.ai/blog/financial-health-metrics"
         ogType="article"
         ogImage="/og-images/og-financial-health-metrics.jpg"
@@ -40,11 +40,11 @@ const FinancialHealthMetrics = () => {
         publishDate="October 12, 2025"
         readTime="15 min read"
         heroImage={financialMetricsImage}
-        heroImageAlt="Comprehensive financial health metrics dashboard displaying business KPIs, profit margins, cash flow analytics, and performance indicators for SMB growth tracking"
+        heroImageAlt="Comprehensive financial health metrics dashboard displaying business KPIs, profit margins, cash flow analytics, and performance indicators for small business growth tracking"
         categories={[
           { label: "Financial Management", href: "/blog/financial-management" },
         ]}
-        shareDescription="Master 8 critical financial health metrics for SMBs: profit margins, cash flow, KPIs, and growth tracking."
+        shareDescription="Master 8 critical financial health metrics for small business: profit margins, cash flow, KPIs, and growth tracking."
       />
 
       {/* Article Content */}

@@ -17,7 +17,7 @@ const MarketingMythsSpendingNotGrowth = () => {
       <SEO 
         title="Stop Falling for Marketing Myths: Why Spending Isn't Growth"
         description="Discover the 7 marketing myths draining your budget without driving growth. Learn data-backed strategies to stop wasting money and start building profitable customer acquisition."
-        keywords="marketing myths, marketing spending waste, marketing ROI, small business marketing, marketing budget optimization, customer acquisition cost, marketing mistakes, marketing strategy 2026, wasted marketing spend, marketing effectiveness, SMB marketing, growth marketing, marketing myths debunked"
+        keywords="marketing myths, marketing spending waste, marketing ROI, small business marketing, marketing budget optimization, customer acquisition cost, marketing mistakes, marketing strategy 2026, wasted marketing spend, marketing effectiveness, small business marketing, growth marketing, marketing myths debunked"
         canonical="https://bizhealth.ai/blog/marketing-myths-spending-not-creating-growth"
         ogType="article"
         ogImage="/og-images/og-marketing-myths-spending-not-creating-growth.jpg"

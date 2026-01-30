@@ -116,9 +116,9 @@ const FractionalCFOToolkit = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Fractional CFO Toolkit: 7 Financial Dashboards for SMB Owners | BizHealth.ai"
+        title="Fractional CFO Toolkit: 7 Financial Dashboards for Small Business Owners | BizHealth.ai"
         description="Discover the 7 essential financial dashboards every business owner needs. Build CFO-level visibility with cash flow, P&L, and strategic metrics—read now!"
-        keywords="fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, SMB financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics, debt capital dashboard, strategic metrics SMB"
+        keywords="fractional CFO toolkit, financial dashboards small business, CFO dashboards, cash flow dashboard, P&L dashboard, small business financial visibility, business KPIs, financial metrics tracking, cash position dashboard, customer profitability dashboard, operational efficiency metrics, debt capital dashboard, strategic metrics small business"
         canonical="https://bizhealth.ai/blog/fractional-cfo-toolkit"
         ogType="article"
         ogImage="/og-images/og-fractional-cfo-toolkit.jpg"
@@ -134,7 +134,7 @@ const FractionalCFOToolkit = () => {
         datePublished="2025-12-29"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/fractional-cfo-toolkit"
-        keywords={["fractional CFO toolkit", "financial dashboards", "cash flow dashboard", "P&L dashboard", "SMB financial visibility"]}
+        keywords={["fractional CFO toolkit", "financial dashboards", "cash flow dashboard", "P&L dashboard", "small business financial visibility"]}
       />
       <GlobalNavigation />
       

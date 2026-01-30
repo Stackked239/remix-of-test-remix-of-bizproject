@@ -230,8 +230,8 @@ const HRProgramAssetMultiplier = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="HR Program as Asset & Multiplier for Small Business | BizHealth.ai"
-        description="Discover why an HR program is not a cost but an asset and multiplier for your small business. Learn the 9 components of effective SMB HR and stop losing $30K-50K per bad hire."
-        keywords="HR program small business, small business HR strategy, employee retention SMB, hiring process small business, HR as asset multiplier, HR for SMB, human resources small business, talent management, employee development, performance management, onboarding process, job descriptions, one-on-ones, employee turnover cost, retention strategies, culture building, HR systems"
+        description="Discover why an HR program is not a cost but an asset and multiplier for your small business. Learn the 9 components of effective small business HR and stop losing $30K-50K per bad hire."
+        keywords="HR program small business, small business HR strategy, employee retention small business, hiring process small business, HR as asset multiplier, HR for small business, human resources small business, talent management, employee development, performance management, onboarding process, job descriptions, one-on-ones, employee turnover cost, retention strategies, culture building, HR systems"
         canonical="https://bizhealth.ai/blog/hr-program-asset-multiplier-small-business"
         ogType="article"
         ogImage="/og-images/og-hr-asset-multiplier.jpg"
@@ -242,7 +242,7 @@ const HRProgramAssetMultiplier = () => {
       <StructuredData
         type="blogPosting"
         headline="Embracing an HR Program as an Asset & Multiplier to Your Small Business"
-        description="Discover why an HR program is not a cost but an asset and multiplier for your small business. Learn the 9 components of effective SMB HR and stop losing $30K-50K per bad hire."
+        description="Discover why an HR program is not a cost but an asset and multiplier for your small business. Learn the 9 components of effective small business HR and stop losing $30K-50K per bad hire."
         image="https://bizhealth.ai/og-images/og-hr-program-asset-multiplier.jpg"
         datePublished="2026-01-06"
         dateModified="2026-01-06"

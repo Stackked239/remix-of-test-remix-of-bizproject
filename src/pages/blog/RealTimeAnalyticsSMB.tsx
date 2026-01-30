@@ -14,9 +14,9 @@ const RealTimeAnalyticsSMB = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Real-Time Analytics Guide 2025 | SMB Business Intelligence | BizHealth.ai"
-        description="Transform your SMB with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking—unlock competitive advantage now!"
-        keywords="real-time BI for SMBs 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, SMB analytics"
+        title="Real-Time Analytics Guide 2025 | Small Business Intelligence | BizHealth.ai"
+        description="Transform your small business with real-time analytics in 2025. Expert guide on BI agility, data-driven decisions, and performance tracking—unlock competitive advantage now!"
+        keywords="real-time BI for small business 2025, analytics agility, data-driven decisions, performance tracking, business intelligence, small business analytics"
         canonical="https://bizhealth.ai/blog/real-time-analytics-smb-agility"
         ogType="article"
         ogImage="/og-images/og-realtime-analytics.jpg"
@@ -25,13 +25,13 @@ const RealTimeAnalyticsSMB = () => {
       />
       <StructuredData
         type="blogPosting"
-        headline="Real-Time Analytics: Powering SMB Agility in Volatile Markets"
-        description="Discover how real-time BI transforms SMBs in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for volatile markets."
+        headline="Real-Time Analytics: Powering Small Business Agility in Volatile Markets"
+        description="Discover how real-time BI transforms small businesses in 2025. Expert insights on analytics agility, data-driven decisions, and performance tracking for volatile markets."
         image={`https://bizhealth.ai${realTimeAnalyticsImage}`}
         datePublished="2025-09-26"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/real-time-analytics-smb-agility"
-        keywords={["real-time BI for SMBs", "analytics agility", "data-driven decisions", "performance tracking", "business intelligence"]}
+        keywords={["real-time BI for small business", "analytics agility", "data-driven decisions", "performance tracking", "business intelligence"]}
       />
 
       <GlobalNavigation />

@@ -20,8 +20,8 @@ const HowToCheckYourBusinessHealth = () => {
     <>
       <SEO
         title="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
-        description="Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
-        keywords="check my business health, how to check business health, business health check for SMBs, SMB business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
+        description="Learn how to check your business health with this small business guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
+        keywords="check my business health, how to check business health, business health check for small business, small business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
         canonical="https://bizhealth.ai/blog/how-to-check-your-business-health"
         ogType="article"
         ogImage="/og-images/og-check-business-health.jpg"
@@ -33,13 +33,13 @@ const HowToCheckYourBusinessHealth = () => {
       <StructuredData
         type="blogPosting"
         headline="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
-        description="Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
+        description="Learn how to check your business health with this small business guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
         image={`https://bizhealth.ai${heroImage}`}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/how-to-check-your-business-health"
-        keywords={["check my business health", "how to check business health", "business health check for SMBs", "SMB business health assessment", "small business diagnostics"]}
+        keywords={["check my business health", "how to check business health", "business health check for small business", "small business health assessment", "small business diagnostics"]}
       />
 
       <div className="min-h-screen bg-background">

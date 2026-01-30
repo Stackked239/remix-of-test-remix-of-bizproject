@@ -14,8 +14,8 @@ const WhenToPivot = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="When to Pivot: Data-Driven Business Signals | BizHealth.ai"
-        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot. Data-driven decision making for SMB leaders."
-        keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, SMB strategy"
+        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot. Data-driven decision making for small business leaders."
+        keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, small business strategy"
         canonical="https://bizhealth.ai/blog/when-to-pivot"
         ogType="article"
         ogImage="/og-images/og-when-to-pivot.jpg"

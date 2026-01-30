@@ -46,8 +46,8 @@ const CustomerLoyaltyReliability = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Customer Loyalty Starts With Reliability | BizHealth.ai"
-        description="Build lasting customer loyalty through consistent reliability, not grand gestures. Learn actionable strategies for SMB customer service excellence—read now!"
-        keywords="customer loyalty, customer service SMB, customer retention strategies, reliability in business, customer experience, building customer trust, SMB customer loyalty, service consistency, customer feedback loop, empathy in customer service, frontline empowerment, customer churn prevention"
+        description="Build lasting customer loyalty through consistent reliability, not grand gestures. Learn actionable strategies for small business customer service excellence—read now!"
+        keywords="customer loyalty, customer service small business, customer retention strategies, reliability in business, customer experience, building customer trust, small business customer loyalty, service consistency, customer feedback loop, empathy in customer service, frontline empowerment, customer churn prevention"
         canonical="https://bizhealth.ai/blog/customer-loyalty-starts-with-reliability"
         ogType="article"
         ogImage="/og-images/og-customer-loyalty-reliability.jpg"

@@ -17,8 +17,8 @@ const SmallBusinessAIAdoption = () => {
     <>
       <SEO
         title="AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners"
-        description="Turn skepticism into strategic AI adoption. Learn genuine AI implementation for SMBs, avoid spam tools, and achieve 20x ROI with proven strategies for 2025."
-        keywords="small business AI adoption 2025, AI for small business, SMB AI adoption, business automation tools, AI implementation guide, small business technology, business intelligence AI, AI ROI for SMBs, AI strategy 2025"
+        description="Turn skepticism into strategic AI adoption. Learn genuine AI implementation for small businesses, avoid spam tools, and achieve 20x ROI with proven strategies for 2025."
+        keywords="small business AI adoption 2025, AI for small business, small business AI implementation, business automation tools, AI implementation guide, small business technology, business intelligence AI, AI ROI for small business, AI strategy 2025"
         canonical={articleUrl}
         ogType="article"
         ogImage="/og-images/og-ai-adoption.jpg"
@@ -30,13 +30,13 @@ const SmallBusinessAIAdoption = () => {
       <StructuredData
         type="blogPosting"
         headline="AI Adoption for Skeptical Owners—A No-BS Guide for Business Owners"
-        description="Turn skepticism into strategic AI adoption. Learn genuine AI implementation for SMBs, avoid spam tools, and achieve 20x ROI with proven strategies for 2025."
+        description="Turn skepticism into strategic AI adoption. Learn genuine AI implementation for small businesses, avoid spam tools, and achieve 20x ROI with proven strategies for 2025."
         image={aiAdoptionHero}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
-        keywords={["small business AI adoption", "AI for small business", "SMB AI adoption", "business automation tools", "AI implementation guide"]}
+        keywords={["small business AI adoption", "AI for small business", "small business AI implementation", "business automation tools", "AI implementation guide"]}
       />
 
       <div className="min-h-screen bg-background">

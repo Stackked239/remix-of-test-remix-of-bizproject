@@ -18,8 +18,8 @@ const StrategicPlanning = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Strategic Planning Post-Pandemic 2025 | BizHealth.ai"
-        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape. Expert strategies for SMBs."
-        keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, SMB planning, business adaptation"
+        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape. Expert strategies for small businesses."
+        keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, small business planning, business adaptation"
         canonical="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
         ogType="article"
         ogImage="/og-images/og-strategic-planning.jpg"

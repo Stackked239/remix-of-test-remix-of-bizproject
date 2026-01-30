@@ -39,7 +39,7 @@ const LeanPrinciplesSmallBusiness = () => {
       <SEO 
         title="The Guide to Lean Principles for Small Businesses | BizHealth.ai"
         description="Discover how Lean principles eliminate waste and boost efficiency for small businesses. Learn 5S, Kaizen, Kanban, and value stream mapping to cut costs and improve operations."
-        keywords="lean principles small business, lean manufacturing SMB, 5S methodology, kaizen small business, continuous improvement, value stream mapping, operational efficiency, eliminate waste, lean operations, kanban system, process improvement, operational excellence, lean management, toyota production system, small business efficiency, waste elimination, TIMWOODS, lean transformation, lean implementation, lean tools, lean thinking"
+        keywords="lean principles small business, lean manufacturing small business, 5S methodology, kaizen small business, continuous improvement, value stream mapping, operational efficiency, eliminate waste, lean operations, kanban system, process improvement, operational excellence, lean management, toyota production system, small business efficiency, waste elimination, TIMWOODS, lean transformation, lean implementation, lean tools, lean thinking"
         ogType="article"
         ogImage="/og-images/og-lean-principles-small-business.jpg"
         articlePublishedTime="2026-01-16T12:00:00Z"

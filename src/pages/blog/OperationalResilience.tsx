@@ -14,8 +14,8 @@ const OperationalResilience = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Operational Resilience Strategies 2025 | BizHealth.ai"
-        description="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for SMBs in 2025—start strengthening your business today!"
-        keywords="operational resilience, business continuity, crisis management, risk mitigation, SMB resilience, business systems, market volatility"
+        description="Build business systems that withstand market volatility. Learn 5 proven operational resilience strategies for small businesses in 2025—start strengthening your business today!"
+        keywords="operational resilience, business continuity, crisis management, risk mitigation, small business resilience, business systems, market volatility"
         canonical="https://bizhealth.ai/blog/operational-resilience"
         ogType="article"
         ogImage="/og-images/og-operational-resilience.jpg"
@@ -30,7 +30,7 @@ const OperationalResilience = () => {
         datePublished="2025-09-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/operational-resilience"
-        keywords={["operational resilience", "business continuity", "crisis management", "risk mitigation", "SMB resilience"]}
+        keywords={["operational resilience", "business continuity", "crisis management", "risk mitigation", "small business resilience"]}
       />
       <GlobalNavigation />
       

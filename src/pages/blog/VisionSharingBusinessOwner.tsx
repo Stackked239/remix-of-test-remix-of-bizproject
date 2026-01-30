@@ -144,7 +144,7 @@ const VisionSharingBusinessOwner = () => {
       <SEO 
         title="Business Vision Sharing: Myths, Mistakes & Why Clarity Unites Teams | BizHealth.ai"
         description="Discover why 'they should already know' is the vision myth destroying team alignment. Learn the 5 mistakes leaders make when sharing vision and a proven framework to unite your team—unlock growth now!"
-        keywords="business vision sharing, sharing vision as a business owner, team alignment vision, leadership vision clarity, business owner vision communication, vision statement SMB, team unity through vision, leadership communication strategy, business growth vision, vision alignment team, business owner leadership, company vision sharing, clear business vision, vision sharing mistakes, vision myth business"
+        keywords="business vision sharing, sharing vision as a business owner, team alignment vision, leadership vision clarity, business owner vision communication, vision statement small business, team unity through vision, leadership communication strategy, business growth vision, vision alignment team, business owner leadership, company vision sharing, clear business vision, vision sharing mistakes, vision myth business"
         ogImage="/og-images/og-vision-sharing-business-owner.jpg"
         canonical="https://bizhealth.ai/blog/vision-sharing-business-owner"
         ogType="article"

@@ -18,7 +18,7 @@ const EbitdaBusinessValuation = () => {
       <SEO 
         title="EBITDA: The Number That Decides Your Business Worth | BizHealth.ai"
         description="Understand EBITDA and how it determines your business valuation. Learn what buyers and lenders look for, common pitfalls to avoid, and how to use EBITDA as a strategic management tool."
-        keywords="EBITDA, business valuation, EBITDA calculation, business worth, earnings before interest taxes depreciation amortization, EBITDA multiple, business sale, SMB valuation, operating profitability, EBITDA margin, business valuation 2026, financial metrics, business health, profitability metrics, lender requirements"
+        keywords="EBITDA, business valuation, EBITDA calculation, business worth, earnings before interest taxes depreciation amortization, EBITDA multiple, business sale, small business valuation, operating profitability, EBITDA margin, business valuation 2026, financial metrics, business health, profitability metrics, lender requirements"
         canonical="https://bizhealth.ai/blog/ebitda-business-valuation"
         ogType="article"
         ogImage="/og-images/og-ebitda-business-valuation.jpg"

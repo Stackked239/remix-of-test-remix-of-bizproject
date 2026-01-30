@@ -55,7 +55,7 @@ const StressTestPricingFramework = () => {
       <SEO 
         title="Stress-Test Pricing Framework 2025 | BizHealth.ai"
         description="Optimize your small business pricing with a proven stress-test framework. Learn how to maximize margins and cash flow—read the complete guide now!"
-        keywords="stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization, pricing psychology, customer segmentation pricing, small business pricing 2025"
+        keywords="stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework small business, value-based pricing, profit optimization, pricing psychology, customer segmentation pricing, small business pricing 2025"
         canonical="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
         ogType="article"
         ogImage="/og-images/og-stress-test-pricing.jpg"

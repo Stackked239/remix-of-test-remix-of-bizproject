@@ -19,8 +19,8 @@ const FinancialStewardshipEveryonesResponsibility = () => {
     <>
       <SEO
         title="Financial Stewardship: Everyone's Responsibility in Your Small Business | BizHealth.ai"
-        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability in 2025."
-        keywords="financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, SMB finance tips, business financial health, financial awareness employees, cost management team, budget responsibility, financial literacy workplace"
+        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for small business financial accountability in 2025."
+        keywords="financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, small business finance tips, business financial health, financial awareness employees, cost management team, budget responsibility, financial literacy workplace"
         canonical="https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility"
         ogType="article"
         ogImage="/og-images/og-financial-stewardship.jpg"
@@ -32,7 +32,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
       <StructuredData
         type="blogPosting"
         headline="Financial Stewardship: Everyone's Responsibility in Your Small Business"
-        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability in 2025."
+        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for small business financial accountability in 2025."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}

@@ -17,7 +17,7 @@ const LeadingBlindBusinessIntelligence = () => {
       <SEO 
         title="Leading Blind: Why Business Intelligence Is No Longer Optional for Small Business"
         description="Discover why operating without BI costs you market share, customers, and profitability. Learn how affordable BI tools transform gut instinct into data-driven decisions."
-        keywords="business intelligence small business, BI for SMB, data-driven decisions, business visibility, SMB analytics, business data insights, operational efficiency, profitability analysis, customer profitability, competitive advantage, BI tools, dashboard analytics, real-time business data, small business metrics, BI implementation, business health, operational blind spots"
+        keywords="business intelligence small business, BI for small business, data-driven decisions, business visibility, small business analytics, business data insights, operational efficiency, profitability analysis, customer profitability, competitive advantage, BI tools, dashboard analytics, real-time business data, small business metrics, BI implementation, business health, operational blind spots"
         ogType="article"
         ogImage="/og-images/og-leading-blind-business-intelligence.jpg"
         articlePublishedTime="2026-01-12T12:00:00Z"

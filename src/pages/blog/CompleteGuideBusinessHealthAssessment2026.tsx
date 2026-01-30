@@ -20,7 +20,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
       <SEO
         title="The Complete Guide to Business Health Assessment for 2026"
         description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth."
-        keywords="business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
+        keywords="business health assessment 2026, business health check, small business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
         canonical="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
         ogType="article"
         ogImage="/og-images/og-complete-guide-2026.jpg"
@@ -38,7 +38,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
-        keywords={["business health assessment 2026", "business health check", "SMB business assessment", "operational efficiency", "financial health metrics"]}
+        keywords={["business health assessment 2026", "business health check", "small business assessment", "operational efficiency", "financial health metrics"]}
       />
 
       <div className="min-h-screen bg-background">

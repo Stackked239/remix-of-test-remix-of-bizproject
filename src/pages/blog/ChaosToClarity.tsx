@@ -46,8 +46,8 @@ const ChaosToClarity = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="From Chaos to Clarity: Operating Rhythm for Scaling Teams | BizHealth.ai"
-        description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework: weekly huddles, monthly reviews, and quarterly planning for SMB growth."
-        keywords="operating rhythm SMB, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, SMB operations management, leadership meetings 2025, business scaling framework"
+        description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework: weekly huddles, monthly reviews, and quarterly planning for small business growth."
+        keywords="operating rhythm small business, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, small business operations management, leadership meetings 2025, business scaling framework"
         canonical="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
         ogType="article"
         ogImage="/og-images/og-chaos-to-clarity.jpg"
@@ -62,7 +62,7 @@ const ChaosToClarity = () => {
         dateModified={modifiedDate}
         image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
-        keywords={["operating rhythm SMB", "scaling business teams", "weekly leadership huddle", "monthly business review", "quarterly planning"]}
+        keywords={["operating rhythm small business", "scaling business teams", "weekly leadership huddle", "monthly business review", "quarterly planning"]}
       />
 
       <GlobalNavigation />

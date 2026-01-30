@@ -18,7 +18,7 @@ const BusinessIntelligenceROI = () => {
       <SEO 
         title="Business Intelligence ROI Guide 2025 | BizHealth.ai"
         description="Discover measurable BI ROI results for SMBs. Real case studies show 112% median returns within 18 months. Calculate your potential ROI now!"
-        keywords="business intelligence ROI, BI ROI, SMB business intelligence, small business analytics, business intelligence for small business, BI implementation cost, business intelligence case studies"
+        keywords="business intelligence ROI, BI ROI, small business intelligence, small business analytics, business intelligence for small business, BI implementation cost, business intelligence case studies"
         canonical="https://bizhealth.ai/blog/business-intelligence-roi"
         ogType="article"
         ogImage="/og-images/og-business-intelligence-roi.jpg"
@@ -34,7 +34,7 @@ const BusinessIntelligenceROI = () => {
         dateModified="2025-12-10"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/business-intelligence-roi"
-        keywords={["business intelligence ROI", "BI ROI", "SMB business intelligence", "small business analytics", "BI implementation cost"]}
+        keywords={["business intelligence ROI", "BI ROI", "small business intelligence", "small business analytics", "BI implementation cost"]}
       />
       
       <GlobalNavigation />

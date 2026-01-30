@@ -237,7 +237,7 @@ const BusinessHealthScoresByStage = () => {
       <SEO
         title="Business Health Scores by Stage: Survival, Stability, Scale, Exit"
         description="Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!"
-        keywords="business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model"
+        keywords="business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, small business health assessment, business stage framework, company maturity model"
         canonical="https://bizhealth.ai/blog/business-health-scores-by-stage"
         ogType="article"
         ogImage="/og-images/og-business-health-scores-stages.jpg"

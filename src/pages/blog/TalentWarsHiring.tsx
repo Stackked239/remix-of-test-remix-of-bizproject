@@ -65,9 +65,9 @@ const TalentWarsHiring = () => {
   return (
     <>
       <SEO
-        title="Talent Wars: SMB Hiring Strategies 2025 | BizHealth.ai"
-        description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!"
-        keywords="SMB hiring 2025, talent shortages small business, leadership strategies, retention tips, skills-based hiring, AI recruitment, employer branding, workforce retention, talent acquisition"
+        title="Talent Wars: Small Business Hiring Strategies 2025 | BizHealth.ai"
+        description="Master small business hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars—read now!"
+        keywords="small business hiring 2025, talent shortages small business, leadership strategies, retention tips, skills-based hiring, AI recruitment, employer branding, workforce retention, talent acquisition"
         canonical="https://bizhealth.ai/blog/talent-wars-hiring"
         ogType="article"
         ogImage="/og-images/og-talent-wars.jpg"
@@ -76,8 +76,8 @@ const TalentWarsHiring = () => {
       />
       <StructuredData
         type="blogPosting"
-        headline="Talent Wars: Hiring Strategies for SMB Leaders in 2025 Shortages"
-        description="Master SMB hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars."
+        headline="Talent Wars: Hiring Strategies for Small Business Leaders in 2025 Shortages"
+        description="Master small business hiring strategies for 2025 talent shortages. Expert insights on leadership strategies, retention tips, and AI-powered recruitment to win the talent wars."
         image={`https://bizhealth.ai${talentWarsImage}`}
         datePublished={publishDate}
         author={author}

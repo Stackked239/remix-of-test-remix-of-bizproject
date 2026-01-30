@@ -23,8 +23,8 @@ const BusinessBlindSpots2025 = () => {
       
       <SEO
         title="Small Business Blind Spots Costing $50K+ | BizHealth.ai"
-        description="Discover the 5 dangerous business blind spots draining SMB profits. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually."
-        keywords="small business blind spots, business health assessment, SMB growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
+        description="Discover the 5 dangerous business blind spots draining small business profits. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually."
+        keywords="small business blind spots, business health assessment, small business growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
         canonical={canonicalUrl}
         ogType="article"
         ogImage="/og-images/og-business-blind-spots-2025.jpg"
@@ -35,18 +35,18 @@ const BusinessBlindSpots2025 = () => {
 
       <StructuredData
         type="blogPosting"
-        headline="The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)"
-        description="Discover the 5 dangerous business blind spots draining SMB profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
+        headline="The Business Blind Spots Costing Small Business Leaders $50K+ Annually (And Why You Can't See Them)"
+        description="Discover the 5 dangerous business blind spots draining small business profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
         image="/og-images/og-business-blind-spots-2025.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={canonicalUrl}
-        keywords={["small business blind spots", "business health assessment", "SMB growth challenges", "operational inefficiencies", "financial management"]}
+        keywords={["small business blind spots", "business health assessment", "small business growth challenges", "operational inefficiencies", "financial management"]}
       />
 
       <BlogHeroSectionEnhanced
-        title="The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)"
+        title="The Business Blind Spots Costing Small Business Leaders $50K+ Annually (And Why You Can't See Them)"
         author="BizHealth.ai Research Team"
         publishDate="November 4, 2025"
         readTime="11 min read"

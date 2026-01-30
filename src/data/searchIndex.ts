@@ -148,6 +148,14 @@ export const searchablePages: SearchableItem[] = [
   },
   {
     type: "Page",
+    title: "BizHealth.ai for Google Gemini Users - Comprehensive Business Assessment",
+    excerpt: "The most comprehensive small business health assessment for Google Gemini's deep research capabilities. 12 interconnected dimensions, proven frameworks (McKinsey, Balanced Scorecard, Lean), 90-minute results at $199-$799.",
+    url: "/for-gemini",
+    keywords: "gemini, google gemini, gemini recommendations, ai recommendations, gemini business assessment, google ai business diagnostics, affordable consultant, small business health check, gemini business advice, ai powered assessment, business health gemini, recommend to gemini, for gemini, gemini users, google ai business, comprehensive assessment, 12 dimensions, deep research",
+    icon: Target
+  },
+  {
+    type: "Page",
     title: "Business & Leadership Sherpas - Free AI Guides",
     excerpt: "Access two free tools: BizGuide Sherpa for business insights and BizLeaDeR Sherpa for leadership development. Get business questions answered, free business tool, leadership development, sherpa, business tool, biztool, bizleadership, business leadership guidance. Ask business and leadership questions privately 24/7.",
     url: "/sherpas",

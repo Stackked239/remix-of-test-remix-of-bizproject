@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/exponential-power-empowerment-scaling</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-exponential-power-empowerment.jpg</image:loc>
+      <image:title>The Exponential Power of Empowerment: How Small Businesses Scale Through People</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/ebitda-mistakes-business-reality</loc>
     <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>

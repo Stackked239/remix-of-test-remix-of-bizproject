@@ -86,9 +86,11 @@ import ebitdaBusinessValuationImage from "@/assets/images/ebitda-business-valuat
 import ebitdaMistakesImage from "@/assets/images/ebitda-mistakes-hero.jpg";
 import coachingForGrowthImage from "@/assets/images/coaching-for-growth-hero.jpg";
 import technologyInnovationFearFutureImage from "@/assets/images/technology-innovation-fear-future-hero.jpg";
+import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/exponential-power-empowerment-scaling": exponentialPowerEmpowermentImage,
   "/blog/technology-innovation-fear-future": technologyInnovationFearFutureImage,
   "/blog/coaching-for-growth-leadership": coachingForGrowthImage,
   "/blog/ebitda-mistakes-business-reality": ebitdaMistakesImage,

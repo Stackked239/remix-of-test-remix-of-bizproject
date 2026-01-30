@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Exponential Power of Empowerment: How Small Businesses Scale Through People",
+    excerpt: "Discover why employee empowerment is the key to scaling your small business. Learn the difference between delegation and true empowerment, and build a team that grows without you.",
+    author: "BizHealth.ai Research Team",
+    date: "January 30, 2026",
+    readTime: "12 min read",
+    category: "Operations, Business Leadership, Growth & Scaling, Risk Management",
+    slug: "/blog/exponential-power-empowerment-scaling",
+    imageUrl: "/assets/images/exponential-power-empowerment-hero.jpg",
+    altText: "Small business owner standing confidently while empowered technicians work independently on equipment - demonstrating team empowerment and distributed leadership",
+    keywords: "employee empowerment, small business scaling, leadership empowerment, delegation vs empowerment, team empowerment, business growth strategies, scaling through people, mother may i organization, empowered teams, small business leadership 2026, authority transfer, decision making culture, team autonomy, psychological safety, ownership culture, multiplier effect, leadership bottleneck, team accountability, empowerment framework, distributed leadership"
+  },
+  {
     title: "Technology & Innovation: Don't Let Fear Turn Your Business Into a Ghost",
     excerpt: "78% of small businesses say technology limits impact their growth. Learn why staying current—not cutting-edge—is the key to competitive survival in 2026.",
     author: "BizHealth.ai Research Team",

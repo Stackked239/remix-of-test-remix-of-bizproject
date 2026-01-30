@@ -58,7 +58,7 @@ const CashFlowCrisisManagement = () => {
         datePublished="2025-11-03T00:00:00Z"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/cash-flow-crisis-management"
-        keywords={["cash flow management", "small business", "SMB financial challenges", "cash flow crisis", "working capital management"]}
+        keywords={["cash flow management", "small business", "small business financial challenges", "cash flow crisis", "working capital management"]}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">

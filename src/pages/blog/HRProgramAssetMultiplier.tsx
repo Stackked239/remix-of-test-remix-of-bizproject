@@ -248,7 +248,7 @@ const HRProgramAssetMultiplier = () => {
         dateModified="2026-01-06"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/hr-program-asset-multiplier-small-business"
-        keywords={["HR program small business", "employee retention", "hiring process", "SMB human resources", "talent management"]}
+        keywords={["HR program small business", "employee retention", "hiring process", "small business human resources", "talent management"]}
       />
       
       <GlobalNavigation />

@@ -82,7 +82,7 @@ const TalentWarsHiring = () => {
         datePublished={publishDate}
         author={author}
         url="https://bizhealth.ai/blog/talent-wars-hiring"
-        keywords={["SMB hiring 2025", "talent shortages", "leadership strategies", "AI recruitment", "workforce retention"]}
+        keywords={["small business hiring 2025", "talent shortages", "leadership strategies", "AI recruitment", "workforce retention"]}
       />
 
       <div className="min-h-screen bg-background">

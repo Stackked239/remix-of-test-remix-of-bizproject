@@ -59,7 +59,7 @@ const SolvingSMBWorkforceGaps = () => {
         datePublished={publishDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025"
-        keywords={["SMB workforce challenges", "talent gaps", "employee retention", "AI business analytics", "workforce planning"]}
+        keywords={["small business workforce challenges", "talent gaps", "employee retention", "AI business analytics", "workforce planning"]}
       />
 
       <div className="min-h-screen bg-background">

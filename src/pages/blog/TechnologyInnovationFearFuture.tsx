@@ -52,7 +52,7 @@ const TechnologyInnovationFearFuture = () => {
         dateModified={isoDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/technology-innovation-fear-future"
-        keywords={["technology adoption", "digital transformation", "business innovation", "technology strategy", "industry baseline", "competitive advantage", "SMB technology"]}
+        keywords={["technology adoption", "digital transformation", "business innovation", "technology strategy", "industry baseline", "competitive advantage", "small business technology"]}
       />
 
       <GlobalNavigation />

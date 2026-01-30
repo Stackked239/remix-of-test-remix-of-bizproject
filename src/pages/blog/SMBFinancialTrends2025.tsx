@@ -44,7 +44,7 @@ const SMBFinancialTrends2025 = () => {
       "@type": "WebPage",
       "@id": "https://bizhealth.ai/blog/2025-smb-financial-trends"
     },
-    "keywords": "SMB financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence SMB, financial health metrics, predictive analytics business",
+    "keywords": "small business financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence small business, financial health metrics, predictive analytics business",
     "articleSection": "Financial Health",
     "wordCount": 1500
   };
@@ -90,7 +90,7 @@ const SMBFinancialTrends2025 = () => {
         datePublished={publishDate}
         author="The BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/2025-smb-financial-trends"
-        keywords={["SMB financial trends 2025", "cash flow strategies", "AI business analytics", "financial automation", "predictive analytics"]}
+        keywords={["small business financial trends 2025", "cash flow strategies", "AI business analytics", "financial automation", "predictive analytics"]}
       />
 
       <div className="min-h-screen bg-background">

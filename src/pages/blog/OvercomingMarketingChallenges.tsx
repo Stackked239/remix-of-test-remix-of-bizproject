@@ -377,7 +377,7 @@ const OvercomingMarketingChallenges = () => {
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business"
-        keywords={["small business marketing challenges", "SMB marketing strategy", "marketing for small businesses", "customer acquisition", "90-day marketing plan"]}
+        keywords={["small business marketing challenges", "small business marketing strategy", "marketing for small businesses", "customer acquisition", "90-day marketing plan"]}
       />
 
       <PromotionalBanner />

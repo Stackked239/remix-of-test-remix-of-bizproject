@@ -37,7 +37,7 @@ const ImpactOverInformation = () => {
         dateModified={modifiedDate}
         author="BizHealth Research Team"
         url={articleUrl}
-        keywords={["business health diagnostics", "SMB business assessment", "operational assessment", "AI business analysis", "SMB growth strategies"]}
+        keywords={["business health diagnostics", "small business assessment", "operational assessment", "AI business analysis", "small business growth strategies"]}
       />
 
       <div className="min-h-screen bg-background">

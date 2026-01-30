@@ -159,7 +159,7 @@ const WarningSignsBusiness = () => {
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/warning-signs-business"
-        keywords={["business warning signs", "SMB challenges", "cash flow management", "customer retention", "operational efficiency"]}
+        keywords={["business warning signs", "small business challenges", "cash flow management", "customer retention", "operational efficiency"]}
       />
       <StructuredData 
         type="faq"

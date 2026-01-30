@@ -38,7 +38,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/og-images/og-business-blind-spots-operational.jpg"
         url="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
-        keywords={["business blind spots", "operational issues leadership", "hidden business inefficiencies", "cash flow timing", "SMB operational audit"]}
+        keywords={["business blind spots", "operational issues leadership", "hidden business inefficiencies", "cash flow timing", "small business operational audit"]}
       />
       
       <PromotionalBanner />

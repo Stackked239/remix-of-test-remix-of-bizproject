@@ -144,7 +144,7 @@ const HappyNewYear2026YearOfGrowth = () => {
         dateModified="2026-01-01"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/happy-new-year-2026-year-of-growth"
-        keywords={["small business growth 2026", "new year business strategy", "2026 business planning", "SMB growth strategies", "sustainable growth"]}
+        keywords={["small business growth 2026", "new year business strategy", "2026 business planning", "small business growth strategies", "sustainable growth"]}
       />
       <PromotionalBanner />
       <GlobalNavigation />

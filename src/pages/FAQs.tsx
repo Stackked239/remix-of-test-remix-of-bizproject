@@ -233,9 +233,9 @@ const FAQs = () => {
   return (
     <>
       <SEO 
-        title="BizHealth.ai FAQs | SMB Health Answers 2025"
-        description="Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Trusted insights for growth."
-        keywords="BizHealth FAQs, SMB business health, business assessment questions, business performance platform"
+        title="BizHealth.ai FAQs | Small Business Health Answers 2025"
+        description="Get quick answers to your small business health questions with BizHealth.ai's FAQs. Trusted insights for growth."
+        keywords="BizHealth FAQs, small business health, business assessment questions, business performance platform"
         canonical="https://bizhealth.ai/faqs"
         ogImage="https://bizhealth.ai/og-images/og-faqs.jpg"
       />

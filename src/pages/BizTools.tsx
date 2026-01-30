@@ -66,9 +66,9 @@ const BizTools = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="BizTools - Business Tools & Templates for SMBs"
+        title="BizTools - Business Tools & Templates for Small Business"
         description="Access professional business tools, templates, and resources to optimize operations and drive growth. Free tools for financial management, operations excellence, and strategic planning."
-        keywords="business tools, SMB templates, financial management tools, operations tools, strategic planning templates, business resources, productivity tools"
+        keywords="business tools, small business templates, financial management tools, operations tools, strategic planning templates, business resources, productivity tools"
         canonical="https://bizhealth.ai/biztools"
         ogImage="https://bizhealth.ai/og-images/og-biztools.jpg"
       />

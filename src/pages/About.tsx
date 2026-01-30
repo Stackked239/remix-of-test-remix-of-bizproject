@@ -53,11 +53,11 @@ const About = () => {
         <title>About Us - BizHealth.ai | Stop Guessing, Start Growing</title>
         <meta 
           name="description" 
-          content="BizHealth.ai levels the playing field for SMB leaders with AI-powered business health diagnostics. Discover our mission to help small businesses unlock growth with comprehensive business intelligence tools." 
+          content="BizHealth.ai levels the playing field for small business leaders with AI-powered business health diagnostics. Discover our mission to help small businesses unlock growth with comprehensive business intelligence tools." 
         />
         <meta 
           name="keywords" 
-          content="SMB growth tools, business health diagnostic, small business analytics, SMB decision-makers, business intelligence for SMBs, operational efficiency tools" 
+          content="small business growth tools, business health diagnostic, small business analytics, small business decision-makers, business intelligence for small business, operational efficiency tools" 
         />
         <link rel="canonical" href="https://bizhealth.ai/about" />
         
@@ -65,14 +65,14 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizhealth.ai/about" />
         <meta property="og:title" content="About BizHealth.ai - Rooted in Transformation" />
-        <meta property="og:description" content="Empowering SMB leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
+        <meta property="og:description" content="Empowering small business leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
         <meta property="og:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://bizhealth.ai/about" />
         <meta property="twitter:title" content="About BizHealth.ai - Stop Guessing, Start Growing" />
-        <meta property="twitter:description" content="Discover how BizHealth.ai empowers SMB leaders with comprehensive business diagnostics and strategic growth tools." />
+        <meta property="twitter:description" content="Discover how BizHealth.ai empowers small business leaders with comprehensive business diagnostics and strategic growth tools." />
         <meta property="twitter:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* JSON-LD Structured Data */}

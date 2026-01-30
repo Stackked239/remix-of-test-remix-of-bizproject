@@ -37,7 +37,7 @@ const BizGuides = () => {
       <StructuredData 
         type="service"
         name="BizGuides Online Business Coaching & AI Consulting"
-        description="Online business coaching and AI-powered consulting matched to your industry and growth stage. Free business coaching resources, 1:1 virtual sessions, and custom solutions for SMB leaders."
+        description="Online business coaching and AI-powered consulting matched to your industry and growth stage. Free business coaching resources, 1:1 virtual sessions, and custom solutions for small business leaders."
         provider="BizHealth.ai"
         areaServed="Worldwide"
         url="https://bizhealth.ai/bizguides"

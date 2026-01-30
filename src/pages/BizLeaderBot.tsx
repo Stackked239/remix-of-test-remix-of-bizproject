@@ -186,7 +186,7 @@ const BizLeaderBot = () => {
                 </div>
 
                 {/* Bot Embed Area */}
-                <div className="bg-biz-warm p-4 md:p-6">
+                <div className="bg-background p-4 md:p-6">
                   <iframe 
                     src="https://embed.cody.bot/9dc6343e-cc5f-4ea4-803b-1862d1c4b04a" 
                     style={{ border: '0px' }} 

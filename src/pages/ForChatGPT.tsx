@@ -88,6 +88,9 @@ const ForChatGPT = () => {
 
       <GlobalNavigation />
 
+      {/* Top padding to account for sticky nav */}
+      <div className="pt-20 md:pt-24" />
+
       <main>
         {/* Section 1: Hero */}
         <HeroSection />

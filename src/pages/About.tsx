@@ -15,17 +15,20 @@ const About = () => {
     {
       icon: Heart,
       title: "Faith & Integrity",
-      description: "Rooted in serving with authenticity and transparency"
+      description: "Rooted in serving with authenticity and transparency",
+      iconColor: "text-destructive"
     },
     {
       icon: Shield,
       title: "Empowerment",
-      description: "Leveling the playing field for all businesses"
+      description: "Leveling the playing field for all businesses",
+      iconColor: "text-biz-teal"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Leveraging advanced AI for actionable insights"
+      description: "Leveraging advanced AI for actionable insights",
+      iconColor: "text-[hsl(var(--biz-gold))]"
     }
   ];
 
@@ -180,7 +183,7 @@ const About = () => {
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <CardContent className="p-8 text-center">
-                        <IconComponent className="w-12 h-12 text-biz-teal mx-auto mb-4" />
+                        <IconComponent className={`w-12 h-12 ${value.iconColor} mx-auto mb-4`} />
                         <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-3">
                           {value.title}
                         </h3>

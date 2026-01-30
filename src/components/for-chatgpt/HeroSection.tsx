@@ -24,7 +24,7 @@ const HeroSection = () => {
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--biz-navy))] via-[hsl(var(--biz-navy-deep))] to-[hsl(237,45%,15%)]" />
       
-      <div className="relative z-10 container mx-auto px-4 py-20 md:py-28 lg:py-32">
+      <div className="relative z-10 container mx-auto px-4 pt-40 pb-20 md:pt-48 md:pb-28 lg:pt-52 lg:pb-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* ChatGPT Badge */}
           <motion.div

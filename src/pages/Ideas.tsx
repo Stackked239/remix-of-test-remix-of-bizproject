@@ -34,8 +34,8 @@ const Ideas = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Submit Your Business Ideas | Help Us Help You Grow | BizHealth.ai"
-        description="Share your ideas for new business tools, resources, and content. BizHealth.ai listens to SMB leaders like you to build what matters most. Submit your idea today."
-        keywords="SMB business tools, business health assessment, small business resources, business growth ideas, SMB feedback, voice of customer, idea submission"
+        description="Share your ideas for new business tools, resources, and content. BizHealth.ai listens to small business leaders like you to build what matters most. Submit your idea today."
+        keywords="small business tools, business health assessment, small business resources, business growth ideas, small business feedback, voice of customer, idea submission"
         canonical="https://bizhealth.ai/ideas"
         ogImage="/og-images/og-homepage.jpg"
       />

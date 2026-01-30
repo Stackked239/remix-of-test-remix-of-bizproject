@@ -37,9 +37,9 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "Home - BizHealth.ai",
-    excerpt: "Your Trusted Business Health Analyst – AI-Powered Diagnostics for SMBs. Stop Guessing, Start Growing with business health assessments.",
+    excerpt: "Your Trusted Business Health Analyst – AI-Powered Diagnostics for Small Business. Stop Guessing, Start Growing with business health assessments.",
     url: "/",
-    keywords: "home, bizhealth, business health, SMB diagnostics, AI powered, small business, assessment, homepage, main page, start here, business checkup, company health, enterprise wellness, AI analysis, automated diagnostics, machine learning insights, business doctor, company checkup, performance analysis, get started, begin assessment, welcome",
+    keywords: "home, bizhealth, business health, small business diagnostics, AI powered, small business, assessment, homepage, main page, start here, business checkup, company health, enterprise wellness, AI analysis, automated diagnostics, machine learning insights, business doctor, company checkup, performance analysis, get started, begin assessment, welcome",
     icon: Home
   },
   {
@@ -61,7 +61,7 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "About BizHealth.ai",
-    excerpt: "Learn about our mission to provide affordable, AI-powered business health diagnostics for SMBs across operations, finance, and leadership.",
+    excerpt: "Learn about our mission to provide affordable, AI-powered business health diagnostics for small business across operations, finance, and leadership.",
     url: "/about",
     keywords: "about, mission, team, company, who we are, story, background, vision, our story, founders, leadership team, values, culture, why we exist, purpose, history, about us, meet the team, company info, organization, what we do, how we started",
     icon: Home
@@ -69,7 +69,7 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "Get Started - Register for BizHealth.ai",
-    excerpt: "Get started with BizHealth.ai today. Register your account to access AI-powered business insights and analytics for SMBs. Create your account and join 10,000+ businesses.",
+    excerpt: "Get started with BizHealth.ai today. Register your account to access AI-powered business insights and analytics for small business. Create your account and join 10,000+ businesses.",
     url: "/register",
     keywords: "register, sign up, create account, get started, join, enrollment, new account, start now, begin, onboarding, signup, registration, new user, first time, create profile, join now, become member, activate, start free, try now, open account",
     icon: Home
@@ -93,17 +93,17 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "Frequently Asked Questions - FAQs",
-    excerpt: "Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
+    excerpt: "Get quick answers to your small business health questions with BizHealth.ai's FAQs. Find answers about pricing, security, reports, assessments, and more. FAQ help center for business owners.",
     url: "/faqs",
     keywords: "FAQ, frequently asked questions, help, answers, support, common questions, questions and answers, Q&A, help center, knowledge base, troubleshooting, how to, what is, why, when, quick answers, self help, information, clarification, doubts",
     icon: HelpCircle
   },
   {
     type: "Page",
-    title: "BizGuides - Expert Coaching & Consulting for SMB Growth",
+    title: "BizGuides - Expert Coaching & Consulting for Small Business Growth",
     excerpt: "Get expert coaching and consulting to turn awareness into real business momentum. Free articles, 1:1 sessions, and custom solutions for every growth stage.",
     url: "/bizguides",
-    keywords: "bizguides, coaching, consulting, expert guidance, business coach, SMB consultant, 1:1 sessions, custom solutions, executive coaching, business advisor, professional services, implementation support, hands-on help, personalized guidance, growth coaching, leadership coaching, strategy consulting, business mentoring, advisor matching, fractional consultant, online business coaching, online business consultant, ai business consultant, ai business coach, free business coaching, virtual business coach, remote consulting, digital coaching, small business advisor, startup coach, entrepreneur coaching, business mentor online",
+    keywords: "bizguides, coaching, consulting, expert guidance, business coach, small business consultant, 1:1 sessions, custom solutions, executive coaching, business advisor, professional services, implementation support, hands-on help, personalized guidance, growth coaching, leadership coaching, strategy consulting, business mentoring, advisor matching, fractional consultant, online business coaching, online business consultant, ai business consultant, ai business coach, free business coaching, virtual business coach, remote consulting, digital coaching, small business advisor, startup coach, entrepreneur coaching, business mentor online",
     icon: Home
   },
   {
@@ -117,15 +117,15 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "BizTools - Scalable Essentials at Your Fingertips",
-    excerpt: "Business tools, templates, and resources to support SMB growth and operational excellence.",
+    excerpt: "Business tools, templates, and resources to support small business growth and operational excellence.",
     url: "/biztools",
-    keywords: "biztools, business tools, templates, resources, essentials, toolkit, free tools, calculators, spreadsheets, documents, downloads, utilities, productivity tools, business resources, SMB toolkit, operational tools, management tools, planning tools",
+    keywords: "biztools, business tools, templates, resources, essentials, toolkit, free tools, calculators, spreadsheets, documents, downloads, utilities, productivity tools, business resources, small business toolkit, operational tools, management tools, planning tools",
     icon: Home
   },
   {
     type: "Page",
     title: "BizTools Toolbox - Complete Business Toolkit",
-    excerpt: "Explore our complete business toolbox with free tools and premium bundles. Access financial calculators, templates, and resources to grow your SMB.",
+    excerpt: "Explore our complete business toolbox with free tools and premium bundles. Access financial calculators, templates, and resources to grow your small business.",
     url: "/biztools/toolbox",
     keywords: "toolbox, complete toolkit, all tools, free tools, premium tools, calculators, tool library, tool collection, browse tools, explore tools, find tools, tool directory, available tools, tool catalog, business toolkit, resource library",
     icon: Home
@@ -165,9 +165,9 @@ export const searchablePages: SearchableItem[] = [
   {
     type: "Page",
     title: "BizGrowth Academy - Business Growth Programs & Strategic Advancement",
-    excerpt: "Strategic business growth programs and resources for scaling your business effectively. Launch, Scale, and Transform paths for every stage of SMB growth.",
+    excerpt: "Strategic business growth programs and resources for scaling your business effectively. Launch, Scale, and Transform paths for every stage of small business growth.",
     url: "/bizgrowth",
-    keywords: "bizgrowth, business growth, grow my business, growth strategies, scaling, strategic advancement, growth programs, SMB growth, company growth, revenue growth, growth academy, business expansion, how to grow business, small business growth, grow business, growth path, scaling business, increase revenue, expand business, growth plan, accelerate growth, rapid growth, sustainable growth",
+    keywords: "bizgrowth, business growth, grow my business, growth strategies, scaling, strategic advancement, growth programs, small business growth, company growth, revenue growth, growth academy, business expansion, how to grow business, small business growth, grow business, growth path, scaling business, increase revenue, expand business, growth plan, accelerate growth, rapid growth, sustainable growth",
     icon: Home
   },
   {

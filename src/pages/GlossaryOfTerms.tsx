@@ -161,9 +161,9 @@ const GlossaryOfTerms = () => {
   return (
     <>
       <SEO 
-        title="Business Glossary - 93 Key Terms for SMBs | BizHealth.ai"
-        description="Master essential business terminology with our comprehensive glossary. 93 terms with definitions, formulas, and SMB examples to boost your business acumen."
-        keywords="business glossary, SMB terms, business metrics, financial ratios, customer metrics, small business education, business terminology, KPI definitions"
+        title="Business Glossary - 93 Key Terms for Small Business | BizHealth.ai"
+        description="Master essential business terminology with our comprehensive glossary. 93 terms with definitions, formulas, and small business examples to boost your business acumen."
+        keywords="business glossary, small business terms, business metrics, financial ratios, customer metrics, small business education, business terminology, KPI definitions"
         canonical="https://bizhealth.ai/glossary-of-terms"
         ogType="website"
         ogImage="https://bizhealth.ai/og-images/og-glossary.jpg"

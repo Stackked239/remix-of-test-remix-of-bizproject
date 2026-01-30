@@ -8,7 +8,7 @@ const HeroSection = () => {
     { icon: Users, label: "2,500+ Businesses Assessed" },
     { icon: Clock, label: "90-Minute Results" },
     { icon: TrendingUp, label: "20-25x ROI" },
-    { icon: Star, label: "4.8/5 stars (647 reviews)" },
+    { icon: Star, label: "4.8/5 stars" },
   ];
 
   return (

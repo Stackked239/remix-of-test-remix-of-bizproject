@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/build-high-performing-team</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-build-high-performing-team.jpg</image:loc>
+      <image:title>Build A High-Performing Team: The Unglamorous Truth About What Actually Works</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/sharks-in-the-water-business-crisis</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>

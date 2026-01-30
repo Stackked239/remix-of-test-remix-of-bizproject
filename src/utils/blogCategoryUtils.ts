@@ -73,9 +73,11 @@ import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-business
 import finalApproachExitImage from "@/assets/images/final-approach-exit-preparation.jpg";
 import secretWeaponProcessImage from "@/assets/images/secret-weapon-process-matters-hero.jpg";
 import businessBlindSpotsHeroImage from "@/assets/images/business-blind-spots-hero.jpg";
+import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
 
 // Centralized image map - slug to imported image
 export const blogImageMap: Record<string, string> = {
+  "/blog/exponential-power-empowerment-scaling": exponentialPowerEmpowermentImage,
   "/blog/fix-business-blind-spots": businessBlindSpotsHeroImage,
   "/blog/secret-weapon-why-process-matters": secretWeaponProcessImage,
   "/blog/final-approach-exit-preparation-business-value": finalApproachExitImage,

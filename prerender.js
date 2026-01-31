@@ -100,18 +100,32 @@ async function prerenderRoute(browser, route, PORT, index, total) {
       new Promise((resolve) => setTimeout(resolve, 5000))
     ]);
     
-    // Wait for React Helmet to inject meta tags into the head
+    // Wait for React Helmet to inject meta tags AND canonical link into the head
+    // This is critical for SEO - Google Search Console reports "User-declared canonical: None" 
+    // if the <link rel="canonical"> tag is not present in the prerendered HTML
     await page.waitForFunction(() => {
       const ogTitle = document.querySelector('meta[property="og:title"]');
       const ogDesc = document.querySelector('meta[property="og:description"]');
-      // Return true if at least og:title or og:description exists
-      return ogTitle || ogDesc;
-    }, { timeout: 5000 }).catch(() => {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      // Return true if canonical exists (preferred) OR at least one OG tag exists
+      return canonical || ogTitle || ogDesc;
+    }, { timeout: 8000 }).catch(() => {
       console.warn(`  ⚠️  Helmet meta tags not detected for ${route}, proceeding anyway`);
     });
     
-    // Additional wait for dynamic content
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // Additional wait for react-helmet-async to fully hydrate all head elements
+    // Increased from 500ms to ensure canonical tag is captured
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    // Verify canonical tag is present before capturing HTML
+    const canonicalCheck = await page.evaluate(() => {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      return canonical ? canonical.href : null;
+    });
+    
+    if (!canonicalCheck) {
+      console.warn(`  ⚠️  No canonical tag found for ${route} - SSG may have SEO issues`);
+    }
     
     // Get the rendered HTML
     const html = await page.content();

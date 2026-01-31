@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Stop Blaming the Labor Market: Your Employee Turnover Problem Starts in the Mirror",
+    excerpt: "Employee turnover isn't a labor market problem—it's a leadership problem. Discover why toxic culture, poor management, and lack of recognition drive turnover and how to fix it.",
+    author: "BizHealth.ai Research Team",
+    date: "January 31, 2026",
+    readTime: "10 min read",
+    category: "Operations, Business Leadership, Growth & Scaling, Risk Management",
+    slug: "/blog/employee-turnover-starts-in-the-mirror",
+    imageUrl: "/assets/images/employee-turnover-mirror-hero.jpg",
+    altText: "Business manager in manufacturing facility contemplating employee turnover with Now Hiring sign visible - leadership self-reflection on retention challenges",
+    keywords: "employee turnover, employee retention, toxic workplace culture, leadership and turnover, manager employee relationship, employee recognition, high turnover causes, reduce employee turnover 2026, turnover cost calculator, psychological safety, employee engagement, retention strategies, turnover prevention, labor market myths, exit interview, staff turnover, workforce retention, culture problems, manager quality, recognition programs, work life balance, employee value, institutional knowledge, replacement costs, burnout prevention, leadership accountability, retention metrics, HR strategy, team stability, employee loyalty"
+  },
+  {
     title: "The Exponential Power of Empowerment: How Small Businesses Scale Through People",
     excerpt: "Discover why employee empowerment is the key to scaling your small business. Learn the difference between delegation and true empowerment, and build a team that grows without you.",
     author: "BizHealth.ai Research Team",

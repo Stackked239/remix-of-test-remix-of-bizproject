@@ -86,53 +86,72 @@ const EmployeeTurnoverStartsInTheMirror = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Real Reason People Leave (And It's Not What You Think)</h2>
-              
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                Here's what exit interviews actually reveal:
-              </p>
+              <div className="bg-[hsl(var(--biz-blue))]/5 rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8">
+                <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+                  <span className="bg-[hsl(var(--biz-blue))]/10 p-2 rounded-lg">
+                    <Users className="w-6 h-6 text-[hsl(var(--biz-blue))]" />
+                  </span>
+                  The Real Reason People Leave (And It's Not What You Think)
+                </h2>
+                
+                <p className="mb-6 text-muted-foreground leading-relaxed">
+                  Here's what exit interviews actually reveal:
+                </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <Users className="w-6 h-6 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Poor manager relationships</p>
-                    <p className="text-muted-foreground text-sm">Not compensation. Not job title. Relationship with the boss.</p>
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-[hsl(var(--biz-green))]/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg">
+                      <Users className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Poor manager relationships</p>
+                      <p className="text-muted-foreground text-sm">Not compensation. Not job title. Relationship with the boss.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <TrendingDown className="w-6 h-6 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Lack of growth or career path</p>
-                    <p className="text-muted-foreground text-sm">They don't see themselves developing. They don't see where they could go next.</p>
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-[hsl(var(--biz-copper))]/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-[hsl(var(--biz-copper))]/10 p-2 rounded-lg">
+                      <TrendingDown className="w-5 h-5 text-[hsl(var(--biz-copper))]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Lack of growth or career path</p>
+                      <p className="text-muted-foreground text-sm">They don't see themselves developing. They don't see where they could go next.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <Heart className="w-6 h-6 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Feeling undervalued or invisible</p>
-                    <p className="text-muted-foreground text-sm">Their work isn't recognized. Their contributions don't matter.</p>
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-[hsl(var(--biz-gold))]/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-[hsl(var(--biz-gold))]/10 p-2 rounded-lg">
+                      <Heart className="w-5 h-5 text-[hsl(var(--biz-gold))]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Feeling undervalued or invisible</p>
+                      <p className="text-muted-foreground text-sm">Their work isn't recognized. Their contributions don't matter.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <AlertTriangle className="w-6 h-6 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Burnout from unclear priorities</p>
-                    <p className="text-muted-foreground text-sm">They never know what actually matters. So they work in chaos.</p>
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-[hsl(var(--biz-blue))]/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-[hsl(var(--biz-blue))]/10 p-2 rounded-lg">
+                      <AlertTriangle className="w-5 h-5 text-[hsl(var(--biz-blue))]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Burnout from unclear priorities</p>
+                      <p className="text-muted-foreground text-sm">They never know what actually matters. So they work in chaos.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <Target className="w-6 h-6 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Lack of flexibility or work-life balance</p>
-                    <p className="text-muted-foreground text-sm">Their schedule is unpredictable. Their time isn't respected.</p>
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-[hsl(var(--biz-teal))]/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-[hsl(var(--biz-teal))]/10 p-2 rounded-lg">
+                      <Target className="w-5 h-5 text-[hsl(var(--biz-teal))]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Lack of flexibility or work-life balance</p>
+                      <p className="text-muted-foreground text-sm">Their schedule is unpredictable. Their time isn't respected.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
-                  <XCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Toxic culture</p>
-                    <p className="text-muted-foreground text-sm">The environment is dysfunctional, disrespectful, or dishonest.</p>
+                  <div className="flex items-start gap-4 p-4 bg-background rounded-xl border border-destructive/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-destructive/10 p-2 rounded-lg">
+                      <XCircle className="w-5 h-5 text-destructive" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Toxic culture</p>
+                      <p className="text-muted-foreground text-sm">The environment is dysfunctional, disrespectful, or dishonest.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -195,55 +214,62 @@ const EmployeeTurnoverStartsInTheMirror = () => {
                 But more likely? They weren't a bad employee at all. They left because your leadership, culture, or systems pushed them out.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">The Hidden Cost You're Not Calculating</h2>
-              
-              <div className="bg-destructive/5 border border-destructive/20 rounded-lg p-6 mb-8">
-                <p className="text-foreground font-semibold text-lg mb-2">
-                  Turnover costs 50-200% of an employee's annual salary to replace.
+              <div className="bg-gradient-to-br from-destructive/5 via-[hsl(var(--biz-copper))]/5 to-background rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8 border border-destructive/10">
+                <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+                  <span className="bg-destructive/10 p-2 rounded-lg">
+                    <DollarSign className="w-6 h-6 text-destructive" />
+                  </span>
+                  The Hidden Cost You're Not Calculating
+                </h2>
+                
+                <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 mb-6">
+                  <p className="text-foreground font-bold text-xl mb-0">
+                    Turnover costs 50-200% of an employee's annual salary to replace.
+                  </p>
+                </div>
+
+                <p className="mb-6 text-muted-foreground leading-relaxed">
+                  Let's say you have a technician earning $45,000. The fully loaded cost to replace them—recruitment, hiring, onboarding, lost productivity while they're ramping up, institutional knowledge lost—ranges from <strong className="text-foreground">$22,500 to $90,000</strong>.
                 </p>
-              </div>
 
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                Let's say you have a technician earning $45,000. The fully loaded cost to replace them—recruitment, hiring, onboarding, lost productivity while they're ramping up, institutional knowledge lost—ranges from <strong>$22,500 to $90,000</strong>.
-              </p>
+                <p className="mb-4 text-foreground font-semibold text-lg">But wait. There's more:</p>
 
-              <p className="mb-4 text-foreground font-semibold">But wait. There's more:</p>
-
-              <div className="overflow-x-auto mb-8">
-                <table className="w-full border-collapse border border-border rounded-lg">
-                  <thead>
-                    <tr className="bg-muted">
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Cost Category</th>
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Impact</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Recruiting costs</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">Job postings, advertising, maybe an agency fee</td>
-                    </tr>
-                    <tr className="bg-muted/50">
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Onboarding and training</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">Average cost per learner ~$1,000</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Lost productivity</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">Gallup: Up to 2 years to match tenured employee output</td>
-                    </tr>
-                    <tr className="bg-muted/50">
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Burnout cascade</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">40% chance remaining team members leave next</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Institutional knowledge</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">Reinventing processes, making preventable mistakes</td>
-                    </tr>
-                    <tr className="bg-muted/50">
-                      <td className="border border-border px-4 py-3 text-foreground font-medium">Customer impact</td>
-                      <td className="border border-border px-4 py-3 text-muted-foreground">Customer relationships disappear—they follow people</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto mb-6 rounded-xl border border-border overflow-hidden">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-[hsl(var(--biz-navy))]/10">
+                        <th className="px-5 py-4 text-left font-bold text-foreground">Cost Category</th>
+                        <th className="px-5 py-4 text-left font-bold text-foreground">Impact</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="bg-background border-b border-border hover:bg-muted/50 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Recruiting costs</td>
+                        <td className="px-5 py-4 text-muted-foreground">Job postings, advertising, maybe an agency fee</td>
+                      </tr>
+                      <tr className="bg-[hsl(var(--biz-green))]/5 border-b border-border hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Onboarding and training</td>
+                        <td className="px-5 py-4 text-muted-foreground">Average cost per learner ~$1,000</td>
+                      </tr>
+                      <tr className="bg-background border-b border-border hover:bg-muted/50 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Lost productivity</td>
+                        <td className="px-5 py-4 text-muted-foreground">Gallup: Up to 2 years to match tenured employee output</td>
+                      </tr>
+                      <tr className="bg-[hsl(var(--biz-green))]/5 border-b border-border hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Burnout cascade</td>
+                        <td className="px-5 py-4 text-muted-foreground">40% chance remaining team members leave next</td>
+                      </tr>
+                      <tr className="bg-background border-b border-border hover:bg-muted/50 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Institutional knowledge</td>
+                        <td className="px-5 py-4 text-muted-foreground">Reinventing processes, making preventable mistakes</td>
+                      </tr>
+                      <tr className="bg-[hsl(var(--biz-green))]/5 hover:bg-[hsl(var(--biz-green))]/10 transition-colors">
+                        <td className="px-5 py-4 text-foreground font-medium">Customer impact</td>
+                        <td className="px-5 py-4 text-muted-foreground">Customer relationships disappear—they follow people</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <p className="mb-8 text-muted-foreground leading-relaxed">
@@ -321,29 +347,37 @@ const EmployeeTurnoverStartsInTheMirror = () => {
                 If you're not providing those things, you're not competing. And "just be grateful" is not a retention strategy.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">What Actually Matters (According to the Research)</h2>
-              
-              <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">The Manager Effect</h3>
-              
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                <strong>42% of employee turnover is preventable.</strong> Most of it comes down to manager quality.
-              </p>
+              <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-teal))]/5 rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8">
+                <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
+                  <span className="bg-[hsl(var(--biz-green))]/20 p-2 rounded-lg">
+                    <Target className="w-6 h-6 text-[hsl(var(--biz-green))]" />
+                  </span>
+                  What Actually Matters (According to the Research)
+                </h2>
+                
+                <div className="bg-background rounded-xl p-6 mb-6 border border-[hsl(var(--biz-green))]/20">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">The Manager Effect</h3>
+                  
+                  <p className="mb-4 text-muted-foreground leading-relaxed">
+                    <strong className="text-[hsl(var(--biz-green))]">42% of employee turnover is preventable.</strong> Most of it comes down to manager quality.
+                  </p>
 
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                Your best employees don't quit companies. They quit bad managers.
-              </p>
+                  <p className="mb-4 text-foreground font-medium">
+                    Your best employees don't quit companies. They quit bad managers.
+                  </p>
 
-              <p className="mb-8 text-muted-foreground leading-relaxed">
-                And here's the problem for small businesses: Your best individual contributors often become managers. Nobody trained them how to lead. Nobody taught them emotional intelligence, how to give feedback, or how to develop people. So they manage the way they were managed, which was often poorly. And now your best people are leaving.
-              </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    And here's the problem for small businesses: Your best individual contributors often become managers. Nobody trained them how to lead. Nobody taught them emotional intelligence, how to give feedback, or how to develop people. So they manage the way they were managed, which was often poorly. And now your best people are leaving.
+                  </p>
+                </div>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Recognition and Appreciation</h3>
-              
-              <div className="bg-[hsl(var(--biz-green))]/10 border-l-4 border-[hsl(var(--biz-green))] rounded-r-lg p-6 mb-8">
-                <p className="text-foreground font-semibold">
-                  Organizations that prioritize employee recognition see <strong>31% lower voluntary turnover rates</strong>.
-                </p>
-                <p className="text-muted-foreground mt-2">Not a 3% improvement. A 31% improvement.</p>
+                <div className="bg-[hsl(var(--biz-lime))]/10 border-l-4 border-[hsl(var(--biz-lime))] rounded-r-xl p-6 mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Recognition and Appreciation</h3>
+                  <p className="text-foreground font-semibold text-lg">
+                    Organizations that prioritize employee recognition see <strong className="text-[hsl(var(--biz-green))]">31% lower voluntary turnover rates</strong>.
+                  </p>
+                  <p className="text-muted-foreground mt-2">Not a 3% improvement. A 31% improvement.</p>
+                </div>
               </div>
 
               <p className="mb-8 text-muted-foreground leading-relaxed">
@@ -431,40 +465,57 @@ const EmployeeTurnoverStartsInTheMirror = () => {
                 This is where responsibility lies. Not in the labor market. In your business.
               </p>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">What You Actually Need to Do</h2>
-              
-              <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Step 1: Stop the Excuse-Making</h3>
-              
-              <p className="mb-8 text-muted-foreground leading-relaxed">
-                "The labor market is tough" is accurate. But it's not the answer. Accept that if your turnover is high, and your competitors' isn't, the problem is internal.
-              </p>
+              <div className="bg-gradient-to-br from-[hsl(var(--biz-gold))]/10 via-[hsl(var(--biz-copper))]/5 to-background rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8 border border-[hsl(var(--biz-gold))]/20">
+                <h2 className="text-3xl font-bold mb-8 text-foreground flex items-center gap-3">
+                  <span className="bg-[hsl(var(--biz-gold))]/20 p-2 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-gold))]" />
+                  </span>
+                  What You Actually Need to Do
+                </h2>
+                
+                <div className="space-y-6">
+                  <div className="bg-background rounded-xl p-6 border-l-4 border-[hsl(var(--biz-green))] shadow-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="bg-[hsl(var(--biz-green))] text-white text-sm font-bold px-3 py-1 rounded-full">Step 1</span>
+                      <h3 className="text-xl font-bold text-foreground">Stop the Excuse-Making</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      "The labor market is tough" is accurate. But it's not the answer. Accept that if your turnover is high, and your competitors' isn't, the problem is internal.
+                    </p>
+                  </div>
 
-              <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Step 2: Diagnose Why People Actually Leave</h3>
-              
-              <p className="mb-4 text-muted-foreground leading-relaxed">
-                Ask departing employees: <strong>"Why are you really leaving?"</strong> (Not on an exit form. In a real conversation.)
-              </p>
+                  <div className="bg-background rounded-xl p-6 border-l-4 border-[hsl(var(--biz-blue))] shadow-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="bg-[hsl(var(--biz-blue))] text-white text-sm font-bold px-3 py-1 rounded-full">Step 2</span>
+                      <h3 className="text-xl font-bold text-foreground">Diagnose Why People Actually Leave</h3>
+                    </div>
+                    <p className="mb-4 text-muted-foreground leading-relaxed">
+                      Ask departing employees: <strong className="text-foreground">"Why are you really leaving?"</strong> (Not on an exit form. In a real conversation.)
+                    </p>
 
-              <p className="mb-4 text-muted-foreground leading-relaxed">Listen for:</p>
+                    <p className="mb-3 text-foreground font-medium">Listen for:</p>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Manager relationships</span>
-                </div>
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Clarity</span>
-                </div>
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Growth</span>
-                </div>
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Recognition</span>
-                </div>
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Respect for time</span>
-                </div>
-                <div className="bg-muted rounded-lg p-3 text-center">
-                  <span className="text-sm text-muted-foreground">Culture</span>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="bg-[hsl(var(--biz-green))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-green))]/20">
+                        <span className="text-sm font-medium text-foreground">Manager relationships</span>
+                      </div>
+                      <div className="bg-[hsl(var(--biz-blue))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-blue))]/20">
+                        <span className="text-sm font-medium text-foreground">Clarity</span>
+                      </div>
+                      <div className="bg-[hsl(var(--biz-gold))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-gold))]/20">
+                        <span className="text-sm font-medium text-foreground">Growth</span>
+                      </div>
+                      <div className="bg-[hsl(var(--biz-teal))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-teal))]/20">
+                        <span className="text-sm font-medium text-foreground">Recognition</span>
+                      </div>
+                      <div className="bg-[hsl(var(--biz-copper))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-copper))]/20">
+                        <span className="text-sm font-medium text-foreground">Respect for time</span>
+                      </div>
+                      <div className="bg-[hsl(var(--biz-lime))]/10 rounded-lg p-3 text-center border border-[hsl(var(--biz-lime))]/20">
+                        <span className="text-sm font-medium text-foreground">Culture</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -678,6 +729,7 @@ const EmployeeTurnoverStartsInTheMirror = () => {
         }
       ]} />
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

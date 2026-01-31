@@ -87,9 +87,11 @@ import ebitdaMistakesImage from "@/assets/images/ebitda-mistakes-hero.jpg";
 import coachingForGrowthImage from "@/assets/images/coaching-for-growth-hero.jpg";
 import technologyInnovationFearFutureImage from "@/assets/images/technology-innovation-fear-future-hero.jpg";
 import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
+import employeeTurnoverMirrorImage from "@/assets/images/employee-turnover-mirror-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/employee-turnover-starts-in-the-mirror": employeeTurnoverMirrorImage,
   "/blog/exponential-power-empowerment-scaling": exponentialPowerEmpowermentImage,
   "/blog/technology-innovation-fear-future": technologyInnovationFearFutureImage,
   "/blog/coaching-for-growth-leadership": coachingForGrowthImage,

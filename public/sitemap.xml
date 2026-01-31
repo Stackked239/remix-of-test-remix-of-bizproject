@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/employee-turnover-starts-in-the-mirror</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-employee-turnover-starts-in-the-mirror.jpg</image:loc>
+      <image:title>Stop Blaming the Labor Market: Your Employee Turnover Problem Starts in the Mirror</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/exponential-power-empowerment-scaling</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>

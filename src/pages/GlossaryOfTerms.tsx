@@ -119,14 +119,33 @@ const GlossaryOfTerms = () => {
     }
   };
 
+  const termRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+
   const toggleTerm = (id: number) => {
     const newExpanded = new Set(expandedTerms);
+    const isExpanding = !newExpanded.has(id);
+    
     if (newExpanded.has(id)) {
       newExpanded.delete(id);
     } else {
       newExpanded.add(id);
     }
     setExpandedTerms(newExpanded);
+
+    // Scroll the expanded term into view just below the sticky header
+    if (isExpanding) {
+      setTimeout(() => {
+        const element = termRefs.current[id];
+        if (element) {
+          const stickyHeaderOffset = 380; // Height of sticky search card + some padding
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - stickyHeaderOffset,
+            behavior: 'smooth'
+          });
+        }
+      }, 50); // Small delay to allow DOM to update with expanded content
+    }
   };
 
   const toggleFavorite = (id: number) => {
@@ -330,6 +349,7 @@ const GlossaryOfTerms = () => {
                       return (
                         <Card 
                           key={term.id}
+                          ref={(el) => { termRefs.current[term.id] = el; }}
                           onClick={() => toggleTerm(term.id)}
                           className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
                             isExpanded ? 'md:col-span-2 lg:col-span-3' : ''

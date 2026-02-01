@@ -1102,6 +1102,127 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "The process of defining an organization's direction and making decisions on allocating resources to pursue this strategy. It involves setting long-term goals, analyzing competitive environment, and developing action plans.",
     whyImportant: "Strategic planning provides direction, focuses resources, aligns team efforts, and improves decision-making. Without it, businesses react to circumstances rather than shaping their future.",
     smbApplication: "A family plumbing business conducts annual strategic planning, identifying commercial contracts as a growth opportunity. They invest in larger equipment and commercial licenses, growing commercial revenue from 10% to 40% of sales over three years."
+  },
+  {
+    id: 124,
+    term: "R2A2 Framework",
+    category: "Human Resources",
+    definition: "A job description methodology that defines four critical elements for every role: Role (the position's purpose and place in the organization), Responsibilities (specific tasks and duties), Accountability (what outcomes the person is answerable for), and Authority (decision-making power and spending limits).",
+    whyImportant: "Traditional job descriptions list tasks but leave accountability and authority unclear, causing confusion, bottlenecks, and conflict. R2A2 creates clarity that improves hiring, speeds onboarding, reduces micromanagement, and empowers employees to act decisively.",
+    smbApplication: "A growing HVAC company implements R2A2 for their service technicians, defining that they have authority to approve repairs up to $500 without manager approval. Service calls resolve 40% faster, customer satisfaction improves, and the owner stops fielding 20+ daily approval calls."
+  },
+  {
+    id: 125,
+    term: "Emotional Intelligence (EI/EQ)",
+    category: "Human Resources",
+    definition: "The ability to recognize, understand, manage, and effectively use emotions in yourself and others. EI comprises four pillars: self-awareness (recognizing your emotions), self-management (controlling impulses), social awareness (reading others), and relationship management (influencing and developing others).",
+    whyImportant: "Technical skills get work done, but emotional intelligence determines whether people want to work with you. Leaders with high EI build trust, navigate conflict, retain talent, and create cultures where people thrive. Low EI drives turnover and dysfunction.",
+    smbApplication: "A manufacturing supervisor notices a normally reliable employee becoming withdrawn and missing deadlines. Instead of reprimanding, they have a private conversation and learn of a family crisis. Offering flexible scheduling retains a valuable employee who becomes one of the team's strongest advocates."
+  },
+  {
+    id: 126,
+    term: "Psychological Safety",
+    category: "Human Resources",
+    definition: "A shared belief that the team is safe for interpersonal risk-taking—that members can speak up with ideas, questions, concerns, or mistakes without fear of punishment or humiliation. It's not about being nice; it's about candor and learning.",
+    whyImportant: "Google's Project Aristotle found psychological safety was the #1 factor in high-performing teams. Without it, employees hide problems until they're crises, innovation dies, and the best talent leaves for environments where they can be heard.",
+    smbApplication: "A restaurant owner creates psychological safety by thanking a line cook who reports a near-miss food safety issue rather than punishing the mistake. Staff start proactively reporting problems, preventing three potential health code violations in six months."
+  },
+  {
+    id: 127,
+    term: "Employee Empowerment",
+    category: "Human Resources",
+    definition: "Giving employees the authority, resources, information, and accountability to make decisions and take action within defined boundaries without requiring constant approval. It goes beyond delegation—empowered employees own outcomes, not just tasks.",
+    whyImportant: "Empowerment multiplies leadership capacity exponentially. While a micromanaging owner is a bottleneck, empowered teams scale independently. Empowerment also increases engagement, speeds customer response, and develops future leaders.",
+    smbApplication: "A salon owner empowers stylists to resolve client complaints up to $100 value without approval. Response time drops from days to minutes, negative reviews decrease 60%, and the owner reclaims 10+ hours weekly previously spent on complaint escalations."
+  },
+  {
+    id: 128,
+    term: "Delegation",
+    category: "Human Resources",
+    definition: "The transfer of responsibility for specific tasks or decisions from a manager to a subordinate, while the manager retains ultimate accountability. Effective delegation includes clear expectations, adequate authority, necessary resources, and appropriate follow-up.",
+    whyImportant: "Delegation is essential for owner sanity and business growth. Leaders who can't delegate become bottlenecks, burn out, and cap their company's potential at what they personally can handle. Delegation also develops employees and builds bench strength.",
+    smbApplication: "A marketing agency owner delegates client reporting to a junior account manager, providing templates and review checkpoints. The owner saves 15 hours monthly, the junior develops client skills, and report quality actually improves due to fresh perspective and dedicated focus."
+  },
+  {
+    id: 129,
+    term: "Financial Stewardship",
+    category: "Financial Management",
+    definition: "The responsible management and oversight of financial resources on behalf of stakeholders. For employees, it means treating company money as if it were their own—making thoughtful spending decisions, avoiding waste, and protecting profitability.",
+    whyImportant: "When only owners care about costs, waste accumulates everywhere. A culture of financial stewardship engages every employee in profitability, reduces unnecessary spending, and creates ownership mentality that protects margins.",
+    smbApplication: "A construction company trains all employees on how material waste affects bonuses. Crews start consolidating lumber cuts, returning unused supplies, and suggesting cost-saving alternatives. Material waste drops 25%, adding $40K annually to profit sharing."
+  },
+  {
+    id: 130,
+    term: "Onboarding",
+    category: "Human Resources",
+    definition: "The process of integrating a new employee into an organization, encompassing orientation, training, cultural assimilation, and support during the transition period. Effective onboarding extends well beyond the first day to ensure long-term success and retention.",
+    whyImportant: "The first 90 days determine whether a new hire becomes a productive long-term contributor or an expensive turnover statistic. Strong onboarding accelerates productivity, builds engagement, and reduces early turnover by up to 50%.",
+    smbApplication: "An accounting firm replaces their 'sink or swim' approach with a 90-day onboarding program including assigned mentors, weekly check-ins, and milestone goals. New hire productivity reaches full capacity in 60 days instead of 120, and first-year turnover drops from 40% to 15%."
+  },
+  {
+    id: 131,
+    term: "Business Vision",
+    category: "Strategic & Governance",
+    definition: "A clear, compelling picture of what a business aspires to become in the future—its ultimate destination and purpose. A vision statement answers 'Where are we going?' and 'Why does it matter?' It inspires and aligns stakeholders around a shared future.",
+    whyImportant: "Without a shared vision, employees just have jobs—they show up, do tasks, and go home. With a compelling vision, work has meaning, decisions have direction, and teams pull together toward something greater than daily operations.",
+    smbApplication: "A local gym transforms from 'another fitness center' to 'the community hub where neighbors become healthier together.' Staff start organizing community events, members recruit friends, and retention improves 35% as people join a movement, not just a membership."
+  },
+  {
+    id: 132,
+    term: "Lean Principles",
+    category: "Operational Metrics",
+    definition: "A management philosophy derived from Toyota's production system focused on maximizing customer value while minimizing waste. The five core principles are: define value, map the value stream, create flow, establish pull, and pursue perfection through continuous improvement.",
+    whyImportant: "Lean thinking reveals that 90%+ of activities in most processes don't add customer value. Eliminating this waste reduces costs, speeds delivery, improves quality, and frees resources for growth—without working harder.",
+    smbApplication: "A print shop maps their order-to-delivery process and discovers jobs wait in queues 80% of the time. By reorganizing workflow and reducing batch sizes, they cut turnaround from 5 days to 2 days while reducing overtime 30%."
+  },
+  {
+    id: 133,
+    term: "Planogram",
+    category: "Sales & Marketing",
+    definition: "A visual diagram or model indicating the placement of products on retail shelves or displays. Planograms specify exact locations, facings, and quantities to optimize sales, manage inventory, and create consistent customer experiences across locations.",
+    whyImportant: "Strategic product placement significantly impacts sales—eye-level items sell better, complementary products together increase basket size, and optimized layouts improve inventory turns. Planograms turn shelf space into a revenue optimization tool.",
+    smbApplication: "A convenience store owner implements planograms placing high-margin snacks at checkout and grouping lunch items together. Average transaction value increases 18%, and the owner can train new staff on stocking in half the time using visual guides."
+  },
+  {
+    id: 134,
+    term: "Voice of Customer (VoC)",
+    category: "Customer Metrics",
+    definition: "The systematic process of capturing customers' expectations, preferences, experiences, and feedback about products or services. VoC includes direct feedback (surveys, interviews), indirect feedback (reviews, social media), and inferred feedback (behavioral data).",
+    whyImportant: "Companies that assume they know what customers want often miss the mark. VoC replaces assumptions with actual customer input, revealing unmet needs, experience gaps, and opportunities competitors miss.",
+    smbApplication: "A B2B software company implements quarterly VoC interviews with their top 20 clients. They discover that clients value responsive support more than new features—leading to a support investment that reduces churn by 25% and increases referrals."
+  },
+  {
+    id: 135,
+    term: "CRM (Customer Relationship Management)",
+    category: "Sales & Marketing",
+    definition: "A technology system and strategy for managing all interactions and relationships with current and potential customers. CRM centralizes customer data, tracks communication history, manages sales pipelines, and enables personalized marketing and service.",
+    whyImportant: "Without CRM, customer knowledge lives in individual heads and scattered notes. CRM creates institutional memory, ensures follow-up happens, reveals sales patterns, and enables the personalized experience customers expect.",
+    smbApplication: "A commercial cleaning company implements CRM to track all prospect touchpoints and client preferences. Sales follow-up consistency improves from 40% to 95%, close rates increase 30%, and they never forget a client's building access codes or special requests again."
+  },
+  {
+    id: 136,
+    term: "Profit Leakage",
+    category: "Financial Metrics",
+    definition: "The unintentional loss of profit through inefficiencies, errors, waste, underpricing, scope creep, or untracked costs that erode margins without obvious visibility. Profit leakage often hides in processes that seem 'good enough' but quietly drain profitability.",
+    whyImportant: "Many businesses chase more sales when the real opportunity is plugging profit leaks. A 5% reduction in leakage often yields more bottom-line impact than a 10% revenue increase, with far less effort and risk.",
+    smbApplication: "A landscaping company tracks actual hours versus estimated hours and discovers crews consistently exceed estimates by 20% on weekly maintenance accounts. Adjusting pricing and improving estimating accuracy recovers $60K annually in previously invisible losses."
+  },
+  {
+    id: 137,
+    term: "Cash Conversion Cycle (CCC)",
+    category: "Financial Management",
+    definition: "The number of days it takes for a company to convert inventory investments into cash from sales. It measures how efficiently a business manages working capital by tracking: days inventory outstanding + days sales outstanding - days payables outstanding.",
+    formula: "Days Inventory Outstanding + Days Sales Outstanding - Days Payables Outstanding",
+    whyImportant: "A shorter CCC means less cash tied up in operations and more available for growth or emergencies. Companies with negative CCC (like Amazon) get paid before paying suppliers—essentially using vendor money to fund operations.",
+    smbApplication: "A wholesale distributor calculates their 75-day CCC (45 days inventory + 60 days receivables - 30 days payables). By negotiating net-60 supplier terms and offering 2% early payment discounts to customers, they reduce CCC to 45 days, freeing $200K in working capital."
+  },
+  {
+    id: 138,
+    term: "Pricing Strategy",
+    category: "Sales & Marketing",
+    definition: "The method and approach used to set prices for products or services, balancing customer value perception, competitive positioning, cost coverage, and profit objectives. Common strategies include cost-plus, value-based, competitive, penetration, and premium pricing.",
+    whyImportant: "Pricing is the most powerful profit lever—a 1% price increase typically generates 8-11% profit improvement. Yet most small businesses set prices reactively or based on cost-plus formulas that ignore value delivered and market positioning.",
+    smbApplication: "A web design agency shifts from hourly billing ($100/hour) to value-based project pricing tied to client revenue impact. Their effective rate increases to $175/hour equivalent, profit margins improve 40%, and clients prefer predictable project costs over hourly uncertainty."
   }
 ];
 

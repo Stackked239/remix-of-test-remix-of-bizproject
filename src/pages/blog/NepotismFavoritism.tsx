@@ -61,7 +61,7 @@ const NepotismFavoritism = () => {
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
               
 
-              <h2 className="text-3xl font-bold mt-8 mb-6 text-foreground">The Comfortable Lie That's Slowly Poisoning Your Business</h2>
+              <h2 className="text-3xl font-bold mt-2 mb-6 text-foreground">The Comfortable Lie That's Slowly Poisoning Your Business</h2>
               
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 You built this business from nothing. You sacrificed. You took the risk. Your family was there through it all—long nights, early mornings, and tight cash flow when it felt like the whole thing might collapse.

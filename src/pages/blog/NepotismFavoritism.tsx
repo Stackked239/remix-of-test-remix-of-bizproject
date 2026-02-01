@@ -15,6 +15,7 @@ import authorIcon from "@/assets/bizhealth-author-icon.jpg";
 const NepotismFavoritism = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <SEO 
         title="Stop Nepotism and Favoritism From Destroying Your Business | BizHealth.ai"
         description="Learn how family dynamics and favoritism poison small businesses. Discover 7 steps to professionalize your company while preserving family values—boost retention and fairness."
@@ -59,10 +60,6 @@ const NepotismFavoritism = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
               
-              <SocialShareButtons 
-                title="When Family Gets in the Way of Business: How to Stop Nepotism and Favoritism"
-                description="Family dynamics are poisoning your business. Learn 7 steps to professionalize while preserving family values."
-              />
 
               <h2 className="text-3xl font-bold mt-8 mb-6 text-foreground">The Comfortable Lie That's Slowly Poisoning Your Business</h2>
               
@@ -94,8 +91,8 @@ const NepotismFavoritism = () => {
 
               <div className="bg-gradient-to-br from-destructive/5 via-[hsl(var(--biz-copper))]/5 to-background rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8 border border-destructive/10">
                 <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
-                  <span className="bg-destructive/10 p-2 rounded-lg">
-                    <DollarSign className="w-6 h-6 text-destructive" />
+                  <span className="bg-[hsl(var(--biz-green))]/10 p-2 rounded-lg">
+                    <DollarSign className="w-6 h-6 text-[hsl(var(--biz-green))]" />
                   </span>
                   The Real Cost of "He/She is Family, So It's Okay"
                 </h2>
@@ -246,8 +243,8 @@ const NepotismFavoritism = () => {
 
               <div className="bg-[hsl(var(--biz-blue))]/5 rounded-2xl p-8 -mx-4 md:-mx-8 mt-12 mb-8">
                 <h2 className="text-3xl font-bold mb-6 text-foreground flex items-center gap-3">
-                  <span className="bg-[hsl(var(--biz-blue))]/10 p-2 rounded-lg">
-                    <AlertTriangle className="w-6 h-6 text-[hsl(var(--biz-blue))]" />
+                  <span className="bg-destructive/10 p-2 rounded-lg">
+                    <AlertTriangle className="w-6 h-6 text-destructive" />
                   </span>
                   The Three-Layer Problem: How Family Dynamics Infiltrate Your Business
                 </h2>
@@ -478,27 +475,27 @@ const NepotismFavoritism = () => {
 
               <ul className="space-y-2 mb-8">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Non-family employees feel they're treated fairly</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Family members understand they must meet the same standards as everyone else</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Decisions are made based on merit and business logic, not family politics</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">You can explain your decisions to anyone without shame or defensiveness</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Your business operates smoothly even when family members take time off</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-lime))] flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">Non-family employees actively recruit friends because they believe it's a fair place</span>
                 </li>
               </ul>

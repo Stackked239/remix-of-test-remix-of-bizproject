@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://bizhealth.ai/blog/nepotism-favoritism-destroying-business</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bizhealth.ai/og-images/og-nepotism-favoritism-destroying-business.jpg</image:loc>
+      <image:title>When Family Gets in the Way of Business: How to Stop Nepotism and Favoritism From Destroying Your Company</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bizhealth.ai/blog/employee-turnover-starts-in-the-mirror</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>

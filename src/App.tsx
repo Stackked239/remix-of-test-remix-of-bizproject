@@ -141,6 +141,7 @@ const CoachingForGrowthLeadership = lazy(() => import("./pages/blog/CoachingForG
 const TechnologyInnovationFearFuture = lazy(() => import("./pages/blog/TechnologyInnovationFearFuture"));
 const ExponentialPowerEmpowerment = lazy(() => import("./pages/blog/ExponentialPowerEmpowerment"));
 const EmployeeTurnoverStartsInTheMirror = lazy(() => import("./pages/blog/EmployeeTurnoverStartsInTheMirror"));
+const NepotismFavoritism = lazy(() => import("./pages/blog/NepotismFavoritism"));
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
 const ProcessMappingTools = lazy(() => import("./pages/tools/ProcessMappingTools"));
@@ -337,6 +338,7 @@ const App = () => (
               <Route path="/blog/technology-innovation-fear-future" element={<TechnologyInnovationFearFuture />} />
               <Route path="/blog/exponential-power-empowerment-scaling" element={<ExponentialPowerEmpowerment />} />
               <Route path="/blog/employee-turnover-starts-in-the-mirror" element={<EmployeeTurnoverStartsInTheMirror />} />
+              <Route path="/blog/nepotism-favoritism-destroying-business" element={<NepotismFavoritism />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/disclaimer" element={<Disclaimer />} />

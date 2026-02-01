@@ -88,9 +88,11 @@ import coachingForGrowthImage from "@/assets/images/coaching-for-growth-hero.jpg
 import technologyInnovationFearFutureImage from "@/assets/images/technology-innovation-fear-future-hero.jpg";
 import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
 import employeeTurnoverMirrorImage from "@/assets/images/employee-turnover-mirror-hero.jpg";
+import nepotismFavoritism from "@/assets/images/nepotism-favoritism-business.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/nepotism-favoritism-destroying-business": nepotismFavoritism,
   "/blog/employee-turnover-starts-in-the-mirror": employeeTurnoverMirrorImage,
   "/blog/exponential-power-empowerment-scaling": exponentialPowerEmpowermentImage,
   "/blog/technology-innovation-fear-future": technologyInnovationFearFutureImage,

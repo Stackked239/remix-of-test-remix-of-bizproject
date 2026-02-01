@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "When Family Gets in the Way of Business: How to Stop Nepotism and Favoritism From Destroying Your Company",
+    excerpt: "Learn how family dynamics and favoritism poison small businesses. Discover 7 steps to professionalize your company while preserving family values—boost retention and fairness.",
+    author: "BizHealth.ai Research Team",
+    date: "February 1, 2026",
+    readTime: "12 min read",
+    category: "Operations, Business Leadership, Growth & Scaling, Risk Management",
+    slug: "/blog/nepotism-favoritism-destroying-business",
+    imageUrl: "/assets/images/nepotism-favoritism-business.jpg",
+    altText: "Business owner contemplating family dynamics in workplace with team members in background - nepotism and favoritism challenges in small business",
+    keywords: "nepotism in business, family business favoritism, family business management, merit-based promotions, family business governance, employee morale, family employment policies, workplace fairness, family business succession, employee retention family business, family dynamics workplace, family business systems, performance management family business, compensation framework, family council governance, succession planning, documentation policies, non-family employees, workplace equality, professionalize family business"
+  },
+  {
     title: "Stop Blaming the Labor Market: Your Employee Turnover Problem Starts in the Mirror",
     excerpt: "Employee turnover isn't a labor market problem—it's a leadership problem. Discover why toxic culture, poor management, and lack of recognition drive turnover and how to fix it.",
     author: "BizHealth.ai Research Team",

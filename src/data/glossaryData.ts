@@ -1223,6 +1223,159 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "The method and approach used to set prices for products or services, balancing customer value perception, competitive positioning, cost coverage, and profit objectives. Common strategies include cost-plus, value-based, competitive, penetration, and premium pricing.",
     whyImportant: "Pricing is the most powerful profit lever—a 1% price increase typically generates 8-11% profit improvement. Yet most small businesses set prices reactively or based on cost-plus formulas that ignore value delivered and market positioning.",
     smbApplication: "A web design agency shifts from hourly billing ($100/hour) to value-based project pricing tied to client revenue impact. Their effective rate increases to $175/hour equivalent, profit margins improve 40%, and clients prefer predictable project costs over hourly uncertainty."
+  },
+  
+  // Operations & Efficiency Terms (3 terms)
+  {
+    id: 139,
+    term: "Standard Operating Procedure (SOP)",
+    category: "Operational Metrics",
+    definition: "A documented set of step-by-step instructions that describe how to perform routine business activities. SOPs ensure consistency, quality, and efficiency by providing a standardized approach to recurring tasks.",
+    whyImportant: "SOPs reduce errors, training time, and dependency on key individuals. They enable scalability by allowing new team members to quickly perform tasks correctly without constant supervision.",
+    smbApplication: "A bakery creates SOPs for opening procedures, dough preparation, and closing tasks. New employees become productive in 3 days instead of 2 weeks, and product consistency improves by 40% across all shifts."
+  },
+  {
+    id: 140,
+    term: "Bottleneck Analysis",
+    category: "Operational Metrics",
+    definition: "The process of identifying constraints or limitations in a workflow that slow down overall output. A bottleneck is the step in a process that has the lowest capacity and limits the entire system's throughput.",
+    whyImportant: "Improving non-bottleneck steps provides zero benefit to overall output. Identifying and addressing the true constraint is the fastest path to increased capacity and efficiency.",
+    smbApplication: "A print shop discovers their cutting station (not printing) is the bottleneck limiting daily output to 200 jobs. Adding a second cutting station doubles throughput without touching the expensive printers."
+  },
+  {
+    id: 141,
+    term: "Capacity Utilization",
+    category: "Operational Metrics",
+    definition: "The percentage of total productive capacity being used at any given time. It measures how efficiently a business uses its available resources—equipment, labor, or facilities—relative to maximum potential output.",
+    formula: "(Actual Output / Maximum Possible Output) × 100",
+    whyImportant: "Low utilization means wasted fixed costs; high utilization may indicate inability to handle growth or emergencies. The sweet spot balances efficiency with flexibility, typically 70-85%.",
+    smbApplication: "A machine shop with 75% capacity utilization has room for growth without new equipment. When utilization hits 90%, they know it's time to invest in additional machinery or risk turning away work."
+  },
+
+  // Financial Health Terms (3 terms)
+  {
+    id: 142,
+    term: "Working Capital Ratio",
+    category: "Financial Management",
+    definition: "A liquidity ratio measuring a company's ability to pay off current liabilities with current assets. Also known as the current ratio, it indicates short-term financial health and operational efficiency.",
+    formula: "Current Assets / Current Liabilities",
+    whyImportant: "A ratio below 1.0 signals potential cash flow problems; above 2.0 may indicate inefficient asset use. The ideal range of 1.2-2.0 ensures bills are covered while capital isn't sitting idle.",
+    smbApplication: "A retail store with $200K current assets and $150K current liabilities has a 1.33 ratio—healthy enough to handle seasonal fluctuations while not over-investing in inventory."
+  },
+  {
+    id: 143,
+    term: "Days Payable Outstanding (DPO)",
+    category: "Financial Management",
+    definition: "The average number of days a company takes to pay its suppliers and vendors. DPO measures how long a business holds onto cash before settling accounts payable.",
+    formula: "(Accounts Payable / Cost of Goods Sold) × 365",
+    whyImportant: "Higher DPO improves cash flow by keeping money longer, but paying too slowly damages supplier relationships and may forfeit early payment discounts. Balance is key.",
+    smbApplication: "A manufacturer with 25-day DPO negotiates net-45 terms with key suppliers, extending DPO to 40 days and freeing $75K in working capital for a new equipment purchase."
+  },
+  {
+    id: 144,
+    term: "Break-Even Analysis",
+    category: "Financial Metrics",
+    definition: "A financial calculation determining the point where total revenue equals total costs, resulting in zero profit or loss. It identifies the minimum sales volume needed to cover all fixed and variable costs.",
+    formula: "Break-Even Units = Fixed Costs / (Price per Unit - Variable Cost per Unit)",
+    whyImportant: "Break-even analysis informs pricing, cost management, and sales targets. It answers the fundamental question: 'How much do we need to sell to stop losing money?'",
+    smbApplication: "A food truck with $3,000 monthly fixed costs and $4 profit per item needs to sell 750 items monthly to break even. Knowing this, the owner targets 1,000 sales for a sustainable $1,000 monthly profit."
+  },
+
+  // Marketing & Sales Terms (3 terms)
+  {
+    id: 145,
+    term: "Sales Funnel",
+    category: "Sales & Marketing",
+    definition: "A visual representation of the customer journey from initial awareness to final purchase. The funnel metaphor reflects how prospects decrease at each stage: awareness → interest → consideration → intent → purchase.",
+    whyImportant: "Understanding funnel stages reveals where prospects drop off, enabling targeted improvements. A 10% improvement at any stage compounds through the entire funnel.",
+    smbApplication: "An e-commerce store maps their funnel: 10,000 visitors → 1,000 add to cart → 300 begin checkout → 150 purchase. Fixing checkout friction increases purchases to 225—a 50% revenue boost."
+  },
+  {
+    id: 146,
+    term: "Market Penetration",
+    category: "Sales & Marketing",
+    definition: "The percentage of a target market that purchases a company's product or service. It measures how much of the total addressable market (TAM) a business has captured.",
+    formula: "(Number of Customers / Total Target Market Size) × 100",
+    whyImportant: "Low penetration indicates growth opportunity in existing markets before expanding to new ones. High penetration may signal market saturation requiring diversification.",
+    smbApplication: "A local accounting firm serving 150 of 3,000 small businesses in their city has 5% market penetration. Focusing on their core market could triple revenue before needing to expand geographically."
+  },
+  {
+    id: 147,
+    term: "Lead Nurturing",
+    category: "Sales & Marketing",
+    definition: "The process of developing relationships with potential customers throughout the buying journey using targeted content, communications, and touchpoints. It moves prospects from initial interest toward purchase readiness.",
+    whyImportant: "80% of new leads never convert without nurturing. Systematic follow-up dramatically increases conversion rates while building trust and positioning your business as the obvious choice.",
+    smbApplication: "A B2B software company implements automated email sequences with educational content. Nurtured leads convert at 15% versus 2% for cold leads, tripling qualified opportunities from the same lead volume."
+  },
+
+  // Technology & Digital Terms (3 terms)
+  {
+    id: 148,
+    term: "Digital Transformation",
+    category: "Modern Business Practices",
+    definition: "The integration of digital technology into all areas of business, fundamentally changing how operations are conducted and value is delivered to customers. It involves cultural change as much as technology adoption.",
+    whyImportant: "Businesses that don't digitally transform risk becoming obsolete. Digital leaders grow revenue 1.5x faster than laggards while achieving higher customer satisfaction and operational efficiency.",
+    smbApplication: "A local insurance agency digitizes client files, implements online quoting, and adds a customer portal. Staff efficiency doubles, client satisfaction increases 40%, and they gain competitive advantage over paper-based competitors."
+  },
+  {
+    id: 149,
+    term: "Data-Driven Decision Making",
+    category: "Modern Business Practices",
+    definition: "An approach to business management that emphasizes using data analysis, metrics, and evidence—rather than intuition or experience alone—to guide strategic and operational decisions.",
+    whyImportant: "Data-driven companies are 23x more likely to acquire customers and 6x more likely to retain them. Replacing gut feelings with evidence reduces costly mistakes and reveals hidden opportunities.",
+    smbApplication: "A restaurant owner stops guessing at popular dishes and analyzes POS data. They discover 3 low-margin items account for 40% of orders and create combo specials that increase average check size by 25%."
+  },
+  {
+    id: 150,
+    term: "API (Application Programming Interface)",
+    category: "Modern Business Practices",
+    definition: "A set of protocols and tools that allow different software applications to communicate and share data with each other. APIs enable systems to integrate without requiring direct code changes.",
+    whyImportant: "APIs eliminate manual data entry between systems, reduce errors, and enable automation. They allow small businesses to create enterprise-level integrations without custom development costs.",
+    smbApplication: "A retail store connects their POS, inventory, and accounting systems via APIs. Sales automatically update inventory and create accounting entries—saving 15 hours weekly of manual reconciliation."
+  },
+
+  // Risk & Compliance Terms (3 terms)
+  {
+    id: 151,
+    term: "Business Continuity Plan (BCP)",
+    category: "Strategic & Governance",
+    definition: "A documented strategy outlining how a business will continue operating during and after a disruption such as natural disasters, cyberattacks, supply chain failures, or key personnel loss.",
+    whyImportant: "40% of businesses never reopen after a major disaster. A BCP turns potential catastrophe into manageable inconvenience by ensuring critical functions continue regardless of circumstances.",
+    smbApplication: "A consulting firm's BCP includes cloud backups, remote work procedures, and cross-trained staff. When their office floods, they're operational within 4 hours while competitors without plans close for weeks."
+  },
+  {
+    id: 152,
+    term: "Regulatory Compliance",
+    category: "Strategic & Governance",
+    definition: "The process of adhering to laws, regulations, guidelines, and specifications relevant to business operations. Compliance requirements vary by industry, location, and business activities.",
+    whyImportant: "Non-compliance leads to fines, lawsuits, reputation damage, and business closure. Proactive compliance is far cheaper than reactive damage control and builds customer trust.",
+    smbApplication: "A healthcare provider implements HIPAA compliance procedures, staff training, and documentation systems. Annual investment of $15K prevents potential $50K+ fines per violation and protects their operating license."
+  },
+  {
+    id: 153,
+    term: "Vendor Risk Management",
+    category: "Strategic & Governance",
+    definition: "The process of identifying, assessing, and mitigating risks associated with third-party vendors and suppliers. It evaluates financial stability, security practices, and operational reliability of business partners.",
+    whyImportant: "Your business is only as secure as your weakest vendor. Supply chain disruptions, data breaches, or vendor failures can cripple operations even with excellent internal practices.",
+    smbApplication: "A manufacturer qualifies backup suppliers for critical components after a primary vendor bankruptcy causes 3-week delays. When their main supplier later has production issues, they switch seamlessly with zero downtime."
+  },
+
+  // Customer Success Terms (2 terms)
+  {
+    id: 154,
+    term: "Customer Onboarding",
+    category: "Customer Metrics",
+    definition: "The process of welcoming and guiding new customers to successfully use a product or service. Effective onboarding ensures customers realize value quickly, reducing churn and accelerating satisfaction.",
+    whyImportant: "Customers who complete onboarding are 2-3x more likely to remain long-term. Poor onboarding is the leading cause of early churn and creates support burden from preventable confusion.",
+    smbApplication: "A SaaS company implements a 7-day onboarding email sequence with video tutorials. First-month churn drops from 15% to 5%, and support tickets from new users decrease by 60%."
+  },
+  {
+    id: 155,
+    term: "Service Level Agreement (SLA)",
+    category: "Operational Metrics",
+    definition: "A formal contract defining the expected level of service between a provider and customer. SLAs specify metrics like response time, uptime guarantees, and resolution timeframes with consequences for non-compliance.",
+    whyImportant: "SLAs set clear expectations, prevent disputes, and demonstrate commitment to quality. They also provide internal benchmarks for measuring and improving service delivery.",
+    smbApplication: "An IT support company offers tiered SLAs: 4-hour response for premium clients at $500/month, 24-hour for basic at $200/month. Clear expectations improve satisfaction and justify premium pricing."
   }
 ];
 

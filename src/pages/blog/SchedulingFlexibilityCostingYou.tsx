@@ -873,7 +873,7 @@ const SchedulingFlexibilityCostingYou = () => {
               to="/bizgrowth" 
               className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Get Your Free Assessment
+              Get Your Complete Business Health Assessment
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -882,7 +882,7 @@ const SchedulingFlexibilityCostingYou = () => {
           <div className="bg-muted/50 rounded-xl p-6 my-12 border border-border">
             <div className="flex items-start gap-4">
               <img 
-                src="/lovable-uploads/favicon.png" 
+                src="/favicon-96x96.png" 
                 alt="BizHealth.ai" 
                 className="w-16 h-16 rounded-full"
                 width={64}
@@ -927,6 +927,7 @@ const SchedulingFlexibilityCostingYou = () => {
         ]}
       />
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </div>
   );

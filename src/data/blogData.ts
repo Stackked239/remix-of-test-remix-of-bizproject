@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "The Comfortable Lie About Scheduling: Why Your Flexibility Is Costing You $100K+",
+    excerpt: "Unstructured scheduling costs SMBs $50K-$200K annually through labor inefficiency, turnover, and lost revenue. Learn the 6-step framework to fix it.",
+    author: "BizHealth.ai Research Team",
+    date: "February 2, 2026",
+    readTime: "15 min read",
+    category: "Operations, Growth & Scaling, Financial Management, Risk Management, Business Strategy",
+    slug: "/blog/scheduling-flexibility-costing-you",
+    imageUrl: "/assets/images/scheduling-flexibility-costing-you-hero.jpg",
+    altText: "Business managers stressed managing chaotic production scheduling in manufacturing facility - unstructured workforce scheduling challenges",
+    keywords: "business scheduling optimization, employee scheduling framework, production scheduling, labor cost reduction, scheduling ROI, workforce scheduling, demand forecasting, scheduling software, employee turnover scheduling, operational efficiency scheduling, scheduling myths, scheduling best practices, service business scheduling, manufacturing scheduling, 30 day scheduling turnaround"
+  },
+  {
     title: "When Family Gets in the Way of Business: How to Stop Nepotism and Favoritism From Destroying Your Company",
     excerpt: "Learn how family dynamics and favoritism poison small businesses. Discover 7 steps to professionalize your company while preserving family values—boost retention and fairness.",
     author: "BizHealth.ai Research Team",

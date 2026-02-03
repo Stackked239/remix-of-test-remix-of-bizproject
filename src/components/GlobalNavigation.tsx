@@ -150,6 +150,9 @@ const GlobalNavigation = () => {
                         <img 
                           src={bizHealthIcon} 
                           alt="BizHealth.ai" 
+                          width={20}
+                          height={20}
+                          loading="lazy"
                           className="w-5 h-5 mt-0.5 rounded object-cover"
                         />
                         <div className="flex flex-col">
@@ -248,18 +251,18 @@ const GlobalNavigation = () => {
                 <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
                   <DropdownMenuItem asChild>
                     <Link 
-                      to="/biztools"
-                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
-                    >
-                      <span className="font-medium text-biz-navy">BizTools - Tools & Resources</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link 
                       to="/blog"
                       className="flex items-center p-3 hover:bg-biz-accent transition-colors"
                     >
                       <span className="font-medium text-biz-navy">Business Insights & Strategies</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/biztools"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">BizTools - Tools & Resources</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -310,14 +313,35 @@ const GlobalNavigation = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link 
-                to="/contact" 
-                className={`font-open-sans font-medium hover:text-biz-green transition-colors ${
-                  isActiveRoute('/contact') ? 'text-biz-green' : 'text-biz-navy'
-                }`}
-              >
-                Contact
-              </Link>
+              {/* Contact Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className={`flex items-center gap-1 font-open-sans font-medium hover:text-biz-green transition-colors ${
+                    isActiveRoute('/contact') || isActiveRoute('/ideas') ? 'text-biz-green' : 'text-biz-navy'
+                  }`}>
+                    Contact
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-48 bg-biz-white border border-border shadow-lg z-50">
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/contact"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Contact Us</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/ideas"
+                      className="flex items-center p-3 hover:bg-biz-accent transition-colors"
+                    >
+                      <span className="font-medium text-biz-navy">Share Your Ideas</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* Search Bar */}
@@ -342,15 +366,18 @@ const GlobalNavigation = () => {
                   <ChevronDown className="w-3 h-3" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuContent align="end" className="w-64 bg-biz-white border border-border shadow-lg z-50">
                 {countries.map((country) => (
                   <DropdownMenuItem 
                     key={country.code}
-                    onClick={() => setSelectedCountry(country.code)}
-                    className="flex items-center space-x-3"
+                    onClick={() => country.code === 'US' && setSelectedCountry(country.code)}
+                    className={`flex items-center space-x-3 ${country.code !== 'US' ? 'opacity-60 cursor-not-allowed' : ''}`}
+                    disabled={country.code !== 'US'}
                   >
                     <span className="text-lg">{country.flag}</span>
-                    <span className="font-open-sans">{country.name}</span>
+                    <span className="font-open-sans">
+                      {country.name}{country.code !== 'US' && ' - Coming Soon'}
+                    </span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -421,11 +448,11 @@ const GlobalNavigation = () => {
                 <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
                   Tools
                 </Link>
-                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
-                  BizTools - Tools & Resources
-                </Link>
                 <Link to="/blog" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Business Insights & Strategies
+                </Link>
+                <Link to="/biztools" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  BizTools - Tools & Resources
                 </Link>
                 <Link to="/glossary-of-terms" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
                   Business Terms Glossary
@@ -445,9 +472,17 @@ const GlobalNavigation = () => {
                   Legal
                 </Link>
               </div>
-              <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
-                Contact
-              </Link>
+              <div className="space-y-2">
+                <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green">
+                  Contact
+                </Link>
+                <Link to="/contact" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Contact Us
+                </Link>
+                <Link to="/ideas" className="block font-open-sans font-medium text-biz-navy hover:text-biz-green pl-4">
+                  Share Your Ideas
+                </Link>
+              </div>
               
               {/* Mobile Hub Navigation - Temporarily hidden via feature flag */}
               {SHOW_HUBS && (
@@ -463,6 +498,9 @@ const GlobalNavigation = () => {
                       <img 
                         src={bizHealthIcon} 
                         alt="BizHealth.ai" 
+                        width={24}
+                        height={24}
+                        loading="lazy"
                         className="w-6 h-6 rounded object-cover"
                       />
                       <div>

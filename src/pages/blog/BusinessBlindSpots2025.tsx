@@ -2,9 +2,11 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
-import blindSpotsHero from '@/assets/business-blind-spots-assessment.png';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import blindSpotsHero from '@/assets/business-blind-spots-assessment.jpg';
 import marketReportChart from '@/assets/blind-spot-market-report-chart.png';
 import frameworkImage from '@/assets/blindspot-analysis-framework.jpg';
 import johariWindow from '@/assets/johari-window-business-blind-spots.png';
@@ -21,65 +23,44 @@ const BusinessBlindSpots2025 = () => {
       
       <SEO
         title="Small Business Blind Spots Costing $50K+ | BizHealth.ai"
-        description="Discover the 5 dangerous business blind spots draining SMB profits. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually."
-        keywords="small business blind spots, business health assessment, SMB growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
+        description="Discover the 5 dangerous business blind spots draining small business profits. Learn how to identify financial, operational, and strategic gaps before they cost you $50K+ annually."
+        keywords="small business blind spots, business health assessment, small business growth challenges, operational inefficiencies, financial management, strategic planning, business intelligence, entrepreneur blind spots, small business strategy 2025"
         canonical={canonicalUrl}
         ogType="article"
-        ogImage="https://bizhealth.ai/og-business-blind-spots.jpg"
+        ogImage="/og-images/og-business-blind-spots-2025.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
 
       <StructuredData
-        type="article"
-        headline="The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)"
-        description="Discover the 5 dangerous business blind spots draining SMB profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
-        image={blindSpotsHero}
+        type="blogPosting"
+        headline="The Business Blind Spots Costing Small Business Leaders $50K+ Annually (And Why You Can't See Them)"
+        description="Discover the 5 dangerous business blind spots draining small business profits in 2025, from financial misalignment to strategic drift, and learn how to identify them."
+        image="/og-images/og-business-blind-spots-2025.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={canonicalUrl}
+        keywords={["small business blind spots", "business health assessment", "small business growth challenges", "operational inefficiencies", "financial management"]}
       />
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
-        {/* Hero Image */}
-        <div className="mb-8">
-          <img
-            src={blindSpotsHero}
-            alt="Business leader with blindfold representing small business blind spots and hidden operational challenges in strategic planning"
-            className="w-full h-auto rounded-lg shadow-lg object-cover max-w-[85%] mx-auto"
-            loading="eager"
-          />
-        </div>
+      <BlogHeroSectionEnhanced
+        title="The Business Blind Spots Costing Small Business Leaders $50K+ Annually (And Why You Can't See Them)"
+        author="BizHealth.ai Research Team"
+        publishDate="November 4, 2025"
+        readTime="11 min read"
+        heroImage={blindSpotsHero}
+        heroImageAlt="Business leader with blindfold representing small business blind spots and hidden operational challenges"
+        categories={[
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+          { label: "Financial Management", href: "/blog/financial-management" },
+          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+        ]}
+        shareDescription="Discover the 5 dangerous business blind spots draining SMB profits. Learn how to identify gaps before they cost you $50K+ annually."
+      />
 
-        {/* Article Header */}
-        <header className="mb-8">
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-              Business Strategy
-            </span>
-            <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-              Financial Management
-            </span>
-            <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-              Business Intelligence
-            </span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-            The Business Blind Spots Costing SMB Leaders $50K+ Annually (And Why You Can't See Them)
-          </h1>
-          
-          <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm">
-            <span className="font-medium">By BizHealth.ai Research Team</span>
-            <span>•</span>
-            <time dateTime={publishDate}>November 4, 2025</time>
-            <span>•</span>
-            <span>11 min read</span>
-          </div>
-        </header>
-
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
           <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -475,6 +456,7 @@ const BusinessBlindSpots2025 = () => {
         />
       </div>
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

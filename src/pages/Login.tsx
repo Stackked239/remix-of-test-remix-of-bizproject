@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -64,11 +64,12 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-biz-navy to-biz-grey">
-      <Helmet>
-        <title>Sign In | BizHealth.ai</title>
-        <meta name="description" content="Sign in to your BizHealth.ai account to access your business health assessment reports and client portal." />
-        <link rel="canonical" href="https://bizhealth.ai/login" />
-      </Helmet>
+      <SEO
+        title="Sign In | BizHealth.ai"
+        description="Sign in to your BizHealth.ai account to access your business health assessment reports and client portal."
+        canonical="https://bizhealth.ai/login"
+        noindex={true}
+      />
       <PromotionalBanner />
       <GlobalNavigation />
       
@@ -76,9 +77,9 @@ const Login = () => {
         <div className="w-full max-w-md">
           <Card className="shadow-elegant border-border/50">
             <CardHeader className="space-y-2 text-center">
-              <CardTitle className="text-2xl font-montserrat font-bold text-biz-navy">
+              <h1 className="text-2xl font-montserrat font-bold text-biz-navy">
                 Welcome Back
-              </CardTitle>
+              </h1>
               <CardDescription className="font-open-sans text-biz-grey">
                 Sign in to your BizHealth.ai account to access your client portal
               </CardDescription>

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -109,9 +110,9 @@ const BizToolsHowItWorks = () => {
       name: "Maria, 34",
       title: "Logistics Business Owner",
       businessDetails: "3 employees, $250K annual revenue",
-      quote: "I needed financial visibility without hiring a CFO. BizTools' free cash flow calculator saved me hours every week.",
+      quote: "I needed financial visibility without hiring a CFO. BizTools' cash flow calculator saved me hours every week.",
       toolsUsed: [
-        "Free business health assessment",
+        "Business health assessment",
         "Cash flow calculator",
         "Pricing strategy templates"
       ],
@@ -166,6 +167,7 @@ const BizToolsHowItWorks = () => {
         keywords="how it works, business tools how it works, free business resources for small business, business health assessment tools, SMB business analytics platform, business planning tools for entrepreneurs, business financial planning tools, small business operational tools"
         canonical="https://bizhealth.ai/biztools/how-it-works"
         ogType="website"
+        ogImage="/og-images/og-biztools-how-it-works.jpg"
       />
 
       <StructuredData
@@ -454,6 +456,7 @@ const BizToolsHowItWorks = () => {
           </div>
         </section>
 
+        <GradientDivider variant="gold-copper" />
         <GlobalFooter />
       </div>
     </>

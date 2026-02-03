@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Wrench, Download, Settings, Zap, CheckCircle, Star } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
@@ -65,10 +66,11 @@ const BizTools = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="BizTools - Business Tools & Templates for SMBs"
+        title="BizTools - Business Tools & Templates for Small Business"
         description="Access professional business tools, templates, and resources to optimize operations and drive growth. Free tools for financial management, operations excellence, and strategic planning."
-        keywords="business tools, SMB templates, financial management tools, operations tools, strategic planning templates, business resources, productivity tools"
+        keywords="business tools, small business templates, financial management tools, operations tools, strategic planning templates, business resources, productivity tools"
         canonical="https://bizhealth.ai/biztools"
+        ogImage="https://bizhealth.ai/og-images/og-biztools.jpg"
       />
       <StructuredData 
         type="service"
@@ -164,9 +166,9 @@ const BizTools = () => {
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Left Column - 60% */}
             <div className="lg:col-span-3">
-              <h1 className="font-montserrat font-bold text-[2rem] md:text-[3rem] leading-tight text-biz-navy mb-5 max-w-[600px] tracking-tight">
+            <h2 className="font-montserrat font-bold text-[2rem] md:text-[3rem] leading-tight text-biz-navy mb-5 max-w-[600px] tracking-tight">
                 Get the Business Tools You Need to Scale—<span className="text-biz-green">Without the Guesswork</span>
-              </h1>
+              </h2>
               
               <p className="font-open-sans text-base md:text-lg leading-relaxed text-biz-grey mb-8 max-w-[580px]">
                 Affordable tools, frameworks, and resources hand-picked for business leaders who want practical solutions—not expensive consultants. Based on your business health assessment, these scalable essentials help you implement improvements fast.
@@ -442,6 +444,7 @@ const BizTools = () => {
         </div>
       </section>
 
+      <GradientDivider variant="gold-copper" />
       <GlobalFooter />
       {/* <EmailCapturePopup hubColor="biz-tools" /> */}
     </div>

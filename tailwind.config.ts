@@ -43,9 +43,14 @@ export default {
 				'biz-warm': 'hsl(var(--biz-warm))',
 				'biz-blue-faint': 'hsl(var(--biz-blue-faint))',
 				
-				/* Hub Colors */
-				'biz-teal': 'hsl(var(--biz-teal))',
-				'biz-copper': 'hsl(var(--biz-copper))',
+				/* Hub Colors (Framework v2) */
+				'biz-teal': 'hsl(var(--biz-teal))',           /* GuideTeal - BizGuides */
+				'biz-copper': 'hsl(var(--biz-copper))',       /* ToolsCopper - BizTools */
+				'biz-magenta': 'hsl(var(--biz-magenta))',     /* LeaderMagenta - BizLeaDeR */
+				'biz-gold': 'hsl(var(--biz-gold))',           /* GrowthGold - BizGrowth */
+				'biz-blue': 'hsl(var(--biz-blue))',           /* BizBlue - Primary */
+				
+				/* Legacy Hub Colors */
 				'biz-lime': 'hsl(var(--biz-lime))',
 				'biz-citrine': 'hsl(var(--biz-citrine))',
 				
@@ -119,7 +124,9 @@ export default {
 				'hub-teal': 'var(--shadow-hub-teal)',
 				'hub-copper': 'var(--shadow-hub-copper)',
 				'hub-lime': 'var(--shadow-hub-lime)',
-				'hub-citrine': 'var(--shadow-hub-citrine)'
+				'hub-citrine': 'var(--shadow-hub-citrine)',
+				'hub-gold': 'var(--shadow-hub-gold)',
+				'hub-magenta': 'var(--shadow-hub-magenta)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -165,6 +172,23 @@ export default {
 						transform: 'translateY(-15%) scale(1.05)',
 						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
 					}
+				},
+				'glow-pulse': {
+					'0%': {
+						opacity: '0.7',
+						transform: 'scale(0.98)',
+						textShadow: '0 0 0px hsl(81 61% 47% / 0)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.02)',
+						textShadow: '0 0 12px hsl(81 61% 47% / 0.5)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)',
+						textShadow: '0 0 0px hsl(81 61% 47% / 0)'
+					}
 				}
 			},
 			animation: {
@@ -172,7 +196,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.5s ease-out',
 				'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 0.5s ease-out'
 			}
 		}
 	},

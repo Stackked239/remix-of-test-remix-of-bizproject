@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { useProcessMapStore } from '@/stores/processMapStore';
-import { exportToWord } from '@/utils/processExport';
+// Dynamic import to avoid mixed static/dynamic import issues
 import { Download, FileText, Table, File, Image, CheckCircle2, AlertCircle, X, ChevronLeft } from 'lucide-react';
 import { toast } from 'sonner';
 import {
@@ -73,6 +73,7 @@ const ReviewExportStep = ({ onBack, onComplete, onExit }: ReviewExportStepProps)
     
     try {
       if (exportFormats.word) {
+        const { exportToWord } = await import('@/utils/processExport');
         await exportToWord(currentProcess);
         toast.success('Word document generated successfully!');
       }

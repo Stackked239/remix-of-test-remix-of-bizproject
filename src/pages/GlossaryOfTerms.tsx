@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -23,7 +23,9 @@ import SEO from '@/components/SEO';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import StoryBrandHeader from '@/components/StoryBrandHeader';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
+import AlphabetNav from '@/components/glossary/AlphabetNav';
 import { glossaryTerms, categories, categoryColors, GlossaryTerm } from '@/data/glossaryData';
 import {
   Select,
@@ -41,6 +43,8 @@ const GlossaryOfTerms = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
+  const [activeLetter, setActiveLetter] = useState<string | undefined>();
+  const letterRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Load favorites from localStorage
   useEffect(() => {
@@ -80,14 +84,68 @@ const GlossaryOfTerms = () => {
     });
   }, [searchTerm, selectedCategory]);
 
+  // Group terms by first letter
+  const { groupedTerms, availableLetters } = useMemo(() => {
+    const groups: { [key: string]: GlossaryTerm[] } = {};
+    const letters = new Set<string>();
+    
+    // Sort filtered terms alphabetically
+    const sortedTerms = [...filteredTerms].sort((a, b) => 
+      a.term.toLowerCase().localeCompare(b.term.toLowerCase())
+    );
+    
+    sortedTerms.forEach(term => {
+      const firstLetter = term.term.charAt(0).toUpperCase();
+      if (!groups[firstLetter]) {
+        groups[firstLetter] = [];
+      }
+      groups[firstLetter].push(term);
+      letters.add(firstLetter);
+    });
+    
+    return { groupedTerms: groups, availableLetters: letters };
+  }, [filteredTerms]);
+
+  const handleLetterClick = (letter: string) => {
+    setActiveLetter(letter);
+    const element = letterRefs.current[letter];
+    if (element) {
+      const offset = 360; // Account for sticky header + search card with A-Z nav
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const termRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+
   const toggleTerm = (id: number) => {
     const newExpanded = new Set(expandedTerms);
+    const isExpanding = !newExpanded.has(id);
+    
     if (newExpanded.has(id)) {
       newExpanded.delete(id);
     } else {
       newExpanded.add(id);
     }
     setExpandedTerms(newExpanded);
+
+    // Scroll the expanded term into view just below the sticky header
+    if (isExpanding) {
+      setTimeout(() => {
+        const element = termRefs.current[id];
+        if (element) {
+          const stickyHeaderOffset = 380; // Height of sticky search card + some padding
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - stickyHeaderOffset,
+            behavior: 'smooth'
+          });
+        }
+      }, 50); // Small delay to allow DOM to update with expanded content
+    }
   };
 
   const toggleFavorite = (id: number) => {
@@ -114,6 +172,7 @@ const GlossaryOfTerms = () => {
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedCategory('All Terms');
+    setActiveLetter(undefined);
   };
 
   const hasActiveFilters = searchTerm !== '' || selectedCategory !== 'All Terms';
@@ -121,20 +180,20 @@ const GlossaryOfTerms = () => {
   return (
     <>
       <SEO 
-        title="Business Glossary - 93 Key Terms for SMBs | BizHealth.ai"
-        description="Master essential business terminology with our comprehensive glossary. 93 terms with definitions, formulas, and SMB examples to boost your business acumen."
-        keywords="business glossary, SMB terms, business metrics, financial ratios, customer metrics, small business education, business terminology, KPI definitions"
+        title="Business Glossary - 155 Key Terms for Small Business | BizHealth.ai"
+        description="Master essential business terminology with our comprehensive glossary. 155 terms with definitions, formulas, and small business examples to boost your business acumen."
+        keywords="business glossary, small business terms, business metrics, financial ratios, customer metrics, small business education, business terminology, KPI definitions"
         canonical="https://bizhealth.ai/glossary-of-terms"
         ogType="website"
-        ogImage="https://bizhealth.ai/bizhealth-logo-main.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-glossary.jpg"
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-[hsl(var(--biz-blue))]/5">
         <PromotionalBanner />
         <GlobalNavigation />
         
         {/* Hero Section */}
-        <section className="bg-biz-navy text-white pt-44 pb-12">
+        <section className="bg-biz-navy text-white pt-44 pb-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
@@ -150,14 +209,26 @@ const GlossaryOfTerms = () => {
           </div>
         </section>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Search and Filter Controls */}
-          <div className="bg-biz-green/95 backdrop-blur-sm border-2 border-biz-blue rounded-lg shadow-lg p-6 mb-8 sticky top-36 z-30">
-            <p className="text-base text-biz-blue mb-6 text-center">
+          <div className="bg-white backdrop-blur-sm border-2 border-biz-green rounded-lg shadow-lg p-4 mb-4 sticky top-36 z-30">
+            <p className="text-sm text-biz-blue mb-3 text-center">
               <span className="font-bold">Interactive Glossary - </span>
               Whether you're completing your BizHealth.ai assessment or expanding your business knowledge, 
               this interactive glossary is your comprehensive guide to understanding key business concepts.
             </p>
+            
+            {/* A-Z Quick Navigation */}
+            {!isLoading && filteredTerms.length > 0 && (
+              <div className="mb-3 pb-3 border-b border-biz-blue/20">
+                <AlphabetNav 
+                  availableLetters={availableLetters}
+                  onLetterClick={handleLetterClick}
+                  activeLetter={activeLetter}
+                />
+              </div>
+            )}
+            
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
               {/* Search Bar */}
               <div className="md:col-span-5">
@@ -248,171 +319,189 @@ const GlossaryOfTerms = () => {
             </div>
           )}
 
-          {/* Terms Grid */}
+
+          {/* Terms Grid - Grouped by Letter */}
           {!isLoading && filteredTerms.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTerms.map((term) => {
-                const isExpanded = expandedTerms.has(term.id);
-                const isFavorite = favorites.has(term.id);
-                const isCopied = copiedId === term.id;
-                
-                return (
-                  <Card 
-                    key={term.id}
-                    onClick={() => toggleTerm(term.id)}
-                    className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
-                      isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
-                    }`}
-                  >
-                    <CardContent className="p-6">
-                      {/* Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-biz-green transition-colors">
-                            {term.term}
-                          </h3>
-                          <Badge 
-                            className={`${categoryColors[term.category]} text-white`}
-                          >
-                            {term.category}
-                          </Badge>
-                        </div>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleFavorite(term.id);
-                          }}
-                          className={`ml-2 transition-colors ${
-                            isFavorite ? 'text-yellow-500' : 'text-muted-foreground hover:text-yellow-500'
+            <div className="space-y-8">
+              {Object.keys(groupedTerms).sort().map((letter) => (
+                <div 
+                  key={letter}
+                  ref={(el) => { letterRefs.current[letter] = el; }}
+                >
+                  {/* Letter Header */}
+                  <div className="flex items-center mb-4">
+                    <div className="w-8 h-8 bg-[hsl(var(--biz-navy))] text-white rounded flex items-center justify-center font-semibold text-sm mr-3">
+                      {letter}
+                    </div>
+                    <div className="flex-1 h-px bg-[hsl(var(--biz-grey))]/50" />
+                    <span className="ml-3 text-xs text-muted-foreground">
+                      {groupedTerms[letter].length} term{groupedTerms[letter].length !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                  
+                  {/* Terms for this letter */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {groupedTerms[letter].map((term) => {
+                      const isExpanded = expandedTerms.has(term.id);
+                      const isFavorite = favorites.has(term.id);
+                      const isCopied = copiedId === term.id;
+                      
+                      return (
+                        <Card 
+                          key={term.id}
+                          ref={(el) => { termRefs.current[term.id] = el; }}
+                          onClick={() => toggleTerm(term.id)}
+                          className={`group hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                            isExpanded ? 'md:col-span-2 lg:col-span-3' : ''
                           }`}
-                          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
                         >
-                          <svg className="w-5 h-5" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                          </svg>
-                        </button>
-                      </div>
+                          <CardContent className="p-6">
+                            {/* Header */}
+                            <div className="flex items-start justify-between mb-4">
+                              <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-biz-green transition-colors">
+                                  {term.term}
+                                </h3>
+                                <Badge 
+                                  className={`${categoryColors[term.category]} text-[hsl(var(--biz-blue))] font-medium`}
+                                >
+                                  {term.category}
+                                </Badge>
+                              </div>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleFavorite(term.id);
+                                }}
+                                className={`ml-2 transition-colors ${
+                                  isFavorite ? 'text-yellow-500' : 'text-muted-foreground hover:text-yellow-500'
+                                }`}
+                                aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+                              >
+                                <svg className="w-5 h-5" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                              </button>
+                            </div>
 
-                      {/* Definition Preview */}
-                      <p className="text-muted-foreground mb-4 line-clamp-2">
-                        {term.definition}
-                      </p>
-
-                      {/* Expanded Content */}
-                      {isExpanded && (
-                        <div className="space-y-4 animate-in fade-in duration-300">
-                          <div className="pt-4 border-t border-border">
-                            <p className="text-foreground leading-relaxed">
+                            {/* Definition */}
+                            <p className={`text-muted-foreground mb-4 ${isExpanded ? '' : 'line-clamp-2'}`}>
                               {term.definition}
                             </p>
-                          </div>
 
-                          {/* Formula */}
-                          {term.formula && (
-                            <div className="bg-biz-accent/10 rounded-lg p-4 border-l-4 border-biz-green">
-                              <div className="flex items-start space-x-2">
-                                <Calculator className="w-5 h-5 text-biz-green mt-0.5 flex-shrink-0" />
-                                <div>
-                                  <p className="text-sm font-semibold text-foreground mb-1">Formula</p>
-                                  <code className="text-sm text-foreground font-mono">
-                                    {term.formula}
-                                  </code>
+                            {/* Expanded Content */}
+                            {isExpanded && (
+                              <div className="space-y-4 animate-in fade-in duration-300 pt-4 border-t border-border">
+
+                                {/* Formula */}
+                                {term.formula && (
+                                  <div className="bg-biz-accent/10 rounded-lg p-4 border-l-4 border-biz-green">
+                                    <div className="flex items-start space-x-2">
+                                      <Calculator className="w-5 h-5 text-biz-green mt-0.5 flex-shrink-0" />
+                                      <div>
+                                        <p className="text-sm font-semibold text-foreground mb-1">Formula</p>
+                                        <code className="text-sm text-foreground font-mono">
+                                          {term.formula}
+                                        </code>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Why Important */}
+                                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
+                                  <div className="flex items-start space-x-2">
+                                    <Lightbulb className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                      <p className="text-sm font-semibold text-foreground mb-1">Why Important</p>
+                                      <p className="text-sm text-muted-foreground leading-relaxed">
+                                        {term.whyImportant}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* SMB Application */}
+                                <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
+                                  <div className="flex items-start space-x-2">
+                                    <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                      <p className="text-sm font-semibold text-foreground mb-1">SMB Application</p>
+                                      <p className="text-sm text-muted-foreground leading-relaxed">
+                                        {term.smbApplication}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Copy Button */}
+                                <div className="pt-2">
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      copyToClipboard(term);
+                                    }}
+                                    className="w-full"
+                                  >
+                                    {isCopied ? (
+                                      <>
+                                        <Check className="w-4 h-4 mr-2" />
+                                        Copied!
+                                      </>
+                                    ) : (
+                                      <>
+                                        <Copy className="w-4 h-4 mr-2" />
+                                        Copy Term Details
+                                      </>
+                                    )}
+                                  </Button>
                                 </div>
                               </div>
-                            </div>
-                          )}
+                            )}
 
-                          {/* Why Important */}
-                          <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                            <div className="flex items-start space-x-2">
-                              <Lightbulb className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                              <div>
-                                <p className="text-sm font-semibold text-foreground mb-1">Why Important</p>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                  {term.whyImportant}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* SMB Application */}
-                          <div className="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
-                            <div className="flex items-start space-x-2">
-                              <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                              <div>
-                                <p className="text-sm font-semibold text-foreground mb-1">SMB Application</p>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                  {term.smbApplication}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Copy Button */}
-                          <div className="pt-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
+                            {/* Expand/Collapse Button */}
+                            <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                copyToClipboard(term);
+                                toggleTerm(term.id);
                               }}
-                              className="w-full"
+                              className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
                             >
-                              {isCopied ? (
-                                <>
-                                  <Check className="w-4 h-4 mr-2" />
-                                  Copied!
-                                </>
+                              <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+                              {isExpanded ? (
+                                <ChevronUp className="w-4 h-4" />
                               ) : (
-                                <>
-                                  <Copy className="w-4 h-4 mr-2" />
-                                  Copy Term Details
-                                </>
+                                <ChevronDown className="w-4 h-4" />
                               )}
-                            </Button>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Expand/Collapse Button */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleTerm(term.id);
-                        }}
-                        className="w-full mt-4 flex items-center justify-center space-x-2 text-biz-blue hover:text-biz-green transition-colors font-medium"
-                      >
-                        <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
-                        {isExpanded ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
-                      </button>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                            </button>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
           {/* CTA Section */}
-          <section className="mt-16 bg-gradient-to-r from-biz-navy to-biz-green rounded-2xl p-8 md:p-12 text-white text-center">
-            <h2 className="text-3xl font-montserrat font-bold mb-4">
+          <section className="mt-16 bg-[hsl(var(--biz-grey))]/50 rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-montserrat font-bold mb-4 text-[hsl(var(--biz-navy))]">
               Ready to Apply These Concepts?
             </h2>
-            <p className="text-lg font-open-sans mb-8 max-w-2xl mx-auto text-white/90">
+            <p className="text-lg font-open-sans mb-8 max-w-2xl mx-auto text-[hsl(var(--biz-blue))]">
               Take your BizHealth.ai assessment to see how these metrics apply to your business and receive personalized insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register">
-                <Button size="lg" className="bg-white text-biz-navy hover:bg-white/90">
-                  Start Free Assessment
+                <Button size="lg" className="bg-[hsl(var(--biz-green))] text-white hover:bg-[hsl(var(--biz-green))]/90">
+                  Start Your Business Assessment
                 </Button>
               </Link>
               <Link to="/pricing">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-[hsl(var(--biz-navy))] text-white hover:bg-[hsl(var(--biz-navy))]/90 border-[hsl(var(--biz-navy))]">
                   View Pricing
                 </Button>
               </Link>
@@ -431,6 +520,7 @@ const GlossaryOfTerms = () => {
           </button>
         )}
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

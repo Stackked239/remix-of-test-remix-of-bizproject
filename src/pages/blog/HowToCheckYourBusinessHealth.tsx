@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
-import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield, ArrowLeft } from 'lucide-react';
-import heroImage from '@/assets/how-to-check-business-health-guide.png';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3, Cog, Briefcase, Lightbulb, Shield } from 'lucide-react';
+import heroImage from '@/assets/how-to-check-business-health-guide-optimized.jpg';
 import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const HowToCheckYourBusinessHealth = () => {
@@ -18,102 +20,46 @@ const HowToCheckYourBusinessHealth = () => {
     <>
       <SEO
         title="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
-        description="Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
-        keywords="check my business health, how to check business health, business health check for SMBs, SMB business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
+        description="Learn how to check your business health with this small business guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
+        keywords="check my business health, how to check business health, business health check for small business, small business health assessment, small business diagnostics, operational efficiency, financial health metrics, HR evaluation, sales and marketing assessment, technology audit, strategic planning, business self-assessment"
         canonical="https://bizhealth.ai/blog/how-to-check-your-business-health"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-check-business-health.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
-        description="Learn how to check your business health with this SMB guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
+        description="Learn how to check your business health with this small business guide. Discover actionable strategies for evaluating operations, HR, sales, technology, and strategy—unlock growth now!"
         image={`https://bizhealth.ai${heroImage}`}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/how-to-check-your-business-health"
+        keywords={["check my business health", "how to check business health", "business health check for small business", "small business health assessment", "small business diagnostics"]}
       />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-32 pb-16">
-          {/* Hero Section */}
-          <div className="relative pt-16 pb-10" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                {/* Back Link */}
-                <Link 
-                  to="/blog" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
-                >
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                  <span className="font-medium">Back to Blog</span>
-                </Link>
+        <BlogHeroSectionEnhanced
+          title="How to Check Your Business Health: A Comprehensive Guide for Small Business Owners"
+          author={author}
+          publishDate="December 14, 2025"
+          readTime="12 min read"
+          heroImage={heroImage}
+          heroImageAlt="Small business owner juggling multiple spheres representing different aspects of business health"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Risk Management", href: "/blog/risk-management" },
+          ]}
+          shareDescription="Your complete roadmap to uncovering hidden business weaknesses and unlocking sustainable growth."
+        />
 
-                {/* Categories */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Business Strategy
-                  </span>
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Risk Management
-                  </span>
-                  <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
-                    }}
-                  >
-                    Business Leadership
-                  </span>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
-                  How to Check Your Business Health: A Comprehensive Guide for Small Business Owners
-                </h1>
-
-                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
-                  <span>By {author}</span>
-                  <span>•</span>
-                  <time dateTime={publishDate}>December 14, 2025</time>
-                  <span>•</span>
-                  <span>12 min read</span>
-                </div>
-
-                <img
-                  src={heroImage}
-                  alt="Small business owner juggling multiple colorful spheres representing different aspects of business health including operations, finance, HR, marketing, and strategy"
-                  className="w-full rounded-lg shadow-xl mb-8"
-                  loading="eager"
-                  style={{ opacity: 0.85 }}
-                />
-
-                <p className="text-lg italic leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                  Your complete roadmap to uncovering hidden business weaknesses and unlocking sustainable growth
-                </p>
-              </div>
-            </div>
-          </div>
-
+        <article className="pb-16">
           {/* Content */}
           <div className="container mx-auto px-4 mt-12">
             <div className="max-w-4xl mx-auto prose prose-lg">
@@ -352,26 +298,28 @@ const HowToCheckYourBusinessHealth = () => {
             </div>
           </div>
 
+          <GradientDivider variant="green-gold" />
+          
           <div className="container mx-auto px-4 mt-16">
             <RelatedArticles 
               articles={[
                 {
-                  title: "The Complete Guide to Business Health Assessment for 2026",
-                  slug: "complete-guide-business-health-assessment-2026",
+                  title: "The Complete Guide to Business Health Assessment in 2025",
+                  slug: "business-health-assessment-2025",
                   category: "Business Strategy",
-                  excerpt: "Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, and strategic alignment."
+                  excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
                 },
                 {
-                  title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-                  slug: "identifying-smb-leadership-blind-spots",
-                  category: "Business Leadership",
-                  excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success and how to build organizational self-awareness."
+                  title: "How AI is Revolutionizing Small Business Analytics",
+                  slug: "ai-business-analytics",
+                  category: "Technology",
+                  excerpt: "Discover how AI is making enterprise-level business intelligence accessible to SMBs."
                 },
                 {
-                  title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
-                  slug: "scaling-operations-without-losing-control",
+                  title: "How to Prioritize When Everything Feels Urgent: An Operator's Survival Guide",
+                  slug: "how-to-prioritize-operator-survival-guide",
                   category: "Operations",
-                  excerpt: "Discover proven strategies for small businesses to scale operations sustainably. Learn the SCALE framework and avoid growth traps."
+                  excerpt: "A practical framework for overwhelmed business owners to focus on what truly matters."
                 }
               ]}
             />

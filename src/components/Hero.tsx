@@ -126,9 +126,15 @@ const Hero = () => {
       >
         <img 
           src={bannerLogo} 
-          alt="BizHealth.ai" 
+          alt="BizHealth.ai - Business Health Analysis Platform"
+          width={1605}
+          height={277}
+          loading="eager"
+          decoding="sync"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
           className="object-contain"
-          style={{ width: '1605px', height: '277px', maxWidth: '90%', maxHeight: '60px' }}
+          style={{ maxWidth: '90%', maxHeight: '60px', width: 'auto', height: 'auto' }}
         />
       </div>
 
@@ -302,7 +308,10 @@ const Hero = () => {
               <div className="bg-biz-white rounded-lg p-3 sm:p-4 border border-biz-grey/60 mx-1">
                 <div className="text-center">
                   <p className="font-open-sans text-[10px] sm:text-xs lg:text-sm text-black mb-1">Recommended Plan:</p>
-                  <p className="font-montserrat font-bold text-base sm:text-lg lg:text-xl text-biz-lime break-words">
+                  <p 
+                    key={recommendedTier}
+                    className="font-montserrat font-bold text-2xl sm:text-2xl lg:text-3xl text-biz-lime break-words animate-glow-pulse"
+                  >
                     {recommendedTier}
                   </p>
                   <p className="font-open-sans text-[10px] sm:text-xs lg:text-sm text-black/90 mt-2 break-words px-1">

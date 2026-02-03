@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import heroImage from '@/assets/business-strategy-planning-2026-growth.png';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import heroImage from '@/assets/business-strategy-planning-2026-growth-optimized.jpg';
 
 const SuccessBeginsWith2026Strategy = () => {
   const publishDate = "2025-11-20";
@@ -18,124 +19,46 @@ const SuccessBeginsWith2026Strategy = () => {
     <>
       <SEO
         title="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
-        description="Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
-        keywords="2026 business planning, SMB growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 SMB trends, strategic goal setting, business health assessment"
+        description="Discover why proactive 2026 business planning is essential for small businesses. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
+        keywords="2026 business planning, small business growth strategies, strategic planning 2026, business strategy plan, AI business analytics, small business growth, business planning tips, 2026 small business trends, strategic goal setting, business health assessment"
         canonical="https://bizhealth.ai/blog/success-begins-with-2026-strategy"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-success-2026-strategy.jpg"
+        ogImage="/og-images/og-success-2026-strategy.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
-        description="Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
+        description="Discover why proactive 2026 business planning is essential for small businesses. Get actionable strategies for strategic planning, goal setting, team alignment, and AI-driven growth analytics."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-success-2026-strategy.jpg"
+        image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/success-begins-with-2026-strategy"
+        keywords={["2026 business planning", "small business growth strategies", "strategic planning 2026", "business strategy plan", "AI business analytics"]}
       />
 
       <GlobalNavigation />
 
+      <BlogHeroSectionEnhanced
+        title="Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth"
+        author={author}
+        publishDate="November 20, 2025"
+        readTime={readTime}
+        heroImage={heroImage}
+        heroImageAlt="Business professional planning strategic roadmap for 2026 SMB growth"
+        categories={[
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+          { label: "Risk Management", href: "/blog/risk-management" },
+          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+        ]}
+        shareDescription="Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, and team alignment."
+      />
+
       <article className="min-h-screen" style={{ backgroundColor: 'hsl(var(--background))' }}>
-        {/* Back Button */}
-        <div className="container mx-auto px-4 pt-40 pb-4">
-          <Link 
-            to="/blog" 
-            className="inline-flex items-center gap-2 hover:gap-3 transition-all duration-200"
-            style={{ color: 'hsl(var(--biz-navy))' }}
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span className="font-medium">Back to Blog</span>
-          </Link>
-        </div>
-
-        {/* Hero Section */}
-        <header className="container mx-auto px-4 pt-4 pb-8">
-          <div className="max-w-4xl mx-auto">
-            {/* Categories */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              <Link
-                to="/blog?category=business-strategy"
-                className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-                style={{
-                  backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                  color: 'hsl(var(--biz-navy))',
-                }}
-              >
-                Business Strategy
-              </Link>
-              <Link
-                to="/blog?category=business-leadership"
-                className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-                style={{
-                  backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                  color: 'hsl(var(--biz-navy))',
-                }}
-              >
-                Business Leadership
-              </Link>
-              <Link
-                to="/blog?category=business-intelligence"
-                className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-                style={{
-                  backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                  color: 'hsl(var(--biz-navy))',
-                }}
-              >
-                Business Intelligence
-              </Link>
-              <Link
-                to="/blog?category=risk-management"
-                className="px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-                style={{
-                  backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                  color: 'hsl(var(--biz-navy))',
-                }}
-              >
-                Risk Management
-              </Link>
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: 'hsl(var(--biz-navy))' }}>
-              Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth
-            </h1>
-
-            {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-6 mb-8" style={{ color: 'hsl(var(--foreground) / 0.7)' }}>
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span className="text-sm">{author}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <time className="text-sm" dateTime={publishDate}>
-                  November 20, 2025
-                </time>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span className="text-sm">{readTime}</span>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="mb-8 mx-auto" style={{ maxWidth: '85%' }}>
-              <img
-                src={heroImage}
-                alt="Business professional planning strategic roadmap for 2026 SMB growth with notes and laptop"
-                className="w-full h-auto rounded-xl"
-                loading="eager"
-              />
-            </div>
-          </div>
-        </header>
-
         {/* Article Content */}
         <div className="container mx-auto px-4 pb-16">
           <div className="max-w-4xl mx-auto prose prose-lg">
@@ -348,27 +271,28 @@ const SuccessBeginsWith2026Strategy = () => {
         </div>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
         <div className="container mx-auto px-4 pb-16">
           <div className="max-w-6xl mx-auto">
             <RelatedArticles
               articles={[
                 {
-                  title: "Business Intelligence ROI: How to Measure and Maximize Returns",
-                  slug: "business-intelligence-roi",
-                  category: "Business Intelligence",
-                  excerpt: "Discover proven strategies to measure and maximize your business intelligence investments for sustainable growth."
+                  title: "Happy New Year 2026: Make This Your Year of Growth",
+                  slug: "happy-new-year-2026-year-of-growth",
+                  category: "Business Strategy",
+                  excerpt: "Start 2026 strong with five critical moves for sustainable SMB growth and a clear action plan."
                 },
                 {
-                  title: "Strategic Planning Post-Pandemic: New Frameworks for Success",
+                  title: "Strategic Planning for the Post-Pandemic Business Landscape",
                   slug: "strategic-planning-post-pandemic",
                   category: "Business Strategy",
-                  excerpt: "Learn how modern strategic planning frameworks can help your business thrive in the post-pandemic economy."
+                  excerpt: "Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
                 },
                 {
-                  title: "AI Business Analytics: The Future of SMB Decision-Making",
+                  title: "How AI is Revolutionizing Small Business Analytics",
                   slug: "ai-business-analytics",
-                  category: "Business Intelligence",
-                  excerpt: "Explore how AI-powered analytics are revolutionizing decision-making for small and medium-sized businesses."
+                  category: "Technology",
+                  excerpt: "Discover how AI-powered analytics are revolutionizing decision-making for small and medium-sized businesses."
                 }
               ]}
             />
@@ -376,6 +300,7 @@ const SuccessBeginsWith2026Strategy = () => {
         </div>
       </article>
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </>

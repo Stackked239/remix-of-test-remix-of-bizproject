@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -18,8 +19,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
+import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
 import bizHealthAuthor from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const StressTestPricingFramework = () => {
   const categories = ["Business Strategy", "Financials", "Operations"];
@@ -30,18 +32,21 @@ const StressTestPricingFramework = () => {
   const relatedArticles = [
     {
       title: "Cash Flow Crisis Management: Essential Strategies for SMB Survival",
-      slug: "/blog/cash-flow-crisis-management",
-      category: "Financial Management"
+      slug: "cash-flow-crisis-management",
+      category: "Financial Management",
+      excerpt: "Learn essential strategies for managing cash flow crises and ensuring SMB survival."
     },
     {
       title: "Small Business Financials: Know Your Numbers, Know Your Business",
-      slug: "/blog/small-business-financials-know-your-numbers",
-      category: "Financials"
+      slug: "small-business-financials-know-your-numbers",
+      category: "Financial Management",
+      excerpt: "Master the essential financial metrics every small business owner needs to track."
     },
     {
       title: "The Growth Trap: Why More Sales Won't Save a Broken Business Model",
-      slug: "/blog/growth-trap-broken-business-model",
-      category: "Business Strategy"
+      slug: "growth-trap-broken-business-model",
+      category: "Strategy",
+      excerpt: "Discover why chasing revenue growth can mask fundamental business model problems."
     }
   ];
 
@@ -50,23 +55,24 @@ const StressTestPricingFramework = () => {
       <SEO 
         title="Stress-Test Pricing Framework 2025 | BizHealth.ai"
         description="Optimize your small business pricing with a proven stress-test framework. Learn how to maximize margins and cash flow—read the complete guide now!"
-        keywords="stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework SMB, value-based pricing, profit optimization, pricing psychology, customer segmentation pricing, small business pricing 2025"
+        keywords="stress test pricing, pricing strategy small business, optimize margins, cash flow optimization, price elasticity, pricing framework small business, value-based pricing, profit optimization, pricing psychology, customer segmentation pricing, small business pricing 2025"
         canonical="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-stress-test-pricing.jpg"
+        ogImage="/og-images/og-stress-test-pricing.jpg"
         articlePublishedTime="2025-12-26"
         articleModifiedTime="2025-12-26"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="How Small Business Owners Can Stress-Test Pricing: A Simple Framework to Optimize Margins and Cash Flow"
         description="Discover a proven pricing stress-test framework to optimize your small business margins and cash flow. Learn value-based pricing, demand elasticity testing, and a 90-day implementation plan."
         author="BizHealth.ai Research Team"
         datePublished="2025-12-26"
         dateModified="2025-12-26"
-        image="https://bizhealth.ai/og-stress-test-pricing.jpg"
+        image="https://bizhealth.ai/og-images/og-stress-test-pricing.jpg"
         url="https://bizhealth.ai/blog/stress-test-pricing-framework-margins-cash-flow"
+        keywords={["stress test pricing", "pricing strategy small business", "optimize margins", "cash flow optimization", "value-based pricing"]}
       />
       
       <PromotionalBanner />
@@ -125,6 +131,12 @@ const StressTestPricingFramework = () => {
                 <span className="text-sm">12 min read</span>
               </div>
             </div>
+
+            <SocialShareButtons 
+              title="How Small Business Owners Can Stress-Test Pricing: A Framework to Optimize Margins and Cash Flow"
+              description="Optimize your small business pricing with a proven stress-test framework."
+              className="mb-8"
+            />
 
             {/* Hero Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8" style={{ maxWidth: '85%', margin: '0 auto' }}>
@@ -812,23 +824,8 @@ const StressTestPricingFramework = () => {
           </section>
 
           {/* Related Articles */}
-          <section className="mt-12">
-            <h3 className="text-xl font-bold text-foreground mb-6">Related Articles</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {relatedArticles.map((article, index) => (
-                <Link key={index} to={article.slug}>
-                  <Card className="hover:shadow-lg transition-all hover:border-primary/50 h-full">
-                    <CardContent className="p-4">
-                      <Badge variant="secondary" className="mb-2 text-xs">{article.category}</Badge>
-                      <h4 className="font-semibold text-foreground text-sm leading-tight hover:text-primary transition-colors">
-                        {article.title}
-                      </h4>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </section>
+          <GradientDivider variant="green-gold" />
+          <RelatedArticles articles={relatedArticles} />
 
           {/* Author Bio */}
           <section className="mt-12 p-6 bg-muted/50 rounded-2xl">
@@ -853,6 +850,7 @@ const StressTestPricingFramework = () => {
         </div>
       </article>
 
+      <GlobalFooter />
       <GlobalFooter />
     </div>
   );

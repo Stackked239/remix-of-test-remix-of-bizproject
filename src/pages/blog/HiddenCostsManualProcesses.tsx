@@ -1,12 +1,14 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft, BookOpen, AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { AlertTriangle, TrendingUp, CheckCircle, Target, Zap, Globe, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hidden-costs-manual-processes-smb.png";
+import heroImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
 
 const HiddenCostsManualProcesses = () => {
   const publishDate = "2025-12-09";
@@ -16,107 +18,47 @@ const HiddenCostsManualProcesses = () => {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'hsl(var(--background))' }}>
       <SEO
         title="Hidden Costs of Manual Processes in Small Business 2025"
-        description="Discover the hidden costs of manual processes draining SMB profits. Learn how 27% error rates cost $12K+ annually and get actionable tech adoption strategies for 2025."
-        keywords="manual processes, business automation, SMB technology, operational efficiency, digital transformation, business processes, automation tools, tech adoption, small business efficiency, process improvement, 2025 technology"
+        description="Discover the hidden costs of manual processes draining small business profits. Learn how 27% error rates cost $12K+ annually and get actionable tech adoption strategies for 2025."
+        keywords="manual processes, business automation, small business technology, operational efficiency, digital transformation, business processes, automation tools, tech adoption, small business efficiency, process improvement, 2025 technology"
         canonical="https://bizhealth.ai/blog/hidden-costs-manual-processes"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-hidden-costs-manual-processes.jpg"
+        ogImage="/og-images/og-hidden-costs-manual.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Hidden Costs of Manual Processes in Today's Smaller Businesses"
-        description="Discover the hidden costs of manual processes draining SMB profits. Learn how 27% error rates cost $12K+ annually and get actionable tech adoption strategies for 2025."
+        description="Discover the hidden costs of manual processes draining small business profits. Learn how 27% error rates cost $12K+ annually and get actionable tech adoption strategies for 2025."
         image="https://bizhealth.ai/og-hidden-costs-manual-processes.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/hidden-costs-manual-processes"
+        keywords={["manual processes", "business automation", "small business technology", "operational efficiency", "digital transformation"]}
       />
 
       <PromotionalBanner />
       <GlobalNavigation />
 
+      <BlogHeroSectionEnhanced
+        title="The Hidden Costs of Manual Processes in Today's Smaller Businesses"
+        author="BizHealth.ai Research Team"
+        publishDate="December 9, 2025"
+        readTime="10 min read"
+        heroImage={heroImage}
+        heroImageAlt="Small business owner focused on manual paperwork representing hidden costs of manual processes"
+        categories={[
+          { label: "Technology", href: "/blog/technology" },
+          { label: "Business Intelligence", href: "/blog/business-intelligence" },
+          { label: "Operations", href: "/blog/operations" },
+        ]}
+        shareDescription="Discover the hidden costs of manual processes draining small business profits. Learn how 27% error rates cost $12K+ annually."
+      />
+
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative pt-40 pb-16 md:pb-24 overflow-hidden">
-          <div 
-            className="absolute inset-0 z-0"
-            style={{ 
-              background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.9) 50%, hsl(var(--biz-green) / 0.3) 100%)'
-            }}
-          />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Blog
-              </Link>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green))', color: 'hsl(var(--biz-navy))' }}>
-                  Technology
-                </span>
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.3)', color: 'white' }}>
-                  Business Intelligence
-                </span>
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.3)', color: 'white' }}>
-                  Operations
-                </span>
-                <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(var(--biz-green) / 0.3)', color: 'white' }}>
-                  Business Strategy
-                </span>
-              </div>
-
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                The Hidden Costs of Manual Processes in Today's Smaller Businesses
-              </h1>
-              
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                Discover why 53% of SMBs have adopted AI while 47% struggle with outdated manual processes—and how error rates up to 27% are costing businesses $12,000+ annually in corrections alone.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-6 text-white/80">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>BizHealth.ai Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>December 9, 2025</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>10 min read</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Hero Image */}
-        <section className="relative -mt-8 mb-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={heroImage} 
-                  alt="Small business owner focused on manual paperwork and calculations representing hidden costs of manual processes in SMB operations"
-                  className="w-full h-auto object-cover"
-                  loading="eager"
-                  style={{ filter: 'brightness(0.85)' }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Article Content */}
         <article className="py-12">
           <div className="container mx-auto px-4">
@@ -559,6 +501,8 @@ const HiddenCostsManualProcesses = () => {
               </div>
 
               {/* Related Articles */}
+              <GradientDivider variant="green-gold" />
+              
               <div className="mt-16">
                 <RelatedArticles 
                   articles={[

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
@@ -17,10 +18,10 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
 
   const relatedArticles = [
     {
-      title: "Financial Stewardship: Everyone's Responsibility in Your Small Business",
-      slug: "financial-stewardship-everyones-responsibility",
+      title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every SMB Needs",
+      slug: "fractional-cfo-toolkit",
       category: "Financial Management",
-      excerpt: "Discover how to build a culture of financial stewardship where every employee contributes to cash flow health."
+      excerpt: "Build the financial visibility system that fractional CFOs use to transform small business performance."
     },
     {
       title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
@@ -29,10 +30,10 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
       excerpt: "Master cash flow management for small business in 2025. Learn crisis prevention strategies and cash flow planning tips."
     },
     {
-      title: "Financial Health Metrics Every Business Owner Should Track",
-      slug: "financial-health-metrics",
-      category: "Financial Management",
-      excerpt: "A comprehensive guide to the key financial indicators that provide insight into your business's current and future performance."
+      title: "The ROI of Business Intelligence for SMBs",
+      slug: "business-intelligence-roi",
+      category: "Technology",
+      excerpt: "Real-world case studies showing how SMBs achieve measurable returns from business intelligence investments."
     }
   ];
 
@@ -41,17 +42,17 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
       <SEO
         title="Small Business Financials: Know Your Numbers, Know Your Business | BizHealth.ai"
         description="Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions."
-        keywords="small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, cash conversion cycle, financial literacy business owners, SMB finance"
+        keywords="small business financials, know your numbers, business financial management, income statement, balance sheet, cash flow statement, unit economics, LTV CAC ratio, gross margin, financial metrics small business, cash conversion cycle, financial literacy business owners, small business finance"
         canonical="https://bizhealth.ai/blog/small-business-financials-know-your-numbers"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/small-business-financials-know-your-numbers.jpg"
+        ogImage="/og-images/og-know-your-numbers.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Small Business Financials: Know Your Numbers, Know Your Business"
         description="Master small business financial management with this comprehensive guide. Learn to read income statements, balance sheets, cash flow, and key metrics that drive strategic decisions."
         author={author}
@@ -59,6 +60,7 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/assets/small-business-financials-know-your-numbers.jpg"
         url="https://bizhealth.ai/blog/small-business-financials-know-your-numbers"
+        keywords={["small business financials", "know your numbers", "business financial management", "income statement", "cash flow statement"]}
       />
 
       <GlobalNavigation />
@@ -802,9 +804,12 @@ const SmallBusinessFinancialsKnowYourNumbers = () => {
         </div>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={relatedArticles} />
 
         <PromotionalBanner />
+        <GradientDivider />
         <GlobalFooter />
       </article>
     </>

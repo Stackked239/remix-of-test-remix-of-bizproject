@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -9,17 +10,29 @@ import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, Users, Zap } from "luc
 import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import ecommerceImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
 import foodBusinessImage from "@/assets/daily-grind-food-business-operations.jpg";
-import scalingImage from "@/assets/scaling-operations-without-losing-control.jpg";
+import scalingImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
 import workforceImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import retailImage from "@/assets/retail-remote-tools-family-business.jpg";
+import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 const Operations = () => {
   const operationsPosts = [
     {
+      title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
+      slug: "renewal-imperative-legacy-business-rebirth",
+      excerpt: "Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.",
+      image: renewalImperativeImage,
+      author: "BizHealth.ai Research Team",
+      date: "January 19, 2026",
+      readTime: "18 min read",
+      featured: true
+    },
+    {
       title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
       slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
       excerpt: "Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management.",
-      image: scalingImage,
+      image: chaosToClarity,
       author: "BizHealth.ai Research Team",
       date: "December 24, 2025",
       readTime: "15 min read",
@@ -87,12 +100,12 @@ const Operations = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Business Operations Insights & Strategies for SMBs (2025) | BizHealth.ai"
-        description="Streamline business operations, boost operational efficiency, and scale your SMB confidently in 2025. Expert guides on process optimization, AI automation, lean operations, supply chain resilience, and operational excellence for small & mid-sized businesses."
-        keywords="business operations SMB, operational efficiency 2025, streamline business processes, AI business operations, SMB operations strategies, operational resilience, process optimization AI, lean operations small business, business process automation 2025"
+        title="Business Operations Insights & Strategies for Small Business (2025) | BizHealth.ai"
+        description="Streamline business operations, boost operational efficiency, and scale your small business confidently in 2025. Expert guides on process optimization, AI automation, lean operations, supply chain resilience, and operational excellence for small & mid-sized businesses."
+        keywords="business operations small business, operational efficiency 2025, streamline business processes, AI business operations, small business operations strategies, operational resilience, process optimization AI, lean operations small business, business process automation 2025"
         canonical="https://bizhealth.ai/blog/operations"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-operations.jpg"
+        ogImage="/og-images/og-operations.jpg"
       />
       
       <StructuredData
@@ -333,6 +346,7 @@ const Operations = () => {
         </div>
       </section>
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

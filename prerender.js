@@ -45,8 +45,119 @@ function getOutputPath(route) {
   return path.join(__dirname, 'dist', routePath, 'index.html');
 }
 
+// Number of pages to prerender concurrently (adjust based on available memory)
+const MAX_CONCURRENT_PAGES = 5;
+
+/**
+ * Prerender a single route
+ */
+async function prerenderRoute(browser, route, PORT, index, total) {
+  const progress = `[${index + 1}/${total}]`;
+  console.log(`${progress} Prerendering: ${route}`);
+  
+  const page = await browser.newPage();
+  
+  try {
+    // Set viewport for consistent rendering
+    await page.setViewport({ width: 1920, height: 1080 });
+    
+    // Log console errors from the page (suppress expected 403s from external resources)
+    page.on('console', msg => {
+      if (msg.type() === 'error') {
+        const text = msg.text();
+        // Suppress expected 403 errors from external resources during SSG
+        const suppressedPatterns = [
+          /Failed to load resource.*403/i,
+          /net::ERR_/i,
+          /googletagmanager/i,
+          /google-analytics/i,
+          /fonts\.googleapis/i,
+          /fonts\.gstatic/i,
+          /supabase/i,
+          /favicon\.ico/i
+        ];
+        const isSuppressed = suppressedPatterns.some(pattern => pattern.test(text));
+        if (!isSuppressed) {
+          console.warn(`  ⚠️  Console error on ${route}:`, text);
+        }
+      }
+    });
+    
+    // Navigate to the route
+    const url = `http://localhost:${PORT}${route}`;
+    await page.goto(url, {
+      waitUntil: 'networkidle0',
+      timeout: 30000
+    });
+    
+    // Wait for the app-rendered event or timeout after 5 seconds
+    await Promise.race([
+      page.evaluate(() => {
+        return new Promise((resolve) => {
+          document.addEventListener('app-rendered', resolve);
+        });
+      }),
+      new Promise((resolve) => setTimeout(resolve, 5000))
+    ]);
+    
+    // Wait for React Helmet to inject meta tags AND canonical link into the head
+    // This is critical for SEO - Google Search Console reports "User-declared canonical: None" 
+    // if the <link rel="canonical"> tag is not present in the prerendered HTML
+    await page.waitForFunction(() => {
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      const canonical = document.querySelector('link[rel="canonical"]');
+      // Return true if canonical exists (preferred) OR at least one OG tag exists
+      return canonical || ogTitle || ogDesc;
+    }, { timeout: 8000 }).catch(() => {
+      console.warn(`  ⚠️  Helmet meta tags not detected for ${route}, proceeding anyway`);
+    });
+    
+    // Additional wait for react-helmet-async to fully hydrate all head elements
+    // Increased from 500ms to ensure canonical tag is captured
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    // Verify canonical tag is present before capturing HTML
+    const canonicalCheck = await page.evaluate(() => {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      return canonical ? canonical.href : null;
+    });
+    
+    if (!canonicalCheck) {
+      console.warn(`  ⚠️  No canonical tag found for ${route} - SSG may have SEO issues`);
+    }
+    
+    // Get the rendered HTML
+    const html = await page.content();
+    
+    // Ensure directory exists for this route
+    await ensureDirectoryForRoute(route);
+    
+    // Get the output path and write the HTML file
+    const outputPath = getOutputPath(route);
+    await fs.writeFile(outputPath, html, 'utf-8');
+    
+    // Verify the file was created
+    const fileExists = fssync.existsSync(outputPath);
+    if (fileExists) {
+      const stats = fssync.statSync(outputPath);
+      console.log(`  ✅ Success: ${outputPath} (${(stats.size / 1024).toFixed(2)} KB)`);
+      return { success: true, route };
+    } else {
+      console.error(`  ❌ Failed to create file: ${outputPath}`);
+      return { success: false, route };
+    }
+  } catch (error) {
+    console.error(`  ❌ Error prerendering ${route}:`, error.message);
+    return { success: false, route };
+  } finally {
+    await page.close();
+  }
+}
+
 async function prerender() {
   console.log('\n🚀 Starting prerender process...\n');
+  console.log(`⚡ Concurrent pages: ${MAX_CONCURRENT_PAGES}\n`);
   
   // Verify dist folder exists
   const distPath = path.join(__dirname, 'dist');
@@ -82,74 +193,28 @@ async function prerender() {
   let successCount = 0;
   let failCount = 0;
   const failedRoutes = [];
+  const startTime = Date.now();
 
   try {
-    for (let i = 0; i < routes.length; i++) {
-      const route = routes[i];
-      const progress = `[${i + 1}/${routes.length}]`;
+    // Process routes in batches for concurrent prerendering
+    for (let i = 0; i < routes.length; i += MAX_CONCURRENT_PAGES) {
+      const batch = routes.slice(i, i + MAX_CONCURRENT_PAGES);
       
-      console.log(`${progress} Prerendering: ${route}`);
+      // Prerender batch concurrently
+      const results = await Promise.all(
+        batch.map((route, batchIndex) => 
+          prerenderRoute(browser, route, PORT, i + batchIndex, routes.length)
+        )
+      );
       
-      try {
-        const page = await browser.newPage();
-        
-        // Set viewport for consistent rendering
-        await page.setViewport({ width: 1920, height: 1080 });
-        
-        // Log console errors from the page
-        page.on('console', msg => {
-          if (msg.type() === 'error') {
-            console.warn(`  ⚠️  Console error on ${route}:`, msg.text());
-          }
-        });
-        
-        // Navigate to the route
-        const url = `http://localhost:${PORT}${route}`;
-        await page.goto(url, {
-          waitUntil: 'networkidle0',
-          timeout: 30000
-        });
-        
-        // Wait for the app-rendered event or timeout after 5 seconds
-        await Promise.race([
-          page.evaluate(() => {
-            return new Promise((resolve) => {
-              document.addEventListener('app-rendered', resolve);
-            });
-          }),
-          new Promise((resolve) => setTimeout(resolve, 5000))
-        ]);
-        
-        // Additional wait for dynamic content
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Get the rendered HTML
-        const html = await page.content();
-        
-        // Ensure directory exists for this route
-        await ensureDirectoryForRoute(route);
-        
-        // Get the output path and write the HTML file
-        const outputPath = getOutputPath(route);
-        await fs.writeFile(outputPath, html, 'utf-8');
-        
-        // Verify the file was created
-        const fileExists = fssync.existsSync(outputPath);
-        if (fileExists) {
-          const stats = fssync.statSync(outputPath);
-          console.log(`  ✅ Success: ${outputPath} (${(stats.size / 1024).toFixed(2)} KB)`);
+      // Tally results
+      for (const result of results) {
+        if (result.success) {
           successCount++;
         } else {
-          console.error(`  ❌ Failed to create file: ${outputPath}`);
           failCount++;
-          failedRoutes.push(route);
+          failedRoutes.push(result.route);
         }
-        
-        await page.close();
-      } catch (error) {
-        console.error(`  ❌ Error prerendering ${route}:`, error.message);
-        failCount++;
-        failedRoutes.push(route);
       }
     }
   } catch (error) {
@@ -159,11 +224,14 @@ async function prerender() {
     await browser.close();
     server.close();
     
+    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+    
     console.log('\n' + '='.repeat(60));
     console.log('📊 Prerender Summary:');
     console.log('='.repeat(60));
     console.log(`✅ Successfully prerendered: ${successCount} routes`);
     console.log(`❌ Failed to prerender: ${failCount} routes`);
+    console.log(`⏱️  Total time: ${duration}s (~${(duration / routes.length).toFixed(1)}s per route)`);
     
     if (failedRoutes.length > 0) {
       console.log('\n⚠️  Failed routes:');

@@ -1,13 +1,15 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
+import heroImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
 
 const SmallBusinessStruggles = () => {
   const publishDate = "2025-11-13";
@@ -17,17 +19,17 @@ const SmallBusinessStruggles = () => {
     <>
       <SEO
         title="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
-        description="Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive 20-25x ROI for small business growth."
-        keywords="business health analysis, small business diagnostics, small business pain points, small business growth, why small businesses fail, SMB blind spots, AI business analytics, operational resilience"
+        description="Discover why 70% of small businesses face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots and drive 20-25x ROI for small business growth."
+        keywords="business health analysis, small business diagnostics, small business pain points, small business growth, why small businesses fail, small business blind spots, AI business analytics, operational resilience"
         canonical="https://bizhealth.ai/blog/small-business-struggles"
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-small-business-struggles.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
         description="Stop guessing, start growing: discover why fixing the wrong problems holds your business back and how AI-powered diagnostics uncover the real issues."
         image={heroImage}
@@ -35,59 +37,28 @@ const SmallBusinessStruggles = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Team"
         url="https://bizhealth.ai/blog/small-business-struggles"
+        keywords={["business health analysis", "small business diagnostics", "small business pain points", "small business blind spots", "AI business analytics"]}
       />
       
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        {/* Hero Section */}
-        <article className="pt-40 pb-16">
+        <BlogHeroSectionEnhanced
+          title="Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems"
+          author="BizHealth.ai Team"
+          publishDate="November 13, 2025"
+          readTime="12 min read"
+          heroImage={heroImage}
+          heroImageAlt="Small business owner facing operational challenges and pain points in 2025"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Growth & Scaling", href: "/blog/growth-scaling" },
+          ]}
+          shareDescription="Discover why 70% of small businesses face cash flow challenges and 60% stall after year three. Learn how AI-powered diagnostics uncover blind spots."
+        />
+
+        <article className="pb-16">
           <div className="container mx-auto px-4 max-w-4xl">
-            {/* Article Header */}
-            <header className="mb-8">
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  Business Strategy
-                </span>
-                <span className="px-3 py-1 bg-growth/10 text-growth rounded-full text-sm font-medium">
-                  Business Leadership
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems
-              </h1>
-              
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span className="text-sm">BizHealth.ai Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime={publishDate} className="text-sm">November 13, 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm">12 min read</span>
-                </div>
-              </div>
-
-              <p className="text-xl text-muted-foreground italic border-l-4 border-primary pl-4 mb-8">
-                "You can't fix what you don't understand." – A reality most small business owners confront far too late.
-              </p>
-            </header>
-
-            {/* Hero Image */}
-            <figure className="mb-12 rounded-xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Small business owner facing operational challenges and pain points in 2025"
-                className="w-full h-auto object-cover"
-                loading="eager"
-              />
-            </figure>
-
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="lead text-lg mb-8">
@@ -397,6 +368,8 @@ const SmallBusinessStruggles = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles 
           articles={[
             {
@@ -420,6 +393,7 @@ const SmallBusinessStruggles = () => {
           ]}
         />
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

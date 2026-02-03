@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Calendar, User, Share2, Linkedin, Twitter, BarChart3, Target, Zap, Users, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Building2, LineChart } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
@@ -9,6 +10,7 @@ import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
 import bizHealthAuthorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const TechnologyInnovationGap = () => {
   const handleShare = (platform: string) => {
@@ -26,24 +28,25 @@ const TechnologyInnovationGap = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Why 72% of Innovative Small Businesses Are Outgrowing You | BizHealth.ai"
-        description="Discover the innovation gap destroying SMB competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days with our proven framework."
-        keywords="innovation gap small business, SMB technology innovation 2025, competitive advantage strategy, small business innovation management, technology infrastructure SMB, business innovation framework, closing innovation gap, SMB growth strategies, innovation readiness assessment, business intelligence technology"
+        description="Discover the innovation gap destroying small business competitive advantage. Learn the 4 pillars of innovation competency and close the gap in 90 days with our proven framework."
+        keywords="innovation gap small business, small business technology innovation 2025, competitive advantage strategy, small business innovation management, technology infrastructure small business, business innovation framework, closing innovation gap, small business growth strategies, innovation readiness assessment, business intelligence technology"
         canonical="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/technology-innovation-gap-small-business-2025.jpg"
+        ogImage="/og-images/og-technology-innovation-gap.jpg"
         articlePublishedTime="2025-12-28"
         articleModifiedTime="2025-12-28"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap That's Destroying Competitive Advantage"
-        description="Research reveals the widening innovation gap between SMBs. Learn the 4 pillars of innovation competency and a 90-day framework to close the gap before competitors leave you behind."
+        description="Research reveals the widening innovation gap between small businesses. Learn the 4 pillars of innovation competency and a 90-day framework to close the gap before competitors leave you behind."
         datePublished="2025-12-28"
         dateModified="2025-12-28"
         author="BizHealth.ai Research Team"
-        image="https://bizhealth.ai/assets/technology-innovation-gap-small-business-2025.jpg"
+        image="https://bizhealth.ai/og-images/og-technology-innovation-gap.jpg"
         url="https://bizhealth.ai/blog/technology-innovation-gap-competitive-advantage"
+        keywords={["innovation gap small business", "small business technology innovation", "competitive advantage strategy", "business innovation framework", "innovation readiness assessment"]}
       />
       
       <PromotionalBanner />
@@ -86,16 +89,10 @@ const TechnologyInnovationGap = () => {
               </div>
             </div>
 
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={() => handleShare('linkedin')} className="gap-2">
-                <Linkedin className="w-4 h-4" />
-                Share
-              </Button>
-              <Button variant="outline" size="sm" onClick={() => handleShare('twitter')} className="gap-2">
-                <Twitter className="w-4 h-4" />
-                Post
-              </Button>
-            </div>
+            <SocialShareButtons 
+              title="Why 72% of Innovative Small Businesses Are Outgrowing You: The Innovation Gap"
+              description="Discover the innovation gap destroying small business competitive advantage. Learn the 4 pillars of innovation competency."
+            />
           </header>
 
           {/* Hero Image */}
@@ -550,6 +547,7 @@ const TechnologyInnovationGap = () => {
           </div>
 
           {/* Related Articles */}
+          <GradientDivider variant="green-gold" />
           <div className="mt-16">
             <RelatedArticles 
               articles={[
@@ -578,6 +576,7 @@ const TechnologyInnovationGap = () => {
         </article>
       </main>
 
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

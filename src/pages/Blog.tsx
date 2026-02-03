@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -15,14 +16,14 @@ import resilienceImage from "@/assets/operational-resilience-strategy.jpg";
 import biRoiImage from "@/assets/business-intelligence-roi-analytics.jpg";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
-import leadershipStressImage from "@/assets/business-leadership-stress-success.png";
+import leadershipStressImage from "@/assets/business-leadership-stress-success-optimized.jpg";
 import retailToolsImage from "@/assets/retail-remote-tools-family-business.jpg";
 import dailyGrindImage from "@/assets/daily-grind-food-business-operations.jpg";
 import realTimeAnalyticsImage from "@/assets/real-time-analytics-smb-agility-volatile-markets.jpg";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import talentWarsImage from "@/assets/talent-wars-smb-hiring-2025.jpg";
 import businessAnalystImage from "@/assets/business-analyst-dashboard-optimized.jpg";
-import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
+import businessStrategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 import smbTeamHeroImage from "@/assets/smb-team-collaboration-hero.webp";
 import smbFinancialTrendsImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
 import ecommerceScalingImage from "@/assets/e-commerce-scaling-smb-strategies-2025.jpg";
@@ -33,32 +34,98 @@ import cashFlowCrisisImage from "@/assets/cash-flow-crisis-management-2025.jpg";
 import smbScalingParadoxImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import aiAdoptionImage from "@/assets/ai-adoption-skeptical-business-owners-2025.jpg";
 import survivalChecklistImage from "@/assets/small-business-survival-checklist-2025.jpg";
-import blindSpotsImage from "@/assets/business-blind-spots-assessment.png";
-import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
-import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems.png";
-import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control.jpg";
-import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
-import businessHealthAssessment2026Image from "@/assets/business-health-assessment-guide-2026.png";
-import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb.png";
-import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb.png";
-import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb.jpg";
-import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide.png";
+import blindSpotsImage from "@/assets/business-blind-spots-assessment.jpg";
+import confirmWeaknessesImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
+import smallBusinessStrugglesImage from "@/assets/small-business-struggles-fixing-wrong-problems-optimized.jpg";
+import scalingOperationsImage from "@/assets/scaling-operations-without-losing-control-optimized.jpg";
+import leadershipBlindSpotsImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
+import businessHealthAssessment2026Image from "@/assets/images/business-health-assessment-2026-guide.jpg";
+import financialStewardshipImage from "@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg";
+import hiddenCostsManualProcessesImage from "@/assets/hidden-costs-manual-processes-smb-optimized.jpg";
+import overcomingBIChallengesImage from "@/assets/overcoming-bi-challenges-smb-optimized.jpg";
+import howToCheckBusinessHealthImage from "@/assets/how-to-check-business-health-guide-optimized.jpg";
 import growWithAIImage from "@/assets/grow-your-business-with-ai-smb-growth-2025.jpg";
 import growthTrapImage from "@/assets/growth-trap-broken-business-model-2025.jpg";
 import smallBusinessFinancialsImage from "@/assets/small-business-financials-know-your-numbers.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import howToPrioritizeImage from "@/assets/how-to-prioritize-operator-survival-guide.jpg";
-import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow.jpg";
+import stressTestPricingImage from "@/assets/stress-test-pricing-framework-margins-cash-flow-optimized.jpg";
 import customerLoyaltyImage from "@/assets/customer-loyalty-reliability-smb-2025.jpg";
 import businessBlindSpotsOperationalImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import technologyInnovationGapImage from "@/assets/technology-innovation-gap-small-business-2025.jpg";
-import fractionalCFOToolkitImage from "@/assets/fractional-cfo-toolkit-dashboards-2025.jpg";
+import fractionalCFOToolkitImage from "@/assets/images/fractional-cfo-toolkit-hero-2026.jpg";
 import businessHealthScoresStagesImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
 import employeeRetentionLeadershipImage from "@/assets/employee-retention-day-to-day-leadership-culture.jpg";
 import overcomingMarketingChallengesImage from "@/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg";
+import happyNewYear2026Image from "@/assets/happy-new-year-2026-business-growth.jpg";
+import visionSharingImage from "@/assets/vision-sharing-business-owner-team-celebration.jpg";
+import feastFamineCycleImage from "@/assets/feast-famine-cycle-small-business-rollercoaster.jpg";
+import hrProgramAssetImage from "@/assets/hr-program-small-business-asset-multiplier.jpg";
+import technologyStrategicAllyImage from "@/assets/images/technology-strategic-ally-roi-decisions-growth.jpg";
+import crmRealityCheckImage from "@/assets/images/crm-reality-check-small-business-decision-guide.jpg";
+import growthTrapOrGrowthEngineImage from "@/assets/images/growth-trap-or-growth-engine-business-readiness-assessment.jpg";
+import estimatingCrisisImage from "@/assets/images/estimating-crisis-service-business-profitability.jpg";
+import schedulingCrisisImage from "@/assets/images/scheduling-crisis-operational-costs-smb.jpg";
+import growthCeilingGutInstinctImage from "@/assets/images/growth-ceiling-gut-instinct-scaling-business.jpg";
+import r2a2JobDescriptionsImage from "@/assets/images/r2a2-job-descriptions-role-clarity-small-business-teams.jpg";
+import customerAcquisitionCostImage from "@/assets/images/customer-acquisition-cost-guide-smb-growth.jpg";
+import leadingBlindBIImage from "@/assets/images/blog/leading-blind-business-intelligence.jpg";
+import emotionalIntelligenceImage from "@/assets/images/blog/emotional-intelligence-leadership-skill.jpg";
+import leanPrinciplesImage from "@/assets/images/blog/lean-principles-small-business-guide.jpg";
+import planogramsRetailImage from "@/assets/images/blog/planograms-transform-small-retail-operations.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
+import chasingSalesNotProfitsImage from "@/assets/images/blog/why-small-businesses-fail-chasing-sales-profits.jpg";
+import finalApproachExitImage from "@/assets/images/final-approach-exit-preparation.jpg";
+import secretWeaponProcessImage from "@/assets/images/secret-weapon-process-matters-hero.jpg";
+import businessBlindSpotsHeroImage from "@/assets/images/business-blind-spots-hero.jpg";
+import voiceOfCustomerTruthImage from "@/assets/images/voice-of-customer-truth-hero.jpg";
+import marketingMythsImage from "@/assets/images/marketing-myths-smb-growth-hero.jpg";
+import sharksInTheWaterImage from "@/assets/images/sharks-in-the-water-business-crisis.jpg";
+import buildHighPerformingTeamImage from "@/assets/images/build-high-performing-team-hero.jpg";
+import ebitdaBusinessValuationImage from "@/assets/images/ebitda-business-valuation-hero.jpg";
+import ebitdaMistakesImage from "@/assets/images/ebitda-mistakes-hero.jpg";
+import coachingForGrowthImage from "@/assets/images/coaching-for-growth-hero.jpg";
+import technologyInnovationFearFutureImage from "@/assets/images/technology-innovation-fear-future-hero.jpg";
+import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-empowerment-hero.jpg";
+import employeeTurnoverMirrorImage from "@/assets/images/employee-turnover-mirror-hero.jpg";
+import nepotismFavoritism from "@/assets/images/nepotism-favoritism-business.jpg";
+import schedulingFlexibilityImage from "@/assets/images/scheduling-flexibility-costing-you-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/scheduling-flexibility-costing-you": schedulingFlexibilityImage,
+  "/blog/nepotism-favoritism-destroying-business": nepotismFavoritism,
+  "/blog/employee-turnover-starts-in-the-mirror": employeeTurnoverMirrorImage,
+  "/blog/exponential-power-empowerment-scaling": exponentialPowerEmpowermentImage,
+  "/blog/technology-innovation-fear-future": technologyInnovationFearFutureImage,
+  "/blog/coaching-for-growth-leadership": coachingForGrowthImage,
+  "/blog/ebitda-mistakes-business-reality": ebitdaMistakesImage,
+  "/blog/ebitda-business-valuation": ebitdaBusinessValuationImage,
+  "/blog/build-high-performing-team": buildHighPerformingTeamImage,
+  "/blog/sharks-in-the-water-business-crisis": sharksInTheWaterImage,
+  "/blog/marketing-myths-spending-not-creating-growth": marketingMythsImage,
+  "/blog/voice-of-customer-truth": voiceOfCustomerTruthImage,
+  "/blog/fix-business-blind-spots": businessBlindSpotsHeroImage,
+  "/blog/secret-weapon-why-process-matters": secretWeaponProcessImage,
+  "/blog/final-approach-exit-preparation-business-value": finalApproachExitImage,
+  "/blog/chasing-sales-not-profits": chasingSalesNotProfitsImage,
+  "/blog/renewal-imperative-legacy-business-rebirth": renewalImperativeImage,
+  "/blog/planograms-transform-small-retail-operations": planogramsRetailImage,
+  "/blog/lean-principles-small-business": leanPrinciplesImage,
+  "/blog/emotional-intelligence-leadership-skill": emotionalIntelligenceImage,
+  "/blog/leading-blind-business-intelligence-small-business": leadingBlindBIImage,
+  "/blog/customer-acquisition-cost-guide-smb": customerAcquisitionCostImage,
+  "/blog/r2a2-job-descriptions-role-clarity-small-business-teams": r2a2JobDescriptionsImage,
+  "/blog/growth-ceiling-gut-instinct-scaling": growthCeilingGutInstinctImage,
+  "/blog/scheduling-crisis-operational-costs": schedulingCrisisImage,
+  "/blog/estimating-crisis-service-business-profitability": estimatingCrisisImage,
+  "/blog/growth-trap-or-growth-engine": growthTrapOrGrowthEngineImage,
+  "/blog/crm-reality-check-small-business-decision": crmRealityCheckImage,
+  "/blog/technology-strategic-ally-roi-decisions": technologyStrategicAllyImage,
+  "/blog/hr-program-asset-multiplier-small-business": hrProgramAssetImage,
+  "/blog/feast-or-famine-cycle-small-business": feastFamineCycleImage,
+  "/blog/vision-sharing-business-owner": visionSharingImage,
+  "/blog/happy-new-year-2026-year-of-growth": happyNewYear2026Image,
   "/blog/overcoming-marketing-challenges-small-business": overcomingMarketingChallengesImage,
   "/blog/employee-retention-company-culture-leadership": employeeRetentionLeadershipImage,
   "/blog/business-health-scores-by-stage": businessHealthScoresStagesImage,
@@ -131,7 +198,7 @@ const Blog = () => {
     "Operations",
     "Technology",
     "Risk Management",
-    "Business Intelligence",
+    "Growth & Scaling",
     "Business Leadership"
   ];
 
@@ -189,6 +256,7 @@ const Blog = () => {
         description="Expert insights, practical strategies, and data-driven analysis for SMB leaders. Learn from business intelligence experts about operations, finance, leadership, and growth."
         keywords="business blog, SMB insights, business strategy, operational excellence, financial management, leadership development, business intelligence, growth strategies"
         canonical="https://bizhealth.ai/blog"
+        ogImage="/og-images/og-blog.jpg"
       />
       <StructuredData 
         type="organization"
@@ -201,8 +269,12 @@ const Blog = () => {
         <img 
           src={smbTeamHeroImage} 
           alt="Team discussing business growth strategies"
+          width={1200}
+          height={500}
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
+          // @ts-ignore - fetchpriority is valid but not in React types
+          fetchpriority="high"
           decoding="async"
         />
         
@@ -294,13 +366,13 @@ const Blog = () => {
                     </div>
                   </div>
                   
-                  <a 
-                    href="/blog/business-health-assessment-2025" 
-                    className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  <Link 
+                    to="/blog/complete-guide-business-health-assessment-2026" 
+                    className="inline-flex items-center gap-2 bg-background text-primary px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
                   >
                     Read Full Article
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Image Column */}
@@ -308,7 +380,11 @@ const Blog = () => {
                   <img 
                     src={featuredPost.imageUrl}
                     alt={featuredPost.altText}
+                    width={600}
+                    height={320}
                     className="w-full h-80 object-cover rounded-xl shadow-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -401,9 +477,12 @@ const Blog = () => {
                         <img 
                           src={post.imageUrl} 
                           alt={`Thumbnail: ${post.altText}`}
+                          width={400}
+                          height={225}
                           className="w-full h-48 md:h-42 object-cover transition-transform duration-300 group-hover:scale-105"
                           style={{ aspectRatio: '16/9' }}
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       
@@ -492,6 +571,7 @@ const Blog = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

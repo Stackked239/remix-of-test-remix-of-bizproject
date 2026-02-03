@@ -31,7 +31,7 @@ import {
   Plus
 } from 'lucide-react';
 import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
-import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.png';
+import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.jpg';
 import businessHealthReportSample from '@/assets/business-health-report-sample-new.jpg';
 
 const Reports = () => {
@@ -81,25 +81,25 @@ const Reports = () => {
       alaCarte: 'Included'
     },
     {
-      report: 'Executive Report',
+      report: 'Executive Dashboard (client portal)',
       essentials: false,
       growth: 'optional',
-      enterprise: 'optional',
-      alaCarte: '$299'
+      enterprise: true,
+      alaCarte: '$99'
     },
     {
-      report: 'Managers\' Report',
-      essentials: 'optional',
+      report: 'Managers Reports (5)',
+      essentials: false,
       growth: 'optional',
       enterprise: true,
-      alaCarte: '$199 each'
+      alaCarte: '$199'
     },
     {
       report: 'Employees\' Report',
       essentials: 'optional',
       growth: 'optional',
       enterprise: true,
-      alaCarte: '$149'
+      alaCarte: '$29'
     }
   ];
 
@@ -111,7 +111,7 @@ const Reports = () => {
         keywords="business health reports, SMB diagnostics, comprehensive business analysis, executive reports, management reports, employee engagement reports"
         canonical="https://bizhealth.ai/reports"
         ogType="website"
-        ogImage="https://bizhealth.ai/assets/bizhealth-logo-main.jpg"
+        ogImage="/og-images/og-reports.jpg"
       />
 
       <StructuredData

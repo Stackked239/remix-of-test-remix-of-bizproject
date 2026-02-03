@@ -103,6 +103,7 @@ const ProcessMappingGuide = () => {
         description="Learn how to create professional process maps and standard operating procedures with our comprehensive step-by-step guide. Master the Process Mapping & SOP Builder tool."
         keywords="process mapping guide, SOP tutorial, workflow documentation, process builder guide, business process documentation"
         canonical="https://bizhealth.ai/biztools/toolbox/process-mapping-tools/guide"
+        ogImage="/og-images/og-process-mapping-guide.jpg"
       />
 
       <div className="min-h-screen flex flex-col bg-background">

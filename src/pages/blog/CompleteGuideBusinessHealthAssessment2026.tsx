@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { TrendingUp, FileText, Users, Target, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
-import heroImage from '@/assets/business-health-assessment-guide-2026.png';
+import heroImage from '@/assets/images/business-health-assessment-2026-guide.jpg';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const CompleteGuideBusinessHealthAssessment2026 = () => {
   const publishDate = "2025-11-24";
@@ -18,17 +20,17 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
       <SEO
         title="The Complete Guide to Business Health Assessment for 2026"
         description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth."
-        keywords="business health assessment 2026, business health check, SMB business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
+        keywords="business health assessment 2026, business health check, small business assessment, business diagnostic tools, operational efficiency, financial health metrics, strategic planning 2026, business growth strategies"
         canonical="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-complete-guide-2026.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Complete Guide to Business Health Assessment for 2026"
         description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, team culture, and strategic alignment to maximize growth."
         image={`https://bizhealth.ai${heroImage}`}
@@ -36,70 +38,108 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
         dateModified={modifiedDate}
         author={author}
         url="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
+        keywords={["business health assessment 2026", "business health check", "small business assessment", "operational efficiency", "financial health metrics"]}
       />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        <article className="pt-40 pb-16">
+        <article className="pt-24 pb-16">
           {/* Hero Section */}
-          <div className="relative py-16" style={{ backgroundColor: 'hsl(var(--biz-navy) / 0.03)' }}>
-            <div className="container mx-auto px-4">
+          <div className="relative pt-16 pb-8 overflow-hidden">
+            {/* Background gradient */}
+            <div 
+              className="absolute inset-0"
+              style={{ 
+                background: 'linear-gradient(135deg, hsl(var(--biz-navy) / 0.08) 0%, hsl(var(--biz-green) / 0.05) 50%, hsl(var(--biz-navy) / 0.03) 100%)'
+              }}
+            />
+            {/* Decorative elements */}
+            <div 
+              className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20"
+              style={{ background: 'hsl(var(--biz-green))' }}
+            />
+            <div 
+              className="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-3xl opacity-10"
+              style={{ background: 'hsl(var(--biz-navy))' }}
+            />
+            
+            <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto">
                 {/* Categories */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mb-8 animate-fade-in">
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-navy)) 0%, hsl(var(--biz-navy) / 0.85) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Strategy
                   </span>
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-green)) 0%, hsl(var(--biz-green) / 0.85) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Intelligence
                   </span>
                   <span 
-                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    className="px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-transform hover:scale-105"
                     style={{
-                      backgroundColor: 'hsl(var(--biz-navy) / 0.1)',
-                      color: 'hsl(var(--biz-navy))'
+                      background: 'linear-gradient(135deg, hsl(var(--biz-navy) / 0.9) 0%, hsl(var(--biz-green) / 0.8) 100%)',
+                      color: 'white'
                     }}
                   >
                     Business Leadership
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(var(--biz-navy))' }}>
+                <h1 
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in"
+                  style={{ 
+                    color: 'hsl(var(--biz-navy))',
+                    textShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                  }}
+                >
                   The Complete Guide to Business Health Assessment for 2026
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}>
-                  <span>By {author}</span>
-                  <span>•</span>
+                <div 
+                  className="flex flex-wrap items-center gap-4 text-sm mb-4 animate-fade-in"
+                  style={{ color: 'hsl(var(--biz-navy) / 0.7)' }}
+                >
+                  <span className="font-medium">By {author}</span>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <time dateTime={publishDate}>November 24, 2025</time>
-                  <span>•</span>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'hsl(var(--biz-green))' }} />
                   <span>15 min read</span>
                 </div>
 
-                <img
-                  src={heroImage}
-                  alt="Business health assessment dashboard displaying financial analytics, operational metrics, and strategic KPIs for 2026 planning"
-                  className="w-full rounded-lg shadow-xl mb-8"
-                  loading="eager"
-                  style={{ opacity: 0.85 }}
+                {/* Social Share Buttons */}
+                <SocialShareButtons 
+                  title="The Complete Guide to Business Health Assessment for 2026"
+                  description="Discover how to conduct a comprehensive business health assessment for 2026. Learn proven strategies for evaluating financial health, operational efficiency, and strategic alignment."
+                  url="https://bizhealth.ai/blog/complete-guide-business-health-assessment-2026"
+                  className="mb-8"
                 />
 
-                <p className="text-xl leading-relaxed" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                  Your Strategic Roadmap for the Year Ahead
-                </p>
+                <div className="relative group max-w-3xl mx-auto">
+                  <div 
+                    className="absolute -inset-1 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500"
+                    style={{ background: 'linear-gradient(135deg, hsl(var(--biz-navy)), hsl(var(--biz-green)))' }}
+                  />
+                  <img
+                    src={heroImage}
+                    alt="Business owner holding a Business Health Assessment report showing operations, finances, and strategy charts in a manufacturing facility - complete guide for 2026 SMB business health evaluation"
+                    className="relative w-full max-h-[400px] object-cover rounded-2xl shadow-2xl mb-10 transition-transform duration-500 group-hover:scale-[1.01]"
+                    loading="eager"
+                    width={1456}
+                    height={816}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -108,7 +148,7 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
           <div className="container mx-auto px-4 mt-12">
             <div className="max-w-4xl mx-auto prose prose-lg">
               <p className="text-lg leading-relaxed mb-6" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
-                As 2026 approaches, small and mid-size business leaders find themselves at a pivotal moment. According to the latest Bank of America Business Owner Report, 74% of SMB owners expect revenue increases in the coming year, and 60% plan to expand their businesses. That optimism is well-founded—but it's also conditional. The businesses that thrive in 2026 won't be those with the best intentions; they'll be those with the clearest understanding of where they actually stand.
+                In 2026, small and mid-size business leaders find themselves at a pivotal moment. According to the latest Bank of America Business Owner Report, 74% of SMB owners expect revenue increases in the coming year, and 60% plan to expand their businesses. That optimism is well-founded—but it's also conditional. The businesses that thrive in 2026 won't be those with the best intentions; they'll be those with the clearest understanding of where they actually stand.
               </p>
 
               <p className="text-lg leading-relaxed mb-8" style={{ color: 'hsl(var(--biz-navy) / 0.8)' }}>
@@ -519,32 +559,35 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
           </div>
 
           {/* Related Articles */}
+          <GradientDivider variant="green-gold" />
+          
           <div className="container mx-auto px-4 mt-16">
             <div className="max-w-4xl mx-auto">
               <RelatedArticles articles={[
                 {
-                  title: "Success Begins with Strategy and A Plan: Prepping Your Business for 2026 Growth",
-                  slug: "success-begins-with-2026-strategy",
+                  title: "The Complete Guide to Business Health Assessment in 2025",
+                  slug: "business-health-assessment-2025",
                   category: "Business Strategy",
-                  excerpt: "Discover why proactive 2026 business planning is essential for SMBs. Get actionable strategies for strategic planning, goal setting, and AI-driven growth analytics."
+                  excerpt: "A comprehensive guide to business health assessments—what they are, why they matter, and how they can transform your SMB."
                 },
                 {
-                  title: "Why So Many Small Businesses Struggle: They're Fixing the Wrong Problems",
-                  slug: "small-business-struggles",
-                  category: "Business Strategy",
-                  excerpt: "Discover why 70% of SMBs face cash flow challenges and 60% stall after year three. Learn how AI-powered business health diagnostics uncover blind spots."
+                  title: "Financial Health Metrics Every Business Owner Should Track",
+                  slug: "financial-health-metrics",
+                  category: "Financial Management",
+                  excerpt: "Master the key financial indicators that predict business success and sustainability."
                 },
                 {
-                  title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-                  slug: "identifying-smb-leadership-blind-spots",
-                  category: "Business Leadership",
-                  excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success and how to build organizational self-awareness."
+                  title: "Operational Resilience: Building a Business That Can Weather Any Storm",
+                  slug: "operational-resilience",
+                  category: "Operations",
+                  excerpt: "Discover strategies for building operational resilience and business continuity planning."
                 }
               ]} />
             </div>
           </div>
         </article>
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

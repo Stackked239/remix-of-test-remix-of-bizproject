@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
+import {
   Loader2,
   FileText,
   Download,
@@ -63,7 +63,7 @@ interface Order {
   created_at: string;
 }
 
-const PortalNew = () => {
+const Portal = () => {
   const { user, loading: authLoading, signOut } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -212,13 +212,13 @@ const PortalNew = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <SEO 
-        title="Dashboard - BizHealth.ai" 
+      <SEO
+        title="Dashboard - BizHealth.ai"
         description="View your business health assessment and reports"
         noindex={true}
       />
       <GlobalNavigation />
-      
+
       <main className="flex-1 container mx-auto px-4 py-8">
         {/* Welcome Header */}
         <div className="mb-8">
@@ -244,7 +244,7 @@ const PortalNew = () => {
                     </p>
                   </div>
                 </div>
-                <Button 
+                <Button
                   className="bg-biz-green hover:bg-biz-green/90"
                   onClick={() => navigate('/pricing')}
                 >
@@ -269,7 +269,7 @@ const PortalNew = () => {
                     </p>
                   </div>
                 </div>
-                <Button 
+                <Button
                   className="bg-biz-green hover:bg-biz-green/90"
                   onClick={() => navigate('/questionnaire')}
                 >
@@ -294,7 +294,7 @@ const PortalNew = () => {
                     </p>
                   </div>
                 </div>
-                <Button 
+                <Button
                   className="bg-blue-600 hover:bg-blue-700"
                   onClick={() => navigate('/questionnaire')}
                 >
@@ -334,7 +334,7 @@ const PortalNew = () => {
                     Complete your assessment to generate your personalized business health reports.
                   </p>
                   {hasCompletedOrder && (
-                    <Button 
+                    <Button
                       className="bg-biz-green hover:bg-biz-green/90"
                       onClick={() => navigate('/questionnaire')}
                     >
@@ -373,8 +373,8 @@ const PortalNew = () => {
                             <div className="text-xs text-biz-grey">Health Score</div>
                           </div>
                           <div className="flex-1">
-                            <Progress 
-                              value={report.summary.overall_score} 
+                            <Progress
+                              value={report.summary.overall_score}
                               className="h-2"
                             />
                           </div>
@@ -382,16 +382,16 @@ const PortalNew = () => {
                       </CardContent>
                     )}
                     <CardFooter className="pt-3 border-t flex gap-2">
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => handleViewReport(report)}
                       >
                         <Eye className="h-4 w-4 mr-1" />
                         View
                       </Button>
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => handleDownloadReport(report)}
                       >
@@ -458,7 +458,7 @@ const PortalNew = () => {
                       <div className="flex items-center gap-4">
                         {getStatusBadge(assessment.status)}
                         {assessment.status === 'in_progress' && (
-                          <Button 
+                          <Button
                             size="sm"
                             onClick={() => navigate('/questionnaire')}
                           >
@@ -484,7 +484,7 @@ const PortalNew = () => {
                   <p className="text-biz-grey mb-6">
                     You haven't made any purchases yet.
                   </p>
-                  <Button 
+                  <Button
                     className="bg-biz-green hover:bg-biz-green/90"
                     onClick={() => navigate('/pricing')}
                   >
@@ -517,10 +517,10 @@ const PortalNew = () => {
           </TabsContent>
         </Tabs>
       </main>
-      
+
       <GlobalFooter />
     </div>
   );
 };
 
-export default PortalNew;
+export default Portal;

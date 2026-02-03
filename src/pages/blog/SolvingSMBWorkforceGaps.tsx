@@ -1,9 +1,11 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
 import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import workforceGapsImage from "@/assets/smb-workforce-gaps-talent-analytics-2025.jpg";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -39,31 +41,26 @@ const SolvingSMBWorkforceGaps = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Solving SMB Workforce Gaps 2025 | BizHealth.ai</title>
-        <meta name="description" content="Discover actionable SMB growth strategies to solve workforce challenges in 2025. Bridge talent gaps with AI business analytics and proven retention tactics—read now!" />
-        <meta name="keywords" content="SMB workforce challenges 2025, talent gaps, employee retention, AI business analytics, SMB growth strategies, workforce planning, communication strategies" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025" />
-        <meta property="og:title" content="People-First Challenges: Solving SMB Workforce Gaps 2025" />
-        <meta property="og:description" content="Unlock SMB growth with AI-powered talent planning. Learn to bridge workforce gaps and boost retention—discover actionable insights now!" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/smb-workforce-gaps-talent-analytics-2025.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025" />
-        <meta name="twitter:title" content="Solving SMB Workforce Gaps 2025 | BizHealth.ai" />
-        <meta name="twitter:description" content="Bridge talent gaps with AI business analytics. Actionable SMB growth strategies for 2025—read the full guide!" />
-        <meta name="twitter:image" content="https://bizhealth.ai/assets/smb-workforce-gaps-talent-analytics-2025.jpg" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEO
+        title="Solving Small Business Workforce Gaps 2025 | BizHealth.ai"
+        description="Discover actionable small business growth strategies to solve workforce challenges in 2025. Bridge talent gaps with AI business analytics and proven retention tactics—read now!"
+        keywords="small business workforce challenges 2025, talent gaps, employee retention, AI business analytics, small business growth strategies, workforce planning, communication strategies"
+        canonical="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025"
+        ogType="article"
+        ogImage="/og-images/og-workforce-gaps.jpg"
+        articlePublishedTime={publishDate}
+        articleAuthor="BizHealth.ai Research Team"
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="People-First Challenges: Solving SMB Workforce Gaps 2025"
+        description="Discover actionable SMB growth strategies to solve workforce challenges in 2025. Learn how AI business analytics, talent planning tools, and data-driven insights can bridge talent gaps."
+        image={`https://bizhealth.ai${workforceGapsImage}`}
+        datePublished={publishDate}
+        author="BizHealth.ai Research Team"
+        url="https://bizhealth.ai/blog/solving-smb-workforce-gaps-2025"
+        keywords={["small business workforce challenges", "talent gaps", "employee retention", "AI business analytics", "workforce planning"]}
+      />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
@@ -356,6 +353,8 @@ const SolvingSMBWorkforceGaps = () => {
           </div>
         </article>
 
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={[
           {
             title: "Leadership Stress Management",
@@ -377,6 +376,7 @@ const SolvingSMBWorkforceGaps = () => {
           }
         ]} />
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

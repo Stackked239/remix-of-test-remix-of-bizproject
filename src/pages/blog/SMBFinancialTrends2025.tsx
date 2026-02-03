@@ -1,12 +1,13 @@
-import { Helmet } from "react-helmet-async";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
-import { ArrowLeft, Calendar, Clock, User, Info } from "lucide-react";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import RelatedArticles from "@/components/RelatedArticles";
 import heroImage from "@/assets/2025-smb-financial-trends-cash-flow-strategies.jpg";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const SMBFinancialTrends2025 = () => {
   const publishDate = "2025-10-15T12:00:00.000Z";
@@ -43,7 +44,7 @@ const SMBFinancialTrends2025 = () => {
       "@type": "WebPage",
       "@id": "https://bizhealth.ai/blog/2025-smb-financial-trends"
     },
-    "keywords": "SMB financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence SMB, financial health metrics, predictive analytics business",
+    "keywords": "small business financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence small business, financial health metrics, predictive analytics business",
     "articleSection": "Financial Health",
     "wordCount": 1500
   };
@@ -71,118 +72,46 @@ const SMBFinancialTrends2025 = () => {
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>2025 SMB Financial Trends Guide | BizHealth.ai</title>
-        <meta 
-          name="description" 
-          content="Unlock predictable growth with SMB financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!" 
-        />
-        <meta name="keywords" content="SMB financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence SMB, financial health metrics, predictive analytics, SMB growth strategies, revenue-based financing" />
-        <link rel="canonical" href="https://bizhealth.ai/blog/2025-smb-financial-trends" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://bizhealth.ai/blog/2025-smb-financial-trends" />
-        <meta property="og:title" content="2025 SMB Financial Trends: From Uncertainty to Predictable Growth" />
-        <meta property="og:description" content="Unlock predictable growth with SMB financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!" />
-        <meta property="og:image" content="https://bizhealth.ai/assets/2025-smb-financial-trends-cash-flow-strategies.jpg" />
-        <meta property="article:published_time" content={publishDate} />
-        <meta property="article:author" content="The BizHealth.ai Research Team" />
-        <meta property="article:section" content="Financial Health" />
-        <meta property="article:tag" content="SMB Financial Trends" />
-        <meta property="article:tag" content="Cash Flow Strategies" />
-        <meta property="article:tag" content="AI Business Analytics" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://bizhealth.ai/blog/2025-smb-financial-trends" />
-        <meta property="twitter:title" content="2025 SMB Financial Trends: From Uncertainty to Predictable Growth" />
-        <meta property="twitter:description" content="Unlock predictable growth with SMB financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!" />
-        <meta property="twitter:image" content="https://bizhealth.ai/assets/2025-smb-financial-trends-cash-flow-strategies.jpg" />
-
-        {/* JSON-LD Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
-        </script>
-      </Helmet>
+      <SEO
+        title="2025 Small Business Financial Trends Guide | BizHealth.ai"
+        description="Unlock predictable growth with small business financial trends 2025. Expert insights on cash flow strategies, AI analytics, and automation—read now!"
+        keywords="small business financial trends 2025, small business cash flow strategies, AI business analytics, financial automation, cash flow forecasting, business intelligence small business, financial health metrics, predictive analytics, small business growth strategies"
+        canonical="https://bizhealth.ai/blog/2025-smb-financial-trends"
+        ogType="article"
+        ogImage="/og-images/og-smb-financial-trends.jpg"
+        articlePublishedTime={publishDate}
+        articleAuthor="The BizHealth.ai Research Team"
+      />
+      <StructuredData
+        type="blogPosting"
+        headline="2025 SMB Financial Trends: From Uncertainty to Predictable Growth"
+        description="Discover how SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics, cash flow strategies, and financial automation insights for 2025."
+        image={`https://bizhealth.ai${heroImage}`}
+        datePublished={publishDate}
+        author="The BizHealth.ai Research Team"
+        url="https://bizhealth.ai/blog/2025-smb-financial-trends"
+        keywords={["small business financial trends 2025", "cash flow strategies", "AI business analytics", "financial automation", "predictive analytics"]}
+      />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        {/* Hero Section */}
-        <article className="pt-40 pb-16">
+        <BlogHeroSectionEnhanced
+          title="2025 SMB Financial Trends: From Uncertainty to Predictable Growth"
+          author="The BizHealth.ai Research Team"
+          publishDate={formattedDate}
+          readTime="7 min read"
+          heroImage={heroImage}
+          heroImageAlt="Business team presenting cash flow strategies and financial analytics dashboard showing SMB financial trends 2025"
+          categories={[
+            { label: "Financial Management", href: "/blog/financial-management" },
+          ]}
+          shareDescription="Discover how SMBs can shift from reactive guessing to data-driven, predictable growth with AI business analytics."
+        />
+
+        <article className="pb-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              {/* Back Link */}
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 group"
-              >
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                <span className="font-medium">Back to Blog</span>
-              </Link>
-
-              {/* Category Badge */}
-              <div className="mb-6">
-                <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-2 rounded-full">
-                  Financial Health
-                </span>
-              </div>
-
-              {/* H1 Title with Primary Keyword */}
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                2025 SMB Financial Trends: From Uncertainty to Predictable Growth
-              </h1>
-
-              {/* Meta Information */}
-              <div className="flex items-center gap-6 text-muted-foreground mb-8 flex-wrap">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="flex items-center gap-2 cursor-help">
-                        <User className="w-4 h-4" />
-                        <span className="text-sm">The BizHealth.ai Research Team</span>
-                        <Info className="w-3.5 h-3.5 text-primary" />
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
-                      <p className="text-sm">
-                        The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime={publishDate} className="text-sm">{formattedDate}</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm">7 min read</span>
-                </div>
-              </div>
-
-              {/* Author Bio - E-E-A-T Signal */}
-              <div className="bg-muted p-4 rounded-lg mb-8 border-l-4 border-primary">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Expert Insights:</strong> This analysis is compiled by the BizHealth.ai Research Team, drawing from decades of business consulting experience and proprietary data from analyzing over 200 business health indicators across thousands of SMBs.
-                </p>
-              </div>
-
-              {/* Hero Image */}
-              <div className="mb-12">
-                <img 
-                  src={heroImage} 
-                  alt="Business team presenting cash flow strategies and financial analytics on interactive dashboard with charts showing SMB financial trends 2025"
-                  className="w-full h-auto rounded-xl shadow-elegant"
-                  loading="eager"
-                  fetchPriority="high"
-                  width="1200"
-                  height="630"
-                />
-              </div>
-
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
                 {/* Introduction */}
@@ -399,8 +328,11 @@ const SMBFinancialTrends2025 = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={relatedArticles} />
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

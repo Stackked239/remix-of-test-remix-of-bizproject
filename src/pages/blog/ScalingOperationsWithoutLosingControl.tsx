@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import heroImage from '@/assets/scaling-operations-without-losing-control.jpg';
+import heroImage from '@/assets/scaling-operations-without-losing-control-optimized.jpg';
 
 const ScalingOperationsWithoutLosingControl = () => {
   const publishDate = "2025-11-23";
@@ -19,24 +20,25 @@ const ScalingOperationsWithoutLosingControl = () => {
       <SEO
         title="How Small & Mid-Size Businesses Can Scale Operations Without Losing Control"
         description="Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture for controlled expansion."
-        keywords="business scaling, operations management, SMB growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
+        keywords="business scaling, operations management, small business growth strategies, operational excellence, scaling framework, business systems, growth management, operational efficiency, controlled expansion, sustainable growth, scale operations 2025, small business scaling"
         canonical="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-scaling-operations.jpg"
+        ogImage="/og-images/og-scaling-operations.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How Small & Mid-Size Businesses Can Scale Operations Without Losing Control"
         description="Discover proven strategies for small businesses to scale operations sustainably in 2025. Learn the SCALE framework, avoid growth traps, and build operational architecture for controlled expansion."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-scaling-operations.jpg"
+        image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/scaling-operations-without-losing-control"
+        keywords={["business scaling", "operations management", "small business growth strategies", "operational excellence", "scaling framework"]}
       />
 
       <GlobalNavigation />
@@ -545,28 +547,31 @@ const ScalingOperationsWithoutLosingControl = () => {
         </div>
 
         <PromotionalBanner />
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={[
           {
-            title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
-            slug: "smb-scaling-paradox-2025",
-            category: "Business Strategy",
-            excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling."
+            title: "Employee Retention: Company Culture and Day-to-Day Leadership",
+            slug: "employee-retention-company-culture-leadership",
+            category: "Business Leadership",
+            excerpt: "Build a retention-focused culture through consistent leadership and employee engagement."
           },
           {
-            title: "Q4 Cost Crunches: Operational Cost Fixes 2025",
-            slug: "Q4-Cost-Cuts-2025",
+            title: "Customer Loyalty Starts With Reliability, Not Delight",
+            slug: "customer-loyalty-starts-with-reliability",
             category: "Operations",
-            excerpt: "Navigate Q4 2025 cash crunches with proven operational cost fixes."
+            excerpt: "Build lasting customer loyalty through consistent reliability, not grand gestures."
           },
           {
-            title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down",
-            slug: "cash-flow-crisis-management",
-            category: "Financial Management",
-            excerpt: "Master cash flow management for small business in 2025."
+            title: "When to Pivot: Signs Your Business Model Needs a Refresh",
+            slug: "when-to-pivot",
+            category: "Business Strategy",
+            excerpt: "Recognize the warning signs and make strategic pivots before it's too late."
           }
         ]} />
       </article>
 
+      <GradientDivider />
       <GlobalFooter />
     </>
   );

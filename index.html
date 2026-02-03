@@ -12,19 +12,11 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bizhealth.ai" />
     
-    <!-- Open Graph Meta Tags -->
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bizhealth.ai" />
-    <meta property="og:image" content="https://bizhealth.ai/logo-512.jpg">
+    <!-- Open Graph Meta Tags - Page-specific tags injected by React Helmet -->
     <meta property="og:site_name" content="BizHealth.ai" />
     
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card Meta Tags - Page-specific tags injected by React Helmet -->
     <meta name="twitter:card" content="summary_large_image" />
-    
-    
-    <meta name="twitter:image" content="https://bizhealth.ai/logo-512.jpg">
     
     <!-- Structured Data Schema -->
     <script type="application/ld+json">
@@ -66,51 +58,54 @@
     <meta name="msapplication-TileColor" content="#0066CC" />
     
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preload Critical Resources (self-hosted fonts) -->
+    
+    <!-- Preload LCP Hero Images for key pages -->
+    <link rel="preload" as="image" href="/src/assets/smb-team-collaboration-hero.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/src/assets/contact-hero-dashboard.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/src/assets/images/bizguides-hero-consultation.jpg" fetchpriority="high" />
+    
+    <!-- DNS Prefetch and Preconnect for external resources -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://trinketsofcody.com" />
+    <link rel="dns-prefetch" href="https://getcody.ai" />
+    <link rel="preconnect" href="https://trinketsofcody.com" crossorigin />
+    <link rel="preconnect" href="https://getcody.ai" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    
+    <!-- Preload only critical self-hosted fonts to avoid Lighthouse warnings -->
+    <link rel="preload" href="/fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    
+    <!-- Defer non-critical CSS loading hint -->
+    <link rel="preload" as="style" href="/assets/index.css" />
     
     <!-- Security headers managed via Netlify headers in production -->
     
     <meta name="theme-color" content="#0066CC" />
     
-    <!-- Google tag (gtag.js) - Deferred loading for better performance -->
+    <!-- Google tag (gtag.js) - Updated GA4 Property -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDCM29Z181"></script>
     <script>
-      // Defer Google Analytics until after page load
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          var gtagScript = document.createElement('script');
-          gtagScript.async = true;
-          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LX79L9X0PY';
-          document.head.appendChild(gtagScript);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-LX79L9X0PY');
-        }, 2000); // Delay 2 seconds after load
-      });
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HDCM29Z181');
     </script>
     
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:title" content="BizHealth.ai - Premier Business Health Analyzer for Small and Mid-Size Businesses">
-  <meta name="twitter:title" content="BizHealth.ai - Premier Business Health Analyzer for Small and Mid-Size Businesses">
-  <meta property="og:description" content="The #1 Trusted business health assessment for micro, small, and mid-size businesses (SMBs). Get comprehensive reports on financial health, operations, and growth strategies. Trusted by business owners, consulting firms, M&amp;A advisors, and companies worldwide.">
-  <meta name="twitter:description" content="The #1 Trusted business health assessment for micro, small, and mid-size businesses (SMBs). Get comprehensive reports on financial health, operations, and growth strategies. Trusted by business owners, consulting firms, M&amp;A advisors, and companies worldwide.">
-</head>
+  </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Cody Floating Chat Widget - loaded outside React for reliability -->
+    <script>
+      window.codySettings = {
+        widget_id: 'a0273a0d-bd73-4772-b4e6-aaf5cb7c4aef',
+        base_url: 'https://getcody.ai'
+      };
+    </script>
+    <script src="https://trinketsofcody.com/cody-widget.js" async></script>
   </body>
 </html>

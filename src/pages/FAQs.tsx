@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -231,44 +232,38 @@ const FAQs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BizHealth.ai FAQs | SMB Health Answers 2025</title>
-        <meta 
-          name="description" 
-          content="Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Trusted insights for growth." 
-        />
-        <meta name="keywords" content="BizHealth FAQs, SMB business health, business assessment questions, business performance platform" />
-        <link rel="canonical" href="https://bizhealth.ai/faqs" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="BizHealth.ai FAQs | SMB Health Answers 2025" />
-        <meta property="og:description" content="Get quick answers to your SMB health questions with BizHealth.ai's FAQs. Trusted insights for growth." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bizhealth.ai/faqs" />
-        
-        {/* Schema.org markup for FAQs */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-        
-        {/* Add scroll padding for anchor links */}
-        <style>{`
+      <SEO 
+        title="BizHealth.ai FAQs | Small Business Health Answers 2025"
+        description="Get quick answers to your small business health questions with BizHealth.ai's FAQs. Trusted insights for growth."
+        keywords="BizHealth FAQs, small business health, business assessment questions, business performance platform"
+        canonical="https://bizhealth.ai/faqs"
+        ogImage="https://bizhealth.ai/og-images/og-faqs.jpg"
+      />
+      
+      {/* Schema.org markup for FAQs */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        })
+      }} />
+      
+      {/* Add scroll padding for anchor links */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
           html {
             scroll-padding-top: 180px;
           }
-        `}</style>
-      </Helmet>
+        `
+      }} />
 
       <PromotionalBanner />
       <GlobalNavigation />
@@ -690,6 +685,7 @@ const FAQs = () => {
         </p>
       </footer>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import { Button } from "@/components/ui/button";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
@@ -77,6 +78,7 @@ const SWOTAnalysisTool = () => {
         description="Conduct comprehensive SWOT analysis for your small business. Identify strengths, weaknesses, opportunities, and threats with our interactive strategic planning tool."
         keywords="SWOT analysis, business strategy, strategic planning, competitive analysis, business assessment, small business tools"
         canonical="https://bizhealth.ai/biztools/toolbox/swot-analysis-tool"
+        ogImage="https://bizhealth.ai/og-images/og-swot-tool.jpg"
       />
 
       <div className="min-h-screen flex flex-col bg-background">

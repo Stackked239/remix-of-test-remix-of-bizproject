@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
@@ -12,25 +13,26 @@ import cashFlowDefinition from "@/assets/cash-flow-definition-infographic.jpg";
 import businessChallenges from "@/assets/small-business-challenges-2025.png";
 import cashFlowKillers from "@/assets/cash-flow-killers-smb.jpg";
 import financialTips from "@/assets/financial-management-tips-smb.png";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const CashFlowCrisisManagement = () => {
   const navigate = useNavigate();
 
   const relatedArticles = [
     {
-      title: "SMB Cash Flow Hacks for 2025",
-      excerpt: "Discover proven strategies to optimize your cash flow and maintain healthy working capital.",
-      slug: "smb-cash-flow-hacks-2025",
+      title: "The Fractional CFO Toolkit: 7 Financial Dashboards Every SMB Needs",
+      excerpt: "Build the financial visibility system that fractional CFOs use to transform small business performance.",
+      slug: "fractional-cfo-toolkit",
       category: "Financial Management"
     },
     {
-      title: "2025 SMB Financial Trends",
-      excerpt: "Navigate the evolving financial landscape with insights on cash flow strategies and cost management.",
-      slug: "2025-smb-financial-trends",
-      category: "Financial Management"
+      title: "Stress-Test Your Pricing: A Framework for Margins and Cash Flow",
+      excerpt: "Learn how to evaluate and optimize your pricing strategy to protect margins and improve cash flow.",
+      slug: "stress-test-pricing-framework-margins-cash-flow",
+      category: "Business Strategy"
     },
     {
-      title: "Financial Health Metrics",
+      title: "Financial Health Metrics Every Business Owner Should Track",
       excerpt: "Master the key financial indicators that predict business success and sustainability.",
       slug: "financial-health-metrics",
       category: "Financial Management"
@@ -42,20 +44,21 @@ const CashFlowCrisisManagement = () => {
       <SEO 
         title="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025"
         description="Discover how to fix your cash flow management before it's too late. Learn digital transformation strategies, identify hidden cash flow killers, and implement proactive forecasting frameworks to achieve sustainable growth."
-        keywords="cash flow management small business, business cash flow 2025, SMB financial challenges, cash flow crisis, small business cash management, cash flow strategies, business financial health, working capital management, cash flow forecasting, SMB cash flow solutions"
+        keywords="cash flow management small business, business cash flow 2025, small business financial challenges, cash flow crisis, small business cash management, cash flow strategies, business financial health, working capital management, cash flow forecasting, small business cash flow solutions"
         canonical="https://bizhealth.ai/blog/cash-flow-crisis-management"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-cash-flow-crisis.jpg"
       />
       
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025—and How to Fix Your Cash Flow Before It's Too Late"
         description="Comprehensive guide to mastering cash flow management for small businesses in 2025, covering digital transformation strategies, hidden cash flow killers, and proactive forecasting frameworks."
         image={heroImage}
         datePublished="2025-11-03T00:00:00Z"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/cash-flow-crisis-management"
+        keywords={["cash flow management", "small business", "small business financial challenges", "cash flow crisis", "working capital management"]}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
@@ -96,6 +99,12 @@ const CashFlowCrisisManagement = () => {
                 <span>•</span>
                 <span>9 min read</span>
               </div>
+
+              <SocialShareButtons 
+                title="Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025"
+                description="Discover how to fix your cash flow management before it's too late."
+                className="mt-4"
+              />
             </div>
 
             {/* Hero Image */}
@@ -434,9 +443,8 @@ const CashFlowCrisisManagement = () => {
           </div>
 
           {/* Related Articles */}
-          <div className="mt-16 pt-8 border-t border-border">
-            <RelatedArticles articles={relatedArticles} />
-          </div>
+          <GradientDivider variant="green-gold" />
+          <RelatedArticles articles={relatedArticles} />
         </article>
 
         <GlobalFooter />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { 
   AlertTriangle, 
@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -168,25 +169,13 @@ const Legal = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Legal - BizHealth.ai | Privacy, Terms & Security</title>
-        <meta name="description" content="BizHealth.ai's legal hub: straightforward privacy policy, terms of service, security practices, and disclaimers. No legalese—just clear protection for your business." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://bizhealth.ai/legal" />
-        
-        <meta property="og:title" content="Legal - BizHealth.ai" />
-        <meta property="og:description" content="Transparent legal policies protecting your business data. SOC 2 compliant, GDPR ready." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bizhealth.ai/legal" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Legal - BizHealth.ai" />
-        <meta name="twitter:description" content="Transparent legal policies protecting your business data. SOC 2 compliant, GDPR ready." />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
-      </Helmet>
+      <SEO
+        title="Legal - BizHealth.ai | Privacy, Terms & Security"
+        description="BizHealth.ai's legal hub: straightforward privacy policy, terms of service, security practices, and disclaimers. No legalese—just clear protection for your business."
+        canonical="https://bizhealth.ai/legal"
+        ogImage="/og-images/og-homepage.jpg"
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
       <PromotionalBanner />
       <GlobalNavigation />
@@ -479,6 +468,7 @@ const Legal = () => {
         </section>
       </main>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

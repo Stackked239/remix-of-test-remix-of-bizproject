@@ -135,6 +135,7 @@ const CustomerJourneyMapsTool = () => {
         description="Create professional customer journey maps with our free tool. Drag-and-drop interface for mapping customer touchpoints, client journey stages, pain points & opportunities. Templates included for SMBs."
         keywords="customer journey, customer journey tool, journey map, client journey, customer journey map tool, customer journey mapping, journey map template, client journey map, customer experience visualization, touchpoint mapping, free journey map tool, small business customer journey, customer journey builder"
         canonical="https://bizhealth.ai/biztools/toolbox/customer-journey-maps-tool"
+        ogImage="https://bizhealth.ai/og-images/og-customer-journey.jpg"
       />
       <StructuredData
         type="service"

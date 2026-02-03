@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -216,23 +217,24 @@ const EmployeeRetentionLeadership = () => {
       <SEO
         title="Employee Retention & Company Culture: The Power of Day-to-Day Leadership"
         description="Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay."
-        keywords="employee retention strategies, company culture leadership, day-to-day leadership, employee engagement SMB, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies, employee loyalty, workforce development, talent management small business"
+        keywords="employee retention strategies, company culture leadership, day-to-day leadership, employee engagement small business, turnover reduction, retention culture, weekly one-on-ones, leadership micro-interactions, team retention, HR leadership strategies, employee loyalty, workforce development, talent management small business"
         canonical="https://bizhealth.ai/blog/employee-retention-company-culture-leadership"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/employee-retention-day-to-day-leadership-culture.jpg"
+        ogImage="/og-images/og-employee-retention-leadership.jpg"
         articlePublishedTime="2025-12-30T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Employee Retention, Company Culture, and the Underrated Power of Day-to-Day Leadership"
         description="Learn why employee retention is a leadership problem, not an HR problem. Master the 3 foundations of retention culture—clarity, connection, capability—and build teams that stay."
-        image="https://bizhealth.ai/assets/employee-retention-day-to-day-leadership-culture.jpg"
+        image="https://bizhealth.ai/og-images/og-employee-retention-leadership.jpg"
         datePublished="2025-12-30"
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/employee-retention-company-culture-leadership"
+        keywords={["employee retention", "company culture", "day-to-day leadership", "team retention", "leadership culture"]}
       />
       
       <GlobalNavigation />
@@ -838,6 +840,8 @@ const EmployeeRetentionLeadership = () => {
         </div>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
             <RelatedArticles 
@@ -852,6 +856,7 @@ const EmployeeRetentionLeadership = () => {
       </article>
       
       <PromotionalBanner />
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

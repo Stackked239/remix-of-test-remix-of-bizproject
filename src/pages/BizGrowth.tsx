@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, GraduationCap } from "lucide-react";
+import { ArrowRight, TrendingUp, BookOpen, Users, Target, CheckCircle, Play, GraduationCap, FileText, BarChart3, DollarSign, Eye } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 
 const BizGrowth = () => {
   const [countdown, setCountdown] = useState("");
@@ -89,6 +93,30 @@ const BizGrowth = () => {
     }
   ];
 
+  const playbooks = [
+    {
+      icon: Eye,
+      title: "Vision Alignment Playbook",
+      description: "7-step guide to build, communicate, and align your business vision across your organization.",
+      url: "/bizgrowth/vision-playbook",
+      badge: "FREE"
+    },
+    {
+      icon: DollarSign,
+      title: "Breaking Peaks & Valleys",
+      description: "7-step framework to break the feast-or-famine cycle and build stable cash flow.",
+      url: "/bizgrowth/financials/breaking-peaks-valleys-cycle",
+      badge: "FREE"
+    },
+    {
+      icon: BarChart3,
+      title: "Business Intelligence Builder",
+      description: "5-step playbook to build a practical BI system with KPIs, dashboards, and data-driven insights.",
+      url: "/bizgrowth/growth/business-intelligence-builder",
+      badge: "FREE"
+    }
+  ];
+
   const stats = [
     { number: "500+", label: "Business Leaders Trained" },
     { number: "25%", label: "Average Revenue Increase" },
@@ -98,6 +126,21 @@ const BizGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="BizGrowth Academy - Strategic Business Education"
+        description="Master strategic business advancement with comprehensive educational programs. Learn from industry veterans and earn certifications that demonstrate your expertise in sustainable business growth."
+        keywords="business education, strategic growth, business courses, leadership training, SMB academy, business certification"
+        canonical="https://bizhealth.ai/bizgrowth"
+        ogImage="https://bizhealth.ai/og-images/og-bizgrowth.jpg"
+      />
+      <StructuredData 
+        type="service"
+        name="BizGrowth Academy"
+        description="Strategic business education and advancement programs for SMB leaders"
+        provider="BizHealth.ai"
+        areaServed="United States"
+        url="https://bizhealth.ai/bizgrowth"
+      />
       <PromotionalBanner />
       
       {/* Sticky Banner - positioned below header and nav bar */}
@@ -261,6 +304,55 @@ const BizGrowth = () => {
         </div>
       </section>
 
+      {/* Free Playbooks Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-biz-citrine/10 px-4 py-2 rounded-full mb-6">
+              <FileText className="w-5 h-5 text-biz-citrine" />
+              <span className="text-biz-citrine font-montserrat font-semibold text-sm">FREE RESOURCES</span>
+            </div>
+            <h3 className="text-3xl font-bold mb-6 text-foreground font-montserrat">
+              Free Strategic Playbooks
+            </h3>
+            <p className="text-lg text-muted-foreground font-open-sans max-w-2xl mx-auto">
+              Actionable frameworks you can implement today—no enrollment required
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {playbooks.map((playbook, index) => (
+              <Card key={index} className="border-border/50 shadow-card hover:shadow-hub-citrine/20 transition-all duration-300 group">
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="bg-biz-citrine/10 rounded-xl p-3">
+                      <playbook.icon className="w-6 h-6 text-biz-citrine" />
+                    </div>
+                    <div className="bg-biz-green/10 px-3 py-1 rounded-full">
+                      <span className="text-biz-green font-montserrat font-bold text-xs">{playbook.badge}</span>
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg font-montserrat text-foreground">
+                    {playbook.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="font-open-sans leading-relaxed mb-6">
+                    {playbook.description}
+                  </CardDescription>
+                  <Link to={playbook.url}>
+                    <Button className="w-full bg-biz-navy hover:bg-biz-navy/90 text-white font-montserrat group-hover:bg-biz-citrine group-hover:text-biz-navy transition-colors">
+                      Get Free Playbook
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Membership Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
@@ -350,6 +442,7 @@ const BizGrowth = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <EmailCapturePopup hubColor="biz-growth" />
     </div>

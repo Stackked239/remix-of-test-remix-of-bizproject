@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import RelatedArticles from '@/components/RelatedArticles';
+import BlogHeroSectionEnhanced from '@/components/BlogHeroSectionEnhanced';
 import heroImage from '@/assets/information-overload-business-leader.jpg';
-import authorIcon from '@/assets/bizhealth-author-icon.jpg';
 
 const ImpactOverInformation = () => {
   const publishDate = '2025-10-21';
@@ -17,19 +17,19 @@ const ImpactOverInformation = () => {
   return (
     <>
       <SEO
-        title="The Pitfall of Information Overload: Why General Advice Falls Short for SMBs"
-        description="Discover why generic business advice fails SMBs and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth."
-        keywords="business health diagnostics, SMB business assessment, operational assessment, AI business analysis, SMB growth strategies, business evaluation tools, data-driven insights, business intelligence for SMBs"
+        title="The Pitfall of Information Overload: Why General Advice Falls Short for Small Business"
+        description="Discover why generic business advice fails small businesses and how AI-powered business health diagnostics deliver actionable insights for operational excellence and sustainable growth."
+        keywords="business health diagnostics, small business assessment, operational assessment, AI business analysis, small business growth strategies, business evaluation tools, data-driven insights, business intelligence for small business"
         canonical={articleUrl}
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-impact-over-information.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth Research Team"
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Pitfall of Information Overload: Why General Advice Falls Short"
         description="In today's data-saturated world, SMB leaders are bombarded with generic guidance that lacks specificity. Learn how AI-powered business health diagnostics can transform your business with actionable insights."
         image={heroImage}
@@ -37,78 +37,30 @@ const ImpactOverInformation = () => {
         dateModified={modifiedDate}
         author="BizHealth Research Team"
         url={articleUrl}
+        keywords={["business health diagnostics", "small business assessment", "operational assessment", "AI business analysis", "small business growth strategies"]}
       />
 
       <div className="min-h-screen bg-background">
         <PromotionalBanner />
         <GlobalNavigation />
 
-        {/* Hero Section */}
-        <section className="relative pt-40 pb-16 bg-muted">
+        <BlogHeroSectionEnhanced
+          title="The Pitfall of Information Overload: Why General Advice Falls Short"
+          author="BizHealth Research Team"
+          publishDate="October 21, 2025"
+          readTime="9 min read"
+          heroImage={heroImage}
+          heroImageAlt="Frustrated business leader overwhelmed by information overload and generic business advice strategies"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+          ]}
+          shareDescription="Discover why generic business advice fails SMBs and how AI-powered business health diagnostics deliver actionable insights."
+        />
+
+        {/* Article Content */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Blog
-            </Link>
-
             <div className="max-w-4xl mx-auto">
-              {/* Category Badge */}
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full">
-                  Business Strategy
-                </span>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                The Pitfall of Information Overload: Why General Advice Falls Short
-              </h1>
-
-              {/* Meta Information */}
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  <span className="text-sm">BizHealth Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  <time dateTime={publishDate} className="text-sm">October 21, 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
-                  <span className="text-sm">9 min read</span>
-                </div>
-              </div>
-
-              {/* Author Expertise Note */}
-              <div className="mb-8 p-4 bg-muted/50 rounded-lg border border-border">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
-                    <img src={authorIcon} alt="BizHealth Research Team" className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-foreground mb-1">About the Authors</h4>
-                    <p className="text-sm text-muted-foreground">
-                      The BizHealth Research Team combines decades of expertise in business ownership, consulting, development, and strategic planning, specializing in SMB operational excellence and AI-driven business intelligence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Hero Image */}
-              <div className="relative aspect-video rounded-xl overflow-hidden mb-12 shadow-2xl">
-                <img
-                  src={heroImage}
-                  alt="Frustrated business leader overwhelmed by information overload and generic business advice strategies"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              </div>
-
-              {/* Article Content */}
               <article className="prose prose-lg max-w-none">
                 <p className="text-xl leading-relaxed mb-6">
                   In today's data-saturated world, SMB leaders are bombarded with "one-size-fits-all" guidance: "Optimize your supply chain" or "Boost customer retention." While well-intentioned, this generic info lacks the specificity to address your business's quirks—be it a niche retail operation in Chicago or a tech startup in Sydney. Result? You read, nod, and file it away, but nothing changes. Studies show that 70% of SMBs cite <Link to="/blog/financial-health-metrics" className="text-primary hover:underline">cash flow and operational gaps</Link> as top challenges, yet broad advice rarely equips you to tackle them head-on.
@@ -211,33 +163,31 @@ const ImpactOverInformation = () => {
         </section>
 
         {/* Related Articles */}
-        <section className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <RelatedArticles
-              articles={[
-                {
-                  title: "AI-Powered Business Analytics: The Future of SMB Intelligence",
-                  slug: "ai-business-analytics",
-                  category: "Technology",
-                  excerpt: "Discover how AI is revolutionizing business analytics for small and mid-sized businesses."
-                },
-                {
-                  title: "Essential Financial Health Metrics Every SMB Should Track",
-                  slug: "financial-health-metrics",
-                  category: "Financial Management",
-                  excerpt: "Learn the key financial metrics that indicate your business's health and growth potential."
-                },
-                {
-                  title: "The Complete Guide to Business Intelligence ROI for SMBs",
-                  slug: "business-intelligence-roi",
-                  category: "Business Intelligence",
-                  excerpt: "Understand how to measure and maximize the ROI of your business intelligence investments."
-                }
-              ]}
-            />
-          </div>
-        </section>
+        <GradientDivider variant="green-gold" />
+        <RelatedArticles
+          articles={[
+            {
+              title: "AI-Powered Business Analytics: The Future of SMB Intelligence",
+              slug: "ai-business-analytics",
+              category: "Technology",
+              excerpt: "Discover how AI is revolutionizing business analytics for small and mid-sized businesses."
+            },
+            {
+              title: "Essential Financial Health Metrics Every SMB Should Track",
+              slug: "financial-health-metrics",
+              category: "Financial Management",
+              excerpt: "Learn the key financial metrics that indicate your business's health and growth potential."
+            },
+            {
+              title: "The Complete Guide to Business Intelligence ROI for SMBs",
+              slug: "business-intelligence-roi",
+              category: "Business Intelligence",
+              excerpt: "Understand how to measure and maximize the ROI of your business intelligence investments."
+            }
+          ]}
+        />
 
+        <GlobalFooter />
         <GlobalFooter />
       </div>
     </>

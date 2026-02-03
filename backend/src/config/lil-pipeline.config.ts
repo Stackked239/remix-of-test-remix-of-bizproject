@@ -108,7 +108,7 @@ export const LIL_PIPELINE_CONFIG = {
   },
   
   aiConfig: {
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-opus-4-5-20251101',
     maxTokensPhase1: 3000,
     maxTokensPhase1_5: 2500,
     maxTokensPhase4_5: 500,

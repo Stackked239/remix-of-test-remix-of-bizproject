@@ -90,9 +90,11 @@ import exponentialPowerEmpowermentImage from "@/assets/images/exponential-power-
 import employeeTurnoverMirrorImage from "@/assets/images/employee-turnover-mirror-hero.jpg";
 import nepotismFavoritism from "@/assets/images/nepotism-favoritism-business.jpg";
 import schedulingFlexibilityImage from "@/assets/images/scheduling-flexibility-costing-you-hero.jpg";
+import commodityTrapImage from "@/assets/images/commodity-trap-price-competition-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/commodity-trap-price-competition": commodityTrapImage,
   "/blog/scheduling-flexibility-costing-you": schedulingFlexibilityImage,
   "/blog/nepotism-favoritism-destroying-business": nepotismFavoritism,
   "/blog/employee-turnover-starts-in-the-mirror": employeeTurnoverMirrorImage,

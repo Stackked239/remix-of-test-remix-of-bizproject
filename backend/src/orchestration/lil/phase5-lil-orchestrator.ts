@@ -788,9 +788,14 @@ async function generateReport(
   }));
 
   // Build comprehensive prompt with BizHealth voice
+  const companyNameExact = businessOverview.companyName || 'the company';
   const prompt = `You are BizHealth.ai's senior business consultant and report architect.
 
-Generate a professional \${config.title} for \${businessOverview.companyName || 'the company'}.
+Generate a professional \${config.title} for \${companyNameExact}.
+
+## CRITICAL: COMPANY NAME REQUIREMENT
+The company name is EXACTLY: "\${companyNameExact}"
+You MUST use this EXACT company name throughout the report. Do NOT change, abbreviate, or modify it in any way.
 
 ## REPORT SPECIFICATIONS
 - Target Audience: \${config.audience}
@@ -804,6 +809,7 @@ Generate a professional \${config.title} for \${businessOverview.companyName || 
 - Provide actionable recommendations with clear priorities
 - Be direct about issues while maintaining a constructive tone
 - Reference the 30-60-90 day timeline for actions
+- ALWAYS use the exact company name "\${companyNameExact}" - never abbreviate or modify it
 
 ## COMPANY CONTEXT
 \${JSON.stringify(idmOutput.companyProfile, null, 2)}

@@ -349,7 +349,7 @@ const Portal = () => {
                   onClick={() => navigate('/questionnaire')}
                 >
                   Start Now
-                  <Zap className="h-4 w-4 ml-2" />
+                  <img src="/favicon.svg" alt="" className="h-4 w-4 ml-2" />
                 </Button>
               </div>
             </div>

@@ -7,16 +7,23 @@ import GlobalFooter from '@/components/GlobalFooter';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  CheckCircle, 
-  ArrowRight, 
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import {
+  CheckCircle,
+  ArrowRight,
   Loader2,
   PartyPopper,
   ClipboardList,
   Clock,
   Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  AlertCircle,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useToast } from '@/hooks/use-toast';
 
 // Tier configuration
 const TIER_CONFIG = {
@@ -52,12 +59,25 @@ const TIER_CONFIG = {
 };
 
 const CheckoutSuccess = () => {
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, signUp } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { toast } = useToast();
+
   const [isVerifying, setIsVerifying] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
   const [purchasedTier, setPurchasedTier] = useState<string>('growth');
+  const [paymentAmount, setPaymentAmount] = useState<number>(0);
+  const [stripeSessionId, setStripeSessionId] = useState<string>('');
+
+  // Guest account creation state
+  const [isGuestCheckout, setIsGuestCheckout] = useState(false);
+  const [guestEmail, setGuestEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isCreatingAccount, setIsCreatingAccount] = useState(false);
+  const [accountError, setAccountError] = useState('');
 
   const sessionId = searchParams.get('session_id');
   const tierFromUrl = searchParams.get('tier');
@@ -76,8 +96,9 @@ const CheckoutSuccess = () => {
 
   useEffect(() => {
     const verifyPayment = async () => {
-      if (!sessionId || !user) {
+      if (!sessionId) {
         setIsVerifying(false);
+        setIsVerified(false);
         return;
       }
 
@@ -86,7 +107,7 @@ const CheckoutSuccess = () => {
         const { data, error } = await supabase.functions.invoke('verify-payment', {
           body: {
             session_id: sessionId,
-            user_id: user.id,
+            user_id: user?.id || null,
           },
         });
 
@@ -94,37 +115,45 @@ const CheckoutSuccess = () => {
 
         if (data.verified) {
           setIsVerified(true);
-          
+
           // Get the tier from the payment data or URL
           const tier = data.product_id || tierFromUrl || 'growth';
           setPurchasedTier(tier);
-          
-          // Create or update order record with tier info
-          await supabase
-            .from('orders')
-            .upsert({
-              user_id: user.id,
-              stripe_session_id: sessionId,
-              status: 'completed',
-              amount: data.amount,
-              product_id: tier,
-              plan_type: tier,
-              completed_at: new Date().toISOString(),
-            }, {
-              onConflict: 'stripe_session_id',
-            });
+          setPaymentAmount(data.amount || 0);
+          setStripeSessionId(sessionId);
 
-          // Also update user's profile with their purchased plan
-          await supabase
-            .from('profiles')
-            .upsert({
-              id: user.id,
-              plan_type: tier,
-              has_paid: true,
-              updated_at: new Date().toISOString(),
-            }, {
-              onConflict: 'id',
-            });
+          // Check if this was a guest checkout
+          if (data.is_guest) {
+            setIsGuestCheckout(true);
+            setGuestEmail(data.customer_email || '');
+          } else if (user) {
+            // Logged-in user - create order immediately
+            await supabase
+              .from('orders')
+              .upsert({
+                user_id: user.id,
+                stripe_session_id: sessionId,
+                status: 'completed',
+                amount: data.amount,
+                product_id: tier,
+                plan_type: tier,
+                completed_at: new Date().toISOString(),
+              }, {
+                onConflict: 'stripe_session_id',
+              });
+
+            // Also update user's profile with their purchased plan
+            await supabase
+              .from('profiles')
+              .upsert({
+                id: user.id,
+                plan_type: tier,
+                has_paid: true,
+                updated_at: new Date().toISOString(),
+              }, {
+                onConflict: 'id',
+              });
+          }
         }
       } catch (error) {
         console.error('Payment verification error:', error);
@@ -135,12 +164,10 @@ const CheckoutSuccess = () => {
       }
     };
 
-    if (user && sessionId) {
+    // Verify payment for both logged-in users and guests
+    if (sessionId && (!authLoading || !user)) {
       verifyPayment();
-    } else if (!authLoading && !user) {
-      setIsVerifying(false);
     } else if (!sessionId) {
-      // No session ID means no valid checkout - do NOT grant access
       setIsVerifying(false);
       setIsVerified(false);
     }
@@ -148,6 +175,92 @@ const CheckoutSuccess = () => {
 
   const handleStartAssessment = () => {
     navigate(tierConfig.questionnaireUrl);
+  };
+
+  // Handle guest account creation
+  const handleCreateAccount = async () => {
+    setAccountError('');
+
+    // Validate password
+    if (password.length < 8) {
+      setAccountError('Password must be at least 8 characters');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setAccountError('Passwords do not match');
+      return;
+    }
+
+    setIsCreatingAccount(true);
+
+    try {
+      // Create the account using Supabase Auth
+      const { error: signUpError } = await signUp(guestEmail, password, {
+        first_name: '',
+        last_name: '',
+      });
+
+      if (signUpError) {
+        // Check for specific error types
+        if (signUpError.message?.includes('already registered')) {
+          setAccountError('An account with this email already exists. Please log in instead.');
+          return;
+        }
+        throw signUpError;
+      }
+
+      // Wait a moment for the auth state to update
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Get the newly created user
+      const { data: { user: newUser } } = await supabase.auth.getUser();
+
+      if (newUser) {
+        // Create the order record linked to the new user
+        await supabase
+          .from('orders')
+          .upsert({
+            user_id: newUser.id,
+            stripe_session_id: stripeSessionId,
+            status: 'completed',
+            amount: paymentAmount,
+            product_id: purchasedTier,
+            plan_type: purchasedTier,
+            completed_at: new Date().toISOString(),
+          }, {
+            onConflict: 'stripe_session_id',
+          });
+
+        // Update the user's profile
+        await supabase
+          .from('profiles')
+          .upsert({
+            id: newUser.id,
+            plan_type: purchasedTier,
+            has_paid: true,
+            updated_at: new Date().toISOString(),
+          }, {
+            onConflict: 'id',
+          });
+
+        toast({
+          title: 'Account created!',
+          description: 'Your account has been created successfully.',
+        });
+
+        // Mark as no longer guest checkout so the UI updates
+        setIsGuestCheckout(false);
+
+        // Navigate to the questionnaire
+        navigate(tierConfig.questionnaireUrl);
+      }
+    } catch (error: any) {
+      console.error('Account creation error:', error);
+      setAccountError(error.message || 'Failed to create account. Please try again.');
+    } finally {
+      setIsCreatingAccount(false);
+    }
   };
 
   if (authLoading || isVerifying) {
@@ -236,15 +349,137 @@ const CheckoutSuccess = () => {
     );
   }
 
+  // Guest checkout - show account creation form
+  if (isGuestCheckout && isVerified) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex flex-col">
+        <SEO
+          title="Create Your Account - BizHealth.ai"
+          description="Complete your account setup to access your assessment"
+          noindex={true}
+        />
+        <GlobalNavigation />
+
+        <main className="flex-1 container mx-auto px-4 py-12 pt-24">
+          <div className="max-w-2xl mx-auto">
+            {/* Success + Account Creation Card */}
+            <Card className="shadow-elegant">
+              <CardHeader className="pb-4 text-center">
+                <div className="mx-auto mb-4 p-4 bg-green-100 rounded-full w-fit">
+                  <CheckCircle className="h-16 w-16 text-green-600" />
+                </div>
+                <CardTitle className="text-3xl font-montserrat text-biz-navy">
+                  Payment Successful!
+                </CardTitle>
+                <p className="text-biz-grey mt-2">
+                  One more step — create a password to access your {tierConfig.name} Assessment
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Email Display */}
+                <div className="space-y-2">
+                  <Label>Email Address</Label>
+                  <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-md">
+                    <Mail className="h-4 w-4 text-biz-grey" />
+                    <span className="text-biz-navy font-medium">{guestEmail}</span>
+                    <CheckCircle className="h-4 w-4 text-green-500 ml-auto" />
+                  </div>
+                </div>
+
+                {/* Password Fields */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="password">Create Password</Label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-biz-grey" />
+                      <Input
+                        id="password"
+                        type={showPassword ? 'text' : 'password'}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="At least 8 characters"
+                        className="pl-10 pr-10"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-biz-grey hover:text-biz-navy"
+                      >
+                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="confirmPassword">Confirm Password</Label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-biz-grey" />
+                      <Input
+                        id="confirmPassword"
+                        type={showPassword ? 'text' : 'password'}
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        placeholder="Confirm your password"
+                        className="pl-10"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Error Message */}
+                {accountError && (
+                  <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-md text-red-700">
+                    <AlertCircle className="h-4 w-4 flex-shrink-0" />
+                    <span className="text-sm">{accountError}</span>
+                  </div>
+                )}
+
+                {/* Create Account Button */}
+                <Button
+                  size="lg"
+                  className="w-full bg-biz-green hover:bg-biz-green/90"
+                  onClick={handleCreateAccount}
+                  disabled={isCreatingAccount || !password || !confirmPassword}
+                >
+                  {isCreatingAccount ? (
+                    <>
+                      <Loader2 className="h-5 w-5 animate-spin mr-2" />
+                      Creating Account...
+                    </>
+                  ) : (
+                    <>
+                      Create Account & Start Assessment
+                      <ArrowRight className="h-5 w-5 ml-2" />
+                    </>
+                  )}
+                </Button>
+
+                {/* Info */}
+                <p className="text-xs text-center text-biz-grey">
+                  By creating an account, you agree to our{' '}
+                  <a href="/terms" className="underline hover:text-biz-navy">Terms of Service</a>
+                  {' '}and{' '}
+                  <a href="/privacy-policy" className="underline hover:text-biz-navy">Privacy Policy</a>.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </main>
+
+        <GlobalFooter />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex flex-col">
-      <SEO 
-        title="Payment Successful - BizHealth.ai" 
+      <SEO
+        title="Payment Successful - BizHealth.ai"
         description="Your payment was successful"
         noindex={true}
       />
       <GlobalNavigation />
-      
+
       <main className="flex-1 container mx-auto px-4 py-12 pt-24">
         <div className="max-w-2xl mx-auto">
           {/* Success Card */}
@@ -273,7 +508,7 @@ const CheckoutSuccess = () => {
                   <ClipboardList className="h-5 w-5" />
                   Next Steps
                 </h3>
-                
+
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">1</span>
@@ -284,7 +519,7 @@ const CheckoutSuccess = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">2</span>
                     <div>
@@ -294,7 +529,7 @@ const CheckoutSuccess = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-biz-green text-white flex items-center justify-center text-sm font-bold">3</span>
                     <div>

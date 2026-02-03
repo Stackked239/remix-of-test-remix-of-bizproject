@@ -22,6 +22,7 @@ import {
   Zap,
   FileText,
   BarChart3,
+  Mail,
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { loadStripe } from '@stripe/stripe-js';
@@ -138,13 +139,14 @@ const Checkout = () => {
   const [promoCode, setPromoCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const [promoApplied, setPromoApplied] = useState(false);
+  const [guestEmail, setGuestEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
 
-  // Redirect if not logged in
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/login', { state: { from: `/checkout?product=${productId}` } });
-    }
-  }, [user, authLoading, navigate, productId]);
+  // Validate email format
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
 
   // Apply promo code
   const handleApplyPromo = async () => {
@@ -176,22 +178,32 @@ const Checkout = () => {
 
   // Handle checkout
   const handleCheckout = async () => {
+    // For guest users, validate email
     if (!user) {
-      navigate('/login', { state: { from: `/checkout?product=${productId}` } });
-      return;
+      if (!guestEmail.trim()) {
+        setEmailError('Email is required');
+        return;
+      }
+      if (!validateEmail(guestEmail)) {
+        setEmailError('Please enter a valid email address');
+        return;
+      }
+      setEmailError('');
     }
 
     setIsProcessing(true);
 
     try {
       // Create checkout session via Supabase Edge Function
+      // Works for both logged-in users and guests
       const { data, error } = await supabase.functions.invoke('create-checkout-session', {
         body: {
           product_id: productId,
-          user_id: user.id,
-          user_email: user.email,
+          user_id: user?.id || null, // null for guest checkout
+          user_email: user?.email || guestEmail,
+          is_guest: !user,
           promo_code: promoApplied ? promoCode : null,
-          success_url: `${window.location.origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+          success_url: `${window.location.origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}&tier=${productId}`,
           cancel_url: `${window.location.origin}/checkout?product=${productId}`,
         },
       });
@@ -222,7 +234,9 @@ const Checkout = () => {
 
   const finalPrice = product.price - discount;
 
-  if (authLoading) {
+  // Only show loading if actively checking auth status
+  // Don't block the page for guests
+  if (authLoading && !guestEmail) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Loader2 className="h-12 w-12 animate-spin text-biz-green" />
@@ -356,6 +370,42 @@ const Checkout = () => {
                       <span className="text-biz-navy">${finalPrice}</span>
                     </div>
                   </div>
+
+                  {/* Guest Email - only show if not logged in */}
+                  {!user && (
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={guestEmail}
+                        onChange={(e) => {
+                          setGuestEmail(e.target.value);
+                          setEmailError('');
+                        }}
+                        placeholder="your@email.com"
+                        className={emailError ? 'border-red-500' : ''}
+                      />
+                      {emailError && (
+                        <p className="text-sm text-red-500">{emailError}</p>
+                      )}
+                      <p className="text-xs text-biz-grey">
+                        You'll create your account password after purchase
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Logged in user email display */}
+                  {user && (
+                    <div className="space-y-2">
+                      <Label>Email Address</Label>
+                      <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-md">
+                        <Mail className="h-4 w-4 text-biz-grey" />
+                        <span className="text-sm text-biz-grey">{user.email}</span>
+                        <CheckCircle className="h-4 w-4 text-green-500 ml-auto" />
+                      </div>
+                    </div>
+                  )}
 
                   {/* Promo Code */}
                   <div className="space-y-2">

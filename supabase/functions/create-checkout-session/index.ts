@@ -52,14 +52,19 @@ serve(async (req) => {
   }
 
   try {
-    const { 
-      product_id, 
-      user_id, 
-      user_email, 
+    const {
+      product_id,
+      user_id, // Can be null for guest checkout
+      user_email,
+      is_guest,
       promo_code,
-      success_url, 
-      cancel_url 
+      success_url,
+      cancel_url
     } = await req.json();
+
+    if (!user_email) {
+      throw new Error('Email is required');
+    }
 
     // Validate product
     const product = PRODUCTS[product_id];
@@ -102,9 +107,11 @@ serve(async (req) => {
       cancel_url: cancel_url,
       customer_email: user_email,
       metadata: {
-        user_id: user_id,
+        user_id: user_id || '',
         product_id: product_id,
         promo_code: promo_code || '',
+        is_guest: is_guest ? 'true' : 'false',
+        guest_email: is_guest ? user_email : '',
       },
       // Enable automatic tax calculation if needed
       // automatic_tax: { enabled: true },

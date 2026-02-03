@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
 import { ArrowLeft, Calendar, Clock, User, DollarSign, Users, TrendingUp, Shield, AlertTriangle, CheckCircle2 } from 'lucide-react';
-import heroImage from '@/assets/financial-stewardship-team-responsibility-smb.png';
+import heroImage from '@/assets/financial-stewardship-team-responsibility-smb-optimized.jpg';
 
 const FinancialStewardshipEveryonesResponsibility = () => {
   const publishDate = "2025-12-09";
@@ -18,25 +19,26 @@ const FinancialStewardshipEveryonesResponsibility = () => {
     <>
       <SEO
         title="Financial Stewardship: Everyone's Responsibility in Your Small Business | BizHealth.ai"
-        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability in 2025."
-        keywords="financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, SMB finance tips, business financial health, financial awareness employees, cost management team, budget responsibility, financial literacy workplace"
+        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for small business financial accountability in 2025."
+        keywords="financial stewardship, small business finance, employee financial responsibility, cash flow management, team accountability, financial culture, small business finance tips, business financial health, financial awareness employees, cost management team, budget responsibility, financial literacy workplace"
         canonical="https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-financial-stewardship.jpg"
+        ogImage="/og-images/og-financial-stewardship.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Financial Stewardship: Everyone's Responsibility in Your Small Business"
-        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for SMB financial accountability in 2025."
+        description="Discover how to build a culture of financial stewardship where every employee contributes to cash flow health. Learn 7 proven strategies for small business financial accountability in 2025."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-financial-stewardship.jpg"
+        image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/financial-stewardship-everyones-responsibility"
+        keywords={["financial stewardship", "small business finance", "employee financial responsibility", "cash flow management", "team accountability"]}
       />
 
       <GlobalNavigation />
@@ -510,6 +512,7 @@ const FinancialStewardshipEveryonesResponsibility = () => {
         </div>
 
         {/* Internal Links Section */}
+        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={[
           {
             title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",
@@ -528,22 +531,11 @@ const FinancialStewardshipEveryonesResponsibility = () => {
             slug: "financial-health-metrics",
             category: "Financial Management",
             excerpt: "A comprehensive guide to the key financial indicators for business performance."
-          },
-          {
-            title: "How Small Businesses Can Scale Operations Without Losing Control",
-            slug: "scaling-operations-without-losing-control",
-            category: "Operations",
-            excerpt: "Learn the SCALE framework and build operational architecture for controlled expansion."
-          },
-          {
-            title: "Identifying Small & Mid-Size Business Leadership Blind Spots",
-            slug: "identifying-smb-leadership-blind-spots",
-            category: "Business Leadership",
-            excerpt: "Discover the 7 critical leadership blind spots that prevent SMB success."
           }
         ]} />
       </article>
 
+      <GlobalFooter />
       <GlobalFooter />
       <PromotionalBanner />
     </>

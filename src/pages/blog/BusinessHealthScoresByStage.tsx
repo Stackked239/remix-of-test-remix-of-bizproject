@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -7,6 +8,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Calendar, Clock, User, Target, AlertTriangle, CheckCircle, TrendingUp, Shield, ArrowRight, BarChart3, DollarSign, Users, Settings, Database, Lightbulb, Rocket, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/business-health-scores-stages-survival-stability-scale-exit.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const StageCard = ({ 
   stage, 
@@ -235,23 +237,24 @@ const BusinessHealthScoresByStage = () => {
       <SEO
         title="Business Health Scores by Stage: Survival, Stability, Scale, Exit"
         description="Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!"
-        keywords="business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, SMB health assessment, business stage framework, company maturity model"
+        keywords="business health score, business growth stages, survival stage business, stability stage metrics, scale stage KPIs, exit readiness, business valuation, small business health assessment, business stage framework, company maturity model"
         canonical="https://bizhealth.ai/blog/business-health-scores-by-stage"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-health-scores-stages-survival-stability-scale-exit.jpg"
+        ogImage="/og-images/og-business-health-scores-stages.jpg"
         articlePublishedTime="2025-12-29T00:00:00Z"
         articleModifiedTime="2025-12-29T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="What Your Business Health Score(s) Should Look Like at Each Stage: Survival, Stability, Scale, and Exit"
         description="Learn what healthy business scores look like at each growth stage. Master the metrics for Survival, Stability, Scale, and Exit—unlock stage-appropriate priorities now!"
-        image="https://bizhealth.ai/assets/business-health-scores-stages-survival-stability-scale-exit.jpg"
+        image="https://bizhealth.ai/og-images/og-business-health-scores-stages.jpg"
         datePublished="2025-12-29"
         dateModified="2025-12-29"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/business-health-scores-by-stage"
+        keywords={["business health score", "business growth stages", "survival stage business", "stability stage metrics", "exit readiness"]}
       />
       
       <GlobalNavigation />
@@ -299,11 +302,17 @@ const BusinessHealthScoresByStage = () => {
                   <Calendar className="w-4 h-4" />
                   December 29, 2025
                 </span>
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  15 min read
-                </span>
-              </div>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                15 min read
+              </span>
+            </div>
+            
+            <SocialShareButtons 
+              title="What Your Business Health Score Should Look Like at Each Stage: Survival, Stability, Scale, Exit"
+              description="Learn what healthy business scores look like at each growth stage."
+              className="mb-8"
+            />
               
               {/* Hero image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -929,6 +938,8 @@ const BusinessHealthScoresByStage = () => {
         </div>
         
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <RelatedArticles
@@ -957,6 +968,7 @@ const BusinessHealthScoresByStage = () => {
         </div>
       </article>
       
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

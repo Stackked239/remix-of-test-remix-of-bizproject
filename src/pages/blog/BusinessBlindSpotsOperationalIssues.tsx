@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -8,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, CheckSquare, AlertTriangle, DollarSign, Users, Cog, Tag, Database } from "lucide-react";
 import heroImage from "@/assets/business-blind-spots-operational-issues-leadership.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const BusinessBlindSpotsOperationalIssues = () => {
   const publishDate = "2025-12-28";
@@ -21,21 +23,22 @@ const BusinessBlindSpotsOperationalIssues = () => {
         keywords="business blind spots, operational issues leadership, hidden business inefficiencies, cash flow timing, inventory waste, knowledge silos, manual process inefficiencies, pricing margin leakage, technology bottlenecks, SMB operational audit, business visibility problem, leadership visibility, operational blind spots 2025"
         canonical="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-business-blind-spots.jpg"
+        ogImage="/og-images/og-business-blind-spots-operational.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
       
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
         description="Research reveals leaders have visibility into only 4% of operational issues. Learn the 6 blind spots costing SMBs $50K+ annually and systematic strategies to uncover hidden inefficiencies."
         author="BizHealth.ai Research Team"
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-business-blind-spots.jpg"
+        image="https://bizhealth.ai/og-images/og-business-blind-spots-operational.jpg"
         url="https://bizhealth.ai/blog/business-blind-spots-operational-issues-invisible-leadership"
+        keywords={["business blind spots", "operational issues leadership", "hidden business inefficiencies", "cash flow timing", "small business operational audit"]}
       />
       
       <PromotionalBanner />
@@ -83,6 +86,12 @@ const BusinessBlindSpotsOperationalIssues = () => {
               <span>16 min read</span>
             </div>
           </div>
+          
+          <SocialShareButtons 
+            title="The $50K Business Blind Spot: Why 96% of Operational Issues Are Invisible to Leadership"
+            description="Discover why leaders see only 4% of operational issues and learn systematic strategies to find them."
+            className="mb-8"
+          />
           
           {/* Hero Image */}
           <figure className="mb-12">
@@ -508,6 +517,8 @@ const BusinessBlindSpotsOperationalIssues = () => {
         </article>
         
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <RelatedArticles 
             articles={[
@@ -519,6 +530,7 @@ const BusinessBlindSpotsOperationalIssues = () => {
         </section>
       </main>
       
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

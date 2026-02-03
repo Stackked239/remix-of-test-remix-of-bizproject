@@ -1,10 +1,11 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/smb-scaling-paradox-2025.jpg";
 import scalingStrategiesImage from "@/assets/smb-scaling-strategies-uzio.jpg";
@@ -18,90 +19,50 @@ const SMBScalingParadox2025 = () => {
   return (
     <>
       <SEO 
-        title="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
-        description="Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
-        keywords="scaling small business, SMB growth strategy 2025, business scaling challenges, profitable scaling, small business health assessment, scaling SMB operations, sustainable business growth, decision-making frameworks, scaling paradox"
+        title="The Small Business Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
+        description="Discover why 60% of small businesses stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
+        keywords="scaling small business, small business growth strategy 2025, business scaling challenges, profitable scaling, small business health assessment, scaling small business operations, sustainable business growth, decision-making frameworks, scaling paradox"
         canonical="https://bizhealth.ai/blog/smb-scaling-paradox-2025"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/smb-scaling-paradox-2025.jpg"
+        ogImage="/og-images/og-scaling-paradox.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
       
       <StructuredData
-        type="article"
-        headline="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
-        description="Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
-        image="https://bizhealth.ai/assets/smb-scaling-paradox-2025.jpg"
+        type="blogPosting"
+        headline="The Small Business Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
+        description="Discover why 60% of small businesses stall post-year 3 due to rapid scaling. Learn profitable scaling strategies, decision frameworks, and how to avoid business scaling challenges in 2025."
+        image="/og-images/og-scaling-paradox.jpg"
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/smb-scaling-paradox-2025"
+        keywords={["scaling small business", "small business growth strategy 2025", "business scaling challenges", "profitable scaling", "sustainable business growth"]}
       />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
         
-        {/* Hero Section */}
-        <article className="pt-40 pb-16">
+        <BlogHeroSectionEnhanced
+          title="The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)"
+          author="BizHealth.ai Research Team"
+          publishDate="November 4, 2025"
+          readTime="10 min read"
+          heroImage={heroImage}
+          heroImageAlt="Modern commercial building representing scaling small business growth and SMB expansion strategy"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Risk Management", href: "/blog/risk-management" },
+            { label: "Growth & Scaling", href: "/blog/growth-scaling" },
+          ]}
+          shareDescription="Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks."
+        />
+
+        <article className="pb-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              {/* Breadcrumb */}
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Blog
-              </Link>
-              
-              {/* Category Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full font-medium">
-                  Business Strategy
-                </span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full font-medium">
-                  Risk Management
-                </span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full font-medium">
-                  Business Leadership
-                </span>
-              </div>
-              
-              {/* Article Title */}
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business (And What to Do Instead)
-              </h1>
-              
-              {/* Meta Information */}
-              <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8 pb-8 border-b">
-                <div className="flex items-center gap-2">
-                  <User className="w-5 h-5" />
-                  <span>BizHealth.ai Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  <time dateTime={publishDate}>November 4, 2025</time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  <span>10 min read</span>
-                </div>
-              </div>
-              
-              {/* Hero Image */}
-              <figure className="mb-12">
-                <img 
-                  src={heroImage} 
-                  alt="Modern green and white commercial building representing scaling small business growth and SMB expansion strategy with upward trending architecture"
-                  className="w-full rounded-xl shadow-elegant"
-                  loading="eager"
-                  width={1200}
-                  height={675}
-                />
-              </figure>
-              
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
                 {/* Introduction */}
@@ -449,6 +410,8 @@ const SMBScalingParadox2025 = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={[
           {
             title: "Strategic Planning for the Post-Pandemic Business Landscape",
@@ -470,6 +433,7 @@ const SMBScalingParadox2025 = () => {
           }
         ]} />
 
+        <GradientDivider />
         <GlobalFooter />
         <PromotionalBanner />
       </div>

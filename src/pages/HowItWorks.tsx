@@ -1,10 +1,12 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
 import { CheckCircle, BarChart3, FileText, Download, Zap, TrendingUp, Lock, Shield, Settings } from "lucide-react";
 import questionnaireImage from "@/assets/business-assessment-questionnaire.jpg";
 import aiAnalysisImage from "@/assets/ai-analysis-benchmarking-dashboard.jpg";
-import reportSampleImage from "@/assets/business-health-report-sample.png";
+import reportSampleImage from "@/assets/business-health-report-sample-new.jpg";
 
 const HowItWorks = () => {
   const steps = [
@@ -64,6 +66,13 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="How BizHealth.ai Works - 4-Step Assessment Process"
+        description="Learn how BizHealth.ai transforms your business insights into actionable growth strategies. Our proven 4-step process: assessment, AI analysis, insights, and action planning."
+        keywords="business health assessment, how it works, AI business analysis, business diagnostic process, SMB assessment"
+        canonical="https://bizhealth.ai/how-it-works"
+        ogImage="https://bizhealth.ai/og-images/og-how-it-works.jpg"
+      />
       <GlobalNavigation />
       
       {/* Hero Section */}
@@ -175,6 +184,9 @@ const HowItWorks = () => {
                       <img 
                         src={questionnaireImage} 
                         alt="BizHealth.ai business assessment questionnaire interface showing rating scale questions"
+                        width={288}
+                        height={400}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>
@@ -184,6 +196,9 @@ const HowItWorks = () => {
                       <img 
                         src={aiAnalysisImage} 
                         alt="BizHealth.ai AI analytics dashboard showing business metrics, financial health, and performance benchmarking"
+                        width={450}
+                        height={300}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>
@@ -193,6 +208,9 @@ const HowItWorks = () => {
                       <img 
                         src={reportSampleImage} 
                         alt="BizHealth.ai comprehensive business health assessment report showing key performance indicators and SWOT analysis"
+                        width={357}
+                        height={500}
+                        loading="lazy"
                         className="rounded-2xl shadow-elegant w-full"
                       />
                     </div>
@@ -208,11 +226,11 @@ const HowItWorks = () => {
       <section className="relative pt-10 pb-20 overflow-hidden bg-primary">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Stop Guessing About the Future of Your Business—
               <br />
               <span className="text-growth">Get Actionable Insights Today.</span>
-            </h1>
+            </h2>
             <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed animate-fade-in" style={{ fontFamily: 'Open Sans, sans-serif', animationDelay: '0.1s' }}>
               As a busy business leader facing cash flow hurdles, scaling roadblocks, and hidden risks, you deserve a fast, comprehensive assessment that uncovers opportunities in just 30-40 minutes.
             </p>
@@ -296,6 +314,7 @@ const HowItWorks = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

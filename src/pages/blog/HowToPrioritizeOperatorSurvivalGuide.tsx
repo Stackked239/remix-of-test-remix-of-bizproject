@@ -1,9 +1,11 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
+import BlogHeroImage from "@/components/BlogHeroImage";
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Lightbulb, CheckCircle2, TrendingUp, AlertCircle, Target, Users, Zap, Timer, BarChart3, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -48,14 +50,14 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
         keywords="solo entrepreneur prioritization, prioritization for solo operators, time management small business, delegation for solopreneurs, micro business productivity, entrepreneur survival guide, strategic work allocation, business time audit, automation for entrepreneurs 2025"
         canonical="https://bizhealth.ai/blog/how-to-prioritize-operator-survival-guide"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/how-to-prioritize-operator-survival-guide.jpg"
+        ogImage="/og-images/og-prioritize-survival.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor={author}
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Prioritize When There's No One to Delegate to: The Operator's Survival Guide"
         description="Master solo entrepreneur prioritization with this survival guide. Learn the Strategic-Essential-Noise framework, Leverage Hierarchy, and 90-day action plan to reclaim 8-10 hours weekly."
         author={author}
@@ -63,6 +65,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
         dateModified={modifiedDate}
         image="https://bizhealth.ai/assets/how-to-prioritize-operator-survival-guide.jpg"
         url="https://bizhealth.ai/blog/how-to-prioritize-operator-survival-guide"
+        keywords={["solo entrepreneur prioritization", "prioritization for solo operators", "time management small business", "micro business productivity", "entrepreneur survival guide"]}
       />
 
       <GlobalNavigation />
@@ -106,7 +109,14 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
               <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
-                    <img src={authorIcon} alt="BizHealth.ai Research Team" className="w-full h-full object-cover" />
+                    <img 
+                      src={authorIcon} 
+                      alt="BizHealth.ai Research Team" 
+                      width={40}
+                      height={40}
+                      loading="eager"
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                   <span className="font-medium text-foreground">{author}</span>
                 </div>
@@ -120,13 +130,11 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
                 </div>
               </div>
 
-              {/* Hero Image */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl mb-12 border border-border/50">
-                <img
+              {/* Hero Image - Optimized for LCP */}
+              <div className="mb-12">
+                <BlogHeroImage
                   src={heroImage}
                   alt="Solo entrepreneur working late at desk with laptop and notebook, prioritizing business tasks - operator survival guide for small business productivity"
-                  className="w-[90%] mx-auto h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -769,6 +777,7 @@ const HowToPrioritizeOperatorSurvivalGuide = () => {
             </div>
 
             {/* Related Articles */}
+            <GradientDivider variant="green-gold" />
             <RelatedArticles articles={relatedArticles} />
           </div>
         </div>

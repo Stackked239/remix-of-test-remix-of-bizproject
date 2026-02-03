@@ -62,6 +62,9 @@ const Pricing = () => {
                 <img 
                   src={bizhealthLogo} 
                   alt="BizHealth.ai" 
+                  width={180}
+                  height={48}
+                  loading="lazy"
                   className="h-12 w-auto object-contain"
                 />
               </div>

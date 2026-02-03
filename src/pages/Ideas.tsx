@@ -1,0 +1,66 @@
+import { useRef } from "react";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
+import PromotionalBanner from "@/components/PromotionalBanner";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
+import IdeasHero from "@/components/ideas/IdeasHero";
+import WhyInputMatters from "@/components/ideas/WhyInputMatters";
+import HowItWorks from "@/components/ideas/HowItWorks";
+import WhatWereLookingFor from "@/components/ideas/WhatWereLookingFor";
+import IdeaForm from "@/components/ideas/IdeaForm";
+import Testimonials from "@/components/ideas/Testimonials";
+import IdeasFAQ from "@/components/ideas/IdeasFAQ";
+import FooterCTA from "@/components/ideas/FooterCTA";
+
+const Ideas = () => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const scrollToForm = () => {
+    if (formRef.current) {
+      const navbarHeight = 120; // Account for navbar + banner
+      const elementPosition = formRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO
+        title="Submit Your Business Ideas | Help Us Help You Grow | BizHealth.ai"
+        description="Share your ideas for new business tools, resources, and content. BizHealth.ai listens to small business leaders like you to build what matters most. Submit your idea today."
+        keywords="small business tools, business health assessment, small business resources, business growth ideas, small business feedback, voice of customer, idea submission"
+        canonical="https://bizhealth.ai/ideas"
+        ogImage="/og-images/og-homepage.jpg"
+      />
+      <StructuredData type="organization" />
+      
+      <PromotionalBanner />
+      <GlobalNavigation />
+      
+      <main>
+        <IdeasHero onScrollToForm={scrollToForm} />
+        <WhyInputMatters />
+        <HowItWorks />
+        <WhatWereLookingFor />
+        <div ref={formRef}>
+          <IdeaForm />
+        </div>
+        <Testimonials />
+        <IdeasFAQ />
+        <FooterCTA />
+      </main>
+      
+      <GradientDivider variant="green-gold" />
+      <GlobalFooter />
+    </div>
+  );
+};
+
+export default Ideas;

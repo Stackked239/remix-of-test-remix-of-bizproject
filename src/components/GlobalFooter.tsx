@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, HelpCircle } from 'lucide-react';
+import { Mail, HelpCircle, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 import bizhealthLogo from '@/assets/bizhealth-logo-footer.png';
 import xLogo from '@/assets/x-logo.png';
 import linkedinLogo from '@/assets/linkedin-logo.png';
@@ -12,13 +13,32 @@ import facebookLogo from '@/assets/facebook-logo.png';
 
 const GlobalFooter = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const currentYear = new Date().getFullYear();
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('send-notification', {
+        body: {
+          type: 'popup_subscriber',
+          email: email,
+          source: 'footer_newsletter'
+        }
+      });
+
+      if (error) throw error;
+
       toast.success('Thank you for subscribing to our newsletter!');
       setEmail('');
+    } catch (error) {
+      console.error('Newsletter signup error:', error);
+      toast.error('Failed to subscribe. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -175,7 +195,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="LinkedIn Social Icon - Connect with BizHealth.ai"
                   >
-                    <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
+                    <img src={linkedinLogo} alt="LinkedIn" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://www.facebook.com/profile.php?id=61582021647636&sk=about" 
@@ -184,7 +204,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="Facebook Social Icon - Follow BizHealth.ai on Facebook"
                   >
-                    <img src={facebookLogo} alt="Facebook" className="w-6 h-6" />
+                    <img src={facebookLogo} alt="Facebook" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                   <a 
                     href="https://x.com/AscentSherpa" 
@@ -193,7 +213,7 @@ const GlobalFooter = () => {
                     className="hover:opacity-75 transition-all duration-300 hover:scale-110"
                     aria-label="X Social Icon - Follow AscentSherpa on X"
                   >
-                    <img src={xLogo} alt="X (formerly Twitter)" className="w-6 h-6" />
+                    <img src={xLogo} alt="X (formerly Twitter)" width={24} height={24} loading="lazy" className="w-6 h-6" />
                   </a>
                 </div>
 
@@ -216,10 +236,18 @@ const GlobalFooter = () => {
                     <div className="flex justify-center">
                       <Button 
                         type="submit"
+                        disabled={isSubmitting}
                         className="bg-biz-teal hover:bg-biz-teal/90 text-white font-open-sans px-6 md:px-8 transition-all duration-300 hover:shadow-lg"
                         aria-label="Subscribe to newsletter"
                       >
-                        Subscribe
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Subscribing...
+                          </>
+                        ) : (
+                          'Subscribe'
+                        )}
                       </Button>
                     </div>
                   </div>
@@ -280,7 +308,7 @@ const GlobalFooter = () => {
                     © {currentYear} Business Health Analyzer. All rights reserved.
                   </p>
                   <p className="text-xs text-biz-grey font-open-sans mt-1">
-                    Your Trusted Business Health Advisor - Stop Guessing, Start Growing
+                    Your Trusted Business Health Analyst - Stop Guessing, Start Growing
                   </p>
                 </div>
                 

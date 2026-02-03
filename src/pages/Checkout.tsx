@@ -11,10 +11,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { 
-  CheckCircle, 
-  Shield, 
-  Lock, 
+import {
+  CheckCircle,
+  Shield,
+  Lock,
   CreditCard,
   Loader2,
   ArrowRight,
@@ -124,7 +124,7 @@ const PRODUCTS = {
   },
 };
 
-const CheckoutNew = () => {
+const Checkout = () => {
   const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -232,13 +232,13 @@ const CheckoutNew = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex flex-col">
-      <SEO 
-        title="Checkout - BizHealth.ai" 
+      <SEO
+        title="Checkout - BizHealth.ai"
         description="Complete your purchase and start your business health assessment"
         noindex={true}
       />
       <GlobalNavigation />
-      
+
       <main className="flex-1 container mx-auto px-4 py-12 pt-24">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -368,8 +368,8 @@ const CheckoutNew = () => {
                         placeholder="Enter code"
                         disabled={promoApplied}
                       />
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         onClick={handleApplyPromo}
                         disabled={promoApplied || !promoCode.trim()}
                       >
@@ -440,17 +440,17 @@ const CheckoutNew = () => {
               ))}
             </div>
             <blockquote className="text-lg text-biz-grey italic mb-4">
-              "The BizHealth assessment gave us clarity we never had before. Within 90 days of 
+              "The BizHealth assessment gave us clarity we never had before. Within 90 days of
               implementing their recommendations, we saw a 23% improvement in operational efficiency."
             </blockquote>
             <p className="font-medium text-biz-navy">— Sarah M., CEO of TechStart Solutions</p>
           </div>
         </div>
       </main>
-      
+
       <GlobalFooter />
     </div>
   );
 };
 
-export default CheckoutNew;
+export default Checkout;

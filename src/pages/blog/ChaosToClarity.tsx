@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import PromotionalBanner from "@/components/PromotionalBanner";
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
 import authorIcon from "@/assets/bizhealth-author-icon.jpg";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const ChaosToClarity = () => {
   const publishDate = "2025-12-24";
@@ -44,22 +46,23 @@ const ChaosToClarity = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="From Chaos to Clarity: Operating Rhythm for Scaling Teams | BizHealth.ai"
-        description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework: weekly huddles, monthly reviews, and quarterly planning for SMB growth."
-        keywords="operating rhythm SMB, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, SMB operations management, leadership meetings 2025, business scaling framework"
+        description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework: weekly huddles, monthly reviews, and quarterly planning for small business growth."
+        keywords="operating rhythm small business, scaling business teams, weekly leadership huddle, monthly business review, quarterly planning, business cadence, team alignment, small business operations management, leadership meetings 2025, business scaling framework"
         canonical="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
         ogType="article"
-        ogImage="https://bizhealth.ai/og-chaos-to-clarity.jpg"
+        ogImage="/og-images/og-chaos-to-clarity.jpg"
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams"
         description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees. Learn the three-cadence framework for weekly, monthly, and quarterly business management."
         author={author}
         datePublished={publishDate}
         dateModified={modifiedDate}
-        image="https://bizhealth.ai/og-chaos-to-clarity.jpg"
+        image={`https://bizhealth.ai${heroImage}`}
         url="https://bizhealth.ai/blog/chaos-to-clarity-operating-rhythm-scaling-teams"
+        keywords={["operating rhythm small business", "scaling business teams", "weekly leadership huddle", "monthly business review", "quarterly planning"]}
       />
 
       <GlobalNavigation />
@@ -114,6 +117,12 @@ const ChaosToClarity = () => {
                   <span className="text-foreground">{readTime}</span>
                 </div>
               </div>
+              
+              <SocialShareButtons 
+                title="From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams"
+                description="Install a lightweight operating rhythm to scale your business from 10 to 70+ employees."
+                className="mt-6"
+              />
             </div>
           </div>
         </div>
@@ -609,12 +618,15 @@ const ChaosToClarity = () => {
               </section>
 
               {/* Related Articles */}
+              <GradientDivider variant="green-gold" />
+              
               <RelatedArticles articles={relatedArticles} />
             </div>
           </div>
         </div>
       </article>
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

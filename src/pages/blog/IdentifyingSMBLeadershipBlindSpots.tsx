@@ -2,11 +2,12 @@ import { ArrowLeft, BookOpen, TrendingUp, Users, AlertTriangle, Target } from "l
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import heroImage from "@/assets/identifying-smb-leadership-blind-spots.jpg";
+import heroImage from "@/assets/identifying-smb-leadership-blind-spots-optimized.jpg";
 
 const IdentifyingSMBLeadershipBlindSpots = () => {
   const publishDate = "2025-11-23T00:00:00Z";
@@ -36,26 +37,27 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
   return (
     <>
       <SEO
-        title="Identifying SMB Leadership Blind Spots | Leadership Guide 2025"
+        title="Identifying Small Business Leadership Blind Spots | Leadership Guide 2025"
         description="Discover the 7 critical leadership blind spots affecting small and mid-size business success. Learn practical strategies to uncover hidden gaps and strengthen your leadership."
-        keywords="leadership blind spots, SMB leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies"
+        keywords="leadership blind spots, small business leadership, business leadership development, self-awareness business, management blind spots, small business leadership, leadership gaps, organizational blind spots, business leadership strategies"
         canonical="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
         ogType="article"
-        ogImage={`https://bizhealth.ai${heroImage}`}
+        ogImage="/og-images/og-leadership-blind-spots.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="Identifying Small & Mid-Size Business Leadership Blind Spots"
-        description="A comprehensive guide to understanding and addressing the seven critical leadership blind spots that affect SMB success, with practical strategies for building organizational self-awareness."
+        description="A comprehensive guide to understanding and addressing the seven critical leadership blind spots that affect small business success, with practical strategies for building organizational self-awareness."
         image={`https://bizhealth.ai${heroImage}`}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/identifying-smb-leadership-blind-spots"
+        keywords={["leadership blind spots", "small business leadership", "business leadership development", "self-awareness business", "management blind spots"]}
       />
 
       <div className="min-h-screen bg-background">
@@ -127,6 +129,8 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
               alt="Business leader in office reflecting on leadership blind spots and team dynamics"
               className="w-full h-auto object-cover"
               loading="eager"
+              width={1200}
+              height={675}
             />
           </figure>
 
@@ -473,9 +477,11 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
           </div>
 
           {/* Related Articles */}
+          <GradientDivider variant="green-gold" />
           <RelatedArticles articles={relatedArticles} />
         </article>
 
+        <GlobalFooter />
         <GlobalFooter />
       </div>
     </>

@@ -55,6 +55,7 @@ const ProcessMappingTools = () => {
         description="Create professional process maps and standard operating procedures. Visual drag-and-drop process builder with AI-assisted suggestions and export to Word, Excel, and PDF."
         keywords="process mapping, SOP builder, standard operating procedures, workflow automation, business process management, process documentation"
         canonical="https://bizhealth.ai/biztools/toolbox/process-mapping-tools"
+        ogImage="https://bizhealth.ai/og-images/og-process-mapping.jpg"
       />
 
       <div className="min-h-screen flex flex-col bg-background">

@@ -24,6 +24,7 @@ const CashFlowTracker = () => {
           description="Track income, expenses, and cash flow for your small business. Free professional-grade financial management tool with Excel export, invoicing, and forecasting."
           canonical="https://bizhealth.ai/biztools/toolbox/cash-flow-tracker"
           keywords="cash flow tracker, small business finance, expense tracking, income management, financial forecasting, invoice management"
+          ogImage="https://bizhealth.ai/og-images/og-cash-flow-tracker.jpg"
         />
         
         <PromotionalBanner />

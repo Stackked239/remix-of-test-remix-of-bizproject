@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import { Users, Target, Shield, Heart, Lightbulb } from 'lucide-react';
 import growthPartnerLogo from '@/assets/bizhealth-growth-partner-logo.jpg';
@@ -14,17 +15,20 @@ const About = () => {
     {
       icon: Heart,
       title: "Faith & Integrity",
-      description: "Rooted in serving with authenticity and transparency"
+      description: "Rooted in serving with authenticity and transparency",
+      iconColor: "text-destructive"
     },
     {
       icon: Shield,
       title: "Empowerment",
-      description: "Leveling the playing field for all businesses"
+      description: "Leveling the playing field for all businesses",
+      iconColor: "text-biz-teal"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Leveraging advanced AI for actionable insights"
+      description: "Leveraging advanced AI for actionable insights",
+      iconColor: "text-[hsl(var(--biz-gold))]"
     }
   ];
 
@@ -52,11 +56,11 @@ const About = () => {
         <title>About Us - BizHealth.ai | Stop Guessing, Start Growing</title>
         <meta 
           name="description" 
-          content="BizHealth.ai levels the playing field for SMB leaders with AI-powered business health diagnostics. Discover our mission to help small businesses unlock growth with comprehensive business intelligence tools." 
+          content="BizHealth.ai levels the playing field for small business leaders with AI-powered business health diagnostics. Discover our mission to help small businesses unlock growth with comprehensive business intelligence tools." 
         />
         <meta 
           name="keywords" 
-          content="SMB growth tools, business health diagnostic, small business analytics, SMB decision-makers, business intelligence for SMBs, operational efficiency tools" 
+          content="small business growth tools, business health diagnostic, small business analytics, small business decision-makers, business intelligence for small business, operational efficiency tools" 
         />
         <link rel="canonical" href="https://bizhealth.ai/about" />
         
@@ -64,15 +68,15 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizhealth.ai/about" />
         <meta property="og:title" content="About BizHealth.ai - Rooted in Transformation" />
-        <meta property="og:description" content="Empowering SMB leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
-        <meta property="og:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="og:description" content="Empowering small business leaders with AI-driven business health insights. Learn how we're leveling the playing field for small and mid-sized businesses." />
+        <meta property="og:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://bizhealth.ai/about" />
         <meta property="twitter:title" content="About BizHealth.ai - Stop Guessing, Start Growing" />
-        <meta property="twitter:description" content="Discover how BizHealth.ai empowers SMB leaders with comprehensive business diagnostics and strategic growth tools." />
-        <meta property="twitter:image" content="https://bizhealth.ai/logo-512.jpg" />
+        <meta property="twitter:description" content="Discover how BizHealth.ai empowers small business leaders with comprehensive business diagnostics and strategic growth tools." />
+        <meta property="twitter:image" content="https://bizhealth.ai/og-images/og-about.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -110,7 +114,7 @@ const About = () => {
                   Rooted in Transformation, not Transactions
                 </h1>
                 <p className="font-open-sans text-lg md:text-xl text-white/90 leading-relaxed">
-                  Empowering SMB leaders with the insights and tools to unlock their business's full potential
+                  Empowering business leaders with the insights and tools to unlock their business's full potential
                 </p>
               </div>
             </div>
@@ -179,7 +183,7 @@ const About = () => {
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <CardContent className="p-8 text-center">
-                        <IconComponent className="w-12 h-12 text-biz-teal mx-auto mb-4" />
+                        <IconComponent className={`w-12 h-12 ${value.iconColor} mx-auto mb-4`} />
                         <h3 className="font-montserrat font-bold text-xl text-biz-navy mb-3">
                           {value.title}
                         </h3>
@@ -212,7 +216,7 @@ const About = () => {
           </section>
 
           {/* How We Guide You Section */}
-          <section className="py-16 md:py-20 bg-gradient-to-br from-biz-teal/10 to-biz-accent">
+          <section className="py-16 md:py-20 bg-gradient-to-br from-[hsl(var(--biz-green))]/10 to-biz-accent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
                 <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-6">
@@ -274,6 +278,9 @@ const About = () => {
                   <img 
                     src={growthPartnerLogo} 
                     alt="BizHealth.ai Growth Partner Logo" 
+                    width={128}
+                    height={128}
+                    loading="lazy"
                     className="w-32 h-32 mx-auto mb-6 object-contain"
                   />
                   <h3 className="font-montserrat font-bold text-2xl text-biz-navy text-center mb-4">
@@ -319,6 +326,7 @@ const About = () => {
           </section>
         </main>
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

@@ -155,6 +155,7 @@ const BizGrowthLaunchStep2 = () => {
         description="Learn cash flow, profit, and runway planning in under 2 hours. Built for first-time business owners. Includes 5 free downloadable tools. No MBA required."
         keywords="Launch, Cash Management, Step 2, BizGrowth, cash flow management, small business finance, profit calculator, runway planning, financial foundations, business owner course, SMB cash flow"
         canonical="https://bizhealth.ai/bizgrowth/launch/step-2-fix-cash-squeeze"
+        ogImage="https://bizhealth.ai/og-images/og-fix-cash-squeeze.jpg"
       />
       
       <Helmet>

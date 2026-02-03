@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import PricingStoryBrandHeader from "@/components/PricingStoryBrandHeader";
 import SEO from "@/components/SEO";
@@ -184,6 +185,7 @@ const Pricing = () => {
         description="Affordable business diagnostics and tiered solutions that help you identify gaps, confirm strengths, and fuel sustainable success. Transparent pricing for small business analysis and strategic planning."
         keywords="business diagnostics, small business pricing, tiered solutions, transparent pricing, affordable AI business health, SMB solutions, business health assessment pricing"
         canonical="https://bizhealth.ai/pricing"
+        ogImage="/og-images/og-pricing.jpg"
       />
       <GlobalNavigation />
       
@@ -556,7 +558,7 @@ const Pricing = () => {
                 
                 {tier.name === 'Essentials' ? (
                   <Link
-                    to="/checkout?tier=essentials"
+                    to="/register"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(59, 62%, 36%)',
@@ -575,7 +577,7 @@ const Pricing = () => {
                   </Link>
                 ) : tier.name === 'Enterprise' ? (
                   <Link
-                    to="/checkout?tier=enterprise"
+                    to="/register"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(81, 61%, 47%)',
@@ -594,7 +596,7 @@ const Pricing = () => {
                   </Link>
                 ) : (
                   <Link
-                    to="/checkout?tier=growth"
+                    to="/register"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(239, 35%, 23%)',
@@ -750,6 +752,7 @@ const Pricing = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

@@ -1,10 +1,11 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 
@@ -13,74 +14,41 @@ const WhenToPivot = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="When to Pivot: Data-Driven Business Signals | BizHealth.ai"
-        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot. Data-driven decision making for SMB leaders."
-        keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, SMB strategy"
+        description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot. Data-driven decision making for small business leaders."
+        keywords="business pivot, strategic pivot, business model change, data-driven decisions, pivot signals, business transformation, small business strategy"
         canonical="https://bizhealth.ai/blog/when-to-pivot"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        ogImage="/og-images/og-when-to-pivot.jpg"
         articlePublishedTime="2025-09-12"
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="When to Pivot: Data-Driven Signals That It's Time to Change Course"
         description="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot."
-        image="https://bizhealth.ai/assets/business-pivot-strategy-transformation.jpg"
+        image={`https://bizhealth.ai${pivotImage}`}
         datePublished="2025-09-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/when-to-pivot"
+        keywords={["business pivot", "strategic pivot", "business model change", "data-driven decisions", "pivot signals"]}
       />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Strategic Planning
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              When to Pivot: Data-Driven Signals That It's Time to Change Course
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>BizHealth Research Team</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>September 12, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>10 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={pivotImage} 
-              alt="Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="When to Pivot: Data-Driven Signals That It's Time to Change Course"
+        author="BizHealth Research Team"
+        publishDate="September 12, 2025"
+        readTime="10 min read"
+        heroImage={pivotImage}
+        heroImageAlt="Business pivot and strategic transformation with directional arrows and data-driven decision making charts"
+        categories={[
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+        ]}
+        shareDescription="Learn to recognize the quantifiable indicators that signal when your business model needs a strategic pivot."
+      />
 
       {/* Article Content */}
-      <section className="py-16">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
@@ -238,6 +206,8 @@ const WhenToPivot = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Strategic Planning Post-Pandemic",
@@ -259,6 +229,7 @@ const WhenToPivot = () => {
         }
       ]} />
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

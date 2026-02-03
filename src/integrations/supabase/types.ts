@@ -14,6 +14,134 @@ export type Database = {
   }
   public: {
     Tables: {
+      // Dennis's new tables for frontend features
+      bizguides_inquiries: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          industry: string
+          primary_challenge: string
+          referral_source: string | null
+          revenue_stage: string
+          session_length: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          industry: string
+          primary_challenge: string
+          referral_source?: string | null
+          revenue_stage: string
+          session_length: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          industry?: string
+          primary_challenge?: string
+          referral_source?: string | null
+          revenue_stage?: string
+          session_length?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      email_subscribers: {
+        Row: {
+          email: string
+          id: string
+          metadata: Json | null
+          source: string | null
+          subscribed_at: string
+          user_id: string | null
+        }
+        Insert: {
+          email: string
+          id?: string
+          metadata?: Json | null
+          source?: string | null
+          subscribed_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          email?: string
+          id?: string
+          metadata?: Json | null
+          source?: string | null
+          subscribed_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      idea_submissions: {
+        Row: {
+          beta_testing: string | null
+          category: string
+          company: string | null
+          created_at: string
+          description: string
+          email: string
+          full_name: string
+          id: string
+          idea_number: number
+          idea_title: string
+          privacy_consent: boolean
+          problems_solved: string[] | null
+          status: string
+          updated_at: string
+          urgency: string | null
+        }
+        Insert: {
+          beta_testing?: string | null
+          category: string
+          company?: string | null
+          created_at?: string
+          description: string
+          email: string
+          full_name: string
+          id?: string
+          idea_number: number
+          idea_title: string
+          privacy_consent?: boolean
+          problems_solved?: string[] | null
+          status?: string
+          updated_at?: string
+          urgency?: string | null
+        }
+        Update: {
+          beta_testing?: string | null
+          category?: string
+          company?: string | null
+          created_at?: string
+          description?: string
+          email?: string
+          full_name?: string
+          id?: string
+          idea_number?: number
+          idea_title?: string
+          privacy_consent?: boolean
+          problems_solved?: string[] | null
+          status?: string
+          updated_at?: string
+          urgency?: string | null
+        }
+        Relationships: []
+      }
+      // HEAD's working orders table with Stripe fields
       orders: {
         Row: {
           amount: number
@@ -62,6 +190,40 @@ export type Database = {
         }
         Relationships: []
       }
+      page_not_found_logs: {
+        Row: {
+          attempted_url: string
+          created_at: string | null
+          id: string
+          ip_address: string | null
+          referrer: string | null
+          timestamp: string | null
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          attempted_url: string
+          created_at?: string | null
+          id?: string
+          ip_address?: string | null
+          referrer?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          attempted_url?: string
+          created_at?: string | null
+          id?: string
+          ip_address?: string | null
+          referrer?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      // HEAD's working pipeline_queue table
       pipeline_queue: {
         Row: {
           attempts: number | null
@@ -109,6 +271,7 @@ export type Database = {
           },
         ]
       }
+      // HEAD's working profiles table
       profiles: {
         Row: {
           avatar_url: string | null
@@ -142,6 +305,7 @@ export type Database = {
         }
         Relationships: []
       }
+      // HEAD's working questionnaires table with company_profile and pipeline_payload
       questionnaires: {
         Row: {
           company_profile: Json | null
@@ -181,6 +345,7 @@ export type Database = {
         }
         Relationships: []
       }
+      // HEAD's working reports table with html_content, file_url, summary, status
       reports: {
         Row: {
           created_at: string | null
@@ -231,15 +396,42 @@ export type Database = {
           },
         ]
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -366,6 +558,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+    },
   },
 } as const

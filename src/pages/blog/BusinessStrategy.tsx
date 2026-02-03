@@ -1,20 +1,32 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, CheckCircle2, TrendingUp, Users, Target, Settings, DollarSign } from "lucide-react";
-import businessHealthImage from "@/assets/business-health-assessment-guide-2026.png";
-import strategyPlanningImage from "@/assets/business-strategy-planning-2026-growth.png";
+import businessHealthImage from "@/assets/business-health-assessment-guide-2026.jpg";
+import strategyPlanningImage from "@/assets/business-strategy-planning-2026-growth-optimized.jpg";
 import pivotImage from "@/assets/business-pivot-strategy-transformation.jpg";
 import infoOverloadImage from "@/assets/information-overload-business-leader.jpg";
 import comprehensiveHealthImage from "@/assets/business-health-assessment-comprehensive.jpg";
 import chaosToClarity from "@/assets/chaos-to-clarity-operating-rhythm-smb-teams.jpg";
+import renewalImperativeImage from "@/assets/renewal-imperative-legacy-business-rebirth.jpg";
 
 const BusinessStrategy = () => {
   const strategyPosts = [
+    {
+      title: "The Renewal Imperative: How to Rebirth Your Legacy Business Without Losing What Made It Great",
+      slug: "renewal-imperative-legacy-business-rebirth",
+      excerpt: "Learn how to transform your legacy business through strategic renewal. Preserve your core strengths while modernizing operations, culture, and market positioning for sustainable growth.",
+      image: renewalImperativeImage,
+      author: "BizHealth.ai Research Team",
+      date: "January 19, 2026",
+      readTime: "18 min read",
+      featured: true
+    },
     {
       title: "From Chaos to Clarity: A Lightweight Operating Rhythm for Scaling Your Business Teams",
       slug: "chaos-to-clarity-operating-rhythm-scaling-teams",
@@ -105,12 +117,12 @@ const BusinessStrategy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Business Strategy Insights for SMBs | BizHealth.ai"
+        title="Business Strategy Insights for Small Business | BizHealth.ai"
         description="Expert business strategy articles for small and mid-sized business owners. Learn strategic planning, competitive analysis, decision-making frameworks, and market positioning for sustainable growth in 2025."
-        keywords="business strategy, SMB strategy, strategic planning, competitive analysis, business growth strategy, market positioning, business decision making, strategic frameworks 2025"
+        keywords="business strategy, small business strategy, strategic planning, competitive analysis, business growth strategy, market positioning, business decision making, strategic frameworks 2025"
         canonical="https://bizhealth.ai/blog/business-strategy"
         ogType="website"
-        ogImage="https://bizhealth.ai/og-business-strategy.jpg"
+        ogImage="/og-images/og-business-strategy.jpg"
       />
       
       <StructuredData
@@ -486,6 +498,7 @@ const BusinessStrategy = () => {
         </div>
       </section>
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

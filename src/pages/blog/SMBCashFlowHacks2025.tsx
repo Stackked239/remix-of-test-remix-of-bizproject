@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import RelatedArticles from '@/components/RelatedArticles';
 import { Calendar, Clock, User, Info } from 'lucide-react';
@@ -11,6 +12,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import heroImage from '@/assets/smb-cash-flow-hacks-2025.jpg';
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 const SMBCashFlowHacks2025 = () => {
   const publishDate = "2025-10-14";
@@ -43,7 +45,7 @@ const SMBCashFlowHacks2025 = () => {
     "@type": "Article",
     "headline": "5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025",
     "description": "Master micro-business cash flow management with 5 proven strategies for 2025. Automate billing, forecast with AI, optimize inventory, negotiate terms, and diversify funding to boost liquidity by 30%.",
-    "image": "https://bizhealth.ai/assets/smb-cash-flow-hacks-2025.jpg",
+    "image": "https://bizhealth.ai/og-images/og-cash-flow-hacks.jpg",
     "author": {
       "@type": "Organization",
       "name": "BizHealth.ai Research Team",
@@ -93,7 +95,7 @@ const SMBCashFlowHacks2025 = () => {
           {/* Open Graph tags */}
           <meta property="og:title" content="5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025 | BizHealth.ai" />
           <meta property="og:description" content="Master micro-business cash flow management with 5 proven strategies for 2025. Automate billing, forecast with AI, optimize inventory to boost liquidity by 30%." />
-          <meta property="og:image" content="https://bizhealth.ai/assets/smb-cash-flow-hacks-2025.jpg" />
+          <meta property="og:image" content="https://bizhealth.ai/og-images/og-cash-flow-hacks.jpg" />
           <meta property="og:url" content="https://bizhealth.ai/blog/smb-cash-flow-hacks-2025" />
           <meta property="og:type" content="article" />
           <meta property="article:published_time" content={publishDate} />
@@ -105,7 +107,7 @@ const SMBCashFlowHacks2025 = () => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="5 Cash Flow Hacks for Micro-Businesses 2025" />
           <meta name="twitter:description" content="Master micro-business cash flow with 5 proven strategies: automation, AI forecasting, inventory optimization, and more." />
-          <meta name="twitter:image" content="https://bizhealth.ai/assets/smb-cash-flow-hacks-2025.jpg" />
+          <meta name="twitter:image" content="https://bizhealth.ai/og-images/og-cash-flow-hacks.jpg" />
           
           {/* JSON-LD Schema */}
           <script type="application/ld+json">
@@ -169,6 +171,11 @@ const SMBCashFlowHacks2025 = () => {
                   <span>{readTime} read</span>
                 </div>
               </div>
+
+              <SocialShareButtons 
+                title="5 Cash Flow Hacks Every Micro-Business Owner Needs in 2025"
+                description="Master micro-business cash flow management with 5 proven strategies for 2025."
+              />
 
               {/* Hero Image */}
               <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
@@ -400,6 +407,8 @@ const SMBCashFlowHacks2025 = () => {
           </div>
         </article>
 
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles articles={relatedArticles} />
         <GlobalFooter />
         <PromotionalBanner />

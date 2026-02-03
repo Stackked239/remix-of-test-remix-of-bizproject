@@ -1,13 +1,13 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
-import { Calendar, Clock, User, ArrowLeft, Info } from "lucide-react";
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import { Link } from "react-router-dom";
 import strategicPlanningImage from "@/assets/strategic-planning-post-pandemic.jpg";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const StrategicPlanning = () => {
   const publishDate = "2025-10-12";
@@ -18,88 +18,41 @@ const StrategicPlanning = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Strategic Planning Post-Pandemic 2025 | BizHealth.ai"
-        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape. Expert strategies for SMBs."
-        keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, SMB planning, business adaptation"
+        description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape. Expert strategies for small businesses."
+        keywords="strategic planning, post-pandemic business, business strategy, remote work, supply chain, consumer behavior, small business planning, business adaptation"
         canonical="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        ogImage="/og-images/og-strategic-planning.jpg"
         articlePublishedTime="2025-10-12"
         articleAuthor="BizHealth Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Strategic Planning for the Post-Pandemic Business Landscape"
         description="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
-        image="https://bizhealth.ai/assets/strategic-planning-post-pandemic.jpg"
+        image={`https://bizhealth.ai${strategicPlanningImage}`}
         datePublished="2025-10-12"
         author="BizHealth Research Team"
         url="https://bizhealth.ai/blog/strategic-planning-post-pandemic"
+        keywords={["strategic planning", "post-pandemic business", "business strategy", "remote work", "supply chain"]}
       />
       <GlobalNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-40 pb-16 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            
-            <div className="mb-6">
-              <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                Strategic Planning
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Strategic Planning Post-Pandemic: Transform Your SMB for Long-Term Growth in 2025
-            </h1>
-            
-            <div className="flex items-center gap-6 mb-8 text-muted-foreground">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="flex items-center gap-2 cursor-help">
-                      <User className="w-4 h-4" />
-                      <span>BizHealth.ai Research Team</span>
-                      <Info className="w-3.5 h-3.5 text-primary" />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs">
-                    <p className="text-sm">
-                      The BizHealth.ai Research Team comprises accomplished business owners, former C-suite executives, CFOs, operations leaders, and growth strategists, pooling over five decades of hands-on expertise in SMB scaling, financial oversight, operational efficiency, and market expansion to deliver insightful, data-backed content that drives measurable business improvements.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>September 12, 2025</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>13 min read</span>
-              </div>
-            </div>
-            
-            <img 
-              src={strategicPlanningImage} 
-              alt="Strategic planning post-pandemic infographic showing SMB business strategy framework with remote work hybrid model supply chain resilience and customer-centric transformation for 2025"
-              className="w-full h-auto rounded-lg shadow-md max-h-96 object-cover"
-              loading="lazy"
-              width="1200"
-              height="630"
-            />
-          </div>
-        </div>
-      </section>
+      <BlogHeroSectionEnhanced
+        title="Strategic Planning Post-Pandemic: Transform Your SMB for Long-Term Growth in 2025"
+        author="BizHealth.ai Research Team"
+        publishDate="September 12, 2025"
+        readTime="13 min read"
+        heroImage={strategicPlanningImage}
+        heroImageAlt="Strategic planning post-pandemic infographic showing SMB business strategy framework with remote work hybrid model supply chain resilience and customer-centric transformation for 2025"
+        categories={[
+          { label: "Business Strategy", href: "/blog/business-strategy" },
+        ]}
+        shareDescription="Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior in the post-pandemic landscape."
+      />
 
       {/* Article Content */}
-      <section className="py-16">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
@@ -276,6 +229,8 @@ const StrategicPlanning = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Operational Resilience Strategies",
@@ -297,6 +252,7 @@ const StrategicPlanning = () => {
         }
       ]} />
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

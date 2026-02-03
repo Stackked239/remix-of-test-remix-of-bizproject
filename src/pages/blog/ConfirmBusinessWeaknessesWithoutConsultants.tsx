@@ -2,10 +2,11 @@ import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/confirm-business-weaknesses-without-consultants.png";
+import heroImage from "@/assets/confirm-business-weaknesses-without-consultants-optimized.jpg";
 
 const ConfirmBusinessWeaknessesWithoutConsultants = () => {
   const publishDate = "2025-11-05T08:00:00-05:00";
@@ -37,17 +38,17 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
     <>
       <SEO
         title="How to Confirm Your Business Weaknesses Without Expensive Consultants"
-        description="Discover how to identify small business blind spots and operational weaknesses in 30 minutes using AI-powered tools—save $10K+ on consultants while getting actionable insights for SMB growth."
-        keywords="small business blind spots, operational weaknesses small business, hidden business gaps assessment, identifying business weaknesses 2025, SMB operational efficiency gaps, business assessment tools, AI business analysis, cost-effective business consulting"
+        description="Discover how to identify small business blind spots and operational weaknesses in 30 minutes using AI-powered tools—save $10K+ on consultants while getting actionable insights for small business growth."
+        keywords="small business blind spots, operational weaknesses small business, hidden business gaps assessment, identifying business weaknesses 2025, small business operational efficiency gaps, business assessment tools, AI business analysis, cost-effective business consulting"
         canonical={canonicalUrl}
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-confirm-weaknesses.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="How to Confirm Your Business Weaknesses Without Expensive Consultants"
         description="A comprehensive guide to identifying small business blind spots and operational weaknesses using AI-powered assessment tools instead of costly traditional consultants."
         image={heroImage}
@@ -55,6 +56,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={canonicalUrl}
+        keywords={["small business blind spots", "operational weaknesses", "hidden business gaps", "AI business analysis", "cost-effective consulting"]}
       />
       
       <div className="min-h-screen bg-background">
@@ -142,7 +144,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
                 </p>
 
                 <p className="mb-8">
-                  Contrast this with AI tools: Immediate, objective, and scalable. Gartner highlights AI delivering results in hours, not weeks, with 55% of execs boosting investments for such efficiency. BizHealth.ai embodies this: Our AI analyzes your input against <Link to="/blog/business-intelligence" className="text-primary hover:underline">industry benchmarks</Link>, spotting weaknesses like financial misalignments or operational bottlenecks—without the hefty bill or wait.
+                  Contrast this with AI tools: Immediate, objective, and scalable. Gartner highlights AI delivering results in hours, not weeks, with 55% of execs boosting investments for such efficiency. BizHealth.ai embodies this: Our AI analyzes your input against <Link to="/blog/technology" className="text-primary hover:underline">industry benchmarks</Link>, spotting weaknesses like financial misalignments or operational bottlenecks—without the hefty bill or wait.
                 </p>
 
                 <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
@@ -270,6 +272,7 @@ const ConfirmBusinessWeaknessesWithoutConsultants = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={relatedArticles} />
 
         <GlobalFooter />

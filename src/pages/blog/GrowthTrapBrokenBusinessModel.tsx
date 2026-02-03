@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import RelatedArticles from '@/components/RelatedArticles';
+import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import growthTrapHero from '@/assets/growth-trap-broken-business-model-2025.jpg';
 import bizHealthIcon from '@/assets/bizhealth-growth-icon.png';
 
@@ -17,100 +19,44 @@ const GrowthTrapBrokenBusinessModel = () => {
     <>
       <SEO
         title="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
-        description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling. Stop the growth trap in 2025."
-        keywords="growth trap small business, broken business model, SMB scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
+        description="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling. Stop the growth trap in 2025."
+        keywords="growth trap small business, broken business model, small business scaling problems, business health vs growth, unit economics, customer retention strategy, operational efficiency, sustainable business growth, revenue growth trap, business model optimization 2025"
         canonical={articleUrl}
         ogType="article"
-        ogImage={growthTrapHero}
+        ogImage="/og-images/og-growth-trap.jpg"
         articlePublishedTime={publishDate}
         articleModifiedTime={modifiedDate}
         articleAuthor="BizHealth.ai Research Team"
       />
 
       <StructuredData
-        type="article"
+        type="blogPosting"
         headline="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
-        description="Discover why chasing revenue growth destroys SMBs. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling."
+        description="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention, unit economics, and operational chaos before scaling."
         image={growthTrapHero}
         datePublished={publishDate}
         dateModified={modifiedDate}
         author="BizHealth.ai Research Team"
         url={articleUrl}
+        keywords={["growth trap small business", "broken business model", "small business scaling problems", "business health vs growth", "unit economics"]}
       />
 
       <div className="min-h-screen bg-background">
         <GlobalNavigation />
 
-        {/* Hero Section with gradient overlay */}
-        <div className="relative pt-40 pb-8 overflow-hidden">
-          {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 via-background to-amber-500/5" />
-          <div className="absolute top-20 right-0 w-96 h-96 bg-destructive/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl" />
-          
-          <div className="container mx-auto px-4 max-w-4xl relative z-10">
-            {/* Breadcrumb Navigation */}
-            <nav className="mb-8" aria-label="Breadcrumb">
-              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li className="select-none text-primary/50">/</li>
-                <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                <li className="select-none text-primary/50">/</li>
-                <li className="text-primary font-medium">The Growth Trap</li>
-              </ol>
-            </nav>
-
-            {/* Article Header */}
-            <header className="mb-12">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/30 shadow-sm">
-                  Business Strategy
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-600 dark:text-amber-400 rounded-full text-sm font-semibold border border-amber-500/30 shadow-sm">
-                  Financials
-                </span>
-                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30 shadow-sm">
-                  Business Leadership
-                </span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-foreground via-foreground to-destructive bg-clip-text">
-                The Growth Trap: Why More Sales Won't Save a Broken Business Model
-              </h1>
-
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-8">
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  By BizHealth.ai Research Team
-                </span>
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  December 23, 2025
-                </span>
-                <span className="flex items-center gap-2 bg-muted/50 px-3 py-1.5 rounded-full">
-                  <svg className="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  12 minute read
-                </span>
-              </div>
-
-              {/* Hero Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-8 border border-border/50">
-                <img
-                  src={growthTrapHero}
-                  alt="Stressed business owner in office with growth chart showing the growth trap dilemma - when more sales cannot save a broken business model"
-                  className="w-full h-auto object-cover"
-                  loading="eager"
-                />
-              </div>
-            </header>
-          </div>
-        </div>
+        <BlogHeroSectionEnhanced
+          title="The Growth Trap: Why More Sales Won't Save a Broken Business Model"
+          author="BizHealth.ai Research Team"
+          publishDate="December 23, 2025"
+          readTime="12 min read"
+          heroImage={growthTrapHero}
+          heroImageAlt="Business owner facing the growth trap dilemma - when more sales cannot save a broken business model"
+          categories={[
+            { label: "Business Strategy", href: "/blog/business-strategy" },
+            { label: "Financial Management", href: "/blog/financial-management" },
+          ]}
+          shareDescription="Discover why chasing revenue growth destroys small businesses. Learn the 4-phase health-first framework to fix retention and unit economics."
+        />
 
         {/* Article Content */}
         <article className="container mx-auto px-4 max-w-4xl pb-16">
@@ -718,22 +664,22 @@ const GrowthTrapBrokenBusinessModel = () => {
         <RelatedArticles 
           articles={[
             {
-              title: "The SMB Scaling Paradox: Why Growing Too Fast Is Killing Your Business",
-              slug: "/blog/smb-scaling-paradox-2025",
+              title: "Stress-Test Your Pricing: A Simple Framework to Optimize Margins and Cash Flow",
+              slug: "/blog/stress-test-pricing-framework-margins-cash-flow",
               category: "Business Strategy",
-              excerpt: "Discover why 60% of SMBs stall post-year 3 due to rapid scaling. Learn profitable scaling strategies and decision frameworks."
+              excerpt: "Learn how to evaluate and optimize your pricing strategy to protect margins and improve cash flow."
             },
             {
-              title: "Cash Flow Crisis Management for Small Businesses",
-              slug: "/blog/cash-flow-crisis-management",
-              category: "Financial Management",
-              excerpt: "Navigate financial challenges with confidence using proven crisis management strategies."
+              title: "Strategic Planning for the Post-Pandemic Business Landscape",
+              slug: "/blog/strategic-planning-post-pandemic",
+              category: "Business Strategy",
+              excerpt: "Adapt your business strategy for remote work, supply chain disruptions, and changing consumer behavior."
             },
             {
-              title: "How Small & Mid-Size Businesses Can Scale Operations Without Losing Control",
-              slug: "/blog/scaling-operations-without-losing-control",
-              category: "Operations",
-              excerpt: "Learn the SCALE framework for sustainable growth without operational chaos."
+              title: "The ROI of Business Intelligence for SMBs",
+              slug: "/blog/business-intelligence-roi",
+              category: "Technology",
+              excerpt: "Real-world case studies showing how SMBs achieve measurable returns from business intelligence investments."
             }
           ]}
         />

@@ -15,10 +15,12 @@ import {
   DollarSign,
   Users,
   BarChart3,
-  Settings
+  Settings,
+  Calculator
 } from "lucide-react";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -50,7 +52,7 @@ const BizToolsToolbox = () => {
   const toolCategories = [
     {
       title: "Financial Management",
-      tools: ["Cash Flow Tracker", "Budget Planning Template", "ROI Calculator", "Financial Dashboard"],
+      tools: ["Cash Flow Tracker", "Cash Flow Projection Tool", "Break-Even Calculator", "Budget Planning Template", "ROI Calculator", "Pricing Net Profit Calculator", "Financial Dashboard"],
       icon: DollarSign,
       color: "text-biz-copper",
       bgColor: "bg-biz-copper/10",
@@ -58,11 +60,19 @@ const BizToolsToolbox = () => {
     },
     {
       title: "Operations Excellence", 
-      tools: ["Process Mapping Tools", "Quality Checklists", "Inventory Management", "Performance Metrics"],
+      tools: ["Process Mapping Tools", "Strategic Estimating System", "Quality Checklists", "Inventory Management", "Performance Metrics"],
       icon: Settings,
       color: "text-biz-navy",
       bgColor: "bg-biz-navy/10",
       borderColor: "border-biz-navy/20"
+    },
+    {
+      title: "HR & People",
+      tools: ["HR Maturity Assessment", "R2A2 Job Description Builder", "Performance Review Templates", "Onboarding Checklists", "Team Development Plans"],
+      icon: Users,
+      color: "text-biz-teal",
+      bgColor: "bg-biz-teal/10",
+      borderColor: "border-biz-teal/20"
     },
     {
       title: "Sales & Marketing",
@@ -142,7 +152,7 @@ const BizToolsToolbox = () => {
         title="BizTools Toolbox - Business Templates & Resources | BizHealth.ai"
         description="Transform your business with our comprehensive toolbox of templates, frameworks, and resources. Battle-tested tools for financial management, operations, marketing, and strategic planning."
         canonical="https://bizhealth.ai/biztools/toolbox"
-        ogImage="https://bizhealth.ai/og-biztools-toolbox.jpg"
+        ogImage="https://bizhealth.ai/og-images/og-biztools-toolbox.jpg"
       />
       
       <PromotionalBanner />
@@ -273,7 +283,7 @@ const BizToolsToolbox = () => {
                   <CardContent>
                     <div className="space-y-3">
                       {category.tools.map((tool, toolIndex) => {
-                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder";
+                        const isClickable = tool === "Cash Flow Tracker" || tool === "Process Mapping Tools" || tool === "SWOT Analysis Tool" || tool === "Customer Journey Maps" || tool === "Innovation Strategy Builder" || tool === "ROI Calculator" || tool === "Pricing Net Profit Calculator" || tool === "Strategic Estimating System" || tool === "Cash Flow Projection Tool" || tool === "Break-Even Calculator" || tool === "R2A2 Job Description Builder" || tool === "HR Maturity Assessment";
                         const toolUrl = tool === "Cash Flow Tracker" 
                           ? "/biztools/toolbox/cash-flow-tracker"
                           : tool === "Process Mapping Tools"
@@ -284,6 +294,20 @@ const BizToolsToolbox = () => {
                           ? "/biztools/toolbox/customer-journey-maps-tool"
                           : tool === "Innovation Strategy Builder"
                           ? "/biztools/toolbox/innovation-strategy-tool"
+                          : tool === "ROI Calculator"
+                          ? "/biztools/toolbox/free-roi-calculator"
+                          : tool === "Pricing Net Profit Calculator"
+                          ? "/biztools/toolbox/free-pricing-net-profit-calculator"
+                          : tool === "Strategic Estimating System"
+                          ? "/biztools/toolbox/free-strategic-estimating-system"
+                          : tool === "Cash Flow Projection Tool"
+                          ? "/biztools/toolbox/cash-flow-projection-tool"
+                          : tool === "Break-Even Calculator"
+                          ? "/biztools/toolbox/breakeven-analysis-calculator"
+                          : tool === "R2A2 Job Description Builder"
+                          ? "/biztools/toolbox/hr/r2a2-job-description-builder"
+                          : tool === "HR Maturity Assessment"
+                          ? "/bizgrowth/hr/human-resources-maturity-assessment"
                           : "#";
                         const content = (
                             <div className="flex items-center justify-between p-3 rounded-lg transition-all duration-300 hover:bg-biz-lime/10 hover:translate-x-1 cursor-pointer group border border-transparent hover:border-biz-lime/20">
@@ -443,6 +467,15 @@ const BizToolsToolbox = () => {
                 description: "Word-for-word scripts for negotiating with vendors and clients when cash is tight.",
                 downloadUrl: "/downloads/Emergency_Brake_Script_Kit_-_BizHealthai.pdf",
                 icon: Users
+              },
+              {
+                title: "ROI Calculator",
+                label: "FREE ONLINE TOOL",
+                format: "Interactive Web Tool",
+                description: "Calculate ROI for equipment, new hires, or marketing campaigns in plain English.",
+                linkUrl: "/biztools/toolbox/free-roi-calculator",
+                icon: Calculator,
+                isLink: true
               }
             ].map((tool, index) => {
               const IconComponent = tool.icon;
@@ -473,16 +506,29 @@ const BizToolsToolbox = () => {
                     <CardDescription className="font-open-sans mb-4 text-sm">
                       {tool.description}
                     </CardDescription>
-                    <Button 
-                      asChild
-                      variant="outline" 
-                      className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
-                    >
-                      <a href={tool.downloadUrl} download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Download Free
-                      </a>
-                    </Button>
+                    {'isLink' in tool && tool.isLink ? (
+                      <Button 
+                        asChild
+                        variant="outline" 
+                        className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
+                      >
+                        <Link to={tool.linkUrl}>
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          Use Free Tool
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button 
+                        asChild
+                        variant="outline" 
+                        className="w-full border-biz-navy text-biz-navy hover:bg-biz-navy hover:text-white group-hover:border-biz-citrine"
+                      >
+                        <a href={'downloadUrl' in tool ? tool.downloadUrl : '#'} download>
+                          <Download className="w-4 h-4 mr-2" />
+                          Download Free
+                        </a>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -625,6 +671,7 @@ const BizToolsToolbox = () => {
         </div>
       </section>
 
+      <GradientDivider variant="gold-copper" />
       <GlobalFooter />
     </div>
   );

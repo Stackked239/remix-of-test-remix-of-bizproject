@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from '@/components/SEO';
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -282,31 +283,12 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BizHealth.ai Privacy Policy | SMB Data Protection 2025</title>
-        <meta
-          name="description"
-          content="Learn how BizHealth.ai protects your business data with GDPR/CCPA compliance. Trusted insights for SMB growth."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.bizhealth.ai/privacy-policy" />
-        
-        {/* Schema markup for policy pages */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Privacy Policy",
-            "description": "BizHealth.ai Privacy Policy - Data protection for SMB business intelligence",
-            "url": "https://www.bizhealth.ai/privacy-policy",
-            "publisher": {
-              "@type": "Organization",
-              "name": "BizHealth.ai",
-              "url": "https://www.bizhealth.ai"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="BizHealth.ai Privacy Policy | SMB Data Protection 2025"
+        description="Learn how BizHealth.ai protects your business data with GDPR/CCPA compliance. Trusted insights for SMB growth."
+        canonical="https://bizhealth.ai/privacy"
+        ogImage="/og-images/og-homepage.jpg"
+      />
 
       <div className="min-h-screen bg-background">
         <PromotionalBanner />
@@ -395,7 +377,7 @@ const PrivacyPolicy = () => {
 
                 <Card className="p-6 bg-muted/50 border-growth/20">
                   <p className="text-muted-foreground leading-relaxed">
-                    At BizHealth.ai, your trusted Business Health Advisor, we empower micro-, small-, and mid-sized businesses with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact{" "}
+                    At BizHealth.ai, your trusted Business Health Analyst, we empower micro-, small-, and mid-sized businesses with AI-driven diagnostics to eliminate guesswork and fuel growth. We take data privacy seriously, processing questionnaire inputs transparently to deliver insights without traditional consulting risks. This policy complies with U.S. laws (e.g., CCPA for California residents), GDPR for EU/EEA users (e.g., UK/Germany expansions), and global standards. By using our platform, you consent to these practices. Questions? Contact{" "}
                     <a
                       href="mailto:support@bizhealth.ai"
                       className="text-growth hover:underline transition-colors font-semibold"
@@ -517,6 +499,7 @@ const PrivacyPolicy = () => {
           </div>
         </main>
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
 
         {/* Floating Back to Top Button */}

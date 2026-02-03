@@ -1,5 +1,6 @@
 import GlobalNavigation from "@/components/GlobalNavigation";
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
@@ -364,11 +365,11 @@ const OvercomingMarketingChallenges = () => {
         keywords="small business marketing challenges, SMB marketing strategy, marketing for small businesses, customer acquisition, marketing mistakes, lead generation, marketing rhythm, positioning strategy, content marketing SMB, 90-day marketing plan"
         canonical="https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business"
         ogType="article"
-        ogImage={heroImage}
+        ogImage="/og-images/og-marketing-challenges.jpg"
       />
       
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="Overcoming Marketing Challenges as a Small Business: From Scattered Tactics to Strategic Growth"
         description="Learn how to overcome small business marketing challenges with strategic focus. Discover the 3 marketing mistakes SMBs make and a proven 90-day plan for growth."
         image="https://bizhealth.ai/assets/overcoming-marketing-challenges-small-business-strategic-growth.jpg"
@@ -376,6 +377,7 @@ const OvercomingMarketingChallenges = () => {
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/overcoming-marketing-challenges-small-business"
+        keywords={["small business marketing challenges", "small business marketing strategy", "marketing for small businesses", "customer acquisition", "90-day marketing plan"]}
       />
 
       <PromotionalBanner />
@@ -742,6 +744,8 @@ const OvercomingMarketingChallenges = () => {
         </article>
 
         {/* Related Articles */}
+        <GradientDivider variant="green-gold" />
+        
         <RelatedArticles 
           articles={[
             { title: "Small Business Financials: Know Your Numbers", slug: "/blog/small-business-financials-know-your-numbers", category: "Financials", excerpt: "Master financial management with this comprehensive guide." },
@@ -751,6 +755,7 @@ const OvercomingMarketingChallenges = () => {
         />
       </main>
 
+      <GradientDivider />
       <GlobalFooter />
     </div>
   );

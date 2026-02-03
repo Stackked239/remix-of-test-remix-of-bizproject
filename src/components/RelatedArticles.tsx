@@ -27,7 +27,7 @@ const getColorForCategory = (category: string) => {
 
 const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
   return (
-    <section className="py-20 relative overflow-hidden" style={{ backgroundColor: 'rgba(150, 148, 35, 0.25)' }}>
+    <section className="pt-12 pb-20 relative overflow-hidden" style={{ backgroundColor: 'rgba(150, 148, 35, 0.25)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />

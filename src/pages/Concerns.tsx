@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { HandHeart, Lightbulb, Wrench, TrendingUp, FileText, Mail, CheckCircle2, Users, Clock, Target } from 'lucide-react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -166,6 +167,7 @@ const Concerns = () => {
         description="Having an issue with BizHealth.ai? Our Client Success team is here to help. Share your concerns and let's work together toward a solution."
         keywords="concerns, refund, guarantee, BizHealth.ai support, client concerns, business health analysis help, customer service, technical support, refund policy, money back guarantee"
         canonical="https://bizhealth.ai/concerns"
+        ogImage="/og-images/og-concerns.jpg"
       />
       <PromotionalBanner />
       <GlobalNavigation />
@@ -666,6 +668,7 @@ const Concerns = () => {
         </div>
       </section>
 
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </>
   );

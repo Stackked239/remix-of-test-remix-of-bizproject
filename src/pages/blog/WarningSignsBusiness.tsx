@@ -1,5 +1,6 @@
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from "@/components/GlobalFooter";
+import GradientDivider from "@/components/GradientDivider";
 import PromotionalBanner from "@/components/PromotionalBanner";
 import RelatedArticles from "@/components/RelatedArticles";
 import SEO from "@/components/SEO";
@@ -139,25 +140,26 @@ const WarningSignsBusiness = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="5 Warning Signs Your Business Needs Immediate Attention | SMB Risk Guide"
-        description="Discover the critical warning signs 70% of SMBs face. Learn to spot cash flow issues, customer retention problems, and operational bottlenecks before they derail your business success."
-        keywords="business warning signs, SMB challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
+        title="5 Warning Signs Your Business Needs Immediate Attention | Small Business Risk Guide"
+        description="Discover the critical warning signs 70% of small businesses face. Learn to spot cash flow issues, customer retention problems, and operational bottlenecks before they derail your business success."
+        keywords="business warning signs, small business challenges, cash flow management, customer retention, operational efficiency, risk management, business health, employee engagement, strategic planning, business failure prevention, small business problems"
         canonical="https://bizhealth.ai/blog/warning-signs-business"
         ogType="article"
-        ogImage="https://bizhealth.ai/assets/business-warning-signs-management.jpg"
+        ogImage="/og-images/og-warning-signs-business.jpg"
         articlePublishedTime="2025-09-12T00:00:00Z"
         articleModifiedTime="2025-12-30T00:00:00Z"
         articleAuthor="BizHealth.ai Research Team"
       />
       <StructuredData 
-        type="article"
+        type="blogPosting"
         headline="5 Warning Signs Your Business Needs Immediate Attention"
         description="Are you losing sleep over stagnant growth or cash flow hiccups? You're not alone—70% of small and mid-sized businesses face critical challenges that, if ignored, can derail success."
-        image="https://bizhealth.ai/assets/business-warning-signs-management.jpg"
+        image="https://bizhealth.ai/og-images/og-warning-signs-business.jpg"
         datePublished="2025-09-12"
         dateModified="2025-12-30"
         author="BizHealth.ai Research Team"
         url="https://bizhealth.ai/blog/warning-signs-business"
+        keywords={["business warning signs", "small business challenges", "cash flow management", "customer retention", "operational efficiency"]}
       />
       <StructuredData 
         type="faq"
@@ -400,6 +402,8 @@ const WarningSignsBusiness = () => {
         </div>
       </article>
 
+      <GradientDivider variant="green-gold" />
+      
       <RelatedArticles articles={[
         {
           title: "Financial Health Metrics Every Business Owner Should Track",
@@ -421,6 +425,7 @@ const WarningSignsBusiness = () => {
         }
       ]} />
 
+      <GradientDivider />
       <GlobalFooter />
       <PromotionalBanner />
     </div>

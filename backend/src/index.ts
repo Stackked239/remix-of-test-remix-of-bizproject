@@ -47,7 +47,7 @@ export async function processSubmission(webhookPayload: WebhookPayload) {
     // Create orchestrator
     const orchestrator = createPhase1Orchestrator({
       apiKey: process.env.ANTHROPIC_API_KEY!,
-      model: process.env.DEFAULT_MODEL || 'claude-opus-4-20250514',
+      model: process.env.DEFAULT_MODEL || 'claude-opus-4-5-20251101',
       pollIntervalMs: parseInt(process.env.BATCH_POLL_INTERVAL_MS || '30000'),
     });
 

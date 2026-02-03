@@ -218,7 +218,7 @@ export class AnthropicBatchClient {
     });
 
     this.config = {
-      model: config.model || 'claude-opus-4-20250514',
+      model: config.model || 'claude-opus-4-5-20251101',
       maxTokens: config.maxTokens || 64000,
       thinkingBudgetTokens: config.thinkingBudgetTokens || 32000,
       temperature: config.temperature || 0.3,

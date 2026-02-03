@@ -23,7 +23,7 @@
  *   DATABASE_URL      - PostgreSQL connection string (optional, for persistence)
  *
  * Optional Environment Variables:
- *   DEFAULT_MODEL          - Claude model to use (default: claude-opus-4-20250514)
+ *   DEFAULT_MODEL          - Claude model to use (default: claude-opus-4-5-20251101)
  *   BATCH_POLL_INTERVAL_MS - Poll interval for batch jobs (default: 30000)
  *   LOG_LEVEL              - Logging level (default: info)
  *   RENDER_PDF             - Set to 'true' to render PDF versions of reports
@@ -246,7 +246,7 @@ async function executePhase1(
 
     const orchestrator = createPhase1Orchestrator({
       apiKey: process.env.ANTHROPIC_API_KEY,
-      model: process.env.DEFAULT_MODEL || 'claude-opus-4-20250514',
+      model: process.env.DEFAULT_MODEL || 'claude-opus-4-5-20251101',
       pollIntervalMs: parseInt(process.env.BATCH_POLL_INTERVAL_MS || '30000'),
     });
 
@@ -390,7 +390,7 @@ async function executePhase2(
 
     const orchestrator = createPhase2Orchestrator({
       apiKey: process.env.ANTHROPIC_API_KEY,
-      model: process.env.DEFAULT_MODEL || 'claude-opus-4-20250514',
+      model: process.env.DEFAULT_MODEL || 'claude-opus-4-5-20251101',
     });
 
     const results = await orchestrator.executePhase2(phase1OutputPath);
@@ -454,7 +454,7 @@ async function executePhase3(
 
     const orchestrator = createPhase3Orchestrator({
       apiKey: process.env.ANTHROPIC_API_KEY,
-      model: process.env.DEFAULT_MODEL || 'claude-opus-4-20250514',
+      model: process.env.DEFAULT_MODEL || 'claude-opus-4-5-20251101',
     });
 
     const results = await orchestrator.executePhase3(phase2OutputPath);

@@ -123,9 +123,19 @@ function extractDimensionResponses(responses: Record<string, any>, dimension: st
  */
 async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: any[] }> {
   const jobId = job.id;
-  
-  // Convert to webhook payload format
-  const webhookPayload = convertToWebhookPayload(questionnaire);
+
+  // Use job.payload directly if it's already in webhook format (has business_overview)
+  // Otherwise, convert from questionnaire table data
+  let webhookPayload: any;
+  if (job.payload && job.payload.business_overview && typeof job.payload.business_overview.location === 'string') {
+    // Payload is already in the correct webhook format
+    logger.info({ jobId }, 'Using job.payload directly (already in webhook format)');
+    webhookPayload = job.payload;
+  } else {
+    // Convert from questionnaire table format
+    logger.info({ jobId }, 'Converting questionnaire to webhook format');
+    webhookPayload = convertToWebhookPayload(questionnaire);
+  }
 
   // Create a temporary file for the webhook payload
   const tempDir = path.join(process.cwd(), 'temp');

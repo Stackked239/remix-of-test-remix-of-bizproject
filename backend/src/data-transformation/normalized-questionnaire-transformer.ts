@@ -393,8 +393,8 @@ function transformQuestion(
   categoryData: Record<string, unknown>,
   dimensionCode: DimensionCode
 ): NormalizedQuestionResponse {
-  // Get the field name from question_id (e.g., 'strategy_q1' -> various field names)
-  const rawValue = getQuestionRawValue(questionMapping.question_id, categoryData);
+  // Use sub_indicator_id directly - it matches the webhook field names
+  const rawValue = categoryData[questionMapping.sub_indicator_id] ?? null;
 
   // Normalize the value
   const normalizedValue = normalizeValue(rawValue, questionMapping.normalization_rule);
@@ -584,14 +584,24 @@ function normalizeValue(
 
   switch (rule.method) {
     case 'scale_1_5':
+    case 'linear_scale':
+      // linear_scale: maps scale values (1-10 or 1-5) to 0-100
+      // Default assumes 1-10 scale, but handles 1-5 scale too
       if (typeof rawValue === 'number') {
-        return Math.round((rawValue - 1) * 25);
+        // Detect scale type based on value
+        if (rawValue <= 5) {
+          // Likely 1-5 scale
+          return Math.round((rawValue - 1) * 25);
+        } else {
+          // Likely 1-10 scale
+          return Math.round((rawValue - 1) * (100 / 9));
+        }
       }
       break;
 
     case 'percentage':
       if (typeof rawValue === 'number') {
-        return Math.round(rawValue);
+        return Math.round(Math.min(100, Math.max(0, rawValue)));
       }
       break;
 
@@ -601,12 +611,27 @@ function normalizeValue(
       }
       break;
 
+    case 'nps_normalization':
+      // NPS ranges from -100 to +100, normalize to 0-100
+      if (typeof rawValue === 'number') {
+        // NPS -100 → 0, NPS 0 → 50, NPS +100 → 100
+        return Math.round((rawValue + 100) / 2);
+      }
+      break;
+
+    case 'inverse_benchmark':
+      // Lower is better metrics (like response time, sales cycle days)
+      // For now, return undefined - would need benchmark data
+      if (typeof rawValue === 'number') {
+        return undefined;
+      }
+      break;
+
     case 'currency':
     case 'numeric':
       // For benchmark-based normalization, we'd need the benchmark data
-      // For now, return the raw value capped to 0-100 range
+      // For now, return undefined - would need benchmark percentile calculation
       if (typeof rawValue === 'number') {
-        // No normalization for now - would need benchmark percentile calculation
         return undefined;
       }
       break;

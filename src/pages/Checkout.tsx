@@ -53,8 +53,8 @@ const PRODUCTS = {
     id: 'growth',
     name: 'Growth Assessment',
     description: 'Comprehensive 12-dimension analysis with personalized recommendations',
-    price: 297,
-    originalPrice: 497,
+    price: 299,
+    originalPrice: 499,
     pipelineType: 'BIG',
     questionnaireUrl: '/questionnaire',
     features: [
@@ -92,8 +92,8 @@ const PRODUCTS = {
     id: 'growth',
     name: 'Growth Assessment',
     description: 'Comprehensive 12-dimension analysis with personalized recommendations',
-    price: 297,
-    originalPrice: 497,
+    price: 299,
+    originalPrice: 499,
     pipelineType: 'BIG',
     questionnaireUrl: '/questionnaire',
     features: [

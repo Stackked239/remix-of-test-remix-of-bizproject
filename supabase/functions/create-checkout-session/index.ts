@@ -16,9 +16,26 @@ const corsHeaders = {
 
 // Product price mapping (in cents)
 const PRODUCTS: Record<string, { name: string; price: number; description: string }> = {
+  // New product tiers
+  essentials: {
+    name: 'Essentials Assessment',
+    price: 9900, // $99.00
+    description: '45-question micro-assessment for solopreneurs and micro-businesses',
+  },
+  growth: {
+    name: 'Growth Assessment',
+    price: 29900, // $299.00
+    description: 'Comprehensive 87-question, 12-dimension business health analysis',
+  },
+  enterprise: {
+    name: 'Enterprise Assessment',
+    price: 49900, // $499.00
+    description: 'Full assessment plus industry benchmarks and priority support',
+  },
+  // Legacy product mappings (for backward compatibility)
   standard: {
     name: 'Business Health Assessment',
-    price: 29700, // $297.00
+    price: 29900, // $299.00 (mapped to Growth)
     description: 'Comprehensive 12-dimension analysis with personalized recommendations',
   },
   premium: {

@@ -129,10 +129,12 @@ const SCALE_LABELS = {
 
 export default function EssentialsQuestionnaire() {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [hasAccess, setHasAccess] = useState<boolean | null>(null);
+  const [existingAssessmentId, setExistingAssessmentId] = useState<string | null>(null);
   
   // Business Overview state
   const [businessOverview, setBusinessOverview] = useState<BusinessOverview>({
@@ -163,6 +165,61 @@ export default function EssentialsQuestionnaire() {
 
   // Question responses state
   const [responses, setResponses] = useState<Record<string, QuestionResponse>>({});
+
+  // Check if user has purchased access to essentials tier
+  useEffect(() => {
+    const checkAccess = async () => {
+      if (!user) return;
+
+      try {
+        // Check for completed payment/order (essentials plan specifically)
+        const { data: orders, error } = await supabase
+          .from('orders')
+          .select('*')
+          .eq('user_id', user.id)
+          .eq('status', 'completed')
+          .in('product_id', ['essentials'])
+          .order('created_at', { ascending: false })
+          .limit(1);
+
+        if (error) throw error;
+
+        if (orders && orders.length > 0) {
+          setHasAccess(true);
+
+          // Check for existing in-progress assessment
+          const { data: assessments } = await supabase
+            .from('questionnaires')
+            .select('*')
+            .eq('user_id', user.id)
+            .eq('status', 'in_progress')
+            .eq('plan_type', 'essentials')
+            .order('created_at', { ascending: false })
+            .limit(1);
+
+          if (assessments && assessments.length > 0) {
+            setExistingAssessmentId(assessments[0].id);
+            // Load saved responses
+            if (assessments[0].responses) {
+              setResponses(assessments[0].responses as Record<string, QuestionResponse>);
+            }
+            if (assessments[0].company_profile) {
+              setBusinessOverview(assessments[0].company_profile as BusinessOverview);
+            }
+          }
+        } else {
+          setHasAccess(false);
+        }
+      } catch (error) {
+        console.error('Error checking access:', error);
+        setHasAccess(false);
+      }
+    };
+
+    if (user) {
+      checkAccess();
+    }
+  }, [user]);
 
   // Calculate progress
   useEffect(() => {
@@ -1147,6 +1204,57 @@ export default function EssentialsQuestionnaire() {
       default: return null;
     }
   };
+
+  // Loading state
+  if (authLoading || hasAccess === null) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#212653] mx-auto mb-4" />
+          <p className="text-gray-600">Loading assessment...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // No access - redirect to checkout
+  if (!hasAccess) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <header className="bg-white shadow-sm">
+          <div className="max-w-4xl mx-auto px-4 py-4">
+            <img src="/bizhealth-logo.png" alt="BizHealth" className="h-8" />
+          </div>
+        </header>
+
+        <main className="flex-1 container mx-auto px-4 py-12 max-w-2xl">
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-[#212653] mb-2">
+              Assessment Access Required
+            </h1>
+            <p className="text-gray-600 mb-6">
+              You need to purchase the Essentials assessment to continue.
+            </p>
+            <p className="text-gray-500 mb-8">
+              Get your comprehensive business health assessment with personalized insights
+              and actionable recommendations.
+            </p>
+            <button
+              onClick={() => navigate('/pricing')}
+              className="px-6 py-3 bg-[#969423] text-white rounded-lg font-medium hover:bg-[#7a7a1d] transition-colors"
+            >
+              View Pricing & Purchase
+            </button>
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">

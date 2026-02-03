@@ -65,7 +65,8 @@ const Questionnaire = () => {
       if (!user) return;
 
       try {
-        // Check for completed payment/order (growth, enterprise, or standard plans)
+        // Check for completed payment/order (growth, enterprise, standard, or premium plans)
+        // Essentials users should use /essentials-questionnaire instead
         const { data: orders, error } = await supabase
           .from('orders')
           .select('*')
@@ -79,7 +80,7 @@ const Questionnaire = () => {
 
         if (orders && orders.length > 0) {
           setHasAccess(true);
-          
+
           // Check for existing in-progress assessment
           const { data: assessments } = await supabase
             .from('questionnaires')
@@ -103,6 +104,21 @@ const Questionnaire = () => {
             }
           }
         } else {
+          // Check if user has essentials tier - redirect them
+          const { data: essentialsOrders } = await supabase
+            .from('orders')
+            .select('*')
+            .eq('user_id', user.id)
+            .eq('status', 'completed')
+            .eq('product_id', 'essentials')
+            .limit(1);
+
+          if (essentialsOrders && essentialsOrders.length > 0) {
+            // User has essentials tier - redirect to essentials questionnaire
+            navigate('/essentials-questionnaire');
+            return;
+          }
+
           setHasAccess(false);
         }
       } catch (error) {
@@ -114,7 +130,7 @@ const Questionnaire = () => {
     if (user) {
       checkAccess();
     }
-  }, [user]);
+  }, [user, navigate]);
 
   // Auto-save functionality
   const saveProgress = useCallback(async () => {

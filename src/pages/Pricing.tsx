@@ -558,7 +558,7 @@ const Pricing = () => {
                 
                 {tier.name === 'Essentials' ? (
                   <Link
-                    to="/register"
+                    to="/checkout?product=essentials"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(59, 62%, 36%)',
@@ -577,7 +577,7 @@ const Pricing = () => {
                   </Link>
                 ) : tier.name === 'Enterprise' ? (
                   <Link
-                    to="/register"
+                    to="/checkout?product=enterprise"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(81, 61%, 47%)',
@@ -596,7 +596,7 @@ const Pricing = () => {
                   </Link>
                 ) : (
                   <Link
-                    to="/register"
+                    to="/checkout?product=growth"
                     className="w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-between mt-auto relative"
                     style={{
                       backgroundColor: 'hsl(239, 35%, 23%)',

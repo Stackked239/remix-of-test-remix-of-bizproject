@@ -11,6 +11,7 @@ import { config as dotenvConfig } from 'dotenv';
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 import { runPipeline } from './run-pipeline.js';
+import { ReportType } from './reports/report-generator.js';
 import { runLILPipeline, validateLILInput } from './orchestration/lil/lil-pipeline-orchestrator.js';
 import { logger } from './utils/logger.js';
 import { formatError } from './utils/errors.js';
@@ -139,10 +140,31 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
   // Run the full BIG pipeline
   const outputDir = path.join(process.cwd(), 'output', jobId);
   await runPipeline({
-    inputFile: payloadPath,
+    webhookPath: payloadPath,
     outputDir: outputDir,
     startPhase: 0,
     endPhase: 5,
+    skipDatabase: true,
+    generateReports: true,
+    reportTypes: [
+      ReportType.COMPREHENSIVE_REPORT,
+      ReportType.OWNERS_REPORT,
+      ReportType.QUICK_WINS_REPORT,
+      ReportType.STRATEGY_REPORT,
+      ReportType.SALES_REPORT,
+      ReportType.MARKETING_REPORT,
+      ReportType.CUSTOMER_EXPERIENCE_REPORT,
+      ReportType.OPERATIONS_REPORT,
+      ReportType.FINANCIALS_REPORT,
+      ReportType.HUMAN_RESOURCES_REPORT,
+      ReportType.LEADERSHIP_REPORT,
+      ReportType.TECHNOLOGY_REPORT,
+      ReportType.IT_INFRASTRUCTURE_REPORT,
+      ReportType.RISK_MANAGEMENT_REPORT,
+      ReportType.COMPLIANCE_REPORT,
+      ReportType.BENCHMARK_REPORT,
+      ReportType.ACTION_PLAN_REPORT,
+    ],
     skipPhase15: false,
     skipPhase45: false,
   });

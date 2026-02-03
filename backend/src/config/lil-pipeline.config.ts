@@ -109,14 +109,16 @@ export const LIL_PIPELINE_CONFIG = {
   
   aiConfig: {
     model: 'claude-opus-4-5-20251101',
-    maxTokensPhase1: 3000,
-    maxTokensPhase1_5: 2500,
-    maxTokensPhase4_5: 500,
-    maxTokensPhase5: 16000,
+    maxTokensPhase1: 32000,
+    maxTokensPhase1_5: 32000,
+    maxTokensPhase4_5: 32000,
+    maxTokensPhase5: 32000,
     batchPollingInterval: 30000,      // 30 seconds
     maxBatchWaitTime: 2400000,        // 40 minutes
-    thinkingBudgetPhase1: 4000,
-    thinkingBudgetPhase1_5: 3000,
+    thinkingBudgetPhase1: 16000,
+    thinkingBudgetPhase1_5: 16000,
+    thinkingBudgetPhase4_5: 16000,
+    thinkingBudgetPhase5: 16000,
   },
   
   benchmarkSet: 'MICRO-2026-Q1',

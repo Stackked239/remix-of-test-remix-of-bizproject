@@ -306,15 +306,32 @@ async function processJob(job: any): Promise<void> {
       })
       .eq('id', jobId);
 
-    // Fetch the questionnaire data
-    const { data: questionnaire, error: fetchError } = await supabase
-      .from('questionnaires')
-      .select('*')
-      .eq('id', questionnaireId)
-      .single();
+    // Fetch the questionnaire data OR use payload directly if questionnaire_id is null
+    let questionnaire: any = null;
+    
+    if (questionnaireId) {
+      // Fetch from questionnaires table
+      const { data, error: fetchError } = await supabase
+        .from('questionnaires')
+        .select('*')
+        .eq('id', questionnaireId)
+        .single();
 
-    if (fetchError || !questionnaire) {
-      throw new Error(`Failed to fetch questionnaire: ${fetchError?.message || 'Not found'}`);
+      if (fetchError || !data) {
+        throw new Error(`Failed to fetch questionnaire: ${fetchError?.message || 'Not found'}`);
+      }
+      questionnaire = data;
+    } else if (job.payload) {
+      // Use payload directly when questionnaire_id is null
+      // This is the case when the frontend sends all data in the payload
+      logger.info({ jobId }, 'Using job.payload directly (no questionnaire_id)');
+      questionnaire = {
+        id: job.payload.submissionId || jobId,
+        responses: job.payload.responses || job.payload,
+        company_profile: job.payload.businessOverview || job.payload.business_overview,
+      };
+    } else {
+      throw new Error('No questionnaire_id or payload provided');
     }
 
     // Process based on pipeline type
@@ -335,9 +352,8 @@ async function processJob(job: any): Promise<void> {
       // Normalize report type (convert hyphens to underscores for consistency)
       const normalizedType = report.type.replace(/-/g, '_');
       
-      const reportData = {
+      const reportData: any = {
         user_id: userId,
-        questionnaire_id: questionnaireId,
         report_type: normalizedType,
         title: report.title || `${report.type.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())} Report`,
         html_content: report.content,
@@ -345,6 +361,11 @@ async function processJob(job: any): Promise<void> {
         pipeline_type: pipelineType,
         page_count: report.pageCount || null,
       };
+      
+      // Only include questionnaire_id if it's not null
+      if (questionnaireId) {
+        reportData.questionnaire_id = questionnaireId;
+      }
       
       const { data, error } = await supabase.from('reports').insert(reportData).select();
       
@@ -366,14 +387,16 @@ async function processJob(job: any): Promise<void> {
       }, 'Report saved to database');
     }
 
-    // Update questionnaire status
-    await supabase
-      .from('questionnaires')
-      .update({
-        status: 'completed',
-        completed_at: new Date().toISOString(),
-      })
-      .eq('id', questionnaireId);
+    // Update questionnaire status (only if we have a questionnaire_id)
+    if (questionnaireId) {
+      await supabase
+        .from('questionnaires')
+        .update({
+          status: 'completed',
+          completed_at: new Date().toISOString(),
+        })
+        .eq('id', questionnaireId);
+    }
 
     // Mark job as completed
     await supabase
@@ -408,13 +431,15 @@ async function processJob(job: any): Promise<void> {
       })
       .eq('id', jobId);
 
-    // Update questionnaire status
-    await supabase
-      .from('questionnaires')
-      .update({
-        status: 'failed',
-      })
-      .eq('id', job.questionnaire_id);
+    // Update questionnaire status (only if we have a questionnaire_id)
+    if (job.questionnaire_id) {
+      await supabase
+        .from('questionnaires')
+        .update({
+          status: 'failed',
+        })
+        .eq('id', job.questionnaire_id);
+    }
   }
 }
 

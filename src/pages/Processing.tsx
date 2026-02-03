@@ -52,12 +52,14 @@ export default function Processing() {
         }
 
         if (job) {
+          // Safely access progress and result from payload/status
+          const jobStatus = job.status as ProcessingState['status'];
           setProcessingState({
-            status: job.status,
-            phase: job.progress?.phase,
-            progress: job.progress?.progress,
-            reportsGenerated: job.result?.reports_generated,
-            error: job.last_error
+            status: jobStatus,
+            phase: undefined, // Progress tracking handled separately
+            progress: undefined,
+            reportsGenerated: undefined,
+            error: job.last_error || undefined
           });
 
           // If completed, redirect to portal after a short delay

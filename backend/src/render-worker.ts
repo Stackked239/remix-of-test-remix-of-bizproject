@@ -148,6 +148,8 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
   logger.info({ jobId, payloadPath, pipelineType: 'BIG' }, 'Running BIG pipeline');
 
   // Run the full BIG pipeline
+  // Note: Phase 4 uses reportTypes for legacy report generation,
+  // Phase 5 generates all 17+ reports using Phase5ReportType
   const outputDir = path.join(process.cwd(), 'output', jobId);
   await runPipeline({
     webhookPath: payloadPath,
@@ -160,20 +162,13 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
       ReportType.COMPREHENSIVE_REPORT,
       ReportType.OWNERS_REPORT,
       ReportType.QUICK_WINS_REPORT,
-      ReportType.STRATEGY_REPORT,
-      ReportType.SALES_REPORT,
-      ReportType.MARKETING_REPORT,
-      ReportType.CUSTOMER_EXPERIENCE_REPORT,
-      ReportType.OPERATIONS_REPORT,
-      ReportType.FINANCIALS_REPORT,
-      ReportType.HUMAN_RESOURCES_REPORT,
-      ReportType.LEADERSHIP_REPORT,
-      ReportType.TECHNOLOGY_REPORT,
-      ReportType.IT_INFRASTRUCTURE_REPORT,
-      ReportType.RISK_MANAGEMENT_REPORT,
-      ReportType.COMPLIANCE_REPORT,
-      ReportType.BENCHMARK_REPORT,
-      ReportType.ACTION_PLAN_REPORT,
+      ReportType.RISK_REPORT,
+      ReportType.ROADMAP_REPORT,
+      ReportType.FINANCIAL_REPORT,
+      ReportType.GROWTH_ENGINE_REPORT,
+      ReportType.PERFORMANCE_HEALTH_REPORT,
+      ReportType.PEOPLE_LEADERSHIP_REPORT,
+      ReportType.RESILIENCE_SAFEGUARDS_REPORT,
     ],
     skipPhase15: false,
     skipPhase45: false,

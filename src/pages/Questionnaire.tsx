@@ -300,7 +300,7 @@ const Questionnaire = () => {
   if (!hasAccess) {
     return (
       <div className="min-h-screen bg-background flex flex-col">
-        <SEO title="Assessment Access Required - BizHealth.ai" noindex={true} />
+        <SEO title="Assessment Access Required - BizHealth.ai" description="Access your BizHealth.ai business assessment questionnaire." noindex={true} />
         <GlobalNavigation />
         
         <main className="flex-1 container mx-auto px-4 py-12 pt-24 max-w-2xl">

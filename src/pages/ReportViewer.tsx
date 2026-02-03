@@ -108,7 +108,7 @@ const ReportViewer = () => {
   if (error || !report) {
     return (
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-        <SEO title="Report Not Found - BizHealth.ai" noindex={true} />
+        <SEO title="Report Not Found - BizHealth.ai" description="The requested report could not be found." noindex={true} />
         <h1 className="text-2xl font-bold text-[#1e3a5f] mb-4">
           {error || 'Report not found'}
         </h1>
@@ -124,6 +124,7 @@ const ReportViewer = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <SEO 
         title={`${report.title} - BizHealth.ai`}
+        description={`View your ${report.title} business assessment report.`}
         noindex={true}
       />
       

@@ -8,6 +8,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
+import type { Json } from '@/integrations/supabase/types';
 import { useAuth } from '@/hooks/useAuth';
 
 // Types
@@ -188,12 +189,11 @@ export default function EssentialsQuestionnaire() {
           setHasAccess(true);
 
           // Check for existing in-progress assessment
-          const { data: assessments } = await supabase
+          const { data: assessments } = await (supabase
             .from('questionnaires')
             .select('*')
             .eq('user_id', user.id)
-            .eq('status', 'in_progress')
-            .eq('plan_type', 'essentials')
+            .eq('status', 'in_progress') as any)
             .order('created_at', { ascending: false })
             .limit(1);
 
@@ -201,10 +201,10 @@ export default function EssentialsQuestionnaire() {
             setExistingAssessmentId(assessments[0].id);
             // Load saved responses
             if (assessments[0].responses) {
-              setResponses(assessments[0].responses as Record<string, QuestionResponse>);
+              setResponses(assessments[0].responses as unknown as Record<string, QuestionResponse>);
             }
             if (assessments[0].company_profile) {
-              setBusinessOverview(assessments[0].company_profile as BusinessOverview);
+              setBusinessOverview(assessments[0].company_profile as unknown as BusinessOverview);
             }
           }
         } else {
@@ -1150,28 +1150,26 @@ export default function EssentialsQuestionnaire() {
       // Save to questionnaires table
       const { error: questionnaireError } = await supabase
         .from('questionnaires')
-        .insert({
+        .insert([{
           id: submissionId,
           user_id: user.id,
-          plan_type: 'essentials',
           status: 'completed',
-          responses: questionnaireData,
+          responses: JSON.parse(JSON.stringify(questionnaireData)),
           created_at: new Date().toISOString()
-        });
+        }] as any);
 
       if (questionnaireError) throw questionnaireError;
 
       // Add to pipeline queue
       const { error: queueError } = await supabase
         .from('pipeline_queue')
-        .insert({
+        .insert([{
           user_id: user.id,
           questionnaire_id: submissionId,
-          pipeline_type: 'LIL',
           status: 'pending',
-          payload: questionnaireData,
+          payload: JSON.parse(JSON.stringify(questionnaireData)),
           created_at: new Date().toISOString()
-        });
+        }] as any);
 
       if (queueError) throw queueError;
 

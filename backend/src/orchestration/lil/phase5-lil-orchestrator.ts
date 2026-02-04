@@ -791,17 +791,17 @@ async function generateReport(
   const companyNameExact = businessOverview.companyName || 'the company';
   const prompt = `You are BizHealth.ai's senior business consultant and report architect.
 
-Generate a professional \${config.title} for \${companyNameExact}.
+Generate a professional ${config.title} for ${companyNameExact}.
 
 ## CRITICAL: COMPANY NAME REQUIREMENT
-The company name is EXACTLY: "\${companyNameExact}"
+The company name is EXACTLY: "${companyNameExact}"
 You MUST use this EXACT company name throughout the report. Do NOT change, abbreviate, or modify it in any way.
 
 ## REPORT SPECIFICATIONS
-- Target Audience: \${config.audience}
-- Target Length: \${config.pageTarget} pages
-- Tone: \${config.toneGuidelines.join(', ')}
-- Sections Required: \${config.sections.join(', ')}
+- Target Audience: ${config.audience}
+- Target Length: ${config.pageTarget} pages
+- Tone: ${config.toneGuidelines.join(', ')}
+- Sections Required: ${config.sections.join(', ')}
 
 ## BIZHEALTH.AI VOICE GUIDELINES
 - Clear, executive, evidence-based, non-generic
@@ -809,30 +809,30 @@ You MUST use this EXACT company name throughout the report. Do NOT change, abbre
 - Provide actionable recommendations with clear priorities
 - Be direct about issues while maintaining a constructive tone
 - Reference the 30-60-90 day timeline for actions
-- ALWAYS use the exact company name "\${companyNameExact}" - never abbreviate or modify it
+- ALWAYS use the exact company name "${companyNameExact}" - never abbreviate or modify it
 
 ## COMPANY CONTEXT
-\${JSON.stringify(idmOutput.companyProfile, null, 2)}
+${JSON.stringify(idmOutput.companyProfile, null, 2)}
 
 ## BLUF (Bottom Line Up Front) - Display prominently at top
-- Headline: \${bluf.headline}
-- Key Takeaway: \${bluf.keyTakeaway}
-- Score Highlight: \${bluf.scoreHighlight}
-- Top Priority: \${bluf.topPriority}
-- Call to Action: \${bluf.callToAction}
+- Headline: ${bluf.headline}
+- Key Takeaway: ${bluf.keyTakeaway}
+- Score Highlight: ${bluf.scoreHighlight}
+- Top Priority: ${bluf.topPriority}
+- Call to Action: ${bluf.callToAction}
 
 ## HEALTH SCORES
-- Overall Business Health: \${idmOutput.healthScores.overall}/100
-- Category Scores: \${JSON.stringify(idmOutput.healthScores.byCategory, null, 2)}
+- Overall Business Health: ${idmOutput.healthScores.overall}/100
+- Category Scores: ${JSON.stringify(idmOutput.healthScores.byCategory, null, 2)}
 
 ## CATEGORY ANALYSIS DATA
-\${JSON.stringify(categoryData, null, 2)}
+${JSON.stringify(categoryData, null, 2)}
 
 ## 30-60-90 DAY ROADMAP
-\${JSON.stringify(idmOutput.roadmap, null, 2)}
+${JSON.stringify(idmOutput.roadmap, null, 2)}
 
 ## CONSOLIDATED INSIGHTS
-\${JSON.stringify(idmOutput.consolidatedInsights, null, 2)}
+${JSON.stringify(idmOutput.consolidatedInsights, null, 2)}
 
 ## OUTPUT REQUIREMENTS
 Generate ONLY the HTML content that goes inside the report container. Do NOT include <!DOCTYPE>, <html>, <head>, or <body> tags.

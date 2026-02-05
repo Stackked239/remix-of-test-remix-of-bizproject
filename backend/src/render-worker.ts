@@ -174,15 +174,25 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
     skipPhase45: false,
   });
 
+  logger.info({ jobId, outputDir }, 'BIG pipeline completed, now searching for reports');
+
   // Find generated reports - they are in a nested structure:
   // output/{jobId}/{runId}/reports/report-{timestamp}/*.html
   const reports: any[] = [];
 
   // First, find the run directory (there should be one subdirectory with a UUID)
+  logger.info({ jobId, outputDir, exists: fs.existsSync(outputDir) }, 'Checking output directory');
+  
   if (fs.existsSync(outputDir)) {
-    const runDirs = fs.readdirSync(outputDir).filter(d => {
+    const allContents = fs.readdirSync(outputDir);
+    logger.info({ jobId, allContents }, 'Output directory contents');
+    
+    const runDirs = allContents.filter(d => {
       const fullPath = path.join(outputDir, d);
-      return fs.statSync(fullPath).isDirectory() && d.match(/^[a-f0-9-]{36}$/);
+      const isDir = fs.statSync(fullPath).isDirectory();
+      const matchesUUID = d.match(/^[a-f0-9-]{36}$/);
+      logger.info({ jobId, item: d, isDir, matchesUUID: !!matchesUUID }, 'Checking directory item');
+      return isDir && matchesUUID;
     });
 
     for (const runDir of runDirs) {

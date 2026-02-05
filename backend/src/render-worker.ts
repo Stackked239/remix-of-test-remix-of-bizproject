@@ -174,18 +174,73 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
     skipPhase45: false,
   });
 
-  // Find generated reports
-  const reportsDir = path.join(outputDir, 'phase5');
+  // Find generated reports - they are in a nested structure:
+  // output/{jobId}/{runId}/reports/report-{timestamp}/*.html
   const reports: any[] = [];
 
-  if (fs.existsSync(reportsDir)) {
-    const reportFiles = fs.readdirSync(reportsDir).filter(f => f.endsWith('.html'));
+  // First, find the run directory (there should be one subdirectory with a UUID)
+  if (fs.existsSync(outputDir)) {
+    const runDirs = fs.readdirSync(outputDir).filter(d => {
+      const fullPath = path.join(outputDir, d);
+      return fs.statSync(fullPath).isDirectory() && d.match(/^[a-f0-9-]{36}$/);
+    });
+
+    for (const runDir of runDirs) {
+      const reportsBaseDir = path.join(outputDir, runDir, 'reports');
+      
+      if (fs.existsSync(reportsBaseDir)) {
+        // Find the report-{timestamp} subdirectory
+        const reportDirs = fs.readdirSync(reportsBaseDir).filter(d => {
+          const fullPath = path.join(reportsBaseDir, d);
+          return fs.statSync(fullPath).isDirectory() && d.startsWith('report-');
+        });
+
+        for (const reportDir of reportDirs) {
+          const reportsDir = path.join(reportsBaseDir, reportDir);
+          const reportFiles = fs.readdirSync(reportsDir).filter(f => f.endsWith('.html'));
+          
+          logger.info({ jobId, reportsDir, reportCount: reportFiles.length }, 'Found reports directory');
+          
+          for (const file of reportFiles) {
+            const filePath = path.join(reportsDir, file);
+            const content = fs.readFileSync(filePath, 'utf-8');
+            
+            // Determine report type from filename
+            let reportType = file.replace('.html', '');
+            
+            // Map common filenames to report types
+            if (file === 'comprehensive.html') reportType = 'comprehensive';
+            else if (file === 'owner.html') reportType = 'owner';
+            else if (file === 'executive-brief.html') reportType = 'executive_brief';
+            else if (file === 'risk.html') reportType = 'risk';
+            else if (file === 'roadmap.html') reportType = 'roadmap';
+            else if (file === 'financial.html') reportType = 'financial';
+            else if (file.startsWith('deep-dive-')) reportType = file.replace('.html', '').replace(/-/g, '_');
+            else if (file === 'employees.html') reportType = 'employees';
+            else if (file.startsWith('managers')) reportType = file.replace('.html', '');
+            else if (file === 'executiveOverview.html') reportType = 'executive_overview';
+
+            reports.push({
+              type: reportType,
+              filename: file,
+              content: content,
+              title: reportType.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+            });
+          }
+        }
+      }
+    }
+  }
+
+  // Also check the legacy phase5 directory for backwards compatibility
+  const legacyReportsDir = path.join(outputDir, 'phase5');
+  if (reports.length === 0 && fs.existsSync(legacyReportsDir)) {
+    const reportFiles = fs.readdirSync(legacyReportsDir).filter(f => f.endsWith('.html'));
     
     for (const file of reportFiles) {
-      const filePath = path.join(reportsDir, file);
+      const filePath = path.join(legacyReportsDir, file);
       const content = fs.readFileSync(filePath, 'utf-8');
       
-      // Determine report type from filename
       let reportType = 'comprehensive';
       if (file.includes('executive')) reportType = 'executive_summary';
       else if (file.includes('action')) reportType = 'action_plan';
@@ -200,6 +255,8 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
       });
     }
   }
+
+  logger.info({ jobId, totalReports: reports.length }, 'Total reports found for BIG pipeline');
 
   // Clean up temp file
   if (fs.existsSync(payloadPath)) {

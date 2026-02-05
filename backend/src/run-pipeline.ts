@@ -1690,7 +1690,12 @@ async function runPipeline(config: PipelineConfig): Promise<void> {
     totalDuration,
   }, 'Pipeline completed');
 
-  process.exit(failedCount > 0 ? 1 : 0);
+  // Note: process.exit() removed - when called as a library function (e.g., from render-worker),
+  // we need to return control to the caller so they can save reports to Supabase.
+  // The CLI entry point (main()) will handle exit codes.
+  if (failedCount > 0) {
+    throw new Error(`Pipeline failed: ${failedCount} phase(s) failed`);
+  }
 }
 
 // ============================================================================
@@ -1710,6 +1715,8 @@ async function main(): Promise<void> {
     }
 
     await runPipeline(config);
+    // Exit successfully when run from CLI
+    process.exit(0);
   } catch (error) {
     pipelineLogger.error({ error: formatError(error) }, 'Pipeline error');
     console.error('\nERROR:', error instanceof Error ? error.message : String(error));

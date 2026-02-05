@@ -174,6 +174,9 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
     skipPhase45: false,
   });
 
+  // CRITICAL: Log immediately after runPipeline to verify we reach this point
+  console.log('=== RENDER-WORKER: runPipeline() returned successfully ===');
+  console.log('=== RENDER-WORKER: jobId=' + jobId + ', outputDir=' + outputDir + ' ===');
   logger.info({ jobId, outputDir }, 'BIG pipeline completed, now searching for reports');
 
   // Find generated reports - they are in a nested structure:

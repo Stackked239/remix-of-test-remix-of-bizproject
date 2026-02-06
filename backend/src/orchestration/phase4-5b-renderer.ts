@@ -289,7 +289,7 @@ export function getDimensionBlufKeys(): string[] {
  */
 export function getBLUFInlineStyles(): string {
   return `
-<style>
+/* BLUF Summary Styles */
 .bluf-summary {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-left: 4px solid #212653;
@@ -400,7 +400,6 @@ export function getBLUFInlineStyles(): string {
     font-size: 0.95rem;
   }
 }
-</style>
   `.trim();
 }
 

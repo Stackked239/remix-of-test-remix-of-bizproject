@@ -957,6 +957,13 @@ export class Phase5Orchestrator {
     };
 
     // Build overall health
+    // DEBUG: Log IDM scores_summary to diagnose zero score issue
+    console.log('=== PHASE 5 DEBUG: IDM scores_summary ===');
+    console.log('scores_summary:', JSON.stringify(idm.scores_summary, null, 2));
+    console.log('overall_health_score:', idm.scores_summary?.overall_health_score);
+    console.log('typeof overall_health_score:', typeof idm.scores_summary?.overall_health_score);
+    console.log('==========================================');
+    
     const overallHealth: ReportOverallHealth = {
       score: idm.scores_summary.overall_health_score,
       band: getScoreBand(idm.scores_summary.overall_health_score),

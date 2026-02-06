@@ -19,6 +19,7 @@ import {
   LILBusinessOverview
 } from '../../types/lil-pipeline.types.js';
 import { CategoryCode } from '../../data/question-category-mapping-lil.js';
+import { buildLilEmployeesNewsletter } from './lil-employees-newsletter.builder.js';
 
 const anthropic = new Anthropic();
 
@@ -1617,18 +1618,31 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
       logger.warn({ reportType }, 'No BLUF found for report type, using default');
     }
 
-    const { report, tokensUsed } = await generateReport(
-      reportType,
-      idmOutput,
-      bluf || {
-        headline: 'Business Health Assessment Complete',
-        keyTakeaway: 'Review the detailed findings below.',
-        scoreHighlight: `Overall Score: \${idmOutput.healthScores.overall}/100`,
-        topPriority: 'Review recommendations and create action plan.',
-        callToAction: 'Schedule a follow-up consultation to discuss findings.'
-      },
-      businessOverview
-    );
+    // Route employees report to the dedicated newsletter builder
+    let report: LILGeneratedReport;
+    let tokensUsed: number;
+
+    if (reportType === 'employees') {
+      logger.info({ reportType }, 'Routing to newsletter builder for employees report');
+      const result = await buildLilEmployeesNewsletter(idmOutput, businessOverview);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else {
+      const result = await generateReport(
+        reportType,
+        idmOutput,
+        bluf || {
+          headline: 'Business Health Assessment Complete',
+          keyTakeaway: 'Review the detailed findings below.',
+          scoreHighlight: `Overall Score: \${idmOutput.healthScores.overall}/100`,
+          topPriority: 'Review recommendations and create action plan.',
+          callToAction: 'Schedule a follow-up consultation to discuss findings.'
+        },
+        businessOverview
+      );
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    }
 
     reports[reportType] = report;
     totalTokensUsed += tokensUsed;

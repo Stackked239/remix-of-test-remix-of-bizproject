@@ -134,7 +134,7 @@ const ReportViewer = () => {
           <Button 
             variant="ghost" 
             size="sm"
-            className="text-white hover:bg-white/10"
+            className="text-white hover:bg-white/25 hover:text-biz-green-light border border-transparent hover:border-white/30 transition-all duration-200"
             onClick={() => navigate('/portal')}
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -147,7 +147,7 @@ const ReportViewer = () => {
           <Button 
             variant="ghost" 
             size="sm"
-            className="text-white hover:bg-white/10"
+            className="text-white hover:bg-white/25 hover:text-biz-green-light border border-transparent hover:border-white/30 transition-all duration-200"
             onClick={handleOpenNewTab}
           >
             <ExternalLink className="h-4 w-4 mr-2" />
@@ -156,7 +156,7 @@ const ReportViewer = () => {
           <Button 
             variant="ghost" 
             size="sm"
-            className="text-white hover:bg-white/10"
+            className="text-white hover:bg-white/25 hover:text-biz-green-light border border-transparent hover:border-white/30 transition-all duration-200"
             onClick={handlePrint}
           >
             <Printer className="h-4 w-4 mr-2" />
@@ -165,7 +165,7 @@ const ReportViewer = () => {
           <Button 
             variant="ghost" 
             size="sm"
-            className="text-white hover:bg-white/10"
+            className="text-white hover:bg-white/25 hover:text-biz-green-light border border-transparent hover:border-white/30 transition-all duration-200"
             onClick={handleDownload}
           >
             <Download className="h-4 w-4 mr-2" />

@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     title: "Unpredictable Sales: Why Your 'Wing It' Sales Approach Is Killing Your Growth",
     excerpt: "Your sales process is broken—and it's costing you millions. Learn the 5 sales funnel stages, top 5 sales mistakes, and how to build repeatable systems for predictable revenue growth.",
     author: "BizHealth.ai Research Team",
-    date: "February 5, 2025",
+    date: "February 5, 2026",
     readTime: "12 min read",
     category: "Business Strategy, Operations, Growth & Scaling",
     slug: "/blog/unpredictable-sales-wing-it-approach",

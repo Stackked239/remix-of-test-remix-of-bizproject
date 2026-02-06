@@ -278,13 +278,14 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
 
     .report-title-section .company-name {
       font-size: 1.5rem;
-      color: var(--bizhealth-green);
+      color: #f0e68c; /* Light gold instead of BizGreen for readability on dark background */
       font-weight: 600;
     }
 
     .report-title-section .report-date {
       margin-top: 15px;
-      opacity: 0.8;
+      opacity: 0.9; /* Increased from 0.8 for better readability */
+      color: white;
     }
 
     /* BLUF Section */
@@ -314,7 +315,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
       font-size: 1.35rem;
       font-weight: 600;
       margin-bottom: 20px;
-      color: var(--bizhealth-green);
+      color: #f0e68c; /* Light gold — high contrast on navy while maintaining brand warmth */
       line-height: 1.4;
     }
 
@@ -337,16 +338,91 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 5px;
-      opacity: 0.8;
+      opacity: 1; /* Full contrast for readability */
     }
 
-    /* Score Badge */
+    .bluf-item .bluf-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+    }
+
+    .bluf-item .bluf-value {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: white;
+    }
+
+    /* Score Badge & Score Section (Task 1a + Task 6: display:block not flex) */
     .score-section {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+      display: block;
       margin: 40px 0;
+    }
+
+    .score-overview-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 25px 0;
       flex-wrap: wrap;
+    }
+
+    .overall-score-display {
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .overall-score-display .score-badge {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid;
+      margin-bottom: 12px;
+    }
+
+    .overall-score-display .score-badge .score-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      line-height: 1;
+    }
+
+    .overall-score-display .score-badge .score-max {
+      font-size: 1.25rem;
+      font-weight: 400;
+      opacity: 0.7;
+    }
+
+    .score-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--bizhealth-navy);
+      margin-top: 8px;
+    }
+
+    .score-interpretation {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .score-context {
+      flex: 1;
+      min-width: 280px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .score-context p {
+      margin: 0;
     }
 
     .score-badge {
@@ -379,10 +455,10 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
 
     .score-badge.score-excellent { border-color: var(--bizhealth-success); }
     .score-badge.score-excellent .score-value { color: var(--bizhealth-success); }
-    .score-badge.score-good { border-color: var(--bizhealth-info); }
-    .score-badge.score-good .score-value { color: var(--bizhealth-info); }
-    .score-badge.score-needs-attention { border-color: var(--bizhealth-warning); }
-    .score-badge.score-needs-attention .score-value { color: var(--bizhealth-warning); }
+    .score-badge.score-good { border-color: #0d6efd; }
+    .score-badge.score-good .score-value { color: #0d6efd; }
+    .score-badge.score-needs-attention { border-color: #e67e22; } /* Darker orange instead of yellow */
+    .score-badge.score-needs-attention .score-value { color: #e67e22; } /* Task 2d: readable orange */
     .score-badge.score-critical { border-color: var(--bizhealth-danger); }
     .score-badge.score-critical .score-value { color: var(--bizhealth-danger); }
 
@@ -429,15 +505,19 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
     .category-score {
       background: var(--bizhealth-navy);
       color: white;
-      padding: 6px 16px;
+      padding: 8px 18px; /* Task 3b: slightly more padding */
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 1.15rem; /* Task 3b: increased from 0.9rem for readability */
       font-weight: 600;
     }
 
     .category-score.score-high { background: var(--bizhealth-success); }
-    .category-score.score-medium { background: var(--bizhealth-warning); color: var(--bizhealth-dark); }
+    .category-score.score-medium { background: #e67e22; color: white; } /* Task 2d: darker orange bg with white text */
     .category-score.score-low { background: var(--bizhealth-danger); }
+    .category-score.score-excellent { background: var(--bizhealth-success); color: white; }
+    .category-score.score-good { background: #0d6efd; color: white; }
+    .category-score.score-needs-attention { background: #e67e22; color: white; }
+    .category-score.score-critical { background: var(--bizhealth-danger); color: white; }
 
     /* SWOT Grid */
     .swot-grid {
@@ -516,6 +596,78 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
       background: linear-gradient(90deg, #f0fff4 0%, white 20%);
     }
 
+    /* Task 1g: Recommendation div-based selectors (fix CSS-HTML mismatch) */
+    .recommendations-section {
+      margin-top: 25px;
+    }
+
+    .recommendations-section h4 {
+      margin-bottom: 15px;
+    }
+
+    .recommendation-list .recommendation-item {
+      padding: 18px 20px;
+      margin: 12px 0;
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .recommendation-list .recommendation-item:hover {
+      transform: translateX(5px);
+    }
+
+    .recommendation-list .recommendation-item.high-priority {
+      border-left: 5px solid var(--bizhealth-danger);
+      background: linear-gradient(90deg, #fff5f5 0%, white 20%);
+    }
+
+    .recommendation-list .recommendation-item.medium-priority {
+      border-left: 5px solid var(--bizhealth-warning);
+      background: linear-gradient(90deg, #fffbf0 0%, white 20%);
+    }
+
+    .recommendation-list .recommendation-item.low-priority {
+      border-left: 5px solid var(--bizhealth-success);
+      background: linear-gradient(90deg, #f0fff4 0%, white 20%);
+    }
+
+    .recommendation-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .timeframe-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--bizhealth-navy);
+      background: #e8eaf6;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    .recommendation-item h5 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--bizhealth-navy);
+      margin-bottom: 8px;
+    }
+
+    .expected-impact {
+      margin-top: 12px;
+      padding: 10px 15px;
+      background: var(--bizhealth-light);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
     .priority-tag {
       display: inline-block;
       font-size: 0.75rem;
@@ -531,12 +683,69 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
     .priority-tag.medium { background: var(--bizhealth-warning); color: var(--bizhealth-dark); }
     .priority-tag.low { background: var(--bizhealth-success); color: white; }
 
-    /* Roadmap */
+    /* Roadmap (Task 1h + Task 7: outer wrapper display:block, only inner container uses grid) */
+    .section.roadmap-section {
+      display: block;
+    }
+
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .roadmap-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-overview {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .roadmap-summary-card {
+      background: var(--bizhealth-light);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--bizhealth-navy);
+    }
+
+    .roadmap-summary-card h4 {
+      font-size: 1rem;
+      color: var(--bizhealth-navy);
+      margin-bottom: 8px;
+    }
+
+    .roadmap-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .roadmap-section {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin: 35px 0;
+    }
+
+    .column-subtitle {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 15px;
+      font-style: italic;
     }
 
     .roadmap-column {
@@ -570,6 +779,64 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
       border-radius: 8px;
       font-size: 0.9rem;
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .roadmap-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: white;
+      background: var(--bizhealth-navy);
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .priority-indicator {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .high-priority .priority-indicator {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .medium-priority .priority-indicator {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .roadmap-item h5 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--bizhealth-navy);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .roadmap-impact {
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(33, 38, 83, 0.05);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-style: italic;
     }
 
     /* Tables */
@@ -653,7 +920,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
     }
 
     .metric-card .metric-value {
-      font-size: 2rem;
+      font-size: 1.75rem; /* Task 3d: ensure readable */
       font-weight: 700;
       color: var(--bizhealth-navy);
       font-family: var(--font-heading);
@@ -663,6 +930,360 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
       font-size: 0.85rem;
       color: var(--text-secondary);
       margin-top: 5px;
+    }
+
+    /* Task 1f: Metric Card Color Variants */
+    .metric-card .metric-name {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .metric-card .metric-benchmark {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .metric-card.metric-critical {
+      border-left: 4px solid var(--bizhealth-danger);
+    }
+
+    .metric-card.metric-critical .metric-value {
+      color: var(--bizhealth-danger);
+    }
+
+    .metric-card.metric-warning {
+      border-left: 4px solid #e67e22;
+    }
+
+    .metric-card.metric-warning .metric-value {
+      color: #e67e22;
+    }
+
+    .metric-card.metric-good {
+      border-left: 4px solid var(--bizhealth-success);
+    }
+
+    .metric-card.metric-good .metric-value {
+      color: var(--bizhealth-success);
+    }
+
+    /* Task 1b: Category Scores Grid (12-category dashboard) */
+    .category-scores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 25px 0;
+    }
+
+    @media (max-width: 768px) {
+      .category-scores-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .category-score-item {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .category-score-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .category-score-item .category-code {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .category-score-item .category-score {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      display: block;
+      padding: 6px 0;
+      border-radius: 0;
+      background: transparent;
+      margin-bottom: 4px;
+    }
+
+    .category-score-item .category-score.score-excellent { color: var(--bizhealth-success); }
+    .category-score-item .category-score.score-good { color: #0d6efd; }
+    .category-score-item .category-score.score-needs-attention { color: #e67e22; }
+    .category-score-item .category-score.score-critical { color: var(--bizhealth-danger); }
+
+    .category-score-item .category-name {
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .benchmark-indicator {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .benchmark-indicator.above {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .benchmark-indicator.at {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .benchmark-indicator.below {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    /* Task 1c: Executive Summary / Company Profile */
+    .executive-overview {
+      margin-bottom: 30px;
+    }
+
+    .company-profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 15px 0 25px 0;
+      padding: 20px;
+      background: var(--bizhealth-light);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 768px) {
+      .company-profile-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .profile-item {
+      padding: 8px 0;
+    }
+
+    .profile-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .profile-value {
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .findings-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .findings-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .finding-block {
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .finding-block h4 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .finding-block ul {
+      margin-left: 18px;
+    }
+
+    .finding-block li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .finding-strengths {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border: 1px solid #b1dfbb;
+    }
+
+    .finding-weaknesses {
+      background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+      border: 1px solid #f1b0b7;
+    }
+
+    /* Task 1d: Chapter Structure */
+    .chapter-intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    .chapter-summary-metrics {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 15px 20px;
+      background: var(--bizhealth-light);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .chapter-metric {
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .chapter-metric .metric-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .chapter-metric .metric-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--bizhealth-navy);
+      font-family: var(--font-heading);
+    }
+
+    .chapter-conclusion {
+      margin-top: 30px;
+      padding: 25px;
+      background: linear-gradient(135deg, #f0f4ff 0%, #f8f9fa 100%);
+      border-radius: 10px;
+      border-left: 5px solid var(--bizhealth-navy);
+    }
+
+    .chapter-conclusion h3 {
+      color: var(--bizhealth-navy);
+      margin-bottom: 12px;
+    }
+
+    /* Task 1e: Category Card Headers & Content */
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .category-title-group h3 {
+      margin: 0;
+    }
+
+    .category-code-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      background: var(--bizhealth-navy);
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      vertical-align: middle;
+    }
+
+    .category-header .category-score {
+      font-size: 1.25rem;
+      padding: 8px 20px;
+      font-weight: 700;
+    }
+
+    .benchmark-status {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .benchmark-status.above {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .benchmark-status.at {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .benchmark-status.below {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .category-summary {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Task 1i: Cover/Title Section elements */
+    .report-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    .report-meta .report-type {
+      opacity: 0.8;
+    }
+
+    .report-prepared-by {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .report-prepared-by p {
+      margin-bottom: 2px;
     }
 
     /* Footer */
@@ -733,9 +1354,8 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
         grid-template-columns: 1fr;
       }
 
-      .score-section {
-        flex-direction: column;
-        align-items: center;
+      .category-scores-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -757,7 +1377,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
 
   <footer class="bizhealth-footer">
     <div class="footer-logo">BizHealth<span>.ai</span></div>
-    <p>Business Health Assessment Platform - Essentials Report</p>
+    <p>Business Health Assessment Platform - Comprehensive Report</p>
     <p>© ${new Date().getFullYear()} BizHealth.ai. All rights reserved.</p>
     <p><em>This report is confidential and intended for authorized recipients only.</em></p>
   </footer>
@@ -842,7 +1462,7 @@ Structure your HTML output with these sections in order:
 1. TITLE SECTION - Use class "report-title-section" with:
    - Report title in h1
    - Company name with class "company-name"
-   - Report date
+   - Report date: "${currentDate}" (use this EXACT date string)
 
 2. BLUF SECTION - Use class "bluf-section" with:
    - h2 heading "Bottom Line Up Front"
@@ -865,11 +1485,16 @@ Structure your HTML output with these sections in order:
    - Add SWOT analysis using "swot-grid" and "swot-box" classes (strengths, weaknesses, opportunities, threats)
    - Include recommendations using "recommendation-list" with priority classes (high-priority, medium-priority, low-priority)
 
-6. ROADMAP SECTION - Use "roadmap-section" with three "roadmap-column" divs:
-   - First column: class "days-30" with h4 "First 30 Days"
-   - Second column: class "days-60" with h4 "Days 31-60"
-   - Third column: class "days-90" with h4 "Days 61-90"
-   - Each action in a "roadmap-item" div
+6. ROADMAP SECTION - Wrap in div with class "section roadmap-section" (NOT just "roadmap-section"):
+   - h2 heading "30-60-90 Day Action Plan"
+   - Optional intro text in div with class "section-intro"
+   - Use "roadmap-container" div (NOT "roadmap-section") for the 3-column grid
+   - Inside roadmap-container, three "roadmap-column" divs:
+     - First column: class "days-30" with h4 "First 30 Days"
+     - Second column: class "days-60" with h4 "Days 31-60"
+     - Third column: class "days-90" with h4 "Days 61-90"
+   - Each action in a "roadmap-item" div with complete content
+   - CRITICAL: All three columns MUST have equal or similar number of items and ALL must be complete
 
 7. CLOSING SECTION - Include:
    - Call to action from BLUF
@@ -881,6 +1506,24 @@ Use these additional classes as needed:
 - "data-table" for any tabular data
 - "metrics-grid" and "metric-card" for key metrics display
 - "priority-tag" with modifiers (high, medium, low) for priority labels
+- "category-scores-grid" with "category-score-item" for the 12-category dashboard
+- "company-profile-grid" with "profile-item" for company profile display
+- "findings-container" with "finding-block finding-strengths" and "finding-block finding-weaknesses" for key findings
+- "chapter-intro" for chapter introduction text
+- "chapter-summary-metrics" for chapter metric summaries
+- "chapter-conclusion" for chapter conclusion boxes
+- "category-header" with "category-title-group" and "category-code-badge" for category card headers
+- "benchmark-status" with modifiers (above, at, below) for benchmark indicators
+- "recommendation-item" (div, not li) with priority classes for recommendations
+- "timeframe-tag" for recommendation timeframes
+- "expected-impact" for recommendation impact sections
+
+## CRITICAL HTML COMPLETENESS REQUIREMENTS
+- You MUST generate ALL HTML tags completely. Every opening tag MUST have a closing tag.
+- The 90-day roadmap column MUST be fully generated with the same number of items as the 30-day column.
+- Do NOT truncate any section. If you are running low on space, reduce content per item rather than omitting items.
+- Verify all </div>, </span>, </section> tags are properly closed before ending your output.
+- The last line of your output should close all remaining open tags.
 
 Make the content comprehensive, data-driven, and actionable. Every recommendation should be specific and tied to the analysis data.`;
 
@@ -896,12 +1539,42 @@ Make the content comprehensive, data-driven, and actionable. Every recommendatio
     throw new Error('Unexpected response type from Claude');
   }
 
+  // Task 4: Validate HTML completeness - check for truncation
+  let generatedHtml = content.text;
+  
+  // Count open vs close div tags to detect truncation
+  const openDivs = (generatedHtml.match(/<div/g) || []).length;
+  const closeDivs = (generatedHtml.match(/<\/div>/g) || []).length;
+  
+  if (openDivs > closeDivs) {
+    logger.warn({
+      reportType,
+      openDivs,
+      closeDivs,
+      missingCloseTags: openDivs - closeDivs
+    }, 'HTML truncation detected - adding missing closing tags');
+    
+    // Add missing closing div tags
+    for (let i = 0; i < (openDivs - closeDivs); i++) {
+      generatedHtml += '</div>';
+    }
+  }
+  
+  // Ensure no unclosed span tags
+  const openSpans = (generatedHtml.match(/<span/g) || []).length;
+  const closeSpans = (generatedHtml.match(/<\/span>/g) || []).length;
+  if (openSpans > closeSpans) {
+    for (let i = 0; i < (openSpans - closeSpans); i++) {
+      generatedHtml += '</span>';
+    }
+  }
+
   // Build full HTML with template
   const htmlContent = HTML_TEMPLATE
     .replace(/{{TITLE}}/g, config.title)
     .replace(/{{COMPANY_NAME}}/g, businessOverview.companyName || 'Company')
     .replace(/{{DATE}}/g, currentDate)
-    .replace('{{CONTENT}}', content.text);
+    .replace('{{CONTENT}}', generatedHtml);
 
   // Estimate page count (rough: ~3000 chars per page)
   const pageCount = Math.ceil(htmlContent.length / 3000);

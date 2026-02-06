@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import bizhealthLogo from '@/assets/images/bizhealth-logo.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -28,7 +29,7 @@ import {
   Sparkles,
   Shield,
   ArrowUpRight,
-  Zap,
+  
   Award,
   Activity,
 } from 'lucide-react';
@@ -251,8 +252,7 @@ const Portal = () => {
           {/* Welcome Header */}
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-1 w-12 bg-biz-green rounded-full"></div>
-              <span className="font-open-sans text-biz-green text-sm font-semibold tracking-wider uppercase">Your Dashboard</span>
+              <img src={bizhealthLogo} alt="BizHealth.ai" className="h-10 md:h-12 w-auto" />
             </div>
             <h1 className="font-montserrat font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
               Welcome back{user?.user_metadata?.full_name ? `, ${user.user_metadata.full_name.split(' ')[0]}` : ''}

@@ -1199,122 +1199,132 @@ export interface QuestionMapping {
 }
 
 export const QUESTION_MAPPINGS: QuestionMapping[] = [
-  // Strategy (STR) - 7 questions
-  { question_id: 'strategy_q1', dimension_code: 'STR', sub_indicator_id: 'STR_001', weight: 1.0 },
-  { question_id: 'strategy_q2', dimension_code: 'STR', sub_indicator_id: 'STR_002', weight: 1.0 },
-  { question_id: 'strategy_q3', dimension_code: 'STR', sub_indicator_id: 'STR_003', weight: 1.0 },
-  { question_id: 'strategy_q4', dimension_code: 'STR', sub_indicator_id: 'STR_003', weight: 1.0 },
-  { question_id: 'strategy_q5', dimension_code: 'STR', sub_indicator_id: 'STR_003', weight: 1.5 },
-  { question_id: 'strategy_q6', dimension_code: 'STR', sub_indicator_id: 'STR_004', weight: 1.0 },
-  { question_id: 'strategy_q7', dimension_code: 'STR', sub_indicator_id: 'STR_005', weight: 1.5 },
+  // Strategy (STR) - 8 questions (matching question-mapping.json)
+  { question_id: 'STR01', dimension_code: 'STR', sub_indicator_id: 'competitive_differentiators_understanding', weight: 1.0 },
+  { question_id: 'STR02', dimension_code: 'STR', sub_indicator_id: 'local_market_share', weight: 1.0 },
+  { question_id: 'STR03', dimension_code: 'STR', sub_indicator_id: 'sales_growth_past_year', weight: 1.0 },
+  { question_id: 'STR04', dimension_code: 'STR', sub_indicator_id: 'target_sales_growth', weight: 1.0 },
+  { question_id: 'STR05', dimension_code: 'STR', sub_indicator_id: 'business_goals_plan', weight: 1.0 },
+  { question_id: 'STR06', dimension_code: 'STR', sub_indicator_id: 'goals_barriers', weight: 0 },  // text, skip normalization
+  { question_id: 'STR07', dimension_code: 'STR', sub_indicator_id: 'business_plan_review', weight: 1.0 },
+  { question_id: 'STR08', dimension_code: 'STR', sub_indicator_id: 'growth_exit_plan', weight: 1.0 },
 
-  // Sales (SAL) - 8 questions
-  { question_id: 'sales_q1', dimension_code: 'SAL', sub_indicator_id: 'SAL_001', weight: 0.5 },
-  { question_id: 'sales_q2', dimension_code: 'SAL', sub_indicator_id: 'SAL_001', weight: 1.0 },
-  { question_id: 'sales_q3', dimension_code: 'SAL', sub_indicator_id: 'SAL_002', weight: 1.5 },
-  { question_id: 'sales_q4', dimension_code: 'SAL', sub_indicator_id: 'SAL_003', weight: 1.0 },
-  { question_id: 'sales_q5', dimension_code: 'SAL', sub_indicator_id: 'SAL_003', weight: 1.0 },
-  { question_id: 'sales_q6', dimension_code: 'SAL', sub_indicator_id: 'SAL_003', weight: 1.0 },
-  { question_id: 'sales_q7', dimension_code: 'SAL', sub_indicator_id: 'SAL_004', weight: 1.0 },
-  { question_id: 'sales_q8', dimension_code: 'SAL', sub_indicator_id: 'SAL_005', weight: 1.0 },
+  // Sales (SAL) - 10 questions
+  { question_id: 'SAL01', dimension_code: 'SAL', sub_indicator_id: 'b2b_percentage', weight: 0 },  // skip normalization
+  { question_id: 'SAL02', dimension_code: 'SAL', sub_indicator_id: 'b2c_percentage', weight: 0 },  // skip normalization
+  { question_id: 'SAL03', dimension_code: 'SAL', sub_indicator_id: 'sales_targets_alignment', weight: 1.0 },
+  { question_id: 'SAL04', dimension_code: 'SAL', sub_indicator_id: 'sales_pipeline_management', weight: 1.0 },
+  { question_id: 'SAL05', dimension_code: 'SAL', sub_indicator_id: 'average_sales_cycle_days', weight: 0.5 },
+  { question_id: 'SAL06', dimension_code: 'SAL', sub_indicator_id: 'close_rate', weight: 1.0 },
+  { question_id: 'SAL07', dimension_code: 'SAL', sub_indicator_id: 'average_sale_size', weight: 0 },  // skip normalization
+  { question_id: 'SAL08', dimension_code: 'SAL', sub_indicator_id: 'repeat_sales_percentage', weight: 1.0 },
+  { question_id: 'SAL09', dimension_code: 'SAL', sub_indicator_id: 'upselling_focus', weight: 1.0 },
+  { question_id: 'SAL10', dimension_code: 'SAL', sub_indicator_id: 'upselling_obstacles', weight: 0 },  // text, skip normalization
 
   // Marketing (MKT) - 9 questions
-  { question_id: 'marketing_q1', dimension_code: 'MKT', sub_indicator_id: 'MKT_001', weight: 1.0 },
-  { question_id: 'marketing_q2', dimension_code: 'MKT', sub_indicator_id: 'MKT_005', weight: 0.5 },
-  { question_id: 'marketing_q3', dimension_code: 'MKT', sub_indicator_id: 'MKT_005', weight: 0.5 },
-  { question_id: 'marketing_q4', dimension_code: 'MKT', sub_indicator_id: 'MKT_005', weight: 0.5 },
-  { question_id: 'marketing_q5', dimension_code: 'MKT', sub_indicator_id: 'MKT_002', weight: 1.5 },
-  { question_id: 'marketing_q6', dimension_code: 'MKT', sub_indicator_id: 'MKT_003', weight: 1.0 },
-  { question_id: 'marketing_q7', dimension_code: 'MKT', sub_indicator_id: 'MKT_003', weight: 1.0 },
-  { question_id: 'marketing_q8', dimension_code: 'MKT', sub_indicator_id: 'MKT_003', weight: 1.0 },
-  { question_id: 'marketing_q9', dimension_code: 'MKT', sub_indicator_id: 'MKT_004', weight: 1.0 },
+  { question_id: 'MKT01', dimension_code: 'MKT', sub_indicator_id: 'brand_awareness', weight: 1.0 },
+  { question_id: 'MKT02', dimension_code: 'MKT', sub_indicator_id: 'marketing_methods_count', weight: 0 },  // skip normalization
+  { question_id: 'MKT03', dimension_code: 'MKT', sub_indicator_id: 'current_marketing_channels', weight: 0 },  // text, skip normalization
+  { question_id: 'MKT04', dimension_code: 'MKT', sub_indicator_id: 'customer_targeting', weight: 1.0 },
+  { question_id: 'MKT05', dimension_code: 'MKT', sub_indicator_id: 'customer_acquisition_cost', weight: 0.5 },
+  { question_id: 'MKT06', dimension_code: 'MKT', sub_indicator_id: 'customer_lifetime_value', weight: 0 },  // skip normalization
+  { question_id: 'MKT07', dimension_code: 'MKT', sub_indicator_id: 'awareness_conversion_rate', weight: 1.0 },
+  { question_id: 'MKT08', dimension_code: 'MKT', sub_indicator_id: 'marketing_roi', weight: 1.0 },
+  { question_id: 'MKT09', dimension_code: 'MKT', sub_indicator_id: 'monthly_marketing_spend', weight: 0 },  // skip normalization
 
-  // Customer Experience (CXP) - 7 questions
-  { question_id: 'customer_experience_q1', dimension_code: 'CXP', sub_indicator_id: 'CXP_001', weight: 1.0 },
-  { question_id: 'customer_experience_q2', dimension_code: 'CXP', sub_indicator_id: 'CXP_002', weight: 1.5 },
-  { question_id: 'customer_experience_q3', dimension_code: 'CXP', sub_indicator_id: 'CXP_003', weight: 1.5 },
-  { question_id: 'customer_experience_q4', dimension_code: 'CXP', sub_indicator_id: 'CXP_002', weight: 1.0 },
-  { question_id: 'customer_experience_q5', dimension_code: 'CXP', sub_indicator_id: 'CXP_002', weight: 1.0 },
-  { question_id: 'customer_experience_q6', dimension_code: 'CXP', sub_indicator_id: 'CXP_004', weight: 1.0 },
-  { question_id: 'customer_experience_q7', dimension_code: 'CXP', sub_indicator_id: 'CXP_005', weight: 1.0 },
+  // Customer Experience (CXP) - 8 questions
+  { question_id: 'CXP01', dimension_code: 'CXP', sub_indicator_id: 'customer_feedback_tracking', weight: 1.0 },
+  { question_id: 'CXP02', dimension_code: 'CXP', sub_indicator_id: 'feedback_challenges', weight: 0 },  // text, skip normalization
+  { question_id: 'CXP03', dimension_code: 'CXP', sub_indicator_id: 'customer_satisfaction', weight: 1.0 },
+  { question_id: 'CXP04', dimension_code: 'CXP', sub_indicator_id: 'net_promoter_score', weight: 1.0 },
+  { question_id: 'CXP05', dimension_code: 'CXP', sub_indicator_id: 'customer_effort_score', weight: 1.0 },
+  { question_id: 'CXP06', dimension_code: 'CXP', sub_indicator_id: 'competitive_strength', weight: 1.0 },
+  { question_id: 'CXP07', dimension_code: 'CXP', sub_indicator_id: 'issue_resolution', weight: 1.0 },
+  { question_id: 'CXP08', dimension_code: 'CXP', sub_indicator_id: 'response_time_hours', weight: 0.5 },
 
-  // Operations (OPS) - 6 questions
-  { question_id: 'operations_q1', dimension_code: 'OPS', sub_indicator_id: 'OPS_001', weight: 1.5 },
-  { question_id: 'operations_q2', dimension_code: 'OPS', sub_indicator_id: 'OPS_002', weight: 1.0 },
-  { question_id: 'operations_q3', dimension_code: 'OPS', sub_indicator_id: 'OPS_005', weight: 1.0 },
-  { question_id: 'operations_q4', dimension_code: 'OPS', sub_indicator_id: 'OPS_003', weight: 1.5 },
-  { question_id: 'operations_q5', dimension_code: 'OPS', sub_indicator_id: 'OPS_004', weight: 1.0 },
-  { question_id: 'operations_q6', dimension_code: 'OPS', sub_indicator_id: 'OPS_005', weight: 1.0 },
+  // Operations (OPS) - 9 questions
+  { question_id: 'OPS01', dimension_code: 'OPS', sub_indicator_id: 'operational_efficiency', weight: 1.0 },
+  { question_id: 'OPS02', dimension_code: 'OPS', sub_indicator_id: 'operational_challenges', weight: 0 },  // text, skip normalization
+  { question_id: 'OPS03', dimension_code: 'OPS', sub_indicator_id: 'workflow_documentation', weight: 1.0 },
+  { question_id: 'OPS04', dimension_code: 'OPS', sub_indicator_id: 'inventory_turnover_rate', weight: 0 },  // skip normalization
+  { question_id: 'OPS05', dimension_code: 'OPS', sub_indicator_id: 'operational_reliability', weight: 1.0 },
+  { question_id: 'OPS06', dimension_code: 'OPS', sub_indicator_id: 'lean_principles', weight: 1.0 },
+  { question_id: 'OPS07', dimension_code: 'OPS', sub_indicator_id: 'space_utilization', weight: 1.0 },
+  { question_id: 'OPS08', dimension_code: 'OPS', sub_indicator_id: 'equipment_utilization', weight: 1.0 },
+  { question_id: 'OPS09', dimension_code: 'OPS', sub_indicator_id: 'personnel_utilization', weight: 1.0 },
 
   // Financials (FIN) - 12 questions
-  { question_id: 'financials_q1', dimension_code: 'FIN', sub_indicator_id: 'FIN_001', weight: 1.0 },
-  { question_id: 'financials_q2', dimension_code: 'FIN', sub_indicator_id: 'FIN_002', weight: 1.0 },
-  { question_id: 'financials_q3', dimension_code: 'FIN', sub_indicator_id: 'FIN_001', weight: 1.0 },
-  { question_id: 'financials_q4', dimension_code: 'FIN', sub_indicator_id: 'FIN_002', weight: 1.0 },
-  { question_id: 'financials_q5', dimension_code: 'FIN', sub_indicator_id: 'FIN_002', weight: 1.0 },
-  { question_id: 'financials_q6', dimension_code: 'FIN', sub_indicator_id: 'FIN_002', weight: 1.5 },
-  { question_id: 'financials_q7', dimension_code: 'FIN', sub_indicator_id: 'FIN_003', weight: 1.5 },
-  { question_id: 'financials_q8', dimension_code: 'FIN', sub_indicator_id: 'FIN_003', weight: 1.0 },
-  { question_id: 'financials_q9', dimension_code: 'FIN', sub_indicator_id: 'FIN_002', weight: 1.0 },
-  { question_id: 'financials_q10', dimension_code: 'FIN', sub_indicator_id: 'FIN_004', weight: 1.0 },
-  { question_id: 'financials_q11', dimension_code: 'FIN', sub_indicator_id: 'FIN_004', weight: 1.0 },
-  { question_id: 'financials_q12', dimension_code: 'FIN', sub_indicator_id: 'FIN_005', weight: 1.5 },
+  { question_id: 'FIN01', dimension_code: 'FIN', sub_indicator_id: 'total_debt_liabilities', weight: 0 },  // skip normalization
+  { question_id: 'FIN02', dimension_code: 'FIN', sub_indicator_id: 'total_working_capital', weight: 0 },  // skip normalization
+  { question_id: 'FIN03', dimension_code: 'FIN', sub_indicator_id: 'debt_monitoring', weight: 1.0 },
+  { question_id: 'FIN04', dimension_code: 'FIN', sub_indicator_id: 'current_cash_available', weight: 0 },  // skip normalization
+  { question_id: 'FIN05', dimension_code: 'FIN', sub_indicator_id: 'cash_runway_months', weight: 0 },  // skip normalization
+  { question_id: 'FIN06', dimension_code: 'FIN', sub_indicator_id: 'gross_profit_margin', weight: 1.0 },
+  { question_id: 'FIN07', dimension_code: 'FIN', sub_indicator_id: 'monthly_profit_estimate', weight: 0 },  // skip normalization
+  { question_id: 'FIN08', dimension_code: 'FIN', sub_indicator_id: 'burn_rate', weight: 0 },  // skip normalization
+  { question_id: 'FIN09', dimension_code: 'FIN', sub_indicator_id: 'cash_flow_forecasting', weight: 1.0 },
+  { question_id: 'FIN10', dimension_code: 'FIN', sub_indicator_id: 'budgeting_financial_planning', weight: 1.0 },
+  { question_id: 'FIN11', dimension_code: 'FIN', sub_indicator_id: 'financial_readiness_growth', weight: 1.0 },
+  { question_id: 'FIN12', dimension_code: 'FIN', sub_indicator_id: 'financial_concerns', weight: 0 },  // text, skip normalization
 
-  // Human Resources (HRS) - 7 questions
-  { question_id: 'human_resources_q1', dimension_code: 'HRS', sub_indicator_id: 'HRS_001', weight: 1.5 },
-  { question_id: 'human_resources_q2', dimension_code: 'HRS', sub_indicator_id: 'HRS_002', weight: 1.5 },
-  { question_id: 'human_resources_q3', dimension_code: 'HRS', sub_indicator_id: 'HRS_003', weight: 1.0 },
-  { question_id: 'human_resources_q4', dimension_code: 'HRS', sub_indicator_id: 'HRS_004', weight: 1.0 },
-  { question_id: 'human_resources_q5', dimension_code: 'HRS', sub_indicator_id: 'HRS_002', weight: 1.5 },
-  { question_id: 'human_resources_q6', dimension_code: 'HRS', sub_indicator_id: 'HRS_002', weight: 1.5 },
-  { question_id: 'human_resources_q7', dimension_code: 'HRS', sub_indicator_id: 'HRS_005', weight: 1.0 },
+  // Human Resources (HRS) - 8 questions
+  { question_id: 'HRS01', dimension_code: 'HRS', sub_indicator_id: 'hr_infrastructure', weight: 1.0 },
+  { question_id: 'HRS02', dimension_code: 'HRS', sub_indicator_id: 'company_culture', weight: 1.0 },
+  { question_id: 'HRS03', dimension_code: 'HRS', sub_indicator_id: 'recruiting_onboarding', weight: 1.0 },
+  { question_id: 'HRS04', dimension_code: 'HRS', sub_indicator_id: 'training_development', weight: 1.0 },
+  { question_id: 'HRS05', dimension_code: 'HRS', sub_indicator_id: 'training_resources_needed', weight: 0 },  // text, skip normalization
+  { question_id: 'HRS06', dimension_code: 'HRS', sub_indicator_id: 'employee_turnover_rate', weight: 1.0 },
+  { question_id: 'HRS07', dimension_code: 'HRS', sub_indicator_id: 'employee_engagement', weight: 1.0 },
+  { question_id: 'HRS08', dimension_code: 'HRS', sub_indicator_id: 'performance_management', weight: 1.0 },
 
   // Leadership & Governance (LDG) - 7 questions
-  { question_id: 'leadership_q1', dimension_code: 'LDG', sub_indicator_id: 'LDG_001', weight: 1.5 },
-  { question_id: 'leadership_q2', dimension_code: 'LDG', sub_indicator_id: 'LDG_002', weight: 1.0 },
-  { question_id: 'leadership_q3', dimension_code: 'LDG', sub_indicator_id: 'LDG_003', weight: 1.0 },
-  { question_id: 'leadership_q4', dimension_code: 'LDG', sub_indicator_id: 'LDG_003', weight: 0.5 },
-  { question_id: 'leadership_q5', dimension_code: 'LDG', sub_indicator_id: 'LDG_002', weight: 1.5 },
-  { question_id: 'leadership_q6', dimension_code: 'LDG', sub_indicator_id: 'LDG_004', weight: 1.0 },
-  { question_id: 'leadership_q7', dimension_code: 'LDG', sub_indicator_id: 'LDG_005', weight: 1.0 },
+  { question_id: 'LDG01', dimension_code: 'LDG', sub_indicator_id: 'leadership_effectiveness', weight: 1.0 },
+  { question_id: 'LDG02', dimension_code: 'LDG', sub_indicator_id: 'decision_making_structure', weight: 1.0 },
+  { question_id: 'LDG03', dimension_code: 'LDG', sub_indicator_id: 'leadership_board_oversight', weight: 1.0 },
+  { question_id: 'LDG04', dimension_code: 'LDG', sub_indicator_id: 'has_advisory_board', weight: 0.5 },
+  { question_id: 'LDG05', dimension_code: 'LDG', sub_indicator_id: 'decision_making_effectiveness', weight: 1.0 },
+  { question_id: 'LDG06', dimension_code: 'LDG', sub_indicator_id: 'leadership_culture_effectiveness', weight: 1.0 },
+  { question_id: 'LDG07', dimension_code: 'LDG', sub_indicator_id: 'development_mentorship', weight: 1.0 },
 
   // Technology & Innovation (TIN) - 7 questions
-  { question_id: 'technology_q1', dimension_code: 'TIN', sub_indicator_id: 'TIN_001', weight: 1.0 },
-  { question_id: 'technology_q2', dimension_code: 'TIN', sub_indicator_id: 'TIN_005', weight: 1.0 },
-  { question_id: 'technology_q3', dimension_code: 'TIN', sub_indicator_id: 'TIN_002', weight: 1.0 },
-  { question_id: 'technology_q4', dimension_code: 'TIN', sub_indicator_id: 'TIN_003', weight: 1.0 },
-  { question_id: 'technology_q5', dimension_code: 'TIN', sub_indicator_id: 'TIN_003', weight: 1.0 },
-  { question_id: 'technology_q6', dimension_code: 'TIN', sub_indicator_id: 'TIN_004', weight: 1.5 },
-  { question_id: 'technology_q7', dimension_code: 'TIN', sub_indicator_id: 'TIN_005', weight: 1.0 },
+  { question_id: 'TIN01', dimension_code: 'TIN', sub_indicator_id: 'technology_investment', weight: 0 },  // skip normalization
+  { question_id: 'TIN02', dimension_code: 'TIN', sub_indicator_id: 'innovation_pipeline_percentage', weight: 1.0 },
+  { question_id: 'TIN03', dimension_code: 'TIN', sub_indicator_id: 'innovation_culture', weight: 1.0 },
+  { question_id: 'TIN04', dimension_code: 'TIN', sub_indicator_id: 'emerging_technologies', weight: 1.0 },
+  { question_id: 'TIN05', dimension_code: 'TIN', sub_indicator_id: 'technology_adoption', weight: 1.0 },
+  { question_id: 'TIN06', dimension_code: 'TIN', sub_indicator_id: 'automation_utilization', weight: 1.0 },
+  { question_id: 'TIN07', dimension_code: 'TIN', sub_indicator_id: 'innovation_impact', weight: 1.0 },
 
-  // IT, Data & Systems (IDS) - 7 questions
-  { question_id: 'it_infrastructure_q1', dimension_code: 'IDS', sub_indicator_id: 'IDS_001', weight: 1.5 },
-  { question_id: 'it_infrastructure_q2', dimension_code: 'IDS', sub_indicator_id: 'IDS_002', weight: 1.0 },
-  { question_id: 'it_infrastructure_q3', dimension_code: 'IDS', sub_indicator_id: 'IDS_003', weight: 2.0 },
-  { question_id: 'it_infrastructure_q4', dimension_code: 'IDS', sub_indicator_id: 'IDS_004', weight: 1.5 },
-  { question_id: 'it_infrastructure_q5', dimension_code: 'IDS', sub_indicator_id: 'IDS_004', weight: 1.0 },
-  { question_id: 'it_infrastructure_q6', dimension_code: 'IDS', sub_indicator_id: 'IDS_005', weight: 1.5 },
-  { question_id: 'it_infrastructure_q7', dimension_code: 'IDS', sub_indicator_id: 'IDS_001', weight: 1.0 },
+  // IT, Data & Systems (ITD) - 7 questions (note: uses ITD not IDS)
+  { question_id: 'ITD01', dimension_code: 'ITD', sub_indicator_id: 'it_infrastructure', weight: 1.0 },
+  { question_id: 'ITD02', dimension_code: 'ITD', sub_indicator_id: 'network_effectiveness', weight: 1.0 },
+  { question_id: 'ITD03', dimension_code: 'ITD', sub_indicator_id: 'cybersecurity', weight: 1.0 },
+  { question_id: 'ITD04', dimension_code: 'ITD', sub_indicator_id: 'data_management', weight: 1.0 },
+  { question_id: 'ITD05', dimension_code: 'ITD', sub_indicator_id: 'data_governance', weight: 1.0 },
+  { question_id: 'ITD06', dimension_code: 'ITD', sub_indicator_id: 'it_scalability', weight: 1.0 },
+  { question_id: 'ITD07', dimension_code: 'ITD', sub_indicator_id: 'it_support_maintenance', weight: 1.0 },
 
-  // Risk Management & Sustainability (RMS) - 8 questions
-  { question_id: 'risk_management_q1', dimension_code: 'RMS', sub_indicator_id: 'RMS_001', weight: 1.5 },
-  { question_id: 'risk_management_q2', dimension_code: 'RMS', sub_indicator_id: 'RMS_002', weight: 1.0 },
-  { question_id: 'risk_management_q3', dimension_code: 'RMS', sub_indicator_id: 'RMS_003', weight: 1.5 },
-  { question_id: 'risk_management_q4', dimension_code: 'RMS', sub_indicator_id: 'RMS_004', weight: 1.5 },
-  { question_id: 'risk_management_q5', dimension_code: 'RMS', sub_indicator_id: 'RMS_003', weight: 1.5 },
-  { question_id: 'risk_management_q6', dimension_code: 'RMS', sub_indicator_id: 'RMS_004', weight: 1.5 },
-  { question_id: 'risk_management_q7', dimension_code: 'RMS', sub_indicator_id: 'RMS_004', weight: 1.0 },
-  { question_id: 'risk_management_q8', dimension_code: 'RMS', sub_indicator_id: 'RMS_005', weight: 1.0 },
+  // Risk Management & Sustainability (RMS) - 10 questions
+  { question_id: 'RMS01', dimension_code: 'RMS', sub_indicator_id: 'overall_risk_outlook', weight: 1.0 },
+  { question_id: 'RMS02', dimension_code: 'RMS', sub_indicator_id: 'specific_risks_concern', weight: 0 },  // text, skip normalization
+  { question_id: 'RMS03', dimension_code: 'RMS', sub_indicator_id: 'risk_identification_review', weight: 1.0 },
+  { question_id: 'RMS04', dimension_code: 'RMS', sub_indicator_id: 'risk_mitigation', weight: 1.0 },
+  { question_id: 'RMS05', dimension_code: 'RMS', sub_indicator_id: 'contingency_plans', weight: 1.0 },
+  { question_id: 'RMS06', dimension_code: 'RMS', sub_indicator_id: 'financial_resilience', weight: 1.0 },
+  { question_id: 'RMS07', dimension_code: 'RMS', sub_indicator_id: 'operational_continuity', weight: 1.0 },
+  { question_id: 'RMS08', dimension_code: 'RMS', sub_indicator_id: 'sustainability_practices', weight: 1.0 },
+  { question_id: 'RMS09', dimension_code: 'RMS', sub_indicator_id: 'disruption_impact', weight: 0 },  // text, skip normalization
+  { question_id: 'RMS10', dimension_code: 'RMS', sub_indicator_id: 'succession_leadership_stability', weight: 1.0 },
 
-  // Compliance (CMP) - 8 questions
-  { question_id: 'compliance_q1', dimension_code: 'CMP', sub_indicator_id: 'CMP_001', weight: 1.5 },
-  { question_id: 'compliance_q2', dimension_code: 'CMP', sub_indicator_id: 'CMP_002', weight: 1.5 },
-  { question_id: 'compliance_q3', dimension_code: 'CMP', sub_indicator_id: 'CMP_001', weight: 1.0 },
-  { question_id: 'compliance_q4', dimension_code: 'CMP', sub_indicator_id: 'CMP_003', weight: 1.5 },
-  { question_id: 'compliance_q5', dimension_code: 'CMP', sub_indicator_id: 'CMP_003', weight: 1.0 },
-  { question_id: 'compliance_q6', dimension_code: 'CMP', sub_indicator_id: 'CMP_004', weight: 1.0 },
-  { question_id: 'compliance_q7', dimension_code: 'CMP', sub_indicator_id: 'CMP_005', weight: 1.0 },
-  { question_id: 'compliance_q8', dimension_code: 'CMP', sub_indicator_id: 'CMP_001', weight: 0.5 }
+  // Compliance - Legal & Regulatory (CMP) - 8 questions
+  { question_id: 'CMP01', dimension_code: 'CMP', sub_indicator_id: 'compliance_costs', weight: 0 },  // skip normalization
+  { question_id: 'CMP02', dimension_code: 'CMP', sub_indicator_id: 'policy_adherence', weight: 1.0 },
+  { question_id: 'CMP03', dimension_code: 'CMP', sub_indicator_id: 'incident_reporting', weight: 1.0 },
+  { question_id: 'CMP04', dimension_code: 'CMP', sub_indicator_id: 'regulatory_updates', weight: 1.0 },
+  { question_id: 'CMP05', dimension_code: 'CMP', sub_indicator_id: 'training_completion', weight: 1.0 },
+  { question_id: 'CMP06', dimension_code: 'CMP', sub_indicator_id: 'compliance_awareness', weight: 1.0 },
+  { question_id: 'CMP07', dimension_code: 'CMP', sub_indicator_id: 'compliance_monitoring', weight: 1.0 },
+  { question_id: 'CMP08', dimension_code: 'CMP', sub_indicator_id: 'compliance_documentation', weight: 1.0 }
 ];
 
 /**

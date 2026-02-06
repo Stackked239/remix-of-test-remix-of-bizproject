@@ -164,6 +164,7 @@ const EmployeeTurnoverStartsInTheMirror = lazy(() => import("./pages/blog/Employ
 const NepotismFavoritism = lazy(() => import("./pages/blog/NepotismFavoritism"));
 const SchedulingFlexibilityCostingYou = lazy(() => import("./pages/blog/SchedulingFlexibilityCostingYou"));
 const CommodityTrapPriceCompetition = lazy(() => import("./pages/blog/CommodityTrapPriceCompetition"));
+const UnpredictableSalesWingIt = lazy(() => import("./pages/blog/UnpredictableSalesWingIt"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -383,6 +384,7 @@ const App = () => (
               <Route path="/blog/nepotism-favoritism-destroying-business" element={<NepotismFavoritism />} />
               <Route path="/blog/scheduling-flexibility-costing-you" element={<SchedulingFlexibilityCostingYou />} />
               <Route path="/blog/commodity-trap-price-competition" element={<CommodityTrapPriceCompetition />} />
+              <Route path="/blog/unpredictable-sales-wing-it-approach" element={<UnpredictableSalesWingIt />} />
 
               {/* Legal & info pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />

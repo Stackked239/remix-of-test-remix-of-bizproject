@@ -64,8 +64,8 @@ const UnpredictableSalesWingIt = () => {
             The Sales Myth Every Small Business Owner Believes
           </h2>
 
-          <blockquote className="border-l-4 border-[hsl(var(--biz-green))] bg-muted/50 p-6 rounded-r-xl my-6 not-italic">
-            <p className="text-foreground/90 font-medium m-0">
+          <blockquote className="border-l-4 border-[hsl(var(--biz-green))] bg-[hsl(var(--biz-green))]/5 p-6 rounded-r-xl my-6 not-italic shadow-sm">
+            <p className="text-foreground font-medium m-0 italic">
               "My customers know they need me. I just need to show up, quote the job, and close the deal. Sales isn't complicated."
             </p>
           </blockquote>
@@ -78,7 +78,7 @@ const UnpredictableSalesWingIt = () => {
             You think your product or service sells itself. You think good work leads to referrals. You think the only thing standing between you and more revenue is "more leads."
           </p>
 
-          <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 my-8">
+          <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 my-8 shadow-sm">
             <div className="flex items-start gap-3">
               <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
               <div>
@@ -94,7 +94,7 @@ const UnpredictableSalesWingIt = () => {
 
           {/* What Is a Sales Funnel */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/10">
+            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/15 shadow-sm">
               <Target className="w-6 h-6 text-[hsl(var(--biz-green))]" />
             </div>
             What Is a Sales Funnel (And Why You Don't Have One)
@@ -111,46 +111,26 @@ const UnpredictableSalesWingIt = () => {
           <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">The 5 Stages of a Sales Funnel</h3>
 
           <div className="space-y-4 my-6">
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
-                <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">1</span>
-                Awareness
-              </h4>
-              <p className="text-foreground/80 m-0">Someone becomes aware you exist (ad, referral, website, etc.)</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
-                <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">2</span>
-                Interest
-              </h4>
-              <p className="text-foreground/80 m-0">They engage with you (download, call, email, visit)</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
-                <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">3</span>
-                Consideration
-              </h4>
-              <p className="text-foreground/80 m-0">They evaluate your solution (proposal, demo, quote, consultation)</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
-                <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">4</span>
-                Decision
-              </h4>
-              <p className="text-foreground/80 m-0">They choose to buy (contract signed, payment made)</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
-                <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">5</span>
-                Retention
-              </h4>
-              <p className="text-foreground/80 m-0">They become repeat customers and refer others</p>
-            </div>
+            {[
+              { num: "1", title: "Awareness", desc: "Someone becomes aware you exist (ad, referral, website, etc.)", gradient: "from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-green))]/5" },
+              { num: "2", title: "Interest", desc: "They engage with you (download, call, email, visit)", gradient: "from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/5" },
+              { num: "3", title: "Consideration", desc: "They evaluate your solution (proposal, demo, quote, consultation)", gradient: "from-[hsl(var(--biz-green))]/20 to-[hsl(var(--biz-green))]/5" },
+              { num: "4", title: "Decision", desc: "They choose to buy (contract signed, payment made)", gradient: "from-[hsl(var(--biz-green))]/25 to-[hsl(var(--biz-green))]/5" },
+              { num: "5", title: "Retention", desc: "They become repeat customers and refer others", gradient: "from-[hsl(var(--biz-green))]/30 to-[hsl(var(--biz-green))]/5" },
+            ].map((stage) => (
+              <div key={stage.num} className={`bg-gradient-to-r ${stage.gradient} border border-[hsl(var(--biz-green))]/20 rounded-xl p-5 shadow-sm`}>
+                <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
+                  <span className="bg-[hsl(var(--biz-green))] text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shadow-md">{stage.num}</span>
+                  {stage.title}
+                </h4>
+                <p className="text-foreground/80 m-0">{stage.desc}</p>
+              </div>
+            ))}
           </div>
 
           <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">What Most Small Businesses Have Instead</h3>
 
-          <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 my-6">
+          <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6 my-6 shadow-sm">
             <ul className="list-disc pl-6 space-y-2 text-foreground/80 m-0">
               <li>A website that generates sporadic leads</li>
               <li>A phone that rings occasionally</li>
@@ -163,13 +143,13 @@ const UnpredictableSalesWingIt = () => {
 
           {/* Why Sales Systems Are Non-Negotiable */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-[hsl(var(--biz-navy))]/10">
+            <div className="p-2 rounded-lg bg-[hsl(var(--biz-navy))]/15 shadow-sm">
               <BarChart3 className="w-6 h-6 text-[hsl(var(--biz-navy))]" />
             </div>
             Why Sales Systems Are Non-Negotiable for Growth
           </h2>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium m-0">
               <strong>Fact:</strong> Every business that scales beyond $1-2 million has formalized sales processes. Without systems, your growth is limited by your personal capacity. With sales systems, your growth is limited only by market demand.
             </p>
@@ -178,7 +158,7 @@ const UnpredictableSalesWingIt = () => {
           <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">What Happens Without a Sales Funnel</h3>
 
           <div className="space-y-6 my-6">
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
+            <div className="bg-gradient-to-br from-destructive/5 to-muted/50 border border-destructive/20 rounded-xl p-5 shadow-sm">
               <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
                 <TrendingDown className="w-5 h-5 text-destructive" />
                 Revenue Is Unpredictable
@@ -188,7 +168,7 @@ const UnpredictableSalesWingIt = () => {
               </p>
             </div>
 
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
+            <div className="bg-gradient-to-br from-destructive/5 to-muted/50 border border-destructive/20 rounded-xl p-5 shadow-sm">
               <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
                 <XCircle className="w-5 h-5 text-destructive" />
                 Opportunities Disappear
@@ -198,7 +178,7 @@ const UnpredictableSalesWingIt = () => {
               </p>
             </div>
 
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
+            <div className="bg-gradient-to-br from-destructive/5 to-muted/50 border border-destructive/20 rounded-xl p-5 shadow-sm">
               <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
                 <AlertTriangle className="w-5 h-5 text-destructive" />
                 You Can't Scale
@@ -208,7 +188,7 @@ const UnpredictableSalesWingIt = () => {
               </p>
             </div>
 
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
+            <div className="bg-gradient-to-br from-destructive/5 to-muted/50 border border-destructive/20 rounded-xl p-5 shadow-sm">
               <h4 className="text-lg font-bold text-foreground flex items-center gap-2 mb-2">
                 <RefreshCw className="w-5 h-5 text-destructive" />
                 You're Reactive, Not Strategic
@@ -225,14 +205,17 @@ const UnpredictableSalesWingIt = () => {
 
           {/* Top 5 Sales Mistakes */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-destructive/10">
+            <div className="p-2 rounded-lg bg-destructive/15 shadow-sm">
               <XCircle className="w-6 h-6 text-destructive" />
             </div>
             The Top 5 Sales Mistakes Small Businesses Make
           </h2>
 
           {/* Mistake 1 */}
-          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Mistake #1: Treating All Leads the Same</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-2">
+            <span className="bg-destructive text-white text-sm font-bold px-2.5 py-0.5 rounded-md">#1</span>
+            Treating All Leads the Same
+          </h3>
 
           <p className="text-foreground/90 leading-relaxed">
             <strong>The Problem:</strong> You treat every inquiry the same, regardless of fit. You spend time quoting jobs for customers who can't afford you. You chase leads that don't need what you offer. You waste time on prospects who will never buy.
@@ -242,7 +225,7 @@ const UnpredictableSalesWingIt = () => {
             <strong>Result:</strong> Low conversion rates, wasted time, frustration.
           </p>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium mb-3"><strong>The Fix:</strong> Build a qualification process. Ask questions that reveal:</p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80 m-0">
               <li>Do they have a problem you solve?</li>
@@ -254,28 +237,31 @@ const UnpredictableSalesWingIt = () => {
           </div>
 
           {/* Mistake 2 */}
-          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Mistake #2: No Follow-Up Process</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-2">
+            <span className="bg-destructive text-white text-sm font-bold px-2.5 py-0.5 rounded-md">#2</span>
+            No Follow-Up Process
+          </h3>
 
           <p className="text-foreground/90 leading-relaxed">
             <strong>The Problem:</strong> You send a quote and wait. If they don't respond, you move on. Prospects need multiple touchpoints. They need nurturing. They need reminders. They need to see value. <strong>You lose 80% of deals because you don't follow up.</strong>
           </p>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium mb-3"><strong>The Fix:</strong> Create a documented follow-up sequence:</p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-foreground/80">
+              <div className="flex items-center gap-3 text-foreground/80 bg-background/60 rounded-lg p-3">
                 <Clock className="w-4 h-4 text-[hsl(var(--biz-green))] flex-shrink-0" />
                 <span><strong>Day 3:</strong> Email recapping value and next steps</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground/80">
+              <div className="flex items-center gap-3 text-foreground/80 bg-background/60 rounded-lg p-3">
                 <Phone className="w-4 h-4 text-[hsl(var(--biz-green))] flex-shrink-0" />
                 <span><strong>Day 7:</strong> Phone call asking for questions/concerns</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground/80">
+              <div className="flex items-center gap-3 text-foreground/80 bg-background/60 rounded-lg p-3">
                 <FileText className="w-4 h-4 text-[hsl(var(--biz-green))] flex-shrink-0" />
                 <span><strong>Day 14:</strong> Case study or testimonial relevant to their situation</span>
               </div>
-              <div className="flex items-center gap-3 text-foreground/80">
+              <div className="flex items-center gap-3 text-foreground/80 bg-background/60 rounded-lg p-3">
                 <Mail className="w-4 h-4 text-[hsl(var(--biz-green))] flex-shrink-0" />
                 <span><strong>Day 30:</strong> Final value-add (guide, checklist, etc.) + close</span>
               </div>
@@ -284,7 +270,10 @@ const UnpredictableSalesWingIt = () => {
           </div>
 
           {/* Mistake 3 */}
-          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Mistake #3: Selling Features Instead of Solving Problems</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-2">
+            <span className="bg-destructive text-white text-sm font-bold px-2.5 py-0.5 rounded-md">#3</span>
+            Selling Features Instead of Solving Problems
+          </h3>
 
           <p className="text-foreground/90 leading-relaxed">
             <strong>The Problem:</strong> You talk about what you do instead of what problem you solve.
@@ -294,7 +283,7 @@ const UnpredictableSalesWingIt = () => {
             <em>Example:</em> "We install HVAC systems" instead of "We fix your uncomfortable home so you can enjoy it regardless of weather."
           </p>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium mb-3"><strong>The Fix:</strong> Lead with their problem:</p>
             <ol className="list-decimal pl-6 space-y-2 text-foreground/80 m-0">
               <li>"Are you frustrated that your home is too hot/cold and your current system can't keep up?"</li>
@@ -305,23 +294,26 @@ const UnpredictableSalesWingIt = () => {
           </div>
 
           {/* Mistake 4 */}
-          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Mistake #4: No Sales Pipeline Visibility</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-2">
+            <span className="bg-destructive text-white text-sm font-bold px-2.5 py-0.5 rounded-md">#4</span>
+            No Sales Pipeline Visibility
+          </h3>
 
           <p className="text-foreground/90 leading-relaxed">
             <strong>The Problem:</strong> You don't know where your deals are in the buying process. You're surprised by lost deals. You can't forecast revenue. You can't prioritize your time.
           </p>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-navy))]/10 to-[hsl(var(--biz-navy))]/5 border border-[hsl(var(--biz-navy))]/20 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium mb-3"><strong>The Fix:</strong> Create a simple sales pipeline:</p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse my-3">
                 <thead>
-                  <tr className="bg-[hsl(var(--biz-navy))]/10">
-                    <th className="border border-border p-3 text-left text-foreground font-semibold">Leads</th>
-                    <th className="border border-border p-3 text-left text-foreground font-semibold">Qualified</th>
-                    <th className="border border-border p-3 text-left text-foreground font-semibold">Proposal</th>
-                    <th className="border border-border p-3 text-left text-foreground font-semibold">Negotiation</th>
-                    <th className="border border-border p-3 text-left text-foreground font-semibold">Closed Won/Lost</th>
+                  <tr className="bg-[hsl(var(--biz-navy))]/15">
+                    <th className="border border-[hsl(var(--biz-navy))]/20 p-3 text-left text-foreground font-semibold">Leads</th>
+                    <th className="border border-[hsl(var(--biz-navy))]/20 p-3 text-left text-foreground font-semibold">Qualified</th>
+                    <th className="border border-[hsl(var(--biz-navy))]/20 p-3 text-left text-foreground font-semibold">Proposal</th>
+                    <th className="border border-[hsl(var(--biz-navy))]/20 p-3 text-left text-foreground font-semibold">Negotiation</th>
+                    <th className="border border-[hsl(var(--biz-navy))]/20 p-3 text-left text-foreground font-semibold">Closed Won/Lost</th>
                   </tr>
                 </thead>
               </table>
@@ -330,13 +322,16 @@ const UnpredictableSalesWingIt = () => {
           </div>
 
           {/* Mistake 5 */}
-          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground">Mistake #5: No Referral or Repeat Business System</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-2">
+            <span className="bg-destructive text-white text-sm font-bold px-2.5 py-0.5 rounded-md">#5</span>
+            No Referral or Repeat Business System
+          </h3>
 
           <p className="text-foreground/90 leading-relaxed">
             <strong>The Problem:</strong> You hope for referrals. You assume repeat business happens naturally. Reality: Referrals and repeat business are the highest ROI revenue source. But they don't happen automatically.
           </p>
 
-          <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-green))]/10 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 my-6 shadow-sm">
             <p className="text-foreground font-medium mb-3"><strong>The Fix:</strong> Create systematic processes:</p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80 m-0">
               <li><strong>Referral system:</strong> "Who else in your network would benefit from [result we achieved]?"</li>
@@ -348,62 +343,27 @@ const UnpredictableSalesWingIt = () => {
 
           {/* What a Working Sales Funnel Looks Like */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/10">
+            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/15 shadow-sm">
               <CheckCircle className="w-6 h-6 text-[hsl(var(--biz-green))]" />
             </div>
             What a Working Sales Funnel Looks Like
           </h2>
 
           <div className="space-y-6 my-6">
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground mb-3">Stage 1: Lead Generation (Awareness)</h4>
-              <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
-                <li>Website with clear value proposition</li>
-                <li>Google Ads targeting your ideal customer</li>
-                <li>Referrals from existing customers</li>
-                <li>Content marketing (guides, checklists)</li>
-                <li>Networking/partnerships</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground mb-3">Stage 2: Lead Qualification (Interest)</h4>
-              <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
-                <li>Phone call or form asking qualifying questions</li>
-                <li>Score leads based on fit (budget, authority, need, timeline)</li>
-                <li>Nurture unqualified leads for future</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground mb-3">Stage 3: Needs Assessment (Consideration)</h4>
-              <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
-                <li>Discovery call to understand their specific problem</li>
-                <li>Present tailored solution</li>
-                <li>Handle objections</li>
-                <li>Build value</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground mb-3">Stage 4: Proposal & Close (Decision)</h4>
-              <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
-                <li>Formal proposal with clear pricing, terms, value</li>
-                <li>Follow-up sequence</li>
-                <li>Address final objections</li>
-                <li>Ask for the business</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/50 border border-border rounded-xl p-5">
-              <h4 className="text-lg font-bold text-foreground mb-3">Stage 5: Delivery & Retention</h4>
-              <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
-                <li>Onboard successfully</li>
-                <li>Deliver exceptional results</li>
-                <li>Ask for testimonials/referrals</li>
-                <li>Plan for repeat business</li>
-              </ul>
-            </div>
+            {[
+              { stage: "Stage 1: Lead Generation (Awareness)", items: ["Website with clear value proposition", "Google Ads targeting your ideal customer", "Referrals from existing customers", "Content marketing (guides, checklists)", "Networking/partnerships"], color: "from-primary/5 to-primary/0 border-primary/15" },
+              { stage: "Stage 2: Lead Qualification (Interest)", items: ["Phone call or form asking qualifying questions", "Score leads based on fit (budget, authority, need, timeline)", "Nurture unqualified leads for future"], color: "from-[hsl(var(--biz-green))]/8 to-[hsl(var(--biz-green))]/0 border-[hsl(var(--biz-green))]/20" },
+              { stage: "Stage 3: Needs Assessment (Consideration)", items: ["Discovery call to understand their specific problem", "Present tailored solution", "Handle objections", "Build value"], color: "from-[hsl(var(--biz-navy))]/8 to-[hsl(var(--biz-navy))]/0 border-[hsl(var(--biz-navy))]/15" },
+              { stage: "Stage 4: Proposal & Close (Decision)", items: ["Formal proposal with clear pricing, terms, value", "Follow-up sequence", "Address final objections", "Ask for the business"], color: "from-accent/30 to-accent/5 border-accent/20" },
+              { stage: "Stage 5: Delivery & Retention", items: ["Onboard successfully", "Deliver exceptional results", "Ask for testimonials/referrals", "Plan for repeat business"], color: "from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/0 border-[hsl(var(--biz-green))]/25" },
+            ].map((s) => (
+              <div key={s.stage} className={`bg-gradient-to-r ${s.color} border rounded-xl p-5 shadow-sm`}>
+                <h4 className="text-lg font-bold text-foreground mb-3">{s.stage}</h4>
+                <ul className="list-disc pl-6 space-y-1 text-foreground/80 m-0">
+                  {s.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            ))}
           </div>
 
           <p className="text-foreground/90 leading-relaxed">
@@ -412,33 +372,25 @@ const UnpredictableSalesWingIt = () => {
 
           {/* The Real Cost of Winging It */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-destructive/10">
+            <div className="p-2 rounded-lg bg-destructive/15 shadow-sm">
               <DollarSign className="w-6 h-6 text-destructive" />
             </div>
             The Real Cost of "Winging It"
           </h2>
 
           <div className="space-y-4 my-6">
-            <div className="flex items-start gap-3">
-              <DollarSign className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-              <p className="text-foreground/90 m-0"><strong>Lost Revenue:</strong> Every unqualified lead you chase costs time. Every missed follow-up costs a deal. Every month without pipeline visibility costs forecasting accuracy.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <TrendingDown className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-              <p className="text-foreground/90 m-0"><strong>Opportunity Cost:</strong> Time spent chasing bad leads is time not spent on good ones. Time spent firefighting is time not spent on strategy.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-              <p className="text-foreground/90 m-0"><strong>Scalability Ceiling:</strong> You can't hire salespeople without a process. You can't delegate leads without systems. You can't grow revenue without repeatable sales.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <RefreshCw className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-              <p className="text-foreground/90 m-0"><strong>Cash Flow Chaos:</strong> Unpredictable revenue means unpredictable cash flow. You can't plan. You can't invest. You're always reacting.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Users className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-              <p className="text-foreground/90 m-0"><strong>Personal Burnout:</strong> Constant firefighting is exhausting. You're always "on." No systems means no boundaries.</p>
-            </div>
+            {[
+              { icon: <DollarSign className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, label: "Lost Revenue:", text: "Every unqualified lead you chase costs time. Every missed follow-up costs a deal. Every month without pipeline visibility costs forecasting accuracy." },
+              { icon: <TrendingDown className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, label: "Opportunity Cost:", text: "Time spent chasing bad leads is time not spent on good ones. Time spent firefighting is time not spent on strategy." },
+              { icon: <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, label: "Scalability Ceiling:", text: "You can't hire salespeople without a process. You can't delegate leads without systems. You can't grow revenue without repeatable sales." },
+              { icon: <RefreshCw className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, label: "Cash Flow Chaos:", text: "Unpredictable revenue means unpredictable cash flow. You can't plan. You can't invest. You're always reacting." },
+              { icon: <Users className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, label: "Personal Burnout:", text: "Constant firefighting is exhausting. You're always \"on.\" No systems means no boundaries." },
+            ].map((item) => (
+              <div key={item.label} className="flex items-start gap-3 bg-destructive/5 border border-destructive/10 rounded-lg p-4">
+                {item.icon}
+                <p className="text-foreground/90 m-0"><strong>{item.label}</strong> {item.text}</p>
+              </div>
+            ))}
           </div>
 
           <p className="text-foreground/90 leading-relaxed">
@@ -447,15 +399,15 @@ const UnpredictableSalesWingIt = () => {
 
           {/* The Transformation */}
           <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/10">
+            <div className="p-2 rounded-lg bg-[hsl(var(--biz-green))]/15 shadow-sm">
               <Lightbulb className="w-6 h-6 text-[hsl(var(--biz-green))]" />
             </div>
             The Transformation
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-6">
-              <h4 className="text-lg font-bold text-foreground mb-3">Before</h4>
+            <div className="bg-gradient-to-br from-destructive/10 to-destructive/5 border border-destructive/30 rounded-xl p-6 shadow-sm">
+              <h4 className="text-lg font-bold text-destructive mb-3">❌ Before</h4>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80 m-0">
                 <li>Reactive, unpredictable revenue</li>
                 <li>Constant firefighting</li>
@@ -463,8 +415,8 @@ const UnpredictableSalesWingIt = () => {
                 <li>Growth capped by your capacity</li>
               </ul>
             </div>
-            <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6">
-              <h4 className="text-lg font-bold text-foreground mb-3">After</h4>
+            <div className="bg-gradient-to-br from-[hsl(var(--biz-green))]/15 to-[hsl(var(--biz-green))]/5 border border-[hsl(var(--biz-green))]/30 rounded-xl p-6 shadow-sm">
+              <h4 className="text-lg font-bold text-[hsl(var(--biz-green))] mb-3">✅ After</h4>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80 m-0">
                 <li>Predictable pipeline</li>
                 <li>Repeatable process</li>
@@ -483,7 +435,7 @@ const UnpredictableSalesWingIt = () => {
           </p>
 
           {/* Summary Box */}
-          <div className="bg-muted border border-border rounded-xl p-6 my-8">
+          <div className="bg-gradient-to-r from-[hsl(var(--biz-navy))]/10 to-muted border border-[hsl(var(--biz-navy))]/20 rounded-xl p-6 my-8 shadow-sm">
             <h3 className="text-xl font-bold text-foreground mb-3">Key Takeaways</h3>
             <p className="text-foreground/80 m-0">
               Broken sales processes are the hidden growth killer for small and mid-size businesses. Without formalized sales funnels, qualification, follow-up systems, pipeline visibility, and retention processes, revenue remains unpredictable, opportunities disappear, and growth stalls. The top 5 mistakes—no qualification, no follow-up, selling features not problems, no pipeline tracking, and no referral systems—cost businesses millions in lost revenue. A structured <Link to="/blog/feast-or-famine-cycle-small-business" className="text-primary hover:text-primary/80 underline">sales funnel transforms reactive firefighting</Link> into predictable, scalable growth.
@@ -491,7 +443,7 @@ const UnpredictableSalesWingIt = () => {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-br from-[hsl(var(--biz-navy))] to-[hsl(var(--biz-navy))]/90 rounded-2xl p-8 my-10 text-white">
+          <div className="bg-gradient-to-br from-[hsl(var(--biz-navy))] to-[hsl(var(--biz-navy))]/90 rounded-2xl p-8 my-10 text-white shadow-lg">
             <div className="flex items-start gap-4">
               <Building className="w-10 h-10 text-[hsl(var(--biz-green))] flex-shrink-0" />
               <div>
@@ -501,20 +453,13 @@ const UnpredictableSalesWingIt = () => {
                 </p>
                 <Link 
                   to="/pricing" 
-                  className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-2 bg-[hsl(var(--biz-green))] hover:bg-[hsl(var(--biz-green))]/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md"
                 >
                   Get Your Business Health Assessment
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-          </div>
-
-          {/* Author byline */}
-          <div className="border-t border-border pt-6 mt-10">
-            <p className="text-sm text-muted-foreground">
-              <strong>About the Author:</strong> The BizHealth.ai Research Team combines decades of experience in business operations, sales strategy, and growth consulting for small and mid-size businesses. Their insights are grounded in real-world data from hundreds of business health assessments.
-            </p>
           </div>
 
         </div>

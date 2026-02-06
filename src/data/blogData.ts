@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Unpredictable Sales: Why Your 'Wing It' Sales Approach Is Killing Your Growth",
+    excerpt: "Your sales process is broken—and it's costing you millions. Learn the 5 sales funnel stages, top 5 sales mistakes, and how to build repeatable systems for predictable revenue growth.",
+    author: "BizHealth.ai Research Team",
+    date: "February 5, 2025",
+    readTime: "12 min read",
+    category: "Business Strategy, Operations, Growth & Scaling",
+    slug: "/blog/unpredictable-sales-wing-it-approach",
+    imageUrl: "/assets/images/unpredictable-sales-wing-it-approach-hero.jpg",
+    altText: "Business team reviewing sales performance dashboard with declining metrics - unpredictable sales approach challenges for SMBs",
+    keywords: "sales funnel, sales process, small business sales, predictable revenue, sales pipeline, lead qualification, follow-up process, sales mistakes, sales systems, SMB growth, sales strategy 2025, repeatable sales process, sales roulette, wing it sales, unpredictable sales, revenue growth, sales funnel stages, lead generation, lead nurturing, sales pipeline visibility, referral system, repeat business, customer retention sales, sales qualification, close deals, revenue forecasting"
+  },
+  {
     title: "The Commodity Trap: Why Competing on Price Is a Guaranteed Path to Business Failure",
     excerpt: "When your business becomes indistinguishable from competitors, price becomes the only variable. Learn 5 differentiation strategies that create premium pricing power and sustainable growth.",
     author: "BizHealth.ai Research Team",

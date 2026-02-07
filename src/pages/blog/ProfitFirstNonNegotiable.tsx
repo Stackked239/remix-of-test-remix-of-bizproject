@@ -391,42 +391,74 @@ const ProfitFirstNonNegotiable = () => {
           </div>
 
           {/* Internal Links / CTA */}
-          <div className="bg-card border-2 border-primary/20 rounded-xl p-8 my-10">
-            <h3 className="text-xl font-bold text-foreground mb-4">Discover Where Your Financial Gaps Are</h3>
-            <p className="text-foreground/90 leading-relaxed mb-4">
-              Comprehensive <Link to="/blog/how-to-check-your-business-health" className="text-primary hover:text-primary/80 underline font-medium">business health assessments</Link>—tools like BizHealth.ai—can help you identify exactly where your financial gaps are, calculate your real profitability potential, and build a roadmap that transforms reactive cash flow management into intentional, profitable business growth.
-            </p>
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-elegant mb-4"
-            >
-              Learn More about Business Health Assessment <ArrowRight className="w-4 h-4" />
-            </Link>
-            <div className="flex flex-wrap gap-3">
+          <div className="relative overflow-hidden bg-gradient-to-br from-primary/[0.07] via-[hsl(var(--biz-green))]/[0.05] to-primary/[0.03] border-2 border-primary/20 rounded-2xl p-8 md:p-10 my-10">
+            {/* Decorative accent */}
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-[hsl(var(--biz-green))] to-primary rounded-t-2xl" />
+            <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <Target className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <span className="text-xs font-bold uppercase tracking-widest text-[hsl(var(--biz-green))]">Free Assessment</span>
+              </div>
+              
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Discover Where Your Financial Gaps Are</h3>
+              
+              <p className="text-foreground/80 leading-relaxed mb-6 text-lg max-w-2xl">
+                Comprehensive <Link to="/blog/how-to-check-your-business-health" className="text-primary hover:text-primary/80 underline font-medium">business health assessments</Link>—tools like BizHealth.ai—can help you identify exactly where your financial gaps are, calculate your real profitability potential, and build a roadmap that transforms reactive cash flow management into intentional, profitable business growth.
+              </p>
+
+              {/* Value props */}
+              <div className="grid sm:grid-cols-3 gap-4 mb-8">
+                <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">Identify Profit Leaks</p>
+                    <p className="text-muted-foreground text-xs">Find where money is silently draining</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+                  <BarChart3 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">Benchmark Performance</p>
+                    <p className="text-muted-foreground text-xs">See how you compare to industry standards</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+                  <Lightbulb className="w-5 h-5 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">Get Your Roadmap</p>
+                    <p className="text-muted-foreground text-xs">Actionable steps to profitability</p>
+                  </div>
+                </div>
+              </div>
+
               <Link 
-                to="/blog/small-business-financials-know-your-numbers" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+                to="/" 
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-elegant"
               >
-                Know Your Numbers <ArrowRight className="w-4 h-4" />
+                Get Your Free Business Health Assessment <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link 
-                to="/blog/cash-flow-crisis-management" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Cash Flow Crisis Management <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link 
-                to="/blog/chasing-sales-not-profits" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Chasing Sales, Not Profits <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link 
-                to="/blog/fractional-cfo-toolkit" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Fractional CFO Toolkit <ArrowRight className="w-4 h-4" />
-              </Link>
+
+              <div className="mt-8 pt-6 border-t border-border/50">
+                <p className="text-sm text-muted-foreground mb-3 font-medium">Continue Reading</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link to="/blog/small-business-financials-know-your-numbers" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
+                    Know Your Numbers <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link to="/blog/cash-flow-crisis-management" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
+                    Cash Flow Crisis Management <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link to="/blog/chasing-sales-not-profits" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
+                    Chasing Sales, Not Profits <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link to="/blog/fractional-cfo-toolkit" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
+                    Fractional CFO Toolkit <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 

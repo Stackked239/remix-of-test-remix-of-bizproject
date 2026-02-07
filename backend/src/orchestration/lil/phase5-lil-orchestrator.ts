@@ -20,6 +20,7 @@ import {
 } from '../../types/lil-pipeline.types.js';
 import { CategoryCode } from '../../data/question-category-mapping-lil.js';
 import { buildLilEmployeesNewsletter } from './lil-employees-newsletter.builder.js';
+import { buildLilManagerStrategyReport } from './lil-manager-strategy-report.builder.js';
 
 const anthropic = new Anthropic();
 
@@ -1625,6 +1626,11 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
     if (reportType === 'employees') {
       logger.info({ reportType }, 'Routing to newsletter builder for employees report');
       const result = await buildLilEmployeesNewsletter(idmOutput, businessOverview);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'managersStrategy') {
+      logger.info({ reportType }, 'Routing to dedicated strategy report builder');
+      const result = await buildLilManagerStrategyReport(idmOutput, businessOverview, bluf);
       report = result.report;
       tokensUsed = result.tokensUsed;
     } else {

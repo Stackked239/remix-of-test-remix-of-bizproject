@@ -570,8 +570,6 @@ const NepotismFavoritism = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-
       <RelatedArticles articles={[
         {
           title: "Stop Blaming the Labor Market: Your Employee Turnover Problem Starts in the Mirror",

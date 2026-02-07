@@ -736,8 +736,6 @@ const SharksInTheWater = () => {
         </div>
       </article>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles 
         articles={[
           {

@@ -477,7 +477,6 @@ const IdentifyingSMBLeadershipBlindSpots = () => {
           </div>
 
           {/* Related Articles */}
-          <GradientDivider variant="green-gold" />
           <RelatedArticles articles={relatedArticles} />
         </article>
 

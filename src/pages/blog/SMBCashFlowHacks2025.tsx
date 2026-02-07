@@ -407,8 +407,6 @@ const SMBCashFlowHacks2025 = () => {
           </div>
         </article>
 
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles articles={relatedArticles} />
         <GlobalFooter />
         <PromotionalBanner />

@@ -559,8 +559,6 @@ const CompleteGuideBusinessHealthAssessment2026 = () => {
           </div>
 
           {/* Related Articles */}
-          <GradientDivider variant="green-gold" />
-          
           <div className="container mx-auto px-4 mt-16">
             <div className="max-w-4xl mx-auto">
               <RelatedArticles articles={[

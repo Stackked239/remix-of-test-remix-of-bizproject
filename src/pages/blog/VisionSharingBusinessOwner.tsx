@@ -816,7 +816,6 @@ const VisionSharingBusinessOwner = () => {
         </article>
 
         {/* Related Articles */}
-        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={relatedArticles} />
       </main>
       

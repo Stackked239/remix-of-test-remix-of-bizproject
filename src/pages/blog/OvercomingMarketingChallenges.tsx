@@ -744,8 +744,6 @@ const OvercomingMarketingChallenges = () => {
         </article>
 
         {/* Related Articles */}
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles 
           articles={[
             { title: "Small Business Financials: Know Your Numbers", slug: "/blog/small-business-financials-know-your-numbers", category: "Financials", excerpt: "Master financial management with this comprehensive guide." },

@@ -618,8 +618,6 @@ const ChaosToClarity = () => {
               </section>
 
               {/* Related Articles */}
-              <GradientDivider variant="green-gold" />
-              
               <RelatedArticles articles={relatedArticles} />
             </div>
           </div>

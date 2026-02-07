@@ -850,8 +850,6 @@ const LeanPrinciplesSmallBusiness = () => {
         </div>
       </article>
       
-      <GradientDivider />
-      
       <RelatedArticles 
         articles={[
           {

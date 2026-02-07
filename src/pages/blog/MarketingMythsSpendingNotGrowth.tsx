@@ -555,8 +555,6 @@ const MarketingMythsSpendingNotGrowth = () => {
         </div>
       </article>
 
-      <GradientDivider variant="green-gold" className="mb-0" />
-      
       <RelatedArticles 
         articles={[
           {

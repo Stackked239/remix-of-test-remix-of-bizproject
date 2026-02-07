@@ -512,7 +512,6 @@ const FinancialStewardshipEveryonesResponsibility = () => {
         </div>
 
         {/* Internal Links Section */}
-        <GradientDivider variant="green-gold" />
         <RelatedArticles articles={[
           {
             title: "Cash Flow Crisis Management: Why 60% of Small Businesses Are Down in 2025",

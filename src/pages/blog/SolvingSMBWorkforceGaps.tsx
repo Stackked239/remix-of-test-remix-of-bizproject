@@ -353,8 +353,6 @@ const SolvingSMBWorkforceGaps = () => {
           </div>
         </article>
 
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles articles={[
           {
             title: "Leadership Stress Management",

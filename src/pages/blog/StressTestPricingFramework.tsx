@@ -824,7 +824,6 @@ const StressTestPricingFramework = () => {
           </section>
 
           {/* Related Articles */}
-          <GradientDivider variant="green-gold" />
           <RelatedArticles articles={relatedArticles} />
 
           {/* Author Bio */}

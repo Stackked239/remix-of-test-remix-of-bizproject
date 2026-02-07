@@ -546,8 +546,6 @@ const R2A2JobDescriptions = () => {
         </article>
 
         {/* Related Articles */}
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles 
           articles={[
             {

@@ -902,8 +902,6 @@ const SchedulingFlexibilityCostingYou = () => {
         </div>
       </article>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles 
         articles={[
           {

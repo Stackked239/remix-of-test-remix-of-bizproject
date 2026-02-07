@@ -166,8 +166,6 @@ const RetailRemoteTools = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles articles={[
         {
           title: "Solving SMB Workforce Gaps with Talent Analytics",

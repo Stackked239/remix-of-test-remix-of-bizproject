@@ -537,8 +537,6 @@ const ExponentialPowerEmpowerment = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-
       <RelatedArticles articles={[
         {
           title: "Build A High-Performing Team: The Unglamorous Truth About What Actually Works",

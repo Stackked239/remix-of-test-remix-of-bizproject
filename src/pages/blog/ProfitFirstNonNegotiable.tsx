@@ -75,14 +75,14 @@ const ProfitFirstNonNegotiable = () => {
 
           <p className="text-foreground/90 leading-relaxed">You prioritize:</p>
 
-          <ol className="space-y-2 text-foreground/90 mb-6">
+          <ul className="space-y-2 text-foreground/90 mb-6 list-disc pl-6">
             <li><strong>Payroll</strong> (gotta pay your team)</li>
             <li><strong>Rent</strong> (gotta keep the doors open)</li>
             <li><strong>Suppliers</strong> (gotta keep production running)</li>
             <li><strong>Marketing</strong> (gotta get more customers)</li>
             <li><strong>Taxes</strong> (gotta stay compliant)</li>
             <li><strong>Profit</strong> (whatever's left, if anything)</li>
-          </ol>
+          </ul>
 
           <p className="text-foreground/90 leading-relaxed">
             This is <strong>Profit Last</strong>. And it's killing your business.
@@ -177,26 +177,26 @@ const ProfitFirstNonNegotiable = () => {
             The 5 Core Profit First Accounts (And What Goes In Each)
           </h2>
 
-          <div className="space-y-6 my-8">
-            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+          <div className="space-y-0 my-8 rounded-xl overflow-hidden border border-border">
+            <div className="bg-primary/5 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Banknote className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <Banknote className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground m-0">1. Revenue Account (100%)</h3>
               </div>
               <p className="text-foreground/90 mb-0">All revenue lands here first. Transfer out according to your percentages. Never spend from this account.</p>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+            <div className="bg-[hsl(var(--biz-green))]/5 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[hsl(var(--biz-green))]/10 rounded-lg flex items-center justify-center">
-                  <PiggyBank className="w-5 h-5 text-[hsl(var(--biz-green))]" />
+                <div className="w-10 h-10 bg-[hsl(var(--biz-green))] rounded-lg flex items-center justify-center">
+                  <PiggyBank className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground m-0">2. Profit Account (5-10%)</h3>
               </div>
               <p className="text-foreground/90 mb-2"><strong>Untouchable.</strong> This is your business's reward for good performance. Use quarterly for:</p>
-              <ul className="text-foreground/90 space-y-1 mb-0">
+              <ul className="text-foreground/90 space-y-1 mb-0 list-disc pl-6">
                 <li>Owner bonuses</li>
                 <li>Debt reduction</li>
                 <li>Business reinvestment</li>
@@ -204,30 +204,30 @@ const ProfitFirstNonNegotiable = () => {
               </ul>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+            <div className="bg-primary/5 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground m-0">3. Owner's Pay Account (30-50%)</h3>
               </div>
               <p className="text-foreground/90 mb-0">Your reasonable compensation. What you'd pay yourself if you were an employee. Covers personal living expenses. Transfer to personal account monthly.</p>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+            <div className="bg-[hsl(var(--biz-green))]/5 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-accent/50 rounded-lg flex items-center justify-center">
-                  <Calculator className="w-5 h-5 text-foreground" />
+                <div className="w-10 h-10 bg-[hsl(var(--biz-green))] rounded-lg flex items-center justify-center">
+                  <Calculator className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground m-0">4. Tax Account (15-25%)</h3>
               </div>
               <p className="text-foreground/90 mb-0">Government's share. Quarterly transfers to tax reserves. No surprises at tax time.</p>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+            <div className="bg-primary/5 p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-muted-foreground" />
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground m-0">5. Operating Expenses Account (50-65%)</h3>
               </div>
@@ -243,18 +243,18 @@ const ProfitFirstNonNegotiable = () => {
             <table className="w-full border-collapse border border-border rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-muted">
-                  <th className="border border-border px-4 py-3 text-left text-foreground font-bold">Profit</th>
-                  <th className="border border-border px-4 py-3 text-left text-foreground font-bold">Owner's Pay</th>
-                  <th className="border border-border px-4 py-3 text-left text-foreground font-bold">Tax</th>
-                  <th className="border border-border px-4 py-3 text-left text-foreground font-bold">Operating Expenses</th>
+                  <th className="border border-border px-4 py-3 text-center text-foreground font-bold">Profit</th>
+                  <th className="border border-border px-4 py-3 text-center text-foreground font-bold">Owner's Pay</th>
+                  <th className="border border-border px-4 py-3 text-center text-foreground font-bold">Tax</th>
+                  <th className="border border-border px-4 py-3 text-center text-foreground font-bold">Operating Expenses</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-border px-4 py-3 text-[hsl(var(--biz-green))] font-bold">10%</td>
-                  <td className="border border-border px-4 py-3 text-foreground/90">40%</td>
-                  <td className="border border-border px-4 py-3 text-foreground/90">20%</td>
-                  <td className="border border-border px-4 py-3 text-foreground/90">30%</td>
+                  <td className="border border-border px-4 py-3 text-center text-[hsl(var(--biz-green))] font-bold">10%</td>
+                  <td className="border border-border px-4 py-3 text-center text-foreground/90">40%</td>
+                  <td className="border border-border px-4 py-3 text-center text-foreground/90">20%</td>
+                  <td className="border border-border px-4 py-3 text-center text-foreground/90">30%</td>
                 </tr>
               </tbody>
             </table>
@@ -269,46 +269,28 @@ const ProfitFirstNonNegotiable = () => {
             Why Most Businesses Fail at Profit First (And How to Avoid It)
           </h2>
 
-          <div className="space-y-8 my-8">
-            {/* Mistake 1 */}
-            <div className="border-l-4 border-destructive pl-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">Mistake #1: Setting Unrealistic Percentages</h3>
-              <p className="text-foreground/90 mb-2"><strong>The Problem:</strong> You read Profit First and immediately try 30% profit allocation.</p>
-              <p className="text-foreground/90 mb-2"><strong>Reality:</strong> Most businesses start at 1-5% profit. Gradually increase as you get leaner.</p>
-              <p className="text-foreground/90 mb-0"><strong>Fix:</strong> Start with Current Allocation Percentages (CAPs) based on your actual numbers. Then set Target Allocation Percentages (TAPs) and bridge the gap quarterly.</p>
-            </div>
-
-            {/* Mistake 2 */}
-            <div className="border-l-4 border-destructive pl-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">Mistake #2: Treating It Like Accounting</h3>
-              <p className="text-foreground/90 mb-2"><strong>The Problem:</strong> You set up accounts but don't change behavior.</p>
-              <p className="text-foreground/90 mb-2"><strong>Reality:</strong> Profit First is behavioral finance. The separate accounts create psychological discipline.</p>
-              <p className="text-foreground/90 mb-0"><strong>Fix:</strong> Ritualize allocations. Every 10th and 25th of the month (or weekly), allocate revenue. Make it non-negotiable like brushing your teeth.</p>
-            </div>
-
-            {/* Mistake 3 */}
-            <div className="border-l-4 border-destructive pl-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">Mistake #3: Ignoring Cash Flow Cycles</h3>
-              <p className="text-foreground/90 mb-2"><strong>The Problem:</strong> You allocate the same percentages every month, regardless of revenue patterns.</p>
-              <p className="text-foreground/90 mb-2"><strong>Reality:</strong> Service businesses have seasonality. Manufacturing has production cycles.</p>
-              <p className="text-foreground/90 mb-0"><strong>Fix:</strong> Quarterly reviews. Adjust percentages based on cash flow cycles. Some months allocate more aggressively. Others less.</p>
-            </div>
-
-            {/* Mistake 4 */}
-            <div className="border-l-4 border-destructive pl-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">Mistake #4: Not Cutting Expenses Ruthlessly</h3>
-              <p className="text-foreground/90 mb-2"><strong>The Problem:</strong> Operating Expenses run out, so you dip into Profit or Owner's Pay.</p>
-              <p className="text-foreground/90 mb-2"><strong>Reality:</strong> This defeats the purpose. Expenses must fit the allocation.</p>
-              <p className="text-foreground/90 mb-0"><strong>Fix:</strong> Quarterly expense audits. Ask: "Is this expense generating 3x return? Can we negotiate better terms? Can we eliminate it?"</p>
-            </div>
-
-            {/* Mistake 5 */}
-            <div className="border-l-4 border-destructive pl-6">
-              <h3 className="text-xl font-bold text-foreground mb-2">Mistake #5: Solo Implementation</h3>
-              <p className="text-foreground/90 mb-2"><strong>The Problem:</strong> You try to implement alone without accountability.</p>
-              <p className="text-foreground/90 mb-2"><strong>Reality:</strong> Profit First requires discipline. Accountability accelerates success.</p>
-              <p className="text-foreground/90 mb-0"><strong>Fix:</strong> Get a Profit First coach or accountability partner (at least initially). Or join a mastermind. External perspective keeps you honest.</p>
-            </div>
+          <div className="space-y-6 my-8">
+            {[
+              { num: 1, title: "Setting Unrealistic Percentages", icon: <TrendingDown className="w-5 h-5" />, problem: "You read Profit First and immediately try 30% profit allocation.", reality: "Most businesses start at 1-5% profit. Gradually increase as you get leaner.", fix: "Start with Current Allocation Percentages (CAPs) based on your actual numbers. Then set Target Allocation Percentages (TAPs) and bridge the gap quarterly." },
+              { num: 2, title: "Treating It Like Accounting", icon: <Calculator className="w-5 h-5" />, problem: "You set up accounts but don't change behavior.", reality: "Profit First is behavioral finance. The separate accounts create psychological discipline.", fix: "Ritualize allocations. Every 10th and 25th of the month (or weekly), allocate revenue. Make it non-negotiable like brushing your teeth." },
+              { num: 3, title: "Ignoring Cash Flow Cycles", icon: <BarChart3 className="w-5 h-5" />, problem: "You allocate the same percentages every month, regardless of revenue patterns.", reality: "Service businesses have seasonality. Manufacturing has production cycles.", fix: "Quarterly reviews. Adjust percentages based on cash flow cycles. Some months allocate more aggressively. Others less." },
+              { num: 4, title: "Not Cutting Expenses Ruthlessly", icon: <DollarSign className="w-5 h-5" />, problem: "Operating Expenses run out, so you dip into Profit or Owner's Pay.", reality: "This defeats the purpose. Expenses must fit the allocation.", fix: 'Quarterly expense audits. Ask: "Is this expense generating 3x return? Can we negotiate better terms? Can we eliminate it?"' },
+              { num: 5, title: "Solo Implementation", icon: <Users className="w-5 h-5" />, problem: "You try to implement alone without accountability.", reality: "Profit First requires discipline. Accountability accelerates success.", fix: "Get a Profit First coach or accountability partner (at least initially). Or join a mastermind. External perspective keeps you honest." },
+            ].map((m) => (
+              <div key={m.num} className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center text-destructive">
+                    {m.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground m-0">Mistake #{m.num}: {m.title}</h3>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-foreground/90 mb-0"><span className="inline-block bg-destructive/10 text-destructive text-xs font-bold px-2 py-0.5 rounded mr-2">Problem</span>{m.problem}</p>
+                  <p className="text-foreground/90 mb-0"><span className="inline-block bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded mr-2">Reality</span>{m.reality}</p>
+                  <p className="text-foreground/90 mb-0"><span className="inline-block bg-[hsl(var(--biz-green))]/10 text-[hsl(var(--biz-green))] text-xs font-bold px-2 py-0.5 rounded mr-2">Fix</span>{m.fix}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* The Profit First Mindset Shift */}
@@ -348,7 +330,7 @@ const ProfitFirstNonNegotiable = () => {
           </div>
 
           <p className="text-foreground/90 leading-relaxed">This shift creates:</p>
-          <ul className="space-y-2 text-foreground/90 mb-6">
+          <ul className="space-y-2 text-foreground/90 mb-6 list-disc pl-6">
             <li><strong>Behavioral discipline</strong> (separate accounts)</li>
             <li><strong>Profitability habit</strong> (regular allocations)</li>
             <li><strong>Strategic spending</strong> (only what's budgeted)</li>
@@ -360,23 +342,18 @@ const ProfitFirstNonNegotiable = () => {
             Common Objections (And Why They're Wrong)
           </h2>
 
-          <div className="space-y-6 my-8">
-            <div className="bg-muted/50 border border-border rounded-xl p-6">
-              <p className="text-foreground/90 italic mb-3">"My business isn't profitable enough to take profit first."</p>
-              <p className="text-foreground/90 font-medium mb-0"><strong>Wrong.</strong> Start at 1%. Even unprofitable businesses can allocate 1% and force expense discipline. Profitability follows behavior change.</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-6">
-              <p className="text-foreground/90 italic mb-3">"I need all the cash for growth."</p>
-              <p className="text-foreground/90 font-medium mb-0"><strong>Wrong.</strong> Growth without profit is expansion of losses. Profitable businesses grow sustainably. Unprofitable businesses grow until they die.</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-6">
-              <p className="text-foreground/90 italic mb-3">"My accountant will hate this."</p>
-              <p className="text-foreground/90 font-medium mb-0"><strong>Wrong.</strong> Good accountants embrace Profit First. Bad ones defend outdated thinking. Find one who supports profitability-first mindset.</p>
-            </div>
-            <div className="bg-muted/50 border border-border rounded-xl p-6">
-              <p className="text-foreground/90 italic mb-3">"This is too complicated for my simple business."</p>
-              <p className="text-foreground/90 font-medium mb-0"><strong>Wrong.</strong> 5 bank accounts. 4 transfers. Monthly review. Simpler than QuickBooks reconciliation.</p>
-            </div>
+          <div className="space-y-0 my-8 rounded-xl overflow-hidden border border-border">
+            {[
+              { objection: "My business isn't profitable enough to take profit first.", response: "Start at 1%. Even unprofitable businesses can allocate 1% and force expense discipline. Profitability follows behavior change." },
+              { objection: "I need all the cash for growth.", response: "Growth without profit is expansion of losses. Profitable businesses grow sustainably. Unprofitable businesses grow until they die." },
+              { objection: "My accountant will hate this.", response: "Good accountants embrace Profit First. Bad ones defend outdated thinking. Find one who supports profitability-first mindset." },
+              { objection: "This is too complicated for my simple business.", response: "5 bank accounts. 4 transfers. Monthly review. Simpler than QuickBooks reconciliation." },
+            ].map((item, i) => (
+              <div key={i} className={`p-6 ${i % 2 === 0 ? 'bg-primary/5' : 'bg-[hsl(var(--biz-green))]/5'}`}>
+                <p className="text-foreground/90 italic mb-3">"{item.objection}"</p>
+                <p className="text-foreground/90 font-medium mb-0"><strong>Wrong.</strong> {item.response}</p>
+              </div>
+            ))}
           </div>
 
           {/* Your First Step */}
@@ -419,6 +396,12 @@ const ProfitFirstNonNegotiable = () => {
             <p className="text-foreground/90 leading-relaxed mb-4">
               Comprehensive <Link to="/blog/how-to-check-your-business-health" className="text-primary hover:text-primary/80 underline font-medium">business health assessments</Link>—tools like BizHealth.ai—can help you identify exactly where your financial gaps are, calculate your real profitability potential, and build a roadmap that transforms reactive cash flow management into intentional, profitable business growth.
             </p>
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-elegant mb-4"
+            >
+              Learn More about Business Health Assessment <ArrowRight className="w-4 h-4" />
+            </Link>
             <div className="flex flex-wrap gap-3">
               <Link 
                 to="/blog/small-business-financials-know-your-numbers" 

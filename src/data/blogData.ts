@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Profit Last Is Killing Your Business: Make Profit First Your Non-Negotiable Reality",
+    excerpt: "Stop treating profit as leftovers. Learn the Profit First system—5 bank accounts, behavioral finance, and allocation strategies that force sustainable profitability for SMBs.",
+    author: "BizHealth.ai Research Team",
+    date: "February 7, 2026",
+    readTime: "12 min read",
+    category: "Financial Management, Business Strategy, Operations",
+    slug: "/blog/profit-first-non-negotiable",
+    imageUrl: "/assets/images/profit-first-hero.jpg",
+    altText: "Small business owners achieving financial goals with profit first strategy - business profitability and cash flow management",
+    keywords: "profit first, profit first system, mike michalowicz, small business profitability, profit allocation, cash flow management, operating expenses, business financial health, SMB profit margins, behavioral finance, profit first accounts, profit first formula, profit last, business profit strategy, owner pay, tax allocation, expense management, bank accounts profit, quarterly review, profitability habit, CAPs TAPs, current allocation percentages, target allocation percentages, profit first mistakes, profit first mindset, business cash flow 2026"
+  },
+  {
     title: "Unpredictable Sales: Why Your 'Wing It' Sales Approach Is Killing Your Growth",
     excerpt: "Your sales process is broken—and it's costing you millions. Learn the 5 sales funnel stages, top 5 sales mistakes, and how to build repeatable systems for predictable revenue growth.",
     author: "BizHealth.ai Research Team",

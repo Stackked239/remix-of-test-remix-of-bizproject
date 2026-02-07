@@ -401,7 +401,7 @@ const ProfitFirstNonNegotiable = () => {
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                   <Target className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-[hsl(var(--biz-green))]">Free Assessment</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[hsl(var(--biz-green))]">Business Health Assessment</span>
               </div>
               
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Discover Where Your Financial Gaps Are</h3>
@@ -439,7 +439,7 @@ const ProfitFirstNonNegotiable = () => {
                 to="/" 
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-elegant"
               >
-                Get Your Free Business Health Assessment <ArrowRight className="w-5 h-5" />
+                Get Your Business Health Assessment <ArrowRight className="w-5 h-5" />
               </Link>
 
               <div className="mt-8 pt-6 border-t border-border/50">

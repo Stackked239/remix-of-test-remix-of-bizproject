@@ -293,7 +293,6 @@ const BusinessIntelligenceROI = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
       <RelatedArticles articles={[
         {
           title: "AI-Powered Business Analytics",

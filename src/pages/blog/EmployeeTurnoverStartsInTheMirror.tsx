@@ -706,8 +706,6 @@ const EmployeeTurnoverStartsInTheMirror = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-
       <RelatedArticles articles={[
         {
           title: "The Exponential Power of Empowerment: How Small Businesses Scale Through People",

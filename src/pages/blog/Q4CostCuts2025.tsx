@@ -359,8 +359,6 @@ const Q4CostCuts2025 = () => {
           </div>
         </article>
 
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles articles={relatedArticles} />
         <GradientDivider />
         <GlobalFooter />

@@ -410,8 +410,6 @@ const SMBScalingParadox2025 = () => {
         </article>
 
         {/* Related Articles */}
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles articles={[
           {
             title: "Strategic Planning for the Post-Pandemic Business Landscape",

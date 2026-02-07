@@ -213,8 +213,6 @@ const FinancialHealthMetrics = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles articles={[
         {
           title: "Warning Signs Your Business Needs Attention",

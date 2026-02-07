@@ -655,9 +655,6 @@ const CoachingForGrowthLeadership = () => {
       {/* Promotional Banner */}
       <PromotionalBanner />
 
-      {/* Gradient Divider before Related Articles */}
-      <GradientDivider variant="green-gold" />
-
       {/* Related Articles */}
       <RelatedArticles 
         articles={[

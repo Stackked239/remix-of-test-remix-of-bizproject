@@ -629,9 +629,6 @@ const VoiceOfCustomerTruth = () => {
         </div>
       </article>
 
-      {/* Gradient divider before related articles */}
-      <GradientDivider variant="green-gold" />
-
       {/* Related Articles Section */}
       <RelatedArticles articles={[
         {

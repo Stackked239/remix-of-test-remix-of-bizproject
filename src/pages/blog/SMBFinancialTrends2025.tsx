@@ -328,8 +328,6 @@ const SMBFinancialTrends2025 = () => {
         </article>
 
         {/* Related Articles */}
-        <GradientDivider variant="green-gold" />
-        
         <RelatedArticles articles={relatedArticles} />
 
         <GradientDivider />

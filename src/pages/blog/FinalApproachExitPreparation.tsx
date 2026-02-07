@@ -549,8 +549,6 @@ const FinalApproachExitPreparation = () => {
         </div>
       </section>
       
-      <GradientDivider />
-      
       {/* Related Articles */}
       <section className="py-16">
         <div className="container mx-auto px-6">

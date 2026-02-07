@@ -563,8 +563,6 @@ const CRMRealityCheck = () => {
         </div>
       </article>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles articles={[
         {
           title: "Technology as a Strategic Ally: Understanding Real ROI",

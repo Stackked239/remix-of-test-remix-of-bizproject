@@ -160,8 +160,6 @@ const DailyGrindFixes = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles articles={[
         {
           title: "Retail Remote Tools: 2025 Tech for Family-Owned Micro Ventures",

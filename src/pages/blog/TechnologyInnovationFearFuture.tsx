@@ -813,8 +813,6 @@ const TechnologyInnovationFearFuture = () => {
         </div>
       </section>
 
-      <GradientDivider variant="green-gold" />
-
       {/* Related Articles */}
       <RelatedArticles
         articles={[

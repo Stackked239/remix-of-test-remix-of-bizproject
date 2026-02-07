@@ -547,7 +547,6 @@ const TechnologyInnovationGap = () => {
           </div>
 
           {/* Related Articles */}
-          <GradientDivider variant="green-gold" />
           <div className="mt-16">
             <RelatedArticles 
               articles={[

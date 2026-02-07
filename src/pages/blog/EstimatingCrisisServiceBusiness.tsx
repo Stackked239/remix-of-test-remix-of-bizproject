@@ -852,8 +852,6 @@ const EstimatingCrisisServiceBusiness = () => {
       </article>
 
       {/* Related Articles - Enhanced Component */}
-      <GradientDivider variant="green-gold" />
-      
       <RelatedArticles 
         articles={[
           {

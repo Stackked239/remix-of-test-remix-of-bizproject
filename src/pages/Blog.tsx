@@ -92,9 +92,11 @@ import nepotismFavoritism from "@/assets/images/nepotism-favoritism-business.jpg
 import schedulingFlexibilityImage from "@/assets/images/scheduling-flexibility-costing-you-hero.jpg";
 import commodityTrapImage from "@/assets/images/commodity-trap-price-competition-hero.jpg";
 import unpredictableSalesImage from "@/assets/images/unpredictable-sales-wing-it-approach-hero.jpg";
+import profitFirstImage from "@/assets/images/profit-first-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/profit-first-non-negotiable": profitFirstImage,
   "/blog/unpredictable-sales-wing-it-approach": unpredictableSalesImage,
   "/blog/commodity-trap-price-competition": commodityTrapImage,
   "/blog/scheduling-flexibility-costing-you": schedulingFlexibilityImage,

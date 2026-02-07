@@ -433,7 +433,6 @@ const ProfitFirstNonNegotiable = () => {
         </div>
       </article>
 
-      <GradientDivider />
       <RelatedArticles 
         articles={[
           { title: "Small Business Financials: Know Your Numbers", slug: "/blog/small-business-financials-know-your-numbers", category: "Financial Management", excerpt: "Master your financial fundamentals to build a profitable, sustainable business." },

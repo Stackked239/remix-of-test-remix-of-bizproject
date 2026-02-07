@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import GradientDivider from "@/components/GradientDivider";
 
 interface RelatedArticle {
   title: string;
@@ -27,6 +28,8 @@ const getColorForCategory = (category: string) => {
 
 const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
   return (
+    <>
+    <GradientDivider variant="green-gold" />
     <section className="pt-12 pb-20 relative overflow-hidden" style={{ backgroundColor: 'rgba(150, 148, 35, 0.25)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -97,6 +100,7 @@ const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

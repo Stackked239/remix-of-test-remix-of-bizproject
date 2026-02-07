@@ -279,10 +279,10 @@ const ProfitFirstNonNegotiable = () => {
             ].map((m) => (
               <div key={m.num} className="bg-card border border-border rounded-xl p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center text-destructive">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                     {m.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground m-0">Mistake #{m.num}: {m.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground m-0"><span className="text-destructive">Mistake #{m.num}:</span> {m.title}</h3>
                 </div>
                 <div className="space-y-2">
                   <p className="text-foreground/90 mb-0"><span className="inline-block bg-destructive/10 text-destructive text-xs font-bold px-2 py-0.5 rounded mr-2">Problem</span>{m.problem}</p>

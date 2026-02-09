@@ -555,30 +555,73 @@ const HandleToxicEmployees = () => {
             Moving Forward: Your Action Plan
           </h2>
 
-          <div className="space-y-3 mb-8">
-            <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-              <div className="bg-blue-500/15 p-2 rounded-lg mt-0.5">
-                <span className="text-blue-600 font-bold text-sm">1</span>
+          <div className="space-y-4 mb-8">
+            <div className="bg-blue-500/5 border-l-4 border-l-blue-500 rounded-r-xl p-5">
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-500/15 p-3 rounded-xl flex-shrink-0">
+                  <FileText className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-blue-600 text-xs font-bold uppercase tracking-wider">Step 1</span>
+                    <span className="text-foreground/40 text-xs">•</span>
+                    <span className="text-foreground/50 text-xs font-medium">Tomorrow Morning</span>
+                  </div>
+                  <h4 className="font-bold text-foreground mb-1">Start Documentation</h4>
+                  <p className="text-foreground/70 text-sm mb-0">Write down specific behaviors you've observed, their impacts, and pattern frequency. This begins your evidence foundation.</p>
+                </div>
               </div>
-              <p className="text-foreground/80 text-sm mb-0"><strong>Tomorrow morning:</strong> Start documentation. Write down specific behaviors, impacts, and pattern frequency.</p>
             </div>
-            <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-              <div className="bg-amber-500/15 p-2 rounded-lg mt-0.5">
-                <span className="text-amber-600 font-bold text-sm">2</span>
+
+            <div className="bg-amber-500/5 border-l-4 border-l-amber-500 rounded-r-xl p-5">
+              <div className="flex items-start gap-4">
+                <div className="bg-amber-500/15 p-3 rounded-xl flex-shrink-0">
+                  <MessageSquare className="w-6 h-6 text-amber-600" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-amber-600 text-xs font-bold uppercase tracking-wider">Step 2</span>
+                    <span className="text-foreground/40 text-xs">•</span>
+                    <span className="text-foreground/50 text-xs font-medium">Within the Week</span>
+                  </div>
+                  <h4 className="font-bold text-foreground mb-1">Schedule the Private Conversation</h4>
+                  <p className="text-foreground/70 text-sm mb-0">Don't wait for the perfect time. Use the framework: facts, impacts, expectations, timeline, consequences.</p>
+                </div>
               </div>
-              <p className="text-foreground/80 text-sm mb-0"><strong>Within the week:</strong> Schedule the private conversation. Use the framework: facts, impacts, expectations, timeline, consequences.</p>
             </div>
-            <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-              <div className="bg-[hsl(var(--biz-green))]/15 p-2 rounded-lg mt-0.5">
-                <span className="text-[hsl(var(--biz-green))] font-bold text-sm">3</span>
+
+            <div className="bg-[hsl(var(--biz-green))]/5 border-l-4 border-l-[hsl(var(--biz-green))] rounded-r-xl p-5">
+              <div className="flex items-start gap-4">
+                <div className="bg-[hsl(var(--biz-green))]/15 p-3 rounded-xl flex-shrink-0">
+                  <Shield className="w-6 h-6 text-[hsl(var(--biz-green))]" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[hsl(var(--biz-green))] text-xs font-bold uppercase tracking-wider">Step 3</span>
+                    <span className="text-foreground/40 text-xs">•</span>
+                    <span className="text-foreground/50 text-xs font-medium">Prevention Mode</span>
+                  </div>
+                  <h4 className="font-bold text-foreground mb-1">Implement Prevention Strategies</h4>
+                  <p className="text-foreground/70 text-sm mb-0">If not currently facing toxicity, act now—adjust your hiring process, establish feedback mechanisms, and clarify cultural expectations in writing.</p>
+                </div>
               </div>
-              <p className="text-foreground/80 text-sm mb-0"><strong>If not currently facing toxicity:</strong> Implement prevention strategies now—adjust hiring, establish feedback mechanisms, clarify expectations.</p>
             </div>
-            <div className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
-              <div className="bg-purple-500/15 p-2 rounded-lg mt-0.5">
-                <span className="text-purple-600 font-bold text-sm">4</span>
+
+            <div className="bg-purple-500/5 border-l-4 border-l-purple-500 rounded-r-xl p-5">
+              <div className="flex items-start gap-4">
+                <div className="bg-purple-500/15 p-3 rounded-xl flex-shrink-0">
+                  <Brain className="w-6 h-6 text-purple-600" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-purple-600 text-xs font-bold uppercase tracking-wider">Step 4</span>
+                    <span className="text-foreground/40 text-xs">•</span>
+                    <span className="text-foreground/50 text-xs font-medium">Self-Assessment</span>
+                  </div>
+                  <h4 className="font-bold text-foreground mb-1">Look in the Mirror</h4>
+                  <p className="text-foreground/70 text-sm mb-0">If you suspect you're contributing to cultural problems, start with honest self-assessment followed by unfiltered feedback from a mentor, coach, or trusted peer.</p>
+                </div>
               </div>
-              <p className="text-foreground/80 text-sm mb-0"><strong>If you suspect you're contributing:</strong> Start with honest self-assessment, then get unfiltered feedback from a mentor, coach, or trusted peer.</p>
             </div>
           </div>
 

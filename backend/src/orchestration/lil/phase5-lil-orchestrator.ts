@@ -1628,7 +1628,7 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
       const result = await buildLilEmployeesNewsletter(idmOutput, businessOverview);
       report = result.report;
       tokensUsed = result.tokensUsed;
-    } else if (reportType === 'managersStrategy') {
+    } else if (reportType === 'manager-strategy') {
       logger.info({ reportType }, 'Routing to dedicated strategy report builder');
       const result = await buildLilManagerStrategyReport(idmOutput, businessOverview, bluf);
       report = result.report;

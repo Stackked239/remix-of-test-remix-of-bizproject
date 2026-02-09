@@ -331,13 +331,13 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 7 */}
-          <div className="bg-biz-teal/5 border-l-4 border-l-biz-teal border border-biz-teal/20 rounded-xl p-6 mb-8">
+          <div className="bg-biz-lime/5 border-l-4 border-l-biz-lime border border-biz-lime/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-biz-teal/15 rounded-xl flex items-center justify-center shadow-sm">
-                <Zap className="w-6 h-6 text-biz-teal" />
+              <div className="w-12 h-12 bg-biz-lime/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Zap className="w-6 h-6 text-biz-lime" />
               </div>
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-biz-teal">Step 7</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-biz-lime">Step 7</span>
                 <h3 className="text-xl font-bold text-foreground mb-0">Execute, Measure, Adjust</h3>
                 <span className="text-sm text-muted-foreground">[Ongoing]</span>
               </div>
@@ -535,8 +535,8 @@ const SmallBusinessCrisisManagement = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-br from-primary/10 via-background to-[hsl(var(--biz-green))]/10 border border-primary/20 rounded-2xl p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Target className="w-5 h-5 text-primary-foreground" />
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/favicon-96x96.png" alt="BizHealth.ai" className="w-7 h-7 object-contain" />
               </div>
               <span className="text-xs font-bold uppercase tracking-widest text-[hsl(var(--biz-green))]">Business Health Assessment</span>
             </div>

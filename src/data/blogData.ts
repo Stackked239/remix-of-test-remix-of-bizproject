@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "How to Handle Toxic Employees in Small Business: Protect Your Culture Before It's Too Late",
+    excerpt: "Learn how to handle toxic employees before they destroy your culture. 4-phase strategic response framework, prevention strategies, and leadership tips for SMBs.",
+    author: "BizHealth.ai Research Team",
+    date: "February 8, 2026",
+    readTime: "12 min read",
+    category: "Business Leadership, Operations, Risk Management, Growth & Scaling",
+    slug: "/blog/handle-toxic-employees-small-business",
+    imageUrl: "/assets/images/blog/handle-toxic-employees-small-business-hero.jpg",
+    altText: "Business leader standing confidently with arms crossed while team collaborates in background - handling toxic employees in small business culture",
+    keywords: "toxic employees small business, handle toxic employees, workplace toxicity, toxic employee management, employee termination, small business culture, workplace culture, toxic behavior, HR strategy small business, employee documentation, toxic coworker, workplace morale, team culture, leadership accountability, toxic workplace, employee conflict resolution, behavioral toxicity, performance driven toxicity, personality driven toxicity, cultural fit hiring, feedback rich environment, toxic leadership, business assessment cultural health, employee coaching, structured coaching, escalation separation, credibility cascade, amplification effect, silent exodus, productivity black hole, prevention strategies 2026"
+  },
+  {
     title: "Small Business Crisis Management: 7 Proven Steps to Stay Calm When Disaster Strikes",
     excerpt: "Master the 7-step crisis response framework that turns panic into power. Learn proven strategies for small business survival when disaster strikes—act fast, stay calm.",
     author: "BizHealth.ai Research Team",

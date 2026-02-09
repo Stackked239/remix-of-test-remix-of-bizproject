@@ -94,9 +94,11 @@ import commodityTrapImage from "@/assets/images/commodity-trap-price-competition
 import unpredictableSalesImage from "@/assets/images/unpredictable-sales-wing-it-approach-hero.jpg";
 import profitFirstImage from "@/assets/images/profit-first-hero.jpg";
 import crisisManagementImage from "@/assets/images/small-business-crisis-management-hero.jpg";
+import handleToxicEmployeesImage from "@/assets/images/blog/handle-toxic-employees-small-business-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/handle-toxic-employees-small-business": handleToxicEmployeesImage,
   "/blog/small-business-crisis-management": crisisManagementImage,
   "/blog/profit-first-non-negotiable": profitFirstImage,
   "/blog/unpredictable-sales-wing-it-approach": unpredictableSalesImage,

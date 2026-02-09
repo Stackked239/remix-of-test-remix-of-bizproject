@@ -167,6 +167,7 @@ const CommodityTrapPriceCompetition = lazy(() => import("./pages/blog/CommodityT
 const UnpredictableSalesWingIt = lazy(() => import("./pages/blog/UnpredictableSalesWingIt"));
 const ProfitFirstNonNegotiable = lazy(() => import("./pages/blog/ProfitFirstNonNegotiable"));
 const SmallBusinessCrisisManagement = lazy(() => import("./pages/blog/SmallBusinessCrisisManagement"));
+const HandleToxicEmployees = lazy(() => import("./pages/blog/HandleToxicEmployees"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -389,6 +390,7 @@ const App = () => (
               <Route path="/blog/unpredictable-sales-wing-it-approach" element={<UnpredictableSalesWingIt />} />
               <Route path="/blog/profit-first-non-negotiable" element={<ProfitFirstNonNegotiable />} />
               <Route path="/blog/small-business-crisis-management" element={<SmallBusinessCrisisManagement />} />
+              <Route path="/blog/handle-toxic-employees-small-business" element={<HandleToxicEmployees />} />
 
               {/* Legal & info pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />

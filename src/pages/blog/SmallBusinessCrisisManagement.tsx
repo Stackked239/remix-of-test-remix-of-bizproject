@@ -331,13 +331,13 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 7 */}
-          <div className="bg-rose-500/5 border-l-4 border-l-rose-500 border border-rose-500/20 rounded-xl p-6 mb-8">
+          <div className="bg-biz-teal/5 border-l-4 border-l-biz-teal border border-biz-teal/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-rose-500/15 rounded-xl flex items-center justify-center shadow-sm">
-                <Zap className="w-6 h-6 text-rose-600 dark:text-rose-400" />
+              <div className="w-12 h-12 bg-biz-teal/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Zap className="w-6 h-6 text-biz-teal" />
               </div>
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Step 7</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-biz-teal">Step 7</span>
                 <h3 className="text-xl font-bold text-foreground mb-0">Execute, Measure, Adjust</h3>
                 <span className="text-sm text-muted-foreground">[Ongoing]</span>
               </div>
@@ -548,21 +548,21 @@ const SmallBusinessCrisisManagement = () => {
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
-              <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+              <div className="flex items-start gap-3 bg-white backdrop-blur-sm rounded-lg p-4 border border-border/50">
                 <Shield className="w-5 h-5 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground text-sm">Identify Vulnerabilities</p>
                   <p className="text-muted-foreground text-xs">Find weaknesses before crisis hits</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+              <div className="flex items-start gap-3 bg-white backdrop-blur-sm rounded-lg p-4 border border-border/50">
                 <BarChart3 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground text-sm">Benchmark Resilience</p>
                   <p className="text-muted-foreground text-xs">Compare against industry standards</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 bg-card/60 backdrop-blur-sm rounded-lg p-4 border border-border/50">
+              <div className="flex items-start gap-3 bg-white backdrop-blur-sm rounded-lg p-4 border border-border/50">
                 <Heart className="w-5 h-5 text-[hsl(var(--biz-green))] mt-0.5 shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground text-sm">Build Your Roadmap</p>
@@ -571,12 +571,14 @@ const SmallBusinessCrisisManagement = () => {
               </div>
             </div>
 
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-elegant"
-            >
-              Get Your Business Health Assessment <ArrowRight className="w-5 h-5" />
-            </Link>
+            <div className="text-center">
+              <Link 
+                to="/" 
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-elegant"
+              >
+                Get Your Business Health Assessment <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
 
           </div>
 

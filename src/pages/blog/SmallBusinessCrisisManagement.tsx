@@ -7,7 +7,7 @@ import BlogHeroSectionEnhanced from "@/components/BlogHeroSectionEnhanced";
 import GradientDivider from "@/components/GradientDivider";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
-import { AlertTriangle, Target, CheckCircle, Shield, Clock, Users, DollarSign, ArrowRight, ChevronRight, MessageSquare, Brain, Lightbulb, BarChart3, Heart, XCircle, Zap, Eye, Pause } from "lucide-react";
+import { AlertTriangle, Target, CheckCircle, Shield, Clock, Users, DollarSign, ArrowRight, MessageSquare, Brain, Lightbulb, BarChart3, Heart, XCircle, Zap, Eye, Pause } from "lucide-react";
 import heroImage from "@/assets/images/small-business-crisis-management-hero.jpg";
 
 const SmallBusinessCrisisManagement = () => {
@@ -146,13 +146,14 @@ const SmallBusinessCrisisManagement = () => {
           </h2>
 
           {/* Step 1 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-biz-blue-faint/50 border-l-4 border-l-primary border border-primary/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Pause className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Pause className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 1: Breathe. Get Calm.</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">Step 1</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Breathe. Get Calm.</h3>
                 <span className="text-sm text-muted-foreground">[3 Minutes]</span>
               </div>
             </div>
@@ -174,13 +175,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-amber-500/5 border-l-4 border-l-amber-500 border border-amber-500/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Eye className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-amber-500/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Eye className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 2: Assess the Damage Objectively</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Step 2</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Assess the Damage Objectively</h3>
                 <span className="text-sm text-muted-foreground">[15 Minutes]</span>
               </div>
             </div>
@@ -202,13 +204,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-[hsl(var(--biz-green))]/5 border-l-4 border-l-biz-green border border-[hsl(var(--biz-green))]/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Shield className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-[hsl(var(--biz-green))]/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Shield className="w-6 h-6 text-[hsl(var(--biz-green))]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 3: Secure the Business</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-[hsl(var(--biz-green))]">Step 3</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Secure the Business</h3>
                 <span className="text-sm text-muted-foreground">[1 Hour]</span>
               </div>
             </div>
@@ -229,13 +232,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 4 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-purple-500/5 border-l-4 border-l-purple-500 border border-purple-500/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Users className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-purple-500/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 4: Assemble Your Crisis Council</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400">Step 4</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Assemble Your Crisis Council</h3>
                 <span className="text-sm text-muted-foreground">[30 Minutes]</span>
               </div>
             </div>
@@ -257,13 +261,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 5 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-biz-gold/5 border-l-4 border-l-biz-gold border border-biz-gold/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Lightbulb className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-biz-gold/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Lightbulb className="w-6 h-6 text-biz-gold" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 5: Generate Solutions Rapidly</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-biz-gold">Step 5</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Generate Solutions Rapidly</h3>
                 <span className="text-sm text-muted-foreground">[1 Hour]</span>
               </div>
             </div>
@@ -287,13 +292,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 6 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-biz-teal/5 border-l-4 border-l-biz-teal border border-biz-teal/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-biz-teal/15 rounded-xl flex items-center justify-center shadow-sm">
+                <MessageSquare className="w-6 h-6 text-biz-teal" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 6: Communicate Ruthlessly</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-biz-teal">Step 6</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Communicate Ruthlessly</h3>
                 <span className="text-sm text-muted-foreground">[2 Hours]</span>
               </div>
             </div>
@@ -325,13 +331,14 @@ const SmallBusinessCrisisManagement = () => {
           </div>
 
           {/* Step 7 */}
-          <div className="bg-card border border-border rounded-xl p-6 mb-8">
+          <div className="bg-rose-500/5 border-l-4 border-l-rose-500 border border-rose-500/20 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary" />
+              <div className="w-12 h-12 bg-rose-500/15 rounded-xl flex items-center justify-center shadow-sm">
+                <Zap className="w-6 h-6 text-rose-600 dark:text-rose-400" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-0">Step 7: Execute, Measure, Adjust</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Step 7</span>
+                <h3 className="text-xl font-bold text-foreground mb-0">Execute, Measure, Adjust</h3>
                 <span className="text-sm text-muted-foreground">[Ongoing]</span>
               </div>
             </div>
@@ -415,40 +422,40 @@ const SmallBusinessCrisisManagement = () => {
             Crisis Types and Tailored Responses
           </h2>
 
-          <div className="overflow-x-auto mb-8">
+          <div className="overflow-x-auto mb-8 rounded-xl border border-border">
             <table className="w-full border-collapse text-sm">
               <thead>
-                <tr className="bg-primary/10">
-                  <th className="text-left p-4 font-bold text-foreground border border-border">Crisis Type</th>
-                  <th className="text-left p-4 font-bold text-foreground border border-border">Priority 1</th>
-                  <th className="text-left p-4 font-bold text-foreground border border-border">Priority 2</th>
-                  <th className="text-left p-4 font-bold text-foreground border border-border">Priority 3</th>
+                <tr className="bg-primary text-primary-foreground">
+                  <th className="text-center p-4 font-bold border border-primary/30">Crisis Type</th>
+                  <th className="text-center p-4 font-bold border border-primary/30">Priority 1</th>
+                  <th className="text-center p-4 font-bold border border-primary/30">Priority 2</th>
+                  <th className="text-center p-4 font-bold border border-primary/30">Priority 3</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-card">
-                  <td className="p-4 font-semibold text-foreground border border-border">Financial Crisis</td>
-                  <td className="p-4 text-foreground/80 border border-border">Cash preservation</td>
-                  <td className="p-4 text-foreground/80 border border-border">Emergency revenue generation</td>
-                  <td className="p-4 text-foreground/80 border border-border">Cost structure rebuild</td>
+                <tr className="bg-background">
+                  <td className="p-4 text-center font-semibold text-foreground border border-border">Financial Crisis</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Cash preservation</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Emergency revenue generation</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Cost structure rebuild</td>
                 </tr>
-                <tr className="bg-muted/30">
-                  <td className="p-4 font-semibold text-foreground border border-border">Operational Crisis</td>
-                  <td className="p-4 text-foreground/80 border border-border">Alternative sourcing/operations</td>
-                  <td className="p-4 text-foreground/80 border border-border">Customer communication</td>
-                  <td className="p-4 text-foreground/80 border border-border">Long-term redundancy</td>
+                <tr className="bg-[hsl(var(--biz-green))]/10">
+                  <td className="p-4 text-center font-semibold text-foreground border border-border">Operational Crisis</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Alternative sourcing/operations</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Customer communication</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Long-term redundancy</td>
                 </tr>
-                <tr className="bg-card">
-                  <td className="p-4 font-semibold text-foreground border border-border">Personnel Crisis</td>
-                  <td className="p-4 text-foreground/80 border border-border">Stabilize team morale</td>
-                  <td className="p-4 text-foreground/80 border border-border">Immediate coverage</td>
-                  <td className="p-4 text-foreground/80 border border-border">Hiring/systems to prevent recurrence</td>
+                <tr className="bg-background">
+                  <td className="p-4 text-center font-semibold text-foreground border border-border">Personnel Crisis</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Stabilize team morale</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Immediate coverage</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Hiring/systems to prevent recurrence</td>
                 </tr>
-                <tr className="bg-muted/30">
-                  <td className="p-4 font-semibold text-foreground border border-border">Reputation Crisis</td>
-                  <td className="p-4 text-foreground/80 border border-border">Customer resolution</td>
-                  <td className="p-4 text-foreground/80 border border-border">Proactive communication</td>
-                  <td className="p-4 text-foreground/80 border border-border">Process improvement</td>
+                <tr className="bg-[hsl(var(--biz-green))]/10">
+                  <td className="p-4 text-center font-semibold text-foreground border border-border">Reputation Crisis</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Customer resolution</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Proactive communication</td>
+                  <td className="p-4 text-center text-foreground/80 border border-border">Process improvement</td>
                 </tr>
               </tbody>
             </table>
@@ -485,15 +492,30 @@ const SmallBusinessCrisisManagement = () => {
 
           <div className="space-y-4 mb-8">
             {[
-              "Every business faces crises. Your response determines survival.",
-              "Panic compounds problems. Calmness contains them.",
-              "Crises expose weaknesses. Wise owners fix them permanently.",
-              "Transparent communication builds trust. Silence destroys it.",
-              "80% action beats 100% planning."
+              { text: "Every business faces crises. Your response determines survival.", color: "primary", icon: "🎯" },
+              { text: "Panic compounds problems. Calmness contains them.", color: "biz-teal", icon: "🧘" },
+              { text: "Crises expose weaknesses. Wise owners fix them permanently.", color: "biz-gold", icon: "💡" },
+              { text: "Transparent communication builds trust. Silence destroys it.", color: "purple-500", icon: "📢" },
+              { text: "80% action beats 100% planning.", color: "rose-500", icon: "⚡" },
             ].map((truth, idx) => (
-              <div key={idx} className="flex items-start gap-3 bg-card border border-border rounded-lg p-4">
-                <span className="text-primary font-bold text-lg mt-0.5 shrink-0">Truth #{idx + 1}:</span>
-                <p className="text-foreground/90 mb-0">{truth}</p>
+              <div key={idx} className={`flex items-start gap-4 rounded-xl p-5 border-l-4 ${
+                idx === 0 ? 'bg-biz-blue-faint/50 border-l-primary' :
+                idx === 1 ? 'bg-biz-teal/5 border-l-biz-teal' :
+                idx === 2 ? 'bg-biz-gold/5 border-l-biz-gold' :
+                idx === 3 ? 'bg-purple-500/5 border-l-purple-500' :
+                'bg-rose-500/5 border-l-rose-500'
+              } border border-border/50`}>
+                <span className="text-2xl shrink-0">{truth.icon}</span>
+                <div>
+                  <span className={`text-xs font-bold uppercase tracking-widest ${
+                    idx === 0 ? 'text-primary' :
+                    idx === 1 ? 'text-biz-teal' :
+                    idx === 2 ? 'text-biz-gold' :
+                    idx === 3 ? 'text-purple-600 dark:text-purple-400' :
+                    'text-rose-600 dark:text-rose-400'
+                  }`}>Truth #{idx + 1}</span>
+                  <p className="text-foreground/90 mb-0 mt-1 font-medium">{truth.text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -556,23 +578,6 @@ const SmallBusinessCrisisManagement = () => {
               Get Your Business Health Assessment <ArrowRight className="w-5 h-5" />
             </Link>
 
-            <div className="mt-8 pt-6 border-t border-border/50">
-              <p className="text-sm text-muted-foreground mb-3 font-medium">Continue Reading</p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/blog/sharks-in-the-water-business-crisis" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
-                  Sharks in the Water <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-                <Link to="/blog/cash-flow-crisis-management" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
-                  Cash Flow Crisis Management <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-                <Link to="/blog/build-high-performing-team" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
-                  Build a High-Performing Team <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-                <Link to="/blog/coaching-for-growth-leadership" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors font-medium text-sm">
-                  Coaching for Growth <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
           </div>
 
         </div>

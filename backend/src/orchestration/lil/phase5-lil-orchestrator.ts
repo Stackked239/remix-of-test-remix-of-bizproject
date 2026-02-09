@@ -175,7 +175,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bizhealth-navy: #212653;
+      --bizhealth-navy: #242553;
       --bizhealth-green: #969423;
       --bizhealth-success: #28a745;
       --bizhealth-warning: #ffc107;

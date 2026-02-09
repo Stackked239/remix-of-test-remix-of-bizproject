@@ -6,10 +6,11 @@
  * 
  * P0: Quick Win sign error fix, Priority Focus tiered algorithm
  * P1: Strategy-scoped Deep Dive, severity badge calibration, unique Quick Wins, LIL tone
- * P2: 30/60/90 action plan, "One Thing" callout, evidence citations, enhanced metrics, gap chart
+ * P2: 30/60/90 action plan, Priority Action callout, evidence citations, enhanced metrics, gap chart
+ * v4.1: Role-based authority reframe (removed hat framing per exec team decision)
  * 
  * This builder is deterministic (template-based) with a single AI call for narrative content.
- * Brand: BizNavy #212653, BizGreen #969423, Montserrat + Open Sans
+ * Brand: BizBlue #242553, BizGreen #969423, Montserrat + Open Sans
  */
 
 import Anthropic from '@anthropic-ai/sdk';
@@ -163,11 +164,11 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="BizHealth.ai LIL Manager Strategy Report Builder">
   <meta name="robots" content="noindex, nofollow">
-  <title>Manager's Strategy Report — {{COMPANY_NAME}}</title>
+  <title>Manager Strategy Report — {{COMPANY_NAME}}</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --biz-navy: #212653;
+      --biz-navy: #242553;
       --biz-green: #969423;
       --warm-gold: #E8B54D;
       --excellence: #28a745;
@@ -254,11 +255,11 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
     .title-section h1 { color: white; margin-bottom: 12px; }
     .title-section .company-name { color: var(--warm-gold); font-size: 1.5rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
     .title-section .report-date { margin-top: 12px; opacity: 0.9; color: white; font-size: 0.95rem; }
-    .title-section .hat-framing { margin-top: 8px; font-style: italic; color: rgba(255,255,255,0.85); font-size: 1rem; }
+    .title-section .role-framing { margin-top: 8px; font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto; }
 
     /* One Thing Callout (P2 Enhancement B) */
     .one-thing-callout {
-      background: linear-gradient(135deg, #212653 0%, #2d3561 100%);
+      background: linear-gradient(135deg, #242553 0%, #2d3561 100%);
       color: white;
       padding: 2rem;
       border-radius: 12px;
@@ -755,7 +756,7 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
   <header class="report-header">
     <div class="header-logo">BizHealth<span>.ai</span></div>
     <div class="header-meta">
-      <div class="report-title">Manager's Strategy Report</div>
+      <div class="report-title">Manager Strategy Report</div>
       <div>{{DATE}}</div>
     </div>
   </header>
@@ -766,7 +767,7 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
 
   <footer class="report-footer">
     <div class="footer-logo">BizHealth<span>.ai</span></div>
-    <p>Manager's Strategy Report — Essentials Plan</p>
+    <p>Manager Strategy Report — Essentials Plan</p>
     <p>&copy; {{YEAR}} BizHealth.ai. All rights reserved.</p>
     <p><em>This report is confidential and intended for authorized recipients only.</em></p>
   </footer>
@@ -782,9 +783,9 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
 function buildTitleSection(companyName: string, currentDate: string): string {
   return `
     <div class="title-section">
-      <h1>Manager's Strategy Report</h1>
+      <h1>Manager Strategy Report</h1>
       <div class="company-name">${companyName}</div>
-      <div class="hat-framing">Wearing your Strategy hat — here's what matters most.</div>
+      <div class="role-framing">Strategic direction defines how ${companyName} competes and grows. This report analyzes the current strategic position and delivers actionable recommendations.</div>
       <div class="report-date">${currentDate}</div>
     </div>`;
 }
@@ -816,7 +817,7 @@ function buildSnapshotSection(
 
   return `
     <div class="snapshot-section">
-      <h2>Your Company Health Snapshot</h2>
+      <h2>Strategy Health Snapshot</h2>
       <div class="snapshot-grid">
         <div class="overall-score-circle" style="border-color: ${overallBand.color}; background: ${overallBand.bgColor};">
           <div class="score-number" style="color: ${overallBand.color};">${overallScore}</div>
@@ -829,7 +830,7 @@ function buildSnapshotSection(
     </div>`;
 }
 
-/** Build the "One Thing This Week" callout (P2 Enhancement B) */
+/** Build the Priority Action callout (P2 Enhancement B — reframed v4.1) */
 function buildOneThingCallout(
   idmOutput: LILIDMOutput
 ): string {
@@ -854,16 +855,16 @@ function buildOneThingCallout(
   }
   
   if (!bestAction) {
-    bestAction = 'Review your strategy scores and pick one area to focus on this week.';
+    bestAction = 'Review the strategy dimension scores below and select the highest-priority area for immediate action.';
     bestCategory = 'Strategy';
   }
 
   return `
     <div class="one-thing-callout">
-      <h3>If You Only Do One Thing From This Report</h3>
+      <h3>Priority Action</h3>
       <p class="one-thing-action">${bestAction}</p>
       <p class="one-thing-meta">
-        ⏱ Takes about 30-60 minutes | 📈 Impacts your ${bestCategory} score
+        ⏱ Estimated effort: 30–60 minutes | 📈 Directly impacts ${bestCategory} performance
       </p>
     </div>`;
 }
@@ -916,7 +917,7 @@ function buildPriorityFocusTable(
   return `
     <div class="snapshot-section">
       <h2>Priority Focus Areas</h2>
-      <p>Here's where to focus your strategy efforts, ranked by urgency.</p>
+      <p>Strategic dimensions ranked by urgency, with gap-to-benchmark analysis and recommended focus level.</p>
       <table class="priority-table">
         <thead>
           <tr>
@@ -967,7 +968,7 @@ function buildDeepDiveSection(
       findingsHtml.push(`
         <div class="finding-card" style="border-left-color: #28a745;">
           <div class="finding-card-header">
-            <h4>What You're Doing Well</h4>
+            <h4>Current Strengths</h4>
             <span class="severity-badge" style="background: #d4edda; color: #155724;">Strength</span>
           </div>
           <div class="finding-narrative">
@@ -989,7 +990,7 @@ function buildDeepDiveSection(
             <span class="severity-badge" style="background: ${severity.bgColor}; color: ${severity.color};">${severity.label}</span>
           </div>
           <div class="finding-action">
-            <strong>Next Step:</strong> Review the Quick Wins section below for specific actions to address this.
+            <strong>Recommended Action:</strong> See the Quick Wins section for specific implementation steps.
           </div>
         </div>`);
     }
@@ -999,8 +1000,8 @@ function buildDeepDiveSection(
       const metric = catData.keyMetrics[0];
       findingsHtml.push(`
         <div class="evidence-citation">
-          <strong>📊 From Your Assessment:</strong>
-          <span>Your ${catName.toLowerCase()} scored ${catScore}/100. ${metric.name}: ${metric.value}${metric.benchmark ? ` (benchmark: ${metric.benchmark})` : ''}.</span>
+          <strong>📊 Assessment Data:</strong>
+          <span>${catName} scored ${catScore}/100. ${metric.name}: ${metric.value}${metric.benchmark ? ` (benchmark: ${metric.benchmark})` : ''}.</span>
         </div>`);
     }
     
@@ -1009,8 +1010,8 @@ function buildDeepDiveSection(
 
   return `
     <div class="deep-dive-section">
-      <h2>Deep Dive: Your Strategy Dimensions</h2>
-      <p>Let's look at each area under your Strategy hat — what's working and where you can improve.</p>
+      <h2>Deep Dive: Strategy Dimensions</h2>
+      <p>The following analysis examines each strategic dimension, highlighting current performance and identifying specific opportunities for improvement.</p>
       ${findingsHtml.join('')}
     </div>`;
 }
@@ -1033,7 +1034,7 @@ function buildQuickWinsSection(
     const recs = (catData.recommendations || []).slice(0, 2);
     
     for (const rec of recs) {
-      const title = safeStr(rec.title, `Improve ${catName}`);
+      const title = safeStr(rec.title, `Optimize ${catName} Performance`);
       
       // P1 FIX 5: Skip duplicate titles
       if (usedTitles.has(title.toLowerCase())) continue;
@@ -1052,14 +1053,14 @@ function buildQuickWinsSection(
             </div>
           </div>
           <div class="quick-win-body">
-            <p>${safeStr(rec.description, 'Focus on this area to see meaningful improvement.')}</p>
+            <p>${safeStr(rec.description, 'Targeted improvement in this area will yield measurable results.')}</p>
             ${rec.estimatedImpact ? `<p><strong>Expected Impact:</strong> ${rec.estimatedImpact}</p>` : ''}
           </div>
           <div class="quick-win-meta">
             <span>📂 ${catName}</span>
             <span>⏱ ${safeStr(rec.timeframe, '30-day')}</span>
             <span>📈 Closing ${outcome.gapClosurePercent}% of gap to benchmark</span>
-            <span class="accountable-tag">👤 You (Business Owner)</span>
+            <span class="accountable-tag">👤 Strategy Lead</span>
           </div>
         </div>`);
     }
@@ -1067,8 +1068,8 @@ function buildQuickWinsSection(
 
   return `
     <div class="quick-wins-section">
-      <h2>Quick Wins: Your Fastest Path to Improvement</h2>
-      <p>These are the highest-impact actions you can take right now. Each one targets a specific gap in your strategy scores.</p>
+      <h2>Quick Wins: Highest-Impact Actions</h2>
+      <p>The following actions target specific gaps in strategy scores and can be implemented within 30 days for measurable improvement.</p>
       ${quickWinsHtml.join('')}
     </div>`;
 }
@@ -1114,21 +1115,21 @@ function buildActionPlanSection(
 
   return `
     <div class="action-plan-section">
-      <h2>Your Strategy Action Plan</h2>
-      <p>Here's your step-by-step plan. Each month builds on the last — start with Month 1 and keep going.</p>
+      <h2>Strategic Action Plan</h2>
+      <p>A phased implementation plan organized by priority. Each phase builds on the previous phase's progress.</p>
       
       <div class="action-plan-month month-1">
-        <h3>📋 This Month (Days 1-30)</h3>
+        <h3>📋 Phase 1: Days 1–30</h3>
         ${buildActionItems(thirtyDayItems)}
       </div>
       
       <div class="action-plan-month month-2">
-        <h3>📋 Next Month (Days 31-60)</h3>
+        <h3>📋 Phase 2: Days 31–60</h3>
         ${buildActionItems(sixtyDayItems)}
       </div>
       
       <div class="action-plan-month month-3">
-        <h3>📋 Month Three (Days 61-90)</h3>
+        <h3>📋 Phase 3: Days 61–90</h3>
         ${buildActionItems(ninetyDayItems)}
       </div>
       
@@ -1178,16 +1179,16 @@ function buildMetricsSection(
         </div>
         ${metricsDetail}
         <div class="metric-guidance">
-          <strong>What moves this score:</strong> Focus on the Quick Wins above for ${catName.toLowerCase()}. 
-          Each completed action should move your score closer to ${targetScore}.
+          <strong>What moves this score:</strong> Implementing the Quick Wins above for ${catName.toLowerCase()} directly impacts this metric. 
+          Target: ${targetScore}/100 within 90 days.
         </div>
       </div>`);
   }
 
   return `
     <div class="metrics-section">
-      <h2>Your Strategy Metrics & Targets</h2>
-      <p>Here's where each strategy dimension stands today and where you're headed in 90 days.</p>
+      <h2>Strategy Metrics & 90-Day Targets</h2>
+      <p>Current performance by dimension with projected targets based on recommended actions.</p>
       ${metricsHtml.join('')}
     </div>`;
 }
@@ -1221,7 +1222,7 @@ function buildGapChart(
   return `
     <div class="gap-chart-section">
       <h2>Gap to Excellence</h2>
-      <p>How far each strategy dimension is from the Excellence threshold (80/100). The dark line marks the target.</p>
+      <p>Distance from the Excellence threshold (80/100) by strategic dimension. The vertical marker indicates the target.</p>
       ${barsHtml}
     </div>`;
 }
@@ -1238,11 +1239,11 @@ function buildClosingSection(
   
   return `
     <div class="one-thing-callout" style="margin-top: 3rem;">
-      <h3>What's Next?</h3>
+      <h3>Next Steps</h3>
       <p class="one-thing-action">${callToAction}</p>
       <p class="one-thing-meta">
-        Your overall strategy health is at <strong>${overallScore}/100 (${band.label})</strong>. 
-        With focused effort on the action plan above, you can move toward Proficiency within 90 days.
+        Current strategic health: <strong>${overallScore}/100 (${band.label})</strong>. 
+        Executing the action plan above positions ${companyName} to reach Proficiency within 90 days.
       </p>
     </div>`;
 }
@@ -1268,7 +1269,7 @@ async function generateNarrativeSummary(
     return `${CATEGORY_NAMES[code]}: ${score}/100. Strengths: ${strengths || 'N/A'}. Gaps: ${weaknesses || 'N/A'}.`;
   }).join('\n');
 
-  const prompt = `You are BizHealth.ai's friendly strategy coach writing a brief executive summary for a small business owner.
+  const prompt = `You are BizHealth.ai's strategy analyst writing a professional executive summary for ${companyName}'s strategy report.
 
 COMPANY: ${companyName}
 OVERALL STRATEGY SCORE: ${overallScore}/100
@@ -1281,21 +1282,22 @@ TOP STRENGTHS: ${(idmOutput.consolidatedInsights?.topStrengths || []).slice(0, 3
 TOP GAPS: ${(idmOutput.consolidatedInsights?.topWeaknesses || []).slice(0, 3).join('; ')}
 
 VOICE RULES (MANDATORY):
-- Always use "you" and "your" — never refer to the company in third person in narrative
-- Average sentence length: 15-20 words max
-- Active voice only ("You scored..." not "The score indicates...")
-- Lead with benefits ("This saves you..." not "Efficiency gains of...")
-- Use the "wearing your Strategy hat" framing
-- Reading level: 8th-10th grade
-- Celebrate strengths FIRST, then address gaps constructively
-- "You can do this" energy — encouraging, not clinical
-- Company name "${companyName}" is OK in headings/labels only, not in narrative sentences
+- Use "${companyName}" when referring to the business — address the reader as the person responsible for strategy
+- Average sentence length: 18-25 words max
+- Active voice only ("The assessment reveals..." not "It was found that...")
+- Lead with findings and evidence, not platitudes
+- Tone: Accessible Expert — professional, competent, data-driven but not corporate jargon
+- Reading level: 10th-12th grade
+- Acknowledge strengths FIRST, then address gaps constructively with specific data points
+- No hat metaphors, no "wearing hats", no "solopreneur", no "even if you don't have a dedicated role"
+- No apologetic language about business size
+- Treat the reader as a competent decision-maker responsible for strategic direction
 
 Write a 3-4 paragraph executive summary (150-200 words total) that:
-1. Opens by celebrating the strongest strategy dimension
-2. Acknowledges the overall score and what it means in plain language
-3. Identifies the #1 priority area and why it matters
-4. Ends with an encouraging "you've got this" statement
+1. Opens with ${companyName}'s strongest strategic dimension and what it means for the business
+2. Contextualizes the overall score (${overallScore}/100) with specific benchmark references
+3. Identifies the #1 priority area with data-backed reasoning
+4. Closes with a forward-looking statement about strategic trajectory
 
 Output ONLY the HTML paragraphs (using <p> tags). No headings, no wrapper divs.`;
 
@@ -1314,7 +1316,7 @@ Output ONLY the HTML paragraphs (using <p> tags). No headings, no wrapper divs.`
   } catch (error) {
     logger.warn({ error }, 'Failed to generate narrative summary, using fallback');
     return {
-      narrative: `<p>Your strategy scores show a solid foundation with room to grow. Your overall strategy health sits at ${overallScore}/100. Focus on the priority areas below to see the biggest improvements in the next 90 days.</p>`,
+      narrative: `<p>The strategy assessment reveals a current health score of ${overallScore}/100, indicating a foundation with clear opportunities for improvement. The priority areas identified below represent the highest-impact focus points for the next 90 days.</p>`,
       tokensUsed: 0
     };
   }
@@ -1344,7 +1346,7 @@ export async function buildLilManagerStrategyReport(
   });
   const currentYear = new Date().getFullYear().toString();
   
-  logger.info({ companyName }, 'Building LIL Manager Strategy Report');
+  logger.info({ companyName }, 'Building LIL Manager Strategy Report (v4.1 role-based authority)');
   
   // Generate AI narrative (single API call)
   const { narrative, tokensUsed } = await generateNarrativeSummary(idmOutput, businessOverview);
@@ -1378,21 +1380,21 @@ export async function buildLilManagerStrategyReport(
   
   const report: LILGeneratedReport = {
     reportType: 'managersStrategy' as any,
-    title: "Manager's Strategy Report",
+    title: "Manager Strategy Report",
     htmlContent,
     pageCount,
     sections: [
       'Title',
       'Executive Summary',
-      'Company Health Snapshot',
-      'One Thing This Week',
+      'Strategy Health Snapshot',
+      'Priority Action',
       'Priority Focus Areas',
       'Gap to Excellence',
       'Deep Dive: Strategy Dimensions',
       'Quick Wins',
-      '30/60/90 Day Action Plan',
-      'Strategy Metrics & Targets',
-      'Closing & Next Steps'
+      'Strategic Action Plan',
+      'Strategy Metrics & 90-Day Targets',
+      'Next Steps'
     ],
     generatedAt: new Date().toISOString()
   };
@@ -1402,7 +1404,7 @@ export async function buildLilManagerStrategyReport(
     tokensUsed,
     sectionsGenerated: report.sections.length,
     htmlLength: htmlContent.length
-  }, 'LIL Manager Strategy Report built successfully');
+  }, 'LIL Manager Strategy Report (v4.1) built successfully');
   
   return { report, tokensUsed };
 }

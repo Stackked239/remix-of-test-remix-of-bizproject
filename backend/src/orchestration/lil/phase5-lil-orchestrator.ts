@@ -1,7 +1,7 @@
 /**
  * Phase 5 LIL Orchestrator - Report Generation
  * 
- * Generates the 8 final HTML reports for the Essentials Plan.
+ * Generates the 9 final HTML reports for the Essentials Plan.
  * Each report is tailored to its specific audience and focus area.
  * Uses professional BizHealth.ai styling matching the BIG pipeline.
  */
@@ -25,6 +25,9 @@ import { buildLilManagerSalesMarketingReport } from './lil-manager-sales-marketi
 import { buildLilManagerItTechnologyReport } from './lil-manager-it-technology-report.builder.js';
 import { buildLilManagerOperationsReport } from './lil-manager-operations-report.builder.js';
 import { buildLilManagerFinancialsReport } from './lil-manager-financials-report.builder.js';
+import { buildLilComprehensiveReport } from './lil-comprehensive-report.builder.js';
+import { buildLilOwnerReport } from './lil-owner-report.builder.js';
+import { buildLilExecutiveOverview } from './lil-executive-overview.builder.js';
 
 const anthropic = new Anthropic();
 
@@ -60,6 +63,20 @@ const REPORT_CONFIGS: Record<LILReportType, {
     ],
     audience: 'All stakeholders including owners, executives, and managers',
     toneGuidelines: ['comprehensive', 'analytical', 'strategic']
+  },
+  'executive-overview': {
+    title: 'Executive Overview',
+    pageTarget: '6-10',
+    categories: ['STR', 'SAL', 'MKT', 'CXP', 'OPS', 'FIN', 'HRS', 'LDG', 'TIN', 'ITD', 'RMS', 'CMP'],
+    sections: [
+      'Executive Narrative',
+      'Business Health Snapshot',
+      'Top 3 Priorities',
+      'Key Risks & Mitigations',
+      '90-Day Outlook'
+    ],
+    audience: 'Board members, advisors, and external stakeholders',
+    toneGuidelines: ['concise', 'strategic', 'high-level']
   },
   owner: {
     title: "Owner's Strategic Report",
@@ -1657,7 +1674,24 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
       const result = await buildLilManagerFinancialsReport(idmOutput, businessOverview, bluf);
       report = result.report;
       tokensUsed = result.tokensUsed;
+    } else if (reportType === 'comprehensive') {
+      logger.info({ reportType }, 'Routing to dedicated comprehensive report builder');
+      const result = await buildLilComprehensiveReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'owner') {
+      logger.info({ reportType }, 'Routing to dedicated owner report builder');
+      const result = await buildLilOwnerReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'executive-overview') {
+      logger.info({ reportType }, 'Routing to dedicated executive overview builder');
+      const result = await buildLilExecutiveOverview(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
     } else {
+      // Fallback to generic builder (should not be reached — all 9 report types have dedicated builders)
+      logger.warn({ reportType }, 'No dedicated builder found, using generic builder');
       const result = await generateReport(
         reportType,
         idmOutput,

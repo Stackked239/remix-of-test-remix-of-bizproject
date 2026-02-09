@@ -49,6 +49,7 @@ export const LIL_CONFIG_SCHEMA = z.object({
   
   reportTypes: z.array(z.enum([
     'comprehensive',
+    'executive-overview',
     'owner',
     'manager-strategy',
     'manager-sales-marketing',
@@ -56,10 +57,11 @@ export const LIL_CONFIG_SCHEMA = z.object({
     'manager-it-technology',
     'manager-financials',
     'employees'
-  ])).length(8),
+  ])).length(9),
   
   outputSettings: z.object({
     comprehensivePageTarget: z.string(),
+    executiveOverviewPageTarget: z.string(),
     ownerPageTarget: z.string(),
     managerPageTarget: z.string(),
     employeesPageTarget: z.string(),
@@ -102,8 +104,8 @@ export const LIL_PIPELINE_CONFIG = {
     phase2: false as const, // REMOVED: Cross-Dimensional Synthesis
     phase3: false as const, // REMOVED: Executive Synthesis
     phase4: true,           // IDM Assembly (simplified)
-    phase4_5: true,         // 8 BLUF generation
-    phase5: true,           // 8 report generation
+    phase4_5: true,         // 9 BLUF generation
+    phase5: true,           // 9 report generation
     postProcessing: true    // File optimization, archival
   },
   
@@ -125,9 +127,10 @@ export const LIL_PIPELINE_CONFIG = {
   categoryCount: 12 as const,
   chapterCount: 4 as const,
   
-  // EXACTLY 8 REPORTS - NO MORE, NO FEWER
+  // EXACTLY 9 REPORTS - per North Star v4.0
   reportTypes: [
     'comprehensive',
+    'executive-overview',
     'owner',
     'manager-strategy',
     'manager-sales-marketing',
@@ -139,6 +142,7 @@ export const LIL_PIPELINE_CONFIG = {
   
   outputSettings: {
     comprehensivePageTarget: '60-80',
+    executiveOverviewPageTarget: '6-10',
     ownerPageTarget: '25-35',
     managerPageTarget: '15-25',
     employeesPageTarget: '10-15',

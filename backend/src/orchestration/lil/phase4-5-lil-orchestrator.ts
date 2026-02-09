@@ -1,7 +1,7 @@
 /**
  * Phase 4.5 LIL Orchestrator - BLUF Generation
  * 
- * Generates Bottom Line Up Front (BLUF) summaries for each of the 8 reports.
+ * Generates Bottom Line Up Front (BLUF) summaries for each of the 9 reports.
  * These serve as executive summaries at the top of each report.
  */
 
@@ -33,6 +33,11 @@ const REPORT_CONFIGS: Record<LILReportType, {
     title: 'Comprehensive Business Health Report',
     audience: 'All stakeholders',
     focus: 'Complete analysis across all 12 business categories'
+  },
+  'executive-overview': {
+    title: 'Executive Overview',
+    audience: 'Board members, advisors, and external stakeholders',
+    focus: 'High-level business health snapshot with key scores, top 3 priorities, and strategic outlook'
   },
   owner: {
     title: "Owner's Strategic Report",

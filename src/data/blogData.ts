@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Small Business Crisis Management: 7 Proven Steps to Stay Calm When Disaster Strikes",
+    excerpt: "Master the 7-step crisis response framework that turns panic into power. Learn proven strategies for small business survival when disaster strikes—act fast, stay calm.",
+    author: "BizHealth.ai Research Team",
+    date: "February 9, 2026",
+    readTime: "10 min read",
+    category: "Business Leadership, Operations, Risk Management, Growth & Scaling",
+    slug: "/blog/small-business-crisis-management",
+    imageUrl: "/assets/images/small-business-crisis-management-hero.jpg",
+    altText: "Small business owner confidently leading team through crisis action plan in workshop environment - crisis management leadership",
+    keywords: "small business crisis management, crisis response framework, business disaster recovery, crisis leadership, business survival strategies, cash flow crisis, operational crisis, personnel crisis, crisis communication, business continuity planning, crisis management steps, stay calm business crisis, 7 step crisis plan, crisis council, post-crisis rebuild, emotional contagion, analysis paralysis, information vacuum, crisis killers, business owner crisis mindset, crisis types responses, financial crisis SMB, reputation crisis, box breathing business, crisis assessment sheet, 80 percent solution, crisis exit criteria, 30 day rebuild plan 2026"
+  },
+  {
     title: "Profit Last Is Killing Your Business: Make Profit First Your Non-Negotiable Reality",
     excerpt: "Stop treating profit as leftovers. Learn the Profit First system—5 bank accounts, behavioral finance, and allocation strategies that force sustainable profitability for SMBs.",
     author: "BizHealth.ai Research Team",

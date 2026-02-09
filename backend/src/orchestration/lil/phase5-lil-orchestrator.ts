@@ -21,6 +21,10 @@ import {
 import { CategoryCode } from '../../data/question-category-mapping-lil.js';
 import { buildLilEmployeesNewsletter } from './lil-employees-newsletter.builder.js';
 import { buildLilManagerStrategyReport } from './lil-manager-strategy-report.builder.js';
+import { buildLilManagerSalesMarketingReport } from './lil-manager-sales-marketing-report.builder.js';
+import { buildLilManagerItTechnologyReport } from './lil-manager-it-technology-report.builder.js';
+import { buildLilManagerOperationsReport } from './lil-manager-operations-report.builder.js';
+import { buildLilManagerFinancialsReport } from './lil-manager-financials-report.builder.js';
 
 const anthropic = new Anthropic();
 
@@ -1631,6 +1635,26 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
     } else if (reportType === 'manager-strategy') {
       logger.info({ reportType }, 'Routing to dedicated strategy report builder');
       const result = await buildLilManagerStrategyReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'manager-sales-marketing') {
+      logger.info({ reportType }, 'Routing to dedicated sales & marketing report builder');
+      const result = await buildLilManagerSalesMarketingReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'manager-it-technology') {
+      logger.info({ reportType }, 'Routing to dedicated IT & technology report builder');
+      const result = await buildLilManagerItTechnologyReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'manager-operations') {
+      logger.info({ reportType }, 'Routing to dedicated operations report builder');
+      const result = await buildLilManagerOperationsReport(idmOutput, businessOverview, bluf);
+      report = result.report;
+      tokensUsed = result.tokensUsed;
+    } else if (reportType === 'manager-financials') {
+      logger.info({ reportType }, 'Routing to dedicated financials report builder');
+      const result = await buildLilManagerFinancialsReport(idmOutput, businessOverview, bluf);
       report = result.report;
       tokensUsed = result.tokensUsed;
     } else {

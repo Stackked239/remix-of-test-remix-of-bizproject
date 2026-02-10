@@ -668,15 +668,15 @@ const FullyBurdenedLaborRate = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/pricing"
-                className="inline-flex items-center justify-center gap-2 bg-[hsl(var(--biz-green))] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity no-underline"
+                className="inline-flex items-center justify-center gap-2 bg-[hsl(var(--biz-green))] text-white px-7 py-3.5 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg no-underline group text-base"
               >
-                Get Your Business Health Assessment <ArrowRight className="w-4 h-4" />
+                Get Your Business Health Assessment <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/blog/stress-test-pricing-framework-margins-cash-flow"
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg no-underline group"
+                className="inline-flex items-center justify-center gap-2 bg-card border border-border px-6 py-3 rounded-lg font-semibold text-foreground hover:bg-muted transition-all duration-300 no-underline group"
               >
-                <FileText className="w-4 h-4 group-hover:rotate-3 transition-transform" />
+                <FileText className="w-4 h-4" />
                 Read: Stress-Test Your Pricing
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>

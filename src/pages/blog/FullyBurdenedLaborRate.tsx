@@ -674,7 +674,7 @@ const FullyBurdenedLaborRate = () => {
               </Link>
               <Link
                 to="/blog/stress-test-pricing-framework-margins-cash-flow"
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg no-underline group"
+                className="inline-flex items-center justify-center gap-2 bg-[hsl(var(--biz-teal))] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg no-underline group"
               >
                 <FileText className="w-4 h-4 group-hover:rotate-3 transition-transform" />
                 Read: Stress-Test Your Pricing

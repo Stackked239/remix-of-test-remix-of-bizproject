@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Fully Burdened Labor Rate: Why Small Businesses Lose Millions Not Knowing Their True Employee Costs",
+    excerpt: "Discover why your $35/hour employee really costs $56-$73/hour. Learn the FBLR formula, avoid 5 deadly pricing mistakes, and stop losing millions on every job.",
+    author: "BizHealth.ai Research Team",
+    date: "February 10, 2026",
+    readTime: "12 min read",
+    category: "Financial Management, Operations, Growth & Scaling",
+    slug: "/blog/fully-burdened-labor-rate-true-employee-costs",
+    imageUrl: "/assets/images/blog/fully-burdened-labor-rate-hero.jpg",
+    altText: "Small business professionals reviewing employee labor cost calculations and FBLR analysis for accurate pricing strategy",
+    keywords: "fully burdened labor rate, FBLR, true employee cost, labor cost calculation, small business pricing, employee overhead costs, billable hours, payroll taxes, workers comp, labor rate formula, service business pricing, FBLR formula, FBLR calculation, burdened labor rate, employee true cost, pricing mistakes, underpricing, labor overhead, benefits cost, capacity planning, hiring decisions, competitive bidding, FBLR by role, billable utilization, profit margin, service business, HVAC pricing, plumbing pricing, consulting rates, manufacturing labor cost 2026"
+  },
+  {
     title: "How to Handle Toxic Employees in Small Business: Protect Your Culture Before It's Too Late",
     excerpt: "Learn how to handle toxic employees before they destroy your culture. 4-phase strategic response framework, prevention strategies, and leadership tips for SMBs.",
     author: "BizHealth.ai Research Team",

@@ -95,9 +95,11 @@ import unpredictableSalesImage from "@/assets/images/unpredictable-sales-wing-it
 import profitFirstImage from "@/assets/images/profit-first-hero.jpg";
 import crisisManagementImage from "@/assets/images/small-business-crisis-management-hero.jpg";
 import handleToxicEmployeesImage from "@/assets/images/blog/handle-toxic-employees-small-business-hero.jpg";
+import fullyBurdenedLaborRateImage from "@/assets/images/blog/fully-burdened-labor-rate-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/fully-burdened-labor-rate-true-employee-costs": fullyBurdenedLaborRateImage,
   "/blog/handle-toxic-employees-small-business": handleToxicEmployeesImage,
   "/blog/small-business-crisis-management": crisisManagementImage,
   "/blog/profit-first-non-negotiable": profitFirstImage,

@@ -655,7 +655,9 @@ const FullyBurdenedLaborRate = () => {
           {/* CTA Section */}
           <div className="bg-[hsl(var(--biz-green))]/10 border border-[hsl(var(--biz-green))]/30 rounded-2xl p-8 text-center mt-12">
             <div className="flex justify-center mb-4">
-              <img src="/favicon.ico" alt="BizHealth.ai" className="w-12 h-12" loading="lazy" />
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center overflow-hidden shadow-lg">
+                <img src="/favicon-96x96.png" alt="BizHealth.ai" className="w-9 h-9 object-contain" />
+              </div>
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3">
               Don't Let Hidden Labor Costs Drain Your Profits
@@ -672,9 +674,11 @@ const FullyBurdenedLaborRate = () => {
               </Link>
               <Link
                 to="/blog/stress-test-pricing-framework-margins-cash-flow"
-                className="inline-flex items-center justify-center gap-2 bg-card border border-border px-6 py-3 rounded-lg font-semibold text-foreground hover:bg-muted transition-colors no-underline"
+                className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg no-underline group"
               >
+                <FileText className="w-4 h-4 group-hover:rotate-3 transition-transform" />
                 Read: Stress-Test Your Pricing
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -704,6 +708,7 @@ const FullyBurdenedLaborRate = () => {
           }
         ]}
       />
+      <GradientDivider variant="green-gold" />
       <GlobalFooter />
     </div>
   );

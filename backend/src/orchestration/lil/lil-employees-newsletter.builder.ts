@@ -869,10 +869,11 @@ function buildNewsletterHTML(data: NewsletterData): string {
     }
 
     .benchmark-card {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.92);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
+      color: var(--text-primary);
     }
 
     .benchmark-card .benchmark-metric {
@@ -880,11 +881,13 @@ function buildNewsletterHTML(data: NewsletterData): string {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 8px;
+      color: var(--biz-navy);
     }
 
     .benchmark-card .benchmark-badge {
       display: inline-block;
-      background: rgba(255,255,255,0.25);
+      background: var(--biz-green);
+      color: white;
       padding: 4px 14px;
       border-radius: 20px;
       font-size: 0.8rem;

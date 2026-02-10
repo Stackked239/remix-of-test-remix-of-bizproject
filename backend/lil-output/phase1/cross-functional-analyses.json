@@ -1,0 +1,128 @@
+{
+  "submissionId": "5f4ac1a0-7c02-44f7-ba3e-d61409f31fa4",
+  "analyses": [
+    {
+      "analysisType": "operational_efficiency",
+      "title": "Operational Efficiency Analysis",
+      "score": 35,
+      "summary": "Sunrise Bakery & Café operates with significant operational inefficiencies, scoring below 50% across all technology and operations metrics. The combination of an aging POS system, poor production scheduling during seasonal peaks, and minimal technology adoption is likely compounding the margin pressure from rising ingredient costs. Immediate attention to basic operational systems could recover 10-15% in lost productivity and reduce waste.",
+      "keyFindings": [
+        "Production scheduling is reactive rather than planned, causing delays during seasonal demand spikes—a critical gap for a bakery where timing directly impacts product quality and waste",
+        "Technology infrastructure is severely outdated (ITD score of 25), with the aging POS system creating a bottleneck for inventory tracking, sales data analysis, and financial forecasting",
+        "Zero score on technology integration (LQ038) indicates systems don't communicate—likely requiring manual data entry between POS, inventory, and any accounting software, wasting 5-10 hours weekly",
+        "Moderate operational consistency (score 72) suggests the team delivers quality when not under pressure, but lacks the systems to maintain standards during peak periods"
+      ],
+      "contributingCategories": [
+        "OPS",
+        "TIN",
+        "ITD"
+      ],
+      "recommendations": [
+        "Replace the aging POS immediately with a modern cloud-based system like Square for Restaurants or Toast that includes integrated inventory tracking, sales forecasting, and scheduling tools—expect $150-300/month but will pay for itself in reduced waste and labor efficiency within 6 months",
+        "Implement a simple production planning system using historical sales data from the new POS to forecast demand 2-3 weeks ahead, creating par levels for prep work that can be adjusted for seasonal patterns and reducing the scramble during busy periods",
+        "Create a weekly 30-minute 'numbers meeting' where you review POS reports on bestsellers, slow movers, and ingredient usage—this costs nothing but builds the forecasting habit and identifies where rising ingredient costs hit hardest so you can adjust recipes, pricing, or menu mix strategically"
+      ]
+    },
+    {
+      "analysisType": "financial_health",
+      "title": "Financial Health Analysis",
+      "score": 35,
+      "summary": "Sunrise Bakery & Café demonstrates moderate financial stability after 7 years in business, but operates without critical financial planning infrastructure and risk protection measures. The lack of formal budgeting combined with rising ingredient costs and no business continuity planning creates significant vulnerability that could threaten the business during market disruptions or unexpected events.",
+      "keyFindings": [
+        "No formal financial forecasting or budgeting process despite tracking weekly revenue—leaving the business reactive rather than proactive to margin compression from rising ingredient costs",
+        "Cash flow management and financial controls score at basic levels (50%), indicating the business likely operates month-to-month without adequate reserves or predictive cash planning",
+        "Critical risk exposure with a score of just 25% in risk management—no business continuity plan despite identified concerns about losing key bakers or potential kitchen fire",
+        "Aging POS system combined with weak financial tracking creates operational blind spots that prevent accurate cost analysis and menu pricing optimization"
+      ],
+      "contributingCategories": [
+        "FIN",
+        "RMS"
+      ],
+      "recommendations": [
+        "Implement a simple monthly budgeting process using a spreadsheet that tracks ingredient costs as a percentage of revenue, sets target margins by product category, and projects cash needs 90 days out—this addresses the immediate margin squeeze concern with minimal cost",
+        "Establish a business emergency fund targeting 2-3 months of fixed operating expenses (rent, utilities, base payroll), building it gradually by setting aside 3-5% of weekly revenue until reaching the target",
+        "Create a basic business continuity document this month covering three scenarios: loss of key baker (cross-train existing staff, identify backup hiring sources), kitchen equipment failure (list emergency repair contacts, identify backup production options), and extended closure (insurance review, customer communication plan)"
+      ]
+    },
+    {
+      "analysisType": "risk_resilience",
+      "title": "Risk & Resilience Analysis",
+      "score": 42,
+      "summary": "Sunrise Bakery & Café faces significant vulnerability due to virtually nonexistent risk management and outdated technology infrastructure, leaving the business exposed to disruptions that could be catastrophic. While compliance with food safety and regulatory requirements is strong at 75%, the lack of business continuity planning combined with an aging POS system and key-person dependency creates a fragile operational foundation for a 7-year-old business.",
+      "keyFindings": [
+        "No formal business continuity plan exists despite identified critical risks of losing key staff or experiencing a kitchen fire—either event could force extended closure or permanent shutdown",
+        "The aging point-of-sale system represents both an operational risk and a compliance liability, as system failure during peak hours would halt revenue and outdated systems often lack security updates",
+        "Heavy reliance on skilled bakers without documented processes or cross-training means institutional knowledge walks out the door when employees leave—a critical gap given current retention challenges",
+        "Strong regulatory compliance (health codes, food safety, labor laws) provides a solid foundation but creates false confidence if a single disruption event could still devastate the business"
+      ],
+      "contributingCategories": [
+        "RMS",
+        "CMP",
+        "ITD"
+      ],
+      "recommendations": [
+        "Create a basic business continuity plan this month: document supplier alternatives, establish an emergency contact tree, ensure at least two people know every critical recipe/process, and verify insurance covers 60+ days of business interruption including spoilage",
+        "Prioritize POS replacement immediately—modern cloud-based systems (Toast, Square for Restaurants) cost $50-150/month, include automatic backups, integrate with inventory tracking to help manage rising ingredient costs, and eliminate the risk of catastrophic data loss",
+        "Implement a 'knowledge capture' initiative where skilled bakers document recipes, techniques, and vendor relationships in a shared digital format, reducing single-point-of-failure risk while also creating training materials that ease the hiring burden"
+      ]
+    },
+    {
+      "analysisType": "growth_potential",
+      "title": "Growth Potential Analysis",
+      "score": 49,
+      "summary": "Sunrise Bakery & Café demonstrates solid customer experience fundamentals (67/100) but is severely constrained by weak strategic planning (27/100), limiting its ability to capitalize on 7 years of market presence in Austin's competitive food scene. The business relies heavily on organic growth through word-of-mouth and Instagram without formal systems to convert that goodwill into scalable revenue, while rising costs and staffing challenges threaten margins that aren't being actively managed.",
+      "keyFindings": [
+        "Critical strategic gap: With only 27/100 in strategy, the bakery lacks formal financial forecasting, growth planning, and the data infrastructure (aging POS system) needed to make informed decisions about pricing, menu optimization, or expansion timing.",
+        "Untapped revenue sitting on the table: No formal upselling strategy exists despite staff having customer contact—industry data suggests consistent suggestive selling can increase average ticket by 15-25% with zero additional customer acquisition cost.",
+        "Marketing channel over-concentration: Relying primarily on Instagram and word-of-mouth (scoring 25/100 on channel diversity) creates vulnerability; algorithm changes or seasonal fluctuations could significantly impact new customer flow.",
+        "Customer loyalty is the bright spot: Strong satisfaction scores (75/100) and decent retention indicate the product and experience resonate—this loyal base is an underleveraged asset for referrals, reviews, and premium offerings."
+      ],
+      "contributingCategories": [
+        "STR",
+        "SAL",
+        "MKT",
+        "CXP"
+      ],
+      "recommendations": [
+        "Implement a simple upselling program immediately: Train staff on 2-3 consistent add-on suggestions (coffee with pastry, take-home loaf, loyalty card signup) with weekly tracking—this is the fastest path to increased revenue with your current traffic and requires minimal investment beyond a team meeting and simple tracking sheet.",
+        "Replace the POS system with a modern solution that includes basic analytics and inventory tracking: Systems like Square or Toast (designed for food service) start under $100/month and will provide the sales data, ingredient cost tracking, and customer purchase history needed to address both the margin squeeze and the forecasting gap simultaneously.",
+        "Launch a formal referral program leveraging your satisfied customer base: Offer a free pastry or coffee for every new customer referred—your 75/100 satisfaction score means customers will advocate if given a simple mechanism, diversifying beyond Instagram dependence while keeping acquisition costs near zero."
+      ]
+    },
+    {
+      "analysisType": "organizational_strength",
+      "title": "Organizational Strength Analysis",
+      "score": 49,
+      "summary": "Sunrise Bakery & Café demonstrates moderate leadership capabilities but faces a critical human resources crisis that threatens operational stability. The loss of skilled bakers to larger competitors and weak talent retention systems (HRS score of 34) represent the most urgent organizational risk, while leadership shows reasonable decision-making ability but lacks formal structure for team development.",
+      "keyFindings": [
+        "Severe retention problem: Lost 2 skilled bakers in one year due to compensation gaps with larger chains, creating knowledge drain and production vulnerabilities in a 15-person operation where each employee represents nearly 7% of workforce capacity",
+        "No formal training or career development pathway exists, leaving employees without growth incentives beyond wages—a critical gap when competing against chains that can offer structured advancement",
+        "Leadership engagement is inconsistent (score 50), suggesting the owner/management may be stretched thin across operations, limiting their ability to build team culture and address employee concerns proactively",
+        "Moderate strategic clarity exists at the leadership level (score 75 on vision communication), but this isn't translating into HR systems that support long-term workforce stability"
+      ],
+      "contributingCategories": [
+        "HRS",
+        "LDG"
+      ],
+      "recommendations": [
+        "Implement non-wage retention strategies immediately: Create a 'Baker Apprentice to Lead' progression path, offer schedule flexibility, profit-sharing on signature items, or skills certifications—benefits that don't require matching chain salaries but provide meaningful career value",
+        "Establish weekly 15-minute one-on-ones between ownership and each team member to catch dissatisfaction early and build loyalty through personal investment; this costs nothing but addresses the engagement gap before losing more staff",
+        "Develop a simple cross-training matrix so knowledge isn't concentrated in individuals who may leave; document key recipes and techniques, reducing operational risk while giving remaining staff skill-building opportunities they can list on resumes"
+      ]
+    }
+  ],
+  "executiveSummary": "Sunrise Bakery & Café demonstrates an overall business health score of 46/100. The strongest areas are Growth Potential and Organizational Strength. Priority attention is recommended for Operational Efficiency and Financial Health.",
+  "topStrengths": [
+    "Business demonstrates solid foundational practices"
+  ],
+  "topWeaknesses": [
+    "Critical strategic gap: With only 27/100 in strategy, the bakery lacks formal financial forecasting, growth planning, and the data infrastructure (aging POS system) needed to make informed decisions about pricing, menu optimization, or expansion timing.",
+    "Production scheduling is reactive rather than planned, causing delays during seasonal demand spikes—a critical gap for a bakery where timing directly impacts product quality and waste",
+    "No formal financial forecasting or budgeting process despite tracking weekly revenue—leaving the business reactive rather than proactive to margin compression from rising ingredient costs"
+  ],
+  "metadata": {
+    "processedAt": "2026-02-10T02:45:44.695Z",
+    "modelUsed": "claude-opus-4-5-20251101",
+    "tokensUsed": 6135
+  }
+}

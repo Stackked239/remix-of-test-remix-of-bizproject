@@ -118,10 +118,17 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .report-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 4px solid var(--biz-blue); background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); }
     .header-logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--biz-blue); } .header-logo span { color: var(--biz-green); }
     .header-meta { text-align: right; font-size: 0.875rem; color: var(--text-secondary); } .header-meta .report-title { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--biz-blue); }
-    .title-section { text-align: center; padding: 50px 40px; margin: 30px 0; background: linear-gradient(135deg, var(--biz-blue) 0%, #2d3570 100%); color: white; border-radius: 12px; }
-    .title-section h1 { color: white; margin-bottom: 12px; } .title-section .company-name { color: var(--warm-gold); font-size: 1.5rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
-    .title-section .role-framing { margin-top: 16px; font-size: 1rem; line-height: 1.6; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .title-section .report-date { margin-top: 12px; opacity: 0.9; color: white; font-size: 0.95rem; }
+    /* Cover Page */
+    .cover-page { min-height: 100vh; background: linear-gradient(135deg, var(--biz-blue) 0%, #1a1b3d 50%, #2d3570 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px; position: relative; overflow: hidden; page-break-after: always; }
+    .cover-page::before { content: ''; position: absolute; top: -30%; right: -15%; width: 50%; height: 160%; background: rgba(255,255,255,0.02); transform: rotate(15deg); pointer-events: none; }
+    .cover-page .cover-logo { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 60px; letter-spacing: 1px; } .cover-page .cover-logo span { color: var(--biz-green); }
+    .cover-page h1 { color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .cover-page .company-name { color: var(--warm-gold); font-size: 1.75rem; font-weight: 600; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; }
+    .cover-page .cover-divider { width: 80px; height: 3px; background: var(--biz-green); margin: 24px auto; border-radius: 2px; }
+    .cover-page .role-framing { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 600px; margin: 0 auto 30px; }
+    .cover-page .report-date { font-size: 1rem; opacity: 0.8; margin-bottom: 8px; }
+    .cover-page .cover-plan { font-size: 0.85rem; opacity: 0.6; letter-spacing: 2px; text-transform: uppercase; margin-top: 40px; }
+    .cover-page .cover-confidential { font-size: 0.8rem; opacity: 0.5; margin-top: 12px; font-style: italic; }
     .priority-callout { background: linear-gradient(135deg, #242553 0%, #2d3561 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; }
     .priority-callout h3 { color: var(--biz-green); font-size: 1.1rem; margin-bottom: 0.75rem; } .priority-callout .callout-action { font-size: 1.125rem; line-height: 1.6; margin-bottom: 0.5rem; } .priority-callout .callout-meta { font-size: 0.875rem; opacity: 0.8; }
     .snapshot-section { margin: 2rem 0; }
@@ -174,7 +181,7 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .tracker-card { padding: 1.25rem; background: white; border: 1px solid var(--border-color); border-radius: 10px; box-shadow: var(--card-shadow); text-align: center; } .tracker-card .tracker-score { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; } .tracker-card .tracker-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem; } .tracker-card .tracker-target { font-size: 0.8rem; color: var(--proficiency); font-weight: 600; margin-top: 0.5rem; }
     .report-footer { margin-top: 3rem; padding: 2rem 40px; background: var(--biz-blue); color: white; text-align: center; }
     .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; } .footer-logo span { color: var(--biz-green); } .report-footer p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.25rem; }
-    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .title-section, .priority-callout { break-inside: avoid; } .finding-card, .quick-win-card, .action-plan-month { break-inside: avoid; } }
+    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .cover-page { min-height: 100vh; page-break-after: always; } .priority-callout { break-inside: avoid; } .finding-card, .quick-win-card, .action-plan-month { break-inside: avoid; } }
   </style>
 </head>
 <body>
@@ -199,13 +206,17 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
 // SECTION BUILDERS
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildTitleSection(companyName: string, currentDate: string): string {
+function buildCoverPage(companyName: string, currentDate: string): string {
   return `
-    <div class="title-section">
+    <div class="cover-page">
+      <div class="cover-logo">BizHealth<span>.ai</span></div>
       <h1>Manager Operations Report</h1>
       <div class="company-name">${companyName}</div>
+      <div class="cover-divider"></div>
       <div class="role-framing">Operational efficiency and workforce management are the backbone of ${companyName}'s daily execution. This report analyzes process effectiveness, human resources practices, and operational capacity to deliver actionable recommendations.</div>
       <div class="report-date">${currentDate}</div>
+      <div class="cover-plan">Essentials Plan</div>
+      <div class="cover-confidential">Confidential — Intended for authorized recipients only</div>
     </div>`;
 }
 
@@ -270,7 +281,10 @@ function buildDeepDiveSection(idmOutput: LILIDMOutput): string {
     }
     for (const weakness of weaknesses) {
       const severity = getSeverityBadge(catScore);
-      findingsHtml.push(`<div class="finding-card" style="border-left-color: ${severity.borderColor};"><div class="finding-card-header"><h4>${weakness.length > 80 ? weakness.substring(0, 77) + '...' : weakness}</h4><span class="severity-badge" style="background: ${severity.bgColor}; color: ${severity.color};">${severity.label}</span></div><div class="finding-action"><strong>Recommended Action:</strong> See the Quick Wins section for specific implementation steps.</div></div>`);
+      const gapToTarget = Math.max(0, 80 - catScore);
+      const urgencyLabel = catScore < 40 ? 'Immediate' : catScore < 60 ? 'Near-term' : 'Ongoing';
+      const actionContext = `${urgencyLabel} priority. Closing this gap could improve the ${catName} score by up to ${Math.round(gapToTarget * 0.5)} points toward the 80/100 Excellence threshold.`;
+      findingsHtml.push(`<div class="finding-card" style="border-left-color: ${severity.borderColor};"><div class="finding-card-header"><h4>${weakness}</h4><span class="severity-badge" style="background: ${severity.bgColor}; color: ${severity.color};">${severity.label}</span></div><div class="finding-narrative"><p>This finding reflects a gap in ${catName} performance that directly affects operational efficiency and workforce effectiveness. Addressing it strengthens the daily execution backbone of the business.</p></div><div class="finding-action"><strong>Impact Assessment:</strong> ${actionContext} See the Quick Wins and Action Plan sections for specific implementation steps.</div></div>`);
     }
     if (catData.keyMetrics && catData.keyMetrics.length > 0) {
       const metric = catData.keyMetrics[0];
@@ -415,7 +429,7 @@ export async function buildLilManagerOperationsReport(
   logger.info({ companyName }, 'Building LIL Manager Operations Report (v4.1)');
   const { narrative, tokensUsed } = await generateNarrativeSummary(idmOutput, businessOverview);
   const sections = [
-    buildTitleSection(companyName, currentDate),
+    buildCoverPage(companyName, currentDate),
     `<div class="snapshot-section"><h2>Executive Summary</h2>${narrative}</div>`,
     buildSnapshotSection(idmOutput),
     buildPriorityCallout(idmOutput),
@@ -434,7 +448,7 @@ export async function buildLilManagerOperationsReport(
   const pageCount = Math.ceil(htmlContent.length / 3000);
   const report: LILGeneratedReport = {
     reportType: 'manager-operations' as any, title: "Manager Operations Report", htmlContent, pageCount,
-    sections: ['Title & Introduction', 'Executive Summary', 'Operations Health Snapshot', 'Priority Action', 'Priority Focus Areas', 'Gap to Excellence', 'Deep Dive: Operations Dimensions', 'Quick Wins', 'Operations Action Plan', 'Essential Tools & Templates', 'Operations Metrics & 90-Day Targets', 'Progress Tracker', 'Next Steps'],
+    sections: ['Cover Page', 'Executive Summary', 'Operations Health Snapshot', 'Priority Action', 'Priority Focus Areas', 'Gap to Excellence', 'Deep Dive: Operations Dimensions', 'Quick Wins', 'Operations Action Plan', 'Essential Tools & Templates', 'Operations Metrics & 90-Day Targets', 'Progress Tracker', 'Next Steps'],
     generatedAt: new Date().toISOString()
   };
   logger.info({ pageCount, tokensUsed, sectionsGenerated: report.sections.length, htmlLength: htmlContent.length }, 'LIL Manager Operations Report (v4.1) built successfully');

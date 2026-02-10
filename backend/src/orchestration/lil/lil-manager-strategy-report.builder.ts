@@ -242,20 +242,96 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
       color: var(--biz-navy);
     }
 
-    /* Title Section */
-    .title-section {
-      text-align: center;
-      padding: 50px 40px;
-      margin: 30px 0;
-      background: linear-gradient(135deg, var(--biz-navy) 0%, #2d3570 100%);
+    /* Cover Page */
+    .cover-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--biz-navy) 0%, #1a1b3d 50%, #2d3570 100%);
       color: white;
-      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
     }
 
-    .title-section h1 { color: white; margin-bottom: 12px; }
-    .title-section .company-name { color: var(--warm-gold); font-size: 1.5rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
-    .title-section .report-date { margin-top: 12px; opacity: 0.9; color: white; font-size: 0.95rem; }
-    .title-section .role-framing { margin-top: 8px; font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cover-page::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 50%;
+      height: 160%;
+      background: rgba(255,255,255,0.02);
+      transform: rotate(15deg);
+      pointer-events: none;
+    }
+
+    .cover-page .cover-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 60px;
+      letter-spacing: 1px;
+    }
+
+    .cover-page .cover-logo span { color: var(--biz-green); }
+
+    .cover-page h1 {
+      color: white;
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .cover-page .company-name {
+      color: var(--warm-gold);
+      font-size: 1.75rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .cover-page .cover-divider {
+      width: 80px;
+      height: 3px;
+      background: var(--biz-green);
+      margin: 24px auto;
+      border-radius: 2px;
+    }
+
+    .cover-page .role-framing {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cover-page .report-date {
+      font-size: 1rem;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .cover-page .cover-plan {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    .cover-page .cover-confidential {
+      font-size: 0.8rem;
+      opacity: 0.5;
+      margin-top: 12px;
+      font-style: italic;
+    }
 
     /* One Thing Callout (P2 Enhancement B) */
     .one-thing-callout {
@@ -747,7 +823,8 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
     @media print {
       body { font-size: 11pt; }
       .report-container { padding: 0 20px; }
-      .one-thing-callout, .title-section { break-inside: avoid; }
+      .cover-page { min-height: 100vh; page-break-after: always; }
+      .one-thing-callout { break-inside: avoid; }
       .finding-card, .quick-win-card, .action-plan-month { break-inside: avoid; }
     }
   </style>
@@ -779,14 +856,18 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
 // SECTION BUILDERS
 // ═══════════════════════════════════════════════════════════════════════════
 
-/** Build the title section */
-function buildTitleSection(companyName: string, currentDate: string): string {
+/** Build the cover page */
+function buildCoverPage(companyName: string, currentDate: string): string {
   return `
-    <div class="title-section">
+    <div class="cover-page">
+      <div class="cover-logo">BizHealth<span>.ai</span></div>
       <h1>Manager Strategy Report</h1>
       <div class="company-name">${companyName}</div>
+      <div class="cover-divider"></div>
       <div class="role-framing">Strategic direction defines how ${companyName} competes and grows. This report analyzes the current strategic position and delivers actionable recommendations.</div>
       <div class="report-date">${currentDate}</div>
+      <div class="cover-plan">Essentials Plan</div>
+      <div class="cover-confidential">Confidential — Intended for authorized recipients only</div>
     </div>`;
 }
 
@@ -979,18 +1060,26 @@ function buildDeepDiveSection(
         </div>`);
     }
     
-    // Weaknesses as finding cards with severity badges (P1 FIX 4)
+    // Weaknesses as finding cards with severity badges (P1 FIX 4) — FULL TEXT, no truncation
     for (const weakness of weaknesses) {
       const severity = getSeverityBadge(catScore);
+      
+      // Build contextual recommendation based on category and score
+      const gapToTarget = Math.max(0, 80 - catScore);
+      const urgencyLabel = catScore < 40 ? 'Immediate' : catScore < 60 ? 'Near-term' : 'Ongoing';
+      const actionContext = `${urgencyLabel} priority. Closing this gap could improve the ${catName} score by up to ${Math.round(gapToTarget * 0.5)} points toward the 80/100 Excellence threshold.`;
       
       findingsHtml.push(`
         <div class="finding-card" style="border-left-color: ${severity.borderColor};">
           <div class="finding-card-header">
-            <h4>${weakness.length > 80 ? weakness.substring(0, 77) + '...' : weakness}</h4>
+            <h4>${weakness}</h4>
             <span class="severity-badge" style="background: ${severity.bgColor}; color: ${severity.color};">${severity.label}</span>
           </div>
+          <div class="finding-narrative">
+            <p>This finding reflects a gap in ${catName} performance that directly affects the overall strategic health of the business. Addressing it strengthens the foundation for sustainable growth.</p>
+          </div>
           <div class="finding-action">
-            <strong>Recommended Action:</strong> See the Quick Wins section for specific implementation steps.
+            <strong>Impact Assessment:</strong> ${actionContext} See the Quick Wins and Action Plan sections for specific implementation steps.
           </div>
         </div>`);
     }
@@ -1353,7 +1442,7 @@ export async function buildLilManagerStrategyReport(
   
   // Build all sections deterministically
   const sections = [
-    buildTitleSection(companyName, currentDate),
+    buildCoverPage(companyName, currentDate),
     `<div class="snapshot-section"><h2>Executive Summary</h2>${narrative}</div>`,
     buildSnapshotSection(idmOutput),
     buildOneThingCallout(idmOutput),
@@ -1384,7 +1473,7 @@ export async function buildLilManagerStrategyReport(
     htmlContent,
     pageCount,
     sections: [
-      'Title',
+      'Cover Page',
       'Executive Summary',
       'Strategy Health Snapshot',
       'Priority Action',

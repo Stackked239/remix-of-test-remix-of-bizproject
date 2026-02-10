@@ -1,0 +1,267 @@
+{
+  "submissionId": "5f4ac1a0-7c02-44f7-ba3e-d61409f31fa4",
+  "timestamp": "2026-02-10T02:44:34.828Z",
+  "pipelineType": "LIL",
+  "businessOverview": {
+    "companyName": "Sunrise Bakery & Café",
+    "location": {
+      "city": "Austin",
+      "state": "Texas",
+      "country": "United States"
+    },
+    "multipleLocations": false,
+    "industry": "Food & Beverage - Bakery/Café",
+    "industryDetails": "Artisan bakery and café specializing in sourdough breads, pastries, and specialty coffee. Also offers catering for local events.",
+    "corporateStructure": "LLC",
+    "website": "www.sunrisebakerycafe.com",
+    "yearStarted": 2019,
+    "workforce": {
+      "executiveLeadership": 2,
+      "supportAdmin": 1,
+      "fullTimeEmployees": 5,
+      "partTimeEmployees": 4,
+      "contractors": 1,
+      "seasonal": 2
+    },
+    "salesRevenue": {
+      "lastYear": 620000,
+      "projectedThisYear": 710000,
+      "highestYear": 2024,
+      "highestAmount": 620000
+    },
+    "productsServices": [
+      {
+        "name": "Artisan Breads & Pastries",
+        "percentOfSales": 45,
+        "type": "product"
+      },
+      {
+        "name": "Coffee & Beverages",
+        "percentOfSales": 30,
+        "type": "product"
+      },
+      {
+        "name": "Catering Services",
+        "percentOfSales": 15,
+        "type": "service"
+      },
+      {
+        "name": "Wholesale to Local Restaurants",
+        "percentOfSales": 10,
+        "type": "product"
+      }
+    ],
+    "currentChallenges": [
+      "Rising ingredient costs squeezing margins",
+      "Difficulty hiring and retaining skilled bakers",
+      "Limited marketing budget and social media presence",
+      "No formal financial forecasting or budgeting process",
+      "Aging point-of-sale system needs replacement"
+    ],
+    "competitors": [
+      {
+        "name": "Great Harvest Bread Company",
+        "website": "www.greatharvest.com",
+        "isDirect": true
+      },
+      {
+        "name": "Quacks 43rd Street Bakery",
+        "isDirect": true
+      },
+      {
+        "name": "Starbucks",
+        "website": "www.starbucks.com",
+        "isDirect": false
+      }
+    ]
+  },
+  "responses": [
+    {
+      "questionId": "LQ001",
+      "value": 3
+    },
+    {
+      "questionId": "LQ002",
+      "value": 14.5
+    },
+    {
+      "questionId": "LQ003",
+      "value": 2
+    },
+    {
+      "questionId": "LQ004",
+      "value": 15
+    },
+    {
+      "questionId": "LQ005",
+      "value": 25
+    },
+    {
+      "questionId": "LQ006",
+      "value": 1
+    },
+    {
+      "questionId": "LQ007",
+      "value": 18.5
+    },
+    {
+      "questionId": "LQ008",
+      "value": 65
+    },
+    {
+      "questionId": "LQ009",
+      "value": 70
+    },
+    {
+      "questionId": "LQ010",
+      "value": 2,
+      "followUpResponse": "We don't have a formal upselling strategy. Staff sometimes suggest add-ons but it's not consistent."
+    },
+    {
+      "questionId": "LQ011",
+      "value": 2,
+      "followUpResponse": "Instagram and word-of-mouth referrals"
+    },
+    {
+      "questionId": "LQ012",
+      "value": 2
+    },
+    {
+      "questionId": "LQ013",
+      "value": 45
+    },
+    {
+      "questionId": "LQ014",
+      "value": 120
+    },
+    {
+      "questionId": "LQ015",
+      "value": 850
+    },
+    {
+      "questionId": "LQ016",
+      "value": 4
+    },
+    {
+      "questionId": "LQ017",
+      "value": 4
+    },
+    {
+      "questionId": "LQ018",
+      "value": 3,
+      "followUpResponse": "Usually within a few hours on social media, same day in person"
+    },
+    {
+      "questionId": "LQ019",
+      "value": 2
+    },
+    {
+      "questionId": "LQ020",
+      "value": 3,
+      "followUpResponse": "Seasonal demand spikes cause delays. Need better production scheduling."
+    },
+    {
+      "questionId": "LQ021",
+      "value": 3
+    },
+    {
+      "questionId": "LQ022",
+      "value": 72
+    },
+    {
+      "questionId": "LQ023",
+      "value": 35000
+    },
+    {
+      "questionId": "LQ024",
+      "value": 2.5
+    },
+    {
+      "questionId": "LQ025",
+      "value": 62
+    },
+    {
+      "questionId": "LQ026",
+      "value": 3
+    },
+    {
+      "questionId": "LQ027",
+      "value": 3200
+    },
+    {
+      "questionId": "LQ028",
+      "value": 2
+    },
+    {
+      "questionId": "LQ029",
+      "value": 2,
+      "followUpResponse": "We track revenue weekly but don't formally forecast. Worried about ingredient cost increases."
+    },
+    {
+      "questionId": "LQ030",
+      "value": 3
+    },
+    {
+      "questionId": "LQ031",
+      "value": 2
+    },
+    {
+      "questionId": "LQ032",
+      "value": 2,
+      "followUpResponse": "Lost 2 bakers last year. Hard to compete with larger chains on pay."
+    },
+    {
+      "questionId": "LQ033",
+      "value": 3
+    },
+    {
+      "questionId": "LQ034",
+      "value": 4
+    },
+    {
+      "questionId": "LQ035",
+      "value": 8500
+    },
+    {
+      "questionId": "LQ036",
+      "value": 3
+    },
+    {
+      "questionId": "LQ037",
+      "value": 2
+    },
+    {
+      "questionId": "LQ038",
+      "value": 1
+    },
+    {
+      "questionId": "LQ039",
+      "value": 2
+    },
+    {
+      "questionId": "LQ040",
+      "value": 2
+    },
+    {
+      "questionId": "LQ041",
+      "value": 2
+    },
+    {
+      "questionId": "LQ042",
+      "value": 2
+    },
+    {
+      "questionId": "LQ043",
+      "value": 2,
+      "followUpResponse": "No formal business continuity plan. Biggest worry is losing key staff or a kitchen fire."
+    },
+    {
+      "questionId": "LQ044",
+      "value": 4
+    },
+    {
+      "questionId": "LQ045",
+      "value": 4
+    }
+  ]
+}

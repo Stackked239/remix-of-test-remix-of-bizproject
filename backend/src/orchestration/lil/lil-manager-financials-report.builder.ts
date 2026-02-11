@@ -157,12 +157,14 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .quick-win-meta { display: flex; gap: 1.5rem; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-secondary); flex-wrap: wrap; } .quick-win-meta span { display: flex; align-items: center; gap: 4px; }
     .accountable-tag { display: inline-block; background: var(--bg-light); padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; color: var(--biz-blue); }
     .action-plan-section { margin: 2.5rem 0; }
-    .action-plan-month { margin: 1.5rem 0; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: var(--card-shadow); }
-    .action-plan-month h3 { display: flex; align-items: center; gap: 8px; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1rem; }
+    .action-plan-month { margin: 1.5rem 0; padding: 2rem; background: white; border-radius: 10px; box-shadow: var(--card-shadow); }
+    .action-plan-month h3 { display: flex; align-items: center; gap: 8px; padding-bottom: 0.75rem; border-bottom: 3px solid var(--border-color); margin-bottom: 1.25rem; font-size: 1.15rem; }
     .action-plan-month.month-1 h3 { border-bottom-color: var(--critical); } .action-plan-month.month-2 h3 { border-bottom-color: var(--attention); } .action-plan-month.month-3 h3 { border-bottom-color: var(--excellence); }
-    .action-item { display: grid; grid-template-columns: 24px 1fr auto auto; gap: 12px; align-items: start; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem; } .action-item:last-child { border-bottom: none; }
-    .action-checkbox { width: 20px; height: 20px; border: 2px solid var(--border-color); border-radius: 4px; margin-top: 2px; }
-    .action-time { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; } .action-impact { font-size: 0.8rem; color: var(--proficiency); font-weight: 500; white-space: nowrap; }
+    .action-item { display: grid; grid-template-columns: 24px 1fr; gap: 10px 12px; align-items: start; padding: 14px 0; border-bottom: 1px solid #eee; font-size: 1rem; line-height: 1.5; } .action-item:last-child { border-bottom: none; }
+    .action-text { font-weight: 600; color: var(--text-primary); word-wrap: break-word; overflow-wrap: break-word; }
+    .action-meta { grid-column: 2; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .action-checkbox { width: 20px; height: 20px; border: 2px solid var(--border-color); border-radius: 4px; margin-top: 3px; flex-shrink: 0; }
+    .action-time { font-size: 0.85rem; color: var(--text-secondary); background: #f5f5f5; padding: 2px 10px; border-radius: 12px; font-weight: 500; } .action-impact { font-size: 0.85rem; color: var(--proficiency); font-weight: 600; word-wrap: break-word; overflow-wrap: break-word; }
     .ongoing-habits { margin: 1.5rem 0; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff 0%, var(--bg-light) 100%); border-radius: 10px; border-left: 5px solid var(--biz-blue); }
     .ongoing-habits h3 { display: flex; align-items: center; gap: 8px; } .habit-item { padding: 8px 0; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
     .metrics-section { margin: 2.5rem 0; }
@@ -316,10 +318,10 @@ function buildQuickWinsSection(idmOutput: LILIDMOutput): string {
 function buildActionPlanSection(idmOutput: LILIDMOutput): string {
   const roadmap = idmOutput.roadmap;
   const buildActionItems = (items: Array<{ action: string; category: CategoryCode; impact: string }>) => {
-    if (items.length === 0) return '<div class="action-item"><div class="action-checkbox"></div><div style="color: var(--text-secondary); font-style: italic;">No specific actions identified for this phase. Review the Quick Wins section above for immediate opportunities.</div><div></div><div></div></div>';
+    if (items.length === 0) return '<div class="action-item"><div class="action-checkbox"></div><div><div class="action-text" style="color: var(--text-secondary); font-style: italic; font-weight: 400;">No specific actions identified for this phase. Review the Quick Wins section above for immediate opportunities.</div></div></div>';
     return items.map(item => {
       const catName = CATEGORY_NAMES[item.category] || item.category;
-      return `<div class="action-item"><div class="action-checkbox"></div><div>${item.action}</div><div class="action-time">${catName}</div><div class="action-impact">${item.impact || ''}</div></div>`;
+      return `<div class="action-item"><div class="action-checkbox"></div><div><div class="action-text">${item.action}</div><div class="action-meta"><span class="action-time">${catName}</span><span class="action-impact">${item.impact || ''}</span></div></div></div>`;
     }).join('');
   };
 

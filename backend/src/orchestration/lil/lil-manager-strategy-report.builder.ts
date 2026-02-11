@@ -602,7 +602,7 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
 
     .action-plan-month {
       margin: 1.5rem 0;
-      padding: 1.5rem;
+      padding: 2rem;
       background: white;
       border-radius: 10px;
       box-shadow: var(--card-shadow);
@@ -613,8 +613,9 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
       align-items: center;
       gap: 8px;
       padding-bottom: 0.75rem;
-      border-bottom: 2px solid var(--border-color);
-      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--border-color);
+      margin-bottom: 1.25rem;
+      font-size: 1.15rem;
     }
 
     .action-plan-month.month-1 h3 { border-bottom-color: var(--critical); }
@@ -623,35 +624,56 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
 
     .action-item {
       display: grid;
-      grid-template-columns: 24px 1fr auto auto;
-      gap: 12px;
+      grid-template-columns: 24px 1fr;
+      gap: 10px 12px;
       align-items: start;
-      padding: 10px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 0.95rem;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .action-item:last-child { border-bottom: none; }
+
+    .action-text {
+      font-weight: 600;
+      color: var(--text-primary);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .action-meta {
+      grid-column: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
 
     .action-checkbox {
       width: 20px;
       height: 20px;
       border: 2px solid var(--border-color);
       border-radius: 4px;
-      margin-top: 2px;
+      margin-top: 3px;
+      flex-shrink: 0;
     }
 
     .action-time {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-secondary);
-      white-space: nowrap;
+      background: #f5f5f5;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-weight: 500;
     }
 
     .action-impact {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--proficiency);
-      font-weight: 500;
-      white-space: nowrap;
+      font-weight: 600;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .ongoing-habits {
@@ -1173,18 +1195,22 @@ function buildActionPlanSection(
     if (items.length === 0) return `
         <div class="action-item">
           <div class="action-checkbox"></div>
-          <div style="color: var(--text-secondary); font-style: italic;">No specific actions identified for this phase. Review the Quick Wins section above for immediate opportunities.</div>
-          <div></div>
-          <div></div>
+          <div>
+            <div class="action-text" style="color: var(--text-secondary); font-style: italic; font-weight: 400;">No specific actions identified for this phase. Review the Quick Wins section above for immediate opportunities.</div>
+          </div>
         </div>`;
     return items.map(item => {
       const catName = CATEGORY_NAMES[item.category] || item.category;
       return `
         <div class="action-item">
           <div class="action-checkbox"></div>
-          <div>${item.action}</div>
-          <div class="action-time">${catName}</div>
-          <div class="action-impact">${item.impact || ''}</div>
+          <div>
+            <div class="action-text">${item.action}</div>
+            <div class="action-meta">
+              <span class="action-time">${catName}</span>
+              <span class="action-impact">${item.impact || ''}</span>
+            </div>
+          </div>
         </div>`;
     }).join('');
   };

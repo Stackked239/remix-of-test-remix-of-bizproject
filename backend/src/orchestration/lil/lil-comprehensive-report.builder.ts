@@ -102,10 +102,17 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .report-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 4px solid var(--biz-blue); background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); }
     .header-logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--biz-blue); } .header-logo span { color: var(--biz-green); }
     .header-meta { text-align: right; font-size: 0.875rem; color: var(--text-secondary); } .header-meta .report-title { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--biz-blue); }
-    .title-section { text-align: center; padding: 60px 40px; margin: 30px 0; background: linear-gradient(135deg, var(--biz-blue) 0%, #2d3570 100%); color: white; border-radius: 12px; }
-    .title-section h1 { color: white; margin-bottom: 12px; font-size: 2.5rem; } .title-section .company-name { color: var(--warm-gold); font-size: 1.75rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
-    .title-section .report-subtitle { margin-top: 16px; font-size: 1.1rem; line-height: 1.6; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .title-section .report-date { margin-top: 12px; opacity: 0.9; color: white; font-size: 0.95rem; }
+    /* Cover Page */
+    .cover-page { min-height: 100vh; background: linear-gradient(135deg, var(--biz-blue) 0%, #1a1b3d 50%, #2d3570 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px; position: relative; overflow: hidden; page-break-after: always; }
+    .cover-page::before { content: ''; position: absolute; top: -30%; right: -15%; width: 50%; height: 160%; background: rgba(255,255,255,0.02); transform: rotate(15deg); pointer-events: none; }
+    .cover-page .cover-logo { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 60px; letter-spacing: 1px; } .cover-page .cover-logo span { color: var(--biz-green); }
+    .cover-page h1 { color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .cover-page .company-name { color: var(--warm-gold); font-size: 1.75rem; font-weight: 600; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; }
+    .cover-page .cover-divider { width: 80px; height: 3px; background: var(--biz-green); margin: 24px auto; border-radius: 2px; }
+    .cover-page .role-framing { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 700px; margin: 0 auto 30px; }
+    .cover-page .report-date { font-size: 1rem; opacity: 0.8; margin-bottom: 8px; }
+    .cover-page .cover-plan { font-size: 0.85rem; opacity: 0.6; letter-spacing: 2px; text-transform: uppercase; margin-top: 40px; }
+    .cover-page .cover-confidential { font-size: 0.8rem; opacity: 0.5; margin-top: 12px; font-style: italic; }
 
     /* BLUF Section */
     .bluf-section { background: linear-gradient(135deg, #242553 0%, #2d3561 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; }
@@ -125,11 +132,11 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
 
     /* 12-Category Dashboard */
     .category-dashboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 2rem 0; }
-    .cat-dash-item { background: white; border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; text-align: center; box-shadow: var(--card-shadow); }
-    .cat-dash-item .cat-code { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
-    .cat-dash-item .cat-score { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; display: block; margin-bottom: 4px; }
-    .cat-dash-item .cat-name { font-size: 0.85rem; color: var(--text-primary); font-weight: 500; line-height: 1.3; margin-bottom: 4px; }
-    .cat-dash-item .benchmark-ind { font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px; display: inline-block; }
+    .cat-dash-item { background: white; border: 2px solid var(--border-color); border-radius: 10px; padding: 18px 14px; text-align: center; box-shadow: var(--card-shadow); transition: border-color 0.2s; }
+    .cat-dash-item .cat-name-header { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--biz-blue); line-height: 1.3; margin-bottom: 8px; min-height: 2.2em; }
+    .cat-dash-item .cat-score { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; display: block; margin-bottom: 2px; }
+    .cat-dash-item .cat-band-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 12px; display: inline-block; margin-bottom: 6px; }
+    .cat-dash-item .benchmark-ind { font-size: 0.72rem; font-weight: 600; padding: 2px 10px; border-radius: 12px; display: inline-block; }
     .benchmark-ind.above { background: #d4edda; color: #155724; } .benchmark-ind.at { background: #fff3cd; color: #856404; } .benchmark-ind.below { background: #f8d7da; color: #721c24; }
 
     /* Chapter Sections */
@@ -138,13 +145,16 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .chapter-number { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--biz-blue); color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; }
     .chapter-title { font-size: 1.5rem; font-weight: 700; color: var(--biz-blue); margin: 0; }
     .chapter-intro { font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
-    .chapter-score-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; padding: 12px 16px; background: var(--bg-light); border-radius: 8px; border: 1px solid var(--border-color); }
-    .chapter-score-bar .ch-score { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; } .chapter-score-bar .ch-label { font-size: 0.9rem; color: var(--text-secondary); }
+    .chapter-score-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 1.5rem; padding: 14px 20px; border-radius: 10px; border: 2px solid; }
+    .chapter-score-bar .ch-score { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 700; }
+    .chapter-score-bar .ch-band-pill { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 14px; border-radius: 14px; color: white; }
+    .chapter-score-bar .ch-label { font-size: 0.9rem; color: var(--text-primary); font-weight: 500; }
+    .chapter-score-bar .ch-descriptor { font-size: 0.85rem; color: var(--text-secondary); margin-left: auto; font-style: italic; max-width: 50%; text-align: right; line-height: 1.4; }
 
     /* Category Cards */
     .category-card { background: var(--bg-light); border-left: 5px solid var(--biz-green); padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; box-shadow: var(--card-shadow); }
     .category-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 8px; }
-    .category-card-header h3 { margin: 0; }
+    .category-card-header h3 { margin: 0; font-size: 1.4rem; font-weight: 700; color: var(--biz-blue); }
     .cat-score-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 1rem; font-weight: 700; font-family: 'Montserrat', sans-serif; color: white; }
     .category-summary { font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
 
@@ -197,7 +207,7 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .report-footer { margin-top: 3rem; padding: 2rem 40px; background: var(--biz-blue); color: white; text-align: center; }
     .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; } .footer-logo span { color: var(--biz-green); } .report-footer p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.25rem; }
 
-    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .chapter-section { break-before: page; } .category-card { break-inside: avoid; } }
+    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .cover-page { min-height: 100vh; page-break-after: always; } .chapter-section { break-before: page; } .category-card { break-inside: avoid; } }
     @media (max-width: 768px) { .category-dashboard { grid-template-columns: repeat(2, 1fr); } .swot-grid { grid-template-columns: 1fr; } .roadmap-container { grid-template-columns: 1fr; } .bluf-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -223,13 +233,17 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
 // SECTION BUILDERS
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildTitleSection(companyName: string, currentDate: string): string {
+function buildCoverPage(companyName: string, currentDate: string): string {
   return `
-    <div class="title-section">
+    <div class="cover-page">
+      <div class="cover-logo">BizHealth<span>.ai</span></div>
       <h1>Comprehensive Business Health Report</h1>
       <div class="company-name">${companyName}</div>
-      <div class="report-subtitle">A complete analysis of all 12 business health dimensions across strategy, operations, people, and resilience — with data-driven recommendations and a 90-day action plan.</div>
+      <div class="cover-divider"></div>
+      <div class="role-framing">A complete analysis of all 12 business health dimensions across strategy, operations, people, and resilience — with data-driven recommendations and a 90-day action plan.</div>
       <div class="report-date">${currentDate}</div>
+      <div class="cover-plan">Essentials Plan</div>
+      <div class="cover-confidential">Confidential — Prepared exclusively for ${companyName}</div>
     </div>`;
 }
 
@@ -259,14 +273,22 @@ function buildScoreOverview(idmOutput: LILIDMOutput): string {
     const catData = idmOutput.categoryData?.[code];
     const benchmark = catData?.benchmarkComparison || 'at';
     const benchmarkLabel = benchmark === 'above' ? '▲ Above' : benchmark === 'below' ? '▼ Below' : '● At Benchmark';
-    return `<div class="cat-dash-item"><div class="cat-code">${code}</div><div class="cat-score" style="color: ${catBand.color};">${score}</div><div class="cat-name">${CATEGORY_NAMES[code]}</div><span class="benchmark-ind ${benchmark}">${benchmarkLabel}</span></div>`;
+    return `<div class="cat-dash-item" style="border-color: ${catBand.color};"><div class="cat-name-header">${CATEGORY_NAMES[code]}</div><div class="cat-score" style="color: ${catBand.color};">${score}</div><span class="cat-band-label" style="background: ${catBand.bgColor}; color: ${catBand.color};">${catBand.label}</span><br/><span class="benchmark-ind ${benchmark}">${benchmarkLabel}</span></div>`;
   }).join('');
+
+  const chapterDescriptors: Record<string, Record<string, string>> = {
+    GE: { Excellence: 'Strong growth trajectory across all dimensions', Proficiency: 'Solid growth foundation with room to optimize', Attention: 'Growth engine needs targeted improvements', Concern: 'Significant gaps in revenue-driving capabilities', Critical: 'Growth engine requires urgent intervention' },
+    PH: { Excellence: 'Operations and finances running at peak efficiency', Proficiency: 'Sound operational and financial management', Attention: 'Operational or financial gaps need attention', Concern: 'Performance sustainability at risk', Critical: 'Immediate operational and financial stabilization needed' },
+    PL: { Excellence: 'Exceptional people strategy and governance', Proficiency: 'Capable team with solid leadership structures', Attention: 'People and leadership gaps emerging', Concern: 'Talent and governance weaknesses impacting results', Critical: 'Leadership and people infrastructure critically weak' },
+    RS: { Excellence: 'Robust safeguards across all risk dimensions', Proficiency: 'Good resilience with minor exposure areas', Attention: 'Some safeguard gaps require attention', Concern: 'Business exposed to material risks', Critical: 'Critical vulnerabilities across resilience dimensions' }
+  };
 
   // Chapter scores bar
   const chapterBarsHtml = CHAPTERS.map(ch => {
     const chScore = safeNum(idmOutput.healthScores?.byChapter?.[ch.code as keyof typeof idmOutput.healthScores.byChapter], 0);
     const chBand = getScoreBand(chScore);
-    return `<div class="chapter-score-bar"><span class="ch-score" style="color: ${chBand.color};">${chScore}</span><span class="ch-label">${ch.name} (${ch.categories.join(', ')})</span></div>`;
+    const descriptor = chapterDescriptors[ch.code]?.[chBand.label] || '';
+    return `<div class="chapter-score-bar" style="border-color: ${chBand.color}; background: ${chBand.bgColor};"><span class="ch-score" style="color: ${chBand.color};">${chScore}</span><span class="ch-band-pill" style="background: ${chBand.color};">${chBand.label}</span><span class="ch-label">${ch.name}</span>${descriptor ? `<span class="ch-descriptor">${descriptor}</span>` : ''}</div>`;
   }).join('');
 
   return `
@@ -355,9 +377,10 @@ function buildChapterSection(chapter: typeof CHAPTERS[number], chapterIndex: num
         <h2 class="chapter-title">${chapter.name}</h2>
       </div>
       <div class="chapter-intro">${chapterIntros[chapter.code] || ''}</div>
-      <div class="chapter-score-bar">
+      <div class="chapter-score-bar" style="border-color: ${chBand.color}; background: ${chBand.bgColor};">
         <span class="ch-score" style="color: ${chBand.color};">${chScore}/100</span>
-        <span class="ch-label">Chapter Score — ${chBand.label}</span>
+        <span class="ch-band-pill" style="background: ${chBand.color};">${chBand.label}</span>
+        <span class="ch-label">Chapter Score</span>
       </div>
       ${categoryCardsHtml}
     </div>`;
@@ -481,7 +504,7 @@ export async function buildLilComprehensiveReport(
   const { narrative, tokensUsed } = await generateExecutiveSummary(idmOutput, businessOverview);
 
   const sections = [
-    buildTitleSection(companyName, currentDate),
+    buildCoverPage(companyName, currentDate),
     buildBlufSection(bluf),
     `<div class="score-overview"><h2>Executive Summary</h2>${narrative}</div>`,
     buildScoreOverview(idmOutput),
@@ -506,7 +529,7 @@ export async function buildLilComprehensiveReport(
     htmlContent,
     pageCount,
     sections: [
-      'Title & Introduction', 'Bottom Line Up Front', 'Executive Summary',
+      'Cover Page', 'Bottom Line Up Front', 'Executive Summary',
       'Business Health Score Overview', 'Chapter 1: Growth Engine',
       'Chapter 2: Performance & Health', 'Chapter 3: People & Leadership',
       'Chapter 4: Resilience & Safeguards', '30-60-90 Day Action Plan',

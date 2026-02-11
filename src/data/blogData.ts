@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Small Business Strategic Plan: 6 Myths Keeping You Stuck in Survival Mode",
+    excerpt: "Most small business owners treat strategy like an optional luxury. Debunk 6 myths keeping you stuck in survival mode and build a one-page strategic plan for growth.",
+    author: "BizHealth.ai Research Team",
+    date: "February 11, 2026",
+    readTime: "15 min read",
+    category: "Business Strategy, Business Leadership, Risk Management, Growth & Scaling",
+    slug: "/blog/small-business-strategic-plan-myths",
+    imageUrl: "/assets/images/blog/small-business-strategic-plan-myths-hero.jpg",
+    altText: "Business professional strategizing with chess pieces representing small business strategic planning and competitive positioning",
+    keywords: "small business strategic plan, strategic planning myths, business strategy, one-page strategic plan, SMB growth strategy, business planning 2026, strategic planning small business, survival mode business, quarterly planning, SWOT analysis, business growth, checkers vs chess, strategy myths, business operating system, core priorities, quarterly rocks, vision statement, key metrics, strategic alignment, proactive leadership, competitive advantage, resource allocation, market positioning, business agility, growth posture"
+  },
+  {
     title: "Fully Burdened Labor Rate: Why Small Businesses Lose Millions Not Knowing Their True Employee Costs",
     excerpt: "Discover why your $35/hour employee really costs $56-$73/hour. Learn the FBLR formula, avoid 5 deadly pricing mistakes, and stop losing millions on every job.",
     author: "BizHealth.ai Research Team",

@@ -169,6 +169,7 @@ const ProfitFirstNonNegotiable = lazy(() => import("./pages/blog/ProfitFirstNonN
 const SmallBusinessCrisisManagement = lazy(() => import("./pages/blog/SmallBusinessCrisisManagement"));
 const HandleToxicEmployees = lazy(() => import("./pages/blog/HandleToxicEmployees"));
 const FullyBurdenedLaborRate = lazy(() => import("./pages/blog/FullyBurdenedLaborRate"));
+const SmallBusinessStrategicPlanMyths = lazy(() => import("./pages/blog/SmallBusinessStrategicPlanMyths"));
 
 // Tools - lazy loaded
 const CashFlowTracker = lazy(() => import("./pages/tools/CashFlowTracker"));
@@ -393,6 +394,7 @@ const App = () => (
               <Route path="/blog/small-business-crisis-management" element={<SmallBusinessCrisisManagement />} />
               <Route path="/blog/handle-toxic-employees-small-business" element={<HandleToxicEmployees />} />
               <Route path="/blog/fully-burdened-labor-rate-true-employee-costs" element={<FullyBurdenedLaborRate />} />
+              <Route path="/blog/small-business-strategic-plan-myths" element={<SmallBusinessStrategicPlanMyths />} />
 
               {/* Legal & info pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />

@@ -683,6 +683,13 @@ function buildActionPlanSection(idmOutput: LILIDMOutput): string {
   const roadmap = idmOutput.roadmap;
   
   const buildActionItems = (items: Array<{ action: string; category: CategoryCode; impact: string }>) => {
+    if (items.length === 0) return `
+        <div class="action-item">
+          <div class="action-checkbox"></div>
+          <div style="color: var(--text-secondary); font-style: italic;">No specific actions identified for this phase. Review the Quick Wins section above for immediate opportunities.</div>
+          <div></div>
+          <div></div>
+        </div>`;
     return items.map(item => {
       const catName = CATEGORY_NAMES[item.category] || item.category;
       return `
@@ -694,10 +701,54 @@ function buildActionPlanSection(idmOutput: LILIDMOutput): string {
         </div>`;
     }).join('');
   };
-  
-  const thirtyDayItems = (roadmap?.thirtyDay || []).filter(item => ALL_SCOPED_CATEGORIES.includes(item.category)).slice(0, 3);
-  const sixtyDayItems = (roadmap?.sixtyDay || []).filter(item => ALL_SCOPED_CATEGORIES.includes(item.category)).slice(0, 3);
-  const ninetyDayItems = (roadmap?.ninetyDay || []).filter(item => ALL_SCOPED_CATEGORIES.includes(item.category)).slice(0, 3);
+
+  // Primary: filter to scoped categories. Fallback: use unfiltered items if scoped filter yields nothing.
+  const filterWithFallback = (phaseItems: Array<{ action: string; category: CategoryCode; impact: string }>) => {
+    const scoped = phaseItems.filter(item => ALL_SCOPED_CATEGORIES.includes(item.category));
+    if (scoped.length > 0) return scoped.slice(0, 3);
+    return phaseItems.slice(0, 3);
+  };
+
+  let thirtyDayItems = filterWithFallback(roadmap?.thirtyDay || []);
+  let sixtyDayItems = filterWithFallback(roadmap?.sixtyDay || []);
+  let ninetyDayItems = filterWithFallback(roadmap?.ninetyDay || []);
+
+  // If any phase is still empty, generate contextual actions from category weaknesses and quick wins
+  if (thirtyDayItems.length === 0 || sixtyDayItems.length === 0 || ninetyDayItems.length === 0) {
+    const generatedActions: Array<{ action: string; category: CategoryCode; impact: string }> = [];
+    for (const code of ALL_SCOPED_CATEGORIES) {
+      const catData = idmOutput.categoryData?.[code];
+      if (!catData) continue;
+      const catName = CATEGORY_NAMES[code] || code;
+      const catScore = safeNum(catData.score, 0);
+      if (catData.weaknesses) {
+        for (const w of catData.weaknesses) {
+          generatedActions.push({ action: `Address: ${w}`, category: code, impact: `Improve ${catName} score (currently ${catScore}/100)` });
+        }
+      }
+      if (catData.quickWins) {
+        for (const qw of catData.quickWins) {
+          const title = typeof qw === 'string' ? qw : (qw as any).title || (qw as any).action || '';
+          if (title) {
+            generatedActions.push({ action: title, category: code, impact: `Quick win for ${catName}` });
+          }
+        }
+      }
+    }
+    if (thirtyDayItems.length === 0 && generatedActions.length > 0) {
+      thirtyDayItems = generatedActions.slice(0, 3);
+    }
+    if (sixtyDayItems.length === 0 && generatedActions.length > 3) {
+      sixtyDayItems = generatedActions.slice(3, 6);
+    } else if (sixtyDayItems.length === 0 && generatedActions.length > 0) {
+      sixtyDayItems = generatedActions.slice(0, 3);
+    }
+    if (ninetyDayItems.length === 0 && generatedActions.length > 6) {
+      ninetyDayItems = generatedActions.slice(6, 9);
+    } else if (ninetyDayItems.length === 0 && generatedActions.length > 0) {
+      ninetyDayItems = generatedActions.slice(0, 3);
+    }
+  }
 
   const habits = (idmOutput.consolidatedInsights?.criticalActions || []).slice(0, 3);
   const habitsHtml = habits.length > 0 ? `

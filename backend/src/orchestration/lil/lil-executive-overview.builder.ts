@@ -91,10 +91,14 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .header-meta { text-align: right; font-size: 0.875rem; color: var(--text-secondary); } .header-meta .report-title { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--biz-blue); }
 
     /* Title Section */
-    .title-section { text-align: center; padding: 50px 40px; margin: 30px 0; background: linear-gradient(135deg, var(--biz-blue) 0%, #2d3570 100%); color: white; border-radius: 12px; }
-    .title-section h1 { color: white; margin-bottom: 10px; font-size: 2.25rem; } .title-section .company-name { color: var(--warm-gold); font-size: 1.5rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+    .title-section { text-align: center; padding: 70px 40px; margin: 30px 0; background: linear-gradient(135deg, var(--biz-blue) 0%, #1a1b3d 50%, #2d3570 100%); color: white; border-radius: 12px; position: relative; overflow: hidden; }
+    .title-section::before { content: ''; position: absolute; top: -30%; right: -15%; width: 50%; height: 160%; background: rgba(255,255,255,0.02); transform: rotate(15deg); pointer-events: none; }
+    .title-section h1 { color: white; margin-bottom: 10px; font-size: 2.5rem; letter-spacing: -0.5px; } .title-section .company-name { color: var(--warm-gold); font-size: 1.6rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+    .title-section .title-divider { width: 60px; height: 3px; background: var(--biz-green); margin: 20px auto; border-radius: 2px; }
     .title-section .report-subtitle { margin-top: 14px; font-size: 1rem; line-height: 1.6; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .title-section .report-date { margin-top: 10px; opacity: 0.9; color: white; font-size: 0.9rem; }
+    .title-section .report-date { margin-top: 14px; opacity: 0.9; color: white; font-size: 0.9rem; }
+    .title-section .title-plan { font-size: 0.8rem; opacity: 0.55; letter-spacing: 2px; text-transform: uppercase; margin-top: 24px; }
+    .title-section .title-confidential { font-size: 0.75rem; opacity: 0.45; margin-top: 10px; font-style: italic; }
 
     /* BLUF Section */
     .bluf-section { background: linear-gradient(135deg, #242553 0%, #2d3561 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; }
@@ -181,8 +185,11 @@ function buildTitleSection(companyName: string, currentDate: string): string {
     <div class="title-section">
       <h1>Executive Overview</h1>
       <div class="company-name">${companyName}</div>
+      <div class="title-divider"></div>
       <div class="report-subtitle">A high-level snapshot of business health across strategy, operations, people, and resilience — designed for board members, advisors, and stakeholders.</div>
       <div class="report-date">${currentDate}</div>
+      <div class="title-plan">Essentials Plan</div>
+      <div class="title-confidential">Confidential — Prepared exclusively for ${companyName}</div>
     </div>`;
 }
 

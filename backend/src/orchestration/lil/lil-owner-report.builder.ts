@@ -82,10 +82,18 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .header-logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--biz-blue); } .header-logo span { color: var(--biz-green); }
     .header-meta { text-align: right; font-size: 0.875rem; color: var(--text-secondary); } .header-meta .report-title { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--biz-blue); }
 
-    .title-section { text-align: center; padding: 60px 40px; margin: 30px 0; background: linear-gradient(135deg, var(--biz-blue) 0%, #2d3570 100%); color: white; border-radius: 12px; }
-    .title-section h1 { color: white; margin-bottom: 12px; } .title-section .company-name { color: var(--warm-gold); font-size: 1.75rem; font-weight: 600; font-family: 'Montserrat', sans-serif; }
-    .title-section .report-subtitle { margin-top: 16px; font-size: 1.05rem; line-height: 1.6; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .title-section .report-date { margin-top: 12px; opacity: 0.9; color: white; font-size: 0.95rem; }
+    /* Cover Page */
+    .cover-page { min-height: 100vh; background: linear-gradient(135deg, var(--biz-blue) 0%, #1a1b3d 50%, #2d3570 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px; position: relative; overflow: hidden; page-break-after: always; }
+    .cover-page::before { content: ''; position: absolute; top: -30%; right: -15%; width: 50%; height: 160%; background: rgba(255,255,255,0.02); transform: rotate(15deg); pointer-events: none; }
+    .cover-page .cover-logo { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; margin-bottom: 60px; letter-spacing: 1px; }
+    .cover-page .cover-logo span { color: var(--biz-green); }
+    .cover-page h1 { color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .cover-page .company-name { color: var(--warm-gold); font-size: 1.75rem; font-weight: 600; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; }
+    .cover-page .cover-divider { width: 80px; height: 3px; background: var(--biz-green); margin: 24px auto; border-radius: 2px; }
+    .cover-page .role-framing { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 600px; margin: 0 auto 30px; }
+    .cover-page .report-date { font-size: 1rem; opacity: 0.8; margin-bottom: 8px; }
+    .cover-page .cover-plan { font-size: 0.85rem; opacity: 0.6; letter-spacing: 2px; text-transform: uppercase; margin-top: 40px; }
+    .cover-page .cover-confidential { font-size: 0.8rem; opacity: 0.5; margin-top: 12px; font-style: italic; }
 
     .bluf-section { background: linear-gradient(135deg, #242553 0%, #2d3561 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; }
     .bluf-section h2 { color: white; font-size: 1.3rem; margin-bottom: 1rem; }
@@ -153,7 +161,7 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .report-footer { margin-top: 3rem; padding: 2rem 40px; background: var(--biz-blue); color: white; text-align: center; }
     .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; } .footer-logo span { color: var(--biz-green); } .report-footer p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.25rem; }
 
-    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .dimension-section { break-inside: avoid; } }
+    @media print { body { font-size: 11pt; } .report-container { padding: 0 20px; } .cover-page { min-height: 100vh; page-break-after: always; } .dimension-section { break-inside: avoid; } }
     @media (max-width: 768px) { .bluf-grid { grid-template-columns: 1fr; } .roadmap-container { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -179,13 +187,17 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
 // SECTION BUILDERS
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildTitleSection(companyName: string, currentDate: string): string {
+function buildCoverPage(companyName: string, currentDate: string): string {
   return `
-    <div class="title-section">
+    <div class="cover-page">
+      <div class="cover-logo">BizHealth<span>.ai</span></div>
       <h1>Owner's Strategic Report</h1>
       <div class="company-name">${companyName}</div>
-      <div class="report-subtitle">A strategic-level analysis of ${companyName}'s business health, focusing on strategy, financial position, leadership, and risk — the four dimensions that most directly impact ownership decisions.</div>
+      <div class="cover-divider"></div>
+      <div class="role-framing">A strategic-level analysis of ${companyName}'s business health, focusing on strategy, financial position, leadership, and risk — the four dimensions that most directly impact ownership decisions.</div>
       <div class="report-date">${currentDate}</div>
+      <div class="cover-plan">Essentials Plan</div>
+      <div class="cover-confidential">Confidential — Intended for authorized recipients only</div>
     </div>`;
 }
 
@@ -435,7 +447,7 @@ export async function buildLilOwnerReport(
   const { narrative, tokensUsed } = await generateOwnerSummary(idmOutput, businessOverview);
 
   const sections = [
-    buildTitleSection(companyName, currentDate),
+    buildCoverPage(companyName, currentDate),
     buildBlufSection(bluf),
     `<div class="health-overview"><h2>Executive Summary</h2>${narrative}</div>`,
     buildHealthOverview(idmOutput),
@@ -463,7 +475,7 @@ export async function buildLilOwnerReport(
     htmlContent,
     pageCount,
     sections: [
-      'Title & Introduction', 'Bottom Line Up Front', 'Executive Summary',
+      'Cover Page', 'Bottom Line Up Front', 'Executive Summary',
       'Strategic Health Overview', 'Strategic Position', 'Financial Position',
       'Leadership & Governance', 'Risk Assessment', 'Strategic Roadmap',
       'Key Decisions Required', 'Next Steps'

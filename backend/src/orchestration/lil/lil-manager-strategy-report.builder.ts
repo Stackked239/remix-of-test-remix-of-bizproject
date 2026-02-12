@@ -514,6 +514,8 @@ const STRATEGY_REPORT_TEMPLATE = `<!DOCTYPE html>
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
     }
 
     .finding-narrative { font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }

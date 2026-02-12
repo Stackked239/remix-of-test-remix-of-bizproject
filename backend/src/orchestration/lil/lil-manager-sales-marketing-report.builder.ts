@@ -292,7 +292,7 @@ const REPORT_TEMPLATE = `<!DOCTYPE html>
     .finding-card { padding: 1.5rem; margin: 1.25rem 0; border-radius: 10px; border-left: 5px solid; background: white; box-shadow: var(--card-shadow); }
     .finding-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
     .finding-card-header h4 { margin: 0; }
-    .severity-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .severity-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-align: center; white-space: nowrap; }
     .finding-narrative { font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
     .finding-action { background: var(--bg-light); padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; }
     .finding-action strong { color: var(--biz-blue); }

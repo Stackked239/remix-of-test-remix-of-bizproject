@@ -97,9 +97,11 @@ import crisisManagementImage from "@/assets/images/small-business-crisis-managem
 import handleToxicEmployeesImage from "@/assets/images/blog/handle-toxic-employees-small-business-hero.jpg";
 import fullyBurdenedLaborRateImage from "@/assets/images/blog/fully-burdened-labor-rate-hero.jpg";
 import smallBusinessStrategicPlanMythsImage from "@/assets/images/blog/small-business-strategic-plan-myths-hero.jpg";
+import smallBusinessOperationsFirefightingImage from "@/assets/images/blog/small-business-operations-end-firefighting-hero.jpg";
 
 // Image mapping for blog posts
 const imageMap: Record<string, string> = {
+  "/blog/small-business-operations-end-firefighting": smallBusinessOperationsFirefightingImage,
   "/blog/small-business-strategic-plan-myths": smallBusinessStrategicPlanMythsImage,
   "/blog/fully-burdened-labor-rate-true-employee-costs": fullyBurdenedLaborRateImage,
   "/blog/handle-toxic-employees-small-business": handleToxicEmployeesImage,

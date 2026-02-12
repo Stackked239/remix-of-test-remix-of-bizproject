@@ -32,6 +32,18 @@ export const featuredPost = {
 // All blog posts with comprehensive keywords for searchability
 export const blogPosts: BlogPost[] = [
   {
+    title: "Small Business Operations: End Firefighting Chaos and Restore Confidence Today",
+    excerpt: "That knot in your stomach when Monday hits. End operational uncertainty—spot 5 red flags, diagnose ops health, and apply 6 core fixes to restore confidence and scale.",
+    author: "BizHealth.ai Research Team",
+    date: "February 12, 2026",
+    readTime: "8 min read",
+    category: "Operations, Business Leadership, Risk Management, Growth & Scaling, Financials",
+    slug: "/blog/small-business-operations-end-firefighting",
+    imageUrl: "/assets/images/blog/small-business-operations-end-firefighting-hero.jpg",
+    altText: "Small business operations manager in warehouse holding fire extinguisher representing firefighting chaos in daily operations",
+    keywords: "small business operations, operational efficiency, firefighting mode business, operations management SMB, process improvement, SOP documentation, capacity planning, operational confidence, business process optimization, workflow standardization, rework quality, missed deadlines, overtime spikes, employee turnover operations, cash flow volatility, ops health audit, daily dashboard, delegate authority, automate mundane, feedback loops, continuous improvement, leadership shifts, reactor to architect, scale without breaking, operational certainty, demand forecasting, cross-training, approval matrices, process automation"
+  },
+  {
     title: "Small Business Strategic Plan: 6 Myths Keeping You Stuck in Survival Mode",
     excerpt: "Most small business owners treat strategy like an optional luxury. Debunk 6 myths keeping you stuck in survival mode and build a one-page strategic plan for growth.",
     author: "BizHealth.ai Research Team",

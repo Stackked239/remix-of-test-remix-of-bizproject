@@ -9,7 +9,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { AlertTriangle, Target, Shield, TrendingUp, Clock, Users, BarChart3, CheckCircle, XCircle, Lightbulb, ArrowRight, FileText, Briefcase, Eye, Brain, Compass, Zap, Wrench, Activity, DollarSign, UserMinus, Truck, CalendarClock, Settings, LayoutDashboard, Lock, Cpu, MessageSquare, Crown } from "lucide-react";
 import heroImage from "@/assets/images/blog/small-business-operations-end-firefighting-hero.jpg";
-import faviconImage from "/favicon.ico";
+
 
 const SmallBusinessOperationsFirefighting = () => {
   const publishDate = "February 12, 2026";
@@ -428,7 +428,7 @@ const SmallBusinessOperationsFirefighting = () => {
           {/* Closing CTA */}
           <div className="bg-gradient-to-br from-biz-green/10 via-biz-teal/10 to-blue-500/10 border border-biz-green/20 rounded-2xl p-8 text-center mb-8">
             <img 
-              src={faviconImage} 
+              src="/favicon-96x96.png" 
               alt="BizHealth.ai" 
               className="h-12 w-12 mx-auto mb-4"
               loading="lazy"
@@ -454,18 +454,6 @@ const SmallBusinessOperationsFirefighting = () => {
             </div>
           </div>
 
-          {/* E-E-A-T Author Byline */}
-          <div className="border-t border-border pt-6 mt-8">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong>About the Author:</strong> The <Link to="/about" className="text-biz-green-dark hover:underline">BizHealth.ai Research Team</Link> combines decades of operational consulting experience with AI-powered business intelligence. Specializing in small and mid-size business diagnostics, the team delivers data-driven insights that help owners transform reactive firefighting into proactive, scalable operations.
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong>External Reference:</strong>{" "}
-              <a href="https://www.sba.gov/business-guide/manage-your-business/strengthen-your-business" target="_blank" rel="noopener noreferrer" className="text-biz-green-dark hover:underline">
-                U.S. Small Business Administration – Strengthen Your Business
-              </a>
-            </p>
-          </div>
 
         </div>
       </article>

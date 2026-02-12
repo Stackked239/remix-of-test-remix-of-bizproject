@@ -293,7 +293,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        150-200 pages | The gold standard for business diagnostics
+                        30-100+ pages | The gold standard for business diagnostics
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">
@@ -569,7 +569,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        35-55 pages | Actionable insights for 90-180 day wins
+                        15-50 pages | Actionable insights for 30, 60, 90 and 180+ day wins
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">
@@ -780,7 +780,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        10-15 pages | Boardroom-ready strategic insights
+                        5-15 pages | Boardroom-ready strategic insights
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">
@@ -968,8 +968,8 @@ const Reports = () => {
                     <Users className="w-8 h-8 text-orange-600 shrink-0 mt-1" />
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
-                          Managers' Report - Operational Excellence Toolkit
+                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
+                          Managers' Reports (5) - Operational Excellence Toolkits
                         </h3>
                         <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                           ENTERPRISE
@@ -979,7 +979,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        6-10 pages | Department-focused action plans
+                        15-25 pages | Department-focused analysis, diagnostics, insights and action plans
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">
@@ -1183,7 +1183,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        4-6 pages | Motivational insights for all team members
+                        4-6 pages | Motivational newsletter-type insights for communicating to all team members
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">

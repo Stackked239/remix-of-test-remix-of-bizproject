@@ -56,9 +56,20 @@ function validateWebhookPayload(webhook: WebhookPayload): void {
     throw new TransformationError('Company name is required', 'company_name');
   }
 
-  if (!bo.location?.trim()) {
+  // Handle location as either a string ("City, ST") or an object ({ city, state, country })
+  if (typeof bo.location === 'object' && bo.location !== null) {
+    // Convert object format to string format for downstream processing
+    const locCity = bo.location.city || '';
+    const locState = bo.location.state || bo.location.state_province || '';
+    bo.location = [locCity, locState].filter(Boolean).join(', ') || '';
+  }
+
+  if (!bo.location || (typeof bo.location === 'string' && !bo.location.trim())) {
     throw new TransformationError('Location is required', 'location');
   }
+
+  // Ensure location is a string from this point forward
+  bo.location = String(bo.location).trim();
 
   if (!bo.industry?.trim()) {
     throw new TransformationError('Industry is required', 'industry');

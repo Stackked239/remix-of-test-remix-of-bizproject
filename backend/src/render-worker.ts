@@ -125,12 +125,49 @@ async function processBIGJob(job: any, questionnaire: any): Promise<{ reports: a
   const jobId = job.id;
 
   // Use job.payload directly if it's already in webhook format (has business_overview)
+  // Also handle raw_company_profile format from transformToPipelineFormat()
   // Otherwise, convert from questionnaire table data
   let webhookPayload: any;
-  if (job.payload && job.payload.business_overview && typeof job.payload.business_overview.location === 'string') {
-    // Payload is already in the correct webhook format
+  if (job.payload && job.payload.business_overview && (typeof job.payload.business_overview.location === 'string' || typeof job.payload.business_overview.location === 'object')) {
+    // Payload is already in the correct webhook format (location can be string or object)
     logger.info({ jobId }, 'Using job.payload directly (already in webhook format)');
     webhookPayload = job.payload;
+  } else if (job.payload && job.payload.raw_company_profile && job.payload.raw_questionnaire) {
+    // Payload is from frontend transformToPipelineFormat() — has raw_company_profile + raw_questionnaire
+    logger.info({ jobId }, 'Using job.payload raw_company_profile format (frontend pipeline format)');
+    const rcp = job.payload.raw_company_profile;
+    const rq = job.payload.raw_questionnaire;
+    webhookPayload = {
+      event: rq.event || 'questionnaire_completed',
+      submission_id: rq.submission_id || questionnaire.id,
+      timestamp: rq.timestamp || new Date().toISOString(),
+      business_overview: {
+        company_name: rcp.company_name || 'Unknown Company',
+        location: rcp.location || '',
+        country: rcp.country || 'United States',
+        company_website: rcp.company_website || '',
+        industry: rcp.industry || '',
+        industry_other_details: rcp.industry_other_details || '',
+        corporate_structure: rcp.corporate_structure || '',
+        year_started: rcp.year_started || null,
+        multiple_locations: rcp.multiple_locations || false,
+        number_of_locations: rcp.number_of_locations || 1,
+        executive_leadership_roles: rcp.executive_leadership_roles || 0,
+        support_admin_staff: rcp.support_admin_staff || 0,
+        full_time_employees: rcp.full_time_employees || 0,
+        part_time_employees: rcp.part_time_employees || 0,
+        contract_temp_personnel: rcp.contract_temp_personnel || 0,
+        seasonal_employees: rcp.seasonal_employees || 0,
+        last_year_revenue: rcp.last_year_revenue || 0,
+        projected_revenue: rcp.projected_revenue || 0,
+        highest_sales_year: rcp.highest_sales_year || null,
+        highest_annual_sales: rcp.highest_annual_sales || 0,
+        products_services: rcp.products_services || [],
+        current_challenges: rcp.current_challenges || [],
+        competitors: rcp.competitors || [],
+      },
+      ...rq,
+    };
   } else {
     // Convert from questionnaire table format
     logger.info({ jobId }, 'Converting questionnaire to webhook format');

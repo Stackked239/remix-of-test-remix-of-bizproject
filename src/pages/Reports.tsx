@@ -5,6 +5,7 @@ import StructuredData from '@/components/StructuredData';
 import PromotionalBanner from '@/components/PromotionalBanner';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import GradientDivider from '@/components/GradientDivider';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -1700,6 +1701,8 @@ const Reports = () => {
           </div>
         </section>
 
+        <GradientDivider variant="green-gold" />
+
         {/* Final CTA Section */}
         <section className="py-16 px-6 bg-gradient-to-br from-biz-navy to-biz-navy/90 text-center">
           <div className="container mx-auto max-w-4xl">
@@ -1729,6 +1732,7 @@ const Reports = () => {
           </div>
         </section>
 
+        <GradientDivider variant="green-gold" />
         <GlobalFooter />
       </div>
     </>

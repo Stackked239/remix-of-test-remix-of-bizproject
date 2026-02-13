@@ -1528,98 +1528,116 @@ const Reports = () => {
         </section>
 
         {/* Key Differentiators Section */}
-        <section className="py-16 px-6 bg-background">
+        <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
+            <div className="text-center mb-14">
+              <span className="inline-block font-montserrat text-sm font-semibold tracking-widest uppercase text-biz-green mb-3">
+                The BizHealth.ai Advantage
+              </span>
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-4">
                 What Makes BizHealth.ai Different
               </h2>
+              <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+                Six powerful reasons why business owners trust our platform to drive smarter decisions and measurable growth.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <Shield className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">Consulting-Grade Quality</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    Get the same analytical depth as $50K consulting engagements at a fraction of the cost.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">Tailored for Every Role</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    From executives to frontline employees, everyone gets insights designed for their needs.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <BarChart3 className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">Industry Benchmarks</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    Compare your performance against industry peers and growth-stage companies.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">Actionable 90-Day Plans</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    Stop wondering what to do next. Get prioritized action plans you can execute immediately.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <Clock className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">Quarterly Reassessments</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    Track progress and adjust strategy every quarter - included in all tiers.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-border hover:border-biz-green transition-all hover:shadow-lg">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-biz-green/10 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-biz-green" />
-                  </div>
-                  <CardTitle className="font-montserrat text-xl">AI-Powered, Human-Reviewed</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-open-sans text-biz-grey">
-                    Combine AI efficiency with expert human oversight for accurate, actionable insights.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {[
+                {
+                  icon: Shield,
+                  title: "Consulting-Grade Quality",
+                  description: "Get the same analytical depth as $50K consulting engagements at a fraction of the cost.",
+                  accent: "biz-green",
+                  number: "01"
+                },
+                {
+                  icon: Users,
+                  title: "Tailored for Every Role",
+                  description: "From executives to frontline employees, everyone gets insights designed for their needs.",
+                  accent: "biz-teal",
+                  number: "02"
+                },
+                {
+                  icon: BarChart3,
+                  title: "Industry Benchmarks",
+                  description: "Compare your performance against industry peers and growth-stage companies.",
+                  accent: "biz-gold",
+                  number: "03"
+                },
+                {
+                  icon: Target,
+                  title: "Actionable 90-Day Plans",
+                  description: "Stop wondering what to do next. Get prioritized action plans you can execute immediately.",
+                  accent: "biz-copper",
+                  number: "04"
+                },
+                {
+                  icon: Clock,
+                  title: "Quarterly Reassessments",
+                  description: "Track progress and adjust strategy every quarter — included in all tiers.",
+                  accent: "biz-navy",
+                  number: "05"
+                },
+                {
+                  icon: Zap,
+                  title: "AI-Powered, Human-Reviewed",
+                  description: "Combine AI efficiency with expert human oversight for accurate, actionable insights.",
+                  accent: "biz-green",
+                  number: "06"
+                }
+              ].map((item, index) => {
+                const Icon = item.icon;
+                const bgMap: Record<string, string> = {
+                  "biz-green": "bg-biz-green/10 group-hover:bg-biz-green/20",
+                  "biz-teal": "bg-biz-teal/10 group-hover:bg-biz-teal/20",
+                  "biz-gold": "bg-biz-gold/10 group-hover:bg-biz-gold/20",
+                  "biz-copper": "bg-biz-copper/10 group-hover:bg-biz-copper/20",
+                  "biz-navy": "bg-biz-navy/10 group-hover:bg-biz-navy/20",
+                };
+                const iconMap: Record<string, string> = {
+                  "biz-green": "text-biz-green",
+                  "biz-teal": "text-biz-teal",
+                  "biz-gold": "text-biz-gold",
+                  "biz-copper": "text-biz-copper",
+                  "biz-navy": "text-biz-navy",
+                };
+                const borderMap: Record<string, string> = {
+                  "biz-green": "hover:border-biz-green/50",
+                  "biz-teal": "hover:border-biz-teal/50",
+                  "biz-gold": "hover:border-biz-gold/50",
+                  "biz-copper": "hover:border-biz-copper/50",
+                  "biz-navy": "hover:border-biz-navy/50",
+                };
+                const numMap: Record<string, string> = {
+                  "biz-green": "text-biz-green/20",
+                  "biz-teal": "text-biz-teal/20",
+                  "biz-gold": "text-biz-gold/20",
+                  "biz-copper": "text-biz-copper/20",
+                  "biz-navy": "text-biz-navy/20",
+                };
+                return (
+                  <Card
+                    key={index}
+                    className={`group relative overflow-hidden border border-border ${borderMap[item.accent]} transition-all duration-300 hover:shadow-feature hover:-translate-y-1`}
+                  >
+                    <span className={`absolute top-4 right-4 font-montserrat font-bold text-4xl ${numMap[item.accent]} select-none`}>
+                      {item.number}
+                    </span>
+                    <CardHeader className="pb-2">
+                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-colors ${bgMap[item.accent]}`}>
+                        <Icon className={`w-7 h-7 ${iconMap[item.accent]}`} />
+                      </div>
+                      <CardTitle className="font-montserrat text-xl text-foreground">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="font-open-sans text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>

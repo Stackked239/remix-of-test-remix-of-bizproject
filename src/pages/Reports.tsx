@@ -1175,8 +1175,8 @@ const Reports = () => {
               </AccordionItem>
 
               {/* CARD 5: EMPLOYEES' REPORT */}
-              <AccordionItem value="employees" id="employees-report" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
-                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-purple-50 to-violet-50 hover:from-purple-100 hover:to-violet-100 transition-all">
+              <AccordionItem value="employees" id="employees-report" className="border-2 border-biz-teal/40 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
+                <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-biz-teal/5 to-biz-teal/10 hover:from-biz-teal/10 hover:to-biz-teal/15 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
                     <Star className="w-8 h-8 text-biz-teal shrink-0 mt-1" />
                     <div className="flex-1">
@@ -1184,7 +1184,7 @@ const Reports = () => {
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
                           Employees' Report - Celebrate Wins & Drive Engagement
                         </h3>
-                        <span className="bg-biz-teal text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                        <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                           ENTERPRISE
                         </span>
                         <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">

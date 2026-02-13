@@ -196,7 +196,7 @@ const CheckoutSuccess = () => {
     setIsCreatingAccount(true);
 
     try {
-      // Create the account using Supabase Auth
+      // Step 1: Create the account using Supabase Auth
       const { error: signUpError } = await signUp(guestEmail, password, {
         first_name: '',
         last_name: '',
@@ -208,18 +208,35 @@ const CheckoutSuccess = () => {
           setAccountError('An account with this email already exists. Please log in instead.');
           return;
         }
+        // Handle rate limit error with a friendlier message
+        if (signUpError.message?.includes('security') || signUpError.message?.includes('rate') || signUpError.status === 429) {
+          setAccountError('Please wait a moment and try again. Our security system is processing your request.');
+          return;
+        }
         throw signUpError;
       }
 
-      // Wait a moment for the auth state to update
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Step 2: Immediately sign in with the new credentials
+      // (email confirmation is disabled, so the account is active right away)
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: guestEmail,
+        password: password,
+      });
 
-      // Get the newly created user
+      if (signInError) {
+        console.error('Auto sign-in error:', signInError);
+        // If auto sign-in fails, the account was still created.
+        // Show a helpful message instead of a cryptic error.
+        setAccountError('Account created! Please go to the login page and sign in with your new credentials.');
+        return;
+      }
+
+      // Step 3: Get the authenticated user (now guaranteed to exist)
       const { data: { user: newUser } } = await supabase.auth.getUser();
 
       if (newUser) {
-        // Create the order record linked to the new user
-        await supabase
+        // Step 4: Create the order record linked to the new user
+        const { error: orderError } = await supabase
           .from('orders')
           .upsert({
             user_id: newUser.id,
@@ -233,11 +250,16 @@ const CheckoutSuccess = () => {
             onConflict: 'stripe_session_id',
           });
 
-        // Update the user's profile
-        await supabase
+        if (orderError) {
+          console.error('Order creation error:', orderError);
+        }
+
+        // Step 5: Update the user's profile
+        const { error: profileError } = await supabase
           .from('profiles')
           .upsert({
             id: newUser.id,
+            email: guestEmail,
             plan_type: purchasedTier,
             has_paid: true,
             updated_at: new Date().toISOString(),
@@ -245,9 +267,13 @@ const CheckoutSuccess = () => {
             onConflict: 'id',
           });
 
+        if (profileError) {
+          console.error('Profile update error:', profileError);
+        }
+
         toast({
           title: 'Account created!',
-          description: 'Your account has been created successfully.',
+          description: 'Your account has been created and your purchase has been linked.',
         });
 
         // Mark as no longer guest checkout so the UI updates
@@ -255,6 +281,9 @@ const CheckoutSuccess = () => {
 
         // Navigate to the questionnaire
         navigate(tierConfig.questionnaireUrl);
+      } else {
+        // Edge case: user object not available after sign-in
+        setAccountError('Account created but we could not verify your session. Please log in manually.');
       }
     } catch (error: any) {
       console.error('Account creation error:', error);

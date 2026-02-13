@@ -92,7 +92,7 @@ const CheckoutNew = () => {
     const validCodes: Record<string, number> = {
       'LAUNCH50': 50,
       'BIZHEALTH20': 20,
-      'EARLYBIRD': 100,
+      'EARLYBIRD': 98,
     };
 
     const discountAmount = validCodes[promoCode.toUpperCase()];

@@ -1182,7 +1182,7 @@ const Reports = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
-                          Employees' Report - Celebrate Wins & Drive Engagement
+                          Employees Report - Celebrate Wins & Drive Engagement
                         </h3>
                         <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                           ENTERPRISE

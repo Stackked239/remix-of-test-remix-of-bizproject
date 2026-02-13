@@ -35,7 +35,7 @@ import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi
 import businessHealthReportSample from '@/assets/business-health-report-sample-new.jpg';
 
 const Reports = () => {
-  const [revenueSlider, setRevenueSlider] = useState(500000);
+  const [revenueSlider, setRevenueSlider] = useState(250000);
   const [selectedReports, setSelectedReports] = useState<string[]>([]);
 
   // Calculate ROI based on revenue slider
@@ -1411,16 +1411,16 @@ const Reports = () => {
                 </label>
                 <input
                   type="range"
-                  min="100000"
-                  max="10000000"
-                  step="100000"
+                  min="50000"
+                  max="5000000"
+                  step="50000"
                   value={revenueSlider}
                   onChange={(e) => setRevenueSlider(Number(e.target.value))}
                   className="w-full h-3 bg-biz-accent rounded-lg appearance-none cursor-pointer accent-biz-green"
                 />
                 <div className="flex justify-between text-sm text-biz-grey mt-2">
-                  <span>$100K</span>
-                  <span>$10M</span>
+                  <span>$50K</span>
+                  <span>$5M</span>
                 </div>
               </div>
 
@@ -1448,6 +1448,7 @@ const Reports = () => {
                 <p className="text-lg mb-2">Your Estimated ROI</p>
                 <p className="text-5xl font-bold mb-2">{roi.roiMultiple}x</p>
                 <p className="text-sm opacity-90">Return on Investment with Enterprise Tier</p>
+                <p className="text-xs opacity-70 mt-2">*Estimates are based on industry averages and may vary by business.</p>
               </div>
             </div>
           </div>

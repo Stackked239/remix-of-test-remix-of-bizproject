@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -283,6 +284,7 @@ const CheckoutSuccess = () => {
           description="We couldn't verify your payment"
           noindex={true}
         />
+        <PromotionalBanner />
         <GlobalNavigation />
 
         <main className="flex-1 container mx-auto px-4 py-12 pt-24">
@@ -358,6 +360,7 @@ const CheckoutSuccess = () => {
           description="Complete your account setup to access your assessment"
           noindex={true}
         />
+        <PromotionalBanner />
         <GlobalNavigation />
 
         <main className="flex-1 container mx-auto px-4 py-12 pt-24">
@@ -478,6 +481,7 @@ const CheckoutSuccess = () => {
         description="Your payment was successful"
         noindex={true}
       />
+      <PromotionalBanner />
       <GlobalNavigation />
 
       <main className="flex-1 container mx-auto px-4 py-12 pt-24">

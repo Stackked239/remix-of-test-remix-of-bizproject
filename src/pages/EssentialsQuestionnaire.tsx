@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import type { Json } from '@/integrations/supabase/types';
 import { useAuth } from '@/hooks/useAuth';
+import PromotionalBanner from '@/components/PromotionalBanner';
 
 // Types
 interface QuestionResponse {
@@ -1219,6 +1220,7 @@ export default function EssentialsQuestionnaire() {
   if (!hasAccess) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
+        <PromotionalBanner />
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto px-4 py-4">
             <img src="/bizhealth-logo.png" alt="BizHealth" className="h-8" />
@@ -1256,6 +1258,7 @@ export default function EssentialsQuestionnaire() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <PromotionalBanner />
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
         <div 

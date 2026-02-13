@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -251,6 +252,7 @@ const Checkout = () => {
         description="Complete your purchase and start your business health assessment"
         noindex={true}
       />
+      <PromotionalBanner />
       <GlobalNavigation />
 
       <main className="flex-1 container mx-auto px-4 py-12 pt-24">

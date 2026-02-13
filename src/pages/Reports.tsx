@@ -278,7 +278,7 @@ const Reports = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-biz-navy mb-4">
-                Five Reports, One Complete Picture
+                9 Reports, One Complete Picture
               </h2>
               <p className="font-open-sans text-lg text-biz-grey max-w-3xl mx-auto">
                 Each report is designed for specific roles and decision-making needs. Expand to learn how each transforms your organization.

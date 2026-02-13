@@ -789,7 +789,7 @@ const Reports = () => {
                         </span>
                       </div>
                       <p className="font-open-sans text-sm md:text-base text-biz-grey mb-2">
-                        5-15 pages | Boardroom-ready strategic insights
+                        5-15 pages | Boardroom-ready strategic overview
                       </p>
                       <div className="flex flex-wrap gap-3 text-xs md:text-sm text-biz-navy font-medium">
                         <span className="flex items-center gap-1">

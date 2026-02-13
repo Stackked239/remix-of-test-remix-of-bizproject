@@ -300,9 +300,15 @@ export default function EssentialsQuestionnaire() {
         <div className="flex items-center gap-2">
           {prefix && <span className="text-gray-500 text-lg">{prefix}</span>}
           <input
-            type="number"
-            value={response?.value as number || ''}
-            onChange={(e) => updateResponse(id, parseFloat(e.target.value) || 0, response?.isEstimate)}
+            type="text"
+            inputMode="numeric"
+            value={response?.value !== undefined && response?.value !== '' ? response.value : ''}
+            onChange={(e) => {
+              const val = e.target.value;
+              if (val === '' || /^\d*\.?\d*$/.test(val)) {
+                updateResponse(id, val === '' ? '' : parseFloat(val), response?.isEstimate);
+              }
+            }}
             className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#212653] focus:border-transparent"
             placeholder="Enter value"
           />
@@ -418,12 +424,17 @@ export default function EssentialsQuestionnaire() {
       <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200">
         <label className="block text-lg font-medium text-gray-900 mb-2">Year Company Started</label>
         <input
-          type="number"
-          value={businessOverview.yearStarted}
-          onChange={(e) => setBusinessOverview(prev => ({ ...prev, yearStarted: parseInt(e.target.value) }))}
+          type="text"
+          inputMode="numeric"
+          value={businessOverview.yearStarted || ''}
+          onChange={(e) => {
+            const val = e.target.value;
+            if (val === '' || /^\d{0,4}$/.test(val)) {
+              setBusinessOverview(prev => ({ ...prev, yearStarted: val === '' ? '' as any : parseInt(val) }));
+            }
+          }}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg"
-          min="1900"
-          max={new Date().getFullYear()}
+          placeholder="e.g. 2015"
         />
       </div>
 
@@ -443,14 +454,20 @@ export default function EssentialsQuestionnaire() {
             <div key={key}>
               <label className="block text-sm text-gray-600 mb-1">{label}</label>
               <input
-                type="number"
-                value={businessOverview.workforce[key as keyof typeof businessOverview.workforce]}
-                onChange={(e) => setBusinessOverview(prev => ({
-                  ...prev,
-                  workforce: { ...prev.workforce, [key]: parseInt(e.target.value) || 0 }
-                }))}
+                type="text"
+                inputMode="numeric"
+                value={businessOverview.workforce[key as keyof typeof businessOverview.workforce] || ''}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === '' || /^\d*$/.test(val)) {
+                    setBusinessOverview(prev => ({
+                      ...prev,
+                      workforce: { ...prev.workforce, [key]: val === '' ? '' as any : parseInt(val) }
+                    }));
+                  }
+                }}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg"
-                min="0"
+                placeholder="0"
               />
             </div>
           ))}
@@ -466,13 +483,20 @@ export default function EssentialsQuestionnaire() {
             <div className="flex items-center">
               <span className="text-gray-500 mr-2">$</span>
               <input
-                type="number"
-                value={businessOverview.salesRevenue.lastYear}
-                onChange={(e) => setBusinessOverview(prev => ({
-                  ...prev,
-                  salesRevenue: { ...prev.salesRevenue, lastYear: parseFloat(e.target.value) || 0 }
-                }))}
+                type="text"
+                inputMode="numeric"
+                value={businessOverview.salesRevenue.lastYear || ''}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === '' || /^\d*\.?\d*$/.test(val)) {
+                    setBusinessOverview(prev => ({
+                      ...prev,
+                      salesRevenue: { ...prev.salesRevenue, lastYear: val === '' ? '' as any : parseFloat(val) }
+                    }));
+                  }
+                }}
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-lg"
+                placeholder="0"
               />
             </div>
           </div>
@@ -481,13 +505,20 @@ export default function EssentialsQuestionnaire() {
             <div className="flex items-center">
               <span className="text-gray-500 mr-2">$</span>
               <input
-                type="number"
-                value={businessOverview.salesRevenue.projectedThisYear}
-                onChange={(e) => setBusinessOverview(prev => ({
-                  ...prev,
-                  salesRevenue: { ...prev.salesRevenue, projectedThisYear: parseFloat(e.target.value) || 0 }
-                }))}
+                type="text"
+                inputMode="numeric"
+                value={businessOverview.salesRevenue.projectedThisYear || ''}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === '' || /^\d*\.?\d*$/.test(val)) {
+                    setBusinessOverview(prev => ({
+                      ...prev,
+                      salesRevenue: { ...prev.salesRevenue, projectedThisYear: val === '' ? '' as any : parseFloat(val) }
+                    }));
+                  }
+                }}
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-lg"
+                placeholder="0"
               />
             </div>
           </div>

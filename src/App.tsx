@@ -27,6 +27,7 @@ const Register = lazy(() => import("./pages/Register"));
 
 // Critical portal/checkout pages - keep from HEAD for Stripe integration
 const Portal = lazy(() => import("./pages/PortalRevamped"));
+const PortalEnterprise = lazy(() => import("./pages/PortalEnterprise"));
 const ReportViewer = lazy(() => import("./pages/ReportViewer"));
 const Checkout = lazy(() => import("./pages/Checkout"));
 const Onboarding = lazy(() => import("./pages/Onboarding"));
@@ -249,6 +250,7 @@ const App = () => (
 
               {/* Critical checkout flow routes - from HEAD */}
               <Route path="/portal" element={<Portal />} />
+              <Route path="/portal/enterprise" element={<PortalEnterprise />} />
               <Route path="/report/:reportId" element={<ReportViewer />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/onboarding" element={<Onboarding />} />

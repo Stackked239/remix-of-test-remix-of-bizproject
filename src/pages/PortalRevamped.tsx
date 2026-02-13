@@ -143,6 +143,15 @@ const PortalRevamped = () => {
 
         if (orderData) {
           setOrders(orderData as Order[]);
+
+          // Redirect enterprise users to their dedicated portal
+          const hasEnterprise = (orderData as Order[]).some(
+            (o) => o.product_id === 'enterprise' && o.status === 'completed'
+          );
+          if (hasEnterprise) {
+            navigate('/portal/enterprise', { replace: true });
+            return;
+          }
         }
 
       } catch (error) {
@@ -155,7 +164,7 @@ const PortalRevamped = () => {
     if (user) {
       fetchData();
     }
-  }, [user]);
+  }, [user, navigate]);
 
   useEffect(() => {
     if (!authLoading && !user) {

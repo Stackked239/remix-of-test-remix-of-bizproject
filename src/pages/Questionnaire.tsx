@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import GlobalFooter from '@/components/GlobalFooter';
+import PromotionalBanner from '@/components/PromotionalBanner';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -301,6 +302,7 @@ const Questionnaire = () => {
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <SEO title="Assessment Access Required - BizHealth.ai" description="Access your BizHealth.ai business assessment questionnaire." noindex={true} />
+        <PromotionalBanner />
         <GlobalNavigation />
         
         <main className="flex-1 container mx-auto px-4 py-12 pt-24 max-w-2xl">
@@ -357,6 +359,7 @@ const Questionnaire = () => {
         description="Complete your comprehensive business health assessment"
         noindex={true}
       />
+      <PromotionalBanner />
       <GlobalNavigation />
       
       <main className="flex-1 container mx-auto px-4 py-8 pt-24 max-w-4xl">

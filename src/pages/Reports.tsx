@@ -588,7 +588,7 @@ const Reports = () => {
                           <Target className="w-4 h-4" /> Prioritized action plan
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" /> 90/180/365-day roadmap
+                          <Clock className="w-4 h-4" /> 30/60/90-day roadmap
                         </span>
                       </div>
                     </div>

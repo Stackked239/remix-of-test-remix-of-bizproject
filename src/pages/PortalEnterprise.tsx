@@ -14,7 +14,7 @@ import {
   PlayCircle,
   BarChart3,
   TrendingUp,
-  Target,
+
   RefreshCw,
   ChevronRight,
   Home,
@@ -39,7 +39,7 @@ import {
   Building2,
   Users,
   Star,
-  Rocket,
+
   LayoutDashboard,
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -92,23 +92,6 @@ interface ActivityItem {
   timestamp: string;
 }
 
-// ─── Chart.js dynamic loader ────────────────────────────────────────────────
-// We load Chart.js from CDN to avoid bundling issues in the Vite build
-const useChartJs = () => {
-  const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    if ((window as any).Chart) {
-      setLoaded(true);
-      return;
-    }
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js';
-    script.onload = () => setLoaded(true);
-    document.head.appendChild(script);
-    return () => { /* script stays cached */ };
-  }, []);
-  return loaded;
-};
 
 // ─── SVG Ring Component ─────────────────────────────────────────────────────
 const ScoreRing = ({ score, size = 80, strokeWidth = 6 }: { score: number; size?: number; strokeWidth?: number }) => {
@@ -199,7 +182,6 @@ const PortalEnterprise = () => {
   const { user, loading: authLoading, signOut } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const chartJsLoaded = useChartJs();
 
   const [assessments, setAssessments] = useState<Assessment[]>([]);
   const [reports, setReports] = useState<Report[]>([]);
@@ -210,11 +192,6 @@ const PortalEnterprise = () => {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set());
   const [foldersInitialized, setFoldersInitialized] = useState(false);
 
-  // Chart refs
-  const trendChartRef = useRef<HTMLCanvasElement>(null);
-  const volumeChartRef = useRef<HTMLCanvasElement>(null);
-  const trendChartInstance = useRef<any>(null);
-  const volumeChartInstance = useRef<any>(null);
 
   // ─── Data Fetching ──────────────────────────────────────────────────────
   useEffect(() => {
@@ -268,163 +245,8 @@ const PortalEnterprise = () => {
     }
   }, [reports, assessments, foldersInitialized]);
 
-  // ─── Chart Rendering ───────────────────────────────────────────────────
-  useEffect(() => {
-    if (!chartJsLoaded || activeTab !== 'overview') return;
-    const Chart = (window as any).Chart;
-    if (!Chart) return;
+  // [Charts and bottom sections removed]
 
-    // Destroy old instances
-    if (trendChartInstance.current) trendChartInstance.current.destroy();
-    if (volumeChartInstance.current) volumeChartInstance.current.destroy();
-
-    const gc = 'rgba(255,255,255,0.04)';
-
-    // Health Score Trend Chart
-    if (trendChartRef.current) {
-      const ctx = trendChartRef.current.getContext('2d');
-      if (ctx) {
-        // Build real data from assessments if available, otherwise show placeholder
-        const completedAssessments = assessments.filter(a => a.status === 'completed');
-        const completedReportsList = reports.filter(r => r.status === 'completed');
-        
-        // Calculate a real score if we have data
-        const currentScore = completedReportsList.length > 0
-          ? Math.round(completedReportsList.reduce((acc, r) => acc + (r.summary?.overall_score || 0), 0) / completedReportsList.length)
-          : 0;
-
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        const now = new Date();
-        const last12 = Array.from({ length: 12 }, (_, i) => {
-          const d = new Date(now.getFullYear(), now.getMonth() - 11 + i, 1);
-          return months[d.getMonth()];
-        });
-
-        // Build score data from real assessments
-        const scoreData = last12.map(() => 0);
-        if (currentScore > 0) {
-          // Place actual scores at the months they were generated
-          scoreData[scoreData.length - 1] = currentScore;
-          // Fill backwards with slight variance for visual appeal
-          for (let i = scoreData.length - 2; i >= 0; i--) {
-            const hasDataForMonth = completedAssessments.some(a => {
-              const d = new Date(a.created_at);
-              const monthIdx = (d.getMonth() - (now.getMonth() - 11) + 12) % 12;
-              return monthIdx === i;
-            });
-            scoreData[i] = hasDataForMonth ? currentScore - Math.floor(Math.random() * 5) : 0;
-          }
-          // Only show data from first non-zero
-          let started = false;
-          for (let i = 0; i < scoreData.length; i++) {
-            if (scoreData[i] > 0) started = true;
-            if (!started) scoreData[i] = NaN;
-          }
-        }
-
-        const gradient = ctx.createLinearGradient(0, 0, 0, 220);
-        gradient.addColorStop(0, 'rgba(150,148,35,0.18)');
-        gradient.addColorStop(1, 'rgba(150,148,35,0)');
-
-        trendChartInstance.current = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: last12,
-            datasets: [{
-              label: 'Your Score',
-              data: scoreData,
-              borderColor: ENT.green,
-              borderWidth: 2.5,
-              fill: true,
-              backgroundColor: gradient,
-              tension: 0.4,
-              pointRadius: 0,
-              pointHoverRadius: 5,
-              pointHoverBackgroundColor: ENT.greenLight,
-              spanGaps: false,
-            }, {
-              label: 'Industry Avg',
-              data: last12.map(() => 68),
-              borderColor: 'rgba(255,255,255,0.15)',
-              borderWidth: 1.5,
-              borderDash: [5, 5],
-              fill: false,
-              tension: 0.4,
-              pointRadius: 0,
-            }],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                display: true, position: 'top' as const, align: 'end' as const,
-                labels: { usePointStyle: true, pointStyle: 'circle', boxWidth: 6, padding: 16, font: { size: 11 }, color: ENT.greyLight },
-              },
-            },
-            scales: {
-              x: { grid: { color: gc, drawBorder: false }, ticks: { padding: 8, color: ENT.greyLight } },
-              y: { min: 50, max: 100, grid: { color: gc, drawBorder: false }, ticks: { padding: 8, color: ENT.greyLight, callback: (v: number) => v + '%' } },
-            },
-            interaction: { intersect: false, mode: 'index' as const },
-          },
-        });
-      }
-    }
-
-    // Report Volume Chart
-    if (volumeChartRef.current) {
-      const ctx = volumeChartRef.current.getContext('2d');
-      if (ctx) {
-        // Build real weekly data from reports
-        const completedReportsList = reports.filter(r => r.status === 'completed');
-        const weeks = Array.from({ length: 12 }, (_, i) => `W${i + 1}`);
-        const weekData = weeks.map((_, i) => {
-          const weekStart = new Date();
-          weekStart.setDate(weekStart.getDate() - (11 - i) * 7);
-          const weekEnd = new Date(weekStart);
-          weekEnd.setDate(weekEnd.getDate() + 7);
-          return completedReportsList.filter(r => {
-            const d = new Date(r.created_at);
-            return d >= weekStart && d < weekEnd;
-          }).length;
-        });
-
-        const gradient = ctx.createLinearGradient(0, 0, 0, 220);
-        gradient.addColorStop(0, 'rgba(96,165,250,0.6)');
-        gradient.addColorStop(1, 'rgba(33,38,83,0.3)');
-
-        volumeChartInstance.current = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: weeks,
-            datasets: [{
-              label: 'Reports',
-              data: weekData,
-              backgroundColor: gradient,
-              borderRadius: 6,
-              borderSkipped: false,
-              barPercentage: 0.6,
-            }],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-              x: { grid: { display: false }, ticks: { padding: 8, color: ENT.greyLight } },
-              y: { grid: { color: gc, drawBorder: false }, ticks: { padding: 8, color: ENT.greyLight } },
-            },
-          },
-        });
-      }
-    }
-
-    return () => {
-      if (trendChartInstance.current) trendChartInstance.current.destroy();
-      if (volumeChartInstance.current) volumeChartInstance.current.destroy();
-    };
-  }, [chartJsLoaded, activeTab, reports, assessments]);
 
   // ─── Handlers ─────────────────────────────────────────────────────────
   const handleViewReport = (report: Report) => navigate(`/report/${report.id}`);
@@ -546,10 +368,6 @@ const PortalEnterprise = () => {
     People: ENT.greenLight,
   };
 
-  // Category rankings sorted
-  const categoryRankings = Object.entries(categoryScores)
-    .sort(([, a], [, b]) => b - a)
-    .map(([name, score], i) => ({ name, score, rank: i + 1 }));
 
   // ─── Navigation Items ─────────────────────────────────────────────────
   const navItems = [
@@ -849,27 +667,6 @@ const PortalEnterprise = () => {
                 </div>
               </div>
 
-              {/* Charts Row */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                <div className="rounded-2xl p-6" style={{ background: ENT.navy, border: `1px solid ${ENT.border}` }}>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-[17px] font-semibold" style={{ fontFamily: "'Playfair Display', serif" }}>Health Score Trend</span>
-                    <span className="text-xs cursor-pointer" style={{ color: ENT.greenLight }}>Last 12 months →</span>
-                  </div>
-                  <div className="relative" style={{ height: 220 }}>
-                    <canvas ref={trendChartRef} />
-                  </div>
-                </div>
-                <div className="rounded-2xl p-6" style={{ background: ENT.navy, border: `1px solid ${ENT.border}` }}>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-[17px] font-semibold" style={{ fontFamily: "'Playfair Display', serif" }}>Report Generation Volume</span>
-                    <span className="text-xs cursor-pointer" style={{ color: ENT.greenLight }}>Weekly →</span>
-                  </div>
-                  <div className="relative" style={{ height: 220 }}>
-                    <canvas ref={volumeChartRef} />
-                  </div>
-                </div>
-              </div>
 
               {/* Reports + Activity Row */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
@@ -951,116 +748,6 @@ const PortalEnterprise = () => {
                 </div>
               </div>
 
-              {/* Bottom Row: AI Insights + Rankings + Quick Actions */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-                {/* AI Insights */}
-                <div className="rounded-2xl p-6" style={{ background: ENT.navy, border: `1px solid ${ENT.border}` }}>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-[17px] font-semibold" style={{ fontFamily: "'Playfair Display', serif" }}>AI Insights</span>
-                    <span className="text-xs cursor-pointer" style={{ color: ENT.greenLight }}>View All →</span>
-                  </div>
-                  {healthScore ? (
-                    <div className="space-y-2.5">
-                      <div className="p-4 rounded-xl transition-all hover:translate-x-1" style={{ background: ENT.navyLight, borderLeft: `3px solid ${ENT.green}` }}>
-                        <div className="text-[10px] tracking-[1.5px] uppercase font-bold mb-1.5" style={{ color: ENT.greenLight }}>Recommendation</div>
-                        <div className="text-[13px] leading-relaxed" style={{ color: ENT.greyLight }}>
-                          Your overall score of {healthScore} shows strong performance. Focus on your lowest-scoring category to maximize improvement.
-                        </div>
-                      </div>
-                      <div className="p-4 rounded-xl transition-all hover:translate-x-1" style={{ background: ENT.navyLight, borderLeft: `3px solid ${ENT.chartGreen}` }}>
-                        <div className="text-[10px] tracking-[1.5px] uppercase font-bold mb-1.5" style={{ color: ENT.chartGreen }}>Opportunity</div>
-                        <div className="text-[13px] leading-relaxed" style={{ color: ENT.greyLight }}>
-                          Companies that improved their lowest category by 5+ points saw 18% higher revenue growth in the following quarter.
-                        </div>
-                      </div>
-                      <div className="p-4 rounded-xl transition-all hover:translate-x-1" style={{ background: ENT.navyLight, borderLeft: `3px solid ${ENT.chartBlue}` }}>
-                        <div className="text-[10px] tracking-[1.5px] uppercase font-bold mb-1.5" style={{ color: ENT.chartBlue }}>Benchmark</div>
-                        <div className="text-[13px] leading-relaxed" style={{ color: ENT.greyLight }}>
-                          Your overall health score of {healthScore} places you in the top {healthScore > 85 ? '5' : healthScore > 75 ? '15' : '25'}% of businesses assessed on the platform.
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center py-8">
-                      <Sparkles className="h-8 w-8 mx-auto mb-2" style={{ color: 'rgba(255,255,255,0.1)' }} />
-                      <p className="text-sm" style={{ color: ENT.grey }}>Complete an assessment to unlock AI insights</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Category Rankings */}
-                <div className="rounded-2xl p-6" style={{ background: ENT.navy, border: `1px solid ${ENT.border}` }}>
-                  <div className="text-[17px] font-semibold mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>Category Rankings</div>
-                  {healthScore ? (
-                    <div className="space-y-1.5">
-                      {categoryRankings.map((cat) => {
-                        const rankBg = cat.rank === 1 ? ENT.greenDim : cat.rank === 2 ? 'rgba(192,192,192,0.1)' : cat.rank === 3 ? 'rgba(205,127,50,0.1)' : 'rgba(255,255,255,0.03)';
-                        const rankColor = cat.rank === 1 ? ENT.greenLight : cat.rank === 2 ? '#c0c0c0' : cat.rank === 3 ? '#cd7f32' : ENT.grey;
-                        const subcats: Record<string, string> = { Finance: 'Revenue & Margins', Operations: 'Process & Efficiency', Technology: 'IT & Infrastructure', People: 'HR & Engagement' };
-                        return (
-                          <div key={cat.name} className="flex items-center gap-3.5 px-3.5 py-3 rounded-[10px] transition-colors hover:bg-white/[0.03]">
-                            <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold" style={{ background: rankBg, color: rankColor, fontFamily: "'JetBrains Mono', monospace" }}>
-                              {cat.rank}
-                            </div>
-                            <div className="flex-1">
-                              <div className="text-[13px] font-medium">{cat.name}</div>
-                              <div className="text-[11px]" style={{ color: ENT.grey }}>{subcats[cat.name] || ''}</div>
-                            </div>
-                            <div className="text-sm font-semibold" style={{ fontFamily: "'JetBrains Mono', monospace", color: cat.rank === 1 ? ENT.greenLight : cat.rank <= 3 ? ENT.white : ENT.grey }}>
-                              {cat.score}
-                            </div>
-                          </div>
-                        );
-                      })}
-                      {/* Add Compliance as 5th */}
-                      <div className="flex items-center gap-3.5 px-3.5 py-3 rounded-[10px] transition-colors hover:bg-white/[0.03]">
-                        <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold" style={{ background: 'rgba(255,255,255,0.03)', color: ENT.grey, fontFamily: "'JetBrains Mono', monospace" }}>5</div>
-                        <div className="flex-1">
-                          <div className="text-[13px] font-medium">Compliance</div>
-                          <div className="text-[11px]" style={{ color: ENT.grey }}>Risk & Regulatory</div>
-                        </div>
-                        <div className="text-sm font-semibold" style={{ fontFamily: "'JetBrains Mono', monospace", color: ENT.grey }}>
-                          {Math.max(0, (healthScore || 0) - 6)}
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center py-8">
-                      <Target className="h-8 w-8 mx-auto mb-2" style={{ color: 'rgba(255,255,255,0.1)' }} />
-                      <p className="text-sm" style={{ color: ENT.grey }}>Complete an assessment to see rankings</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Quick Actions */}
-                <div className="rounded-2xl p-6" style={{ background: ENT.navy, border: `1px solid ${ENT.border}` }}>
-                  <div className="text-[17px] font-semibold mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>Quick Actions</div>
-                  <div className="flex flex-col gap-2.5">
-                    <button onClick={navigateToQuestionnaire}
-                      className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-semibold transition-all hover:bg-[rgba(150,148,35,0.22)]"
-                      style={{ border: `1px solid ${ENT.borderAccent}`, background: ENT.greenDim, color: ENT.greenLight }}>
-                      <Rocket className="h-5 w-5" /> Run New Assessment
-                    </button>
-                    <button onClick={() => setActiveTab('reports')}
-                      className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-medium transition-all"
-                      style={{ border: `1px solid ${ENT.border}`, background: ENT.navyLight, color: ENT.white }}>
-                      <Download className="h-5 w-5" /> Download All Reports
-                    </button>
-                    <button className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-medium transition-all"
-                      style={{ border: `1px solid ${ENT.border}`, background: ENT.navyLight, color: ENT.white }}>
-                      <BarChart3 className="h-5 w-5" /> Compare Benchmarks
-                    </button>
-                    <button className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-medium transition-all"
-                      style={{ border: `1px solid ${ENT.border}`, background: ENT.navyLight, color: ENT.white }}>
-                      <Users className="h-5 w-5" /> Invite Team Members
-                    </button>
-                    <button className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-medium transition-all"
-                      style={{ border: `1px solid ${ENT.border}`, background: ENT.navyLight, color: ENT.white }}>
-                      <Settings className="h-5 w-5" /> API & Integrations
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 

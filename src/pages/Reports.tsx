@@ -1178,13 +1178,13 @@ const Reports = () => {
               <AccordionItem value="employees" id="employees-report" className="border-2 border-purple-400 rounded-2xl overflow-hidden shadow-lg scroll-mt-40">
                 <AccordionTrigger className="px-6 py-6 hover:no-underline bg-gradient-to-r from-purple-50 to-violet-50 hover:from-purple-100 hover:to-violet-100 transition-all">
                   <div className="flex items-start gap-4 w-full text-left">
-                    <Star className="w-8 h-8 text-purple-600 shrink-0 mt-1" />
+                    <Star className="w-8 h-8 text-biz-teal shrink-0 mt-1" />
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <h3 className="font-montserrat font-bold text-xl md:text-2xl text-biz-navy">
                           Employees' Report - Celebrate Wins & Drive Engagement
                         </h3>
-                        <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                        <span className="bg-biz-teal text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
                           ENTERPRISE
                         </span>
                         <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
@@ -1218,14 +1218,14 @@ const Reports = () => {
                     </div>
 
                     {/* StoryBrand Narrative */}
-                    <div className="bg-purple-50 rounded-xl p-6 space-y-4">
+                    <div className="bg-biz-teal/5 rounded-xl p-6 space-y-4">
                       <h4 className="font-montserrat font-bold text-lg text-biz-navy">Your Team's Engagement Challenge</h4>
                       <div className="space-y-3 font-open-sans text-biz-grey">
                         <p><strong className="text-biz-navy">The Problem:</strong> Your team shows up every day but doesn't see how their work connects to company success. Engagement surveys reveal confusion about direction and lack of recognition for contributions.</p>
                         <p><strong className="text-biz-navy">The Stakes:</strong> Disengaged employees cost you 34% of their salary in lost productivity. Turnover accelerates. Your best people leave for companies where they feel valued and understand their impact.</p>
                         <p><strong className="text-biz-navy">The Guide (That's Us):</strong> BizHealth.ai helps you communicate company health and team contributions in a way that builds pride, clarity, and commitment across your entire workforce.</p>
                         <p><strong className="text-biz-navy">The Plan:</strong> Our 4-6 page Employees' Report celebrates team strengths, explains "how we're doing," and shows every team member their role in company success.</p>
-                        <p><strong className="text-purple-700 font-semibold">The Success:</strong> Transform your workforce into engaged advocates who understand the mission, celebrate wins together, and take ownership of improvement opportunities. Build the culture that retains top talent.</p>
+                        <p><strong className="text-biz-teal font-semibold">The Success:</strong> Transform your workforce into engaged advocates who understand the mission, celebrate wins together, and take ownership of improvement opportunities. Build the culture that retains top talent.</p>
                       </div>
                     </div>
 

@@ -28,7 +28,8 @@ import {
   Shield,
   Zap,
   Award,
-  Plus
+  Plus,
+  SlidersHorizontal
 } from 'lucide-react';
 import comprehensiveReportInterior from '@/assets/comprehensive-report-interior.jpg';
 import comprehensiveReportRoiInfographic from '@/assets/comprehensive-report-roi-infographic.jpg';
@@ -1406,21 +1407,32 @@ const Reports = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
               <div className="mb-8">
-                <label className="font-montserrat font-semibold text-biz-navy mb-4 block text-lg">
-                  Annual Revenue: ${revenueSlider.toLocaleString()}
-                </label>
-                <input
-                  type="range"
-                  min="50000"
-                  max="5000000"
-                  step="50000"
-                  value={revenueSlider}
-                  onChange={(e) => setRevenueSlider(Number(e.target.value))}
-                  className="w-full h-3 bg-biz-accent rounded-lg appearance-none cursor-pointer accent-biz-green"
-                />
-                <div className="flex justify-between text-sm text-biz-grey mt-2">
-                  <span>$50K</span>
-                  <span>$5M</span>
+                <div className="flex items-center gap-3 mb-2">
+                  <SlidersHorizontal className="w-5 h-5 text-biz-navy" />
+                  <label className="font-montserrat font-semibold text-biz-navy text-lg">
+                    What's your annual revenue?
+                  </label>
+                </div>
+                <p className="font-open-sans text-sm text-biz-grey mb-5">
+                  Drag the slider to match your business revenue and see your personalized ROI estimate.
+                </p>
+                <div className="bg-biz-navy/5 rounded-xl p-5 border border-biz-navy/10">
+                  <p className="text-center font-montserrat font-bold text-2xl text-biz-navy mb-4">
+                    ${revenueSlider.toLocaleString()}
+                  </p>
+                  <input
+                    type="range"
+                    min="50000"
+                    max="5000000"
+                    step="50000"
+                    value={revenueSlider}
+                    onChange={(e) => setRevenueSlider(Number(e.target.value))}
+                    className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gradient-to-r from-biz-navy/20 via-biz-green/50 to-biz-green accent-biz-green [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-biz-green [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:cursor-grab [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-biz-green [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:cursor-grab"
+                  />
+                  <div className="flex justify-between text-sm text-biz-grey mt-2 font-medium">
+                    <span>$50K</span>
+                    <span>$5M</span>
+                  </div>
                 </div>
               </div>
 

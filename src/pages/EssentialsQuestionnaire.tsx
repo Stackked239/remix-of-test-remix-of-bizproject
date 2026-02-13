@@ -1154,6 +1154,8 @@ export default function EssentialsQuestionnaire() {
         .insert([{
           id: submissionId,
           user_id: user.id,
+          plan_type: 'essentials',
+          pipeline_type: 'LIL',
           status: 'completed',
           responses: JSON.parse(JSON.stringify(questionnaireData)),
           created_at: new Date().toISOString()
@@ -1167,6 +1169,7 @@ export default function EssentialsQuestionnaire() {
         .insert([{
           user_id: user.id,
           questionnaire_id: submissionId,
+          pipeline_type: 'LIL',
           status: 'pending',
           payload: JSON.parse(JSON.stringify(questionnaireData)),
           created_at: new Date().toISOString()

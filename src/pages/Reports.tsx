@@ -81,7 +81,7 @@ const Reports = () => {
       alaCarte: 'Included'
     },
     {
-      report: 'Executive Dashboard (client portal)',
+      report: 'Analytics Scorecard (client portal)',
       essentials: false,
       growth: 'optional',
       enterprise: true,
